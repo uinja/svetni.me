@@ -1,0 +1,74 @@
+<html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><title>Polyglot Panic at the Snippet Disco - Example blog with pagination</title><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Bug reports, hot takes, and mildly supervised wizardry"/><link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Rubik:wght@400;700;800&amp;display=swap"/><link rel="stylesheet" href="/css/main.css"/></head><body class="article-detail"><header class="header"><div class="content-wrap"><div><div class="logo"><h2 class="site-title"><a href="/">Example blog with pagination</a></h2></div><h1>Polyglot Panic at the Snippet Disco</h1><p class="author">Written by <span>A dev</span></p></div></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>This post exists to prove two things:</p>
+<ol>
+<li>Syntax highlighting works.</li>
+<li>Developers will build a snack-themed status dashboard in any language if left unsupervised.</li>
+</ol>
+<p>Theme styling is handled in the blog CSS. Bring your own opinions about tabs, spaces, and semicolons.</p>
+<p><span class="more"></span></p>
+<h3>JavaScript</h3>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> moods = [<span class="hljs-string">&#x27;ship it&#x27;</span>, <span class="hljs-string">&#x27;add tests&#x27;</span>, <span class="hljs-string">&#x27;panic quietly&#x27;</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">releaseDecision</span>(<span class="hljs-params">coffeeCups</span>) {
+  <span class="hljs-keyword">return</span> coffeeCups &gt; <span class="hljs-number">2</span>
+    ? <span class="hljs-string">&#x27;deploy at noon&#x27;</span>
+    : (moods[coffeeCups] ?? <span class="hljs-string">&#x27;write docs&#x27;</span>);
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">releaseDecision</span>(<span class="hljs-number">1</span>));</code></pre><h3>C</h3>
+<pre><code class="hljs language-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>
+{
+    <span class="hljs-type">int</span> bugs = <span class="hljs-number">3</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Patch notes: fixed %d bugs, introduced %d personality traits.\n&quot;</span>, bugs, bugs + <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre><h3>C++</h3>
+<pre><code class="hljs language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    std::cout &lt;&lt; <span class="hljs-string">&quot;Compiling confidence... done.\n&quot;</span>;
+    std::cout &lt;&lt; <span class="hljs-string">&quot;Running unit tests... emotionally.\n&quot;</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre><h3>C-sharp</h3>
+<pre><code class="hljs language-cs"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleClass</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>()</span>
+    {
+        <span class="hljs-keyword">var</span> ci = <span class="hljs-string">&quot;green&quot;</span>;
+        System.Console.WriteLine(<span class="hljs-string">$&quot;CI status: <span class="hljs-subst">{ci}</span>. Team status: cautiously optimistic.&quot;</span>);
+    }
+}</code></pre><h3>Erlang</h3>
+<pre><code class="hljs language-erlang">Mood = <span class="hljs-string">&quot;keep shipping&quot;</span>,
+io:format(<span class="hljs-string">&quot;~s~n&quot;</span>, [Mood]).</code></pre><h3>Go</h3>
+<pre><code class="hljs language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    retries := <span class="hljs-number">2</span>
+    fmt.Printf(<span class="hljs-string">&quot;Deploy attempt #%d: confidence increasing...\\n&quot;</span>, retries+<span class="hljs-number">1</span>)
+}</code></pre><h3>Java</h3>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SprintReport</span> {
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+       System.out.println(<span class="hljs-string">&quot;Velocity is great; requirements are interpretive dance.&quot;</span>);
+   }
+}</code></pre><h3>ObjectiveC</h3>
+<pre><code class="hljs language-objectivec"><span class="hljs-meta">#import <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-type">int</span> main(<span class="hljs-type">void</span>)
+{
+    printf(<span class="hljs-string">&quot;Objective reached. Caffeination objective still pending.\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre><h3>PHP</h3>
+<pre><code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-variable">$snacks</span> = [<span class="hljs-string">&#x27;chips&#x27;</span>, <span class="hljs-string">&#x27;cookies&#x27;</span>, <span class="hljs-string">&#x27;zero-downtime dreams&#x27;</span>];
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&#x27;Release fuel: &#x27;</span> . <span class="hljs-variable">$snacks</span>[<span class="hljs-number">2</span>];
+<span class="hljs-meta">?&gt;</span></code></pre><h3>Python</h3>
+<pre><code class="hljs language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">standup</span>(<span class="hljs-params">update: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">str</span>:
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;Yesterday: fixed bug. Today: <span class="hljs-subst">{update}</span>. Blockers: none, unless lunch counts.&quot;</span>
+
+<span class="hljs-built_in">print</span>(standup(<span class="hljs-string">&quot;rename variables until they spark joy&quot;</span>))</code></pre><h3>Ruby</h3>
+<pre><code class="hljs language-ruby">status = <span class="hljs-string">%w[draft review shipped]</span>
+puts <span class="hljs-string">&quot;Feature status: <span class="hljs-subst">#{status.last}</span>. Dramatic pause successful.&quot;</span></code></pre></section></article></div><div class="content-wrap"><div class="nav"><div><a href="/">« Full blog</a></div></div></div></div><footer><div class="content-wrap"><section class="about"><div><p>This text can be edited in about.md</p>
+</div></section><section class="copy"><p>© <!-- -->2026<!-- --> <!-- -->Someone<!-- --> — powered by  Fusuma</p></section></div></footer></body></html>

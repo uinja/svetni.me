@@ -1,0 +1,42 @@
+<html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><title>Deployment Roulette: The Thrilling Game Nobody Wants to Play - Example blog with pagination</title><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Bug reports, hot takes, and mildly supervised wizardry"/><link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Rubik:wght@400;700;800&amp;display=swap"/><link rel="stylesheet" href="/css/main.css"/></head><body class="article-detail"><header class="header"><div class="content-wrap"><div><div class="logo"><h2 class="site-title"><a href="/">Example blog with pagination</a></h2></div><h1>Deployment Roulette: The Thrilling Game Nobody Wants to Play</h1><p class="author">Written by <span>A dev</span></p></div></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>Deploying to production is like Russian roulette, except:</p>
+<ul>
+<li>All chambers are loaded</li>
+<li>The gun is pointed at your career</li>
+<li>Everyone is watching</li>
+</ul>
+<p><span class="more"></span></p>
+<h2>The Ritual</h2>
+<p>Every deployment is preceded by a quiet moment of reflection where you ask yourself: <em>Is the thing I&#39;m about to do the right thing?</em></p>
+<p>The answer is always &quot;probably.&quot; You deploy anyway.</p>
+<h2>Pre-Deployment Checklist (Annotated)</h2>
+<ul>
+<li>✓ <strong>Ran locally 47 times.</strong> All passed. Local environment has 23 environment variables that differ from prod. This is known. Nobody has fixed it. The delta lives in a shared doc nobody updates.</li>
+<li>✓ <strong>Tests pass.</strong> Because we mocked the external service, the database, the file system, and approximately half of reality.</li>
+<li>✓ <strong>Staging looks good.</strong> Staging is not production. Staging has never been production. Staging is a comforting lie we tell ourselves.</li>
+<li>✓ <strong>PR was reviewed.</strong> By someone who said &quot;LGTM&quot; after 90 seconds. The PR is 1,400 lines.</li>
+<li>✓ <strong>Said a small prayer.</strong> Non-denominational. Directed at the monitoring dashboard.</li>
+</ul>
+<h2>The Deployment Window</h2>
+<p>10:00 AM on a Wednesday. Low traffic. Safe. Responsible.</p>
+<p>The deployment starts. The pipeline begins.</p>
+<p>At step 4 of 9, it pauses.</p>
+<p>For four minutes, nothing happens.</p>
+<p>Then step 4 completes. Everything continues. The pause is never explained and never investigated.</p>
+<h2>Ways It Can Fail</h2>
+<ol>
+<li><strong>Config mismatch.</strong> Prod reads from a env var that staging doesn&#39;t use. The env var is empty. You discover this in the logs at 10:09 AM.</li>
+<li><strong>Database migration timeout.</strong> A migration that takes 200ms locally takes 47 seconds in prod. 47 seconds is over the timeout. You increase the timeout. This is not the correct solution.</li>
+<li><strong>Someone else deployed simultaneously.</strong> Two deploys, one slot. One wins. Neither team knows this happened until the other&#39;s rollback mysteriously fixes a thing it wasn&#39;t related to.</li>
+<li><strong>Wrong Node version.</strong> Prod is on Node 18. Your code uses a feature from Node 20. Your local is Node 21. You discover this the hard way.</li>
+<li><strong>The cache.</strong> The CDN cached the old version. The fix is live. Users see the old bug. You spend 40 minutes debugging a problem that doesn&#39;t exist anymore.</li>
+</ol>
+<h2>Post-Deployment</h2>
+<ul>
+<li><strong>First 5 minutes:</strong> Stare at dashboards with the intensity of someone diffusing a bomb.</li>
+<li><strong>First hour:</strong> Everything looks fine. You permit yourself one sip of coffee.</li>
+<li><strong>Next morning:</strong> &quot;Why is the <code>user_id</code> column full of <code>null</code>s?&quot;</li>
+</ul>
+<p>The deployment was successful.<br>The feature works.<br>Something adjacent and unrelated has sheared off.</p>
+<p>This is Thursday.<br>Next week: we deploy again.</p>
+</section></article></div><div class="content-wrap"><div class="nav"><div><a href="/">« Full blog</a></div></div></div></div><footer><div class="content-wrap"><section class="about"><div><p>This text can be edited in about.md</p>
+</div></section><section class="copy"><p>© <!-- -->2026<!-- --> <!-- -->Someone<!-- --> — powered by  Fusuma</p></section></div></footer></body></html>

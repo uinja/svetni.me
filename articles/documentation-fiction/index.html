@@ -1,0 +1,66 @@
+<html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><title>Documentation: A Work of Fiction - Example blog with pagination</title><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Bug reports, hot takes, and mildly supervised wizardry"/><link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Rubik:wght@400;700;800&amp;display=swap"/><link rel="stylesheet" href="/css/main.css"/></head><body class="article-detail"><header class="header"><div class="content-wrap"><div><div class="logo"><h2 class="site-title"><a href="/">Example blog with pagination</a></h2></div><h1>Documentation: A Work of Fiction</h1><p class="author">Written by <span>A dev</span></p></div></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>Our codebase has documentation. Let me be clear about what that means:<br>It exists. It was written at some point. It lives in our wiki.</p>
+<p><span class="more"></span></p>
+<h2>The Documentation Ecosystem</h2>
+<p>We have documentation in the following locations:</p>
+<ol>
+<li><strong>The wiki.</strong> Last updated by someone who no longer works here.</li>
+<li><strong>The README.</strong> Accurate as of Node 12. We are on Node 20.</li>
+<li><strong>Inline comments.</strong> Written by an optimist in 2018. The optimist has since left.</li>
+<li><strong>A shared Google Doc.</strong> Open to edit. Someone edited it with just the word &quot;why.&quot; We don&#39;t know which part they meant.</li>
+<li><strong>Confluence.</strong> Yes, we have Confluence. Nobody finds anything in it. This is by design, apparently.</li>
+</ol>
+<h2>Documentation vs Reality: A Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>What the docs say</th>
+<th>What actually happens</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;Install with <code>npm install</code>&quot;</td>
+<td>Install, then fix peer dependency conflict, then downgrade Node, then pray</td>
+</tr>
+<tr>
+<td>&quot;Configuration is straightforward&quot;</td>
+<td>The config file is TOML with JSON-style overrides. Nobody knows why.</td>
+</tr>
+<tr>
+<td>&quot;See the examples folder&quot;</td>
+<td>Examples folder deleted during a cleanup in 2021, referenced in 14 docs</td>
+</tr>
+<tr>
+<td>&quot;API is self-explanatory&quot;</td>
+<td>API changed 6 times. Docs reflect version 1. You are on version 4.</td>
+</tr>
+<tr>
+<td>&quot;Authentication is handled automatically&quot;</td>
+<td>You must pass a token, also a secret, also a timestamp that expires in 30 seconds</td>
+</tr>
+<tr>
+<td>&quot;Default values are sensible&quot;</td>
+<td>Default timeout is 0ms. This is undocumented. Good luck.</td>
+</tr>
+</tbody></table>
+<h2>The Improvement Initiative</h2>
+<p>Last quarter, we launched &quot;Docs Week.&quot; Every engineer dedicated half a day to writing documentation.</p>
+<p>Results:</p>
+<ul>
+<li>Three new pages explaining what <code>main.js</code> does. Each contradicts the others.</li>
+<li>One brilliant diagram that nobody can read at zoom levels under 400%.</li>
+<li>Seventeen TODO comments elevated to wiki status.</li>
+<li>A new section called &quot;FAQ&quot; containing one question (&quot;Why does this exist?&quot;) with no answer.</li>
+</ul>
+<p>Docs Week has been rescheduled to next quarter.</p>
+<h2>What We Actually Do</h2>
+<p>At this point, our real documentation is:</p>
+<ul>
+<li>Slack search</li>
+<li>The person who built the thing, if they&#39;re still here</li>
+<li>Stack Overflow, 2019–2022 vintage</li>
+<li>Trial and error, with emphasis on error</li>
+</ul>
+<p>I once found the correct configuration by reading a closed GitHub issue from a stranger in 2020 who had given up and deleted their comment, but the edit history survived.</p>
+<p>That was a good day.</p>
+</section></article></div><div class="content-wrap"><div class="nav"><div><a href="/">« Full blog</a></div></div></div></div><footer><div class="content-wrap"><section class="about"><div><p>This text can be edited in about.md</p>
+</div></section><section class="copy"><p>© <!-- -->2026<!-- --> <!-- -->Someone<!-- --> — powered by  Fusuma</p></section></div></footer></body></html>

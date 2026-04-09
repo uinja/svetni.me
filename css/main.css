@@ -1,0 +1,828 @@
+/* Custom properties */
+:root {
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing: 24px;
+  --spacing-m: 36px;
+  --spacing-l: 48px;
+
+  --foreground: black;
+  --background: white;
+  --surface-soft: #fafafa;
+  --surface-accent: #e0f7fa;
+  --surface-overlay: white;
+  --muted: #555;
+  --muted-soft: #777;
+  --muted-faint: #888;
+  --border-subtle: #eee;
+  --code-border: #e8c0c0;
+  --red: #f83735;
+  --red-light: #fecbca;
+  --yellow: #fac832;
+  --blue: #1231b5;
+  --blue-light: #84b4f9;
+
+  --font-size: 18px;
+  --font-size-s: 16px;
+  --font-size-xs: 14px;
+
+  --content-width: 700px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+::selection {
+  background: var(--red-light);
+}
+
+/* Base */
+body {
+  font-family:
+    "Rubik",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.5;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: 1em;
+}
+
+/* Keep typography consistent across inherited and form-like elements */
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family:
+    "Rubik",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.content-wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* Links */
+a {
+  color: var(--blue);
+  text-decoration: none;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 98%,
+    var(--blue) 100%
+  );
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--red);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 98%,
+    var(--red) 100%
+  );
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: var(--spacing-l) 0 var(--spacing);
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: var(--spacing-l) 0 var(--spacing);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: var(--spacing-m) 0 var(--spacing-s);
+}
+
+h1 a,
+h2 a,
+h3 a {
+  color: var(--foreground);
+  background-image: none;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+  color: var(--blue);
+  background-image: none;
+}
+
+/* Lists */
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Blockquote */
+blockquote {
+  background: var(--surface-accent);
+  margin: 30px var(--spacing-l);
+  padding: 14px var(--spacing-s);
+}
+
+/* HR */
+hr {
+  background-color: var(--yellow);
+  border: 0;
+  margin: 50px auto;
+  width: 50%;
+  height: 5px;
+  border-radius: 5px;
+  max-width: 430px;
+  clear: both;
+}
+
+/* Code */
+code {
+  font-family: ui-monospace, Consolas, Menlo, Monaco, "Courier New", monospace;
+  font-size: var(--font-size-s);
+  background: var(--red-light);
+  border: 1px solid var(--code-border);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+pre {
+  background: var(--surface-soft);
+  outline: 1px solid var(--border-subtle);
+  border-left: 5px solid var(--yellow);
+  padding: var(--spacing-s);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-m);
+}
+
+pre code {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-weight: normal;
+}
+
+/* highlight.js token colors */
+.hljs {
+  color: #424242;
+  background: transparent;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #8e908c;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name {
+  color: #8959a8;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #718c00;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #4271ae;
+}
+
+.hljs-number,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params,
+.hljs-meta {
+  color: #f5871f;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-attr,
+.hljs-attribute,
+.hljs-regexp,
+.hljs-link {
+  color: #c82829;
+}
+
+/* -----------------------------------------------
+   Page header / site logo
+   ----------------------------------------------- */
+.header {
+  margin: 0 0 var(--spacing);
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 var(--spacing-s);
+}
+
+/* .header a,
+.header a:hover {
+  color: var(--foreground);
+} */
+
+.header .description {
+  font-size: var(--font-size-s);
+  color: var(--muted);
+  margin: 0;
+}
+
+.site-title {
+  font-size: var(--font-size-s);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin: 0 0 var(--spacing);
+  text-transform: uppercase;
+}
+
+/* .site-title a {
+  color: var(--foreground);
+}
+
+.site-title a:hover {
+  color: var(--blue);
+} */
+
+/* -----------------------------------------------
+   Year headings with red underline accent
+   ----------------------------------------------- */
+.with-butt {
+  position: relative;
+  display: inline-block;
+}
+
+.with-butt::after {
+  content: "";
+  position: absolute;
+  width: var(--spacing-l);
+  height: var(--spacing-s);
+  bottom: calc(0px - var(--spacing-s));
+  left: 0;
+  border-bottom: 6px solid var(--red);
+}
+
+/* -----------------------------------------------
+   Post listings  (archive & index)
+   ----------------------------------------------- */
+ul.listing {
+  list-style: none;
+  margin: var(--spacing-m) 0 0;
+  padding: 0;
+}
+
+ul.listing li {
+  font-size: var(--font-size-s);
+  padding: 5px 3px;
+  margin: 0;
+  color: var(--foreground);
+}
+
+ul.listing.table li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+ul.listing.fancy a {
+  color: var(--foreground);
+  padding-bottom: 2px;
+  font-weight: normal;
+  position: relative;
+}
+
+ul.listing li span {
+  font-size: var(--font-size-xs);
+  text-align: right;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+}
+
+/* Diagonal-hatch hover effect on links */
+ul.listing.fancy a:hover {
+  background: var(--surface-overlay);
+}
+ul.listing.fancy a:hover::before {
+  position: absolute;
+  display: block;
+  left: -20px;
+  bottom: -10px;
+  content: "";
+  height: 18px;
+  width: 80%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--blue-light),
+    var(--blue-light) 2px,
+    var(--surface-overlay) 2px,
+    var(--surface-overlay) 6px
+  );
+  z-index: -1;
+}
+
+/* -----------------------------------------------
+   Article cards (index page)
+   ----------------------------------------------- */
+article.article.intro {
+  margin: var(--spacing-m) 0;
+  border-top: 5px solid var(--yellow);
+  padding-top: var(--spacing);
+}
+
+article.article.intro header h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: var(--spacing-s) 0;
+}
+
+/* article.article.intro header h2 a {
+  color: var(--foreground);
+}
+
+article.article.intro header h2 a:hover {
+  color: var(--red);
+} */
+
+article.article.intro .date {
+  font-size: var(--font-size-xs);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin: 0;
+}
+
+article.article.intro .content {
+  margin-top: var(--spacing-s);
+}
+
+article.article.intro .more {
+  margin-top: var(--spacing-s);
+  font-size: var(--font-size-xs);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* article.article.intro .more a {
+  color: var(--red);
+}
+
+article.article.intro .more a:hover {
+  color: var(--blue);
+} */
+
+/* -----------------------------------------------
+   Article detail page
+   ----------------------------------------------- */
+body.article-detail > header .logo {
+  border-bottom: 5px solid var(--yellow);
+  /* padding-bottom: var(--spacing-m); */
+  margin-bottom: var(--spacing-m);
+}
+
+body.article-detail > header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-s);
+  line-height: 1.2;
+}
+
+.author {
+  font-size: var(--font-size-xs);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin: 0;
+}
+
+/* Content area inside articles */
+#content p {
+  margin-bottom: 1.5rem;
+}
+#content ul,
+#content ol {
+  margin-left: var(--spacing);
+  margin-bottom: var(--spacing-m);
+}
+#content li {
+  margin-bottom: var(--spacing-s);
+  line-height: 1.5;
+}
+#content img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* -----------------------------------------------
+   Footer
+   ----------------------------------------------- */
+footer {
+  margin: var(--spacing-l) 0;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--spacing-m);
+}
+
+footer .about {
+  font-size: var(--font-size-xs);
+  color: var(--muted);
+}
+
+footer .copy {
+  font-size: var(--font-size-xs);
+  color: var(--muted-faint);
+  margin-top: var(--spacing);
+}
+
+footer .copy a {
+  color: var(--muted-faint);
+  font-weight: normal;
+}
+
+footer .nav {
+  margin-top: var(--spacing-m);
+}
+
+/* footer .nav a {
+  color: var(--red);
+  font-weight: bold;
+  margin-right: var(--spacing);
+}
+
+footer .nav a:hover {
+  color: var(--blue);
+} */
+
+/* -----------------------------------------------
+   Responsive
+   ----------------------------------------------- */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0.5em;
+  }
+  blockquote {
+    margin: 30px 0;
+  }
+}
+
+/* syntax hl stuff */
+
+code.lang-markdown {
+  color: #424242;
+}
+
+code.lang-markdown .header,
+code.lang-markdown .strong {
+  font-weight: bold;
+}
+
+code.lang-markdown .emphasis {
+  font-style: italic;
+}
+
+code.lang-markdown .horizontal_rule,
+code.lang-markdown .link_label,
+code.lang-markdown .code,
+code.lang-markdown .header,
+code.lang-markdown .link_url {
+  color: var(--muted);
+}
+
+code.lang-markdown .blockquote,
+code.lang-markdown .bullet {
+  color: #bbb;
+}
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment,
+pre .comment,
+pre .title {
+  color: #8e908c;
+}
+
+.tomorrow-red,
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c82829;
+}
+
+.tomorrow-orange,
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f5871f;
+}
+
+.tomorrow-yellow,
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #eab700;
+}
+
+.tomorrow-green,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #718c00;
+}
+
+.tomorrow-aqua,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+
+.tomorrow-blue,
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #4271ae;
+}
+
+.tomorrow-purple,
+pre .keyword,
+pre .javascript .function {
+  color: #8959a8;
+}
+
+/* media queries */
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 690px) {
+  .content-wrap {
+    width: auto;
+    padding: 0 1em;
+  }
+  .header {
+    margin: 1em 0;
+  }
+  .header h1 {
+    font-size: 1.4em;
+    margin-bottom: 0.6em;
+  }
+  .header .description {
+    font-size: 1em;
+  }
+  .article {
+    margin: 1em 0 2.5em;
+  }
+  .archive {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .archive * {
+    float: none !important;
+    line-height: 1.6 !important;
+    width: 100% !important;
+    height: auto !important;
+    text-align: left !important;
+    border: 0 !important;
+    margin: 0 !important;
+  }
+  footer .nav {
+    margin: 1em 0;
+  }
+  footer .about {
+    padding: 0;
+    font-size: 0.9em;
+    padding-top: 1.6em;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+  }
+  footer .about p {
+    margin-bottom: 1em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #e5e0d6;
+    --background: #191d28;
+    --surface-soft: #222838;
+    --surface-accent: #25334a;
+    --surface-overlay: #1f2534;
+    --muted: #c1c9db;
+    --muted-soft: #a1abc4;
+    --muted-faint: #909db8;
+    --border-subtle: #36405b;
+    --code-border: #63525f;
+
+    /* Keep brand hue relationships while lifting contrast on dark backgrounds */
+    --red: #ff6e68;
+    --red-light: #4f2f38;
+    --yellow: #ffd56a;
+    --blue: #9ec2ff;
+    --blue-light: #6fa1ff;
+  }
+
+  ::selection {
+    background: #5d3942;
+  }
+
+  code.lang-markdown {
+    color: var(--foreground);
+  }
+
+  code.lang-markdown .blockquote,
+  code.lang-markdown .bullet {
+    color: #7f8caf;
+  }
+
+  .hljs {
+    color: #e2e6f4;
+  }
+
+  .hljs-comment,
+  .hljs-quote,
+  .tomorrow-comment,
+  pre .comment,
+  pre .title {
+    color: #9da9c7;
+  }
+
+  .hljs-string,
+  .hljs-doctag,
+  .tomorrow-green,
+  pre .string,
+  pre .value,
+  pre .inheritance,
+  pre .header,
+  pre .ruby .symbol,
+  pre .xml .cdata {
+    color: #b6dd76;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-name,
+  .tomorrow-purple,
+  pre .keyword,
+  pre .javascript .function {
+    color: #d1a8ff;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id,
+  .hljs-selector-class,
+  .tomorrow-blue,
+  pre .function,
+  pre .python .decorator,
+  pre .python .title,
+  pre .ruby .function .title,
+  pre .ruby .title .keyword,
+  pre .perl .sub,
+  pre .javascript .title,
+  pre .coffeescript .title {
+    color: #9ec2ff;
+  }
+
+  .hljs-number,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-params,
+  .hljs-meta,
+  .tomorrow-orange,
+  pre .number,
+  pre .preprocessor,
+  pre .built_in,
+  pre .literal,
+  pre .params,
+  pre .constant {
+    color: #ffbd72;
+  }
+
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag,
+  .hljs-attr,
+  .hljs-attribute,
+  .hljs-regexp,
+  .hljs-link,
+  .tomorrow-red,
+  pre .variable,
+  pre .attribute,
+  pre .tag,
+  pre .regexp,
+  pre .ruby .constant,
+  pre .xml .tag .title,
+  pre .xml .pi,
+  pre .xml .doctype,
+  pre .html .doctype,
+  pre .css .id,
+  pre .css .class,
+  pre .css .pseudo {
+    color: #ff8b8b;
+  }
+
+  .tomorrow-yellow,
+  pre .class,
+  pre .ruby .class .title,
+  pre .css .rules .attribute {
+    color: #ffd56a;
+  }
+
+  .tomorrow-aqua,
+  pre .css .hexcolor {
+    color: #76ccd3;
+  }
+}

@@ -1,0 +1,31 @@
+<html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta name="viewport" content="width=device-width"/><title>CSS Specificity Wars - Example blog with pagination</title><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Bug reports, hot takes, and mildly supervised wizardry"/><link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Rubik:wght@400;700;800&amp;display=swap"/><link rel="stylesheet" href="/css/main.css"/></head><body class="article-detail"><header class="header"><div class="content-wrap"><div><div class="logo"><h2 class="site-title"><a href="/">Example blog with pagination</a></h2></div><h1>CSS Specificity Wars</h1><p class="author">Written by <span>A dev</span></p></div></div></header><div id="content"><div class="content-wrap"><article class="article"><section class="content"><p>At 10 AM, <code>.card .title</code> worked.<br>At 10:07, someone introduced <code>.page .content .card .title</code>.<br>By lunch, we had <code>#app .page .content .card .title.urgent</code>.</p>
+<p><span class="more"></span></p>
+<h2>How We Got Here</h2>
+<p>It started, as it always does, with a very reasonable request.</p>
+<p>&quot;The title on the card in the dashboard looks different than the title on the card in the modal. Can we fix it?&quot;</p>
+<p>We fixed it. We used a more specific selector. This was the first domino.</p>
+<h2>The Escalation</h2>
+<p><strong>Day 1:</strong> Someone needs the <code>.card .title</code> to be red in the sidebar only. They add <code>.sidebar .card .title</code>. Clean.</p>
+<p><strong>Day 3:</strong> The modal card title also needs to be red, but only on mobile. We get <code>.modal .card .title</code> and a media query.</p>
+<p><strong>Day 5:</strong> Someone overrides the sidebar style for a new feature. They add <code>.sidebar.new-feature .card .title</code>. The old style stops working in a different context. They add <code>!important</code>.</p>
+<p><strong>Day 7:</strong> Two <code>!important</code> declarations are now fighting each other. One wins based on source order. Nobody knows which file loads first.</p>
+<p><strong>Day 9:</strong> An engineer new to the codebase adds <code>.card .title { color: inherit; }</code> to solve a different problem. Everything is blue.</p>
+<p><strong>Day 11:</strong> <code>#app .page .content .card .title.urgent</code> is added by someone under deadline pressure. It works. It cannot be overridden by anything without an id selector and prayer.</p>
+<h2>The Peace Treaty (Attempt 1)</h2>
+<p>We held a CSS governance meeting (yes, this is a real thing we did).</p>
+<p>Proposed rules:</p>
+<ul>
+<li>No ID selectors for styling</li>
+<li>Max specificity: two classes</li>
+<li><code>!important</code> requires a comment explaining why and peer review</li>
+<li>New feature styles go in their own file</li>
+</ul>
+<p>The treaty was added to the contributing guide.<br>The contributing guide is not required reading.<br>The contributing guide has not been read by anyone who joined in the last eighteen months.</p>
+<h2>The Peace Treaty (Attempt 2: BEM)</h2>
+<p>We renamed everything using BEM: <code>.card__title</code>, <code>.card__title--urgent</code>.</p>
+<p>This worked for six weeks.</p>
+<p>Then someone wrote a component that needed <code>.card__title</code> to behave differently inside a <code>.card--featured</code> context. They added <code>.card--featured .card__title</code>. The BEM was compromised. It was accepted as normal.</p>
+<p>Now we have both systems coexisting. Legacy specificity wars with modern BEM in occasional skirmishes.</p>
+<p><strong>Current state of our CSS:</strong> functional, mostly, if you know where to look.</p>
+</section></article></div><div class="content-wrap"><div class="nav"><div><a href="/">« Full blog</a></div></div></div></div><footer><div class="content-wrap"><section class="about"><div><p>This text can be edited in about.md</p>
+</div></section><section class="copy"><p>© <!-- -->2026<!-- --> <!-- -->Someone<!-- --> — powered by  Fusuma</p></section></div></footer></body></html>
