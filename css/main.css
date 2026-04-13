@@ -19,6 +19,7 @@
   --red: #f83735;
   --red-light: #fecbca;
   --yellow: #fac832;
+  --yellow-light: #fff59d;
   --blue: #1231b5;
   --blue-light: #84b4f9;
 
@@ -53,7 +54,7 @@ pre {
 }
 
 ::selection {
-  background: var(--red-light);
+  background: var(--yellow-light);
 }
 
 /* Base */
@@ -708,12 +709,13 @@ pre .javascript .function {
     --red: #ff6e68;
     --red-light: #4f2f38;
     --yellow: #ffd56a;
+    --yellow-light: #6b5a2d;
     --blue: #9ec2ff;
     --blue-light: #6fa1ff;
   }
 
   ::selection {
-    background: #5d3942;
+    background: var(--yellow-light);
   }
 
   code.lang-markdown {
