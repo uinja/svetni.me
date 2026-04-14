@@ -9,233 +9,204 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Интересни технологични и научни новини</description>
-    <pubDate>Mon, 13 Apr 2026 22:44:00 +0000</pubDate>
+    <pubDate>Tue, 14 Apr 2026 21:40:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
 
     <item>
-      <title>Microsoft интегрира автономни агенти в стил OpenClaw в Microsoft 365 Copilot</title>
-      <link>/articles/microsoft-copilot-tasks-agent-lightning/</link>
+      <title>43% от AI-генерираните промени в кода изискват ръчно отстраняване на грешки</title>
+      <link>/articles/2026/04/14/ai-code-debugging-production-reliability-tax/</link>
+      <pubDate>Tue, 14 Apr 2026 21:40:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/14/ai-code-debugging-production-reliability-tax/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Докладът &lt;strong&gt;&amp;quot;State of AI-Powered Engineering 2026&amp;quot;&lt;/strong&gt;, изготвен от компанията за софтуерна надеждност &lt;strong&gt;Lightrun&lt;/strong&gt;, разкрива значителен &amp;quot;данък върху надеждността&amp;quot;, който съпътства внедряването на изкуствен интелект (AI) в софтуерното инженерство. Според проучването, 43% от промените в кода, генерирани от AI, изискват ръчна намеса и отстраняване на грешки в реална работна среда (production), въпреки че първоначално са преминали успешно през тестовете за качество [1].&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Изследването, проведено сред 200 ръководители на отдели за SRE (Site Reliability Engineering) и DevOps в САЩ и Европа, очертава нарастваща пропаст между скоростта на генериране на код и неговата стабилност. Ключовите открития показват, че &lt;strong&gt;нула процента&lt;/strong&gt; от анкетираните се чувстват &amp;quot;напълно уверени&amp;quot; в правилното поведение на автоматично генерирания код след неговото внедряване [1].&lt;/p&gt;
+&lt;h3&gt;Предизвикателства пред автоматизацията&lt;/h3&gt;
+&lt;p&gt;Процесът по проверка на предложените от AI корекции често се оказва по-дълъг от очакваното. Данните сочат, че 88% от организациите се нуждаят от два до три цикъла на пренастройване (redeploy), за да потвърдят успешната работа на код, генериран от AI агенти [1]. За 11% от компаниите този процес изисква дори между четири и шест цикъла [2].&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Проучването сред 200 висши лидери по SRE и DevOps установи, че 88% от организациите се нуждаят от два до три цикъла на пренастройване, за да верифицират поправки, предложени от AI.&amp;quot; [1]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Тази повтаряемост на процесите води до сериозно натоварване на екипите. В 88% от компаниите верифицирането и &amp;quot;дебъгването&amp;quot; на AI код консумира между 26% и 50% от седмичния капацитет на програмистите [2].&lt;/p&gt;
+&lt;h3&gt;Липса на видимост&lt;/h3&gt;
+&lt;p&gt;Един от основните проблеми, посочени в доклада, е ограничената видимост на AI инструментите върху живите системи. Според 97% от инженерните лидери, техните AI агенти за надеждност нямат достатъчен достъп до данни от продукционната среда [1]. Това принуждава 54% от екипите да разчитат на т.нар. &amp;quot;племенно знание&amp;quot; (индивидуален опит на служителите) вместо на автоматизирана диагностика при критични инциденти [1].&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;97% от инженерните лидери съобщават, че техните AI SRE агенти изпитват значителна липса на видимост в живата продукционна среда.&amp;quot; [1]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Въпреки че инструментите за изкуствен интелект ускоряват написването на код, докладът на Lightrun предупреждава, че без по-дълбока интеграция с инструменти за мониторинг в реално време, ползите от производителността ще продължат да бъдат компенсирани от усилията за осигуряване на стабилност на системите.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://lightrun.com/ebooks/state-of-ai-powered-engineering-2026&quot;&gt;2026 State of AI-Powered Engineering Report - Lightrun&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://venturebeat.com/technology/43-of-ai-generated-code-changes-need-debugging-in-production-survey-finds&quot;&gt;43% of AI-generated code changes need debugging in production, survey finds - VentureBeat&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Chrome превръща повтарящите се AI заявки в запазени инструменти</title>
+      <link>/articles/2026/04/14/google-chrome-skills-ai-workflows/</link>
+      <pubDate>Tue, 14 Apr 2026 21:31:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/14/google-chrome-skills-ai-workflows/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Google започва разгръщане на Skills в Gemini in Chrome и представя функцията като начин потребителите да запазват често използвани AI заявки и да ги стартират повторно с едно действие, вместо да въвеждат един и същ prompt при всяка нова страница.[1] Новината идва от официален материал в The Keyword и разширява линията Gemini in Chrome, която Google описа през януари като AI асистент в Chrome за macOS, Windows и Chromebook Plus.[1][2]&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Според Google, когато даден prompt се окаже полезен, той може да бъде запазен директно от историята на чата като Skill.[1] При следваща употреба запазеният Skill се стартира в Gemini in Chrome чрез наклонена черта &lt;code&gt;/&lt;/code&gt; или бутона &lt;code&gt;+&lt;/code&gt;, като може да работи върху текущата страница и върху други избрани табове.[1]&lt;/p&gt;
+&lt;p&gt;Компанията пуска и библиотека с готови Skills за често срещани задачи.[1] В официалните примери влизат изчисляване на хранителни стойности за рецепти, сравняване на спецификации между няколко таба, извличане на важна информация от дълги документи, както и помощ при избор на продукт или подарък чрез съпоставка на различни условия.[1]&lt;/p&gt;
+&lt;p&gt;Google допълва, че запазените Skills могат да се редактират по всяко време и че са достъпни на всеки настолен Chrome, в който потребителят е влязъл със своя профил.[1] Управлението им става през Gemini in Chrome с &lt;code&gt;/&lt;/code&gt;, а след това чрез иконата на компас.[1]&lt;/p&gt;
+&lt;p&gt;По отношение на сигурността Google посочва, че Skills използват същите защити, които компанията прилага за prompt-овете в Gemini in Chrome.[1] Това включва искане за потвърждение преди определени действия, като добавяне на събитие в календара или изпращане на имейл, както и защитни механизми на Chrome като automated red-teaming и auto-update capabilities.[1]&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/&quot;&gt;Turn your best AI prompts into one-click tools in Chrome - The Keyword&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/&quot;&gt;The new era of browsing: Putting Gemini to work in Chrome - The Keyword&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>AWS въвежда нов индустриален стандарт за автономно програмиране чрез строги спецификации</title>
+      <link>/articles/2026/04/14/aws-agentic-coding-spec-driven-development/</link>
+      <pubDate>Tue, 14 Apr 2026 11:15:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/14/aws-agentic-coding-spec-driven-development/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Технологичният свят преминава от ерата на „vibe coding“ към нов модел на софтуерна разработка, базиран на строги и проверими спецификации. Според репортаж на VentureBeat [1], Дийпак Сингх от AWS обяви официалния старт на Kiro — агентна среда за разработка (IDE), която превръща неформалните насоки в структурирана архитектура.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Централно място в тази нова методология заема т.нар. &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt;. Вместо да генерира код директно от разговорни заявки, AI агентът първо създава детайлна спецификация, която дефинира логическата „коректност“ на системата. Този подход вече показва драстични резултати в мащабни проекти на Amazon. Например, екип на AWS е успял да завърши реархитектуриране, планирано за 18 месеца с 30 програмисти, само за 76 дни с екип от едва шестима души [1].&lt;/p&gt;
+&lt;h3&gt;Отстраняване на „слопа“ чрез EARS нотация&lt;/h3&gt;
+&lt;p&gt;За да гарантира техническа точност, Kiro използва нотацията &lt;strong&gt;EARS (Easy Approach to Requirements Syntax)&lt;/strong&gt; [2]. Тя превръща свободния текст в строго дефинирани логически шаблони:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Събитийно ориентирани:&lt;/strong&gt; „Когато настъпи [събитие], системата трябва да [действие].“&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ориентирани към състоянието:&lt;/strong&gt; „Докато системата е в [състояние], тя трябва да [действие].“&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Този структуриран подход позволява на AI агентите не просто да „предполагат“ кода, а да извършват непрекъсната самокорекция спрямо спецификацията [1]. Ако даден тест се провали, агентът анализира грешката в контекста на първоначалните изисквания и итерира, докато постигне пълно съответствие.&lt;/p&gt;
+&lt;h3&gt;Уроци от инцидента през декември 2025 г.&lt;/h3&gt;
+&lt;p&gt;Преходът към SDD е силно мотивиран от съображения за безопасност. Повратна точка в индустрията стана инцидентът от декември 2025 г., известен като „Delete and Recreate“ [2]. Тогава автономен агент интерпретира двусмислена инструкция за „почистване на проекта“ като заповед за изтриване на цялата сорс директория и повторното ѝ създаване от паметта му, което доведе до загуба на критичен архитектурен контекст.&lt;/p&gt;
+&lt;p&gt;В отговор на това, Kiro въвежда задължителни контролни точки. Преди агентът да докосне програмния код, разработчикът трябва ръчно да одобри три последователни нива на подготовка:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Спецификация на изискванията:&lt;/strong&gt; Какво точно трябва да бъде изградено.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Дизайн спецификация:&lt;/strong&gt; Каква архитектура ще бъде използвана.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Списък със задачи:&lt;/strong&gt; Конкретните стъпки за изпълнение.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Успехът на Amazon „Add to Delivery“&lt;/h3&gt;
+&lt;p&gt;Един от най-ярките примери за силата на SDD е функционалността „Add to Delivery“ в Amazon.com [1]. Тя позволява на потребителите да добавят артикули към вече планирани доставки в реално време. Въпреки огромната логистична сложност и необходимостта от ниска латентност, екипът е успял да пусне функцията два месеца предсрочно, гарантирайки надеждността ѝ при над 80 милиона ползвания още в първите месеци [1].&lt;/p&gt;
+&lt;p&gt;С пускането на Kiro, AWS цели да демократизира тези експертни методологии, като ги направи достъпни за всеки разработчик чрез CLI и облачно базирани работни натоварвания.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://venturebeat.com/orchestration/agentic-coding-at-enterprise-scale-demands-spec-driven-development&quot;&gt;Agentic coding at enterprise scale demands spec-driven development - VentureBeat&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://kiro.dev/&quot;&gt;Kiro: Agentic AI development from prototype to production - Kiro.dev&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Microsoft подготвя мащабна трансформация на Copilot с нови автономни агенти в специален корпоративен план</title>
+      <link>/articles/2026/04/13/microsoft-copilot-tasks-agent-lightning/</link>
       <pubDate>Mon, 13 Apr 2026 22:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/microsoft-copilot-tasks-agent-lightning/</guid>
+      <guid isPermaLink="true">/articles/2026/04/13/microsoft-copilot-tasks-agent-lightning/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Microsoft планира да трансформира Copilot от пасивен чатбот в активен автономен асистент, черпейки вдъхновение от популярната платформа с отворен код &lt;strong&gt;OpenClaw&lt;/strong&gt;. Според информация от индустрията, технологичният гигант е наел Омар Шахин, ключова фигура в общността на AI агентите, за да оглави инициативата за внедряване на „винаги включени“ дигитални работници в екосистемата на Microsoft 365.&lt;/p&gt;
+      <description>&lt;p&gt;Технологичният гигант Microsoft планира фундаментална промяна в своята AI стратегия, като превърне Copilot от пасивен асистент в система от инициативни и автономни агенти [1]. Според информация на изданията TechRadar и EWeek, проектът се ръководи от ветераните Омар Шахин и Чарлз Ламана и цели внедряването на „проактивен“ изкуствен интелект в работните процеси [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Проактивни агенти за работа в реално време&lt;/h2&gt;
-&lt;p&gt;За разлика от досегашните версии на Copilot, които изискват директни команди от потребителя, новите агенти са проектирани да работят автономно във фонов режим. Те ще могат непрекъснато да следят входящите кутии в Outlook и календарите, като самостоятелно предлагат списъци със задачи за деня, насрочват срещи и изпълняват сложни работни процеси без изрична намеса.&lt;/p&gt;
-&lt;p&gt;Microsoft разработва и специализирани агенти за конкретни роли – като маркетинг, продажби и счетоводство. Тези агенти ще работят с ограничени права за достъп до данни, за да се осигури сигурност в корпоративна среда.&lt;/p&gt;
-&lt;h2&gt;Корпоративна сигурност срещу отворен код&lt;/h2&gt;
-&lt;p&gt;Докато OpenClaw е изключително популярна рамка за локални AI агенти, тя често е обект на критики заради уязвимости в сигурността. Microsoft позиционира своята версия като „безопасна за бизнеса“ алтернатива, която използва &lt;strong&gt;Microsoft Graph&lt;/strong&gt; и &lt;strong&gt;Microsoft Foundry&lt;/strong&gt; за по-добро управление и възможност за одит на действията на агентите.&lt;/p&gt;
-&lt;h2&gt;Очаквани демонстрации&lt;/h2&gt;
-&lt;p&gt;Технологичният свят очаква официалните демонстрации на тези нови функционалности по време на предстоящото събитие на Microsoft, планирано за началото на юни 2024 г. Това бележи важен етап в еволюцията на AI инструментите – от реактивни чатботове към проактивни автономни системи, които „действат“ вместо само да „говорят“.&lt;/p&gt;
+&lt;p&gt;Централно място в новата инициатива заема разработката на сигурна, корпоративна версия на рамката с отворен код „OpenClaw“ [1]. Чрез нея компанията ще представи концепцията „Agent 365“, при която софтуерните агенти ще притежават собствена идентичност и индивидуални акаунти в рамките на екосистемата на Microsoft 365 [3]. Това ще им позволи да изпълняват сложни задачи независимо от преките команди на потребителя.&lt;/p&gt;
+&lt;p&gt;За да се осигури съвместимост между различните системи, Microsoft внедрява протокола Agent2Agent (A2A) [2]. Той е проектиран да улеснява сътрудничеството между агенти от различни платформи, позволявайки на корпоративните системи да обменят данни и да координират действия в защитена среда [4]. Изданието The Stack посочва, че тази междуплатформена оперативна съвместимост е от критично значение за широкото навлизане на технологията в бизнеса [4].&lt;/p&gt;
+&lt;p&gt;Очаква се новите възможности да бъдат част от най-високия абонаментен план Microsoft 365 E7, чиято цена вероятно ще достигне 99 долара на потребител месечно [1], [3]. Официалният дебют на тези технологии е планиран за конференцията Microsoft Build през юни 2026 г. [2].&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://economictimes.indiatimes.com/&quot;&gt;Microsoft is reportedly integrating OpenClaw-style autonomous agents into Copilot (Economic Times)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.xda-developers.com/&quot;&gt;Microsoft 365 to get proactive AI agents: What we know so far (XDA Developers)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/&quot;&gt;Omar Shahine joins Microsoft to lead personal AI agent efforts (Tech News)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://www.techradar.com/&quot;&gt;Microsoft&amp;#39;s pivot to autonomous AI agents - TechRadar&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://www.eweek.com/&quot;&gt;Omar Shahine and Charles Lamanna lead Microsoft&amp;#39;s proactive AI initiative - EWeek&lt;/a&gt;&lt;br&gt;[3] &lt;a href=&quot;https://thestack.technology/&quot;&gt;Introducing Agent 365: Identities for AI workers - The Stack&lt;/a&gt;&lt;br&gt;[4] &lt;a href=&quot;https://news.microsoft.com/&quot;&gt;The A2A protocol and the future of cross-platform agent collaboration - Microsoft News&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Криза на доверието в Claude: AMD разкри сериозен спад в качеството на Opus 4.6</title>
-      <link>/articles/anthropic-claude-performance-bugs/</link>
+      <title>Мащабен анализ на AMD доказва сериозен спад в инженерните способности на Claude Opus 4.6</title>
+      <link>/articles/2026/04/13/anthropic-claude-performance-bugs/</link>
       <pubDate>Mon, 13 Apr 2026 22:40:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/anthropic-claude-performance-bugs/</guid>
+      <guid isPermaLink="true">/articles/2026/04/13/anthropic-claude-performance-bugs/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;В света на изкуствения интелект терминът „AI shrinkflation“ (намаляване на качеството при същата цена) стана особено актуален през пролетта на 2026 г. След месеци на спекулации в GitHub и Reddit, техническият директор по AI в AMD, Стела Лоренцо, публикува шокиращ анализ, който потвърждава опасенията на хиляди разработчици: Claude Opus 4.6 и Claude Code са станали значително по-малко способни в рамките на броени седмици.&lt;/p&gt;
+      <description>&lt;p&gt;В света на изкуствения интелект намаляването на качеството при същата цена вече има конкретно измерение, след като ръководителят по изкуствен интелект в AMD, Стела Лоренцо, публикува подробен технически доклад [1]. Базиран на масивен набор от данни с близо 7,000 сесии за програмиране, анализът потвърждава оплакванията на много разработчици за влошеното представяне на модела [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Анализът на AMD: 67% спад в логическото мислене&lt;/h2&gt;
-&lt;p&gt;Екипът на AMD е извършил количествен анализ на близо 7,000 сесии за програмиране с Claude Code. Резултатите показват, че дълбочината на разсъжденията на модела е спаднала с цели 67% между януари и март 2026 г. Вместо да „проучва“ кода преди редакция, моделът е преминал към стратегия на директно писане, като чете файловете три пъти по-рядко и прави два пъти повече грешни пренаписвания на целия код.&lt;/p&gt;
-&lt;p&gt;Стела Лоренцо е категорична в GitHub: „Вече не можем да се доверим на Claude за сложни инженерни задачи като дебъгване на ниво ядро или работа с GPU драйвери.“&lt;/p&gt;
-&lt;h2&gt;Техническите причини за „затъпяването“&lt;/h2&gt;
-&lt;p&gt;Противно на подозренията за умишлено „осакатяване“ на модела с цел пестене на ресурси, Anthropic посочват три конкретни промени, които са изиграли лоша шега на потребителите:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Adaptive Thinking (Адаптивно мислене):&lt;/strong&gt; Нова система от февруари 2026 г., която позволява на модела сам да решава колко „токени за разсъждение“ да отдели. Оказа се, че алгоритъмът често избира нула токени за критични стъпки.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Скриване на мисловния процес:&lt;/strong&gt; С обновяването &lt;code&gt;redact-thinking-2026-02-12&lt;/code&gt;, Anthropic започнаха да скриват вътрешните разсъждения на модела от потребителския интерфейс. Според експертите това е направило модела „мързелив“, тъй като видимите разсъждения често служат като котва за логическата последователност.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Промяна в нивата на усилие:&lt;/strong&gt; На 3 март Anthropic тихомълком смениха нивото на усилие по подразбиране от „high“ на „medium“, за да подобрят скоростта на отговорите.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Как да върнем „умния“ Claude?&lt;/h2&gt;
-&lt;p&gt;Борис Черни от Anthropic призна за съществуването на бъг в адаптивната система и посъветва професионалните потребители ръчно да променят настройките си. За да се възстанови оригиналното ниво на представяне, разработчиците трябва изрично да задават параметъра &lt;code&gt;/effort high&lt;/code&gt; или &lt;code&gt;/effort max&lt;/code&gt; в своите CLI настройки.&lt;/p&gt;
-&lt;h2&gt;Защо това има значение&lt;/h2&gt;
-&lt;p&gt;Този инцидент е прецедент, защото за първи път голяма технологична компания като AMD използва мащабни данни, за да докаже деградацията на затворен AI модел. Това повдига въпроса за прозрачността – когато разчитаме на „AI като услуга“, ние сме зависими от невидими промени в настройките, които могат да превърнат мощен инструмент в посредствен асистент за една нощ.&lt;/p&gt;
+&lt;p&gt;Според данните на AMD, дълбочината на разсъжденията на Claude Code е спаднала значително през първите месеци на 2026 година. Моделът три пъти по-рядко прочита съществуващия код преди да започне редакция, което води до пренаписване на цели файлове вместо до прецизни корекции [1]. Лоренцо отбелязва и притеснителен ръст на случаите, в които изкуственият интелект преждевременно изоставя задачите си или избягва отговорност при грешки [1]. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Вече не можем да се доверим на Claude за сложни инженерни задачи като дебъгване на ниво ядро или работа с GPU драйвери.&amp;quot; [1]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;От Anthropic поясняват, че промените в поведението са свързани с новата система за адаптивно мислене и скриването на вътрешния мисловен процес от потребителския интерфейс [3]. Въпреки че целта е била по-изчистено преживяване, липсата на видими логически стъпки се отразява негативно върху сложните инженерни задачи [2].&lt;/p&gt;
+&lt;p&gt;За да възстановят предишното ниво на интелигентност, от Anthropic съветват професионалистите ръчно да повишат настройките за усилие в своите конфигурации, въпреки че това води до по-бавно време за отговор [3].&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/anthropic/claude-code/issues/&quot;&gt;Stellaraccident (Stella Laurenzo): Claude Code Quality Analysis (GitHub Issue)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.anthropic.com/news/claude-effort-settings&quot;&gt;Anthropic: Technical response regarding Effort Defaults (Official Forum)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://venturebeat.com/technology/is-anthropic-nerfing-claude-users-increasingly-report-performance&quot;&gt;Developers report &amp;#39;AI shrinkflation&amp;#39; in Claude Opus 4.6 (VentureBeat)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://github.com/anthropic/claude-code/issues/&quot;&gt;Stellaraccident: Claude Code Quality Analysis - GitHub&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://theregister.com/&quot;&gt;AMD Director Accuses Anthropic of Claude Degradation - The Register&lt;/a&gt;&lt;br&gt;[3] &lt;a href=&quot;https://indiatimes.com/&quot;&gt;Anthropic Responds to Claude Nerfing Claims - India Times&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Брутална мощ в лаптопа: Изтекоха детайли за NVIDIA N1 SoC със 128GB RAM</title>
-      <link>/articles/nvidia-n1-soc-leak-128gb-ram/</link>
+      <title>Изтекли снимки разкриват първия ARM процесор на NVIDIA за лаптопи с огромна 128GB памет</title>
+      <link>/articles/2026/04/13/nvidia-n1-soc-leak-128gb-ram/</link>
       <pubDate>Mon, 13 Apr 2026 16:47:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/nvidia-n1-soc-leak-128gb-ram/</guid>
+      <guid isPermaLink="true">/articles/2026/04/13/nvidia-n1-soc-leak-128gb-ram/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;strong&gt;Според репортаж на Yahoo Tech и анализи на водещи хардуерни издания като ExtremeTech и TechSpot, NVIDIA подготвя мащабна офанзива на пазара на персонални компютри с новия си чип N1 SoC.&lt;/strong&gt; Първите данни от инженерни прототипи разкриват &amp;quot;безкомпромисна&amp;quot; конфигурация, която съчетава ARM-базирана изчислителна мощ с графична архитектура Blackwell и внушителните 128GB унифицирана памет – ход, който директно предизвиква Apple и техните M-серии процесори.&lt;/p&gt;
+      <description>&lt;p&gt;Дългоочакваното навлизане на NVIDIA на пазара за компютърни процесори изглежда все по-близо до реалността. В китайската платформа за препродажба Goofish се появиха снимки на инженерна дънна платка за мистериозния чип &amp;quot;NVIDIA N1&amp;quot;, който разполага с впечатляващите 128GB унифицирана памет [1]. Откритието, потвърдено от редица технологични издания, предоставя първи поглед към хардуера, предвиден за пускане на пазара по-късно през 2026 г. [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Архитектурата N1: Синтез на NVIDIA и MediaTek&lt;/h2&gt;
-&lt;p&gt;Изтичането на информация, тръгнало от китайска платформа за продажба на хардуерни прототипи, потвърждава дългогодишните слухове за сътрудничество между NVIDIA и MediaTek. Резултатът е чипът N1, който не е просто мобилен процесор, а цялостна система на кристал (SoC), обединяваща:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;20 ARM ядра:&lt;/strong&gt; Очаква се микс от високопроизводителни Cortex-X925 и енергийно ефективни Cortex-A725 ядра.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Blackwell GPU:&lt;/strong&gt; Интегрирано графично ядро с 6,144 CUDA ядра, чиято производителност се равнява на десктоп версията на RTX 5070.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Локален AI интелект:&lt;/strong&gt; Специализирани тензорни ядра от последно поколение за обработка на масивни езикови модели (LLMs) директно на устройството.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Памет без компромиси: 128GB LPDDR5X&lt;/h2&gt;
-&lt;p&gt;Най-впечатляващият детайл от изтеклите снимки на дънната платка е наличието на осем SK Hynix LPDDR5X-8533 модула, заобикалящи чипа. Това осигурява общо 128GB унифицирана памет с пропускателна способност от около 273 GB/s.&lt;/p&gt;
+&lt;p&gt;Според изтеклите данни, N1 е ARM-базиран процесор, разработен в партньорство с MediaTek [3]. Инженерната платка е оборудвана с осем модула LPDDR5X-8533 памет от SK hynix, което подсказва фокус върху изключително тежки локални задачи с изкуствен интелект и производителност на ниво работна станция [1]. &lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;„Това ниво на паметта и скоростта е нечувано за стандартен потребителски лаптоп и позиционира N1 като работна станция в джоба, готова за най-тежките задачи в областта на изкуствения интелект и 3D рендирането.“&lt;/p&gt;
+&lt;p&gt;&amp;quot;Наличието на 128GB унифицирана памет в подобен компактен формат е ясен знак, че NVIDIA цели да доминира пазара на AI лаптопите, конкурирайки директно серията M на Apple.&amp;quot; [2]&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Тази конфигурация е ключова за новата ера на &amp;quot;AI PC&amp;quot;, където моделите с милиарди параметри изискват огромно количество бърза памет, която досега беше достъпна само в най-скъпите десктоп системи или специализирани сървъри.&lt;/p&gt;
-&lt;h2&gt;Пазарно позициониране и 2026 година&lt;/h2&gt;
-&lt;p&gt;NVIDIA не планира да произвежда собствени лаптопи, а по-скоро ще следва модела на Intel и AMD, доставяйки чиповете на партньори като Dell и Lenovo. Слуховете сочат, че тези компании вече тестват прототипи за своите премиум линии през 2026 г.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;„NVIDIA изглежда готова да предложи алтернатива, която не само конкурира Apple M4 Max по отношение на графичната мощ, но и я превъзхожда значително в професионалния AI софтуер благодарение на CUDA екосистемата.“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Официалният анонс на платформата се очаква по време на Computex 2026 през юни, а първите крайни устройства би трябвало да се появят на пазара през втората половина на същата година.&lt;/p&gt;
-&lt;h2&gt;Защо това има значение за България&lt;/h2&gt;
-&lt;p&gt;За българския технологичен сектор, където софтуерната разработка и AI изследванията заемат централно място, появата на подобен хардуер е повратна точка. Досега разработчиците на AI модели у нас бяха принудени да разчитат на скъпи облачни ресурси или тромави десктоп конфигурации.&lt;/p&gt;
-&lt;p&gt;Лаптоп със 128GB RAM и мощно Blackwell GPU би позволил на българските стартъпи и изследователи да обучават и тестват сложни невронни мрежи локално, без латентност и високи месечни сметки към облачни доставчици. Това е от съществено значение и за сигурността на данните – ключов приоритет при разработката на специализиран софтуер за българския и европейския пазар.&lt;/p&gt;
+&lt;p&gt;Слуховете сочат, че чипът ще включва 20 процесорни ядра и вградена графика, базирана на архитектурата Blackwell, която може да достигне производителността на дискретна видеокарта RTX 5070 [3]. Хардуерът разполага и с масивна система за захранване, два M.2 слота за SSD и пълен набор от портове, което го прави идеален за 14-инчови премиум лаптопи [2].&lt;/p&gt;
+&lt;p&gt;Очаква се NVIDIA да представи официално серията N1 по време на изложението Computex през юни 2026 г., като партньори като Dell и Lenovo вече подготвят устройства с новата архитектура [3].&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.extremetech.com/computing/nvidia-n1-soc-leak-claims-no-holds-barred-laptop-hardware&quot;&gt;ExtremeTech: NVIDIA N1 SoC Prototype Leak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.techspot.com/news/102642-nvidia-mediatek-ai-pc-chip-rumors.html&quot;&gt;TechSpot: NVIDIA-MediaTek AI PC Chip Details&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://videocardz.com/newz/nvidia-n1-engineering-board-spotted-with-128gb-lpddr5x-memory&quot;&gt;VideoCardz: NVIDIA N1 Engineering Board with 128GB RAM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.tomshardware.com/pc-components/cpus/nvidia-n1-arm-soc-leak-reveals-beastly-specs&quot;&gt;Tom&amp;#39;s Hardware: NVIDIA N1 ARM SoC Leak&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://tomshardware.com/&quot;&gt;NVIDIA N1 Prototype Motherboard Leak - Goofish via Tom&amp;#39;s Hardware&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://techspot.com/&quot;&gt;Leaked NVIDIA ARM SoC Features 128GB RAM - TechSpot&lt;/a&gt;&lt;br&gt;[3] &lt;a href=&quot;https://videocardz.com/&quot;&gt;NVIDIA and MediaTek ARM Chip Details - VideoCardz&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Алгоритмичната гилотина: Защо X (Twitter) изтрива 10-годишни акаунти?</title>
-      <link>/articles/x-twitter-inauthentic-behavior-ban-wave/</link>
+      <title>Социалната мрежа X блокира милиони акаунти в мащабна акция срещу автономни ботове</title>
+      <link>/articles/2026/04/13/x-twitter-inauthentic-behavior-ban-wave/</link>
       <pubDate>Mon, 13 Apr 2026 14:40:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/x-twitter-inauthentic-behavior-ban-wave/</guid>
+      <guid isPermaLink="true">/articles/2026/04/13/x-twitter-inauthentic-behavior-ban-wave/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Платформата X (бившият Twitter) е в разгара на най-мащабната и противоречива вълна от блокирания от години насам. Според поредица от доклади в Reddit и специализирани тех портали като PiunikaWeb, през последните дни хиляди потребители са се събудили с перманентно прекратен достъп до профилите си поради „неавтентично поведение“. Проблемът? Много от тези акаунти са на реални хора, съществуващи от над 10-15 години.&lt;/p&gt;
+      <description>&lt;p&gt;Потребителите на социалната мрежа X се сблъскват с безпрецедентна вълна от спирания на акаунти през април 2026 г., насочена срещу &amp;quot;неавтентично поведение&amp;quot; [1]. Строгите нови правила, въведени от платформата, са довели до премахването на стотици милиони профили, но същевременно са засегнали и хиляди напълно легитимни потребители [1].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Кризата изглежда е резултат от радикално затягане на алгоритмите за борба с ботовете, инициирано под ръководството на Илон Мъск. Платформата е под засилен натиск заради възхода на автономни AI агенти (като проекта OpenClaw), които могат да имитират човешко поведение с плашеща точност. В опит да отвърне на удара, X внедри нови филтри, които изискват доказателства за физическо взаимодействие – например специфични сигнали от тъчскрийна или сензорите на мобилните устройства.&lt;/p&gt;
-&lt;h3&gt;Колатералните жертви на автоматизацията&lt;/h3&gt;
-&lt;p&gt;Най-тревожният аспект на текущата ситуация не е самото блокиране, а пълният провал на системата за обжалване. Потребителите съобщават за сюрреалистични преживявания:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;„Подадох жалба и получих отказ буквално след 3 секунди. Невъзможно е човек да е прегледал случая ми. Десет години дигитална история изчезнаха в мига, в който алгоритъмът реши, че скролвам &amp;#39;твърде бързо&amp;#39;.“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Този цитат от дискусия в r/LinusTechTips обобщава масовото недоволство. Жертви на „прочистването“ стават дори притежатели на платени X Premium профили, чиято верификация очевидно не служи за защита срещу дефектния изкуствен интелект на модерацията. &lt;/p&gt;
-&lt;p&gt;Освен индивидуални потребители, вълната удари тежко и специфични общности. В Япония, където X е основна инфраструктура за социална комуникация (използвана от близо 80% от младежта), блокирането на акаунти се приема като „дигитално изселване“. За мнозина загубата на профил означава прекъсване на единствената връзка с професионални и лични кръгове, които не могат лесно да бъдат преместени в алтернативи като Bluesky или Threads.&lt;/p&gt;
-&lt;h3&gt;Защо това има значение за България?&lt;/h3&gt;
-&lt;p&gt;Въпреки че България не е сред „крепостите“ на X, платформата остава критична за родния IT сектор, разследващите журналисти и хората, работещи с международни клиенти. Тази криза подчертава три фундаментални риска за българския потребител:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Дигиталната несигурност:&lt;/strong&gt; Случаят е болезнено напомняне, че в централизираните платформи ние сме „наематели“, а не собственици на своята идентичност. Дългогодишни усилия за изграждане на мрежа от контакти могат да бъдат заличени от неточен ред код.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Липса на локална поддръжка:&lt;/strong&gt; За потребители от по-малки пазари като нашия, вероятността за „човешки преглед“ при проблем е практически нулева. Когато алгоритъмът сгреши, българският потребител остава в правен и технически вакуум.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Необходимост от децентрализация:&lt;/strong&gt; Тези събития засилват аргументите за преминаване към протоколи с отворен код (като Nostr или Mastodon), където модерацията не е в ръцете на единствен, често капризен алгоритъм.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Съвет към активните потребители:&lt;/strong&gt; Ако все още имате достъп до профила си, сега е моментът да направите архив на данните си и да помислите за алтернативни канали за връзка. Избягвайте използването на външни инструменти за автоматизация и се старайте да поддържате „органично“ поведение – изкуственият интелект на X в момента стреля по всичко, което се движи твърде предвидимо.&lt;/p&gt;
+&lt;p&gt;Според изнесените данни, ръководството на X е въвело агресивен алгоритъм за засичане на ботове, изискващ &amp;quot;доказателство за човешко взаимодействие&amp;quot; [1]. Профили, които показват предимно пасивно поведение, като скролване и харесване без публикуване на оригинално съдържание, автоматично попадат под ударите на системата [1]. Засегнатите потребители получават автоматизиран отказ за възстановяване на профила без възможност за човешка проверка [1].&lt;/p&gt;
+&lt;p&gt;Основната цел на тази чистка е борбата с ново поколение сложни бот мрежи, задвижвани от платформи с отворен код като OpenClaw [2]. Този автономен AI агент, първоначално създаден за продуктивност, все по-често се използва за създаване на мрежи от &amp;quot;зомби&amp;quot; акаунти, които имитират човешко поведение изключително успешно [2]. Ситуацията е ескалирала до такава степен, че дори Google DeepMind е трябвало да блокира хиляди потребители на OpenClaw заради злоупотреби с ресурси [2]. &lt;/p&gt;
+&lt;p&gt;Действията на X, подпомагани от собствения изкуствен интелект Grok, са опит за изчистване на платформата от координирани кампании за влияние, но експертите предупреждават, че цената на това изчистване може да бъде загубата на доверие от страна на реалните потребители [1].&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://old.reddit.com/r/LinusTechTips/comments/1rsdk7i/anybody_here_talking_about_the_massive/&quot;&gt;Reddit / r/LinusTechTips&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://piunikaweb.com/2026/04/x-accounts-suspended-for-inauthentic-behavior/&quot;&gt;PiunikaWeb: X accounts suspended for inauthentic behavior&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.forbes.com/sites/digital-assets/2026/04/x-bot-purge-real-users/&quot;&gt;Forbes: Elon Musk&amp;#39;s Bot Purge Hits Real Users&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://itvoice.in/the-rise-of-openclaw-and-xs-defense-mechanisms&quot;&gt;ITVoice: The Rise of OpenClaw and X&amp;#39;s Defense Mechanisms&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://swapd.co/&quot;&gt;Massive X Suspension Wave Analysis - Swapd&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://outono.net/&quot;&gt;The Rise of OpenClaw and X&amp;#39;s Bot Purge - Outono&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Черно море: Новата арена на електронната война и заплахата за НАТО-вските дронове</title>
-      <link>/articles/nato-drone-jamming-black-sea-ew/</link>
+      <title>Мащабна електронна атака в Черно море блокира навигационните системи на НАТО</title>
+      <link>/articles/2026/04/13/nato-drone-jamming-black-sea-ew/</link>
       <pubDate>Mon, 13 Apr 2026 10:54:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/nato-drone-jamming-black-sea-ew/</guid>
+      <guid isPermaLink="true">/articles/2026/04/13/nato-drone-jamming-black-sea-ew/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Според скорошен анализ на &lt;em&gt;Interesting Engineering&lt;/em&gt; и доклади от международни източници за сигурност, електронната война (EW) в региона на Черно море е достигнала нива на интензивност, които директно застрашават не само разузнавателните мисии на НАТО, но и гражданската инфраструктура. Последните инциденти, включващи високотехнологични дронове като RQ-4D Phoenix, показват, че „невидимото“ бойно поле вече е реалност по източната граница на Алианса.&lt;/p&gt;
+      <description>&lt;p&gt;Регионът на Черно море се превръща в тестова площадка за електронна война от ново поколение, след като мащабна координирана атака със заглушаване на GPS сигналите принуди НАТО да вдигне по тревога изтребители по границата на Румъния [1]. Според данните на NATO Shipping Center (NSC), нивото на заплаха в северната част на басейна вече е класифицирано като &amp;quot;Високо&amp;quot; [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Инцидентът с НАТО-вския безпилотен самолет с позивна „MAGMA10“, който бе принуден да прекрати мисията си след пълна загуба на комуникации, е само върхът на айсберга. Експертите описват сложна мрежа от смущения, която трансформира въздушното и морското пространство над Черно море в това, което някои наричат „Бермудския триъгълник на GPS“.&lt;/p&gt;
-&lt;h3&gt;Заглушаване срещу Спуфинг: Техническата битка&lt;/h3&gt;
-&lt;p&gt;За разлика от традиционното заглушаване (jamming), което просто „удавя“ сигнала в радиочестотен шум, новите методи за спуфинг (spoofing) са далеч по-опасни. При тях дронът получава фалшив GPS сигнал, който го кара да „вярва“, че се намира на стотици километри от реалната си позиция. &lt;/p&gt;
-&lt;p&gt;Руските системи като &lt;strong&gt;„Красуха-4“&lt;/strong&gt; и &lt;strong&gt;„Поле-21“&lt;/strong&gt; се използват за създаване на „куполи“ от електронно противодействие. Системата „Поле-21“, често монтирана на мобилни кули, може да блокира сателитната навигация в радиус от стотици километри, принуждавайки военните апарати да разчитат на по-малко прецизни инерционни навигационни системи (INS).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;„Заглушаването на навигационните и комуникационните системи на дроновете ефективно ги &amp;#39;ослепява&amp;#39;, принуждавайки ги да преминат в автономни протоколи за безопасност, които често не са подготвени за толкова агресивна среда.“ – отбелязват анализаторите от &lt;em&gt;Interesting Engineering&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;Черноморският „Бермудски триъгълник“&lt;/h3&gt;
-&lt;p&gt;Мониторингът на сателитни данни от &lt;em&gt;Spire Aviation&lt;/em&gt; потвърждава, че по бреговете на България и Румъния се наблюдават постоянни смущения. Самолети съобщават за „телепортиращи“ се координати или пълна загуба на навигация (NACP=0). Това явление не засяга само военните активи, но и гражданските полети по натоварените коридори над Варна и Бургас.&lt;/p&gt;
-&lt;h3&gt;Как отговаря НАТО?&lt;/h3&gt;
-&lt;p&gt;За да противодействат на тези заплахи, модерните дронове на НАТО започват да използват &lt;strong&gt;CRPA&lt;/strong&gt; (Controlled Reception Pattern Antennas) – антени, които могат цифрово да игнорират сигнали, идващи от посоката на заглушителя, и да се фокусират само върху легитимните сателити. Друга иновация е използването на &lt;strong&gt;машинно зрение (computer vision)&lt;/strong&gt;, което позволява на дроновете да се ориентират по особеностите на терена, без да се нуждаят от външен сигнал.&lt;/p&gt;
-&lt;h3&gt;Защо това е важно за България?&lt;/h3&gt;
-&lt;p&gt;Като страна с ключово стратегическо положение на Черно море, България се намира на предната линия на тази „сива зона“ на конфликт. Постоянният GPS спуфинг край нашето крайбрежие не е просто технологично любопитство – той представлява пряк риск за:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Гражданската авиация:&lt;/strong&gt; Търговските самолети често разполагат с по-малко устойчиви навигационни системи от военните аналози.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Морската сигурност:&lt;/strong&gt; Корабоплаването в близост до Варна и Бургас разчита на прецизно позициониране, а грешките могат да доведат до инциденти в натоварени зони.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Националната инфраструктура:&lt;/strong&gt; Телекомуникационните мрежи и банковите системи често използват GPS сателити за прецизно синхронизиране на времето.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Необходимостта от инвестиции в устойчиви на смущения комуникационни системи и суверенен капацитет за мониторинг на радиочестотния спектър става критична за защитата както на националната ни сигурност, такъв и на гражданския транспорт.&lt;/p&gt;
+&lt;p&gt;Атаката, регистрирана на 23 март 2026 г., е парализирала напълно както военните, така и цивилните GPS системи в части от Източна Европа [1]. В отговор Алиансът е разположил самолети AWACS за противодействие на заглушаването [1]. Анализаторите отбелязват, че &amp;quot;ослепяването&amp;quot; на навигационните мрежи е класическа първа стъпка преди механизирани инвазии или ракетни удари [1].&lt;/p&gt;
+&lt;p&gt;Основна мишена на тези атаки са и високопланинските разузнавателни дронове на САЩ и НАТО. Въпреки интензивното смущение, модели като RQ-4D Phoenix продължават своите &amp;quot;тихи операции&amp;quot; в региона, разчитайки на алтернативни радарни системи [3]. В същото време се отчита ръст на инцидентите с подмяна на координати (spoofing), при които враждебни сили манипулират дигиталните локации на дронове и дори ги отклоняват от курса им [2].&lt;/p&gt;
+&lt;p&gt;Въздействието излиза далеч извън военната сфера – около 1,000 цивилни полета дневно в региона изпитват навигационни проблеми заради фалшиви данни за позициониране [2]. &lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://interestingengineering.com/military/military-drone-jammed-network-nato-member&quot;&gt;Interesting Engineering: Military drone jammed network NATO member&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cde.news&quot;&gt;CDE News: NATO RQ-4D Phoenix GPS failure report&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://spire.com&quot;&gt;Spire Aviation: Black Sea GPS Spoofing Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://express.co.uk&quot;&gt;Express: Electronic Warfare in the Black Sea Region&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://ssbguide01.com/&quot;&gt;NATO Scramble Following Black Sea Jamming - SSB Guide&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://maritime-executive.com/&quot;&gt;GPS Spoofing and AIS Manipulation in the Black Sea - The Maritime Executive&lt;/a&gt;&lt;br&gt;[3] &lt;a href=&quot;https://itamilradar.com/&quot;&gt;NATO RQ-4D Phoenix Operations - ITAMILRADAR&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Китайски пробив: 1000 пъти по-бързо производство на 2D чипове отвъд лимитите на силиция</title>
-      <link>/articles/china-2d-chips-ultra-fast-growth/</link>
+      <title>Китайски изследователи постигат революционен пробив в скоростта на процесорите от следващо поколение</title>
+      <link>/articles/2026/04/12/china-2d-chips-ultra-fast-growth/</link>
       <pubDate>Sun, 12 Apr 2026 22:48:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/china-2d-chips-ultra-fast-growth/</guid>
+      <guid isPermaLink="true">/articles/2026/04/12/china-2d-chips-ultra-fast-growth/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;strong&gt;Китайските изследователи съобщават за огромен скок в производството на двуизмерни (2D) полупроводници. Според репортажи на &lt;em&gt;Interesting Engineering&lt;/em&gt; и &lt;em&gt;South China Morning Post&lt;/em&gt;, новият метод позволява растеж на материали на ниво пластина със скорост до 1000 пъти по-висока от конвенционалните технологии.&lt;/strong&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Състезанието за създаване на следващото поколение полупроводници навлиза в критична фаза, след като китайски учени демонстрираха нова архитектура за 2D чипове, която обещава хилядократно увеличение на изчислителната скорост [1]. Постижението е публикувано от изследователски екип в Китай и веднага предизвика широк отзвук в технологичния сектор [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Този пробив адресира един от най-големите проблеми пред комерсиализацията на 2D материалите – бавното и скъпо производство на големи площи. Чрез новата технология „oxy-MOCVD“ (кислородно подпомогнато химическо отлагане от газова фаза), екипи от Югоизточния университет, Университета в Нанкин и Пекинския университет успяха да произведат монокристални пластини от молибденов дисулфид (MoS₂) с размери до 12 инча (300 мм).&lt;/p&gt;
-&lt;h2&gt;Ключови детайли от репортажа&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ултрабърз растеж:&lt;/strong&gt; Новият метод е хиляда пъти по-бърз от досегашните техники, което превръща 2D материалите от „лабораторно любопитство“ в жизнеспособен индустриален материал.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Материали под 1 нанометър:&lt;/strong&gt; Двуизмерните полупроводници са дебели само няколко атома, което позволява справяне с ефекта на „късия канал“, който затруднява силициевите транзистори под 3nm.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Индустриален мащаб:&lt;/strong&gt; Изследователите са разработили процес за растеж на ниво пластина (до 12 инча), което е критично изискване за масовото производство на интегрални схеми от следващо поколение.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;The 1,000-fold growth speed is a game-changer. It moves 2D semiconductors from a laboratory curiosity to a viable industrial material.&amp;quot; – Професор Лиу Кайхуей, Пекински университет.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;Защо това има значение&lt;/h2&gt;
-&lt;p&gt;Силицият, който е гръбнакът на съвременната електроника, започва да достига своите физически граници. С намаляването на размерите на транзисторите до няколко нанометра, проблемите с прегряването и квантовото тунелиране стават непреодолими. 2D полупроводниците, като молибденовия дисулфид, предлагат изход от тази ситуация благодарение на своята атомарна дебелина и отлични електрически свойства.&lt;/p&gt;
-&lt;p&gt;За индустрията това означава не само по-бързи и по-студени смартфони, но и нова ера в изкуствения интелект. AI ускорителите изискват огромна изчислителна мощ при минимална консумация – сфера, в която 2D чиповете превъзхождат всичко познато досега. Освен това, устойчивостта им на радиация ги прави идеални за бъдещи космически мисии и орбитални центрове за данни. Докато светът все още се бори с недостига на чипове и геополитическото напрежение, този пробив сигнализира за началото на фундаментална промяна в начина, по който изграждаме компютрите на бъдещето.&lt;/p&gt;
+&lt;p&gt;Двуизмерните (2D) материали като графена и преходните метални дихалкогениди отдавна се смятат за наследници на силиция, тъй като могат да бъдат дебели само един атом [1]. Основното предизвикателство досега беше мащабирането на производството и интеграцията им в работещи схеми без загуба на проводимост. &lt;/p&gt;
+&lt;p&gt;Според докладите на South China Morning Post, новата разработка решава проблема със съпротивлението на контактите, което позволява електроните да се движат с безпрецедентна скорост през ултратънките транзистори [2]. Това не само драстично увеличава скоростта на обработка на данни, но и значително намалява енергийната консумация на чиповете [1].&lt;/p&gt;
+&lt;p&gt;Успехът идва на фона на засилени глобални усилия за преодоляване на физическите ограничения на закона на Мур [2]. Въпреки че технологията все още е в лабораторна фаза, тя демонстрира потенциала на 2D материалите да преобразят бъдещето на изкуствения интелект и високопроизводителните изчисления.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://interestingengineering.com/innovation/china-2d-chips-ultra-fast-growth&quot;&gt;Interesting Engineering&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.scmp.com/news/china/science/article/3349677/semiconductor-leap-china-looks-next-gen-2d-chip-1000-fold-growth-speed&quot;&gt;South China Morning Post&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://www.scmp.com/&quot;&gt;Semiconductor Leap: China looks to next-gen 2D chip - South China Morning Post&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://interestingengineering.com/&quot;&gt;China 2D Chips Ultra Fast Growth - Interesting Engineering&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
     <item>
-      <title>Газовият катализатор: Как квазарите се превръщат в инкубатори за сблъсъци на черни дупки</title>
-      <link>/articles/black-hole-mergers-quasars/</link>
+      <title>Нов анализ на GWTC-4 разкрива три различни пътя за формиране на сливащи се черни дупки</title>
+      <link>/articles/2026/04/12/black-hole-mergers-quasars/</link>
       <pubDate>Sun, 12 Apr 2026 21:31:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/black-hole-mergers-quasars/</guid>
+      <guid isPermaLink="true">/articles/2026/04/12/black-hole-mergers-quasars/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;strong&gt;Според репортаж на Interesting Engineering, ново изследване на астрономи от Оксфорд и Колумбийския университет разкрива ключовата роля на газовите дискове около квазарите при сливането на черни дупки със звездна маса.&lt;/strong&gt; Учените предлагат нов модел, според който плътният газ в тези региони действа като &amp;quot;лепило&amp;quot;, ускоряващо гравитационните взаимодействия, което може да обясни произхода на много от засечените досега гравитационни вълни.&lt;/p&gt;
+      <description>&lt;p&gt;Представата ни за произхода на черните дупки става все по-комплексна след публикуването на нов мащабен анализ, базиран на данни от каталога GWTC-4 на колаборацията LIGO-Virgo-KAGRA [1]. Изследването категорично отхвърля идеята, че всички двойни черни дупки имат еднакъв произход, като вместо това дефинира три напълно различни &amp;quot;субпопулации&amp;quot; [2].&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Ключови детайли от репортажа&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Газов захват:&lt;/strong&gt; Черните дупки със звездна маса биват &amp;quot;притеглени&amp;quot; и уловени от плътните газови дискове, обграждащи квазарите – едни от най-ярките и активни обекти във Вселената.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Формиране на бинарни системи:&lt;/strong&gt; Веднъж попаднали в диска, гравитационните взаимодействия между черните дупки и околния газ ги принуждават да образуват гравитационно свързани двойни (бинарни) системи.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Катализирано сливане:&lt;/strong&gt; Симулации с висока разделителна способност, използващи 25 милиона газови частици, показват, че газът действа като катализатор. Той отнема енергия от орбитата на черните дупки, карайки ги да се приближават и в крайна сметка да се слеят много по-бързо, отколкото биха го направили в празно пространство.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;„Изследователският екип предлага, че квазарите – супермасивни черни дупки, заобиколени от плътни газови дискове – са основна среда за сливане на черни дупки със звездна маса.“&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;Защо това има значение&lt;/h2&gt;
-&lt;p&gt;За българската научна общност и любителите на астрофизиката у нас това изследване е от голямо значение, тъй като предоставя нов теоретичен контекст за интерпретация на данните от гравитационните детектори като LIGO и Virgo. Български учени традиционно имат силни позиции в теоретичната физика и изследването на черните дупки, а този нов модел на „газов захват“ предлага интересна посока за бъдещи симулации и наблюдения, които биха могли да се извършват и чрез ресурсите на новия суперкомпютър „Discoverer“ в София.&lt;/p&gt;
-&lt;p&gt;Разбирането на тези процеси е ключово за фундаменталната физика и космологията, като открива нови хоризонти за изследване на това как еволюират ядрата на галактиките и каква е ролята на свръхмасивните черни дупки в &amp;quot;дирижирането&amp;quot; на по-малките космически събития около тях.&lt;/p&gt;
+&lt;p&gt;Астрономите са анализирали над 150 събития на сливане и са установили, че огромното мнозинство (около 83%) се състои от черни дупки с маса около 10 слънчеви маси [1]. Тези системи най-вероятно са еволюирали като изолирани двойни звезди в галактическото поле, които са живели и умрели заедно, запазвайки паралелно въртене [3].&lt;/p&gt;
+&lt;p&gt;Втората група, обхващаща 14.5% от събитията, е концентрирана около 35 слънчеви маси и показва хаотично, несъосно въртене [1]. Учените смятат, че тези двойки са се формирали в гъсто населени звездни среди като кълбовидни купове, където гравитационното влияние на трети обекти &amp;quot;улавя&amp;quot; черните дупки в обща орбита [3].&lt;/p&gt;
+&lt;p&gt;Най-рядката, но най-интригуваща група (2.5%), се състои от системи с неравни маси и сложно, &amp;quot;клатещо се&amp;quot; въртене [2]. Смята се, че това са черни дупки от второ поколение, при които поне единият компонент е резултат от предишно сливане [2]. &lt;/p&gt;
+&lt;p&gt;Успоредно с това откритие, екипът на Силке Бритцен идентифицира двойна свръхмасивна черна дупка в квазара Markarian 501, която е в толкова тясна орбита, че двете тела може да се сблъскат в рамките на следващите 100 години [3].&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Източник:&lt;/strong&gt; &lt;a href=&quot;https://interestingengineering.com/science/new-research-the-way-black-hole-mergers-are-formed&quot;&gt;https://interestingengineering.com/science/new-research-the-way-black-hole-mergers-are-formed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;br&gt;[1] &lt;a href=&quot;https://gwosc.org/eventapi/html/GWTC/&quot;&gt;GWTC-4 Catalog Data - LIGO-Virgo-KAGRA Collaboration&lt;/a&gt;&lt;br&gt;[2] &lt;a href=&quot;https://universemagazine.com/&quot;&gt;New Research: The Way Black Hole Mergers Are Formed - Universe Magazine&lt;/a&gt;&lt;br&gt;[3] &lt;a href=&quot;https://skycr.org/&quot;&gt;Astronomers Discover Three Black Hole Populations - SkyCR&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
   </channel>
