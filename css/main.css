@@ -27,7 +27,7 @@
   --font-size-s: 16px;
   --font-size-xs: 14px;
 
-  --content-width: 700px;
+  --content-width: 800px;
 }
 
 /* Reset */
@@ -146,23 +146,24 @@ h1, h2, h3, h4, h5, h6 {
     "P052",
     serif;
   line-height: 1.1;
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 400;
   margin: var(--spacing-l) 0 var(--spacing);
 }
 
 h2 {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 400;
   margin: var(--spacing-l) 0 var(--spacing);
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 400;
   margin: var(--spacing-m) 0 var(--spacing-s);
 }
 
@@ -292,8 +293,8 @@ pre code {
 }
 
 .header h1 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 400;
   margin: 0 0 var(--spacing-s);
 }
 
@@ -413,8 +414,8 @@ article.article.intro {
 }
 
 article.article.intro header h2 {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 400;
   margin: var(--spacing-s) 0;
 }
 
@@ -463,8 +464,8 @@ body.article-detail > header .logo {
 }
 
 body.article-detail > header h1 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 400;
   margin-bottom: var(--spacing-s);
 }
 
