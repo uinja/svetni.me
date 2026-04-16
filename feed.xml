@@ -9,9 +9,175 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Wed, 15 Apr 2026 17:25:00 +0000</pubDate>
+    <pubDate>Thu, 16 Apr 2026 22:08:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>AI моделите се провалят в спортните залози: Изследването KellyBench разкрива сериозни слабости</title>
+      <link>/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</link>
+      <pubDate>Thu, 16 Apr 2026 22:08:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Ново изследване, наречено &lt;strong&gt;KellyBench&lt;/strong&gt;, разкрива значителна пропаст между способността на съвременните AI модели да решават теоретични задачи и тяхното представяне в реални, динамични среди [1]. Проучването, проведено от стартъпа &lt;em&gt;General Reasoning&lt;/em&gt;, подлага осем водещи AI модела на тест, в който те трябва да управляват бюджет от £100,000 чрез залози на футболния сезон 2023-24 в Английската висша лига [2].&lt;/p&gt;
+&lt;p&gt;Резултатите са категорични: всеки един от тестваните модели е завършил сезона на загуба, като няколко от тях са достигнали до пълен банкрут. Най-изненадващото откритие е т.нар. „пропаст между знание и действие“ (knowledge-action gap) — моделите са били в състояние перфектно да обяснят математическия &lt;strong&gt;Критерий на Кели&lt;/strong&gt; (формула за определяне на оптималния размер на залога), но са се провалили напълно в прилагането му на практика [1][2].&lt;/p&gt;
+&lt;h3&gt;Резултати от KellyBench (Средна възвръщаемост)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;AI модел&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Среден ROI&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Краен резултат&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;Claude Opus 4.6&lt;/strong&gt; (Anthropic)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;–11.0%&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Най-висока „разумност“&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;GPT-5.4&lt;/strong&gt; (OpenAI)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;–13.6%&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Предпазливи, но губещи залози&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;Gemini 3.1 Pro&lt;/strong&gt; (Google)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;–43.3%&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Висока волатилност&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;xAI Grok 4.20&lt;/strong&gt; (Elon Musk)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;–100.0%&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Пълен банкрут&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;Acree Trinity&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;strong&gt;–100.0%&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Пълен банкрут&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Резултатите са усреднени на базата на три опита за всеки модел [1].&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Защо AI се проваля?&lt;/h3&gt;
+&lt;p&gt;Според Роси Тейлър, главен изпълнителен директор на &lt;em&gt;General Reasoning&lt;/em&gt; и бивш изследовател в Meta AI, проблемът се корени в това, че съвременните бенчмаркове са твърде статични [1]. Докато AI моделите вече превъзхождат хората в писането на софтуерен код (затворена и предвидима система), те се „чупят“ в среди с дълъг времеви хоризонт и променящи се променливи.&lt;/p&gt;
+&lt;p&gt;В случая с &lt;strong&gt;Grok 4.20&lt;/strong&gt; на xAI, моделът е загубил целия си капитал още при първия опит и не е успял да завърши следващите изпитания [1]. Други модели, като &lt;strong&gt;Kimi K2.5&lt;/strong&gt;, са демонстрирали абсурдни грешки: въпреки че са написали правилен код за изчисление на залозите в своите разсъждения, те никога не са извикали този код при реалното подаване на залога [2].&lt;/p&gt;
+&lt;p&gt;Това изследване служи като „студен душ“ за ентусиазма около пълната автоматизация на професии, изискващи дългосрочно стратегическо планиране и реакция в хаотична среда. Оказва се, че в света на спортните залози, AI все още систематично отстъпва дори на опитните хора [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://arstechnica.com/ai/2026/04/ai-models-are-terrible-at-betting-on-soccer-especially-xai-grok/&quot;&gt;AI models are terrible at betting on soccer—especially xAI Grok - Ars Technica&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://generalreasoning.ai/kellybench&quot;&gt;KellyBench Official Study - General Reasoning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Cloudflare представи унифицирана AI платформа: Един API за всички водещи модели</title>
+      <link>/articles/2026/04/16/cloudflare-unified-ai-platform/</link>
+      <pubDate>Thu, 16 Apr 2026 21:53:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/cloudflare-unified-ai-platform/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В рамките на своята „Седмица на агентите“ (Agents Week), Cloudflare обяви трансформацията на своята AI инфраструктура в унифициран слой за инференция (inference layer) [1]. Новата платформа позволява на разработчиците да използват един единствен API за достъп до над 70 модела от 12 различни доставчика, включително OpenAI, Anthropic и Google.&lt;/p&gt;
+&lt;p&gt;Основната цел на това обновление е да се премахне зависимостта от конкретен доставчик (vendor lock-in) и да се осигури максимална надеждност за автономните AI агенти. Чрез функцията &lt;strong&gt;AI Gateway&lt;/strong&gt;, платформата вече предлага автоматично пренасочване (failover) — ако един модел или доставчик е недостъпен, системата автоматично насочва заявката към алтернативен вариант, без това да изисква допълнителен код от страна на разработчика [1].&lt;/p&gt;
+&lt;h3&gt;Гъвкавост и собствени модели (BYOM)&lt;/h3&gt;
+&lt;p&gt;Една от най-значимите иновации е възможността потребителите да внедряват свои собствени, фино настроени модели в инфраструктурата на Cloudflare. Това става чрез интеграция на технологията &lt;strong&gt;Cog&lt;/strong&gt; (от наскоро присъединилия се екип на Replicate). Cog позволява лесно контейнеризиране на машинно обучение и модели, които Cloudflare разгръща и обслужва глобално в своята мрежа [1].&lt;/p&gt;
+&lt;p&gt;Разработчиците, използващи Cloudflare Workers, вече могат да извикват външни модели чрез същата позната &lt;code&gt;env.AI.run()&lt;/code&gt; функция, която използват за локалните модели в Workers AI. Това позволява лесна смяна на моделите спрямо нуждите от скорост, цена или точност, като същевременно се поддържа единна система за мониторинг на разходите чрез метаданни в заявките.&lt;/p&gt;
+&lt;h3&gt;Оптимизация за AI агенти&lt;/h3&gt;
+&lt;p&gt;Cloudflare подчертава, че новата платформа е проектирана с мисъл за агентите, при които една задача често изисква верига от множество последователни извиквания на различни модели. Благодарение на глобалната мрежа от дейта центрове в 330 града, латентността до първия токен е сведена до минимум. Допълнително, системата предлага устойчивост на стрийминг отговорите — ако агент бъде прекъснат по време на работа, той може да се свърже отново с AI Gateway и да получи остатъка от отговора, без да плаща повторно за вече генерирани токени [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://blog.cloudflare.com/ai-platform/&quot;&gt;Cloudflare’s AI Platform: an inference layer designed for agents - Cloudflare Blog&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Cloudflare Email Service вече е в публична бета: Имейлът като интерфейс за AI агенти</title>
+      <link>/articles/2026/04/16/cloudflare-email-for-agents/</link>
+      <pubDate>Thu, 16 Apr 2026 21:34:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/cloudflare-email-for-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В рамките на своята „Седмица на агентите“ (Agents Week), Cloudflare обяви прехода на своята услуга &lt;strong&gt;Email Service&lt;/strong&gt; в публична бета [1]. Новината бележи важен етап в стратегията на компанията за изграждане на инфраструктура за автономни изкуствени интелекти, превръщайки имейла от обикновен канал за известия в пълноценен интерфейс за двупосочна комуникация между хора и AI агенти.&lt;/p&gt;
+&lt;p&gt;Досега услугата &lt;strong&gt;Email Sending&lt;/strong&gt; беше достъпна само в частна бета. С днешното пускане всеки разработчик може да изпраща трансакционни имейли директно от Cloudflare Workers чрез вградена функционалност (Workers binding), без да се налага управление на сложни API ключове или външни услуги [1][2]. Cloudflare автоматично конфигурира критични записи като SPF, DKIM и DMARC, гарантирайки висока степен на доставка и защита от спам филтри.&lt;/p&gt;
+&lt;h3&gt;Имейлът като ядро на AI агентите&lt;/h3&gt;
+&lt;p&gt;Основният фокус на новата услуга е върху т.нар. „агентни работни процеси“. Докато традиционните чатботове отговарят в реално време, AI агентите често се нуждаят от часове за обработка на данни или координация с други системи. Имейлът е идеалният асинхронен интерфейс за това [1].&lt;/p&gt;
+&lt;p&gt;Интеграцията с &lt;strong&gt;Agents SDK&lt;/strong&gt; на Cloudflare позволява на агентите да получават входящи съобщения чрез &lt;code&gt;onEmail&lt;/code&gt; кука, да запазват историята на разговора чрез Durable Objects (без нужда от външна база данни) и да отговарят автономно, когато задачата е завършена. За допълнителна сигурност компанията въвежда HMAC-SHA256 подписване на имейл заглавията, което гарантира, че отговорите ще бъдат насочени точно към инстанцията на агента, започнала комуникацията [1].&lt;/p&gt;
+&lt;h3&gt;Пълен набор от инструменти за разработчици&lt;/h3&gt;
+&lt;p&gt;Заедно с публичната бета, Cloudflare пусна и няколко спомагателни инструмента:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agentic Inbox:&lt;/strong&gt; Референтно приложение с отворен код, което представлява пълноценен имейл клиент, проектиран специално за работа с агенти [1].&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email MCP сървър:&lt;/strong&gt; Позволява на външни AI инструменти (като Claude или Cursor) да взаимодействат директно с имейл услугата чрез стандартен протокол.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Wrangler CLI:&lt;/strong&gt; Нови команди за управление на имейл настройки директно от терминала.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Тази стъпка на Cloudflare премахва технологичните бариери пред създаването на агенти за поддръжка, системи за обработка на фактури и автоматизирани бизнес процеси, превръщайки имейл кутията в операционен център за изкуствения интелект [1][2].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://blog.cloudflare.com/email-for-agents/&quot;&gt;Email for agents - Cloudflare Email Service now in public beta - Cloudflare Blog&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://developers.cloudflare.com/email-service/&quot;&gt;Cloudflare Email Service docs - Cloudflare Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Roblox Studio „става агентно“: AI вече планира, строи и тества игри</title>
+      <link>/articles/2026/04/16/roblox-studio-agentic-ai/</link>
+      <pubDate>Thu, 16 Apr 2026 20:52:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/roblox-studio-agentic-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Roblox обяви мащабна актуализация на своята платформа за разработка Roblox Studio, въвеждайки т.нар. „агентни работни процеси“ (agentic workflows) [1]. Чрез интеграция на изкуствен интелект във всеки етап от жизнения цикъл на играта, компанията цели да трансформира начина, по който създателите планират, изграждат и тестват своите проекти.&lt;/p&gt;
+&lt;p&gt;Според официалния блог на Roblox [1], вече 44% от топ 1000 най-популярни създатели в платформата използват AI помощници или външни инструменти за разработка. Новите функции превръщат Roblox Assistant от прост чатбот в активен партньор, способен да изпълнява сложни задачи автономно.&lt;/p&gt;
+&lt;h3&gt;Планиране и изграждане с AI&lt;/h3&gt;
+&lt;p&gt;Ключово подобрение е новият &lt;strong&gt;Planning Mode&lt;/strong&gt;, който позволява на Assistant да анализира програмния код и модела на данните в играта [1]. Вместо просто да генерира код, AI вече предлага подробен план за действие, който създателят може да редактира и одобри. Това служи като „мини дизайн документ“, по който агентите могат да работят паралелно [1][2].&lt;/p&gt;
+&lt;p&gt;В етапа на изграждане (Build) Roblox въвежда инструменти за процедурна генерация. Те позволяват на създателите да генерират сложни 3D обекти с персонализирани атрибути чрез текстови или графични подкани. Например, библиотека вече не е просто статичен модел, а интелигентен обект, чийто брой рафтове или съдържание могат да се променят динамично чрез AI [1].&lt;/p&gt;
+&lt;h3&gt;Автономно тестване и отворена екосистема&lt;/h3&gt;
+&lt;p&gt;Една от най-иновативните функции е бета версията на &lt;strong&gt;Playtesting Agent&lt;/strong&gt;. Този агент използва игровия персонаж като автоматизиран QA тестер, който преминава през нивата, чете логовете и проверява дали поведението на играта съответства на първоначалния план [1][2].&lt;/p&gt;
+&lt;p&gt;Roblox също така залага на отворената екосистема чрез вграден сървър за &lt;strong&gt;Model Context Protocol (MCP)&lt;/strong&gt;. Това позволява на разработчиците безпроблемно да използват външни AI инструменти като &lt;strong&gt;Claude, Cursor или Figma&lt;/strong&gt; директно в средата на Roblox Studio, като същевременно им осигурява пълен контекст за проекта [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://blog.roblox.com/2026/04/roblox-studio-going-agentic/&quot;&gt;Roblox Studio is Going Agentic - Roblox Blog&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/&quot;&gt;Roblox’s AI assistant gets new agentic tools to plan, build, and test games - TechCrunch&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Anthropic представи Claude Opus 4.7: Новият лидер в автономните AI агенти</title>
+      <link>/articles/2026/04/16/anthropic-claude-opus-4-7-release/</link>
+      <pubDate>Thu, 16 Apr 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/anthropic-claude-opus-4-7-release/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Anthropic официално пусна в публичен достъп най-мощния си модел досега — &lt;strong&gt;Claude Opus 4.7&lt;/strong&gt;, с което отново поведе в технологичната надпревара с OpenAI и Google [1]. Новият модел превъзхожда преките си конкуренти GPT-5.4 и Gemini 3.1 Pro в ключови бенчмаркове за програмиране, финансови анализи и автономно използване на инструменти [1].&lt;/p&gt;
+&lt;p&gt;Според репортаж на VentureBeat [1], Opus 4.7 постига Elo резултат от 1753 в теста за знания GDPVal-AA, изпреварвайки GPT-5.4 (1674) и Gemini 3.1 Pro (1314). Моделът бележи значителен скок и в софтуерното инженерство, решавайки 64.3% от задачите в SWE-bench Pro. Докато Anthropic държи още по-мощния си модел &lt;strong&gt;Mythos&lt;/strong&gt; ограничен за партньори в сферата на киберсигурността, Opus 4.7 се превръща в основния инструмент за масовия бизнес пазар.&lt;/p&gt;
+&lt;h3&gt;Автономност и самопроверка&lt;/h3&gt;
+&lt;p&gt;Ключовата иновация в Opus 4.7 е способността за &lt;strong&gt;„самопроверка“ (self-verification)&lt;/strong&gt;. Моделът вече не просто генерира отговор, а създава собствени стъпки за валидация, преди да докладва задачата за завършена [1][2]. Това значително намалява риска от логически грешки и „халюцинации“ при сложни, многоетапни процеси. &lt;/p&gt;
+&lt;p&gt;Допълнително, Anthropic въвежда нов параметър за управление на ресурсите — &lt;strong&gt;&lt;code&gt;xhigh&lt;/code&gt; (extra high)&lt;/strong&gt; ниво на усилия, което позволява на разработчиците по-фин контрол върху дълбочината на разсъжденията и цената на токените [2]. Визуалните способности също са подобрени трикратно, като моделът вече може да обработва изображения с резолюция до 3.75 мегапиксела, премахвайки ограниченията при навигация в детайлни софтуерни интерфейси [1].&lt;/p&gt;
+&lt;h3&gt;Пазарна доминация и регулаторни предизвикателства&lt;/h3&gt;
+&lt;p&gt;Пускането на Opus 4.7 съвпада с експлозивен финансов растеж за Anthropic. Компанията е достигнала годишни приходи от $30 милиарда и е получила предложения за инвестиции при главозамайващата оценка от $800 милиарда [1]. Въпреки това, успехът е съпътстван от правни спорове — Anthropic е в конфликт с Министерството на отбраната на САЩ, след като отказа да позволи използването на нейните модели за масово наблюдение или автономни оръжия [1].&lt;/p&gt;
+&lt;p&gt;Claude Opus 4.7 е достъпен от днес през всички големи облачни платформи, включително Amazon Bedrock и Google Cloud Vertex AI, като цената остава същата като на предходната версия — $5 за милион входящи и $25 за милион изходящи токена [1][2].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm/&quot;&gt;Anthropic releases Claude Opus 4.7, narrowly retaking lead for most powerful generally available LLM - VentureBeat&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.anthropic.com/news/claude-opus-4-7&quot;&gt;Introducing Claude Opus 4.7 - Anthropic&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Gemini вече създава персонализирани изображения чрез достъп до Google Photos</title>
+      <link>/articles/2026/04/16/gemini-google-photos-integration/</link>
+      <pubDate>Thu, 16 Apr 2026 20:41:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/gemini-google-photos-integration/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Google обяви мащабен ъпдейт за своя изкуствен интелект Gemini, който вече позволява генерирането на персонализирани изображения чрез директен достъп до библиотеката на потребителя в Google Photos [1]. Новата функция използва модела за генериране на изображения &lt;strong&gt;Nano Banana 2&lt;/strong&gt; и е част от по-широката рамка на Google за „Personal Intelligence“.&lt;/p&gt;
+&lt;p&gt;Благодарение на тази интеграция, потребителите могат да създават AI изкуство, в което участват те самите, техни близки или домашни любимци, без да се налага ръчно да качват референтни снимки. Системата автоматично разпознава лицата и обектите, които вече са етикетирани в Google Photos, и ги вгражда в различни художествени стилове — от маслени картини до пластилинова анимация [1].&lt;/p&gt;
+&lt;h3&gt;Поверителност и контрол&lt;/h3&gt;
+&lt;p&gt;Един от най-важните аспекти на анонса е фокусът върху сигурността на личните данни. Google подчертава, че новата функция е изцяло по желание (opt-in) и е изключена по подразбиране [1]. Компанията изрично заявява, че &lt;strong&gt;не използва личните снимки от Google Photos за обучение&lt;/strong&gt; на своите модели. Въпреки че AI има достъп до тях по време на процеса на генериране, данните не се задържат за бъдещо подобряване на основния алгоритъм Nano Banana 2.&lt;/p&gt;
+&lt;h3&gt;Ограничения и достъпност&lt;/h3&gt;
+&lt;p&gt;В момента новата функционалност е достъпна само за абонати на платените планове на Google AI (Pro, Plus и Ultra) в САЩ [1]. Поради строгите регулации за поверителност, функцията остава временно неактивна за потребителите в Европейския съюз, Великобритания и Япония. Google предупреждава, че технологията все още се развива и е възможно моделът не винаги да избира най-точните снимки за референция, като в такива случаи потребителите могат да предоставят обратна връзка или ръчно да прецизират избора на изображения.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://arstechnica.com/ai/2026/04/gemini-can-now-create-personalized-ai-images-by-digging-around-in-google-photos/&quot;&gt;Gemini can now create personalized AI images by digging around in Google Photos - Ars Technica&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>OpenAI Codex: Вече за (почти) всичко — от код към автономни агенти</title>
+      <link>/articles/2026/04/16/openai-codex-agentic-platform/</link>
+      <pubDate>Thu, 16 Apr 2026 20:35:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/16/openai-codex-agentic-platform/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;OpenAI обяви мащабна трансформация на своята платформа за програмиране Codex, превръщайки я от специализиран инструмент за писане на код в универсална рамка за автономни агенти [1]. Новата итерация, представена днес, бележи прехода към т.нар. „agentic engineering“ — модел, при който изкуственият интелект не просто генерира текст или код, а планира и изпълнява комплексни работни процеси в реални среди.&lt;/p&gt;
+&lt;p&gt;Според официалния анонс на OpenAI [1], обновеният Codex вече се захранва от модела &lt;strong&gt;GPT-5.4-Codex&lt;/strong&gt;. Той разполага с масивен контекстен прозорец от 256 000 токена, което му позволява да анализира цели софтуерни хранилища или обемни документации, без да губи фокус върху поставената цел. Ключовата иновация е въвеждането на цикъла &lt;strong&gt;„Research -&amp;gt; Strategy -&amp;gt; Execution“&lt;/strong&gt;, чрез който агентът първо проучва средата, след това изготвя стратегия и накрая изпълнява задачите в защитена „пясъчник“ (sandbox) среда.&lt;/p&gt;
+&lt;p&gt;Една от най-значимите промени е разширяването на възможностите на Codex отвъд чистото програмиране. Чрез новата система &lt;strong&gt;„Skills“&lt;/strong&gt; потребителите могат да „обучават“ агента на специфични екипни конвенции или работни потоци, използвайки обикновени файлове с инструкции (&lt;code&gt;SKILL.md&lt;/code&gt;) [1]. Това позволява на Codex да се използва за автоматизация на данни, финансови анализи и дори административни задачи, като същевременно поддържа високи стандарти за сигурност чрез задължителни точки за човешко потвърждение (Human-in-the-loop) при критични действия.&lt;/p&gt;
+&lt;p&gt;Технологичната база за тази еволюция е обновеният &lt;strong&gt;Agents SDK&lt;/strong&gt;, който въвежда специализирани инструменти за поддръжка на „long-horizon“ задачи — сложни, многоетапни процеси, изискващи дългосрочно планиране. Интеграцията между новия Codex и SDK позволява на разработчиците да внедряват агенти, които оперират изолирано и безопасно в различни облачни среди.&lt;/p&gt;
+&lt;p&gt;По данни на OpenAI [1], новата архитектура позволява на Codex да функционира като автономен екипен играч, който не просто асистират, а решава проблеми в реално време, поддържайки контекст през целия жизнен цикъл на проекта.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://openai.com/index/codex-for-almost-everything/&quot;&gt;Codex for (almost) everything - OpenAI&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
 
     <item>
       <title>OpenAI обнови своя пакет за разработка на агенти (Agents SDK)</title>
