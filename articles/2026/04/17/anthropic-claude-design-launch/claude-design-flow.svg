@@ -1,0 +1,35 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="20" fill="#fcfaf2" />
+  
+  <!-- Left Side: Prompt -->
+  <rect x="50" y="100" width="300" height="200" rx="15" fill="#fff" stroke="#d97757" stroke-width="2" />
+  <text x="70" y="140" fill="#333" font-family="sans-serif" font-size="16" font-weight="bold">Покана (Prompt):</text>
+  <text x="70" y="170" fill="#666" font-family="sans-serif" font-size="14">"Създай модерна начална"</text>
+  <text x="70" y="190" fill="#666" font-family="sans-serif" font-size="14">"страница за финтех стартъп,"</text>
+  <text x="70" y="210" fill="#666" font-family="sans-serif" font-size="14">"използвайки синьо и бяло..."</text>
+  
+  <rect x="70" y="240" width="260" height="40" rx="20" fill="#d97757" />
+  <text x="200" y="265" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">Генерирай Дизайн</text>
+
+  <!-- Middle: Arrow -->
+  <path d="M380 200 H420" stroke="#d97757" stroke-width="8" stroke-linecap="round" />
+  <path d="M410 190 L430 200 L410 210" fill="#d97757" />
+
+  <!-- Right Side: Prototype -->
+  <rect x="450" y="80" width="300" height="240" rx="10" fill="#fff" stroke="#ddd" stroke-width="2" />
+  <rect x="450" y="80" width="300" height="30" rx="10" fill="#f1f1f1" stroke="#ddd" />
+  <circle cx="465" cy="95" r="5" fill="#ff5f56" />
+  <circle cx="480" cy="95" r="5" fill="#ffbd2e" />
+  <circle cx="495" cy="95" r="5" fill="#27c93f" />
+  
+  <rect x="470" y="120" width="100" height="15" rx="5" fill="#4285F4" />
+  <rect x="630" y="120" width="100" height="15" rx="5" fill="#eee" />
+  
+  <rect x="470" y="150" width="260" height="80" rx="10" fill="#f9f9f9" />
+  <text x="600" y="195" text-anchor="middle" fill="#aaa" font-family="sans-serif" font-size="24" font-weight="bold">PROTOTYPE</text>
+  
+  <circle cx="600" cy="270" r="20" fill="#d97757" fill-opacity="0.2" stroke="#d97757" />
+  <path d="M595 270 L600 275 L610 265" fill="none" stroke="#d97757" stroke-width="3" />
+  
+  <text x="400" y="50" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="26" font-weight="bold">Claude Design: От текст към прототип</text>
+</svg>

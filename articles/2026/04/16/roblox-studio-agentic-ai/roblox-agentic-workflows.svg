@@ -1,0 +1,19 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="20" fill="#2c3e50" />
+  <rect x="50" y="50" width="700" height="300" rx="10" fill="#34495e" stroke="#fff" stroke-width="2" stroke-opacity="0.2" />
+  
+  <rect x="100" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#3498db" stroke-width="2" />
+  <text x="190" y="140" text-anchor="middle" fill="#3498db" font-family="sans-serif" font-size="16" font-weight="bold">Планиране</text>
+  <path d="M140 170 H240 M140 210 H240 M140 250 H200" stroke="#fff" stroke-width="2" stroke-opacity="0.5" />
+  
+  <rect x="310" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#2ecc71" stroke-width="2" />
+  <text x="400" y="140" text-anchor="middle" fill="#2ecc71" font-family="sans-serif" font-size="16" font-weight="bold">Строене</text>
+  <rect x="350" y="180" width="100" height="60" fill="#2ecc71" fill-opacity="0.5" />
+  
+  <rect x="520" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#e74c3c" stroke-width="2" />
+  <text x="610" y="140" text-anchor="middle" fill="#e74c3c" font-family="sans-serif" font-size="16" font-weight="bold">Тестване</text>
+  <circle cx="610" cy="210" r="40" fill="none" stroke="#fff" stroke-width="2" stroke-opacity="0.3" />
+  <path d="M590 210 L605 225 L630 200" fill="none" stroke="#e74c3c" stroke-width="4" stroke-linecap="round" />
+  
+  <text x="400" y="40" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22" font-weight="bold">Roblox Studio: Agentic Workflows</text>
+</svg>

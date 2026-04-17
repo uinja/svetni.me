@@ -1,0 +1,15 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="20" fill="#74aa9c" fill-opacity="0.1" />
+  
+  <rect x="250" y="150" width="300" height="120" rx="15" fill="#fff" stroke="#74aa9c" stroke-width="2" />
+  <text x="400" y="200" text-anchor="middle" fill="#74aa9c" font-family="sans-serif" font-size="28" font-weight="bold">Agents SDK</text>
+  <text x="400" y="240" text-anchor="middle" fill="#555" font-family="sans-serif" font-size="16">Autonomous Helpers</text>
+  
+  <rect x="100" y="50" width="160" height="60" rx="10" fill="#fff" stroke="#34c759" stroke-width="2" />
+  <text x="180" y="88" text-anchor="middle" fill="#34c759" font-family="sans-serif" font-size="16" font-weight="bold">Sandbox</text>
+  
+  <rect x="540" y="50" width="160" height="60" rx="10" fill="#fff" stroke="#34c759" stroke-width="2" />
+  <text x="620" y="88" text-anchor="middle" fill="#34c759" font-family="sans-serif" font-size="16" font-weight="bold">Safe Execution</text>
+  
+  <path d="M180 110 L280 150 M620 110 L520 150" stroke="#74aa9c" stroke-width="2" stroke-dasharray="5 5" />
+</svg>

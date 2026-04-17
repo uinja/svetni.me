@@ -1,0 +1,24 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="20" fill="#f8f9fa" />
+  <text x="400" y="60" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="26" font-weight="bold">AI Agent Security Maturity Model</text>
+  
+  <line x1="150" y1="200" x2="650" y2="200" stroke="#dee2e6" stroke-width="4" />
+  
+  <!-- Stage 1 -->
+  <circle cx="200" cy="200" r="40" fill="#ffc107" />
+  <text x="200" y="280" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="16" font-weight="bold">Етап 1: Наблюдение</text>
+  <text x="200" y="305" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="14">Мониторинг и логове</text>
+  
+  <!-- Stage 2 -->
+  <circle cx="400" cy="200" r="40" fill="#fd7e14" />
+  <text x="400" y="280" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="16" font-weight="bold">Етап 2: Прилагане</text>
+  <text x="400" y="305" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="14">IAM и политики</text>
+  
+  <!-- Stage 3 -->
+  <circle cx="600" cy="200" r="40" fill="#dc3545" />
+  <text x="600" y="280" text-anchor="middle" fill="#333" font-family="sans-serif" font-size="16" font-weight="bold">Етап 3: Изолация</text>
+  <text x="600" y="305" text-anchor="middle" fill="#666" font-family="sans-serif" font-size="14">Sandboxing</text>
+
+  <rect x="250" y="100" width="300" height="50" rx="10" fill="#343a40" />
+  <text x="400" y="132" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="18" font-weight="bold">97% очакват AI инциденти</text>
+</svg>

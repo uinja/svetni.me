@@ -1,0 +1,13 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="20" fill="#f8f9fa" />
+  <path d="M100 300 Q250 250 400 150 T700 50" fill="none" stroke="#d97757" stroke-width="6" stroke-linecap="round" />
+  <circle cx="700" cy="50" r="10" fill="#d97757" />
+  
+  <rect x="500" y="80" width="220" height="80" rx="15" fill="#343a40" />
+  <text x="610" y="115" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="24" font-weight="bold">$800B+</text>
+  <text x="610" y="145" text-anchor="middle" fill="#aaa" font-family="sans-serif" font-size="14">Offered Valuation</text>
+  
+  <rect x="100" y="180" width="180" height="60" rx="10" fill="#dee2e6" />
+  <text x="190" y="215" text-anchor="middle" fill="#495057" font-family="sans-serif" font-size="18" font-weight="bold">Anthropic</text>
+  <text x="190" y="232" text-anchor="middle" fill="#6c757d" font-family="sans-serif" font-size="12">AI Innovation Leader</text>
+</svg>
