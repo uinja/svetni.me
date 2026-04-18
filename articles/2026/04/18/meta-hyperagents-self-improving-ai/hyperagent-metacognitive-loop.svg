@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @import url('../../../css/svg-theme.css');
     :root { --foreground: #000000; --background: #ffffff; --surface-soft: #fafafa; --blue: #1231b5; --yellow: #fac832; --red: #f83735; }
     @media (prefers-color-scheme: dark) { :root { --foreground: #e5e0d6; --background: #191d28; --surface-soft: #222838; --blue: #9ec2ff; --yellow: #ffd56a; --red: #ff6e68; } }
     svg { background-color: var(--background); font-family: system-ui, sans-serif; }
@@ -14,92 +14,45 @@
     .dashed-line { stroke: var(--blue); stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
     .glow { filter: drop-shadow(0 0 8px var(--blue)); }
   </style>
-
   <defs>
     <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="var(--foreground)" opacity="0.1" />
     </pattern>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" class="txt" opacity="0.5" />
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--foreground)" opacity="0.5" />
     </marker>
     <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--blue)" />
     </marker>
-    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--red)" />
-    </marker>
   </defs>
-
-  <!-- Grid Background -->
   <rect width="100%" height="100%" class="bg-main" />
   <rect width="100%" height="100%" fill="url(#grid)" />
-
-  <!-- Title Section -->
   <text x="40" y="40" class="txt" font-size="22" font-weight="800">DGM-H: Metacognitive Self-Modification</text>
-  <text x="40" y="60" class="txt" font-size="14" opacity="0.7">Fusing Task & Meta agents into a unified, self-referential architecture</text>
-
-  <!-- Environment / Sandbox -->
+  <text x="40" y="60" class="txt" font-size="14" opacity="0.7">Fusing Task &amp; Meta agents into a unified, self-referential architecture</text>
   <rect x="40" y="90" width="720" height="280" rx="12" class="surf" stroke="var(--foreground)" stroke-width="1" opacity="0.5" stroke-dasharray="4 4" />
-  <text x="50" y="110" class="txt" font-size="12" font-weight="600" opacity="0.5">COMPUTATIONAL ENVIRONMENT (SANDBOX)</text>
-
-  <!-- Traditional Setup (Left) -->
   <g transform="translate(60, 140)">
     <text x="100" y="-10" text-anchor="middle" class="txt" font-size="14" font-weight="bold" opacity="0.5">Traditional Split</text>
-    
     <rect x="0" y="0" width="200" height="70" rx="6" fill="var(--red)" opacity="0.1" stroke="var(--red)" stroke-width="2" />
-    <text x="100" y="30" text-anchor="middle" class="red-part" stroke="none" font-weight="bold">Fixed Meta-Agent</text>
+    <text x="100" y="30" text-anchor="middle" class="red-part" font-weight="bold">Fixed Meta-Agent</text>
     <text x="100" y="50" text-anchor="middle" class="txt" font-size="10" opacity="0.7">Human-Engineered Logic</text>
-
     <path d="M 100 70 L 100 130" class="link-line" marker-end="url(#arrow)" />
-    <rect x="85" y="90" width="30" height="20" fill="var(--background)" />
-    <text x="100" y="104" text-anchor="middle" class="txt" font-size="10" opacity="0.8">Updates</text>
-
     <rect x="0" y="130" width="200" height="70" rx="6" fill="var(--yellow)" opacity="0.1" stroke="var(--yellow)" stroke-width="2" />
-    <text x="100" y="160" text-anchor="middle" class="yellow-part" stroke="none" font-weight="bold">Task Agent</text>
+    <text x="100" y="160" text-anchor="middle" class="yellow-part" font-weight="bold">Task Agent</text>
     <text x="100" y="180" text-anchor="middle" class="txt" font-size="10" opacity="0.7">Executes Domain Tasks</text>
-    
-    <!-- Barrier line -->
-    <line x1="250" y1="-20" x2="250" y2="210" stroke="var(--foreground)" stroke-width="2" opacity="0.1" />
   </g>
-
-  <!-- HyperAgent Setup (Right) -->
   <g transform="translate(360, 140)">
     <text x="190" y="-10" text-anchor="middle" class="txt" font-size="14" font-weight="bold">HyperAgent Fusion</text>
-    
     <rect x="0" y="0" width="380" height="200" rx="12" fill="var(--blue)" opacity="0.05" stroke="var(--blue)" stroke-width="3" class="glow" />
-    <text x="190" y="25" text-anchor="middle" class="blue-part" stroke="none" font-weight="bold" font-size="16">Unified Self-Referential Program</text>
-    
-    <!-- Modules -->
+    <text x="190" y="25" text-anchor="middle" class="blue-part" font-weight="bold" font-size="16">Unified Self-Referential Program</text>
     <g transform="translate(20, 50)">
       <rect x="0" y="0" width="160" height="120" rx="8" class="surf" stroke="var(--foreground)" stroke-width="1" opacity="0.8" />
       <text x="80" y="25" text-anchor="middle" class="txt" font-weight="600" font-size="12">Improvement Logic</text>
-      <rect x="15" y="40" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="54" text-anchor="middle" class="txt" font-size="10">Eval Protocols</text>
-      <rect x="15" y="65" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="79" text-anchor="middle" class="txt" font-size="10">Code Generation</text>
-      <rect x="15" y="90" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="104" text-anchor="middle" class="txt" font-size="10">Archive Manager</text>
     </g>
-
     <g transform="translate(200, 50)">
       <rect x="0" y="0" width="160" height="120" rx="8" class="surf" stroke="var(--foreground)" stroke-width="1" opacity="0.8" />
       <text x="80" y="25" text-anchor="middle" class="txt" font-weight="600" font-size="12">Task Capabilities</text>
-      <rect x="15" y="40" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="54" text-anchor="middle" class="txt" font-size="10">Persistent Memory</text>
-      <rect x="15" y="65" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="79" text-anchor="middle" class="txt" font-size="10">Tool Invocation</text>
-      <rect x="15" y="90" width="130" height="20" rx="4" fill="var(--background)" stroke="var(--foreground)" stroke-width="0.5" />
-      <text x="80" y="104" text-anchor="middle" class="txt" font-size="10">Domain Logic</text>
     </g>
-
-    <!-- Internal Interactions -->
-    <path d="M 180 110 L 200 110" stroke="var(--foreground)" stroke-width="2" marker-end="url(#arrow)" />
-    <path d="M 200 80 L 180 80" stroke="var(--foreground)" stroke-width="2" marker-end="url(#arrow)" />
-    
-    <!-- Self Modification Arrow -->
     <path d="M 190 200 Q 190 250 50 250 Q -30 250 -30 100 Q -30 -40 190 -40 Q 250 -40 250 -5" fill="none" class="dashed-line" marker-end="url(#arrow-blue)" />
-    <rect x="40" y="240" width="140" height="20" fill="var(--background)" rx="4" />
-    <text x="110" y="254" text-anchor="middle" class="blue-part" stroke="none" font-weight="bold" font-size="12">Rewrites entire codebase</text>
-
+    <text x="110" y="254" text-anchor="middle" class="blue-part" font-weight="bold" font-size="12">Rewrites entire codebase</text>
   </g>
 </svg>
