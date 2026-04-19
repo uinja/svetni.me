@@ -1,54 +1,66 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <!-- Desktop Background -->
-  <rect width="800" height="400" rx="10" fill="#2d3436" />
-  
-  <!-- Grid pattern for desktop -->
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --teal-light: #f0fdfa;
+      --teal-main: #14b8a6;
+      --teal-dark: #0f766e;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --teal-light: #134e4a;
+        --teal-main: #2dd4bf;
+        --teal-dark: #ccfbf1;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-teal { fill: var(--teal-light); stroke: var(--teal-main); stroke-width: 0.5px; }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+    .connector { stroke: var(--teal-main); stroke-width: 1.5px; fill: none; marker-end: url(#arrowhead); }
+  </style>
+
   <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#636e72" stroke-width="0.5" opacity="0.3"/>
-    </pattern>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--teal-main)" />
+    </marker>
   </defs>
-  <rect width="800" height="400" fill="url(#grid)" rx="10" />
 
-  <!-- Main User Window -->
-  <rect x="150" y="50" width="500" height="300" rx="8" fill="#dfe6e9" stroke="#b2bec3" stroke-width="2" />
-  <rect x="150" y="50" width="500" height="25" rx="8" fill="#b2bec3" />
-  <text x="400" y="68" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2d3436">User Application (Active)</text>
-  <circle cx="165" cy="62.5" r="4" fill="#ff7675" />
-  <circle cx="178" cy="62.5" r="4" fill="#fab1a0" />
-  <circle cx="191" cy="62.5" r="4" fill="#55efc4" />
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Layers/Depth Form -->
+  <g transform="translate(470, 250)">
+    <!-- Main User Interface Layer -->
+    <rect x="-150" y="-120" width="300" height="40" class="node-teal" rx="4" />
+    <text x="0" y="-95" text-anchor="middle" class="header" style="fill: var(--teal-dark);">Потребителски интерфейс (GUI)</text>
+    
+    <!-- Background Agents (Stacked Layers) -->
+    <rect x="-130" y="-40" width="260" height="40" class="node-teal" rx="4" style="fill-opacity: 0.8;" />
+    <text x="0" y="-15" text-anchor="middle" class="label" style="fill: var(--teal-dark);">Оркестриращ агент</text>
+
+    <rect x="-110" y="40" width="220" height="40" class="node-teal" rx="4" style="fill-opacity: 0.5;" />
+    <text x="0" y="65" text-anchor="middle" class="label" style="fill: var(--teal-dark);">Специализирани фонови агенти</text>
+
+    <rect x="-90" y="120" width="180" height="40" class="node-teal" rx="4" style="fill-opacity: 0.2;" />
+    <text x="0" y="145" text-anchor="middle" class="label" style="fill: var(--teal-dark);">Системни операции</text>
+
+    <!-- Connectors -->
+    <path d="M 0 -80 L 0 -45" class="connector" />
+    <path d="M 0 0 L 0 35" class="connector" />
+    <path d="M 0 80 L 0 115" class="connector" />
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="320" y1="130" x2="140" y2="130" class="leader" />
+  <text x="10" y="135" class="label">Видим интерфейс</text>
   
-  <!-- Background Agent 1: Terminal -->
-  <g transform="translate(50, 220) scale(0.8)">
-    <rect width="200" height="150" rx="5" fill="#000" stroke="#00d2ff" stroke-width="1" />
-    <text x="10" y="20" font-family="monospace" font-size="10" fill="#00ff00">> codex test --parallel</text>
-    <text x="10" y="35" font-family="monospace" font-size="10" fill="#fff">Running unit tests...</text>
-    <rect x="180" y="130" width="8" height="8" fill="#00d2ff" opacity="0.6" /> <!-- Agent cursor -->
-  </g>
+  <line x1="340" y1="300" x2="140" y2="300" class="leader" />
+  <text x="10" y="305" class="label">Фонова автоматизация</text>
 
-  <!-- Background Agent 2: Browser -->
-  <g transform="translate(580, 80) scale(0.8)">
-    <rect width="200" height="150" rx="5" fill="#fff" stroke="#a29bfe" stroke-width="1" />
-    <rect width="200" height="15" rx="5" fill="#a29bfe" />
-    <rect x="10" y="30" width="180" height="10" rx="2" fill="#dfe6e9" />
-    <rect x="10" y="50" width="180" height="80" rx="2" fill="#f1f2f6" />
-    <rect x="150" y="100" width="8" height="8" fill="#a29bfe" opacity="0.6" /> <!-- Agent cursor -->
-  </g>
-
-  <!-- Background Agent 3: Slack/Chat -->
-  <g transform="translate(600, 260) scale(0.7)">
-    <rect width="180" height="120" rx="5" fill="#4a154b" stroke="#fff" stroke-width="1" opacity="0.9" />
-    <circle cx="20" cy="30" r="10" fill="#fff" opacity="0.5" />
-    <rect x="40" y="25" width="120" height="10" rx="2" fill="#fff" opacity="0.3" />
-    <rect x="20" y="80" width="8" height="8" fill="#fff" opacity="0.8" /> <!-- Agent cursor -->
-  </g>
-
-  <!-- Agent Overlay Label -->
-  <rect x="300" y="360" width="200" height="30" rx="15" fill="#00cec9" />
-  <text x="400" y="381" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff">Codex Background Agents</text>
-  
-  <!-- Connection Lines (Stylized) -->
-  <path d="M 400,360 C 400,320 150,300 130,295" stroke="#00cec9" stroke-width="1" fill="none" stroke-dasharray="4 2" />
-  <path d="M 400,360 C 400,320 650,250 660,200" stroke="#00cec9" stroke-width="1" fill="none" stroke-dasharray="4 2" />
-  <path d="M 400,360 C 400,340 700,340 690,320" stroke="#00cec9" stroke-width="1" fill="none" stroke-dasharray="4 2" />
 </svg>

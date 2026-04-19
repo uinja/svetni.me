@@ -1,41 +1,70 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="800" height="400" rx="20" fill="#1e272e" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --teal-light: #f0fdfa;
+      --teal-main: #14b8a6;
+      --teal-dark: #0f766e;
+      --purple-light: #eef2ff;
+      --purple-main: #6366f1;
+      --purple-dark: #3730a3;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --teal-light: #134e4a;
+        --teal-main: #2dd4bf;
+        --teal-dark: #ccfbf1;
+        --purple-light: #1e1b4b;
+        --purple-main: #818cf8;
+        --purple-dark: #e0e7ff;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-teal { fill: var(--teal-light); stroke: var(--teal-main); stroke-width: 0.5px; }
+    .node-purple { fill: var(--purple-light); stroke: var(--purple-main); stroke-width: 0.5px; }
+    .connector { stroke: var(--teal-main); stroke-width: 1.5px; fill: none; marker-end: url(#arrowhead); }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--teal-main)" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Cycle Mechanism -->
+  <g transform="translate(470, 250)">
+    <!-- AI Prediction (Purple) -->
+    <rect x="-160" y="-40" width="120" height="80" class="node-purple" rx="4" />
+    <text x="-100" y="5" text-anchor="middle" class="header" style="fill: var(--purple-dark);">OpenProtein</text>
+    
+    <!-- Lab Synthesis (Teal) -->
+    <rect x="40" y="-40" width="120" height="80" class="node-teal" rx="4" />
+    <text x="100" y="5" text-anchor="middle" class="header" style="fill: var(--teal-dark);">Лаборатория</text>
+
+    <!-- Cycle Flows -->
+    <path d="M -40 -20 Q 0 -60 40 -20" class="connector" />
+    <text x="0" y="-55" text-anchor="middle" class="label">Дизайн</text>
+
+    <path d="M 40 20 Q 0 60 -40 20" class="connector" />
+    <text x="0" y="70" text-anchor="middle" class="label">Резултати</text>
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="310" y1="250" x2="140" y2="250" class="leader" />
+  <text x="10" y="255" class="label">AI оптимизация</text>
   
-  <!-- Central Stylized Protein/Molecule -->
-  <g transform="translate(400, 200)">
-    <circle cx="0" cy="0" r="40" fill="#ffd32a" fill-opacity="0.2" />
-    <path d="M-30,-10 Q0,-50 30,-10 T60,20" fill="none" stroke="#ffd32a" stroke-width="4" stroke-linecap="round" />
-    <path d="M-60,20 Q-30,-10 0,20 T30,-10" fill="none" stroke="#ff5e57" stroke-width="4" stroke-linecap="round" />
-    <circle cx="-30" cy="-10" r="6" fill="#ffd32a" />
-    <circle cx="30" cy="-10" r="6" fill="#ff5e57" />
-    <circle cx="0" cy="20" r="8" fill="#00d2ff" />
-  </g>
+  <line x1="470" y1="340" x2="470" y2="400" class="leader" />
+  <line x1="470" y1="400" x2="140" y2="400" class="leader" />
+  <text x="10" y="405" class="label">Биотехнологичен цикъл</text>
 
-  <!-- Circular Loop Arrows -->
-  <g fill="none" stroke="#00d2ff" stroke-width="3" stroke-dasharray="5 5">
-    <path d="M400,80 A120,120 0 0,1 520,200" />
-    <path d="M520,200 A120,120 0 0,1 400,320" />
-    <path d="M400,320 A120,120 0 0,1 280,200" />
-    <path d="M280,200 A120,120 0 0,1 400,80" />
-  </g>
-
-  <!-- Labels -->
-  <g font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
-    <rect x="350" y="50" width="100" height="30" rx="15" fill="#05c46b" />
-    <text x="400" y="71" fill="#fff">GENERATE</text>
-    
-    <rect x="530" y="185" width="100" height="30" rx="15" fill="#0fbcf9" />
-    <text x="580" y="206" fill="#fff">TEST</text>
-    
-    <rect x="350" y="320" width="100" height="30" rx="15" fill="#575fcf" />
-    <text x="400" y="341" fill="#fff">LEARN</text>
-    
-    <rect x="170" y="185" width="100" height="30" rx="15" fill="#ef5777" />
-    <text x="220" y="206" fill="#fff">REVIEW</text>
-  </g>
-
-  <!-- Title/Context -->
-  <text x="400" y="30" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="20" font-weight="bold" opacity="0.8">OpenProtein.AI No-Code Platform</text>
-  <text x="400" y="380" text-anchor="middle" fill="#00d2ff" font-family="sans-serif" font-size="14">AI-Driven Protein Design Loop</text>
 </svg>

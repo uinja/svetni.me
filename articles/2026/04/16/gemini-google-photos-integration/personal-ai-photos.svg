@@ -1,17 +1,111 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#4285F4" fill-opacity="0.05" />
-  <circle cx="250" cy="200" r="100" fill="#fff" stroke="#4285F4" stroke-width="2" />
-  <!-- Simple photos icon representation -->
-  <path d="M250 150 Q300 150 300 200 Q300 250 250 250 Q200 250 200 200 Q200 150 250 150" fill="#FBBC05" />
-  <path d="M250 150 Q250 100 300 100 Q350 100 350 150 Q350 200 300 200 Q250 200 250 150" fill="#EA4335" />
-  <path d="M250 250 Q250 300 200 300 Q150 300 150 250 Q150 200 200 200 Q250 200 250 250" fill="#34A853" />
-  <path d="M250 250 Q200 250 200 200 Q200 150 250 150 Q300 150 300 200 Q300 250 250 250" fill="#4285F4" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;500&amp;display=swap');
+      
+      :root {
+        --md-sys-color-primary: #6750A4;
+        --md-sys-color-on-primary: #FFFFFF;
+        --md-sys-color-primary-container: #EADDFF;
+        --md-sys-color-on-primary-container: #21005D;
+        --md-sys-color-secondary: #625B71;
+        --md-sys-color-on-secondary: #FFFFFF;
+        --md-sys-color-secondary-container: #E8DEF8;
+        --md-sys-color-on-secondary-container: #1D192B;
+        --md-sys-color-tertiary: #7D5260;
+        --md-sys-color-on-tertiary: #FFFFFF;
+        --md-sys-color-tertiary-container: #FFD8E4;
+        --md-sys-color-on-tertiary-container: #31111D;
+        --md-sys-color-surface: #FEF7FF;
+        --md-sys-color-on-surface: #1D1B20;
+        --md-sys-color-surface-container: #F3EDF7;
+        --md-sys-color-outline-variant: #CAC4D0;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --md-sys-color-primary: #D0BCFF;
+          --md-sys-color-on-primary: #381E72;
+          --md-sys-color-primary-container: #4F378B;
+          --md-sys-color-on-primary-container: #EADDFF;
+          --md-sys-color-secondary: #CCC2DC;
+          --md-sys-color-on-secondary: #332D41;
+          --md-sys-color-secondary-container: #4A4458;
+          --md-sys-color-on-secondary-container: #E8DEF8;
+          --md-sys-color-tertiary: #EFB8C8;
+          --md-sys-color-on-tertiary: #492532;
+          --md-sys-color-tertiary-container: #633B48;
+          --md-sys-color-on-tertiary-container: #FFD8E4;
+          --md-sys-color-surface: #141218;
+          --md-sys-color-on-surface: #E6E1E5;
+          --md-sys-color-surface-container: #211F26;
+          --md-sys-color-outline-variant: #49454F;
+        }
+      }
+
+      text {
+        font-family: 'Roboto Flex', system-ui, sans-serif;
+      }
+      .headline { font-size: 16px; font-weight: 500; fill: var(--md-sys-color-on-surface); }
+      .title { font-size: 14px; font-weight: 500; }
+      .label { font-size: 12px; font-weight: 400; }
+      
+      .shape-xs { rx: 4px; }
+      .shape-medium { rx: 12px; }
+      .shape-full { rx: 999px; }
+      
+      .connector { stroke: var(--md-sys-color-outline-variant); stroke-width: 1.5px; fill: none; }
+      .leader { stroke: var(--md-sys-color-outline-variant); stroke-width: 0.5px; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="800" height="500" fill="var(--md-sys-color-surface)" />
+
+  <!-- Center Composition: Network of Integration -->
+  <g transform="translate(440, 250)">
+    
+    <!-- Gemini Core (Primary) -->
+    <rect x="-64" y="-64" width="128" height="128" fill="var(--md-sys-color-primary-container)" class="shape-medium" />
+    <text x="0" y="4" text-anchor="middle" class="title" fill="var(--md-sys-color-on-primary-container)">Gemini AI</text>
+    
+    <!-- User Photos Data (Secondary) -->
+    <g transform="translate(-180, -100)">
+      <rect x="-60" y="-40" width="120" height="80" fill="var(--md-sys-color-secondary-container)" class="shape-medium" />
+      <text x="0" y="4" text-anchor="middle" class="label" fill="var(--md-sys-color-on-secondary-container)">Google Photos</text>
+      <path d="M 60 20 L 120 40" class="connector" />
+    </g>
+
+    <!-- Personal Intelligence (Tertiary) -->
+    <g transform="translate(180, -100)">
+      <rect x="-60" y="-40" width="120" height="80" fill="var(--md-sys-color-tertiary-container)" class="shape-medium" />
+      <text x="0" y="4" text-anchor="middle" class="label" fill="var(--md-sys-color-on-tertiary-container)">Персонализация</text>
+      <path d="M -60 20 L -120 40" class="connector" />
+    </g>
+
+    <!-- Contextual Recognition -->
+    <g transform="translate(-180, 100)">
+      <rect x="-60" y="-30" width="120" height="60" fill="var(--md-sys-color-surface-container)" stroke="var(--md-sys-color-outline-variant)" stroke-width="0.5" class="shape-medium" />
+      <text x="0" y="4" text-anchor="middle" class="label" fill="var(--md-sys-color-on-surface)">Разпознаване</text>
+      <path d="M 60 -10 L 120 -40" class="connector" />
+    </g>
+
+    <!-- Generated Art -->
+    <g transform="translate(180, 100)">
+      <rect x="-60" y="-30" width="120" height="60" fill="var(--md-sys-color-surface-container)" stroke="var(--md-sys-color-outline-variant)" stroke-width="0.5" class="shape-medium" />
+      <text x="0" y="4" text-anchor="middle" class="label" fill="var(--md-sys-color-on-surface)">AI Изкуство</text>
+      <path d="M -60 -10 L -120 -40" class="connector" />
+    </g>
+
+  </g>
+
+  <!-- Left Margin (140px) for Labeled Leader Lines -->
+  <line x1="260" y1="150" x2="140" y2="150" class="leader" />
+  <text x="24" y="154" class="label" fill="var(--md-sys-color-on-surface)">Лична библиотека</text>
   
-  <path d="M380 200 H420" stroke="#4285F4" stroke-width="8" stroke-linecap="round" />
-  <path d="M410 190 L430 200 L410 210" fill="#4285F4" />
-  
-  <rect x="480" y="125" width="220" height="150" rx="15" fill="#fff" stroke="#4285F4" stroke-width="2" />
-  <text x="590" y="160" text-anchor="middle" fill="#4285F4" font-family="sans-serif" font-size="18" font-weight="bold">Gemini AI</text>
-  <text x="590" y="200" text-anchor="middle" fill="#555" font-family="sans-serif" font-size="14">Personal Intelligence</text>
-  <text x="590" y="230" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="12">Custom Portraits & Art</text>
+  <line x1="376" y1="250" x2="140" y2="250" class="leader" />
+  <text x="24" y="254" class="label" fill="var(--md-sys-color-on-surface)">Ядро на модела</text>
+
+  <line x1="260" y1="350" x2="140" y2="350" class="leader" />
+  <text x="24" y="354" class="label" fill="var(--md-sys-color-on-surface)">Крайни резултати</text>
+
 </svg>

@@ -1,17 +1,50 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#1b1b2f" />
-  <circle cx="400" cy="200" r="120" fill="none" stroke="#e94560" stroke-width="4" stroke-dasharray="10 10" />
-  <path d="M400 80 L400 320 M280 200 L520 200" stroke="#0f3460" stroke-width="2" />
-  <circle cx="400" cy="200" r="10" fill="#fff" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --amber-light: #fffbeb;
+      --amber-main: #f59e0b;
+      --amber-dark: #92400e;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --amber-light: #451a03;
+        --amber-main: #fbbf24;
+        --amber-dark: #fef3c7;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-amber { fill: var(--amber-light); stroke: var(--amber-main); stroke-width: 0.5px; }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+    .funnel-path { fill: var(--amber-light); stroke: var(--amber-main); stroke-width: 1.5px; fill-opacity: 0.6; }
+  </style>
+
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Filters/Funnels Form -->
+  <g transform="translate(470, 250)">
+    <!-- High Performance (Wide) -->
+    <path d="M -150 -100 L 150 -100 L 100 -20 L -100 -20 Z" class="funnel-path" />
+    <text x="0" y="-70" text-anchor="middle" class="header" style="fill: var(--amber-dark);">Теоретични модели</text>
+    
+    <!-- Real-world Failure (Narrow) -->
+    <path d="M -100 20 L 100 20 L 20 120 L -20 120 Z" class="funnel-path" style="fill-opacity: 0.3; stroke: var(--gray-scaffold);" />
+    <text x="0" y="55" text-anchor="middle" class="label">Реални залози</text>
+    <text x="0" y="100" text-anchor="middle" class="header" style="fill: var(--amber-dark); font-weight: 700;">-3.5% ROI</text>
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="320" y1="180" x2="140" y2="180" class="leader" />
+  <text x="10" y="185" class="label">Очакван успех</text>
   
-  <rect x="100" y="50" width="180" height="60" rx="10" fill="#16213e" stroke="#e94560" stroke-width="2" />
-  <text x="190" y="85" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">Claude Opus: -11.0%</text>
-  
-  <rect x="520" y="50" width="180" height="60" rx="10" fill="#16213e" stroke="#e94560" stroke-width="2" />
-  <text x="610" y="85" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">GPT-5.4: -13.6%</text>
-  
-  <rect x="310" y="320" width="180" height="60" rx="10" fill="#e94560" />
-  <text x="400" y="355" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">Grok: BANKRUPT</text>
-  
-  <text x="400" y="230" text-anchor="middle" fill="#aaa" font-family="sans-serif" font-size="14">KellyBench Simulation</text>
+  <line x1="370" y1="350" x2="140" y2="350" class="leader" />
+  <text x="10" y="355" class="label">Критичен спад</text>
+
 </svg>

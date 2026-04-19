@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: var(--background, #ffffff); }
+    .surface { fill: var(--surface-soft, #fafafa); }
+    .accent-blue { fill: var(--blue, #1231b5); }
+    .accent-yellow { fill: var(--yellow, #fac832); }
+    .accent-red { fill: var(--red, #f83735); }
+    .text-main { fill: var(--foreground, #000000); }
+    .text-dim { fill: var(--foreground, #000000); opacity: 0.7; }
+    text { font-family: system-ui, sans-serif; }
+  </style>
+  <rect width="800" height="500" class="bg" />
+  
+  <!-- Grid lines -->
+  <line x1="150" y1="400" x2="700" y2="400" stroke="var(--foreground)" stroke-width="1" opacity="0.2" />
+  <line x1="150" y1="300" x2="700" y2="300" stroke="var(--foreground)" stroke-width="1" opacity="0.1" />
+  <line x1="150" y1="200" x2="700" y2="200" stroke="var(--foreground)" stroke-width="1" opacity="0.1" />
+  <line x1="150" y1="100" x2="700" y2="100" stroke="var(--foreground)" stroke-width="1" opacity="0.1" />
+
+  <!-- Y-Axis Labels -->
+  <text x="140" y="405" text-anchor="end" font-size="14" class="text-dim">0</text>
+  <text x="140" y="305" text-anchor="end" font-size="14" class="text-dim">1000</text>
+  <text x="140" y="205" text-anchor="end" font-size="14" class="text-dim">1500</text>
+  <text x="140" y="105" text-anchor="end" font-size="14" class="text-dim">2000</text>
+
+  <!-- Title -->
+  <text x="425" y="50" text-anchor="middle" font-size="24" font-weight="500" class="text-main">GDPVal-AA Elo Benchmarks (2026)</text>
+
+  <!-- Bars -->
+  <!-- Claude Opus 4.7: 1753 (Scaled: 400 - (1753/2000 * 300) -> approx 400 - 263 = 137) -->
+  <rect x="200" y="137" width="100" height="263" rx="4" class="accent-blue" />
+  <text x="250" y="430" text-anchor="middle" font-size="16" font-weight="500" class="text-main">Claude 4.7</text>
+  <text x="250" y="125" text-anchor="middle" font-size="18" font-weight="500" class="accent-blue">1753</text>
+
+  <!-- GPT-5.4: 1674 (Scaled: 400 - (1674/2000 * 300) -> approx 400 - 251 = 149) -->
+  <rect x="375" y="149" width="100" height="251" rx="4" class="accent-yellow" />
+  <text x="425" y="430" text-anchor="middle" font-size="16" font-weight="500" class="text-main">GPT-5.4</text>
+  <text x="425" y="137" text-anchor="middle" font-size="18" font-weight="500" class="accent-yellow">1674</text>
+
+  <!-- Gemini 3.1 Pro: 1314 (Scaled: 400 - (1314/2000 * 300) -> approx 400 - 197 = 203) -->
+  <rect x="550" y="203" width="100" height="197" rx="4" class="accent-red" />
+  <text x="600" y="430" text-anchor="middle" font-size="16" font-weight="500" class="text-main">Gemini 3.1</text>
+  <text x="600" y="191" text-anchor="middle" font-size="18" font-weight="500" class="accent-red">1314</text>
+
+  <!-- Axis Line -->
+  <line x1="150" y1="400" x2="700" y2="400" stroke="var(--foreground)" stroke-width="2" />
+</svg>

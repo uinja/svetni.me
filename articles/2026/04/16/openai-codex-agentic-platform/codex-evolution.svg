@@ -1,16 +1,57 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#000" />
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#fff" stroke-width="1" stroke-opacity="0.2" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --purple-light: #eef2ff;
+      --purple-main: #6366f1;
+      --purple-dark: #3730a3;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --purple-light: #1e1b4b;
+        --purple-main: #818cf8;
+        --purple-dark: #e0e7ff;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-purple { fill: var(--purple-light); stroke: var(--purple-main); stroke-width: 0.5px; }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+  </style>
+
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Layers/Depth Form (Evolution) -->
+  <g transform="translate(470, 250)">
+    <!-- Stage 1: Auto-complete -->
+    <rect x="-120" y="80" width="240" height="40" class="node-purple" rx="4" style="fill-opacity: 0.2;" />
+    <text x="0" y="105" text-anchor="middle" class="label" style="fill: var(--purple-dark);">Автодовършване (2021)</text>
+
+    <!-- Stage 2: Code Generation -->
+    <rect x="-120" y="40" width="240" height="40" class="node-purple" rx="4" style="fill-opacity: 0.4;" />
+    <text x="0" y="65" text-anchor="middle" class="label" style="fill: var(--purple-dark);">Генерация на функции (2023)</text>
+
+    <!-- Stage 3: Chat/Assistant -->
+    <rect x="-120" y="0" width="240" height="40" class="node-purple" rx="4" style="fill-opacity: 0.7;" />
+    <text x="0" y="25" text-anchor="middle" class="label" style="fill: var(--purple-dark);">Интерактивен чат (2024)</text>
+
+    <!-- Stage 4: Agentic Platform -->
+    <rect x="-120" y="-40" width="240" height="40" class="node-purple" rx="4" />
+    <text x="0" y="-15" text-anchor="middle" class="header" style="fill: var(--purple-dark);">Агентна платформа (2026)</text>
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="350" y1="230" x2="140" y2="230" class="leader" />
+  <text x="10" y="235" class="label">Еволюция на Codex</text>
   
-  <rect x="250" y="150" width="300" height="100" rx="10" fill="#fff" />
-  <text x="400" y="208" text-anchor="middle" fill="#000" font-family="sans-serif" font-size="28" font-weight="bold">GPT-5.4 Codex</text>
-  
-  <text x="400" y="80" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="18" font-weight="bold">Research -&gt; Strategy -&gt; Execution</text>
-  
-  <path d="M400 100 V150 M400 250 V300" stroke="#fff" stroke-width="2" stroke-opacity="0.5" />
-  <rect x="350" y="300" width="100" height="40" rx="5" fill="#34c759" />
-  <text x="400" y="325" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold">Sandbox</text>
-  
-  <text x="150" y="200" text-anchor="middle" fill="#aaa" font-family="sans-serif" font-size="14">256K Context</text>
-  <text x="650" y="200" text-anchor="middle" fill="#aaa" font-family="sans-serif" font-size="14">Skills (SKILL.md)</text>
+  <line x1="470" y1="310" x2="470" y2="400" class="leader" />
+  <line x1="470" y1="400" x2="140" y2="400" class="leader" />
+  <text x="10" y="405" class="label">От инструмент към агент</text>
+
 </svg>

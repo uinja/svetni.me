@@ -1,15 +1,58 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#74aa9c" fill-opacity="0.1" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --purple-light: #eef2ff;
+      --purple-main: #6366f1;
+      --purple-dark: #3730a3;
+      --teal-light: #f0fdfa;
+      --teal-main: #14b8a6;
+      --teal-dark: #0f766e;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --purple-light: #1e1b4b;
+        --purple-main: #818cf8;
+        --purple-dark: #e0e7ff;
+        --teal-light: #134e4a;
+        --teal-main: #2dd4bf;
+        --teal-dark: #ccfbf1;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-purple { fill: var(--purple-light); stroke: var(--purple-main); stroke-width: 0.5px; }
+    .node-teal { fill: var(--teal-light); stroke: var(--teal-main); stroke-width: 0.5px; }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+  </style>
+
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Layers/Depth Form (Security) -->
+  <g transform="translate(470, 250)">
+    <!-- Security Layers -->
+    <rect x="-130" y="60" width="260" height="40" class="node-purple" rx="4" style="fill-opacity: 0.2;" />
+    <text x="0" y="85" text-anchor="middle" class="label" style="fill: var(--purple-dark);">Сигурен Sandbox</text>
+
+    <rect x="-130" y="10" width="260" height="40" class="node-purple" rx="4" style="fill-opacity: 0.5;" />
+    <text x="0" y="35" text-anchor="middle" class="label" style="fill: var(--purple-dark);">Криптографска проверка</text>
+
+    <rect x="-130" y="-40" width="260" height="40" class="node-teal" rx="4" />
+    <text x="0" y="-15" text-anchor="middle" class="header" style="fill: var(--teal-dark);">OpenAI Agents SDK</text>
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="340" y1="210" x2="140" y2="210" class="leader" />
+  <text x="10" y="215" class="label">Защита на изпълнението</text>
   
-  <rect x="250" y="150" width="300" height="120" rx="15" fill="#fff" stroke="#74aa9c" stroke-width="2" />
-  <text x="400" y="200" text-anchor="middle" fill="#74aa9c" font-family="sans-serif" font-size="28" font-weight="bold">Agents SDK</text>
-  <text x="400" y="240" text-anchor="middle" fill="#555" font-family="sans-serif" font-size="16">Autonomous Helpers</text>
-  
-  <rect x="100" y="50" width="160" height="60" rx="10" fill="#fff" stroke="#34c759" stroke-width="2" />
-  <text x="180" y="88" text-anchor="middle" fill="#34c759" font-family="sans-serif" font-size="16" font-weight="bold">Sandbox</text>
-  
-  <rect x="540" y="50" width="160" height="60" rx="10" fill="#fff" stroke="#34c759" stroke-width="2" />
-  <text x="620" y="88" text-anchor="middle" fill="#34c759" font-family="sans-serif" font-size="16" font-weight="bold">Safe Execution</text>
-  
-  <path d="M180 110 L280 150 M620 110 L520 150" stroke="#74aa9c" stroke-width="2" stroke-dasharray="5 5" />
+  <line x1="470" y1="350" x2="470" y2="400" class="leader" />
+  <line x1="470" y1="400" x2="140" y2="400" class="leader" />
+  <text x="10" y="405" class="label">Нов стандарт за сигурност</text>
+
 </svg>

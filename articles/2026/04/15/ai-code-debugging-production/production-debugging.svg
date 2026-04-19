@@ -1,18 +1,54 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#2d3436" />
-  
-  <rect x="50" y="100" width="300" height="200" rx="10" fill="#636e72" fill-opacity="0.3" stroke="#00d2ff" stroke-width="2" />
-  <text x="200" y="140" text-anchor="middle" fill="#00d2ff" font-family="sans-serif" font-size="18" font-weight="bold">AI Generated Code</text>
-  <path d="M100 170 H300 M100 200 H300 M100 230 H250" stroke="#fff" stroke-width="2" stroke-opacity="0.5" />
-  
-  <rect x="450" y="100" width="300" height="200" rx="10" fill="#636e72" fill-opacity="0.3" stroke="#ff7675" stroke-width="2" />
-  <text x="600" y="140" text-anchor="middle" fill="#ff7675" font-family="sans-serif" font-size="18" font-weight="bold">Real Production</text>
-  <circle cx="600" cy="210" r="40" fill="none" stroke="#ff7675" stroke-width="4" stroke-dasharray="8 4" />
-  <text x="600" y="215" text-anchor="middle" fill="#ff7675" font-family="sans-serif" font-size="24" font-weight="bold">BUG</text>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --amber-light: #fffbeb;
+      --amber-main: #f59e0b;
+      --amber-dark: #92400e;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --amber-light: #451a03;
+        --amber-main: #fbbf24;
+        --amber-dark: #fef3c7;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-amber { fill: var(--amber-light); stroke: var(--amber-main); stroke-width: 0.5px; }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+    .funnel-path { fill: var(--amber-light); stroke: var(--amber-main); stroke-width: 1.5px; fill-opacity: 0.6; }
+  </style>
 
-  <path d="M360 200 H440" stroke="#fff" stroke-width="4" stroke-linecap="round" />
-  <path d="M430 190 L450 200 L430 210" fill="#fff" />
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Filters/Funnels Form -->
+  <g transform="translate(470, 250)">
+    <!-- Generated Code (Wide) -->
+    <path d="M -150 -120 L 150 -120 L 120 -40 L -120 -40 Z" class="funnel-path" />
+    <text x="0" y="-90" text-anchor="middle" class="header" style="fill: var(--amber-dark);">Генериран от ИИ код</text>
+    
+    <!-- Passes QA (Middle) -->
+    <path d="M -120 -20 L 120 -20 L 80 40 L -80 40 Z" class="funnel-path" style="fill-opacity: 0.4;" />
+    <text x="0" y="15" text-anchor="middle" class="label">Преминал QA тестове</text>
+
+    <!-- Production Issues (Narrow) -->
+    <path d="M -80 60 L 80 60 L 40 140 L -40 140 Z" class="funnel-path" style="fill-opacity: 0.2; stroke: var(--gray-scaffold);" />
+    <text x="0" y="95" text-anchor="middle" class="label">Проблеми в Production</text>
+    <text x="0" y="125" text-anchor="middle" class="header" style="fill: var(--amber-dark); font-weight: 700;">43% изискват дебъгване</text>
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="320" y1="130" x2="140" y2="130" class="leader" />
+  <text x="10" y="135" class="label">Бурен растеж на кода</text>
   
-  <rect x="300" y="320" width="200" height="50" rx="25" fill="#ff7675" />
-  <text x="400" y="352" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="20" font-weight="bold">43% Failure Rate</text>
+  <line x1="390" y1="370" x2="140" y2="370" class="leader" />
+  <text x="10" y="375" class="label">Данък "Надеждност"</text>
+
 </svg>

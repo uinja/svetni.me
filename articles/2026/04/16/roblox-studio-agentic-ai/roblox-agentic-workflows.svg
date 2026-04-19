@@ -1,19 +1,65 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" rx="20" fill="#2c3e50" />
-  <rect x="50" y="50" width="700" height="300" rx="10" fill="#34495e" stroke="#fff" stroke-width="2" stroke-opacity="0.2" />
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --teal-light: #f0fdfa;
+      --teal-main: #14b8a6;
+      --teal-dark: #0f766e;
+      --gray-scaffold: #9ca3af;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --teal-light: #134e4a;
+        --teal-main: #2dd4bf;
+        --teal-dark: #ccfbf1;
+        --gray-scaffold: #475569;
+      }
+    }
+    text { font-family: 'Inter', sans-serif; fill: var(--text); }
+    .header { font-size: 14px; font-weight: 500; }
+    .label { font-size: 12px; font-weight: 400; }
+    .node-teal { fill: var(--teal-light); stroke: var(--teal-main); stroke-width: 0.5px; }
+    .connector { stroke: var(--teal-main); stroke-width: 1.5px; fill: none; marker-end: url(#arrowhead); }
+    .leader { stroke: var(--gray-scaffold); stroke-width: 0.5px; stroke-dasharray: 4,4; fill: none; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--teal-main)" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="var(--bg)" />
+
+  <!-- Center: Cycle Form (Agentic Workflow) -->
+  <g transform="translate(470, 250)">
+    <!-- Planning -->
+    <circle cx="0" cy="-120" r="45" class="node-teal" />
+    <text x="0" y="-115" text-anchor="middle" class="header" style="fill: var(--teal-dark);">Планиране</text>
+    
+    <!-- Building -->
+    <circle cx="105" cy="60" r="45" class="node-teal" />
+    <text x="105" y="65" text-anchor="middle" class="header" style="fill: var(--teal-dark);">Строене</text>
+    
+    <!-- Testing -->
+    <circle cx="-105" cy="60" r="45" class="node-teal" />
+    <text x="-105" y="65" text-anchor="middle" class="header" style="fill: var(--teal-dark);">Тестване</text>
+
+    <!-- Cycle Connectors -->
+    <path d="M 45 -100 Q 90 -60 105 5" class="connector" />
+    <path d="M 60 90 Q 0 130 -60 90" class="connector" />
+    <path d="M -105 5 Q -90 -60 -45 -100" class="connector" />
+  </g>
+
+  <!-- Left Margin Labeled Leader Lines -->
+  <line x1="330" y1="130" x2="140" y2="130" class="leader" />
+  <text x="10" y="135" class="label">Assistant интеграция</text>
   
-  <rect x="100" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#3498db" stroke-width="2" />
-  <text x="190" y="140" text-anchor="middle" fill="#3498db" font-family="sans-serif" font-size="16" font-weight="bold">Планиране</text>
-  <path d="M140 170 H240 M140 210 H240 M140 250 H200" stroke="#fff" stroke-width="2" stroke-opacity="0.5" />
-  
-  <rect x="310" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#2ecc71" stroke-width="2" />
-  <text x="400" y="140" text-anchor="middle" fill="#2ecc71" font-family="sans-serif" font-size="16" font-weight="bold">Строене</text>
-  <rect x="350" y="180" width="100" height="60" fill="#2ecc71" fill-opacity="0.5" />
-  
-  <rect x="520" y="100" width="180" height="200" rx="10" fill="#fff" fill-opacity="0.1" stroke="#e74c3c" stroke-width="2" />
-  <text x="610" y="140" text-anchor="middle" fill="#e74c3c" font-family="sans-serif" font-size="16" font-weight="bold">Тестване</text>
-  <circle cx="610" cy="210" r="40" fill="none" stroke="#fff" stroke-width="2" stroke-opacity="0.3" />
-  <path d="M590 210 L605 225 L630 200" fill="none" stroke="#e74c3c" stroke-width="4" stroke-linecap="round" />
-  
-  <text x="400" y="40" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22" font-weight="bold">Roblox Studio: Agentic Workflows</text>
+  <line x1="470" y1="380" x2="470" y2="440" class="leader" />
+  <line x1="470" y1="440" x2="140" y2="440" class="leader" />
+  <text x="10" y="445" class="label">Автономно QA</text>
+
 </svg>
