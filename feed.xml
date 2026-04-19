@@ -9,9 +9,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Sun, 19 Apr 2026 12:52:00 +0000</pubDate>
+    <pubDate>Sun, 19 Apr 2026 15:36:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>AI не унищожава софтуерния пазар в Китай, а го „турбозарежда“</title>
+      <link>/articles/2026/04/19/china-saas-ai-turbocharge/</link>
+      <pubDate>Sun, 19 Apr 2026 15:36:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/19/china-saas-ai-turbocharge/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/china-saas-ai-turbocharge/china-saas-ai-collaboration.svg&quot; alt=&quot;Сътрудничество между AI и SaaS в Китай&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Противно на песимистичните нагласи в САЩ, компаниите за изкуствен интелект в Китай е малко вероятно да „изядат“ местния софтуерен пазар. Според анализ на HSBC, традиционните софтуерни фирми притежават дълбоко индустриално ноу-хау и опит, които липсват на разработчиците на AI модели [1].&lt;/p&gt;
+&lt;p&gt;Докато в САЩ напредъкът на ИИ предизвика т.нар. &lt;strong&gt;„SaaSpocalypse“&lt;/strong&gt; (страх от обезценяване на традиционния софтуер като услуга), китайският пазар се насочва към модел на сътрудничество. Вместо конкуренция, се наблюдава симбиоза, при която компаниите за модели и утвърдените софтуерни играчи обслужват предприятията в тандем [1].&lt;/p&gt;
+&lt;h3&gt;Разрив между настроения и реалност&lt;/h3&gt;
+&lt;p&gt;Иран Лиу, ръководител на изследванията за ИТ софтуер в HSBC Qianhai Securities, посочва, че съществува сериозна разлика между инвеститорските настроения и случващото се на терен в Китай. Докато акциите на големи американски играчи като Salesforce и Adobe отбелязаха спад от около 30% тази година поради опасения от конкуренцията на автономни агенти като Claude Cowork и OpenAI Codex, китайските SaaS компании интегрират AI в своите предложения и отчитат „значителен стабилен ръст“ [1].&lt;/p&gt;
+&lt;p&gt;Един от най-ярките примери е базираната в Шънджън &lt;strong&gt;Kingdee International Software Group&lt;/strong&gt;. Компанията обяви прогноза за приходи от 1 милиард юана (около 146 милиона долара) от своите AI продукти през 2026 г., което представлява скок от 180% [1]. Kingdee вече пусна серия от AI-native продукти (като Xinghan и Xingkong), покриващи финансови анализи, подбор на персонал и преглед на договори.&lt;/p&gt;
+&lt;h3&gt;Значението на индустриалните данни&lt;/h3&gt;
+&lt;p&gt;„Компаниите за големи езикови модели предоставят инфраструктурата, но те нямат вертикални данни или опит в специфични индустрии“, обяснява Лиу [1]. Традиционните софтуерни компании използват този ранен етап на трансформация, за да монетизират AI, като разработват приложения върху съществуващите модели.&lt;/p&gt;
+&lt;p&gt;Допълнителен стимул за пазара е вълната от &lt;strong&gt;„OpenClaw“&lt;/strong&gt; агенти в началото на годината, която предизвика чувство за „FOMO“ (страх от пропускане) сред китайските предприятия. Това мотивира клиентите да увеличават бюджетите си за ИТ инфраструктура [1].&lt;/p&gt;
+&lt;h3&gt;Сътрудничеството като стратегия&lt;/h3&gt;
+&lt;p&gt;Дори водещи AI стартъпи като Zhipu AI и MiniMax разчитат на партньорства с утвърдени софтуерни фирми, за да проникнат в различни индустрии. Например, Kingdee наскоро помогна на MiniMax да подобри своята вътрешна система за управление на разходите за развойна дейност, което доведе до 30% увеличение на счетоводната ефективност [1].&lt;/p&gt;
+&lt;p&gt;Въпреки че пазарните настроения се променят постоянно, фундаменталните показатели в Китай сочат, че AI не заменя софтуерната екосистема, а я прави по-ефективна и необходима за бизнеса [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://www.scmp.com/tech/tech-trends/article/3350586/ai-not-eating-chinas-software-market-turbocharging-it-hsbc-analyst?utm_source=rss_feed&quot;&gt;AI is not eating up China’s software market but turbocharging it: HSBC analyst - South China Morning Post&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
 
     <item>
       <title>Може ли Claude да пише асемблерен код за Z80?</title>
@@ -362,7 +385,8 @@
       <pubDate>Thu, 16 Apr 2026 20:42:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/16/anthropic-claude-opus-4-7-release/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Anthropic официално пусна в публичен достъп най-мощния си модел досега — &lt;strong&gt;Claude Opus 4.7&lt;/strong&gt;, с което отново поведе в технологичната надпревара с OpenAI и Google [1]. Новият модел превъзхожда преките си конкуренти GPT-5.4 и Gemini 3.1 Pro в ключови бенчмаркове за програмиране, финансови анализи и автономно използване на инструменти [1].&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/anthropic-claude-opus-4-7-release/claude-opus-hero.svg&quot; alt=&quot;Claude Opus 4.7: Автономният агент на бъдещето&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic официално пусна в публичен достъп най-мощния си модел досега — &lt;strong&gt;Claude Opus 4.7&lt;/strong&gt;, с което отново поведе в технологичната надпревара с OpenAI и Google [1]. Новият модел превъзхожда преките си конкуренти GPT-5.4 и Gemini 3.1 Pro в ключови бенчмаркове за програмиране, финансови анализи и автономно използване на инструменти [1].&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/anthropic-claude-opus-4-7-release/opus-4-7-benchmarks.svg&quot; alt=&quot;Claude Opus 4.7: Сравнителни бенчмаркове срещу GPT и Gemini&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Според репортаж на VentureBeat [1], Opus 4.7 постига Elo резултат от 1753 в теста за знания GDPVal-AA, изпреварвайки GPT-5.4 (1674) и Gemini 3.1 Pro (1314). Моделът бележи значителен скок и в софтуерното инженерство, решавайки 64.3% от задачите в SWE-bench Pro. Докато Anthropic държи още по-мощния си модел &lt;strong&gt;Mythos&lt;/strong&gt; ограничен за партньори в сферата на киберсигурността, Opus 4.7 се превръща в основния инструмент за масовия бизнес пазар.&lt;/p&gt;
 &lt;h3&gt;Автономност и самопроверка&lt;/h3&gt;

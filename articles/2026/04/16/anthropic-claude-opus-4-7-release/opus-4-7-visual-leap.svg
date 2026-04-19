@@ -1,44 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <style>
     .bg { fill: var(--background, #ffffff); }
-    .surface { fill: var(--surface-soft, #fafafa); }
+    .surface { fill: var(--surface-soft, #fafafa); stroke: var(--foreground, #000000); stroke-width: 1; }
     .accent-blue { fill: var(--blue, #1231b5); }
-    .accent-yellow { fill: var(--yellow, #fac832); }
     .text-main { fill: var(--foreground, #000000); }
-    .text-dim { fill: var(--foreground, #000000); opacity: 0.7; }
+    .text-dim { fill: var(--foreground, #000000); opacity: 0.6; }
     text { font-family: system-ui, sans-serif; }
   </style>
   <rect width="800" height="500" class="bg" />
 
-  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="500" class="text-main">3x Visual Processing Leap</text>
+  <text x="400" y="60" text-anchor="middle" font-size="24" font-weight="600" class="text-main">3x Visual Processing Breakthrough</text>
+  <text x="400" y="90" text-anchor="middle" font-size="14" class="text-dim">Spatial Analysis &amp; UI Navigation Resolution (3.75 MP)</text>
 
-  <!-- Left Side: Previous Generation -->
-  <g transform="translate(100, 150)">
-    <rect width="200" height="200" rx="4" class="surface" stroke="var(--foreground)" stroke-width="1" />
-    <!-- 4x4 Grid -->
-    <path d="M 50 0 V 200 M 100 0 V 200 M 150 0 V 200 M 0 50 H 200 M 0 100 H 200 M 0 150 H 200" stroke="var(--foreground)" stroke-width="1" opacity="0.2" />
-    <text x="100" y="240" text-anchor="middle" font-size="16" class="text-dim">Claude 3.5 (~1 MP)</text>
+  <!-- Side by Side Comparison -->
+  <g transform="translate(150, 180)">
+    <rect width="200" height="200" rx="8" class="surface" />
+    <path d="M 50 0 V 200 M 100 0 V 200 M 150 0 V 200 M 0 50 H 200 M 0 100 H 200 M 0 150 H 200" stroke="var(--foreground, #000000)" stroke-width="1" opacity="0.1" />
+    <text x="100" y="235" text-anchor="middle" font-size="16" font-weight="500" class="text-dim">Claude 3.5 (~1 MP)</text>
   </g>
 
-  <!-- Transition Arrow -->
-  <path d="M 350 250 L 450 250" stroke="var(--foreground)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-  <text x="400" y="230" text-anchor="middle" font-size="18" font-weight="700" class="accent-blue">3x Density</text>
-
-  <!-- Right Side: Claude 4.7 -->
-  <g transform="translate(500, 150)">
-    <rect width="200" height="200" rx="4" class="surface" stroke="var(--blue)" stroke-width="2" />
-    <!-- 12x12 Grid -->
+  <g transform="translate(450, 180)">
+    <rect width="200" height="200" rx="8" class="surface" stroke="var(--blue, #1231b5)" stroke-width="2" />
     <path d="M 16 0 V 200 M 33 0 V 200 M 50 0 V 200 M 66 0 V 200 M 83 0 V 200 M 100 0 V 200 M 116 0 V 200 M 133 0 V 200 M 150 0 V 200 M 166 0 V 200 M 183 0 V 200
              M 0 16 H 200 M 0 33 H 200 M 0 50 H 200 M 0 66 H 200 M 0 83 H 200 M 0 100 H 200 M 0 116 H 200 M 0 133 H 200 M 0 150 H 200 M 0 166 H 200 M 0 183 H 200" 
-          stroke="var(--blue)" stroke-width="1" opacity="0.3" />
-    <text x="100" y="240" text-anchor="middle" font-size="16" font-weight="600" class="accent-blue">Claude 4.7 (3.75 MP)</text>
+          stroke="var(--blue, #1231b5)" stroke-width="0.5" opacity="0.4" />
+    <text x="100" y="235" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue, #1231b5)">Claude 4.7 (3.75 MP)</text>
   </g>
 
+  <path d="M 370 280 L 430 280" stroke="var(--foreground, #000000)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" class="text-main" />
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--foreground, #000000)" />
     </marker>
   </defs>
 
-  <text x="400" y="450" text-anchor="middle" font-size="14" class="text-dim">High-fidelity interface navigation and complex document analysis.</text>
+  <text x="400" y="450" text-anchor="middle" font-size="14" class="text-dim">Enhanced vision allows for precise sub-pixel interactions in complex software.</text>
 </svg>
