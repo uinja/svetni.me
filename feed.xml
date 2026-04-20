@@ -6,18 +6,78 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Светни.ме</title>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <link></link>
+    <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://svetni.me</link>
     <description>Технологични новини</description>
-    <pubDate>Sun, 19 Apr 2026 23:10:00 +0000</pubDate>
+    <pubDate>Mon, 20 Apr 2026 19:40:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
 
     <item>
+      <title>Aletheia на DeepMind решава автономно математически задачи на ниво научни изследвания</title>
+      <link>https://svetni.me/articles/2026/04/20/deepmind-aletheia-agentic-math/</link>
+      <pubDate>Mon, 20 Apr 2026 19:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/20/deepmind-aletheia-agentic-math/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/20/deepmind-aletheia-agentic-math/hero.png&quot; alt=&quot;Aletheia на DeepMind: Автономно математическо изследване&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Google DeepMind постигна нов крайъгълен камък в развитието на агентния изкуствен интелект (agentic AI). Техният нов агент &lt;strong&gt;Aletheia&lt;/strong&gt;, базиран на модела &lt;strong&gt;Gemini 3 Deep Think&lt;/strong&gt;, успешно е решил шест от десет непубликувани, изследователски задачи в рамките на първото предизвикателство FirstProof [1].&lt;/p&gt;
+&lt;p&gt;Това постижение бележи преход от решаването на задачи за състезания по математика (като IMO) към автономно справяне с проблеми на ниво докторантски изследвания.&lt;/p&gt;
+&lt;h3&gt;Строг протокол за автономия&lt;/h3&gt;
+&lt;p&gt;Aletheia е оперирала под строг протокол за нулева човешка намеса (zero-human-intervention). В рамките на едноседмичния период за предаване на решенията, системата е генерирала кандидат-доказателства, форматирала ги е в LaTeX и сама е докладвала за неуспех в случаите, когато не е успяла да намери решение [1].&lt;/p&gt;
+&lt;p&gt;Експертни оценители са потвърдили, че шест от предадените решения (за задачи 2, 5, 7, 8, 9 и 10) са годни за публикуване след минимални редакции [2]. Единствено при задача 8 е имало разминаване в мненията на експертите, което подчертава сложността на изследователските задачи [3].&lt;/p&gt;
+&lt;h3&gt;Архитектура на надеждността&lt;/h3&gt;
+&lt;p&gt;Ключът към успеха на Aletheia се крие в нейната мултиагентна структура и разширения капацитет за изчисление по време на тестване (extended test-time compute). Системата използва конвейер от три специализирани агента:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Generator (Генератор):&lt;/strong&gt; Предлага стъпки в доказателството.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Verifier (Проверител):&lt;/strong&gt; Търси логически пропуски и грешки.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reviser (Редактор):&lt;/strong&gt; Коригира или реструктурира аргументите въз основа на обратната връзка [1].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Дизайнерите на системата са поставили фокус върху надеждността чрез „самофилтриране“. Вместо да халюцинира правдоподобни, но грешни доказателства, Aletheia е проектирана да признава, когато не може да реши даден проблем. „Виждаме надеждността като основното тясно място пред мащабирането на AI асистенцията в изследователската математика“, пишат изследователите в доклад в arXiv [2].&lt;/p&gt;
+&lt;h3&gt;Значение за научната общност&lt;/h3&gt;
+&lt;p&gt;За разлика от затворените експерименти, екипът на DeepMind публикува пълните данни за промптоветe и изходите в arXiv и GitHub, правейки резултатите напълно проверими и възпроизводими [2].&lt;/p&gt;
+&lt;p&gt;Според специалистите, това демонстрира, че комбинирането на итеративни разсъждения и автоматизирана верификация може да генерира доказателства, които издържат на строга експертна оценка. Пътят напред включва интеграция с формални системи за проверка на доказателства, за да се постигне машинно проверима точност в реално време [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://letsdatascience.com/news/aletheia-advances-autonomous-agentic-mathematical-research-5ad201a8&quot;&gt;Aletheia Advances Autonomous Agentic Mathematical Research - Let&amp;#39;s Data Science&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://arxiv.org/abs/2602.21201&quot;&gt;Aletheia tackles FirstProof autonomously - arXiv:2602.21201&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://themata.ai/news/google-s-aletheia-ai-agent-autonomously-solves-6-10-novel-firstproof-math-problems&quot;&gt;Google&amp;#39;s Aletheia AI Agent Autonomously Solves 6/10 Novel FirstProof Math Problems - Themata.ai&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Atlassian въвежда събиране на клиентски данни по подразбиране за обучение на AI</title>
+      <link>https://svetni.me/articles/2026/04/20/atlassian-ai-data-collection/</link>
+      <pubDate>Mon, 20 Apr 2026 18:54:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/20/atlassian-ai-data-collection/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/20/atlassian-ai-data-collection/hero.png&quot; alt=&quot;Atlassian въвежда събиране на клиентски данни по подразбиране за обучение на AI&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Според официално съобщение от Atlassian [2], компанията планира значителна промяна в начина, по който обработва клиентските данни в своите облачни услуги. От 17 август 2026 г. софтуерният гигант ще започне да събира метаданни и съдържание в приложенията (in-app data) по подразбиране, за да обучава своите системи с изкуствен интелект, включително инструментите Rovo и Rovo Dev [1].&lt;/p&gt;
+&lt;h3&gt;Хронология на промените&lt;/h3&gt;
+&lt;p&gt;Процесът по въвеждане на новите настройки започна на 16 април 2026 г. Администраторите на организациите ще видят новите контроли в административния панел до 19 май 2026 г., което им дава тримесечен прозорец за реакция преди официалното влизане в сила на политиката през август [2].&lt;/p&gt;
+&lt;h3&gt;Какви данни ще се събират?&lt;/h3&gt;
+&lt;p&gt;Atlassian разделя данните на две основни категории:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Метаданни:&lt;/strong&gt; Това включва статистически характеристики и числени полета, като броя на „story points“ в Jira, сложността на страниците в Confluence, крайни дати на спринтове и SLA стойности.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Данни в приложенията (In-app data):&lt;/strong&gt; Тук попада генерираното от потребителите съдържание – заглавия и тела на страници в Confluence, описания и коментари към задачи в Jira, както и имена на персонализирани работни процеси (workflows) [2].&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Компанията подчертава, че всички данни ще бъдат деидентифицирани и агрегирани, преди да бъдат използвани за обучение, като се премахват лична информация като имена и имейл адреси [1].&lt;/p&gt;
+&lt;h3&gt;Настройки според абонаментния план&lt;/h3&gt;
+&lt;p&gt;Контролът върху събирането на данни зависи силно от избрания тарифен план:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Free и Standard:&lt;/strong&gt; Метаданните се събират задължително без опция за отказ. Съдържанието в приложенията е включено по подразбиране, но може да бъде изключено.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Premium:&lt;/strong&gt; Метаданните са задължителни, но съдържанието в приложенията е изключено по подразбиране.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enterprise:&lt;/strong&gt; И двете категории са изключени по подразбиране, като администраторите имат пълна възможност за отказ (opt-out) [2].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Изключения и защита&lt;/h3&gt;
+&lt;p&gt;Организации, използващи Atlassian Government Cloud, Isolated Cloud или такива със специфични HIPAA изисквания, са напълно изключени от програмата за принос на данни. Същото важи и за клиенти, които използват собствени ключове за криптиране (customer-managed keys) [1].&lt;/p&gt;
+&lt;p&gt;В случай на отказ или изтриване на данни, Atlassian се ангажира да премахне съдържанието в рамките на 30 дни, а моделите, обучени с него, да бъдат преобучени в рамките на 90 дни [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8&quot;&gt;Atlassian Enables Default Data Collection to Train AI - Let&amp;#39;s Data Science&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.atlassian.com/trust/ai/data-contribution&quot;&gt;Data practices built for responsible AI - Atlassian&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
       <title>Uber изчерпа годишния си бюджет за ИИ за месеци: Claude Code променя правилата</title>
-      <link>/articles/2026/04/19/uber-ai-budget-struggle/</link>
+      <link>https://svetni.me/articles/2026/04/19/uber-ai-budget-struggle/</link>
       <pubDate>Sun, 19 Apr 2026 23:10:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/uber-ai-budget-struggle/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/uber-ai-budget-struggle/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/uber-ai-budget-struggle/uber-ai-agent-hero.png&quot; alt=&quot;Uber: ИИ агентите превземат разработката на софтуер&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Uber Technologies, Inc. открива по трудния начин, че мащабирането на изкуствения интелект не е свързано само със скорост, но и със значителни разходи. Въпреки инвестициите от 3,4 милиарда долара в научноизследователска и развойна дейност (R&amp;amp;D), компанията вече е изчерпала планирания си бюджет за ИИ за цялата 2026 г. само за няколко месеца [1].&lt;/p&gt;
@@ -37,9 +97,9 @@
 
     <item>
       <title>Конфликт в WordPress: Мат Мълънуег наложи Akismet в ядрото на версия 7.0</title>
-      <link>/articles/2026/04/19/wordpress-7-0-akismet-controversy/</link>
+      <link>https://svetni.me/articles/2026/04/19/wordpress-7-0-akismet-controversy/</link>
       <pubDate>Sun, 19 Apr 2026 21:20:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/wordpress-7-0-akismet-controversy/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/wordpress-7-0-akismet-controversy/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/wordpress-7-0-akismet-controversy/wordpress-hero.png&quot; alt=&quot;WordPress 7.0: Конфликтът около екрана Connectors&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Основателят на WordPress, Мат Мълънуег, еднолично отмени решението на водещите разработчици на проекта (core committers), за да наложи включването на спам защитата &lt;strong&gt;Akismet&lt;/strong&gt; в новия екран „Connectors“ на версия 7.0. Според репортаж на The Repository [1], случаят разпали остри дебати относно управлението на проекти с отворен код и влиянието на компанията на Мълънуег, Automattic.&lt;/p&gt;
@@ -60,9 +120,9 @@
 
     <item>
       <title>Пробив във Vercel: Хакери обявиха за продажба откраднати данни и сорс код</title>
-      <link>/articles/2026/04/19/vercel-security-breach-april-2026/</link>
+      <link>https://svetni.me/articles/2026/04/19/vercel-security-breach-april-2026/</link>
       <pubDate>Sun, 19 Apr 2026 21:15:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/vercel-security-breach-april-2026/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/vercel-security-breach-april-2026/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/vercel-security-breach-april-2026/vercel-hero.png&quot; alt=&quot;Vercel Security: Пробив и сигурност в облака&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Популярната облачна платформа за разработка &lt;strong&gt;Vercel&lt;/strong&gt; официално потвърди инцидент със сигурността, след като хакери обявиха, че са проникнали в нейните системи и се опитват да продадат открадната информация. Според репортаж на BleepingComputer [1], извършителите твърдят, че притежават достъп до сорс код, API ключове и данни на стотици служители.&lt;/p&gt;
@@ -91,9 +151,9 @@
 
     <item>
       <title>Разломи в термоядрения бум: Индустрията бърза към борсата, докато науката изостава</title>
-      <link>/articles/2026/04/19/fusion-funding-cracks-ipo/</link>
+      <link>https://svetni.me/articles/2026/04/19/fusion-funding-cracks-ipo/</link>
       <pubDate>Sun, 19 Apr 2026 18:02:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/fusion-funding-cracks-ipo/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/fusion-funding-cracks-ipo/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/fusion-funding-cracks-ipo/fusion-hero.png&quot; alt=&quot;Термоядрен синтез: Енергията на бъдещето и инвестиционен риск&quot;&gt;&lt;/p&gt;
 &lt;p&gt;След години на оптимизъм и рекордни инвестиции, в сектора на термоядрения синтез започват да се появяват първите сериозни пукнатини. Според репортаж на TechCrunch [1] от фестивала Fusion Fest на The Economist в Лондон, индустрията е раздвоена по два ключови въпроса: кога стартъпите трябва да станат публични и дали страничните бизнеси са жизненоважен приход или опасно разсейване.&lt;/p&gt;
@@ -117,9 +177,9 @@
 
     <item>
       <title>Войната срещу Adobe: Конкуренцията залага на безплатен професионален софтуер</title>
-      <link>/articles/2026/04/19/adobe-rivals-free-software/</link>
+      <link>https://svetni.me/articles/2026/04/19/adobe-rivals-free-software/</link>
       <pubDate>Sun, 19 Apr 2026 17:56:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/adobe-rivals-free-software/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/adobe-rivals-free-software/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/adobe-rivals-free-software/adobe-alternatives-hero.png&quot; alt=&quot;Алтернативи на Adobe: Свобода от абонаментния модел&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Индустрията на творческия софтуер обяви война на Adobe. Стратегията на конкурентите е проста: ако не можеш да ги победиш чрез функции, подкопай ги чрез цената. Според анализ на The Verge [1], все повече професионални алтернативи стават не просто по-евтини, а напълно безплатни, което поставя дългогодишната доминация на абонаментния модел на Adobe под сериозно напрежение.&lt;/p&gt;
@@ -144,9 +204,9 @@
 
     <item>
       <title>AI не унищожава софтуерния пазар в Китай, а го „турбозарежда“</title>
-      <link>/articles/2026/04/19/china-saas-ai-turbocharge/</link>
+      <link>https://svetni.me/articles/2026/04/19/china-saas-ai-turbocharge/</link>
       <pubDate>Sun, 19 Apr 2026 15:36:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/china-saas-ai-turbocharge/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/china-saas-ai-turbocharge/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/china-saas-ai-turbocharge/china-saas-hero.png&quot; alt=&quot;AI и SaaS в Китай: Симбиоза и растеж&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Противно на песимистичните нагласи в САЩ, компаниите за изкуствен интелект в Китай е малко вероятно да „изядат“ местния софтуерен пазар. Според анализ на HSBC, традиционните софтуерни фирми притежават дълбоко индустриално ноу-хау и опит, които липсват на разработчиците на AI модели [1].&lt;/p&gt;
@@ -167,9 +227,9 @@
 
     <item>
       <title>Може ли Claude да пише асемблерен код за Z80?</title>
-      <link>/articles/2026/04/19/claude-z80-assembly/</link>
+      <link>https://svetni.me/articles/2026/04/19/claude-z80-assembly/</link>
       <pubDate>Sun, 19 Apr 2026 12:52:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/claude-z80-assembly/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/claude-z80-assembly/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/claude-z80-assembly/z80-hero.png&quot; alt=&quot;Claude и Z80: Мост между минало и бъдеще&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Експеримент на ентусиаста [Ready Z80] показва, че големите езикови модели (LLM) като Claude могат да се справят с писането на код за остарели архитектури отпреди 40 години, но само при стриктно човешко ръководство. Резултатът е работеща версия на играта Wordle за ретрокомпютъра TEC-1G, базиран на легендарния процесор Z80 [1].&lt;/p&gt;
@@ -186,9 +246,9 @@
 
     <item>
       <title>Азия може да изпревари САЩ в AI надпреварата благодарение на своите вериги за доставки</title>
-      <link>/articles/2026/04/19/asia-ai-supply-chain-edge/</link>
+      <link>https://svetni.me/articles/2026/04/19/asia-ai-supply-chain-edge/</link>
       <pubDate>Sun, 19 Apr 2026 12:40:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/asia-ai-supply-chain-edge/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/19/asia-ai-supply-chain-edge/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/19/asia-ai-supply-chain-edge/asia-ai-supply-chain.png&quot; alt=&quot;Бъдещето на AI в Азия: автоматизация и хардуерни иновации&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Предимствата на Азия в индустриалната екосистема и веригите за доставки могат да осигурят на региона решително предимство при внедряването на роботика и системи с „въплътен изкуствен интелект“ (embodied AI). Според Джени Фу, старши управляващ партньор в Granite Asia, регионът е в уникална позиция да превърне софтуерните иновации в реални физически резултати [1].&lt;/p&gt;
@@ -207,9 +267,9 @@
 
     <item>
       <title>Сам Олтман коментира атаката с коктейл „Молотов“ срещу дома му и страховете от ИИ</title>
-      <link>/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</link>
+      <link>https://svetni.me/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</link>
       <pubDate>Sat, 18 Apr 2026 20:11:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Главният изпълнителен директор на OpenAI, Сам Олтман, коментира критичните настроения срещу изкуствения интелект, часове след като домът му в Сан Франциско стана обект на нападение. В петък сутринта (10 април) срещу къщата е бил хвърлен коктейл „Молотов“. Според репортаж на Los Angeles Times [1], нападението е било провокирано от ескалиращото напрежение около развитието на ИИ технологиите.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/2026/04/18/sam-altman-home-attack-ai-backlash/ai-backlash-landscape.png&quot; alt=&quot;Концептуална илюстрация: напрежение около ИИ (Landscape Anime Style)&quot;&gt;&lt;/p&gt;
@@ -233,9 +293,9 @@
 
     <item>
       <title>Meta представи HyperAgents: ИИ системи, които сами подобряват логиката си</title>
-      <link>/articles/2026/04/18/meta-hyperagents-self-improving-ai/</link>
+      <link>https://svetni.me/articles/2026/04/18/meta-hyperagents-self-improving-ai/</link>
       <pubDate>Sat, 18 Apr 2026 20:03:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/meta-hyperagents-self-improving-ai/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/18/meta-hyperagents-self-improving-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/18/meta-hyperagents-self-improving-ai/hyperagents-hero.png&quot; alt=&quot;HyperAgents: Самоусъвършенстващ се изкуствен интелект в действие&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Изследователи от Meta и няколко водещи университета представиха нова архитектура за изкуствен интелект, наречена &lt;strong&gt;HyperAgents&lt;/strong&gt;. Според публикация в VentureBeat [1], това са самореферентни системи, които могат непрекъснато да пренаписват и оптимизират собствената си логика за решаване на проблеми, отключвайки възможности за самоусъвършенстване отвъд традиционното програмиране.&lt;/p&gt;
@@ -261,9 +321,9 @@
 
     <item>
       <title>OpenAI Codex вече може да управлява компютъра ви във фонов режим</title>
-      <link>/articles/2026/04/18/openai-codex-computer-use/</link>
+      <link>https://svetni.me/articles/2026/04/18/openai-codex-computer-use/</link>
       <pubDate>Sat, 18 Apr 2026 19:03:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/openai-codex-computer-use/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/18/openai-codex-computer-use/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/18/openai-codex-computer-use/codex-hero.png&quot; alt=&quot;Codex: Автономна работа във фонов режим&quot;&gt;&lt;/p&gt;
 &lt;h3&gt;Автономия във фонов режим&lt;/h3&gt;
@@ -289,9 +349,9 @@
 
     <item>
       <title>MIT демократизира протеиновия дизайн с ИИ платформа без програмиране</title>
-      <link>/articles/2026/04/18/mit-ai-protein-design-openprotein/</link>
+      <link>https://svetni.me/articles/2026/04/18/mit-ai-protein-design-openprotein/</link>
       <pubDate>Sat, 18 Apr 2026 12:45:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/mit-ai-protein-design-openprotein/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/18/mit-ai-protein-design-openprotein/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/18/mit-ai-protein-design-openprotein/protein-hero.png&quot; alt=&quot;OpenProtein: Демократизация на биотехнологиите чрез ИИ&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Основана от доктор Тристан Беплер и бившия доцент от MIT Тим Лу, OpenProtein.AI предоставя на изследователите достъп до мощни базови модели (foundation models) и набор от инструменти за проектиране на протеини, прогнозиране на тяхната структура и функция, както и за обучение на специализирани модели. Платформата вече се използва от фармацевтични и биотехнологични компании от всякакъв мащаб, като за академичните среди тя е достъпна безплатно [1].&lt;/p&gt;
@@ -309,9 +369,9 @@
 
     <item>
       <title>Anthropic представи Claude Design: AI инструмент, който превръща текст в готови прототипи</title>
-      <link>/articles/2026/04/17/anthropic-claude-design-launch/</link>
+      <link>https://svetni.me/articles/2026/04/17/anthropic-claude-design-launch/</link>
       <pubDate>Fri, 17 Apr 2026 23:55:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/anthropic-claude-design-launch/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/17/anthropic-claude-design-launch/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/17/anthropic-claude-design-launch/claude-design-hero.png&quot; alt=&quot;Claude Design: От концепция към интерактивен дизайн&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Anthropic направи мащабна крачка към превръщането си в компания за цялостни софтуерни продукти с пускането на &lt;strong&gt;Claude Design&lt;/strong&gt; [1]. Новият инструмент, разработен от подразделението Anthropic Labs, позволява на потребителите да създават професионални визуални проекти — от интерактивни прототипи и презентации до маркетингови материали — чрез обикновен чат разговор.&lt;/p&gt;
@@ -331,9 +391,9 @@
 
     <item>
       <title>97% от компаниите очакват сериозен инцидент с AI агенти през следващата година</title>
-      <link>/articles/2026/04/17/enterprise-ai-agent-security-survey/</link>
+      <link>https://svetni.me/articles/2026/04/17/enterprise-ai-agent-security-survey/</link>
       <pubDate>Fri, 17 Apr 2026 23:46:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/enterprise-ai-agent-security-survey/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/17/enterprise-ai-agent-security-survey/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/17/enterprise-ai-agent-security-survey/security-hero.png&quot; alt=&quot;Сигурност на AI агентите: Пътят към пълна изолация&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Мащабно проучване на VentureBeat сред 108 водещи компании разкрива критична пропаст между бързото внедряване на автономни AI агенти и способността на организациите да ги защитят [1]. Според данните, 97% от лидерите в сферата на сигурността очакват значителен инцидент, причинен от изкуствен интелект, в рамките на следващите 12 месеца [3].&lt;/p&gt;
@@ -364,9 +424,9 @@
 
     <item>
       <title>Claude Opus 4.7: По-честен и по-способен в програмирането и анализа</title>
-      <link>/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</link>
+      <link>https://svetni.me/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</link>
       <pubDate>Fri, 17 Apr 2026 23:36:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/claude-reliability-hero.png&quot; alt=&quot;Claude Opus 4.7: Висока надеждност и честност при разсъжденията&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Anthropic представи най-новия си хибриден модел с изкуствен интелект — Claude Opus 4.7, който демонстрира значителен напредък в надеждността и техническите възможности. Според официалния доклад на компанията [2], новият модел е по-малко склонен към халюцинации и проявява по-висока степен на честност в сравнение със своите предшественици и конкурентни модели в индустрията.&lt;/p&gt;
@@ -386,9 +446,9 @@
 
     <item>
       <title>AI моделите се провалят в спортните залози: Изследването KellyBench разкрива сериозни слабости</title>
-      <link>/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</link>
+      <link>https://svetni.me/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</link>
       <pubDate>Thu, 16 Apr 2026 22:08:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/ai-kellybench-soccer-betting-failure/kellybench-hero.png&quot; alt=&quot;KellyBench: ИИ се проваля в хаотични среди&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Ново изследване, наречено &lt;strong&gt;KellyBench&lt;/strong&gt;, разкрива значителна пропаст между способността на съвременните AI модели да решават теоретични задачи и тяхното представяне в реални, динамични среди [1]. Проучването, проведено от стартъпа &lt;em&gt;General Reasoning&lt;/em&gt;, подлага осем водещи AI модела на тест, в който те трябва да управляват бюджет от £100,000 чрез залози на футболния сезон 2023-24 в Английската висша лига [1].&lt;/p&gt;
@@ -440,9 +500,9 @@
 
     <item>
       <title>Cloudflare представи унифицирана AI платформа: Един API за всички водещи модели</title>
-      <link>/articles/2026/04/16/cloudflare-unified-ai-platform/</link>
+      <link>https://svetni.me/articles/2026/04/16/cloudflare-unified-ai-platform/</link>
       <pubDate>Thu, 16 Apr 2026 21:53:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/cloudflare-unified-ai-platform/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/cloudflare-unified-ai-platform/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/cloudflare-unified-ai-platform/cloudflare-hero.png&quot; alt=&quot;Cloudflare: Унифициран слой за изкуствен интелект&quot;&gt;&lt;/p&gt;
 &lt;p&gt;В рамките на своята „Седмица на агентите“ (Agents Week), Cloudflare обяви трансформацията на своята AI инфраструктура в унифициран слой за инференция (inference layer) [1]. Новата платформа позволява на разработчиците да използват един единствен API за достъп до над 70 модела от 12 различни доставчика, включително OpenAI, Anthropic и Google.&lt;/p&gt;
@@ -459,9 +519,9 @@
 
     <item>
       <title>Cloudflare Email Service вече е в публична бета: Имейлът като интерфейс за AI агенти</title>
-      <link>/articles/2026/04/16/cloudflare-email-for-agents/</link>
+      <link>https://svetni.me/articles/2026/04/16/cloudflare-email-for-agents/</link>
       <pubDate>Thu, 16 Apr 2026 21:34:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/cloudflare-email-for-agents/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/cloudflare-email-for-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/cloudflare-email-for-agents/cloudflare-email-hero.png&quot; alt=&quot;Cloudflare Email: Операционен център за AI агенти&quot;&gt;&lt;/p&gt;
 &lt;p&gt;В рамките на своята „Седмица на агентите“ (Agents Week), Cloudflare обяви прехода на своята услуга &lt;strong&gt;Email Service&lt;/strong&gt; в публична бета [1]. Новината бележи важен етап в стратегията на компанията за изграждане на инфраструктура за автономни изкуствени интелекти, превръщайки имейла от обикновен канал за известия в пълноценен интерфейс за двупосочна комуникация между хора и AI агенти.&lt;/p&gt;
@@ -484,9 +544,9 @@
 
     <item>
       <title>Roblox Studio „става агентно“: AI вече планира, строи и тества игри</title>
-      <link>/articles/2026/04/16/roblox-studio-agentic-ai/</link>
+      <link>https://svetni.me/articles/2026/04/16/roblox-studio-agentic-ai/</link>
       <pubDate>Thu, 16 Apr 2026 20:52:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/roblox-studio-agentic-ai/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/roblox-studio-agentic-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/roblox-studio-agentic-ai/roblox-hero.png&quot; alt=&quot;Roblox Studio: Трансформация към агентни работни процеси&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Roblox обяви мащабна актуализация на своята платформа за разработка Roblox Studio, въвеждайки т.нар. „агентни работни процеси“ (agentic workflows) [1]. Чрез интеграция на изкуствен интелект във всеки етап от жизнения цикъл на играта, компанията цели да трансформира начина, по който създателите планинал, изграждат и тестват своите проекти.&lt;/p&gt;
@@ -504,9 +564,9 @@
 
     <item>
       <title>Anthropic представи Claude Opus 4.7: Новият лидер в автономните AI агенти</title>
-      <link>/articles/2026/04/16/anthropic-claude-opus-4-7-release/</link>
+      <link>https://svetni.me/articles/2026/04/16/anthropic-claude-opus-4-7-release/</link>
       <pubDate>Thu, 16 Apr 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/anthropic-claude-opus-4-7-release/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/anthropic-claude-opus-4-7-release/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/anthropic-claude-opus-4-7-release/claude-hero.png&quot; alt=&quot;Claude Opus 4.7: Автономният агент на бъдещето&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Anthropic официално пусна в публичен достъп най-мощния си модел досега — &lt;strong&gt;Claude Opus 4.7&lt;/strong&gt;, с което отново поведе в технологичната надпревара с OpenAI и Google [1]. Новият модел превъзхожда преките си конкуренти GPT-5.4 и Gemini 3.1 Pro в ключови бенчмаркове за програмиране, финансови анализи и автономно използване на инструменти [1].&lt;/p&gt;
@@ -524,9 +584,9 @@
 
     <item>
       <title>Gemini вече създава персонализирани изображения чрез достъп до Google Photos</title>
-      <link>/articles/2026/04/16/gemini-google-photos-integration/</link>
+      <link>https://svetni.me/articles/2026/04/16/gemini-google-photos-integration/</link>
       <pubDate>Thu, 16 Apr 2026 20:41:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/gemini-google-photos-integration/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/gemini-google-photos-integration/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/gemini-google-photos-integration/gemini-photos-hero.png&quot; alt=&quot;Gemini и Google Photos: Персонализирано AI изкуство&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Google обяви мащабен ъпдейт за своя изкуствен интелект Gemini, който вече позволява генерирането на персонализирани изображения чрез директен достъп до библиотеката на потребителя в Google Photos [1]. Новата функция използва модела за генериране на изображения &lt;strong&gt;Nano Banana 2&lt;/strong&gt; и е част от по-широката рамка на Google за „Personal Intelligence“.&lt;/p&gt;
@@ -542,9 +602,9 @@
 
     <item>
       <title>OpenAI Codex: Вече за (почти) всичко — от код към автономни агенти</title>
-      <link>/articles/2026/04/16/openai-codex-agentic-platform/</link>
+      <link>https://svetni.me/articles/2026/04/16/openai-codex-agentic-platform/</link>
       <pubDate>Thu, 16 Apr 2026 20:35:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/openai-codex-agentic-platform/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/16/openai-codex-agentic-platform/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/16/openai-codex-agentic-platform/codex-hero.png&quot; alt=&quot;Codex: От писане на код към всеобхватна агентна рамка&quot;&gt;&lt;/p&gt;
 &lt;p&gt;OpenAI обяви мащабна трансформация на своята платформа за програмиране Codex, превръщайки я от специализиран инструмент за писане на код в универсална рамка за автономни агенти [1]. Новата итерация, представена днес, бележи прехода към т.нар. „agentic engineering“ — модел, при който изкуственият интелект не просто генерира текст или код, а планира и изпълнява комплексни работни процеси в реални среди.&lt;/p&gt;
@@ -560,9 +620,9 @@
 
     <item>
       <title>OpenAI обнови своя пакет за разработка на агенти (Agents SDK)</title>
-      <link>/articles/2026/04/15/openai-agents-sdk-update/</link>
+      <link>https://svetni.me/articles/2026/04/15/openai-agents-sdk-update/</link>
       <pubDate>Wed, 15 Apr 2026 17:25:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/15/openai-agents-sdk-update/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/15/openai-agents-sdk-update/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/15/openai-agents-sdk-update/sdk-hero.png&quot; alt=&quot;OpenAI Agents SDK: Сигурност и изолация за автономни агенти&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Автономният изкуствен интелект (Agentic AI) се превръща в следващия голям успех в технологичната индустрия, а компании като OpenAI и Anthropic се състезават да предоставят на бизнеса инструменти за създаване на „автоматизирани помощници“. В отговор на това OpenAI обнови своя пакет за разработка на софтуер (SDK) за агенти, въвеждайки нови функции за по-безопасно и по-ефективно изграждане на ИИ агенти.&lt;/p&gt;
@@ -582,9 +642,9 @@
 
     <item>
       <title>Google пусна нативното приложение Gemini за Mac</title>
-      <link>/articles/2026/04/15/gemini-app-macos-launch/</link>
+      <link>https://svetni.me/articles/2026/04/15/gemini-app-macos-launch/</link>
       <pubDate>Wed, 15 Apr 2026 17:20:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/15/gemini-app-macos-launch/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/15/gemini-app-macos-launch/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/15/gemini-app-macos-launch/gemini-hero.png&quot; alt=&quot;Gemini за Mac: Нативно изживяване и десктоп интеграция&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Потребителите на Apple получиха значителен тласък в своите възможности за работа с изкуствен интелект днес, благодарение на пристигането на Gemini от Google като нативно настолно приложение за macOS. Платформата предлага безпроблемна интеграция, която позволява на потребителите на Mac да използват ИИ асистента директно в своите работни процеси, без да е необходим уеб браузър.&lt;/p&gt;
@@ -602,9 +662,9 @@
 
     <item>
       <title>Anthropic получава предложения за инвестиции при оценка от 800 млрд. долара</title>
-      <link>/articles/2026/04/15/anthropic-valuation-800b/</link>
+      <link>https://svetni.me/articles/2026/04/15/anthropic-valuation-800b/</link>
       <pubDate>Wed, 15 Apr 2026 17:15:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/15/anthropic-valuation-800b/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/15/anthropic-valuation-800b/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/15/anthropic-valuation-800b/anthropic-hero.png&quot; alt=&quot;Anthropic: Експлозивен растеж и пазарна оценка&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Компанията Anthropic, основният конкурент на OpenAI, е получила предложения за ново финансиране, които биха я оценили на 800 милиарда долара или повече. Макар че за момента ръководството на компанията не е приело тези оферти, интересът на инвеститорите подчертава експлозивния растеж на сектора и засилващата се конкуренция в областта на изкуствения интелект.&lt;/p&gt;
@@ -622,9 +682,9 @@
 
     <item>
       <title>43% от промените в кода, генерирани от ИИ, изискват дебъгване в реална среда</title>
-      <link>/articles/2026/04/15/ai-code-debugging-production/</link>
+      <link>https://svetni.me/articles/2026/04/15/ai-code-debugging-production/</link>
       <pubDate>Wed, 15 Apr 2026 17:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/15/ai-code-debugging-production/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/15/ai-code-debugging-production/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/15/ai-code-debugging-production/debugging-hero.png&quot; alt=&quot;ИИ кодиране: Скритата цена на дебъгването в реална среда&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Софтуерната индустрия се надпреварва да пише код с помощта на изкуствен интелект, но се бори сериозно с неговата надеждност след внедряването му в реална среда. Проучване сред 200 ръководители по надеждност на обекти (SRE) и DevOps лидери в големи предприятия в САЩ, Обединеното кралство и ЕС очертава тревожна картина на скритите разходи в бума на ИИ кодирането.&lt;/p&gt;
@@ -652,9 +712,9 @@
 
     <item>
       <title>Човек и машина: Подводно сътрудничество от ново поколение</title>
-      <link>/articles/2026/04/15/human-machine-teaming-underwater/</link>
+      <link>https://svetni.me/articles/2026/04/15/human-machine-teaming-underwater/</link>
       <pubDate>Wed, 15 Apr 2026 17:00:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/15/human-machine-teaming-underwater/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/15/human-machine-teaming-underwater/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Изследователи от MIT Lincoln Laboratory разработват иновативни хардуерни и алгоритмични решения, които позволяват на водолази и автономни подводни апарати (AUV) да работят като един екип в предизвикателни морски среди. Проектът цели да обедини прецизността на човешкото разпознаване и сръчност с мощната изчислителна способност и издръжливост на роботите.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/2026/04/15/human-machine-teaming-underwater/underwater-hero.png&quot; alt=&quot;Human-Machine Teaming: Подводна автономност и човешки контрол&quot;&gt;&lt;/p&gt;
