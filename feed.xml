@@ -9,16 +9,106 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Mon, 20 Apr 2026 21:49:00 +0000</pubDate>
+    <pubDate>Tue, 21 Apr 2026 21:47:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Мащабирането на агентния ИИ изисква здрава основа от данни</title>
+      <link>/articles/2026/04/21/scaling-agentic-ai-data/</link>
+      <pubDate>Tue, 21 Apr 2026 21:47:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/scaling-agentic-ai-data/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Според нови доклади на водещи консултантски и изследователски фирми, 2026 година се очертава като годината на мащабиране за „агентния“ ИИ (agentic AI). Въпреки масовия ентусиазъм обаче, успехът на тези автономни системи зависи критично от качеството на информационната основа на предприятията.&lt;/p&gt;
+&lt;p&gt;Според репортаж на ZDNet [1], Gartner прогнозира, че световните разходи за ИИ ще достигнат &lt;strong&gt;2,5 трилиона долара&lt;/strong&gt; през 2026 г. — ръст от 44% спрямо предходната година. В същото време Deloitte Digital оценява пазара на агентен ИИ на 8,5 милиарда долара до края на годината, с потенциал да достигне 40 милиарда долара до 2030 г.&lt;/p&gt;
+&lt;h3&gt;Пропастта в мащабирането&lt;/h3&gt;
+&lt;p&gt;Изследване на McKinsey [2] разкрива тревожна тенденция: въпреки че близо две трети от предприятията по света експериментират с ИИ агенти, &lt;strong&gt;по-малко от 10%&lt;/strong&gt; са успели да ги внедрят в мащаб, който носи измерима стойност.&lt;/p&gt;
+&lt;p&gt;Основната причина за този неуспех са ограниченията в данните. Осем от десет компании посочват липсата на качествени, достъпни и надеждни данни като основна бариера. IDC предупреждава, че организациите, които не приоритезират подготовката на данните си, могат да загубят до 15% от производителността си до 2027 г. [1].&lt;/p&gt;
+&lt;h3&gt;Четирите стъпки на McKinsey за успех&lt;/h3&gt;
+&lt;p&gt;За да преодолеят тези предизвикателства, McKinsey идентифицира четири координирани стъпки за изграждане на фундаментални възможности за работа с данни:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Идентифициране на високо ефективни работни процеси:&lt;/strong&gt; Фокус върху детерминистични и повтарящи се задачи, където агентите могат да донесат бърза стойност.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Модернизиране на архитектурата на данните:&lt;/strong&gt; Преминаване към модулни и оперативно съвместими рамки. В момента само 27% от бизнес приложенията са свързани помежду си [1].&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Осигуряване на непрекъснато качество:&lt;/strong&gt; Преход от периодично почистване на данни към управление в реално време, обхващащо структурирани, неструктурирани и генерирани от ИИ данни.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Изграждане на модел на управление (Governance):&lt;/strong&gt; Преосмисляне на начина на работа, при който ролята на човека се измества от изпълнение към надзор и оркестрация на агентни процеси.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/scaling-agentic-ai-data/data-foundation-flow.svg&quot; alt=&quot;Диаграма на фундаменталните стъпки за агентен ИИ&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;Данните като конкурентно предимство&lt;/h3&gt;
+&lt;p&gt;Според MuleSoft, средното предприятие днес управлява близо 1000 приложения, но тяхната фрагментираност води до грешки и лоши решения от страна на автономните системи. „Данните са гръбнакът на агентния ИИ,“ заключава докладът. В ерата на автономността, способността на агентите да вземат правилни решения без човешка намеса зависи изцяло от това доколко те „разбират“ контекста на бизнес данните.&lt;/p&gt;
+&lt;p&gt;До края на 2026 г. се очаква 40% от ролите в компаниите от Global 2000 да включват пряка работа с ИИ агенти [1]. За лидерите в ИТ сектора това означава, че подготовката на данните вече не е просто техническа задача, а стратегическо предимство.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://www.zdnet.com/article/scaling-agentic-ai-requires-strong-data-foundation/&quot;&gt;Scaling agentic AI demands a strong data foundation - ZDNET&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/building-the-foundations-for-agentic-ai-at-scale&quot;&gt;Building the Foundations for Agentic AI at Scale - McKinsey Digital&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://www.gartner.com/en/newsroom/press-releases/2026-01-20-gartner-forecasts-worldwide-ai-spending-to-total-2-point-5-trillion-in-2026&quot;&gt;Worldwide AI Spending to Total $2.5 Trillion in 2026 - Gartner&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Mozilla поправи 271 уязвимости във Firefox, открити от изкуствен интелект</title>
+      <link>/articles/2026/04/21/firefox-mythos-bugs/</link>
+      <pubDate>Tue, 21 Apr 2026 21:43:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/firefox-mythos-bugs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В рамките на мащабна актуализация на сигурността, Mozilla обяви пускането на Firefox 150, която включва поправки за 271 уязвимости, идентифицирани с помощта на изкуствен интелект. Според репортаж на Wired [1], пропуските са били открити чрез използването на новия модел на Anthropic — &lt;strong&gt;Claude Mythos Preview&lt;/strong&gt;, в рамките на инициативата &lt;strong&gt;Project Glasswing&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Екипът на Firefox споделя, че адаптирането към „потопа“ от бъгове, които новите AI инструменти могат да разкрият, е изисквало значителни ресурси и дисциплина. Тази стъпка обаче се счита за критична, тъй като се очаква тези възможности неизбежно да попаднат в ръцете на киберпрестъпници в най-скоро време.&lt;/p&gt;
+&lt;h3&gt;Project Glasswing: Колективна отбрана&lt;/h3&gt;
+&lt;p&gt;Project Glasswing е инициатива на Anthropic, която обединява технологични гиганти като Amazon Web Services, Apple, Google, Microsoft, NVIDIA и Palo Alto Networks [2]. Целта на проекта е да използва авангардни AI модели за дефанзивни цели — откриване и отстраняване на уязвимости в критична софтуерна инфраструктура.&lt;/p&gt;
+&lt;p&gt;Claude Mythos Preview демонстрира скок в способностите на изкуствения интелект за анализ на код. Моделът е успял да идентифицира уязвимости, които са устоявали на десетилетия човешки преглед и милиони автоматизирани тестове.&lt;/p&gt;
+&lt;h3&gt;Впечатляващи открития&lt;/h3&gt;
+&lt;p&gt;Освен във Firefox, Mythos Preview вече е открил хиляди уязвимости в различни операционни системи и софтуерни пакети [2]. Сред най-забележителните примери са:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenBSD:&lt;/strong&gt; Открита е 27-годишна уязвимост в една от най-защитените операционни системи, която позволява отдалечено блокиране на машината.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FFmpeg:&lt;/strong&gt; Идентифициран е 16-годишен пропуск в код, който е преминал през 5 милиона автоматизирани теста без успех.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux Kernel:&lt;/strong&gt; Моделът е успял самостоятелно да открие и свърже няколко уязвимости, позволявайки пълно поемане на контрол над системата.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/firefox-mythos-bugs/firefox-security-flow.svg&quot; alt=&quot;Процес на откриване и поправяне на уязвимости с ИИ&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;Ускоряване на процеса&lt;/h3&gt;
+&lt;p&gt;Сътрудничеството между Mozilla и Anthropic започна по-рано тази година, когато използването на модела Claude Opus 4.6 доведе до откриването на 22 уязвимости за две седмици [3]. Сегашният резултат от 271 поправени бъга в една версия на браузъра подчертава огромното ускорение, което AI внася в киберсигурността.&lt;/p&gt;
+&lt;p&gt;Според Anthropic, Mythos Preview в момента е значително по-добър в откриването и поправянето на уязвимости, отколкото в тяхното експлоатиране, което дава временно предимство на защитниците. Компанията обаче предупреждава, че този прозорец може да не остане отворен дълго, тъй като възможностите на моделите продължават да растат [3].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox/&quot;&gt;Mozilla Used Anthropic’s Mythos to Find and Fix 271 Bugs in Firefox - WIRED&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.anthropic.com/glasswing&quot;&gt;Project Glasswing: Securing critical software for the AI era - Anthropic&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://www.anthropic.com/news/mozilla-firefox-security&quot;&gt;Partnering with Mozilla to improve Firefox’s security - Anthropic&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
+      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/mythos-ai-banking-cyber-risks/hero.png&quot; alt=&quot;Регулатори и банки в спешна готовност след появата на Mythos AI&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Глобалните финансови регулатори и най-големите щатски банки проведоха серия от извънредни срещи през последната седмица, след като Anthropic представи своя най-нов и усъвършенстван модел на изкуствен интелект — &lt;strong&gt;Mythos&lt;/strong&gt; [1][2]. Моделът, пуснат в рамките на ограничената програма &lt;strong&gt;Project Glasswing&lt;/strong&gt;, демонстрира безпрецедентни способности за автономно откриване и експлоатиране на уязвимости от типа „zero-day“, което предизвика опасения за системния риск пред световната финансова инфраструктура [1].&lt;/p&gt;
+&lt;p&gt;Според репортаж на Let&amp;#39;s Data Science [1], Mythos Preview е успял самостоятелно да идентифицира и използва критични пропуски в сигурността на основни операционни системи и браузъри. В един от тестовете ИИ моделът е завършил успешно сложна симулация на корпоративна мрежова атака в 32 стъпки без човешка намеса [1]. Тези технически параметри, включително резултат от 93.9% на теста SWE-bench Verified, са сигнализирали на властите, че ИИ-базираните кибератаки вече са напълно реалистичен сценарий в голям мащаб [1].&lt;/p&gt;
+&lt;p&gt;CNBC потвърди [2], че председателят на Федералния резерв Джеръм Пауъл и министърът на финансите на САЩ Скот Бесент са се срещнали лично с лидерите на водещите банки в страната. На срещата са присъствали ръководителите на Bank of America, Citigroup, Goldman Sachs, Morgan Stanley и Wells Fargo [2]. Единственият отсъстващ от големите банкови директори е бил Джейми Даймън от JPMorgan Chase, въпреки че неговата институция е сред първите партняри на Anthropic в Project Glasswing [2].&lt;/p&gt;
+&lt;p&gt;Ситуацията се усложнява от обтегнатите отношения между Anthropic и администрацията на президента Тръмп. Министерството на отбраната на САЩ наскоро класифицира лабораторията за изкуствен интелект като „риск за веригата на доставки за националната сигурност“ [2]. Въпреки че федерален апелативен съд отказа да спре временното включване на компанията в черния списък, Anthropic продължава да работи с други правителствени агенции, докато текат съдебните дела [2].&lt;/p&gt;
+&lt;p&gt;В момента достъпът до Mythos е ограничен до около 40 организации, сред които Apple, Google, Microsoft и Nvidia [1][2]. Регулаторите обмислят два основни подхода: строго ограничаване на достъпа до подобни мощни инструменти или по-широкото им отваряне за общността по сигурността, за да се ускори укрепването на защитите [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://letsdatascience.com/news/regulators-scrutinize-anthropics-mythos-over-banking-cyber-r-e503e511&quot;&gt;Regulators Scrutinize Anthropic&amp;#39;s Mythos Over Banking Cyber Risks - Let&amp;#39;s Data Science&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html&quot;&gt;Powell, Bessent discussed Anthropic’s Mythos AI cyber threat with major U.S. banks - CNBC&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
+      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
+      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/kimi-k2-6-moonshot-ai/hero.png&quot; alt=&quot;Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Повечето съвременни рамки за оркестрация на изкуствен интелект са създадени за агенти, които работят в рамките на секунди или минути. С появата на новия модел &lt;strong&gt;Kimi K2.6&lt;/strong&gt; от компанията &lt;strong&gt;Moonshot AI&lt;/strong&gt;, тези системи започват да достигат своя лимит, тъй като агентите вече могат да функционират автономно в продължение на часове и дори дни [1].&lt;/p&gt;
+&lt;p&gt;Според репортаж на VentureBeat [1], Kimi K2.6 е проектиран за т.нар. „дълго хоризонтално“ (long-horizon) изпълнение. Моделът използва подобрена версия на технологията &lt;strong&gt;Agent Swarms&lt;/strong&gt; (Рояци от агенти), която е способна да управлява до 300 подагента, координиращи над 4000 стъпки едновременно [1]. За разлика от платформи като Claude Code на Anthropic или Codex на OpenAI, които разчитат на предварително дефинирани роли, K2.6 оставя самия модел да определя начина на оркестрация в реално време [1].&lt;/p&gt;
+&lt;p&gt;Впечатляващите възможности на модела са подкрепени от реални технически постижения. Moonshot AI твърди, че K2.6 е успял да изгради пълен компилатор SysY от нулата за 10 часа — задача, която обикновено изисква екип от четирима инженери за два месеца [1]. В друг случай, агент е работил автономно в продължение на 13 часа, за да преработи осемгодишен софтуерен механизъм за финансово съпоставяне, като е инициирал над 1000 повиквания на инструменти и е променил прецизно повече от 4000 реда код [1]. Най-екстремният случай включва агент, работил пет поредни дни за мониторинг и реакция при инциденти [1].&lt;/p&gt;
+&lt;p&gt;Експертите обаче предупреждават, че индустрията не е напълно подготвена за архитектурната промяна, която носят тези персистентни агенти. Кунал Ананд от F5 отбелязва, че преминаваме от скриптове и контейнери към „агенти като постоянна инфраструктура“ [1]. Това изисква нови категории в ИИ архитектурата, като портали за агенти (agent gateways) и мрежи от агенти (agent meshes) [1].&lt;/p&gt;
+&lt;p&gt;Марк Ламберт от ArmorCode подчертава и рисковете пред сигурността, заявявайки, че тези системи могат да генерират промени в кода по-бързо, отколкото организациите могат да ги прегледат или управляват [1]. Липсата на ясни механизми за връщане назад (rollback) и динамичното променяне на плановете по време на работа поставят нови предизвикателства пред управлението на риска [1].&lt;/p&gt;
+&lt;p&gt;Kimi K2.6 вече е достъпен в платформата Hugging Face, чрез API, както и в приложенията Kimi Code и Kimi [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/orchestration/kimi-k2-6-runs-agents-for-days-and-exposes-the-limits-of-enterprise-orchestration&quot;&gt;Kimi K2.6 runs agents for days — and exposes the limits of enterprise orchestration - VentureBeat&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
 
     <item>
       <title>НСА използва свръхсекретния ИИ модел Mythos на Anthropic въпреки забраната от Пентагона</title>
       <link>/articles/2026/04/20/nsa-anthropic-mythos-preview/</link>
       <pubDate>Mon, 20 Apr 2026 21:49:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/20/nsa-anthropic-mythos-preview/</guid>
-      <author>Unknown</author>
+      <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/20/nsa-anthropic-mythos-preview/hero.png&quot; alt=&quot;Илюстрация на ИИ модела Mythos в защитена среда на НСА&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Според разследване на Axios [2], Националната агенция за сигурност (НСА) активно използва най-мощния и ограничен ИИ модел на Anthropic — &lt;strong&gt;Mythos Preview&lt;/strong&gt;, въпреки че Министерството на отбраната (DoD) официално класифицира компанията като „риск за веригата на доставки“. &lt;/p&gt;
 &lt;p&gt;Новината идва само седмици след като Пентагонът започна съдебна битка с Anthropic, опитвайки се да блокира достъпа на компанията до държавни поръчки. Конфликтът възникна, след като стартъпът отказа да позволи на военните неограничен достъп до пълните възможности на своите модели за нуждите на масовото вътрешно наблюдение и разработването на автономни оръжия [1].&lt;/p&gt;
