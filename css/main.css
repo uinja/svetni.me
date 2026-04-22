@@ -74,9 +74,12 @@
   --logo-color: var(--yellow);
 
   /* Typography */
-  --font-size-base: 0.9375rem; /* 15px */
-  --font-size-s: 1.0625rem; /* 17px */
-  --font-size-xs: 0.875rem; /* 14px */
+  --font-size-base: 0.9375rem;
+  /* 15px */
+  --font-size-s: 1.0625rem;
+  /* 17px */
+  --font-size-xs: 0.875rem;
+  /* 14px */
 
   --line-height-base: 1.6;
   --line-height-tight: 1.25;
@@ -154,14 +157,6 @@ figure {
 @media screen and (max-width: 48rem) {
   .content-wrap {
     padding: 0 var(--spacing-s);
-  }
-  
-  h1 {
-    font-size: 1.75rem;
-  }
-  
-  h2 {
-    font-size: 1.4rem;
   }
 }
 
@@ -242,13 +237,11 @@ h4 a:hover::before,
   content: "";
   height: 0.8rem;
   width: calc(100% + 0.8rem);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--blue-light),
-    var(--blue-light) 2px,
-    transparent 2px,
-    transparent 6px
-  );
+  background-image: repeating-linear-gradient(-45deg,
+      var(--blue-light),
+      var(--blue-light) 2px,
+      transparent 2px,
+      transparent 6px);
   z-index: -1;
   opacity: 0.6;
 }
@@ -272,16 +265,29 @@ h6 {
 h1 {
   font-size: 2.2rem;
 }
+
 h2 {
   font-size: 1.8rem;
 }
+
 h3 {
   font-size: 1.4rem;
   font-weight: 700;
 }
+
 h4 {
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 48rem) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
 }
 
 /* -----------------------------------------------
@@ -331,7 +337,8 @@ h4 {
 .header-nav {
   display: flex;
   gap: var(--spacing-s);
-  padding-bottom: 0.2rem; /* Align better with tight logo */
+  padding-bottom: 0.2rem;
+  /* Align better with tight logo */
 }
 
 .header-nav a {
@@ -365,7 +372,8 @@ h4 {
 }
 
 .main-content {
-  min-width: 0; /* Prevents grid blowout */
+  min-width: 0;
+  /* Prevents grid blowout */
 }
 
 /* -----------------------------------------------
@@ -416,6 +424,17 @@ h4 {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05);
 }
 
+@media screen and (max-width: 48rem) {
+  h1, h2, h3, h4, h5, h6,
+  .article h1 {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .content img {
+    margin: var(--spacing-s) 0;
+  }
+}
+
 /* List Formatting */
 .content ul,
 .content ol {
@@ -430,8 +449,8 @@ h4 {
   padding-left: 0.5rem;
 }
 
-.content li > ul,
-.content li > ol {
+.content li>ul,
+.content li>ol {
   margin-top: 0.75rem;
   margin-left: 0;
   margin-bottom: 0;
@@ -481,13 +500,11 @@ h4 {
   content: "";
   height: 0.8rem;
   width: 110%;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--blue-light),
-    var(--blue-light) 2px,
-    transparent 2px,
-    transparent 6px
-  );
+  background-image: repeating-linear-gradient(-45deg,
+      var(--blue-light),
+      var(--blue-light) 2px,
+      transparent 2px,
+      transparent 6px);
   z-index: -1;
   opacity: 0.6;
 }
