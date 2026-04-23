@@ -380,7 +380,7 @@ h4 {
    Article Content
    ----------------------------------------------- */
 .article {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-l);
 }
 
 .article-header {
@@ -419,13 +419,18 @@ h4 {
   max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  margin: var(--spacing) 0;
   display: block;
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (max-width: 48rem) {
-  h1, h2, h3, h4, h5, h6,
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .article h1 {
     margin-bottom: var(--spacing-xs);
   }
