@@ -259,7 +259,7 @@ h6 {
   line-height: var(--line-height-tight);
   font-weight: 800;
   color: var(--foreground);
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
 }
 
 h1 {
@@ -309,7 +309,7 @@ h4 {
 
 .logo .site-name {
   font-family: "Rubik", sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.9rem;
   font-weight: 800;
   line-height: 1.0;
   color: var(--foreground);
@@ -328,7 +328,7 @@ h4 {
 
 .header .description {
   color: var(--foreground);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   margin-top: 0.2rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -384,12 +384,12 @@ h4 {
 }
 
 .article-header {
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-s);
 }
 
 .article h1 {
   margin-top: 0;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
 }
 
 .author-meta {
@@ -398,7 +398,7 @@ h4 {
   letter-spacing: 0.05em;
   color: var(--muted-soft);
   font-weight: 600;
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-s);
   display: flex;
   gap: var(--spacing-s);
   align-items: center;
@@ -419,7 +419,7 @@ h4 {
   max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  margin: var(--spacing-m) 0;
+  margin: var(--spacing) 0;
   display: block;
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05);
 }
