@@ -9,9 +9,36 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Thu, 23 Apr 2026 19:50:00 +0000</pubDate>
+    <pubDate>Fri, 24 Apr 2026 07:04:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>OpenAI пусна GPT-5.5: Ерата на автономните агенти и новата битка за лидерство</title>
+      <link>/articles/2026/04/24/openai-gpt-5-5-launch/</link>
+      <pubDate>Fri, 24 Apr 2026 07:04:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/openai-gpt-5-5-launch/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;OpenAI официално представи дългоочаквания модел &lt;strong&gt;GPT-5.5&lt;/strong&gt;, отбелязвайки края на краткото лидерство на Anthropic в класациите за изкуствен интелект. Новият модел е проектиран с една основна цел: превръщането на ИИ от чатбот в автономен „агент“, способен да управлява софтуер и да решава сложни задачи без човешка намеса [4][6].&lt;/p&gt;
+&lt;p&gt;Според официалните данни на OpenAI [6], моделът постига &lt;strong&gt;82.7% на бенчмарка Terminal-Bench 2.0&lt;/strong&gt; и &lt;strong&gt;85.0% на ARC-AGI-2&lt;/strong&gt;, затвърждавайки позицията си на най-интелигентната система в света. Това постижение е подкрепено от новия режим &lt;strong&gt;„GPT-5.5 Thinking“&lt;/strong&gt;, предназначен за решаване на проблеми с висок залог чрез задълбочени логически разсъждения.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/24/openai-gpt-5-5-launch/gpt-5-5-hero.png&quot; alt=&quot;Стартът на GPT-5.5: Новата изчислителна мощ&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;Научни пробиви и „ко-учен“&lt;/h3&gt;
+&lt;p&gt;GPT-5.5 демонстрира способности, които надхвърлят простото обработване на текст. Моделът е открил &lt;strong&gt;ново математическо доказателство&lt;/strong&gt;, свързано с числата на Рамзи (Ramsey numbers), което впоследствие е било официално верифицирано в Lean [6]. В областта на биоинформатиката моделът постига 80.5% на BixBench, позиционирайки се като ефективен партньор за биомедицински изследвания.&lt;/p&gt;
+&lt;h3&gt;Хардуерна синергия и самооптимизация&lt;/h3&gt;
+&lt;p&gt;Интеграцията с хардуера на NVIDIA достига нови нива. GPT-5.5 работи върху архитектурите &lt;strong&gt;Blackwell GB200 и GB300&lt;/strong&gt;, като OpenAI разкри, че самият модел е написал алгоритмите за балансиране на натоварването (load balancing) на своите сървъри, което е увеличило скоростта на генериране на токени с над 20% [6]. Над 10 000 служители на NVIDIA вече използват модела вътрешно, съобщавайки за „умопомрачителни“ резултати в продуктивността [2].&lt;/p&gt;
+&lt;h3&gt;Хакинг способности и сигурност&lt;/h3&gt;
+&lt;p&gt;Докато Anthropic държи своя модел Mythos силно ограничен, OpenAI въвежда програмата &lt;strong&gt;„Trusted Access for Cyber“&lt;/strong&gt;. Тя позволява на верифицирани професионалисти по сигурността да използват нападателните способности на модела за защитни цели [6]. Офанзивната фирма &lt;strong&gt;XBOW&lt;/strong&gt; съобщава [5], че процентът на пропуснати критични уязвимости е паднал от 40% (при GPT-5) до едва 10%.&lt;/p&gt;
+&lt;h3&gt;„Суперап“ и нова ценова политика&lt;/h3&gt;
+&lt;p&gt;TechCrunch отбелязва [3], че OpenAI позиционира ChatGPT като &lt;strong&gt;„Суперап“ (Superapp)&lt;/strong&gt;. Моделът вече разполага с 1 милион токена контекстен прозорец (за API) и подобрена визуална прецизност от 97.5% за навигация в компютърни интерфейси [6].&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GPT-5.5:&lt;/strong&gt; $5.00 за вход и $30.00 за изход (на 1 милион токена).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPT-5.5 Pro:&lt;/strong&gt; Специализирана версия за научни анализи на цена от $30.00 / $180.00 за 1 милион токена [4][6].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Саймън Уилисън посочва [1], че OpenAI официално поддържа интеграцията на Codex със съществуващите ChatGPT планове, позволявайки на разработчиците да използват мощността на GPT-5.5 в свои собствени инструменти без високи API такси в началната фаза.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://simonwillison.net/2026/Apr/23/gpt-5-5/&quot;&gt;A pelican for GPT-5.5 via the semi-official Codex backdoor API - Simon Willison&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/&quot;&gt;OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure - NVIDIA Blog&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/&quot;&gt;OpenAI ChatGPT GPT-5.5 AI Model Superapp - TechCrunch&lt;/a&gt;&lt;br&gt;[4]: &lt;a href=&quot;https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0&quot;&gt;OpenAI’s GPT-5.5 is here and it’s no potato: narrowly beats Anthropic’s Claude Mythos Preview on Terminal-Bench 2.0 - VentureBeat&lt;/a&gt;&lt;br&gt;[5]: &lt;a href=&quot;https://xbow.com/blog/mythos-like-hacking-open-to-all&quot;&gt;GPT-5.5: Mythos-Like Hacking, Open To All - XBOW&lt;/a&gt;&lt;br&gt;[6]: &lt;a href=&quot;https://openai.com/index/introducing-gpt-5-5/&quot;&gt;Introducing GPT-5.5 - OpenAI&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
 
     <item>
       <title>ИИ предизвика криза в откриването на уязвимости: 490% ръст на докладите за нулев ден</title>
@@ -178,6 +205,23 @@
     </item>
 
     <item>
+      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
+      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;
+&lt;p&gt;Според Министерството на индустрията и информационните технологии (MIIT), Китай е достигнал 1,882 екзафлопа (exaflops) – единица за измерване, съкращение от „exa floating-point operations per second“. Това се превежда като 1,882 квинтилиона (милиард милиарда) изчисления в секунда [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/23/chinas-dark-compute-power/dark-compute-hero.png&quot; alt=&quot;„Тъмният басейн“ на Китай&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Тази цифра е над 6000 пъти по-висока от изчислителната мощ на страната, отразена в списъка Top500 – един от малкото налични бенчмаркове за сравнение на напредъка в суперкомпютрите между Китай и други държави, особено САЩ. Въпреки че двете измервания не са пряко съпоставими и базираната в Германия класация често се счита за подценяваща реалните възможности на Пекин, данните на MIIT показват изключително бърз ръст [1].&lt;/p&gt;
+&lt;p&gt;За разлика от Китай, САЩ – които доминират в Top500 – не публикуват единна национална цифра за изчислителната мощ за ИИ. По-голямата част от инфраструктурата там е собственост на частни компании и се измерва по различни стандарти. Според оценки на Станфордския институт за ориентиран към човека изкуствен интелект (Stanford HAI), САЩ държат между 50 и 75 процента от глобалния капацитет и разполагат с най-голямата концентрация на центрове за данни, фокусирани върху ИИ [1].&lt;/p&gt;
+&lt;p&gt;Данните на MIIT бяха представени този вторник, подчертавайки стратегическите амбиции на страната да изгради мащабна национална мрежа от изчислителни ресурси, достъпни за местните компании и изследователски институти.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://www.scmp.com/news/china/science/article/3351037/chinas-dark-compute-power-could-be-6000-times-higher-current-estimates&quot;&gt;China’s dark compute power could be 6,000 times higher than current estimates - South China Morning Post&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
       <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
       <link>/articles/2026/04/23/black-box-ai-drift/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
@@ -202,23 +246,6 @@
 &lt;p&gt;„Занаятът на софтуера – преценката, намерението и решенията, които правят кода полезен за реални хора – не може да бъде оставен вътре в кутия, която никой не наблюдава“, заключава Гордън [1].&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[1]: &lt;a href=&quot;https://stackoverflow.blog/2026/04/23/black-box-ai-drift-ai-tools-are-making-design-decisions-nobody-asked-for/&quot;&gt;Black box AI drift: AI tools are making design decisions nobody asked for - Stack Overflow Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-
-    <item>
-      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
-      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;
-&lt;p&gt;Според Министерството на индустрията и информационните технологии (MIIT), Китай е достигнал 1,882 екзафлопа (exaflops) – единица за измерване, съкращение от „exa floating-point operations per second“. Това се превежда като 1,882 квинтилиона (милиард милиарда) изчисления в секунда [1].&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/articles/2026/04/23/chinas-dark-compute-power/dark-compute-hero.png&quot; alt=&quot;„Тъмният басейн“ на Китай&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;Тази цифра е над 6000 пъти по-висока от изчислителната мощ на страната, отразена в списъка Top500 – един от малкото налични бенчмаркове за сравнение на напредъка в суперкомпютрите между Китай и други държави, особено САЩ. Въпреки че двете измервания не са пряко съпоставими и базираната в Германия класация често се счита за подценяваща реалните възможности на Пекин, данните на MIIT показват изключително бърз ръст [1].&lt;/p&gt;
-&lt;p&gt;За разлика от Китай, САЩ – които доминират в Top500 – не публикуват единна национална цифра за изчислителната мощ за ИИ. По-голямата част от инфраструктурата там е собственост на частни компании и се измерва по различни стандарти. Според оценки на Станфордския институт за ориентиран към човека изкуствен интелект (Stanford HAI), САЩ държат между 50 и 75 процента от глобалния капацитет и разполагат с най-голямата концентрация на центрове за данни, фокусирани върху ИИ [1].&lt;/p&gt;
-&lt;p&gt;Данните на MIIT бяха представени този вторник, подчертавайки стратегическите амбиции на страната да изгради мащабна национална мрежа от изчислителни ресурси, достъпни за местните компании и изследователски институти.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;[1]: &lt;a href=&quot;https://www.scmp.com/news/china/science/article/3351037/chinas-dark-compute-power-could-be-6000-times-higher-current-estimates&quot;&gt;China’s dark compute power could be 6,000 times higher than current estimates - South China Morning Post&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
@@ -417,6 +444,23 @@
     </item>
 
     <item>
+      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
+      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/mythos-ai-banking-cyber-risks/hero.png&quot; alt=&quot;Регулатори и банки в спешна готовност след появата на Mythos AI&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Глобалните финансови регулатори и най-големите щатски банки проведоха серия от извънредни срещи през последната седмица, след като Anthropic представи своя най-нов и усъвършенстван модел на изкуствен интелект — &lt;strong&gt;Mythos&lt;/strong&gt; [1][2]. Моделът, пуснат в рамките на ограничената програма &lt;strong&gt;Project Glasswing&lt;/strong&gt;, демонстрира безпрецедентни способности за автономно откриване и експлоатиране на уязвимости от типа „zero-day“, което предизвика опасения за системния риск пред световната финансова инфраструктура [1].&lt;/p&gt;
+&lt;p&gt;Според репортаж на Let&amp;#39;s Data Science [1], Mythos Preview е успял самостоятелно да идентифицира и използва критични пропуски в сигурността на основни операционни системи и браузъри. В един от тестовете ИИ моделът е завършил успешно сложна симулация на корпоративна мрежова атака в 32 стъпки без човешка намеса [1]. Тези технически параметри, включително резултат от 93.9% на теста SWE-bench Verified, са сигнализирали на властите, че ИИ-базираните кибератаки вече са напълно реалистичен сценарий в голям мащаб [1].&lt;/p&gt;
+&lt;p&gt;CNBC потвърди [2], че председателят на Федералния резерв Джеръм Пауъл и министърът на финансите на САЩ Скот Бесент са се срещнали лично с лидерите на водещите банки в страната. На срещата са присъствали ръководителите на Bank of America, Citigroup, Goldman Sachs, Morgan Stanley и Wells Fargo [2]. Единственият отсъстващ от големите банкови директори е бил Джейми Даймън от JPMorgan Chase, въпреки че неговата институция е сред първите партняри на Anthropic в Project Glasswing [2].&lt;/p&gt;
+&lt;p&gt;Ситуацията се усложнява от обтегнатите отношения между Anthropic и администрацията на президента Тръмп. Министерството на отбраната на САЩ наскоро класифицира лабораторията за изкуствен интелект като „риск за веригата на доставки за националната сигурност“ [2]. Въпреки че федерален апелативен съд отказа да спре временното включване на компанията в черния списък, Anthropic продължава да работи с други правителствени агенции, докато текат съдебните дела [2].&lt;/p&gt;
+&lt;p&gt;В момента достъпът до Mythos е ограничен до около 40 организации, сред които Apple, Google, Microsoft и Nvidia [1][2]. Регулаторите обмислят два основни подхода: строго ограничаване на достъпа до подобни мощни инструменти или по-широкото им отваряне за общността по сигурността, за да се ускори укрепването на защитите [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://letsdatascience.com/news/regulators-scrutinize-anthropics-mythos-over-banking-cyber-r-e503e511&quot;&gt;Regulators Scrutinize Anthropic&amp;#39;s Mythos Over Banking Cyber Risks - Let&amp;#39;s Data Science&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html&quot;&gt;Powell, Bessent discussed Anthropic’s Mythos AI cyber threat with major U.S. banks - CNBC&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
       <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
       <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
@@ -431,23 +475,6 @@
 &lt;p&gt;Kimi K2.6 вече е достъпен в платформата Hugging Face, чрез API, както и в приложенията Kimi Code и Kimi [1].&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/orchestration/kimi-k2-6-runs-agents-for-days-and-exposes-the-limits-of-enterprise-orchestration&quot;&gt;Kimi K2.6 runs agents for days — and exposes the limits of enterprise orchestration - VentureBeat&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-
-    <item>
-      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
-      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;img src=&quot;/articles/2026/04/21/mythos-ai-banking-cyber-risks/hero.png&quot; alt=&quot;Регулатори и банки в спешна готовност след появата на Mythos AI&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;Глобалните финансови регулатори и най-големите щатски банки проведоха серия от извънредни срещи през последната седмица, след като Anthropic представи своя най-нов и усъвършенстван модел на изкуствен интелект — &lt;strong&gt;Mythos&lt;/strong&gt; [1][2]. Моделът, пуснат в рамките на ограничената програма &lt;strong&gt;Project Glasswing&lt;/strong&gt;, демонстрира безпрецедентни способности за автономно откриване и експлоатиране на уязвимости от типа „zero-day“, което предизвика опасения за системния риск пред световната финансова инфраструктура [1].&lt;/p&gt;
-&lt;p&gt;Според репортаж на Let&amp;#39;s Data Science [1], Mythos Preview е успял самостоятелно да идентифицира и използва критични пропуски в сигурността на основни операционни системи и браузъри. В един от тестовете ИИ моделът е завършил успешно сложна симулация на корпоративна мрежова атака в 32 стъпки без човешка намеса [1]. Тези технически параметри, включително резултат от 93.9% на теста SWE-bench Verified, са сигнализирали на властите, че ИИ-базираните кибератаки вече са напълно реалистичен сценарий в голям мащаб [1].&lt;/p&gt;
-&lt;p&gt;CNBC потвърди [2], че председателят на Федералния резерв Джеръм Пауъл и министърът на финансите на САЩ Скот Бесент са се срещнали лично с лидерите на водещите банки в страната. На срещата са присъствали ръководителите на Bank of America, Citigroup, Goldman Sachs, Morgan Stanley и Wells Fargo [2]. Единственият отсъстващ от големите банкови директори е бил Джейми Даймън от JPMorgan Chase, въпреки че неговата институция е сред първите партняри на Anthropic в Project Glasswing [2].&lt;/p&gt;
-&lt;p&gt;Ситуацията се усложнява от обтегнатите отношения между Anthropic и администрацията на президента Тръмп. Министерството на отбраната на САЩ наскоро класифицира лабораторията за изкуствен интелект като „риск за веригата на доставки за националната сигурност“ [2]. Въпреки че федерален апелативен съд отказа да спре временното включване на компанията в черния списък, Anthropic продължава да работи с други правителствени агенции, докато текат съдебните дела [2].&lt;/p&gt;
-&lt;p&gt;В момента достъпът до Mythos е ограничен до около 40 организации, сред които Apple, Google, Microsoft и Nvidia [1][2]. Регулаторите обмислят два основни подхода: строго ограничаване на достъпа до подобни мощни инструменти или по-широкото им отваряне за общността по сигурността, за да се ускори укрепването на защитите [1].&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;[1]: &lt;a href=&quot;https://letsdatascience.com/news/regulators-scrutinize-anthropics-mythos-over-banking-cyber-r-e503e511&quot;&gt;Regulators Scrutinize Anthropic&amp;#39;s Mythos Over Banking Cyber Risks - Let&amp;#39;s Data Science&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html&quot;&gt;Powell, Bessent discussed Anthropic’s Mythos AI cyber threat with major U.S. banks - CNBC&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
