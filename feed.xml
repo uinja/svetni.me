@@ -9,9 +9,52 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Fri, 24 Apr 2026 20:30:00 +0000</pubDate>
+    <pubDate>Fri, 24 Apr 2026 20:58:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Как Spotify използва „фонови“ ИИ агенти за мащабна миграция на данни</title>
+      <link>/articles/2026/04/24/spotify-background-coding-agents-migration/</link>
+      <pubDate>Fri, 24 Apr 2026 20:58:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/spotify-background-coding-agents-migration/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Миграцията на масиви от данни в голяма технологична организация често е кошмарна задача, изискваща месеци ръчен труд и координация между десетки екипи. Според репортаж от инженерния блог на &lt;strong&gt;Spotify&lt;/strong&gt; [1], компанията е намерила решение чрез използването на т.нар. „фонови“ ИИ агенти (background coding agents).&lt;/p&gt;
+&lt;p&gt;Предизвикателството пред Spotify е било огромно: премахване на два остарели набора от данни, които захранват около &lt;strong&gt;1800 софтуерни потока&lt;/strong&gt; (pipelines). Цялата операция е трябвало да приключи в рамките на шест месеца, което би коствало стотици часове инженерен труд, ако се извършваше ръчно [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/24/spotify-background-coding-agents-migration/spotify-agents-hero.png&quot; alt=&quot;ИИ агенти в Spotify: Автоматизация на дигиталната флота&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;Системата HONK и силата на контекста&lt;/h3&gt;
+&lt;p&gt;За да се справи с този „потоп“ от работа, Spotify разработи &lt;strong&gt;HONK&lt;/strong&gt; – вътрешен ИИ агент, базиран на технологията Claude Code на Anthropic. Ключът към успеха на HONK не е бил просто в „умния“ модел, а в интеграцията му с вътрешните платформи на Spotify като &lt;strong&gt;Backstage&lt;/strong&gt; (за откриване на зависимостите между кодовите хранилища) и Fleet Management (за масово управление на промените).&lt;/p&gt;
+&lt;p&gt;Инженерите на Spotify са открили, че вместо да оставят агента да „гади“ схемите на данните, е много по-ефективно да му предоставят подробни „таблици за мапинг“ (field-to-field mappings). Това т.нар. „инженерство на контекста“ е позволило на HONK да създаде &lt;strong&gt;240 автоматизирани предложения за промени (PRs)&lt;/strong&gt; за стандартните SQL рамки на компанията, значително намалявайки натоварването върху хората [1].&lt;/p&gt;
+&lt;h3&gt;Ограничения и научени уроци&lt;/h3&gt;
+&lt;p&gt;Въпреки успеха, не всичко е било автоматизирано. Екипът умишлено е изключил по-сложните Scala потоци (Scio) от автоматичната фаза поради тяхната висока вариативност. Също така, поради липсата на автоматизирани тестове за изграждане в част от хранилищата, крайната проверка на кода все още е изисквала човешко потвърждение.&lt;/p&gt;
+&lt;p&gt;„Целта ни не беше да премахнем човека, а да премахнем досадата,“ обяснява Девън Едуардс Джоузеф, старши инженер в Spotify [1]. Опитът на компанията показва, че автономните агенти са готови за реална работа, стига да бъдат подкрепени от здрава инфраструктура и ясен контекст.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4&quot;&gt;Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) - Spotify Engineering&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Добре дошли в Gas City: Стив Йеги представя бъдещето на софтуерните „фабрики“</title>
+      <link>/articles/2026/04/24/welcome-to-gas-city/</link>
+      <pubDate>Fri, 24 Apr 2026 20:51:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/welcome-to-gas-city/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Стив Йеги официално представи версия 1.0.0 на &lt;strong&gt;Gas City&lt;/strong&gt; – еволюция на неговия популярен проект за автоматизирани софтуерни фабрики, която превръща концепцията в пълноценен корпоративен SDK за автономни агентни работни процеси [1].&lt;/p&gt;
+&lt;p&gt;Ако Gas Town беше „дивата пустош“ на Mad Max, то Gas City е организираният дигитален метрополис, проектиран за стабилност, одит и мащаб. Новата архитектура заменя единичните агентни екипи с т.нар. &lt;strong&gt;Packs&lt;/strong&gt; — композируеми градивни елементи, които позволяват сглобяването на произволни агентни топологии за специфични бизнес нужди [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/24/welcome-to-gas-city/gas-city-hero.png&quot; alt=&quot;Gas City: Организираната мощ на ИИ агентите&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;MEOW Stack и прозрачността на работата&lt;/h3&gt;
+&lt;p&gt;Ключов елемент в Gas City е &lt;strong&gt;MEOW Stack&lt;/strong&gt; (Molecular Expression of Work). Тази рамка третира „Работата“ като първокласен примитив, създавайки версиониран граф от знания за всяка задача. Интеграцията с &lt;strong&gt;Dolt&lt;/strong&gt; (git-версионирана SQL база данни) осигурява на предприятията „криминалистични способности“ – възможност за пълен одит на всяко действие, предприето от ИИ агент [1].&lt;/p&gt;
+&lt;p&gt;За разлика от много съвременни ИИ инструменти, които крият работата на под-агентите, Gas City залага на модела &lt;strong&gt;„Light Factory“&lt;/strong&gt; (Светла фабрика). В нея всеки агент-работник е видим, адресируем и интерактивен в реално време.&lt;/p&gt;
+&lt;h3&gt;Програмистите като „пастири“&lt;/h3&gt;
+&lt;p&gt;Визията на Йеги за бъдещето на софтуерното инженерство включва фундаментална промяна в ролята на човека. Вместо да пишат код ред по ред, инженерите се превръщат в „пастири“ (shepherds) на „стада“ от ИИ агенти. Тяхната работа е да предоставят насоки и да държат автономните системи „в релси“ [1].&lt;/p&gt;
+&lt;p&gt;Този подход цели да реши проблема с надеждността на единичните агенти, които са склонни към халюцинации. Gas City използва &lt;strong&gt;„адверсариални групови структури“&lt;/strong&gt;, в които агентите се наблюдават един друг и улавят взаимно грешките си.&lt;/p&gt;
+&lt;h3&gt;Краят на SaaS доминацията?&lt;/h3&gt;
+&lt;p&gt;Един от най-провокативните аспекти на анонса е прогнозата на Йеги за „де-SaaS-изиране“ (de-SaaS-ing) на предприятията. Използвайки инструменти като Gas City, компаниите могат да изграждат вътрешно 20-те процента функционалност, които реално използват от огромните SaaS платформи, и да ги поддържат чрез агентни екипи. Това превръща повтарящите се разходи за софтуерен наем в натрупващи се вътрешни активи.&lt;/p&gt;
+&lt;p&gt;„Бъдещето не е в това да наемем още един абонамент, а в това да изградим собствена фабрика, която работи 24 часа в денонощието под наш контрол“, заключава Йеги [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://steve-yegge.medium.com/welcome-to-gas-city-57f564bb3607&quot;&gt;Welcome to Gas City - Steve Yegge on Medium&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
 
     <item>
       <title>Какво е ИИ оркестрация? Пътеводител към интелигентните системи</title>
@@ -256,6 +299,23 @@
     </item>
 
     <item>
+      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
+      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;
+&lt;p&gt;Според Министерството на индустрията и информационните технологии (MIIT), Китай е достигнал 1,882 екзафлопа (exaflops) – единица за измерване, съкращение от „exa floating-point operations per second“. Това се превежда като 1,882 квинтилиона (милиард милиарда) изчисления в секунда [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/23/chinas-dark-compute-power/dark-compute-hero.png&quot; alt=&quot;„Тъмният басейн“ на Китай&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Тази цифра е над 6000 пъти по-висока от изчислителната мощ на страната, отразена в списъка Top500 – един от малкото налични бенчмаркове за сравнение на напредъка в суперкомпютрите между Китай и други държави, особено САЩ. Въпреки че двете измервания не са пряко съпоставими и базираната в Германия класация често се счита за подценяваща реалните възможности на Пекин, данните на MIIT показват изключително бърз ръст [1].&lt;/p&gt;
+&lt;p&gt;За разлика от Китай, САЩ – които доминират в Top500 – не публикуват единна национална цифра за изчислителната мощ за ИИ. По-голямата част от инфраструктурата там е собственост на частни компании и се измерва по различни стандарти. Според оценки на Станфордския институт за ориентиран към човека изкуствен интелект (Stanford HAI), САЩ държат между 50 и 75 процента от глобалния капацитет и разполагат с най-голямата концентрация на центрове за данни, фокусирани върху ИИ [1].&lt;/p&gt;
+&lt;p&gt;Данните на MIIT бяха представени този вторник, подчертавайки стратегическите амбиции на страната да изгради мащабна национална мрежа от изчислителни ресурси, достъпни за местните компании и изследователски институти.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://www.scmp.com/news/china/science/article/3351037/chinas-dark-compute-power-could-be-6000-times-higher-current-estimates&quot;&gt;China’s dark compute power could be 6,000 times higher than current estimates - South China Morning Post&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
       <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
       <link>/articles/2026/04/23/black-box-ai-drift/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
@@ -280,23 +340,6 @@
 &lt;p&gt;„Занаятът на софтуера – преценката, намерението и решенията, които правят кода полезен за реални хора – не може да бъде оставен вътре в кутия, която никой не наблюдава“, заключава Гордън [1].&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[1]: &lt;a href=&quot;https://stackoverflow.blog/2026/04/23/black-box-ai-drift-ai-tools-are-making-design-decisions-nobody-asked-for/&quot;&gt;Black box AI drift: AI tools are making design decisions nobody asked for - Stack Overflow Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-
-    <item>
-      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
-      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;
-&lt;p&gt;Според Министерството на индустрията и информационните технологии (MIIT), Китай е достигнал 1,882 екзафлопа (exaflops) – единица за измерване, съкращение от „exa floating-point operations per second“. Това се превежда като 1,882 квинтилиона (милиард милиарда) изчисления в секунда [1].&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/articles/2026/04/23/chinas-dark-compute-power/dark-compute-hero.png&quot; alt=&quot;„Тъмният басейн“ на Китай&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;Тази цифра е над 6000 пъти по-висока от изчислителната мощ на страната, отразена в списъка Top500 – един от малкото налични бенчмаркове за сравнение на напредъка в суперкомпютрите между Китай и други държави, особено САЩ. Въпреки че двете измервания не са пряко съпоставими и базираната в Германия класация често се счита за подценяваща реалните възможности на Пекин, данните на MIIT показват изключително бърз ръст [1].&lt;/p&gt;
-&lt;p&gt;За разлика от Китай, САЩ – които доминират в Top500 – не публикуват единна национална цифра за изчислителната мощ за ИИ. По-голямата част от инфраструктурата там е собственост на частни компании и се измерва по различни стандарти. Според оценки на Станфордския институт за ориентиран към човека изкуствен интелект (Stanford HAI), САЩ държат между 50 и 75 процента от глобалния капацитет и разполагат с най-голямата концентрация на центрове за данни, фокусирани върху ИИ [1].&lt;/p&gt;
-&lt;p&gt;Данните на MIIT бяха представени този вторник, подчертавайки стратегическите амбиции на страната да изгради мащабна национална мрежа от изчислителни ресурси, достъпни за местните компании и изследователски институти.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;[1]: &lt;a href=&quot;https://www.scmp.com/news/china/science/article/3351037/chinas-dark-compute-power-could-be-6000-times-higher-current-estimates&quot;&gt;China’s dark compute power could be 6,000 times higher than current estimates - South China Morning Post&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
@@ -365,6 +408,53 @@
 &lt;p&gt;Случаят служи като напомняне за динамичната и понякога хаотична природа на индустрията за ИИ, където дори „2% тест“ може да предизвика 100% недоверие в общността.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[1]: &lt;a href=&quot;https://simonwillison.net/2026/Apr/22/claude-code-confusion/&quot;&gt;Is Claude Code going to cost $100/month? Probably not—it’s all very confusing - simonwillison.net&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://x.com/TheAmolAvasare/status/2046724659039932830&quot;&gt;Amol Avasare (Anthropic) Statement on pricing test - X/Twitter&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://www.reddit.com/r/ClaudeAI/comments/1srzhd7/psa_claude_pro_no_longer_lists_claude_code_as_an/&quot;&gt;Discussion on Claude Pro changes - Reddit&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Google избягва „данъка NVIDIA“: Новите TPU чипове обясняват защо</title>
+      <link>/articles/2026/04/22/google-tpu-nvidia-tax/</link>
+      <pubDate>Wed, 22 Apr 2026 21:27:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/22/google-tpu-nvidia-tax/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Докато останалата част от ИИ индустрията се бори за достъп до чиповете на NVIDIA, Google тихомълком затвърждава своето най-голямо стратегическо предимство. Според анализ на VentureBeat [1], технологичният гигант е успял да изгради пълна вертикална изолация от т.нар. „данък NVIDIA“ — изключително високите маржове на печалба, които конкурентите плащат за хардуер от серията Blackwell.&lt;/p&gt;
+&lt;p&gt;Ключът към тази независимост е новата, осма генерация &lt;strong&gt;TPU (Tensor Processing Units)&lt;/strong&gt;, която Google представи през април 2026 г. За първи път компанията разделя своя хардуерен план на два специализирани потока, адресирайки коренно различните нужди на обучението и работата с ИИ агенти [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/22/google-tpu-nvidia-tax/tpu-hero.png&quot; alt=&quot;Google TPU 8: Пътят към хардуерна независимост&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;Специализация за ерата на агентите&lt;/h3&gt;
+&lt;p&gt;Новите чипове са разделени на два модела:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TPU 8t (Training):&lt;/strong&gt; Оптимизиран за мащабно обучение на езикови модели. Той предлага 2.8 пъти по-висока производителност спрямо предходното поколение и може да се мащабира до над &lt;strong&gt;1 милион чипа&lt;/strong&gt; в рамките на един тренировъчен процес чрез новата мрежова архитектура „Virgo“ [1].&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TPU 8i (Inference):&lt;/strong&gt; Проектиран специфично за „агентни“ задачи с ниска латентност. Тук Google постига зашеметяващ &lt;strong&gt;9.8-кратен скок&lt;/strong&gt; в производителността и разполага с 6.8 пъти повече &lt;strong&gt;HBM (памет с висока пропускателна способност)&lt;/strong&gt;. Новата топология „Boardfly“ намалява закъснението при обмен на данни 5 пъти, което е критично за генерирането на текст в реално време [1].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Икономиката на вертикалната интеграция&lt;/h3&gt;
+&lt;p&gt;Терминът „данък NVIDIA“ описва структурния недостатък на компании като OpenAI, Anthropic и Meta. Тъй като те не разполагат със собствен силиций, те са принудени да купуват или наемат изчислителна мощ при цени, които включват огромната печалба на NVIDIA.&lt;/p&gt;
+&lt;p&gt;Google, от друга страна, контролира целия стек — от дизайна на чипа и софтуерните библиотеки до охлаждането на центровете за данни. Това позволява на компанията да постигне икономика на „цената за токен“, която е недостъпна за конкурентите ѝ. В свят, в който ИИ се превръща в масов софтуерен слой, способността да избягваш външните маржове за хардуер може да се окаже решаващият фактор за дългосрочно пазарно лидерство [1].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/orchestration/google-doesnt-pay-the-nvidia-tax-its-new-tpus-explain-why&quot;&gt;Google doesn&amp;#39;t pay the Nvidia tax. Its new TPUs explain why - VentureBeat&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Край на „претоварването с контекст“: Salesforce обнови своята платформа Agentforce</title>
+      <link>/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</link>
+      <pubDate>Wed, 22 Apr 2026 21:14:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Докато много компании се надпреварват да подават все повече данни към своите ИИ модели, се появява нов, неочакван проблем: „претоварване с контекст“ (context overload). Според анализ на VentureBeat [1], това явление води до забавяне на системите, по-високи разходи и неточни резултати. В отговор на това, &lt;strong&gt;Salesforce&lt;/strong&gt; пусна мащабен ъпдейт на своята платформа — &lt;strong&gt;Agentforce Vibes 2.0&lt;/strong&gt;, който цели да реши този проблем чрез по-прецизно управление на информацията.&lt;/p&gt;
+&lt;p&gt;„Контекстният шум“ възниква, когато ИИ агентът получи твърде много инструменти, данни или излишно дълги инструкции. Това размива фокуса на модела и го прави по-склонен към халюцинации [1].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/agentforce-hero.png&quot; alt=&quot;ИИ филтриране: Прецизност срещу шум в Agentforce&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;Решението: „Възможности и Умения“&lt;/h3&gt;
+&lt;p&gt;Agentforce Vibes 2.0 въвежда нов, структуриран модел за дефиниране на поведението на агентите, разделен на две нива:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Възможности (Abilities):&lt;/strong&gt; Определят високостепенните цели и задачи, които агентът се опитва да постигне.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Умения (Skills):&lt;/strong&gt; Представляват конкретните инструменти, набори от данни и софтуерни функции, които агентът може да използва за постигане на тези цели [1].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Този йерархичен подход позволява на бизнеса да „инженерства“ контекста. Вместо да захранват агента с цялата налична база данни, разработчиците могат да ограничат неговия достъп само до информацията, която е пряко релевантна за конкретната „възможност“.&lt;/p&gt;
+&lt;h3&gt;По-висока ефективност и по-ниски разходи&lt;/h3&gt;
+&lt;p&gt;Премахването на излишния контекст има преки икономически и технически ползи. Агентите работят с по-малка латентност и използват значително по-малко токени за всяка задача, което директно намалява оперативните разходи на компаниите.&lt;/p&gt;
+&lt;p&gt;„Повече данни не винаги означава по-добър ИИ,“ отбелязва Емилия Дейвид от VentureBeat [1]. Интеграцията на Agentforce в екосистемата на Salesforce позволява на предприятията да контролират контекста в рамките на техните вече съществуващи модели на данни, превръщайки ИИ агентите от експериментални чатботове в стабилни и предвидими бизнес инструменти.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/orchestration/salesforces-agentforce-vibes-2-0-targets-a-hidden-failure-context-overload-in-ai-agents&quot;&gt;Salesforce&amp;#39;s Agentforce Vibes 2.0 targets a hidden failure: context overload in AI agents - VentureBeat&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
@@ -1063,6 +1153,26 @@
 &lt;p&gt;За оценка на безопасността Anthropic използва рамката Bloom (известна преди като Petri 2.0), която анализира поведението на модела за признаци на сикофанство (прекомерно съгласяване с потребителя) или насърчаване на заблуди [3]. Резултатите показват, че Opus 4.7 се справя по-добре от конкурентите си в тези аспекти, поддържайки професионален и обективен тон.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;[1]: &lt;a href=&quot;https://mashable.com/article/anthropic-claude-opus-4-7-hallucination-rate&quot;&gt;Anthropic: Claude Opus 4.7 has a 92% honesty rate, fewer hallucinations - Mashable&lt;/a&gt;&lt;br&gt;[2]: &lt;a href=&quot;https://www.anthropic.com/news/claude-opus-4-7&quot;&gt;Introducing Claude Opus 4.7 - Anthropic&lt;/a&gt;&lt;br&gt;[3]: &lt;a href=&quot;https://alignment.anthropic.com/2025/bloom-auto-evals/&quot;&gt;Bloom: an open source tool for automated behavioral evaluations - Anthropic Alignment&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+
+    <item>
+      <title>Супервизирана автономия: NanoClaw и Vercel въвеждат нов стандарт за корпоративните ИИ агенти</title>
+      <link>/articles/2026/04/17/nanoclaw-vercel-agentic-policy/</link>
+      <pubDate>Fri, 17 Apr 2026 21:08:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/17/nanoclaw-vercel-agentic-policy/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Досега компаниите бяха изправени пред труден избор при внедряването на автономни ИИ агенти: или да ги държат в изолирана среда без реален достъп до системи, или да им дадат широки правомощия, рискувайки фатални грешки. Според репортаж на VentureBeat [1], новата рамка &lt;strong&gt;NanoClaw 2.0&lt;/strong&gt;, разработена от &lt;strong&gt;NanoCo&lt;/strong&gt; в партньорство с &lt;strong&gt;Vercel&lt;/strong&gt; и &lt;strong&gt;OneCLI&lt;/strong&gt;, предлага решение на тази дилема чрез модела на „супервизирана автономия“.&lt;/p&gt;
+&lt;p&gt;NanoClaw 2.0 въвежда стандартизирана система за одобрение на ниво инфраструктура. Вместо да разчита на сигурност в самото приложение, рамката използва гейтуей (gateway), който прехваща заявките на агента за „запис“ (като плащания, промени в облака или изпращане на имейли).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/2026/04/17/nanoclaw-vercel-agentic-policy/nanoclaw-hero.png&quot; alt=&quot;Супервизирана автономия: Човешкият контрол над ИИ агентите&quot;&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;
+&lt;h3&gt;Интеграция в ежедневието&lt;/h3&gt;
+&lt;p&gt;Благодарение на &lt;strong&gt;Vercel Chat SDK&lt;/strong&gt;, NanoClaw вече поддържа интерактивни диалози за одобрение в 15 различни приложения за съобщения, включително &lt;strong&gt;Slack&lt;/strong&gt;, &lt;strong&gt;Microsoft Teams&lt;/strong&gt;, &lt;strong&gt;WhatsApp&lt;/strong&gt; и &lt;strong&gt;Telegram&lt;/strong&gt;. Това превръща надзора от бюрократична пречка в естествена част от работния процес. Когато агентът се нуждае от разрешение за критично действие, той изпраща интерактивна карта до съответния служител, който може да одобри или отхвърли операцията с един клик [1].&lt;/p&gt;
+&lt;h3&gt;Сигурност чрез изолация&lt;/h3&gt;
+&lt;p&gt;Една от най-впечатляващите технически характеристики е начинът, по който се борави с чувствителни данни. Агентите работят в строго изолирани Docker или Apple контейнери и използват само „placeholder“ ключове. Реалните креденциали се инжектират в системата едва след като човек даде своето съгласие за конкретното действие.&lt;/p&gt;
+&lt;p&gt;Самият кодов състав на NanoClaw е изключително компактен – около 500 линии код – което го прави лесен за пълен одит от екипите по сигурност само за няколко минути. Този минималистичен подход трансформира ИИ от рискова „черна кутия“ в „супервизиран младши сътрудник“, който може безопасно да оперира в критични корпоративни среди [1].&lt;/p&gt;
+&lt;p&gt;С този старт NanoCo и Vercel полагат основите на свят, в който автономността на изкуствения интелект не означава липса на контрол, а по-скоро по-ефективно сътрудничество между човек и машина.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Източници:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a href=&quot;https://venturebeat.com/orchestration/should-my-enterprise-ai-agent-do-that-nanoclaw-and-vercel-launch-easier-agentic-policy-setting-and-approval-dialogs-across-15-messaging-apps&quot;&gt;Should my enterprise AI agent do that? NanoClaw and Vercel launch easier agentic policy setting and approval dialogs across 15 messaging apps - VentureBeat&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
 
