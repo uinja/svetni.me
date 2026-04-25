@@ -9,9 +9,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Fri, 24 Apr 2026 20:58:00 +0000</pubDate>
+    <pubDate>Sat, 25 Apr 2026 09:05:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Затишие в науката: Изследванията за LLM напускат предната страница на Hacker News</title>
+      <link>/articles/2026/04/25/llm-research-hacker-news-decline/</link>
+      <pubDate>Sat, 25 Apr 2026 09:05:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/25/llm-research-hacker-news-decline/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;През последните три години предната страница на &lt;strong&gt;Hacker News (HN)&lt;/strong&gt; изглеждаше като филиал на научния архив &lt;strong&gt;arXiv&lt;/strong&gt;. Почти всеки ден инженерите и програмистите гласуваха масово за нови изследвания в областта на големите езикови модели (LLM). Но според нов анализ на Дилън Кастило, този „академичен хайп“ е към своя край [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Google инвестира рекордните 40 милиарда долара в Anthropic за мащабиране на ИИ</title>
+      <link>/articles/2026/04/24/google-investment-anthropic-40b/</link>
+      <pubDate>Fri, 24 Apr 2026 22:05:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/google-investment-anthropic-40b/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Технологичният гигант Google обяви плановете си да инвестира до &lt;strong&gt;40 милиарда долара&lt;/strong&gt; в стартъпа за изкуствен интелект Anthropic [1]. Тази мащабна финансова инжекция идва само дни след подобен, но по-малък ход от страна на Amazon, и подчертава ожесточената битка за инфраструктурно превъзходство в ерата на автономните ИИ агенти.&lt;/p&gt;</description>
+    </item>
 
     <item>
       <title>Как Spotify използва „фонови“ ИИ агенти за мащабна миграция на данни</title>
@@ -47,6 +65,24 @@
       <guid isPermaLink="true">/articles/2026/04/24/ai-product-launch-lessons/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В свят, залят от твърдения за „изграждане на продукт за един ден“, Кайл Харис от Atomic Object споделя една по-различна история – тази за прехода от стабилен прототип към реален, работещ продукт [1]. Неговият опит с разработката на играта „Padlock Game“ подчертава, че докато изкуственият интелект може да ускори писането на код, най-трудните стъпки остават дълбоко човешки.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>DeepSeek-V4: Отвореният код настига гигантите при 85% по-ниски цени</title>
+      <link>/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</link>
+      <pubDate>Fri, 24 Apr 2026 08:56:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Технологичният свят стана свидетел на нов мащабен трус в надпреварата за изкуствен интелект. Китайският стартъп &lt;strong&gt;DeepSeek&lt;/strong&gt; пусна своята четвърта генерация модели – &lt;strong&gt;DeepSeek-V4&lt;/strong&gt;, които директно атакуват доминацията на западните затворени системи [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Firefox интегрира енджина за блокиране на реклами на Brave</title>
+      <link>/articles/2026/04/24/firefox-brave-adblock-integration/</link>
+      <pubDate>Fri, 24 Apr 2026 08:49:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/firefox-brave-adblock-integration/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В ход, който изненада мнозина в технологичната общност, Mozilla тихомълком интегрира високопроизводителния енджин за блокиране на реклами на своя конкурент Brave в последната версия на Firefox [1]. Интеграцията на &lt;code&gt;adblock-rust&lt;/code&gt; бе открита първоначално чрез дискусии в Bugzilla и потвърдена от софтуерни анализатори през април 2026 г.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -122,6 +158,15 @@
     </item>
 
     <item>
+      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
+      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
+    </item>
+
+    <item>
       <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
       <link>/articles/2026/04/23/black-box-ai-drift/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
@@ -131,12 +176,12 @@
     </item>
 
     <item>
-      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
-      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <title>NVIDIA и Google Cloud: Фабрики за „агентен“ и физически ИИ</title>
+      <link>/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</link>
+      <pubDate>Wed, 22 Apr 2026 23:04:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
+      <description>&lt;p&gt;По време на конференцията Google Cloud Next 2026, технологичните гиганти &lt;strong&gt;NVIDIA&lt;/strong&gt; и &lt;strong&gt;Google Cloud&lt;/strong&gt; обявиха мащабно разширяване на своето партньорство [1]. Сътрудничеството е насочено към изграждането на т.нар. „ИИ фабрики“ (AI factories) — специализирани среди за мащабно внедряване на изкуствен интелект в две ключови направления: автономни софтуерни системи и индустриална автоматизация.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -230,19 +275,19 @@
     </item>
 
     <item>
-      <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
-      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
+      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
+      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
+      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
-      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
+      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
+      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
@@ -414,51 +459,6 @@
       <link>/articles/2026/04/17/anthropic-claude-design-launch/</link>
       <pubDate>Fri, 17 Apr 2026 23:55:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/17/anthropic-claude-design-launch/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>97% от компаниите очакват сериозен инцидент с AI агенти през следващата година</title>
-      <link>/articles/2026/04/17/enterprise-ai-agent-security-survey/</link>
-      <pubDate>Fri, 17 Apr 2026 23:46:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/enterprise-ai-agent-security-survey/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Claude Opus 4.7: По-честен и по-способен в програмирането и анализа</title>
-      <link>/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</link>
-      <pubDate>Fri, 17 Apr 2026 23:36:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/claude-opus-4-7-hallucination-honesty/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Супервизирана автономия: NanoClaw и Vercel въвеждат нов стандарт за корпоративните ИИ агенти</title>
-      <link>/articles/2026/04/17/nanoclaw-vercel-agentic-policy/</link>
-      <pubDate>Fri, 17 Apr 2026 21:08:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/nanoclaw-vercel-agentic-policy/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Досега компаниите бяха изправени пред труден избор при внедряването на автономни ИИ агенти: или да ги държат в изолирана среда без реален достъп до системи, или да им дадат широки правомощия, рискувайки фатални грешки. Според репортаж на VentureBeat [1], новата рамка &lt;strong&gt;NanoClaw 2.0&lt;/strong&gt;, разработена от &lt;strong&gt;NanoCo&lt;/strong&gt; в партньорство с &lt;strong&gt;Vercel&lt;/strong&gt; и &lt;strong&gt;OneCLI&lt;/strong&gt;, предлага решение на тази дилема чрез модела на „супервизирана автономия“.&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>AI моделите се провалят в спортните залози: Изследването KellyBench разкрива сериозни слабости</title>
-      <link>/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</link>
-      <pubDate>Thu, 16 Apr 2026 22:08:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/ai-kellybench-soccer-betting-failure/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Cloudflare представи унифицирана AI платформа: Един API за всички водещи модели</title>
-      <link>/articles/2026/04/16/cloudflare-unified-ai-platform/</link>
-      <pubDate>Thu, 16 Apr 2026 21:53:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/16/cloudflare-unified-ai-platform/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>

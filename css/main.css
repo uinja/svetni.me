@@ -603,7 +603,15 @@ pre code {
 }
 
 .related-entities li {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing);
+}
+
+.related-entities p {
+  font-size: var(--font-size-xs);
+  color: var(--muted-soft);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 /* -----------------------------------------------
