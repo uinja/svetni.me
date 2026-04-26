@@ -9,9 +9,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Sat, 25 Apr 2026 09:05:00 +0000</pubDate>
+    <pubDate>Sun, 26 Apr 2026 11:15:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Скритата икономика на LLM: Битката за памет и токени</title>
+      <link>/articles/2026/04/26/hidden-economy-llm-costs/</link>
+      <pubDate>Sun, 26 Apr 2026 11:15:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/26/hidden-economy-llm-costs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Когато плащаме $20 на месец за абонамент или няколко цента за API заявка към модел като &lt;strong&gt;&lt;a href=&quot;/pages/claude.html&quot;&gt;Claude&lt;/a&gt;&lt;/strong&gt; или &lt;strong&gt;ChatGPT&lt;/strong&gt;, ние виждаме само върха на айсберга. Под повърхността се крие една „невидима икономика“, която определя кои компании ще оцелеят и защо някои услуги са подозрително евтини. Тейло Миле от френската консултантска компания &lt;strong&gt;&lt;a href=&quot;/pages/octo-technology.html&quot;&gt;OCTO Technology&lt;/a&gt;&lt;/strong&gt; публикува детайлен анализ на тези структурни разходи [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</title>
+      <link>/articles/2026/04/25/china-ai-token-drive-inland-economy/</link>
+      <pubDate>Sat, 25 Apr 2026 22:19:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/25/china-ai-token-drive-inland-economy/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Докато световните анализатори се фокусират върху ценовите войни между китайските технологични гиганти като &lt;strong&gt;&lt;a href=&quot;../../pages/alibaba.html&quot;&gt;Alibaba&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;../../pages/tencent.html&quot;&gt;Tencent&lt;/a&gt;&lt;/strong&gt; и &lt;strong&gt;&lt;a href=&quot;../../pages/bytedance.html&quot;&gt;ByteDance&lt;/a&gt;&lt;/strong&gt;, по-дълбокият икономически смисъл на този ход остава недоразбран. Според анализ на &lt;strong&gt;&lt;a href=&quot;../../pages/lizzi-lee.html&quot;&gt;Лизи К. Ли&lt;/a&gt;&lt;/strong&gt; за South China Morning Post [1], драстичното намаляване на цената на ИИ токените е част от мащабна стратегия за преобразяване на вътрешната икономика на страната.&lt;/p&gt;</description>
+    </item>
 
     <item>
       <title>Затишие в науката: Изследванията за LLM напускат предната страница на Hacker News</title>
@@ -20,6 +38,15 @@
       <guid isPermaLink="true">/articles/2026/04/25/llm-research-hacker-news-decline/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;През последните три години предната страница на &lt;strong&gt;Hacker News (HN)&lt;/strong&gt; изглеждаше като филиал на научния архив &lt;strong&gt;arXiv&lt;/strong&gt;. Почти всеки ден инженерите и програмистите гласуваха масово за нови изследвания в областта на големите езикови модели (LLM). Но според нов анализ на Дилън Кастило, този „академичен хайп“ е към своя край [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>ИИ в китайското здравеопазване: Преодоляване на недостига на ресурси</title>
+      <link>/articles/2026/04/25/china-ai-healthcare-medical-gap/</link>
+      <pubDate>Sat, 25 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/25/china-ai-healthcare-medical-gap/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;На фона на засилващата се нужда от модернизация на медицинските услуги, Китай предприема мащабен национален ход за интегриране на изкуствения интелект във всички нива на здравеопазването. Целта е ясна: преодоляване на огромната пропаст в разпределението на медицински ресурси между високотехнологичните градски центрове и отдалечените региони [1].&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -65,6 +92,15 @@
       <guid isPermaLink="true">/articles/2026/04/24/ai-product-launch-lessons/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В свят, залят от твърдения за „изграждане на продукт за един ден“, Кайл Харис от Atomic Object споделя една по-различна история – тази за прехода от стабилен прототип към реален, работещ продукт [1]. Неговият опит с разработката на играта „Padlock Game“ подчертава, че докато изкуственият интелект може да ускори писането на код, най-трудните стъпки остават дълбоко човешки.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Златният стандарт на ИИ: MIT пусна най-голямата база с олимпийска математика</title>
+      <link>/articles/2026/04/24/mit-mathnet-ai-benchmark/</link>
+      <pubDate>Fri, 24 Apr 2026 11:13:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/24/mit-mathnet-ai-benchmark/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Напредъкът на изкуствения интелект в областта на езика е безспорен, но неговите способности за задълбочено логическо и математическо разсъждение остават обект на ожесточени дебати. Сега учени от Лабораторията за компютърни науки и изкуствен интелект на MIT (&lt;strong&gt;&lt;a href=&quot;../../pages/mit-csail.html&quot;&gt;MIT CSAIL&lt;/a&gt;&lt;/strong&gt;) представиха нов „златен стандарт“, който може да даде окончателен отговор на въпроса колко умен е всъщност ИИ [1].&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -158,21 +194,21 @@
     </item>
 
     <item>
-      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
-      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
       <link>/articles/2026/04/23/black-box-ai-drift/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/23/black-box-ai-drift/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
+      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -275,15 +311,6 @@
     </item>
 
     <item>
-      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
-      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
       <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
@@ -293,12 +320,12 @@
     </item>
 
     <item>
-      <title>„Тъмни фабрики“: Новата ера на автоматизираното софтуерно инженерство</title>
-      <link>/articles/2026/04/21/dark-factories-trycycle/</link>
-      <pubDate>Tue, 21 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/dark-factories-trycycle/</guid>
+      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
+      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
       <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;В технологичната индустрия започва появата на т.нар. „тъмни фабрики“ (dark factories) – автономни системи, които превръщат софтуерните спецификации директно в готов за внедряване код. Според анализ на Дан Шапиро в O&amp;#39;Reilly Radar [1], тези „фабрики“ не са просто помощници за кодиране, а мощни двигатели, задвижвани от два ключови модела на работа.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -308,6 +335,15 @@
       <guid isPermaLink="true">/articles/2026/04/21/hugging-face-ai-cybersecurity-openness/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Появата на свръхмощни ИИ модели като &lt;strong&gt;Mythos&lt;/strong&gt;, способни автономно да откриват и поправят уязвимости, поставя началото на нова ера в киберсигурността. Според екипа на &lt;strong&gt;Hugging Face&lt;/strong&gt; [1], успехът на подобни системи не зависи само от самия модел, а от „скелето“ (scaffolding), в което той е вграден.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>„Тъмни фабрики“: Новата ера на автоматизираното софтуерно инженерство</title>
+      <link>/articles/2026/04/21/dark-factories-trycycle/</link>
+      <pubDate>Tue, 21 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/21/dark-factories-trycycle/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В технологичната индустрия започва появата на т.нар. „тъмни фабрики“ (dark factories) – автономни системи, които превръщат софтуерните спецификации директно в готов за внедряване код. Според анализ на Дан Шапиро в O&amp;#39;Reilly Radar [1], тези „фабрики“ не са просто помощници за кодиране, а мощни двигатели, задвижвани от два ключови модела на работа.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -425,42 +461,6 @@
       <guid isPermaLink="true">/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Главният изпълнителен директор на OpenAI, Сам Олтман, коментира критичните настроения срещу изкуствения интелект, часове след като домът му в Сан Франциско стана обект на нападение. В петък сутринта (10 април) срещу къщата е бил хвърлен коктейл „Молотов“. Според репортаж на Los Angeles Times [1], нападението е било провокирано от ескалиращото напрежение около развитието на ИИ технологиите.&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Meta представи HyperAgents: ИИ системи, които сами подобряват логиката си</title>
-      <link>/articles/2026/04/18/meta-hyperagents-self-improving-ai/</link>
-      <pubDate>Sat, 18 Apr 2026 20:03:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/meta-hyperagents-self-improving-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>OpenAI Codex вече може да управлява компютъра ви във фонов режим</title>
-      <link>/articles/2026/04/18/openai-codex-computer-use/</link>
-      <pubDate>Sat, 18 Apr 2026 19:03:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/openai-codex-computer-use/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>MIT демократизира протеиновия дизайн с ИИ платформа без програмиране</title>
-      <link>/articles/2026/04/18/mit-ai-protein-design-openprotein/</link>
-      <pubDate>Sat, 18 Apr 2026 12:45:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/mit-ai-protein-design-openprotein/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Anthropic представи Claude Design: AI инструмент, който превръща текст в готови прототипи</title>
-      <link>/articles/2026/04/17/anthropic-claude-design-launch/</link>
-      <pubDate>Fri, 17 Apr 2026 23:55:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/17/anthropic-claude-design-launch/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
