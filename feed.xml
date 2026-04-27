@@ -9,9 +9,63 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Sun, 26 Apr 2026 11:15:00 +0000</pubDate>
+    <pubDate>Mon, 27 Apr 2026 22:30:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Скритият риск: Как финото настройване за точност може да срине RAG системите</title>
+      <link>/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</link>
+      <pubDate>Mon, 27 Apr 2026 22:30:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В стремежа си да направят изкуствения интелект по-прецизен, разработчиците може неволно да подкопават неговата фундаментална надеждност. Изследване от &lt;strong&gt;&lt;a href=&quot;/pages/redis.html&quot;&gt;Redis&lt;/a&gt;&lt;/strong&gt;, публикувано в VentureBeat [1], показва, че прекомерното &lt;strong&gt;&lt;a href=&quot;/pages/precision-tuning.html&quot;&gt;фино настройване за точност&lt;/a&gt;&lt;/strong&gt; на RAG системите може да доведе до драматичен спад от 40% в точността на откриване на информация (retrieval).&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Геополитическа стена: Китай спря придобиването на Manus от Meta за $2 милиарда</title>
+      <link>/articles/2026/04/27/china-vetoes-meta-manus-deal/</link>
+      <pubDate>Mon, 27 Apr 2026 22:10:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/china-vetoes-meta-manus-deal/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Надпреварата за доминация в света на автономните &lt;strong&gt;&lt;a href=&quot;/pages/ai-agent.html&quot;&gt;ИИ агенти&lt;/a&gt;&lt;/strong&gt; се сблъска с непреодолимо препятствие на изток. Китайската Държавна администрация за пазарно регулиране (&lt;strong&gt;&lt;a href=&quot;/pages/samr-china.html&quot;&gt;SAMR&lt;/a&gt;&lt;/strong&gt;) официално наложи вето върху сделката на &lt;strong&gt;&lt;a href=&quot;/pages/meta.html&quot;&gt;Meta&lt;/a&gt;&lt;/strong&gt; за придобиване на стартъпа &lt;strong&gt;&lt;a href=&quot;/pages/manus.html&quot;&gt;Manus&lt;/a&gt;&lt;/strong&gt; на стойност 2 милиарда долара [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Цифрово разкачване: Защо Европа заменя американския софтуер със суверенни алтернативи</title>
+      <link>/articles/2026/04/27/europe-sovereign-tech-shift/</link>
+      <pubDate>Mon, 27 Apr 2026 22:05:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/europe-sovereign-tech-shift/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Европа започва процес на мащабно и съзнателно „разкачване“ от софтуерната екосистема на САЩ. Според анализ на TechCrunch [1], вълната от откази от продукти на Microsoft и Windows вече не е само прагматично бизнес решение, а стратегически ход за постигане на пълна автономия чрез &lt;strong&gt;&lt;a href=&quot;/pages/sovereign-tech.html&quot;&gt;суверенни технологии&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>От супермаркета до централната банка: Lidl ще управлява облака на Нидерландия</title>
+      <link>/articles/2026/04/27/dutch-central-bank-lidl-cloud/</link>
+      <pubDate>Mon, 27 Apr 2026 21:55:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/dutch-central-bank-lidl-cloud/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В ход, който подчертава нарастващата загриженост на Европа относно технологичната зависимост, &lt;strong&gt;&lt;a href=&quot;/pages/dutch-central-bank.html&quot;&gt;Нидерландската централна банка (DNB)&lt;/a&gt;&lt;/strong&gt; обяви, че ще прехвърли критични работни натоварвания към облачната платформа на &lt;strong&gt;&lt;a href=&quot;/pages/schwarz-group.html&quot;&gt;Schwarz Group&lt;/a&gt;&lt;/strong&gt; – компанията, по-известна като собственик на супермаркетите Lidl и Kaufland [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Стратегическо „размразяване“: OpenAI и Microsoft преразгледаха сделката си заради Amazon</title>
+      <link>/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</link>
+      <pubDate>Mon, 27 Apr 2026 21:52:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В ход, който преначертава картата на властта в индустрията за изкуствен интелект, &lt;strong&gt;&lt;a href=&quot;/pages/openai.html&quot;&gt;OpenAI&lt;/a&gt;&lt;/strong&gt; и &lt;strong&gt;&lt;a href=&quot;/pages/microsoft.html&quot;&gt;Microsoft&lt;/a&gt;&lt;/strong&gt; обявиха фундаментално преразглеждане на своето дългогодишно партньорство. Тази стъпка слага край на правната несигурност, възникнала след като лабораторията на Сам Олтман сключи мащабна сделка за 50 милиарда долара с &lt;strong&gt;&lt;a href=&quot;/pages/amazon.html&quot;&gt;Amazon&lt;/a&gt;&lt;/strong&gt; по-рано тази година [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Покажи работата си: Делото за радикална прозрачност в ИИ</title>
+      <link>/articles/2026/04/27/radical-ai-transparency-oreilly/</link>
+      <pubDate>Mon, 27 Apr 2026 21:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/radical-ai-transparency-oreilly/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В свят, доминиран от „черни кутии“, доверието се превръща в най-ценната валута. Майк Лукидес (&lt;strong&gt;&lt;a href=&quot;/pages/mike-loukides.html&quot;&gt;Майк Лукидес&lt;/a&gt;&lt;/strong&gt;) от &lt;strong&gt;&lt;a href=&quot;/pages/oreilly-media.html&quot;&gt;O&amp;#39;Reilly Media&lt;/a&gt;&lt;/strong&gt; публикува провокативен анализ, в който твърди, че досегашният стандарт за „отвореност“ в изкуствения интелект е морално остарял [1]. Според него, пускането само на моделните тегла (Open Weights) е недостатъчно – индустрията трябва да премине към &lt;strong&gt;&lt;a href=&quot;/pages/radical-transparency.html&quot;&gt;радикална прозрачност&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
 
     <item>
       <title>Скритата икономика на LLM: Битката за памет и токени</title>
@@ -194,21 +248,21 @@
     </item>
 
     <item>
-      <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
-      <link>/articles/2026/04/23/black-box-ai-drift/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/black-box-ai-drift/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
       <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
+      <link>/articles/2026/04/23/black-box-ai-drift/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/23/black-box-ai-drift/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -311,19 +365,19 @@
     </item>
 
     <item>
-      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
+      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
+      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
-      <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
-      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
+      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
+      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
+      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
@@ -407,60 +461,6 @@
       <guid isPermaLink="true">/articles/2026/04/19/vercel-security-breach-april-2026/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Разломи в термоядрения бум: Индустрията бърза към борсата, докато науката изостава</title>
-      <link>/articles/2026/04/19/fusion-funding-cracks-ipo/</link>
-      <pubDate>Sun, 19 Apr 2026 18:02:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/fusion-funding-cracks-ipo/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Войната срещу Adobe: Конкуренцията залага на безплатен професионален софтуер</title>
-      <link>/articles/2026/04/19/adobe-rivals-free-software/</link>
-      <pubDate>Sun, 19 Apr 2026 17:56:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/adobe-rivals-free-software/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>AI не унищожава софтуерния пазар в Китай, а го „турбозарежда“</title>
-      <link>/articles/2026/04/19/china-saas-ai-turbocharge/</link>
-      <pubDate>Sun, 19 Apr 2026 15:36:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/china-saas-ai-turbocharge/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Може ли Claude да пише асемблерен код за Z80?</title>
-      <link>/articles/2026/04/19/claude-z80-assembly/</link>
-      <pubDate>Sun, 19 Apr 2026 12:52:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/claude-z80-assembly/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Азия може да изпревари САЩ в AI надпреварата благодарение на своите вериги за доставки</title>
-      <link>/articles/2026/04/19/asia-ai-supply-chain-edge/</link>
-      <pubDate>Sun, 19 Apr 2026 12:40:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/asia-ai-supply-chain-edge/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Granite Asia&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Сам Олтман коментира атаката с коктейл „Молотов“ срещу дома му и страховете от ИИ</title>
-      <link>/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</link>
-      <pubDate>Sat, 18 Apr 2026 20:11:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/18/sam-altman-home-attack-ai-backlash/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Главният изпълнителен директор на OpenAI, Сам Олтман, коментира критичните настроения срещу изкуствения интелект, часове след като домът му в Сан Франциско стана обект на нападение. В петък сутринта (10 април) срещу къщата е бил хвърлен коктейл „Молотов“. Според репортаж на Los Angeles Times [1], нападението е било провокирано от ескалиращото напрежение около развитието на ИИ технологиите.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
