@@ -6,8 +6,8 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Светни.ме</title>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <link></link>
+    <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://svetni.me</link>
     <description>Технологични новини</description>
     <pubDate>Mon, 27 Apr 2026 22:32:00 +0000</pubDate>
     <generator>Fusuma</generator>
@@ -15,450 +15,450 @@
 
     <item>
       <title>MCP в света на Java: Универсалният конектор за корпоративен ИИ</title>
-      <link>/articles/2026/04/27/mcp-java-architectural-strategy/</link>
+      <link>https://svetni.me/articles/2026/04/27/mcp-java-architectural-strategy/</link>
       <pubDate>Mon, 27 Apr 2026 22:32:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/mcp-java-architectural-strategy/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/mcp-java-architectural-strategy/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Интеграцията на големи езикови модели (LLM) в съществуващия корпоративен софтуер често прилича на „закърпване“ на две несъвместими вселени. Според анализ на Матео Роси за &lt;strong&gt;&lt;a href=&quot;/pages/infoq.html&quot;&gt;InfoQ&lt;/a&gt;&lt;/strong&gt;, това е на път да се промени благодарение на &lt;strong&gt;&lt;a href=&quot;/pages/model-context-protocol.html&quot;&gt;Model Context Protocol (MCP)&lt;/a&gt;&lt;/strong&gt;. Протоколът се налага като „универсалния конектор“ за ИИ ерата, подобно на това, което USB направи за хардуера или REST за уеб услугите [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Скритият риск: Как финото настройване за точност може да срине RAG системите</title>
-      <link>/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</link>
+      <link>https://svetni.me/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</link>
       <pubDate>Mon, 27 Apr 2026 22:30:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/rag-precision-tuning-accuracy-risk/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В стремежа си да направят изкуствения интелект по-прецизен, разработчиците може неволно да подкопават неговата фундаментална надеждност. Изследване от &lt;strong&gt;&lt;a href=&quot;/pages/redis.html&quot;&gt;Redis&lt;/a&gt;&lt;/strong&gt;, публикувано в VentureBeat [1], показва, че прекомерното &lt;strong&gt;&lt;a href=&quot;/pages/precision-tuning.html&quot;&gt;фино настройване за точност&lt;/a&gt;&lt;/strong&gt; на RAG системите може да доведе до драматичен спад от 40% в точността на откриване на информация (retrieval).&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Геополитическа стена: Китай спря придобиването на Manus от Meta за $2 милиарда</title>
-      <link>/articles/2026/04/27/china-vetoes-meta-manus-deal/</link>
+      <link>https://svetni.me/articles/2026/04/27/china-vetoes-meta-manus-deal/</link>
       <pubDate>Mon, 27 Apr 2026 22:10:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/china-vetoes-meta-manus-deal/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/china-vetoes-meta-manus-deal/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Надпреварата за доминация в света на автономните &lt;strong&gt;&lt;a href=&quot;/pages/ai-agent.html&quot;&gt;ИИ агенти&lt;/a&gt;&lt;/strong&gt; се сблъска с непреодолимо препятствие на изток. Китайската Държавна администрация за пазарно регулиране (&lt;strong&gt;&lt;a href=&quot;/pages/samr-china.html&quot;&gt;SAMR&lt;/a&gt;&lt;/strong&gt;) официално наложи вето върху сделката на &lt;strong&gt;&lt;a href=&quot;/pages/meta.html&quot;&gt;Meta&lt;/a&gt;&lt;/strong&gt; за придобиване на стартъпа &lt;strong&gt;&lt;a href=&quot;/pages/manus.html&quot;&gt;Manus&lt;/a&gt;&lt;/strong&gt; на стойност 2 милиарда долара [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Цифрово разкачване: Защо Европа заменя американския софтуер със суверенни алтернативи</title>
-      <link>/articles/2026/04/27/europe-sovereign-tech-shift/</link>
+      <link>https://svetni.me/articles/2026/04/27/europe-sovereign-tech-shift/</link>
       <pubDate>Mon, 27 Apr 2026 22:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/europe-sovereign-tech-shift/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/europe-sovereign-tech-shift/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Европа започва процес на мащабно и съзнателно „разкачване“ от софтуерната екосистема на САЩ. Според анализ на TechCrunch [1], вълната от откази от продукти на Microsoft и Windows вече не е само прагматично бизнес решение, а стратегически ход за постигане на пълна автономия чрез &lt;strong&gt;&lt;a href=&quot;/pages/sovereign-tech.html&quot;&gt;суверенни технологии&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>От супермаркета до централната банка: Lidl ще управлява облака на Нидерландия</title>
-      <link>/articles/2026/04/27/dutch-central-bank-lidl-cloud/</link>
+      <link>https://svetni.me/articles/2026/04/27/dutch-central-bank-lidl-cloud/</link>
       <pubDate>Mon, 27 Apr 2026 21:55:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/dutch-central-bank-lidl-cloud/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/dutch-central-bank-lidl-cloud/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В ход, който подчертава нарастващата загриженост на Европа относно технологичната зависимост, &lt;strong&gt;&lt;a href=&quot;/pages/dutch-central-bank.html&quot;&gt;Нидерландската централна банка (DNB)&lt;/a&gt;&lt;/strong&gt; обяви, че ще прехвърли критични работни натоварвания към облачната платформа на &lt;strong&gt;&lt;a href=&quot;/pages/schwarz-group.html&quot;&gt;Schwarz Group&lt;/a&gt;&lt;/strong&gt; – компанията, по-известна като собственик на супермаркетите Lidl и Kaufland [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Стратегическо „размразяване“: OpenAI и Microsoft преразгледаха сделката си заради Amazon</title>
-      <link>/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</link>
+      <link>https://svetni.me/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</link>
       <pubDate>Mon, 27 Apr 2026 21:52:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/openai-microsoft-partnership-renegotiation/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В ход, който преначертава картата на властта в индустрията за изкуствен интелект, &lt;strong&gt;&lt;a href=&quot;/pages/openai.html&quot;&gt;OpenAI&lt;/a&gt;&lt;/strong&gt; и &lt;strong&gt;&lt;a href=&quot;/pages/microsoft.html&quot;&gt;Microsoft&lt;/a&gt;&lt;/strong&gt; обявиха фундаментално преразглеждане на своето дългогодишно партньорство. Тази стъпка слага край на правната несигурност, възникнала след като лабораторията на Сам Олтман сключи мащабна сделка за 50 милиарда долара с &lt;strong&gt;&lt;a href=&quot;/pages/amazon.html&quot;&gt;Amazon&lt;/a&gt;&lt;/strong&gt; по-рано тази година [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Покажи работата си: Делото за радикална прозрачност в ИИ</title>
-      <link>/articles/2026/04/27/radical-ai-transparency-oreilly/</link>
+      <link>https://svetni.me/articles/2026/04/27/radical-ai-transparency-oreilly/</link>
       <pubDate>Mon, 27 Apr 2026 21:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/radical-ai-transparency-oreilly/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/radical-ai-transparency-oreilly/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В свят, доминиран от „черни кутии“, доверието се превръща в най-ценната валута. Майк Лукидес (&lt;strong&gt;&lt;a href=&quot;/pages/mike-loukides.html&quot;&gt;Майк Лукидес&lt;/a&gt;&lt;/strong&gt;) от &lt;strong&gt;&lt;a href=&quot;/pages/oreilly-media.html&quot;&gt;O&amp;#39;Reilly Media&lt;/a&gt;&lt;/strong&gt; публикува провокативен анализ, в който твърди, че досегашният стандарт за „отвореност“ в изкуствения интелект е морално остарял [1]. Според него, пускането само на моделните тегла (Open Weights) е недостатъчно – индустрията трябва да премине към &lt;strong&gt;&lt;a href=&quot;/pages/radical-transparency.html&quot;&gt;радикална прозрачност&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Дрейф на поведението: Как да следим „здравето“ на ИИ моделите в реално време</title>
-      <link>/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</link>
+      <link>https://svetni.me/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</link>
       <pubDate>Sun, 26 Apr 2026 22:43:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;За разлика от традиционния софтуер, изкуственият интелект е непредвидим. Една и съща заявка днес може да даде брилянтен резултат, а утре – пълна безсмислица. Според анализ на Дера Онуора (Microsoft) за &lt;strong&gt;&lt;a href=&quot;/pages/venturebeat.html&quot;&gt;VentureBeat&lt;/a&gt;&lt;/strong&gt;, това налага създаването на изцяло нов стандарт за &lt;strong&gt;&lt;a href=&quot;/pages/observability.html&quot;&gt;наблюдаемост (observability)&lt;/a&gt;&lt;/strong&gt;, наречен „AI Evaluation Stack“ [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Икономически парадокс: ИИ вече може да струва по-скъпо от хората</title>
-      <link>/articles/2026/04/26/ai-cost-vs-human-labor-axios/</link>
+      <link>https://svetni.me/articles/2026/04/26/ai-cost-vs-human-labor-axios/</link>
       <pubDate>Sun, 26 Apr 2026 22:36:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/26/ai-cost-vs-human-labor-axios/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/26/ai-cost-vs-human-labor-axios/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Дълго време основният аргумент за внедряването на изкуствен интелект беше намаляването на разходите чрез автоматизация. През 2026 г. обаче индустрията се сблъсква с неочакван парадокс: в много случаи използването на ИИ се оказва по-скъпо от наемането на хора. Доклад на &lt;strong&gt;&lt;a href=&quot;/pages/axios.html&quot;&gt;Axios&lt;/a&gt;&lt;/strong&gt; очертава тази фундаментална промяна в икономиката на технологиите [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Скритата икономика на LLM: Битката за памет и токени</title>
-      <link>/articles/2026/04/26/hidden-economy-llm-costs/</link>
+      <link>https://svetni.me/articles/2026/04/26/hidden-economy-llm-costs/</link>
       <pubDate>Sun, 26 Apr 2026 11:15:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/26/hidden-economy-llm-costs/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/26/hidden-economy-llm-costs/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Когато плащаме $20 на месец за абонамент или няколко цента за API заявка към модел като &lt;strong&gt;&lt;a href=&quot;/pages/claude.html&quot;&gt;Claude&lt;/a&gt;&lt;/strong&gt; или &lt;strong&gt;ChatGPT&lt;/strong&gt;, ние виждаме само върха на айсберга. Под повърхността се крие една „невидима икономика“, която определя кои компании ще оцелеят и защо някои услуги са подозрително евтини. Тейло Миле от френската консултантска компания &lt;strong&gt;&lt;a href=&quot;/pages/octo-technology.html&quot;&gt;OCTO Technology&lt;/a&gt;&lt;/strong&gt; публикува детайлен анализ на тези структурни разходи [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</title>
-      <link>/articles/2026/04/25/china-ai-token-drive-inland-economy/</link>
+      <link>https://svetni.me/articles/2026/04/25/china-ai-token-drive-inland-economy/</link>
       <pubDate>Sat, 25 Apr 2026 22:19:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/25/china-ai-token-drive-inland-economy/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/25/china-ai-token-drive-inland-economy/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Докато световните анализатори се фокусират върху ценовите войни между китайските технологични гиганти като &lt;strong&gt;&lt;a href=&quot;../../pages/alibaba.html&quot;&gt;Alibaba&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;../../pages/tencent.html&quot;&gt;Tencent&lt;/a&gt;&lt;/strong&gt; и &lt;strong&gt;&lt;a href=&quot;../../pages/bytedance.html&quot;&gt;ByteDance&lt;/a&gt;&lt;/strong&gt;, по-дълбокият икономически смисъл на този ход остава недоразбран. Според анализ на &lt;strong&gt;&lt;a href=&quot;../../pages/lizzi-lee.html&quot;&gt;Лизи К. Ли&lt;/a&gt;&lt;/strong&gt; за South China Morning Post [1], драстичното намаляване на цената на ИИ токените е част от мащабна стратегия за преобразяване на вътрешната икономика на страната.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Затишие в науката: Изследванията за LLM напускат предната страница на Hacker News</title>
-      <link>/articles/2026/04/25/llm-research-hacker-news-decline/</link>
+      <link>https://svetni.me/articles/2026/04/25/llm-research-hacker-news-decline/</link>
       <pubDate>Sat, 25 Apr 2026 09:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/25/llm-research-hacker-news-decline/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/25/llm-research-hacker-news-decline/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;През последните три години предната страница на &lt;strong&gt;Hacker News (HN)&lt;/strong&gt; изглеждаше като филиал на научния архив &lt;strong&gt;arXiv&lt;/strong&gt;. Почти всеки ден инженерите и програмистите гласуваха масово за нови изследвания в областта на големите езикови модели (LLM). Но според нов анализ на Дилън Кастило, този „академичен хайп“ е към своя край [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>ИИ в китайското здравеопазване: Преодоляване на недостига на ресурси</title>
-      <link>/articles/2026/04/25/china-ai-healthcare-medical-gap/</link>
+      <link>https://svetni.me/articles/2026/04/25/china-ai-healthcare-medical-gap/</link>
       <pubDate>Sat, 25 Apr 2026 06:00:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/25/china-ai-healthcare-medical-gap/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/25/china-ai-healthcare-medical-gap/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;На фона на засилващата се нужда от модернизация на медицинските услуги, Китай предприема мащабен национален ход за интегриране на изкуствения интелект във всички нива на здравеопазването. Целта е ясна: преодоляване на огромната пропаст в разпределението на медицински ресурси между високотехнологичните градски центрове и отдалечените региони [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Разривът: Защо светът започна активно да презира ИИ индустрията</title>
-      <link>/articles/2026/04/27/ai-industry-public-backlash-new-republic/</link>
+      <link>https://svetni.me/articles/2026/04/27/ai-industry-public-backlash-new-republic/</link>
       <pubDate>Fri, 24 Apr 2026 22:41:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/27/ai-industry-public-backlash-new-republic/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/27/ai-industry-public-backlash-new-republic/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Технологичният меден месец на изкуствения интелект официално приключи. Според задълбочен анализ на &lt;strong&gt;&lt;a href=&quot;/pages/new-republic.html&quot;&gt;The New Republic&lt;/a&gt;&lt;/strong&gt;, ИИ индустрията се сблъсква с вълна от &lt;strong&gt;&lt;a href=&quot;/pages/public-backlash.html&quot;&gt;обществен отпор&lt;/a&gt;&lt;/strong&gt;, която вече не се ограничава само до етични дебати, а прераства във физическа агресия и икономическо недоволство [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Google инвестира рекордните 40 милиарда долара в Anthropic за мащабиране на ИИ</title>
-      <link>/articles/2026/04/24/google-investment-anthropic-40b/</link>
+      <link>https://svetni.me/articles/2026/04/24/google-investment-anthropic-40b/</link>
       <pubDate>Fri, 24 Apr 2026 22:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/google-investment-anthropic-40b/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/google-investment-anthropic-40b/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Технологичният гигант Google обяви плановете си да инвестира до &lt;strong&gt;40 милиарда долара&lt;/strong&gt; в стартъпа за изкуствен интелект Anthropic [1]. Тази мащабна финансова инжекция идва само дни след подобен, но по-малък ход от страна на Amazon, и подчертава ожесточената битка за инфраструктурно превъзходство в ерата на автономните ИИ агенти.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Как Spotify използва „фонови“ ИИ агенти за мащабна миграция на данни</title>
-      <link>/articles/2026/04/24/spotify-background-coding-agents-migration/</link>
+      <link>https://svetni.me/articles/2026/04/24/spotify-background-coding-agents-migration/</link>
       <pubDate>Fri, 24 Apr 2026 20:58:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/spotify-background-coding-agents-migration/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/spotify-background-coding-agents-migration/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Миграцията на масиви от данни в голяма технологична организация често е кошмарна задача, изискваща месеци ръчен труд и координация между десетки екипи. Според репортаж от инженерния блог на &lt;strong&gt;Spotify&lt;/strong&gt; [1], компанията е намерила решение чрез използването на т.нар. „фонови“ ИИ агенти (background coding agents).&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Добре дошли в Gas City: Стив Йеги представя бъдещето на софтуерните „фабрики“</title>
-      <link>/articles/2026/04/24/welcome-to-gas-city/</link>
+      <link>https://svetni.me/articles/2026/04/24/welcome-to-gas-city/</link>
       <pubDate>Fri, 24 Apr 2026 20:51:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/welcome-to-gas-city/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/welcome-to-gas-city/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Стив Йеги официално представи версия 1.0.0 на &lt;strong&gt;Gas City&lt;/strong&gt; – еволюция на неговия популярен проект за автоматизирани софтуерни фабрики, която превръща концепцията в пълноценен корпоративен SDK за автономни агентни работни процеси [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Какво е оркестриране на ИИ? Пътеводител към интелигентните системи</title>
-      <link>/articles/2026/04/24/what-is-ai-orchestration/</link>
+      <link>https://svetni.me/articles/2026/04/24/what-is-ai-orchestration/</link>
       <pubDate>Fri, 24 Apr 2026 20:30:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/what-is-ai-orchestration/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/what-is-ai-orchestration/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Докато светът е фокусиран върху възможностите на отделни чатботове и модели, истинската революция за бизнеса се случва на по-дълбоко ниво – в слоя на координацията. Според подробен пътеводител от &lt;strong&gt;Zapier&lt;/strong&gt; [1], изкуственият интелект навлиза във фаза на „оркестрация“, при която фокусът се измества от изолирани задачи към цялостни, автономни работни процеси.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Отвъд инженерството: Уроците от стартирането на ИИ-подпомогнат продукт</title>
-      <link>/articles/2026/04/24/ai-product-launch-lessons/</link>
+      <link>https://svetni.me/articles/2026/04/24/ai-product-launch-lessons/</link>
       <pubDate>Fri, 24 Apr 2026 20:22:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/ai-product-launch-lessons/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/ai-product-launch-lessons/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В свят, залят от твърдения за „изграждане на продукт за един ден“, Кайл Харис от Atomic Object споделя една по-различна история – тази за прехода от стабилен прототип към реален, работещ продукт [1]. Неговият опит с разработката на играта „Padlock Game“ подчертава, че докато изкуственият интелект може да ускори писането на код, най-трудните стъпки остават дълбоко човешки.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Златният стандарт на ИИ: MIT пусна най-голямата база с олимпийска математика</title>
-      <link>/articles/2026/04/24/mit-mathnet-ai-benchmark/</link>
+      <link>https://svetni.me/articles/2026/04/24/mit-mathnet-ai-benchmark/</link>
       <pubDate>Fri, 24 Apr 2026 11:13:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/mit-mathnet-ai-benchmark/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/mit-mathnet-ai-benchmark/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Напредъкът на изкуствения интелект в областта на езика е безспорен, но неговите способности за задълбочено логическо и математическо разсъждение остават обект на ожесточени дебати. Сега учени от Лабораторията за компютърни науки и изкуствен интелект на MIT (&lt;strong&gt;&lt;a href=&quot;../../pages/mit-csail.html&quot;&gt;MIT CSAIL&lt;/a&gt;&lt;/strong&gt;) представиха нов „златен стандарт“, който може да даде окончателен отговор на въпроса колко умен е всъщност ИИ [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>DeepSeek-V4: Отвореният код настига гигантите при 85% по-ниски цени</title>
-      <link>/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</link>
+      <link>https://svetni.me/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</link>
       <pubDate>Fri, 24 Apr 2026 08:56:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/deepseek-v4-comparison-openai-anthropic-google/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Технологичният свят стана свидетел на нов мащабен трус в надпреварата за изкуствен интелект. Китайският стартъп &lt;strong&gt;DeepSeek&lt;/strong&gt; пусна своята четвърта генерация модели – &lt;strong&gt;DeepSeek-V4&lt;/strong&gt;, които директно атакуват доминацията на западните затворени системи [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Firefox интегрира енджина за блокиране на реклами на Brave</title>
-      <link>/articles/2026/04/24/firefox-brave-adblock-integration/</link>
+      <link>https://svetni.me/articles/2026/04/24/firefox-brave-adblock-integration/</link>
       <pubDate>Fri, 24 Apr 2026 08:49:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/firefox-brave-adblock-integration/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/firefox-brave-adblock-integration/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;В ход, който изненада мнозина в технологичната общност, Mozilla тихомълком интегрира високопроизводителния енджин за блокиране на реклами на своя конкурент Brave в последната версия на Firefox [1]. Интеграцията на &lt;code&gt;adblock-rust&lt;/code&gt; бе открита първоначално чрез дискусии в Bugzilla и потвърдена от софтуерни анализатори през април 2026 г.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>OpenAI пусна GPT-5.5: Ерата на автономните агенти и новата битка за лидерство</title>
-      <link>/articles/2026/04/24/openai-gpt-5-5-launch/</link>
+      <link>https://svetni.me/articles/2026/04/24/openai-gpt-5-5-launch/</link>
       <pubDate>Fri, 24 Apr 2026 07:04:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/24/openai-gpt-5-5-launch/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/24/openai-gpt-5-5-launch/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;OpenAI официално представи дългоочаквания модел &lt;strong&gt;GPT-5.5&lt;/strong&gt;, отбелязвайки края на краткото лидерство на Anthropic в класациите за изкуствен интелект. Новият модел е проектиран с една основна цел: превръщането на ИИ от чатбот в автономен „агент“, способен да управлява софтуер и да решава сложни задачи без човешка намеса [4][6].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>ИИ предизвика криза в откриването на уязвимости: 490% ръст на докладите за нулев ден</title>
-      <link>/articles/2026/04/23/ai-zero-day-bug-crisis/</link>
+      <link>https://svetni.me/articles/2026/04/23/ai-zero-day-bug-crisis/</link>
       <pubDate>Thu, 23 Apr 2026 19:50:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/ai-zero-day-bug-crisis/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/ai-zero-day-bug-crisis/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Технологичният свят е изправен пред безпрецедентен „потоп“ от софтуерни уязвимости, открити с помощта на изкуствен интелект. Според данни, предоставени на Mashable [1], най-голямата независима програма за награди в света, &lt;strong&gt;Zero Day Initiative (ZDI)&lt;/strong&gt;, е регистрирала зашеметяващ ръст от 490% в подадените доклади през април 2026 г. спрямо същия период на миналата година.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Отвъд хайпа: Реалността на прехода към кодиране с ИИ</title>
-      <link>/articles/2026/04/23/ai-coding-shift-hype-reality/</link>
+      <link>https://svetni.me/articles/2026/04/23/ai-coding-shift-hype-reality/</link>
       <pubDate>Thu, 23 Apr 2026 19:41:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/ai-coding-shift-hype-reality/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/ai-coding-shift-hype-reality/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;За по-малко от три години инструментите за кодиране с изкуствен интелект се превърнаха от любопитна новост в критична инфраструктура за софтуерната разработка. Днес значителна част от новия код се генерира от ИИ, но очакванията за пълна автоматизация се сблъскват със сериозна преграда: липсата на доверие.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Край на „платените часове“: ИИ принуждава ИТ сектора да преосмисли ценообразуването си</title>
-      <link>/articles/2026/04/23/ai-rethinking-it-services-pricing/</link>
+      <link>https://svetni.me/articles/2026/04/23/ai-rethinking-it-services-pricing/</link>
       <pubDate>Thu, 23 Apr 2026 19:33:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/ai-rethinking-it-services-pricing/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/ai-rethinking-it-services-pricing/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Начинът, по който компаниите за ИТ услуги печелят пари, започва сериозно да се разминава с начина, по който те реално изпълняват своята работа. Според репортаж на Newsweek [1], изкуственият интелект е основният катализатор за преосмисляне на десетилетните бизнес модели, базирани на броя служители (headcount) и отработените часове.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Meta позволява на родителите да виждат темите на разговор между децата им и Meta AI</title>
-      <link>/articles/2026/04/23/meta-ai-parental-supervision/</link>
+      <link>https://svetni.me/articles/2026/04/23/meta-ai-parental-supervision/</link>
       <pubDate>Thu, 23 Apr 2026 18:55:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/meta-ai-parental-supervision/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/meta-ai-parental-supervision/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Meta обяви в четвъртък, че родителите, използващи нейните инструменти за надзор, вече могат да виждат темите, за които техните тийнейджъри са питали Meta AI през последната седмица във Facebook, Messenger или Instagram [1][2].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Поведенчески сертификати: Защо статичната оторизация е недостатъчна за автономните агенти</title>
-      <link>/articles/2026/04/23/behavioral-credentials-autonomous-agents/</link>
+      <link>https://svetni.me/articles/2026/04/23/behavioral-credentials-autonomous-agents/</link>
       <pubDate>Thu, 23 Apr 2026 18:54:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/behavioral-credentials-autonomous-agents/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/behavioral-credentials-autonomous-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Според анализ на O&amp;#39;Reilly Radar [1], съвременните корпоративни системи за управление на ИИ все още оторизират автономните агенти така, сякаш са стабилни софтуерни артефакти. Реалността обаче е различна: ИИ агентите не са статични и тяхното поведение може да се промени значително в рамките на жизнения им цикъл.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Стратегията на Cleveland Clinic за внедряване на ИИ: Защо корпоративната дисциплина е ключът към успеха</title>
-      <link>/articles/2026/04/23/cleveland-clinic-ai-healthcare/</link>
+      <link>https://svetni.me/articles/2026/04/23/cleveland-clinic-ai-healthcare/</link>
       <pubDate>Thu, 23 Apr 2026 18:51:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/cleveland-clinic-ai-healthcare/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/cleveland-clinic-ai-healthcare/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Според репортаж на Newsweek [1], Cleveland Clinic се утвърждава като лидер в мащабирането на изкуствения интелект (ИИ) в здравеопазването – сектор, в който 95% от пилотните проекти с генеративен ИИ обикновено не достигат до реално внедряване. Успехът на организацията се основава на строга корпоративна дисциплина и дълбоки технологични партньорства.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Как моделът Mythos на Anthropic активизира киберсигурността в Китай</title>
-      <link>/articles/2026/04/23/anthropic-mythos-china-cybersecurity/</link>
+      <link>https://svetni.me/articles/2026/04/23/anthropic-mythos-china-cybersecurity/</link>
       <pubDate>Thu, 23 Apr 2026 18:49:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/anthropic-mythos-china-cybersecurity/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/anthropic-mythos-china-cybersecurity/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Появата на новия ИИ модел на американския стартъп Anthropic – Claude Mythos Preview – предизвика сериозно раздвижване в технологичния сектор на Китай. Според доклад на South China Morning Post [1], способността на модела автономно да идентифицира и експлоатира софтуерни уязвимости е енергизирала местната индустрия за киберсигурност.&lt;/p&gt;</description>
     </item>
 
     <item>
-      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
-      <link>/articles/2026/04/23/chinas-dark-compute-power/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/chinas-dark-compute-power/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
-      <link>/articles/2026/04/23/black-box-ai-drift/</link>
+      <link>https://svetni.me/articles/2026/04/23/black-box-ai-drift/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/23/black-box-ai-drift/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/black-box-ai-drift/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
     </item>
 
     <item>
+      <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
+      <link>https://svetni.me/articles/2026/04/23/chinas-dark-compute-power/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/chinas-dark-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
+    </item>
+
+    <item>
       <title>NVIDIA и Google Cloud: Фабрики за „агентен“ и физически ИИ</title>
-      <link>/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</link>
+      <link>https://svetni.me/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</link>
       <pubDate>Wed, 22 Apr 2026 23:04:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-nvidia-agentic-physical-ai-factories/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;По време на конференцията Google Cloud Next 2026, технологичните гиганти &lt;strong&gt;NVIDIA&lt;/strong&gt; и &lt;strong&gt;Google Cloud&lt;/strong&gt; обявиха мащабно разширяване на своето партньорство [1]. Сътрудничеството е насочено към изграждането на т.нар. „ИИ фабрики“ (AI factories) — специализирани среди за мащабно внедряване на изкуствен интелект в две ключови направления: автономни софтуерни системи и индустриална автоматизация.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Как да научим ИИ да казва „не съм сигурен“: Новият метод на MIT за борба с фалшивата увереност</title>
-      <link>/articles/2026/04/22/mit-teaching-ai-uncertainty/</link>
+      <link>https://svetni.me/articles/2026/04/22/mit-teaching-ai-uncertainty/</link>
       <pubDate>Wed, 22 Apr 2026 22:45:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/mit-teaching-ai-uncertainty/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/mit-teaching-ai-uncertainty/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Alex Shipps/MIT CSAIL&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Meta започва да записва всяко кликване на служителите си за обучение на ИИ агенти</title>
-      <link>/articles/2026/04/22/meta-tracking-employees-ai-training/</link>
+      <link>https://svetni.me/articles/2026/04/22/meta-tracking-employees-ai-training/</link>
       <pubDate>Wed, 22 Apr 2026 22:39:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/meta-tracking-employees-ai-training/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/meta-tracking-employees-ai-training/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Ще струва ли Claude Code 100 долара на месец? Кратка паника в общността на разработчиците</title>
-      <link>/articles/2026/04/22/claude-code-pricing-confusion/</link>
+      <link>https://svetni.me/articles/2026/04/22/claude-code-pricing-confusion/</link>
       <pubDate>Wed, 22 Apr 2026 22:34:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/claude-code-pricing-confusion/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/claude-code-pricing-confusion/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Саймън Уилисън чрез Anthropic&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Google избягва „данъка NVIDIA“: Новите TPU чипове обясняват защо</title>
-      <link>/articles/2026/04/22/google-tpu-nvidia-tax/</link>
+      <link>https://svetni.me/articles/2026/04/22/google-tpu-nvidia-tax/</link>
       <pubDate>Wed, 22 Apr 2026 21:27:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/google-tpu-nvidia-tax/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-tpu-nvidia-tax/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Докато останалата част от ИИ индустрията се бори за достъп до чиповете на NVIDIA, Google тихомълком затвърждава своето най-голямо стратегическо предимство. Според анализ на VentureBeat [1], технологичният гигант е успял да изгради пълна вертикална изолация от т.нар. „данък NVIDIA“ — изключително високите маржове на печалба, които конкурентите плащат за хардуер от серията Blackwell.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Край на „претоварването с контекст“: Salesforce обнови своята платформа Agentforce</title>
-      <link>/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</link>
+      <link>https://svetni.me/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</link>
       <pubDate>Wed, 22 Apr 2026 21:14:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Докато много компании се надпреварват да подават все повече данни към своите ИИ модели, се появява нов, неочакван проблем: „претоварване с контекст“ (context overload). Според анализ на VentureBeat [1], това явление води до забавяне на системите, по-високи разходи и неточни резултати. В отговор на това, &lt;strong&gt;Salesforce&lt;/strong&gt; пусна мащабен ъпдейт на своята платформа — &lt;strong&gt;Agentforce Vibes 2.0&lt;/strong&gt;, който цели да реши този проблем чрез по-прецизно управление на информацията.&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Google пуска Gemini в „изолация“: AI вече може да работи на локална (on-premise) инфраструктура</title>
-      <link>/articles/2026/04/22/google-gemini-air-gapped-server/</link>
+      <link>https://svetni.me/articles/2026/04/22/google-gemini-air-gapped-server/</link>
       <pubDate>Wed, 22 Apr 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/google-gemini-air-gapped-server/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-gemini-air-gapped-server/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>10x Science привлича 4,8 млн. долара за преодоляване на тесните места в дизайна на лекарства с ИИ</title>
-      <link>/articles/2026/04/22/10x-science-seed-funding/</link>
+      <link>https://svetni.me/articles/2026/04/22/10x-science-seed-funding/</link>
       <pubDate>Wed, 22 Apr 2026 20:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/10x-science-seed-funding/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/10x-science-seed-funding/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: 10x Science чрез TechCrunch&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Google превръща Workspace в новия ви „офис стажант“ чрез ИИ ъпдейти</title>
-      <link>/articles/2026/04/22/google-workspace-ai-intelligence/</link>
+      <link>https://svetni.me/articles/2026/04/22/google-workspace-ai-intelligence/</link>
       <pubDate>Wed, 22 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/22/google-workspace-ai-intelligence/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-workspace-ai-intelligence/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;По време на конференцията Google Cloud Next тази седмица, Google обяви мащабни актуализации на своя пакет за производителност Workspace. Ключовият акцент е върху дълбоката интеграция на изкуствения интелект, който вече действа като интелигентен „офис стажант“, способен да автоматизира всичко – от писане на имейли до организиране на сложни електронни таблици [1].&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Мащабирането на агентния ИИ изисква здрава основа от данни</title>
-      <link>/articles/2026/04/21/scaling-agentic-ai-data/</link>
+      <link>https://svetni.me/articles/2026/04/21/scaling-agentic-ai-data/</link>
       <pubDate>Tue, 21 Apr 2026 21:47:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/scaling-agentic-ai-data/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/scaling-agentic-ai-data/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Mozilla поправи 271 уязвимости във Firefox, открити от изкуствен интелект</title>
-      <link>/articles/2026/04/21/firefox-mythos-bugs/</link>
+      <link>https://svetni.me/articles/2026/04/21/firefox-mythos-bugs/</link>
       <pubDate>Tue, 21 Apr 2026 21:43:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/firefox-mythos-bugs/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/firefox-mythos-bugs/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Kimi K2.6: ИИ агенти, които работят с дни, и краят на традиционната оркестрация</title>
-      <link>/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
+      <link>https://svetni.me/articles/2026/04/21/kimi-k2-6-moonshot-ai/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/kimi-k2-6-moonshot-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
+      <link>https://svetni.me/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
       <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
-      <title>„Тъмни фабрики“: Новата ера на автоматизираното софтуерно инженерство</title>
-      <link>/articles/2026/04/21/dark-factories-trycycle/</link>
-      <pubDate>Tue, 21 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/dark-factories-trycycle/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;В технологичната индустрия започва появата на т.нар. „тъмни фабрики“ (dark factories) – автономни системи, които превръщат софтуерните спецификации директно в готов за внедряване код. Според анализ на Дан Шапиро в O&amp;#39;Reilly Radar [1], тези „фабрики“ не са просто помощници за кодиране, а мощни двигатели, задвижвани от два ключови модела на работа.&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>ИИ и бъдещето на киберсигурността: Защо отвореността е критична за защитата</title>
-      <link>/articles/2026/04/21/hugging-face-ai-cybersecurity-openness/</link>
+      <link>https://svetni.me/articles/2026/04/21/hugging-face-ai-cybersecurity-openness/</link>
       <pubDate>Tue, 21 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/21/hugging-face-ai-cybersecurity-openness/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/hugging-face-ai-cybersecurity-openness/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Появата на свръхмощни ИИ модели като &lt;strong&gt;Mythos&lt;/strong&gt;, способни автономно да откриват и поправят уязвимости, поставя началото на нова ера в киберсигурността. Според екипа на &lt;strong&gt;Hugging Face&lt;/strong&gt; [1], успехът на подобни системи не зависи само от самия модел, а от „скелето“ (scaffolding), в което той е вграден.&lt;/p&gt;</description>
     </item>
 
     <item>
+      <title>„Тъмни фабрики“: Новата ера на автоматизираното софтуерно инженерство</title>
+      <link>https://svetni.me/articles/2026/04/21/dark-factories-trycycle/</link>
+      <pubDate>Tue, 21 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/dark-factories-trycycle/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;В технологичната индустрия започва появата на т.нар. „тъмни фабрики“ (dark factories) – автономни системи, които превръщат софтуерните спецификации директно в готов за внедряване код. Според анализ на Дан Шапиро в O&amp;#39;Reilly Radar [1], тези „фабрики“ не са просто помощници за кодиране, а мощни двигатели, задвижвани от два ключови модела на работа.&lt;/p&gt;</description>
+    </item>
+
+    <item>
       <title>НСА използва свръхсекретния ИИ модел Mythos на Anthropic въпреки забраната от Пентагона</title>
-      <link>/articles/2026/04/20/nsa-anthropic-mythos-preview/</link>
+      <link>https://svetni.me/articles/2026/04/20/nsa-anthropic-mythos-preview/</link>
       <pubDate>Mon, 20 Apr 2026 21:49:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/20/nsa-anthropic-mythos-preview/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/20/nsa-anthropic-mythos-preview/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Архитектурен дефект в протокола MCP на Anthropic позволява отдалечено изпълнение на код</title>
-      <link>/articles/2026/04/20/anthropic-mcp-rce-vulnerability/</link>
+      <link>https://svetni.me/articles/2026/04/20/anthropic-mcp-rce-vulnerability/</link>
       <pubDate>Mon, 20 Apr 2026 21:05:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/20/anthropic-mcp-rce-vulnerability/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/20/anthropic-mcp-rce-vulnerability/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: &lt;a href=&quot;https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/&quot;&gt;Ox Security&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</description>
     </item>
 
     <item>
       <title>Aletheia на DeepMind решава автономно математически задачи на ниво научни изследвания</title>
-      <link>/articles/2026/04/20/deepmind-aletheia-agentic-math/</link>
+      <link>https://svetni.me/articles/2026/04/20/deepmind-aletheia-agentic-math/</link>
       <pubDate>Mon, 20 Apr 2026 19:40:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/20/deepmind-aletheia-agentic-math/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/20/deepmind-aletheia-agentic-math/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
