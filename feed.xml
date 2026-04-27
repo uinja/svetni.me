@@ -9,9 +9,18 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <link></link>
     <description>Технологични новини</description>
-    <pubDate>Mon, 27 Apr 2026 22:30:00 +0000</pubDate>
+    <pubDate>Mon, 27 Apr 2026 22:32:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>MCP в света на Java: Универсалният конектор за корпоративен ИИ</title>
+      <link>/articles/2026/04/27/mcp-java-architectural-strategy/</link>
+      <pubDate>Mon, 27 Apr 2026 22:32:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/mcp-java-architectural-strategy/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Интеграцията на големи езикови модели (LLM) в съществуващия корпоративен софтуер често прилича на „закърпване“ на две несъвместими вселени. Според анализ на Матео Роси за &lt;strong&gt;&lt;a href=&quot;/pages/infoq.html&quot;&gt;InfoQ&lt;/a&gt;&lt;/strong&gt;, това е на път да се промени благодарение на &lt;strong&gt;&lt;a href=&quot;/pages/model-context-protocol.html&quot;&gt;Model Context Protocol (MCP)&lt;/a&gt;&lt;/strong&gt;. Протоколът се налага като „универсалния конектор“ за ИИ ерата, подобно на това, което USB направи за хардуера или REST за уеб услугите [1].&lt;/p&gt;</description>
+    </item>
 
     <item>
       <title>Скритият риск: Как финото настройване за точност може да срине RAG системите</title>
@@ -68,6 +77,24 @@
     </item>
 
     <item>
+      <title>Дрейф на поведението: Как да следим „здравето“ на ИИ моделите в реално време</title>
+      <link>/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</link>
+      <pubDate>Sun, 26 Apr 2026 22:43:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/26/monitoring-llm-behavior-drift-refusal/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;За разлика от традиционния софтуер, изкуственият интелект е непредвидим. Една и съща заявка днес може да даде брилянтен резултат, а утре – пълна безсмислица. Според анализ на Дера Онуора (Microsoft) за &lt;strong&gt;&lt;a href=&quot;/pages/venturebeat.html&quot;&gt;VentureBeat&lt;/a&gt;&lt;/strong&gt;, това налага създаването на изцяло нов стандарт за &lt;strong&gt;&lt;a href=&quot;/pages/observability.html&quot;&gt;наблюдаемост (observability)&lt;/a&gt;&lt;/strong&gt;, наречен „AI Evaluation Stack“ [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Икономически парадокс: ИИ вече може да струва по-скъпо от хората</title>
+      <link>/articles/2026/04/26/ai-cost-vs-human-labor-axios/</link>
+      <pubDate>Sun, 26 Apr 2026 22:36:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/26/ai-cost-vs-human-labor-axios/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Дълго време основният аргумент за внедряването на изкуствен интелект беше намаляването на разходите чрез автоматизация. През 2026 г. обаче индустрията се сблъсква с неочакван парадокс: в много случаи използването на ИИ се оказва по-скъпо от наемането на хора. Доклад на &lt;strong&gt;&lt;a href=&quot;/pages/axios.html&quot;&gt;Axios&lt;/a&gt;&lt;/strong&gt; очертава тази фундаментална промяна в икономиката на технологиите [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
       <title>Скритата икономика на LLM: Битката за памет и токени</title>
       <link>/articles/2026/04/26/hidden-economy-llm-costs/</link>
       <pubDate>Sun, 26 Apr 2026 11:15:00 +0000</pubDate>
@@ -101,6 +128,15 @@
       <guid isPermaLink="true">/articles/2026/04/25/china-ai-healthcare-medical-gap/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;На фона на засилващата се нужда от модернизация на медицинските услуги, Китай предприема мащабен национален ход за интегриране на изкуствения интелект във всички нива на здравеопазването. Целта е ясна: преодоляване на огромната пропаст в разпределението на медицински ресурси между високотехнологичните градски центрове и отдалечените региони [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Разривът: Защо светът започна активно да презира ИИ индустрията</title>
+      <link>/articles/2026/04/27/ai-industry-public-backlash-new-republic/</link>
+      <pubDate>Fri, 24 Apr 2026 22:41:00 +0000</pubDate>
+      <guid isPermaLink="true">/articles/2026/04/27/ai-industry-public-backlash-new-republic/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Технологичният меден месец на изкуствения интелект официално приключи. Според задълбочен анализ на &lt;strong&gt;&lt;a href=&quot;/pages/new-republic.html&quot;&gt;The New Republic&lt;/a&gt;&lt;/strong&gt;, ИИ индустрията се сблъсква с вълна от &lt;strong&gt;&lt;a href=&quot;/pages/public-backlash.html&quot;&gt;обществен отпор&lt;/a&gt;&lt;/strong&gt;, която вече не се ограничава само до етични дебати, а прераства във физическа агресия и икономическо недоволство [1].&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -423,42 +459,6 @@
       <link>/articles/2026/04/20/deepmind-aletheia-agentic-math/</link>
       <pubDate>Mon, 20 Apr 2026 19:40:00 +0000</pubDate>
       <guid isPermaLink="true">/articles/2026/04/20/deepmind-aletheia-agentic-math/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Atlassian въвежда събиране на клиентски данни по подразбиране за обучение на AI</title>
-      <link>/articles/2026/04/20/atlassian-ai-data-collection/</link>
-      <pubDate>Mon, 20 Apr 2026 18:54:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/20/atlassian-ai-data-collection/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Uber изчерпа годишния си бюджет за ИИ за месеци: Claude Code променя правилата</title>
-      <link>/articles/2026/04/19/uber-ai-budget-struggle/</link>
-      <pubDate>Sun, 19 Apr 2026 23:10:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/uber-ai-budget-struggle/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Конфликт в WordPress: Мат Мълънуег наложи Akismet в ядрото на версия 7.0</title>
-      <link>/articles/2026/04/19/wordpress-7-0-akismet-controversy/</link>
-      <pubDate>Sun, 19 Apr 2026 21:20:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/wordpress-7-0-akismet-controversy/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Пробив във Vercel: Хакери обявиха за продажба откраднати данни и сорс код</title>
-      <link>/articles/2026/04/19/vercel-security-breach-april-2026/</link>
-      <pubDate>Sun, 19 Apr 2026 21:15:00 +0000</pubDate>
-      <guid isPermaLink="true">/articles/2026/04/19/vercel-security-breach-april-2026/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
