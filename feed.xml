@@ -9,9 +9,99 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологични новини</description>
-    <pubDate>Tue, 28 Apr 2026 23:26:00 +0000</pubDate>
+    <pubDate>Wed, 29 Apr 2026 21:56:00 +0000</pubDate>
     <generator>Fusuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Защо AI компаниите искат да се страхувате от тях</title>
+      <link>https://svetni.me/articles/2026/04/29/ai-fear-marketing/</link>
+      <pubDate>Wed, 29 Apr 2026 21:56:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/ai-fear-marketing/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Според репортаж на &lt;a href=&quot;/pages/bbc.html&quot;&gt;BBC Future&lt;/a&gt; [1], водещите AI компании умишлено подхранват страховете около изкуствения интелект, за да контролират наратива и регулаторната среда. Вместо да се фокусират върху настоящите проблеми като авторски права, екологични щети и трудова експлоатация, те акцентират върху екзистенциални заплахи, които ги позиционират едновременно като създатели и единствени спасители.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>GitHub преминава към таксуване според реалното потребление за Copilot</title>
+      <link>https://svetni.me/articles/2026/04/29/github-copilot-usage-based-billing/</link>
+      <pubDate>Wed, 29 Apr 2026 21:35:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/github-copilot-usage-based-billing/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;a href=&quot;/pages/github.html&quot;&gt;GitHub&lt;/a&gt; обяви, че от 1 юни преминава към нов модел на таксуване за своята услуга &lt;a href=&quot;/pages/github-copilot.html&quot;&gt;GitHub Copilot&lt;/a&gt;, базиран на реалното потребление [1]. Промяната има за цел да балансира ценообразуването с нарастващите разходи за изчислителни ресурси, необходими за работата на съвременните модели с изкуствен интелект.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Стотици работници, обучаващи изкуствения интелект на Meta, са изправени пред съкращения</title>
+      <link>https://svetni.me/articles/2026/04/29/meta-covalen-ai-layoffs/</link>
+      <pubDate>Wed, 29 Apr 2026 21:31:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/meta-covalen-ai-layoffs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Според репортаж на Wired [1], стотици работници в &lt;a href=&quot;/pages/ireland.html&quot;&gt;Ирландия&lt;/a&gt;, натоварени с усъвършенстването на моделите с изкуствен интелект на &lt;a href=&quot;/pages/meta.html&quot;&gt;Meta&lt;/a&gt;, са били информирани, че работните им места са изложени на риск. Компанията предприема мащабен нов кръг от съкращения, целящ повишаване на ефективността и автоматизацията.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Amazon въвежда аудио въпроси и отговори с изкуствен интелект в продуктовите си страници</title>
+      <link>https://svetni.me/articles/2026/04/29/amazon-ai-audio-qa/</link>
+      <pubDate>Wed, 29 Apr 2026 21:29:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/amazon-ai-audio-qa/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;a href=&quot;/pages/amazon.html&quot;&gt;Amazon&lt;/a&gt; представи нова функция, базирана на изкуствен интелект, която позволява на потребителите да задават въпроси за продуктите и да получават разговорни аудио отговори в реално време [1]. Системата използва виртуални „експерти по пазаруване“, които представят информацията в естествен, дискусионен формат.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>DOOM вече работи директно в ChatGPT и Claude чрез MCP</title>
+      <link>https://svetni.me/articles/2026/04/29/doom-runs-in-chatgpt-and-claude/</link>
+      <pubDate>Wed, 29 Apr 2026 21:24:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/doom-runs-in-chatgpt-and-claude/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Разработчикът &lt;a href=&quot;/pages/chris-nager.html&quot;&gt;Крис Нейджър&lt;/a&gt; [1] обяви създаването на напълно функционално приложение за легендарната игра &lt;a href=&quot;/pages/doom.html&quot;&gt;DOOM&lt;/a&gt;, което може да се стартира директно в интерфейса на водещи ИИ платформи като &lt;a href=&quot;/pages/chatgpt.html&quot;&gt;ChatGPT&lt;/a&gt; и &lt;a href=&quot;/pages/claude.html&quot;&gt;Claude&lt;/a&gt;. Проектът използва новия &lt;a href=&quot;/pages/model-context-protocol.html&quot;&gt;Model Context Protocol (MCP)&lt;/a&gt;, за да превърне чат прозореца в интерактивна игрова повърхност.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Как Slack управлява контекста в дълготрайни мултиагентни системи</title>
+      <link>https://svetni.me/articles/2026/04/29/slack-agent-context-management/</link>
+      <pubDate>Wed, 29 Apr 2026 21:20:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/slack-agent-context-management/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Според репортаж на &lt;a href=&quot;/pages/infoq.html&quot;&gt;InfoQ&lt;/a&gt; [1], базиран на подробен технически анализ от инженерния екип на &lt;a href=&quot;/pages/slack.html&quot;&gt;Slack&lt;/a&gt; [2], компанията е разработила иновативен подход за управление на контекста в сложни, дълготрайно работещи системи с изкуствен интелект. Традиционният метод на просто натрупване на хронологията от съобщения в „контекстния прозорец“ на големите езикови модели (LLM) се оказва неефективен при мащабни задачи, тъй като води до повишени разходи, забавяне и влошаване на качеството на отговорите.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Илон Мъск пред съда: OpenAI бе създадена, за да предотврати сценарий тип „Терминатор“</title>
+      <link>https://svetni.me/articles/2026/04/29/elon-musk-openai-trial-testimony/</link>
+      <pubDate>Wed, 29 Apr 2026 21:17:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/elon-musk-openai-trial-testimony/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;a href=&quot;/pages/elon-musk.html&quot;&gt;Илон Мъск&lt;/a&gt; и &lt;a href=&quot;/pages/sam-altman.html&quot;&gt;Сам Алтман&lt;/a&gt; се появиха заедно във федерална съдебна зала за първи път във вторник, изправяйки се един срещу друг в правен спор за еволюцията на &lt;a href=&quot;/pages/openai.html&quot;&gt;OpenAI&lt;/a&gt; и бъдещето на изкуствения интелект. Според репортаж на &lt;a href=&quot;/pages/wired.html&quot;&gt;WIRED&lt;/a&gt; [1], Мъск е използвал свидетелските си показания, за да представи делото като борба за фундаменталните принципи на благотворителността и безопасността на човечеството.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Google разшири достъпа на Пентагона до своя изкуствен интелект след отказ на Anthropic</title>
+      <link>https://svetni.me/articles/2026/04/29/google-pentagon-ai-access/</link>
+      <pubDate>Wed, 29 Apr 2026 20:47:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/google-pentagon-ai-access/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Според репортаж на TechCrunch [1], &lt;a href=&quot;/pages/google.html&quot;&gt;Google&lt;/a&gt; е предоставил на &lt;a href=&quot;/pages/dod.html&quot;&gt;Министерството на отбраната на САЩ&lt;/a&gt; (DOD) достъп до своите технологии за изкуствен интелект в рамките на класифицирани мрежи. Сделката на практика позволява всякакъв вид законна употреба на моделите, което бележи значителна промяна в позициите на големите технологични играчи по отношение на военните договори.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Databricks и Redox ускоряват клиничните данни: От месеци до минути чрез естествен език</title>
+      <link>https://svetni.me/articles/2026/04/29/databricks-redox-clinical-data/</link>
+      <pubDate>Wed, 29 Apr 2026 20:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/databricks-redox-clinical-data/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;&lt;a href=&quot;/pages/databricks.html&quot;&gt;Databricks&lt;/a&gt; и &lt;a href=&quot;/pages/redox.html&quot;&gt;Redox&lt;/a&gt; обявиха стратегическо партньорство, което трансформира начина, по който здравните организации обработват данни от &lt;a href=&quot;/pages/ehr.html&quot;&gt;електронни здравни досиета (EHR)&lt;/a&gt;. Чрез използването на естествен език за изграждане на конвейери за данни, технологията съкращава времето за интеграция от седмици и месеци до броени минути [1].&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>RLSD: Обучение на специализирани AI агенти с минимални ресурси</title>
+      <link>https://svetni.me/articles/2026/04/29/rlsd-custom-reasoning-agents/</link>
+      <pubDate>Wed, 29 Apr 2026 19:56:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/29/rlsd-custom-reasoning-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Обучението на AI модели, способни на сложно логическо разсъждение, традиционно изисква изчислителни ресурси, с каквито разполагат само най-големите технологични гиганти. Инженерните екипи често са принудени да избират между „дистилация“ на знание от огромни и скъпи модели или разчитане на методи за подсилено обучение (reinforcement learning), които обаче страдат от оскъдна обратна връзка.&lt;/p&gt;</description>
+    </item>
 
     <item>
       <title>Отвъд чата: SPDD и бъдещето на инженерството с ИИ</title>
@@ -338,21 +428,21 @@
     </item>
 
     <item>
-      <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
-      <link>https://svetni.me/articles/2026/04/23/black-box-ai-drift/</link>
-      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/black-box-ai-drift/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
-    </item>
-
-    <item>
       <title>„Тъмният басейн“ на Китай: Мощността за ИИ може да е 6000 пъти по-голяма от оценките</title>
       <link>https://svetni.me/articles/2026/04/23/chinas-dark-compute-power/</link>
       <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/chinas-dark-compute-power/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;Китай съобщи за зашеметяващо количество налична изчислителна мощ за изкуствен интелект, което според експерти насочва към съществуването на „тъмен басейн“ (dark pool) от ресурси, хиляди пъти по-голям от публичните доклади.&lt;/p&gt;</description>
+    </item>
+
+    <item>
+      <title>Рисковете на „черната кутия“: Как ИИ взема дизайн решения, които никой не е искал</title>
+      <link>https://svetni.me/articles/2026/04/23/black-box-ai-drift/</link>
+      <pubDate>Thu, 23 Apr 2026 18:44:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/04/23/black-box-ai-drift/</guid>
+      <author>Svetni.me Editorial</author>
+      <description>&lt;p&gt;Когато става въпрос за генериране на код чрез изкуствен интелект, процесът често изглежда магически: подаваме инструкции (prompts), получаваме работещ код. Но между входа и изхода се крие „черна кутия“, в която ИИ взема решения, които никой не е поискал – феномен, който експертите наричат „black box AI drift“.&lt;/p&gt;</description>
     </item>
 
     <item>
@@ -371,96 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/mit-teaching-ai-uncertainty/</guid>
       <author>Svetni.me Editorial</author>
       <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Alex Shipps/MIT CSAIL&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Meta започва да записва всяко кликване на служителите си за обучение на ИИ агенти</title>
-      <link>https://svetni.me/articles/2026/04/22/meta-tracking-employees-ai-training/</link>
-      <pubDate>Wed, 22 Apr 2026 22:39:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/meta-tracking-employees-ai-training/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Ще струва ли Claude Code 100 долара на месец? Кратка паника в общността на разработчиците</title>
-      <link>https://svetni.me/articles/2026/04/22/claude-code-pricing-confusion/</link>
-      <pubDate>Wed, 22 Apr 2026 22:34:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/claude-code-pricing-confusion/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Саймън Уилисън чрез Anthropic&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Google избягва „данъка NVIDIA“: Новите TPU чипове обясняват защо</title>
-      <link>https://svetni.me/articles/2026/04/22/google-tpu-nvidia-tax/</link>
-      <pubDate>Wed, 22 Apr 2026 21:27:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-tpu-nvidia-tax/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Докато останалата част от ИИ индустрията се бори за достъп до чиповете на NVIDIA, Google тихомълком затвърждава своето най-голямо стратегическо предимство. Според анализ на VentureBeat [1], технологичният гигант е успял да изгради пълна вертикална изолация от т.нар. „данък NVIDIA“ — изключително високите маржове на печалба, които конкурентите плащат за хардуер от серията Blackwell.&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Край на „претоварването с контекст“: Salesforce обнови своята платформа Agentforce</title>
-      <link>https://svetni.me/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</link>
-      <pubDate>Wed, 22 Apr 2026 21:14:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/salesforce-agentforce-vibes-context-overload/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;Докато много компании се надпреварват да подават все повече данни към своите ИИ модели, се появява нов, неочакван проблем: „претоварване с контекст“ (context overload). Според анализ на VentureBeat [1], това явление води до забавяне на системите, по-високи разходи и неточни резултати. В отговор на това, &lt;strong&gt;Salesforce&lt;/strong&gt; пусна мащабен ъпдейт на своята платформа — &lt;strong&gt;Agentforce Vibes 2.0&lt;/strong&gt;, който цели да реши този проблем чрез по-прецизно управление на информацията.&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Google пуска Gemini в „изолация“: AI вече може да работи на локална (on-premise) инфраструктура</title>
-      <link>https://svetni.me/articles/2026/04/22/google-gemini-air-gapped-server/</link>
-      <pubDate>Wed, 22 Apr 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-gemini-air-gapped-server/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>10x Science привлича 4,8 млн. долара за преодоляване на тесните места в дизайна на лекарства с ИИ</title>
-      <link>https://svetni.me/articles/2026/04/22/10x-science-seed-funding/</link>
-      <pubDate>Wed, 22 Apr 2026 20:05:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/10x-science-seed-funding/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: 10x Science чрез TechCrunch&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Google превръща Workspace в новия ви „офис стажант“ чрез ИИ ъпдейти</title>
-      <link>https://svetni.me/articles/2026/04/22/google-workspace-ai-intelligence/</link>
-      <pubDate>Wed, 22 Apr 2026 18:44:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/22/google-workspace-ai-intelligence/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;По време на конференцията Google Cloud Next тази седмица, Google обяви мащабни актуализации на своя пакет за производителност Workspace. Ключовият акцент е върху дълбоката интеграция на изкуствения интелект, който вече действа като интелигентен „офис стажант“, способен да автоматизира всичко – от писане на имейли до организиране на сложни електронни таблици [1].&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Мащабирането на агентния ИИ изисква здрава основа от данни</title>
-      <link>https://svetni.me/articles/2026/04/21/scaling-agentic-ai-data/</link>
-      <pubDate>Tue, 21 Apr 2026 21:47:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/scaling-agentic-ai-data/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Mozilla поправи 271 уязвимости във Firefox, открити от изкуствен интелект</title>
-      <link>https://svetni.me/articles/2026/04/21/firefox-mythos-bugs/</link>
-      <pubDate>Tue, 21 Apr 2026 21:43:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/firefox-mythos-bugs/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
-    </item>
-
-    <item>
-      <title>Регулатори и банки в спешна готовност след появата на Mythos AI</title>
-      <link>https://svetni.me/articles/2026/04/21/mythos-ai-banking-cyber-risks/</link>
-      <pubDate>Tue, 21 Apr 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/04/21/mythos-ai-banking-cyber-risks/</guid>
-      <author>Svetni.me Editorial</author>
-      <description>&lt;p&gt;&lt;br&gt;&lt;small&gt;Изображение: Генерирано чрез Svetni.me AI&lt;/small&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
