@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- User Section -->
+  <rect x="50" y="200" width="120" height="100" rx="8" fill="var(--color-secondary-container)" stroke="var(--color-secondary)" stroke-width="2" />
+  <text x="110" y="255" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-on-secondary-container)" text-anchor="middle" dominant-baseline="central">Потребител</text>
+  
+  <!-- Gordon Section -->
+  <path d="M400 150 L480 200 L480 300 L400 350 L320 300 L320 200 Z" fill="var(--color-primary-container)" stroke="var(--color-primary)" stroke-width="3" />
+  <text x="400" y="240" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--color-on-primary-container)" text-anchor="middle" dominant-baseline="central">Gordon</text>
+  <text x="400" y="270" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="var(--color-on-primary-container)" text-anchor="middle" dominant-baseline="central">AI Агент</text>
+  
+  <!-- Docker Infrastructure -->
+  <rect x="580" y="100" width="180" height="300" rx="8" fill="var(--color-tertiary-container)" stroke="var(--color-tertiary)" stroke-width="2" />
+  <text x="670" y="130" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="var(--color-on-tertiary-container)" text-anchor="middle" dominant-baseline="central">Docker Среда</text>
+  
+  <rect x="600" y="160" width="140" height="40" rx="4" fill="var(--color-surface-variant)" />
+  <text x="670" y="180" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface-variant)" text-anchor="middle" dominant-baseline="central">Контейнери</text>
+  
+  <rect x="600" y="220" width="140" height="40" rx="4" fill="var(--color-surface-variant)" />
+  <text x="670" y="240" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface-variant)" text-anchor="middle" dominant-baseline="central">Compose</text>
+  
+  <rect x="600" y="280" width="140" height="40" rx="4" fill="var(--color-surface-variant)" />
+  <text x="670" y="300" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface-variant)" text-anchor="middle" dominant-baseline="central">Логове</text>
+  
+  <rect x="600" y="340" width="140" height="40" rx="4" fill="var(--color-surface-variant)" />
+  <text x="670" y="360" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface-variant)" text-anchor="middle" dominant-baseline="central">Файлова система</text>
+
+  <!-- Arrows -->
+  <!-- User to Gordon -->
+  <path d="M170 250 L310 250" stroke="var(--color-outline)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <text x="240" y="235" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)" text-anchor="middle">Заявка / Одобрение</text>
+
+  <!-- Gordon to Docker -->
+  <path d="M480 250 L570 250" stroke="var(--color-outline)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <text x="525" y="235" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)" text-anchor="middle">Контекст / Действие</text>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orientation="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-outline)" />
+    </marker>
+  </defs>
+</svg>

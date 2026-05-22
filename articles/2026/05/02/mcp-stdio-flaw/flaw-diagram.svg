@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="500" fill="var(--color-on-surface)">Уязвимост в MCP STDIO Transport</text>
+
+  <!-- Attacker -->
+  <rect x="50" y="150" width="180" height="200" fill="var(--color-surface)" stroke="var(--color-tertiary)" stroke-width="2" rx="8" />
+  <text x="140" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-tertiary)">Атакуващ</text>
+  <text x="140" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">Зловредна команда</text>
+  <text x="140" y="260" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--color-tertiary)">rm -rf / ...</text>
+
+  <!-- MCP Protocol Layer -->
+  <rect x="290" y="150" width="220" height="200" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="3" rx="8" />
+  <text x="400" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="var(--color-primary)">MCP Protocol</text>
+  <text x="400" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">STDIO Transport</text>
+  
+  <rect x="310" y="240" width="180" height="60" fill="var(--color-secondary)" opacity="0.1" rx="4" />
+  <text x="400" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-primary)">Липса на санитаризация</text>
+  <text x="400" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-tertiary)">Директно изпълнение</text>
+
+  <!-- Target System -->
+  <rect x="570" y="150" width="180" height="200" fill="var(--color-surface)" stroke="var(--color-tertiary)" stroke-width="2" rx="8" />
+  <text x="660" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-tertiary)">Сървър / Workstation</text>
+  <rect x="590" y="220" width="140" height="80" fill="var(--color-secondary)" opacity="0.1" rx="4" />
+  <text x="660" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="var(--color-tertiary)">🔥 RCE Постигнат</text>
+
+  <!-- Flow Arrows -->
+  <path d="M 230 250 L 290 250" stroke="var(--color-secondary)" stroke-width="2" fill="none" marker-end="url(#arrow-head)" />
+  <path d="M 510 250 L 570 250" stroke="var(--color-secondary)" stroke-width="2" fill="none" marker-end="url(#arrow-head)" />
+
+  <!-- Footnote -->
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)" opacity="0.7">До 200,000 изложени сървъра според OX Security</text>
+
+  <defs>
+    <marker id="arrow-head" markerWidth="10" markerHeight="10" refX="9" refY="5" orientation="auto">
+      <path d="M0,0 L0,10 L10,5 Z" fill="var(--color-secondary)" />
+    </marker>
+  </defs>
+</svg>

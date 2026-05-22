@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="var(--color-on-surface)" />
+    </marker>
+  </defs>
+
+  <!-- Boxes -->
+  <!-- Left Side: Problem -->
+  <rect x="50" y="80" width="220" height="80" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="160" y="115" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">Интернет данни и</text>
+  <text x="160" y="135" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">научна фантастика</text>
+  
+  <path d="M 160 160 L 160 210" stroke="var(--color-on-surface)" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <rect x="50" y="220" width="220" height="80" rx="40" fill="var(--color-tertiary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="160" y="255" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">Предубеждение от</text>
+  <text x="160" y="275" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">обучението (Prior)</text>
+
+  <!-- Transition -->
+  <path d="M 270 260 L 520 260" stroke="var(--color-on-surface)" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrow)" />
+  <text x="400" y="245" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)">Трансформация</text>
+
+  <!-- Right Side: Solution -->
+  <rect x="530" y="80" width="220" height="80" rx="8" fill="var(--color-primary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="640" y="115" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">12,000+ Синтетични</text>
+  <text x="640" y="135" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">етични истории</text>
+
+  <path d="M 640 160 L 640 210" stroke="var(--color-on-surface)" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <rect x="530" y="220" width="220" height="80" rx="40" fill="var(--color-primary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="640" y="255" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">Етично подравняване</text>
+  <text x="640" y="275" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">(Alignment)</text>
+
+  <!-- Result -->
+  <path d="M 640 300 L 640 350" stroke="var(--color-on-surface)" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="640" y="400" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-on-surface)">Безопасен и съгласуван ИИ</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="500" fill="var(--color-on-surface)">Точност на медицинската диагностика</text>
+  <text x="400" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-on-surface)" opacity="0.7">(на база клинични случаи от Бостънска болница)</text>
+
+  <!-- Legend -->
+  <rect x="580" y="120" width="20" height="20" fill="var(--color-primary)" />
+  <text x="610" y="135" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">OpenAI o1</text>
+  
+  <rect x="580" y="150" width="20" height="20" fill="var(--color-surface)" />
+  <text x="610" y="165" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)">Лекари (експерти)</text>
+
+  <!-- Chart Area -->
+  <line x1="150" y1="400" x2="650" y2="400" stroke="var(--color-secondary)" stroke-width="2" />
+  <line x1="150" y1="120" x2="150" y2="400" stroke="var(--color-secondary)" stroke-width="2" />
+
+  <!-- Y-Axis Labels -->
+  <text x="130" y="405" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">0%</text>
+  <text x="130" y="330" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">25%</text>
+  <text x="130" y="260" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">50%</text>
+  <text x="130" y="190" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">75%</text>
+  <text x="130" y="120" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">100%</text>
+
+  <!-- Grid lines -->
+  <line x1="150" y1="325" x2="650" y2="325" stroke="var(--color-secondary)" opacity="0.3" stroke-width="1" />
+  <line x1="150" y1="255" x2="650" y2="255" stroke="var(--color-secondary)" opacity="0.3" stroke-width="1" />
+  <line x1="150" y1="185" x2="650" y2="185" stroke="var(--color-secondary)" opacity="0.3" stroke-width="1" />
+
+  <!-- Bars -->
+  <!-- o1: >66% (approx 67%) -->
+  <rect x="250" y="212" width="100" height="188" fill="var(--color-primary)" rx="4" />
+  <text x="300" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-primary)">&gt;66%</text>
+  <text x="300" y="425" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-on-surface)">OpenAI o1</text>
+
+  <!-- Physicians: ~50% -->
+  <rect x="450" y="260" width="100" height="140" fill="var(--color-surface)" rx="4" stroke="var(--color-secondary)" stroke-width="1" />
+  <text x="500" y="245" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-on-surface)" opacity="0.8">~50%</text>
+  <text x="500" y="425" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-on-surface)">Лекари</text>
+
+  <!-- Logic Symbol (CoT) -->
+  <circle cx="210" cy="212" r="15" fill="var(--color-secondary)" opacity="0.2" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="210" y="217" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-primary)">CoT</text>
+  <path d="M 225 212 L 250 212" stroke="var(--color-primary)" stroke-width="2" fill="none" />
+
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Axes -->
+  <line x1="100" y1="400" x2="700" y2="400" stroke="var(--color-on-surface)" stroke-width="2" />
+  <line x1="100" y1="400" x2="100" y2="100" stroke="var(--color-on-surface)" stroke-width="2" />
+  
+  <!-- Grid lines (simplified) -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="var(--color-on-surface)" stroke-width="1" stroke-dasharray="4" opacity="0.2" />
+  <line x1="100" y1="200" x2="700" y2="200" stroke="var(--color-on-surface)" stroke-width="1" stroke-dasharray="4" opacity="0.2" />
+  <line x1="300" y1="400" x2="300" y2="100" stroke="var(--color-on-surface)" stroke-width="1" stroke-dasharray="4" opacity="0.2" />
+  <line x1="500" y1="400" x2="500" y2="100" stroke="var(--color-on-surface)" stroke-width="1" stroke-dasharray="4" opacity="0.2" />
+
+  <!-- Labels -->
+  <text x="400" y="460" font-family="system-ui, sans-serif" font-size="20" fill="var(--color-on-surface)" text-anchor="middle">Цена (Blended Cost per 1M tokens)</text>
+  <text x="40" y="250" font-family="system-ui, sans-serif" font-size="20" fill="var(--color-on-surface)" text-anchor="middle" transform="rotate(-90, 40, 250)">Производителност</text>
+  
+  <!-- The "Frontier" Curve (Schematic) -->
+  <path d="M 150 350 Q 250 200 650 150" fill="none" stroke="var(--color-tertiary)" stroke-width="4" stroke-dasharray="8" opacity="0.5" />
+  <text x="450" y="140" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-tertiary)" text-anchor="middle">Традиционна крива на ефективност</text>
+
+  <!-- Data Points -->
+  <!-- Frontier Models -->
+  <circle cx="450" cy="180" r="8" fill="var(--color-secondary)" />
+  <text x="450" y="165" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle">GPT-5 / Gemini Pro</text>
+  
+  <!-- Lite Models -->
+  <circle cx="200" cy="320" r="8" fill="var(--color-secondary)" />
+  <text x="200" y="345" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle">Flash / Lite</text>
+
+  <!-- Perceptron Mk1 (The Disruptor) -->
+  <circle cx="150" cy="170" r="10" fill="var(--color-primary)" />
+  <text x="150" y="150" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="var(--color-primary)" text-anchor="middle">Perceptron Mk1</text>
+  
+  <!-- Callout Arrow -->
+  <path d="M 150 250 L 150 190" fill="none" stroke="var(--color-primary)" stroke-width="3" />
+  <path d="M 145 195 L 150 185 L 155 195" fill="none" stroke="var(--color-primary)" stroke-width="3" />
+  <text x="160" y="240" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-primary)" font-weight="500">80-90% по-евтин</text>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--color-on-surface)" text-anchor="middle">Граница на ефективност (Efficiency Frontier)</text>
+</svg>

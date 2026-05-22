@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- AI Safety Boundary -->
+  <circle cx="400" cy="250" r="180" fill="none" stroke="var(--color-primary)" stroke-width="4" stroke-dasharray="12,8" />
+  <text x="400" y="110" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-primary)" text-anchor="middle">Филтър за безопасност</text>
+  
+  <!-- User Query -->
+  <path d="M40 250 L180 250" stroke="var(--color-on-surface)" stroke-width="4" fill="none" />
+  <path d="M180 240 L200 250 L180 260 Z" fill="var(--color-on-surface)" />
+  <text x="110" y="230" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-on-surface)" text-anchor="middle">Въпрос от потребител</text>
+  
+  <!-- Breach / Interaction -->
+  <circle cx="400" cy="250" r="40" fill="var(--color-tertiary)" opacity="0.2" />
+  <text x="400" y="255" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">AI Модел</text>
+  
+  <!-- Dangerous Advice Out -->
+  <path d="M440 250 L600 250" stroke="#d32f2f" stroke-width="4" fill="none" />
+  <path d="M600 240 L620 250 L600 260 Z" fill="#d32f2f" />
+  <text x="530" y="230" font-family="system-ui, sans-serif" font-size="16" fill="#d32f2f" text-anchor="middle">Опасен съвет</text>
+  
+  <!-- Warning Symbol -->
+  <path d="M680 220 L720 280 L640 280 Z" fill="#d32f2f" />
+  <text x="680" y="270" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">!</text>
+  <text x="680" y="305" font-family="system-ui, sans-serif" font-size="14" fill="#d32f2f" text-anchor="middle">Риск от вреда</text>
+</svg>
