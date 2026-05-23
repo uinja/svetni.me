@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 22 May 2026 22:24:00 +0000</pubDate>
+    <pubDate>Sat, 23 May 2026 21:24:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Google преминава от Gemini CLI към Antigravity CLI: Бъдещето на многоагентните системи</title>
+      <link>https://svetni.me/articles/2026/05/23/gemini-cli-transition-antigravity/</link>
+      <pubDate>Sat, 23 May 2026 21:24:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/gemini-cli-transition-antigravity/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според официално съобщение на Google [1], компанията започва преход на своя популярен инструмент Gemini CLI към изцяло новата платформа Antigravity CLI. Промяната е продиктувана от бързото развитие на изкуствения интелект и прехода към т.нар. „многоагентна реалност“, при която сложните задачи изискват едновременната работа на множество специализирани агенти [1], [2].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Слепи петна в защитата: Нови атаки заобикалят филтрите на AI агенти</title>
+      <link>https://svetni.me/articles/2026/05/23/blind-spots-domain-camouflaged-injection/</link>
+      <pubDate>Sat, 23 May 2026 21:17:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/blind-spots-domain-camouflaged-injection/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според научно изследване, публикувано в arXiv [1], съвременните детектори за злонамерени команди в големи езикови модели (LLM) страдат от систематично „сляпо петно“. Нова техника, наречена „домейн-камуфлажна инжекция“ (DCI), позволява на атакуващите да заобикалят защитите, като маскират злонамерения товар с терминологията и структурата на целевия документ.</p>]]></description>
+    </item>
 
     <item>
       <title>Dun &amp; Bradstreet преосмисли базата си данни от 642 милиона фирми за нуждите на AI агентите</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/12/openai-lawsuit-chatgpt-overdose/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Семейството на 19-годишен колежанин заведе дело срещу OpenAI, твърдейки, че ChatGPT е изиграл решаваща роля за фаталното предозиране на техния син. Според публикация на Machine Brief [1], случаят поставя под сериозно съмнение механизмите за безопасност на съвременните модели с изкуствен интелект.</p>]]></description>
-    </item>
-
-    <item>
-      <title>„DeployCo“ на OpenAI: Заимстване на стратегията на Palantir за бетониране на корпоративния ИИ</title>
-      <link>https://svetni.me/articles/2026/05/11/openai-deployco-palantir-playbook/</link>
-      <pubDate>Mon, 11 May 2026 22:05:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/11/openai-deployco-palantir-playbook/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В стратегически ход, който бележи нов етап в комерсиализацията на изкуствения интелект, OpenAI официално стартира <strong>DeployCo</strong> (OpenAI Deployment Company). Според публикация на The Decoder [1], това е дъщерно дружество с мажоритарен контрол, подкрепено от над 4 милиарда долара инвестиции от гиганти като SoftBank, Goldman Sachs и TPG. Целта е ясна: превръщането на ИИ от абстрактна технология в дълбоко интегриран компонент от корпоративните работни процеси.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Пробив в ефективността: Baidu Ernie 5.1 намалява разходите за обучение с 94%</title>
-      <link>https://svetni.me/articles/2026/05/11/baidu-ernie-5-1-cost-reduction/</link>
-      <pubDate>Mon, 11 May 2026 21:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/11/baidu-ernie-5-1-cost-reduction/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Китайският технологичен гигант Baidu представи новата версия на своя езиков модел — <strong>Ernie 5.1</strong>, която поставя нови стандарти за икономическа ефективност в индустрията. Според последните данни [1], моделът изисква само една трета от параметрите на своя предшественик и успява да намали разходите за предварително обучение с цели 94% в сравнение с конкурентни модели от същия клас.</p>]]></description>
     </item>
   </channel>
 </rss>
