@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background Card -->
+  <rect width="800" height="500" rx="16" fill="var(--color-background)" stroke="var(--color-secondary)" stroke-width="2" />
+  
+  <!-- Header Title -->
+  <text x="400" y="48" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="600" font-size="24" fill="var(--color-primary)">Парадоксът на разходите за AI</text>
+  <text x="400" y="80" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="var(--color-secondary)">Спадът в единичните цени срещу експлозивния ръст при агентите</text>
+  
+  <!-- Left Column: Unit Cost -->
+  <rect x="100" y="128" width="280" height="220" rx="12" fill="var(--color-background)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="240" y="160" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="var(--color-primary)">Цена на токен</text>
+  <text x="240" y="212" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="700" font-size="44" fill="var(--color-tertiary)">-90%</text>
+  <text x="240" y="260" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="var(--color-on-surface)">Прогноза за спад до 2030 г.</text>
+  <text x="240" y="284" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="var(--color-secondary)">(данни на Gartner)</text>
+  <!-- Downward Arrow inside Box -->
+  <path d="M 336 176 L 336 220 M 328 212 L 336 220 L 344 212" fill="none" stroke="var(--color-tertiary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Right Column: Consumption -->
+  <rect x="420" y="128" width="280" height="220" rx="12" fill="var(--color-background)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="560" y="160" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="var(--color-primary)">Потребление</text>
+  <text x="560" y="212" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="700" font-size="44" fill="var(--color-tertiary)">24x</text>
+  <text x="560" y="260" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="var(--color-on-surface)">Увеличение при AI агентите</text>
+  <text x="560" y="284" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="var(--color-secondary)">(прогноза на Goldman Sachs)</text>
+  <!-- Upward Arrow inside Box -->
+  <path d="M 656 220 L 656 176 M 648 184 L 656 176 L 664 184" fill="none" stroke="var(--color-tertiary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Bottom Box: Net Impact -->
+  <rect x="148" y="376" width="504" height="88" rx="8" fill="var(--color-secondary)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="400" y="408" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="600" font-size="14" fill="var(--color-on-surface)">КРАЕН ЕФЕКТ: Разходите за компютърна мощ надхвърлят спестяванията</text>
+  <text x="400" y="436" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="var(--color-on-surface)">Бюджетите се изчерпват бързо поради постоянни цикли между автономни агенти</text>
+</svg>

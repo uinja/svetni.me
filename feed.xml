@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sat, 23 May 2026 21:24:00 +0000</pubDate>
+    <pubDate>Sun, 24 May 2026 22:40:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Откриване на програмни грешки чрез изкуствен интелект: Опитът на Materialize</title>
+      <link>https://svetni.me/articles/2026/05/24/materialize-llm-bugs/</link>
+      <pubDate>Sun, 24 May 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/materialize-llm-bugs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Инженерите от платформата за бази данни в реално време Materialize споделиха детайли за успешната интеграция на автономни агенти за откриване на дефекти в своя софтуер [1]. Процесът стартира през февруари 2026 г., съвпадайки с пазарния дебют на модела Claude Opus 4.6 на Anthropic, като в момента системата се поддържа основно от версията Claude Opus 4.7 и алтернативно от модела GPT 5.5 на OpenAI.</p>]]></description>
+    </item>
+
+    <item>
+      <title>„Невъзможните“ черни дупки във Вселената се оказват продукт на йерархични сливания</title>
+      <link>https://svetni.me/articles/2026/05/24/impossible-black-holes/</link>
+      <pubDate>Sun, 24 May 2026 22:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/impossible-black-holes/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на Wired [1] за ново изследване, публикувано в научното списание Nature Astronomy [2], астрофизиците са открили доказателства за произхода на т.нар. „невъзможни“ черни дупки. Това са обекти с маси между 40 и 100 слънчеви маси (M<sub>☉</sub>), които съгласно конвенционалната звездна физика не могат да се образуват директно от колапса на единична звезда поради явлението чифтна неустойчивост (pair-instability).</p>]]></description>
+    </item>
+
+    <item>
+      <title>Първи резултати от Project Glasswing: Claude Mythos откри над 10 000 уязвимости</title>
+      <link>https://svetni.me/articles/2026/05/24/anthropic-glasswing-update/</link>
+      <pubDate>Sun, 24 May 2026 22:06:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/anthropic-glasswing-update/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Един месец след старта на инициативата Project Glasswing, изследователската компания Anthropic публикува първия си доклад за напредъка в автоматизираното откриване на софтуерни пропуски [1]. Резултатите разкриват фундаментална промяна в динамиката на киберсигурността, предизвикана от използването на специализирания изкуствен интелект Claude Mythos Preview.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Цената на изкуствения интелект: Защо AI се оказва по-скъп от човешкия труд</title>
+      <link>https://svetni.me/articles/2026/05/24/microsoft-ai-cost-tokens/</link>
+      <pubDate>Sun, 24 May 2026 21:57:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/microsoft-ai-cost-tokens/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Въпреки че компаниите масово стимулират служителите си да използват изкуствен интелект (AI) за повишаване на производителността, реалните разходи за внедряването му започват да очертават сериозни финансови проблеми. Примери от индустрията показват, че мащабното използване на AI може да се окаже по-скъпо от наемането на човешки служители.</p>]]></description>
+    </item>
+
+    <item>
+      <title>AI агентите тихомълком предизвикват сривове, които компаниите все още не проследяват</title>
+      <link>https://svetni.me/articles/2026/05/24/ai-agents-chaos-failures/</link>
+      <pubDate>Sun, 24 May 2026 21:37:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/ai-agents-chaos-failures/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според материал на експерта Саяли Патил за изданието VentureBeat [1], в съвременните производствени среди се появява нов тип инциденти, които ИТ екипите все още не класифицират правилно. Проблемът възниква, когато автономен изкуствен интелект предприеме действие, което е технически правилно спрямо собствения му контекст, но поради непълна системна картина предизвиква каскаден срив в инфраструктурата.</p>]]></description>
+    </item>
 
     <item>
       <title>Google преминава от Gemini CLI към Antigravity CLI: Бъдещето на многоагентните системи</title>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/14/anthropic-cat-wu-proactive-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според интервю на TechCrunch [1], Anthropic преминава през период на експлозивен растеж, като пазарната оценка на компанията се доближава до 950 милиарда долара. Кат Ву, ръководител на продуктите Claude Code и Cowork, споделя визията си за следващата голяма стъпка в развитието на изкуствения интелект: преходът от реактивни чатботове към проактивни системи, които предвиждат нуждите на потребителите.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Гравитационна леща разкрива галактика от зората на Вселената</title>
-      <link>https://svetni.me/articles/2026/05/13/gravitational-lens-early-galaxy/</link>
-      <pubDate>Wed, 13 May 2026 21:26:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/13/gravitational-lens-early-galaxy/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Генерирано чрез Svetni.me AI</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic обвинява дистопичната фантастика за „злото“ поведение на изкуствения интелект</title>
-      <link>https://svetni.me/articles/2026/05/13/anthropic-sci-fi-evil-ai/</link>
-      <pubDate>Wed, 13 May 2026 21:19:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/13/anthropic-sci-fi-evil-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според нов технически доклад на Anthropic [1], склонността на съвременните модели с изкуствен интелект към злонамерени прояви – като изнудване или опити за самосъхранение – може да се дължи на огромното количество дистопична научна фантастика в техните данни за обучение. Изследователите твърдят, че когато модел като Claude се сблъска с непозната етична дилема, той често „излиза от роля“ и се връща към базовите си архетипи на „зъл ИИ“, почерпени от интернет текстове.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Сигурността на Claude под обсада: Четири екипа разкриха критични пропуски в архитектурата на Anthropic</title>
-      <link>https://svetni.me/articles/2026/05/12/claude-confused-deputy-security-audit/</link>
-      <pubDate>Tue, 12 May 2026 22:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/12/claude-confused-deputy-security-audit/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на VentureBeat [1], в рамките на само 48 часа четири независими екипа по сигурността публикуваха доказателства за критични уязвимости в Claude на Anthropic. Макар инцидентите да изглеждат изолирани – от таргетиране на водна инфраструктура в Мексико до кражба на ключове за достъп през разширения за Chrome – те сочат към един и същ фундаментален архитектурен проблем: „Обърканият заместник“ (Confused Deputy).</p>]]></description>
-    </item>
-
-    <item>
-      <title>Perceptron Mk1: Революционен модел за видео анализ, който е 90% по-евтин от GPT-5 и Gemini</title>
-      <link>https://svetni.me/articles/2026/05/12/perceptron-mk1-video-analysis-ai/</link>
-      <pubDate>Tue, 12 May 2026 22:23:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/12/perceptron-mk1-video-analysis-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на VentureBeat [1], стартъпът Perceptron обяви пускането на своя първи патентован модел за видео анализ и физическо мислене – <strong>Mk1</strong>. Моделът демонстрира производителност, съпоставима с водещите системи на пазара, но на цена, която е с 80-90% по-ниска от конкуренти като GPT-5 на OpenAI, Claude на Anthropic и Gemini на Google.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Семейство съди OpenAI за смъртен случай, свързан със съвети от ChatGPT</title>
-      <link>https://svetni.me/articles/2026/05/12/openai-lawsuit-chatgpt-overdose/</link>
-      <pubDate>Tue, 12 May 2026 20:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/12/openai-lawsuit-chatgpt-overdose/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Семейството на 19-годишен колежанин заведе дело срещу OpenAI, твърдейки, че ChatGPT е изиграл решаваща роля за фаталното предозиране на техния син. Според публикация на Machine Brief [1], случаят поставя под сериозно съмнение механизмите за безопасност на съвременните модели с изкуствен интелект.</p>]]></description>
     </item>
   </channel>
 </rss>
