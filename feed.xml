@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 24 May 2026 22:40:00 +0000</pubDate>
+    <pubDate>Mon, 25 May 2026 20:45:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Microsoft представи MDASH: Мултиагентна система за автоматизирано откриване на уязвимости в Windows и Azure</title>
+      <link>https://svetni.me/articles/2026/05/25/microsoft-mdash/</link>
+      <pubDate>Mon, 25 May 2026 20:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/microsoft-mdash/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Технологичният гигант Microsoft обяви внедряването на нова експериментална система за киберсигурност, наречена MDASH (Multi-Model Agentic Scanning Harness) [1]. Този проект бележи важен преход в софтуерното инженерство и сигурността — от преминаването от единични prompt-инструкции към оркестрация на десетки и стотици специализирани ИИ агенти, работещи съвместно. Проектът е представен от Тесу Ким (Taesoo Kim), вицепрезидент по въпросите на мултиагентната сигурност в компанията, и цели да реши проблема с мащабното откриване на уязвимости в сложни и чувствителни кодови среди [2].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Кампанията Megalodon: Мащабна атака в GitHub инфектира над 5500 хранилища с цел кражба на поверителни данни</title>
+      <link>https://svetni.me/articles/2026/05/25/megalodon-github-attack/</link>
+      <pubDate>Mon, 25 May 2026 19:12:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/megalodon-github-attack/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на Mashable [1], мащабна кампания за компрометиране на веригата за доставки на софтуер, наречена Megalodon, е засегнала над 5500 проекта с отворен код в рамките на платформи като GitHub. На 18 май 2026 г., в рамките на шестчасов времеви прозорец, автоматизирана кампания е инжектирала 5718 злонамерени коммита в общо 5561 хранилища [1, 2].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Изграждане на Pi с Pi: Ерата на AI и натискът върху отворения код</title>
+      <link>https://svetni.me/articles/2026/05/25/pi-oss/</link>
+      <pubDate>Mon, 25 May 2026 18:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/pi-oss/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В личния си блог известният разработчик Армин Ронахер сподели критични наблюдения и практически опит от работата си като поддържащ на проекта Pi – минималистичен AI агент за кодиране. Инструментът за автоматизирано програмиране сега е част от организацията Earendil, но негов основен създател остава Марио Зехнер. За разработването на Pi екипът прилага класическата практика на „dogfooding“ (самозахранване), използвайки самия агент за промени по неговия собствен код [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Откриване на програмни грешки чрез изкуствен интелект: Опитът на Materialize</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/anthropic-routines-claude-code/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според публикация на InfoQ [1], компанията Anthropic е представила нова функционалност, наречена <strong>Routines</strong> за своята система за програмиране Claude Code. Функцията позволява на разработчиците да автоматизират сложни работни процеси, които се изпълняват по разписание, чрез API извиквания или в отговор на външни събития.</p>]]></description>
-    </item>
-
-    <item>
-      <title>OpenAI пуска ChatGPT за лични финанси: Вече можете да свържете банковите си сметки</title>
-      <link>https://svetni.me/articles/2026/05/15/chatgpt-personal-finance/</link>
-      <pubDate>Fri, 15 May 2026 19:20:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/chatgpt-personal-finance/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В петък OpenAI представи нова функционалност в ChatGPT, която позволява на потребителите директно да свързват банковите си сметки за автоматизиран анализ на разходите и финансово планиране [1]. Инструментът е наличен в пробен режим (preview) за абонатите на ChatGPT Pro в САЩ и бележи сериозна стъпка към превръщането на чатбота в персонален финансов асистент.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Китайска доминация в ИИ: Как Пекин изпревари САЩ на водеща световна конференция</title>
-      <link>https://svetni.me/articles/2026/05/14/china-ai-dominance/</link>
-      <pubDate>Thu, 14 May 2026 07:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/14/china-ai-dominance/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на South China Morning Post [1], позоваващ се на мащабен анализ на данни от престижната конференция International Conference on Learning Representations (ICLR), Китай е установил решително превъзходство в научните изследвания в областта на изкуствения интелект. Анализът, извършен от компютърния учен Дмитро Лопушански [2], показва, че сред топ 50 институциите с най-голям принос, тези от континентален Китай съставляват цели 44%.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Кат Ву от Anthropic: В бъдещето изкуственият интелект ще предвижда нуждите ви</title>
-      <link>https://svetni.me/articles/2026/05/14/anthropic-cat-wu-proactive-ai/</link>
-      <pubDate>Thu, 14 May 2026 07:35:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/14/anthropic-cat-wu-proactive-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според интервю на TechCrunch [1], Anthropic преминава през период на експлозивен растеж, като пазарната оценка на компанията се доближава до 950 милиарда долара. Кат Ву, ръководител на продуктите Claude Code и Cowork, споделя визията си за следващата голяма стъпка в развитието на изкуствения интелект: преходът от реактивни чатботове към проактивни системи, които предвиждат нуждите на потребителите.</p>]]></description>
     </item>
   </channel>
 </rss>
