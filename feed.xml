@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 25 May 2026 20:45:00 +0000</pubDate>
+    <pubDate>Tue, 26 May 2026 22:41:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Текстови интерфейси в Java: TamboUI обещава модерна конзолна екосистема</title>
+      <link>https://svetni.me/articles/2026/05/26/tamboui-java-tui/</link>
+      <pubDate>Tue, 26 May 2026 22:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/26/tamboui-java-tui/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Общността на Java посрещна появата на TamboUI – първата модерна библиотека за изграждане на текстови потребителски интерфейси (TUI) за екосистемата [1]. Вдъхновена от Rust-базираната библиотека Ratatui, която захранва конзолни инструменти като Claude Code CLI, TamboUI обещава поддръжка от ниско ниво на конзолно чертане до високо ниво на компоненти и управление на събития [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Възходът на AI и краят на форума Stack Overflow какъвто го познаваме</title>
+      <link>https://svetni.me/articles/2026/05/26/stack-overflow-decline-ai/</link>
+      <pubDate>Tue, 26 May 2026 22:35:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/26/stack-overflow-decline-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Въвеждането на генеративни асистенти с изкуствен интелект промени драстично софтуерната индустрия, като една от най-значимите жертви се оказа публичният форум на Stack Overflow [1]. Още през юли 2023 г. предприемачът Илон Мъск описа ситуацията около платформата като „смърт чрез големи езикови модели (LLM)“ [2]. Въпреки че активността на потребителите е спаднала драстично, самата компания намира нови начини за генериране на приходи [2].</p>]]></description>
+    </item>
 
     <item>
       <title>Microsoft представи MDASH: Мултиагентна система за автоматизирано откриване на уязвимости в Windows и Azure</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/claude-enterprise-agent-control-plane/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Следващата голяма битка в корпоративния сектор няма да се води за това чий модел е по-интелигентен, а за това кой ще контролира инфраструктурата, през която работят AI агентите. Според последните анализи на пазара [1], Anthropic залага всичко на т.нар. „контролна равнина за агенти“ (agent control plane) – слой, който разделя изпълнението на задачите от тяхното управление и сигурност.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Промпт инженерингът отвъд единичната метрика: Пътят към многокритерийна оптимизация</title>
-      <link>https://svetni.me/articles/2026/05/15/multi-objective-prompt-bandits/</link>
-      <pubDate>Fri, 15 May 2026 20:27:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/multi-objective-prompt-bandits/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Промпт инженерингът (prompt engineering) се превърна в основен стълб при работата с големи езикови модели (LLMs), но индустрията често пренебрегва сложността на този процес. Масовата практика разчита на единични метрики за оценка на успеха, което според нови изследвания е грубо опростяване на реалността.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic представи Routines: Автоматизирани работни процеси за Claude Code</title>
-      <link>https://svetni.me/articles/2026/05/15/anthropic-routines-claude-code/</link>
-      <pubDate>Fri, 15 May 2026 20:16:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/anthropic-routines-claude-code/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на InfoQ [1], компанията Anthropic е представила нова функционалност, наречена <strong>Routines</strong> за своята система за програмиране Claude Code. Функцията позволява на разработчиците да автоматизират сложни работни процеси, които се изпълняват по разписание, чрез API извиквания или в отговор на външни събития.</p>]]></description>
     </item>
   </channel>
 </rss>
