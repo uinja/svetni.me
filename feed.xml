@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 26 May 2026 22:41:00 +0000</pubDate>
+    <pubDate>Wed, 27 May 2026 22:36:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>ИИ фабриките: Новата инфраструктура на интелекта</title>
+      <link>https://svetni.me/articles/2026/05/27/ai-factories-new-infrastructure/</link>
+      <pubDate>Wed, 27 May 2026 22:36:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/27/ai-factories-new-infrastructure/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според блог публикация на технологичния гигант NVIDIA, индустрията преминава през фундаментална трансформация от традиционни центрове за данни към изграждане на т.нар. „ИИ фабрики“ (AI factories). Докато в индустриалната ера електроцентралите са превръщали енергията в електричество, в ерата на изкуствения интелект ИИ фабриките преобразуват енергията в токени – основната производствена единица за разсъждения, автономни агенти и интелигентни системи. Икономиката на тези фабрики се дефинира изцяло от показатели като токени в секунда, токени на ват, цена на токен, степен на използване на наличните GPU ресурси и време на непрекъсната работа [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Нова вълна в AI: Преодоляване на предизвикателствата при високочестотните прогнози</title>
+      <link>https://svetni.me/articles/2026/05/27/apex-high-frequency-predictions/</link>
+      <pubDate>Wed, 27 May 2026 22:35:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/27/apex-high-frequency-predictions/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Новата архитектура APEX отбелязва значителен напредък в прогнозирането на вълнови полета, справяйки се с едно от най-големите предизвикателства в тази сфера – симулацията на високочестотни вълни. Според публикация на изданието Machine Brief [1], докато съвременните системи за машинно обучение и дълбоко обучение стават все по-ефективни при стандартни условия, те се сблъскват със сериозни трудности при липсата на достатъчно изходни данни за високите честоти.</p>]]></description>
+    </item>
 
     <item>
       <title>Текстови интерфейси в Java: TamboUI обещава модерна конзолна екосистема</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/zero-emission-cement-ubc-breakthrough/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Производството на цимент е отговорно за близо 8% от глобалните емисии на въглероден диоксид, но нов научен пробив обещава да промени това фундаментално. Изследователи от Университета на Британска Колумбия (UBC) представиха електрохимичен процес, който позволява производството на циментови прекурсори при изключително ниската температура от 60°C [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Workshop: Вече можем да отстраняваме грешки в AI агенти локално</title>
-      <link>https://svetni.me/articles/2026/05/15/raindrop-workshop/</link>
-      <pubDate>Fri, 15 May 2026 20:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/raindrop-workshop/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Разработчиците вече разполагат с мощен инструмент за локално отстраняване на грешки и оценка на AI агенти благодарение на новия проект с отворен код Workshop. Създаден от стартъпа за наблюдаемост Raindrop, инструментът предоставя табло за управление в реално време, което следи всеки токен, извикване на инструменти и решение, взето от автономните системи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Битката за корпоративния AI: Контролната равнина е по-важна от моделите</title>
-      <link>https://svetni.me/articles/2026/05/15/claude-enterprise-agent-control-plane/</link>
-      <pubDate>Fri, 15 May 2026 20:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/claude-enterprise-agent-control-plane/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Следващата голяма битка в корпоративния сектор няма да се води за това чий модел е по-интелигентен, а за това кой ще контролира инфраструктурата, през която работят AI агентите. Според последните анализи на пазара [1], Anthropic залага всичко на т.нар. „контролна равнина за агенти“ (agent control plane) – слой, който разделя изпълнението на задачите от тяхното управление и сигурност.</p>]]></description>
     </item>
   </channel>
 </rss>
