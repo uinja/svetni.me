@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Wed, 27 May 2026 22:36:00 +0000</pubDate>
+    <pubDate>Thu, 28 May 2026 22:04:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Claude Opus 4.8: По-евтин режим и съгласуване на ниво Mythos</title>
+      <link>https://svetni.me/articles/2026/05/28/claude-opus-4-8-launch/</link>
+      <pubDate>Thu, 28 May 2026 22:04:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/28/claude-opus-4-8-launch/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според публикация във VentureBeat [1], технологичната компания Anthropic обяви официалното пускане на новия си флагмански модел Claude Opus 4.8. Обновлението носи значителни подобрения в производителността при програмиране, логическо мислене и управление на автономни системи, като същевременно въвежда нови възможности за потребителите и разработчиците [2].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Euro-Office: Европейската суверенна алтернатива на Microsoft Office и Google Docs</title>
+      <link>https://svetni.me/articles/2026/05/28/euro-office-sovereign-cloud-alternative/</link>
+      <pubDate>Thu, 28 May 2026 21:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/05/28/euro-office-sovereign-cloud-alternative/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Европейски технологични компании се обединяват за старта на Euro-Office — нов облачен офис пакет с отворен код, проектиран като директен отговор на американските платформи Microsoft Office (Microsoft 365) и Google Docs. Официалното пускане на версия 1.0 е планирано за 9 юни 2026 г., като проектът ще бъде свободно достъпен в публичните хранилища на GitHub. Решението идва в момент на засилен интерес към инициативите за цифров суверенитет в Европа, подхранван от нежеланието на много държавни и частни организации извън САЩ да зависят от американски облачни услуги [1].</p>]]></description>
+    </item>
 
     <item>
       <title>ИИ фабриките: Новата инфраструктура на интелекта</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/zero-emission-cement-basalt/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Производството на цимент е отговорно за близо 8% от глобалните емисии на въглероден диоксид, което го прави един от най-големите индустриални замърсители на планетата. Докато преминаването към чиста енергия за захранване на пещите е важна стъпка, истинското предизвикателство остават т.нар. „преки процесни емисии“. Те възникват при самото химическо разлагане на варовика (калциев карбонат) до вар — процес, който неизбежно освобождава CO₂.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Alchemy Models: Обучение на AI модели без екип от специалисти</title>
-      <link>https://svetni.me/articles/2026/05/15/alchemy-models-empromptu-ai/</link>
-      <pubDate>Fri, 15 May 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/alchemy-models-empromptu-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Една от най-големите бариери пред навлизането на изкуствения интелект в бизнеса – нуждата от скъпи специалисти по машинно обучение (ML) – е напът да изчезне. Стартъпът Empromptu AI представи платформата <strong>Alchemy Models</strong>, която позволява на предприятията да обучават персонализирани AI модели директно от своите производствени процеси [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Революция в строителството: Нискотемпературен процес за цимент с нулева емисия</title>
-      <link>https://svetni.me/articles/2026/05/15/zero-emission-cement-ubc-breakthrough/</link>
-      <pubDate>Fri, 15 May 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/15/zero-emission-cement-ubc-breakthrough/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Производството на цимент е отговорно за близо 8% от глобалните емисии на въглероден диоксид, но нов научен пробив обещава да промени това фундаментално. Изследователи от Университета на Британска Колумбия (UBC) представиха електрохимичен процес, който позволява производството на циментови прекурсори при изключително ниската температура от 60°C [1].</p>]]></description>
     </item>
   </channel>
 </rss>
