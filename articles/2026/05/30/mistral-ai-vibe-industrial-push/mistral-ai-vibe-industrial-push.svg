@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="100%" height="auto">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="16" />
+
+  <!-- Title / Header -->
+  <text x="40" y="45" font-family="'Inter', 'Roboto', sans-serif" font-size="20" font-weight="bold" fill="#202124">Стратегията за пълен стек на Mistral AI</text>
+  <text x="40" y="70" font-family="'Inter', 'Roboto', sans-serif" font-size="14" fill="#666666">Трите стълба на френската компания за конкуренция с големите американски модели</text>
+
+  <!-- Central Hub -->
+  <g transform="translate(320, 155)">
+    <rect width="160" height="70" rx="8" fill="#1a30ae" />
+    <text x="80" y="32" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Mistral AI</text>
+    <text x="80" y="52" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#ffffff" opacity="0.9">AI NOW Summit 2026</text>
+  </g>
+
+  <!-- Connection Lines from Center to Pillars -->
+  <!-- Line to Pillar 1 (Left) -->
+  <path d="M 320 190 Q 250 190, 240 160" fill="none" stroke="#1a30ae" stroke-width="2" stroke-dasharray="4,2" />
+  <!-- Line to Pillar 2 (Right Top) -->
+  <path d="M 480 190 Q 550 190, 560 145" fill="none" stroke="#1a30ae" stroke-width="2" stroke-dasharray="4,2" />
+  <!-- Line to Pillar 3 (Right Bottom) -->
+  <path d="M 480 190 Q 550 190, 560 235" fill="none" stroke="#1a30ae" stroke-width="2" stroke-dasharray="4,2" />
+
+  <!-- Pillar 1: Vibe Agent Platform (Left) -->
+  <g transform="translate(40, 105)">
+    <rect width="180" height="150" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="1.5" />
+    <text x="90" y="25" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="13" font-weight="bold" fill="#1a30ae">1. Платформа Vibe</text>
+    <text x="90" y="45" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#666666">Ребрандиране на Le Chat</text>
+    <line x1="20" y1="60" x2="160" y2="60" stroke="#e0e0e0" stroke-width="1" />
+    <!-- Details -->
+    <text x="20" y="80" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Work Mode (Google/Slack)</text>
+    <text x="20" y="100" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Code Mode (GitHub)</text>
+    <text x="20" y="120" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Автономни бизнес агенти</text>
+  </g>
+
+  <!-- Pillar 2: Industrial AI (Right Top) -->
+  <g transform="translate(580, 80)">
+    <rect width="180" height="100" rx="8" fill="#f8f9fa" stroke="#202124" stroke-width="1" />
+    <text x="90" y="25" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="13" font-weight="bold" fill="#202124">2. Индустриален ИИ</text>
+    <line x1="20" y1="40" x2="160" y2="40" stroke="#e0e0e0" stroke-width="1" />
+    <!-- Details -->
+    <text x="20" y="58" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Придобиване на Emmi AI</text>
+    <text x="20" y="76" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Физични симулации</text>
+    <text x="20" y="90" font-family="'Inter', 'Roboto', sans-serif" font-size="10" fill="#666666">Партньорства с BMW &amp; Airbus</text>
+  </g>
+
+  <!-- Pillar 3: Infrastructure (Right Bottom) -->
+  <g transform="translate(580, 195)">
+    <rect width="180" height="100" rx="8" fill="#f8f9fa" stroke="#202124" stroke-width="1" />
+    <text x="90" y="25" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="13" font-weight="bold" fill="#202124">3. Суверенна Инфра</text>
+    <line x1="20" y1="40" x2="160" y2="40" stroke="#e0e0e0" stroke-width="1" />
+    <!-- Details -->
+    <text x="20" y="58" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• 10 MW център в Les Ulis</text>
+    <text x="20" y="76" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#202124">• Хостинг в Швеция &amp; Франция</text>
+    <text x="20" y="90" font-family="'Inter', 'Roboto', sans-serif" font-size="10" fill="#666666">Намаляване на САЩ зависимост</text>
+  </g>
+</svg>
