@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 4 Jun 2026 15:00:00 +0000</pubDate>
+    <pubDate>Thu, 4 Jun 2026 22:00:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Perplexity представи хибридна локално-облачна AI оркестрация на Computex 2026</title>
+      <link>https://svetni.me/articles/2026/06/04/perplexity-hybrid-inference/</link>
+      <pubDate>Thu, 4 Jun 2026 22:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/04/perplexity-hybrid-inference/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>По време на изложението Computex 2026 компанията Perplexity демонстрира софтуерно решение, описано като първия хибриден локално-сървърен оркестратор на изчисления (hybrid local-server inference orchestrator). В официална публикация на корпоративния си блог [1] екипът разкри детайли за технологията, която позволява на системата автономно да взема решения в реално време — в средата на изпълнение на дадена задача — кои работни натоварвания да останат на физическото устройство на потребителя и кои да бъдат пренасочени към по-мощни модели в облака.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Microsoft представи MXC: Нова архитектура за сигурност на ИИ агенти</title>
+      <link>https://svetni.me/articles/2026/06/04/microsoft-mxc-sandbox-ai-agents/</link>
+      <pubDate>Thu, 4 Jun 2026 21:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/04/microsoft-mxc-sandbox-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на <em>VentureBeat</em> [1], на своята конференция Build 2026 технологичният гигант Microsoft представи нова защитна архитектура на системно ниво, наречена Microsoft Execution Containers (MXC). Технологията е проектирана да функционира като гъвкава изолирана среда (composable sandbox) директно в операционната система Windows. Основната ѝ цел е да ограничи рисковете за сигурността, породени от неоторизиран достъп до данни или злонамерени действия от страна на автономни ИИ агенти [1]. Водещи компании в индустрията като OpenAI и NVIDIA вече са се присъединили към инициативата [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>ИИ не компрометира сигурността – прави го сложността</title>
+      <link>https://svetni.me/articles/2026/06/04/ai-security-complexity/</link>
+      <pubDate>Thu, 4 Jun 2026 21:33:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/04/ai-security-complexity/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Въвеждането на нови технологии в корпоративния свят винаги е съпроводено с опасения за сигурността. Настоящият възход на изкуствения интелект не прави изключение. Въпреки това, според анализ на Майанк Упадия, директор по сигурността и доверието в Snowflake, публикуван във VentureBeat, истинската заплаха за предприятията не е самата технология, а сложността, която организациите въвеждат в опитите си да я защитят [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Asana представи Agentic Work Management: Операционна система за сътрудничество човек-AI</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/agent-skills-research-findings/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според скорошен анализ на O&#39;Reilly Media [1], индустрията преминава от прост инженеринг на подкани (prompt engineering) към &quot;инженеринг на умения&quot; (skill engineering). Докато инструментите дават на AI агентите способности (като достъп до терминал или API), уменията кодират организационното знание за това <em>как</em> тези способности да се използват ефективно за специфични работни процеси.</p>]]></description>
-    </item>
-
-    <item>
-      <title>ЕС планира ограничения за американските облачни услуги при работа с държавни данни</title>
-      <link>https://svetni.me/articles/2026/05/18/eu-cloud-sovereignty/</link>
-      <pubDate>Mon, 18 May 2026 20:41:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/eu-cloud-sovereignty/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на OSNews [1], базиран на информация от CNBC [2], Европейският съюз подготвя нови правила, които ще ограничат възможността държавните администрации на страните членки да използват американски облачни доставчици за обработка на чувствителни данни.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Абонаментната бомба със закъснител: Защо „ол инклузив“ моделът на ИИ е обречен</title>
-      <link>https://svetni.me/articles/2026/05/17/ai-subscription-time-bomb/</link>
-      <pubDate>Sun, 17 May 2026 19:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/17/ai-subscription-time-bomb/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В света на технологиите съществува негласна шега: ако плащате за софтуерна услуга $20 на месец, а реалната ѝ себестойност за доставчика е $400, вие не сте просто клиент – вие участвате в най-голямата благотворителна кампания в историята на Силициевата долина. Според нов доклад на <em>The State of Brand</em> [1], настоящият модел на фиксирани месечни абонаменти за изкуствен интелект (ИИ) е „бомба със закъснител“, която е напът да избухне в бюджетите на корпоративния свят.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Solar Roof на Tesla: От революция към нишов продукт</title>
-      <link>https://svetni.me/articles/2026/05/17/tesla-solar-roof-pivot/</link>
-      <pubDate>Sun, 17 May 2026 16:39:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/17/tesla-solar-roof-pivot/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>През 2016 г. Илон Мъск представи визия, която трябваше да промени облика на домовете ни: Solar Roof – соларни клетки, интегрирани в красиви керемиди, неразличими от стандартен покрив. Десет години по-късно обаче реалността е далеч от първоначалните обещания. Според нов доклад на Electrek [1], Tesla официално пренасочва фокуса си от соларните покриви към традиционните слънчеви панели.</p>]]></description>
     </item>
   </channel>
 </rss>
