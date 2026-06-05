@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 4 Jun 2026 22:00:00 +0000</pubDate>
+    <pubDate>Fri, 5 Jun 2026 22:25:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Raspberry Pi повиши прогнозата си за печалба заради търсенето на изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/06/05/raspberry-pi-profit-forecast-2026/</link>
+      <pubDate>Fri, 5 Jun 2026 22:25:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/05/raspberry-pi-profit-forecast-2026/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление (Trading Update), разпространено чрез Регулаторната служба за новини (RNS) на Лондонската фондова борса [1], британската технологична компания Raspberry Pi Holdings plc обяви значително повишаване на финансовите си прогнози за цялата 2026 година. Компанията отчита изключително силно представяне през първото полугодие, подкрепено от засиления глобален интерес към индустриалната автоматизация и периферните изчисления с изкуствен интелект (Edge AI). Вследствие на положителните новини за финансовото здраве на дружеството, пазарите реагираха незабавно, като стойността на акциите на Raspberry Pi на борсата в Лондон достигна исторически рекорди [2].</p>]]></description>
+    </item>
 
     <item>
       <title>Perplexity представи хибридна локално-облачна AI оркестрация на Computex 2026</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/ai-website-builder-statistics-2026/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>AI конструкторите на уеб сайтове се превърнаха от новост в основна част от категорията за създаване на уеб съдържание през 2026 г. Те позволяват на всеки да стартира професионален сайт за часове, вместо за седмици. Според нов доклад на Hostinger [1], пазарът се разраства бързо, като малките бизнеси са водещи в приемането на тези технологии.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Уменията за агенти работят, но изследванията показват, че повечето екипи ги изграждат грешно</title>
-      <link>https://svetni.me/articles/2026/05/18/agent-skills-research-findings/</link>
-      <pubDate>Mon, 18 May 2026 21:10:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/agent-skills-research-findings/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според скорошен анализ на O&#39;Reilly Media [1], индустрията преминава от прост инженеринг на подкани (prompt engineering) към &quot;инженеринг на умения&quot; (skill engineering). Докато инструментите дават на AI агентите способности (като достъп до терминал или API), уменията кодират организационното знание за това <em>как</em> тези способности да се използват ефективно за специфични работни процеси.</p>]]></description>
     </item>
   </channel>
 </rss>
