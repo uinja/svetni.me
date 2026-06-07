@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 5 Jun 2026 22:25:00 +0000</pubDate>
+    <pubDate>Sun, 7 Jun 2026 22:11:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Доналд Тръмп предлага държавно дялово участие в AI компаниите</title>
+      <link>https://svetni.me/articles/2026/06/07/trump-meet-ai-leaders-us-investment/</link>
+      <pubDate>Sun, 7 Jun 2026 22:11:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/trump-meet-ai-leaders-us-investment/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на BBC, президентът на САЩ Доналд Тръмп планира срещи в Белия дом с ръководители на водещи компании в сферата на изкуствения интелект. Разговорите, насрочени за седмицата от 8 юни 2026 г., ще се концентрират върху възможността американското правителство да придобие финансови дялове в тези технологични предприятия [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Microsoft AI получи независимост от OpenAI в стремежа си към суперинтелигентност</title>
+      <link>https://svetni.me/articles/2026/06/07/microsoft-ai-chief-set-free-openai-superintelligence/</link>
+      <pubDate>Sun, 7 Jun 2026 21:46:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/microsoft-ai-chief-set-free-openai-superintelligence/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Microsoft е получила официална независимост от договорните си ограничения с OpenAI, за да разработва собствени авангардни модели и да се стреми към постигането на суперинтелигентност. Това разкри Мустафа Сюлейман, главен изпълнителен директор на подразделението Microsoft AI, в интервю за технологичното издание VentureBeat по време на конференцията Microsoft Build 2026 [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Агентният ИИ реши проблема с кодирането – и разкри всички останали проблеми в софтуерното инженерство</title>
+      <link>https://svetni.me/articles/2026/06/07/agentic-ai-solved-coding-exposed-problems/</link>
+      <pubDate>Sun, 7 Jun 2026 21:27:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/agentic-ai-solved-coding-exposed-problems/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>С навлизането на автономния изкуствен интелект в софтуерната индустрия, скоростта на писане на код се увеличи безпрецедентно. Според статия във VentureBeat [1] от Джо Бертолами [2] – съосновател и технически директор на Clifton AI [3], това ускорение е разкрило фундаментална истина: писането на код никога не е било основният ограничаващ фактор в софтуерното инженерство. Организациите генерират код по-бързо от всякога, но темпото на реално продуктово подобрение често остава непроменено.</p>]]></description>
+    </item>
 
     <item>
       <title>Raspberry Pi повиши прогнозата си за печалба заради търсенето на изкуствен интелект</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/19/germany-japan-bmw-toyota-hydrogen/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според публикация на Deutsche Welle [1], Германия и Япония значително засилват стратегическото си партньорство в областта на водородните технологии. По време на скорошно посещение в Япония, германският министър на транспорта Патрик Шнидер инспектира редица проекти, насочени към превръщането на водорода в масово гориво за автомобилния сектор.</p>]]></description>
-    </item>
-
-    <item>
-      <title>По-добри експерименти с LLM Evals: фуния, а не разклонение</title>
-      <link>https://svetni.me/articles/2026/05/18/spotify-llm-evals-funnel/</link>
-      <pubDate>Mon, 18 May 2026 22:39:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/spotify-llm-evals-funnel/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация в инженерния блог на Spotify [1], компанията внедрява нова методология за подобряване на продуктовите експерименти чрез използването на LLM Evals. Вместо да избират между скоростта на автоматизираните оценки и точността на реалните тестове, инженерите предлагат модел на „фуния“, в който двете технологии работят в синхрон.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Какво са LLM агентите: Пълно ръководство за типовете, инструментите и практическите приложения</title>
-      <link>https://svetni.me/articles/2026/05/18/llm-agents-zapier-guide/</link>
-      <pubDate>Mon, 18 May 2026 21:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/llm-agents-zapier-guide/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Светът на изкуствения интелект преминава през фундаментална трансформация: от пасивни чатботове, които само генерират текст, към активни системи, способни да изпълняват сложни задачи автономно. Тези системи, известни като LLM агенти, променят начина, по който бизнесът и индивидуалните потребители взаимодействат с технологията.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Статистика за AI уеб сайтовете през 2026 г.: Растеж, внедряване и тенденции</title>
-      <link>https://svetni.me/articles/2026/05/18/ai-website-builder-statistics-2026/</link>
-      <pubDate>Mon, 18 May 2026 21:16:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/18/ai-website-builder-statistics-2026/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>AI конструкторите на уеб сайтове се превърнаха от новост в основна част от категорията за създаване на уеб съдържание през 2026 г. Те позволяват на всеки да стартира професионален сайт за часове, вместо за седмици. Според нов доклад на Hostinger [1], пазарът се разраства бързо, като малките бизнеси са водещи в приемането на тези технологии.</p>]]></description>
     </item>
   </channel>
 </rss>
