@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 7 Jun 2026 22:11:00 +0000</pubDate>
+    <pubDate>Sun, 7 Jun 2026 23:13:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>От силози към сервизна топология: Защо Netflix изгради карта на зависимостите в реално време</title>
+      <link>https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</link>
+      <pubDate>Sun, 7 Jun 2026 23:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременните софтуерни архитектури мащабът и сложността на системите често надхвърлят капацитета на човешкото възприятие. Когато една платформа се състои от хиляди независими компоненти, разбирането на техните взаимовръзки по време на работа се превръща в критично предизвикателство. В официална публикация на своя инженерен блог [1], технологичният екип на Netflix сподели подробности за разработването на нова вътрешна система, наречена <strong>Service Topology</strong> (Сервизна топология) – динамична карта на разпределената инфраструктура в реално време, проектирана да преодолее традиционните ограничения на мониторинга.</p>]]></description>
+    </item>
 
     <item>
       <title>Доналд Тръмп предлага държавно дялово участие в AI компаниите</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/19/sensors-for-coding-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В нова статия, публикувана в сайта на Мартин Фаулър [1], Биргита Бьокелер от Thoughtworks представя концепцията за „сензори“ при работа с ИИ агенти за програмиране. Основната теза е, че поддържаемостта на кода (вътрешното качество) е също толкова критична за изкуствения интелект, колкото и за хората, и че автоматизираните инструменти за обратна връзка са ключът към успешното сътрудничество.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Германия и Япония ускоряват сътрудничеството си във водородните технологии</title>
-      <link>https://svetni.me/articles/2026/05/19/germany-japan-bmw-toyota-hydrogen/</link>
-      <pubDate>Tue, 19 May 2026 21:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/19/germany-japan-bmw-toyota-hydrogen/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на Deutsche Welle [1], Германия и Япония значително засилват стратегическото си партньорство в областта на водородните технологии. По време на скорошно посещение в Япония, германският министър на транспорта Патрик Шнидер инспектира редица проекти, насочени към превръщането на водорода в масово гориво за автомобилния сектор.</p>]]></description>
     </item>
   </channel>
 </rss>
