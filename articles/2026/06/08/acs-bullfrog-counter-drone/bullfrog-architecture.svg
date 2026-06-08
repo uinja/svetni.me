@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e33af" />
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff" />
+  
+  <!-- Title Section -->
+  <rect x="40" y="30" width="720" height="60" rx="8" fill="#f8f9fa" stroke="#1e33af" stroke-width="2" />
+  <text x="400" y="60" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">Архитектура на системата Bullfrog</text>
+  
+  <!-- Flow lines with arrows -->
+  <line x1="140" y1="250" x2="180" y2="250" stroke="#1e33af" stroke-width="3" marker-end="url(#arrow)" />
+  <line x1="300" y1="250" x2="340" y2="250" stroke="#1e33af" stroke-width="3" marker-end="url(#arrow)" />
+  <line x1="460" y1="250" x2="500" y2="250" stroke="#1e33af" stroke-width="3" marker-end="url(#arrow)" />
+  <line x1="620" y1="250" x2="660" y2="250" stroke="#1e33af" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Box 1 -->
+  <rect x="25" y="160" width="110" height="150" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <!-- Box 2 -->
+  <rect x="185" y="160" width="110" height="150" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <!-- Box 3 -->
+  <rect x="345" y="160" width="110" height="150" rx="8" fill="#1a30ae" stroke="#1e33af" stroke-width="2" />
+  <!-- Box 4 -->
+  <rect x="505" y="160" width="110" height="150" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <!-- Box 5 -->
+  <rect x="665" y="160" width="110" height="150" rx="8" fill="#1b31ae" stroke="#1e33af" stroke-width="2" />
+
+  <!-- Text Layer (MUST be after containers) -->
+  <!-- Box 1 Text -->
+  <text x="80" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">Сензори &amp;</text>
+  <text x="80" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">Камери</text>
+  <text x="80" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#202124" opacity="0.7" text-anchor="middle" dominant-baseline="middle">Оптични и ИЧ</text>
+
+  <!-- Box 2 Text -->
+  <text x="240" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">Компютърно</text>
+  <text x="240" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">зрение</text>
+  <text x="240" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#202124" opacity="0.7" text-anchor="middle" dominant-baseline="middle">Проследяване</text>
+
+  <!-- Box 3 Text -->
+  <text x="400" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">ИИ</text>
+  <text x="400" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Анализ</text>
+  <text x="400" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#ffffff" opacity="0.8" text-anchor="middle" dominant-baseline="middle">Класификация</text>
+
+  <!-- Box 4 Text -->
+  <text x="560" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">Роботизирана</text>
+  <text x="560" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124" text-anchor="middle" dominant-baseline="middle">платформа</text>
+  <text x="560" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#202124" opacity="0.7" text-anchor="middle" dominant-baseline="middle">Насочване</text>
+
+  <!-- Box 5 Text -->
+  <text x="720" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Кинетично</text>
+  <text x="720" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">поразяване</text>
+  <text x="720" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#ffffff" opacity="0.8" text-anchor="middle" dominant-baseline="middle">Картечница M240</text>
+
+  <!-- Caption Section -->
+  <rect x="40" y="380" width="720" height="80" rx="8" fill="#f8f9fa" stroke="#1e33af" stroke-dasharray="4" stroke-width="1" />
+  <text x="400" y="410" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#202124" text-anchor="middle" dominant-baseline="middle">Автоматизиран цикъл на поразяване (Kill Chain)</text>
+  <text x="400" y="435" font-family="system-ui, sans-serif" font-size="11" font-weight="400" fill="#202124" opacity="0.7" text-anchor="middle" dominant-baseline="middle">От засичане през ИИ класификация до физическо елиминиране с конвенционални патрони</text>
+</svg>
