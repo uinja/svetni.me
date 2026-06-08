@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 8 Jun 2026 21:43:00 +0000</pubDate>
+    <pubDate>Mon, 8 Jun 2026 22:40:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Meta иска съдът да обяви NSO Group в неподчинение след нови атаки в WhatsApp</title>
+      <link>https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</link>
+      <pubDate>Mon, 8 Jun 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление [1] технологичният гигант Meta обяви, че е подал съдебен иск за неуважение към съда (motion for contempt) срещу израелската компания за кибер-разузнаване NSO Group. Правното действие, предприето във федералния съд на САЩ, е в отговор на нови разкрития за шпионски атаки, извършени чрез популярното приложение за съобщения WhatsApp. Искът твърди, че NSO Group е нарушила постоянната съдебна забрана от 2025 г., която изрично забранява на фирмата да атакува платформата и нейните потребители.</p>]]></description>
+    </item>
 
     <item>
       <title>Allen Control Systems събра 200 милиона долара за автономната система за борба с дронове Bullfrog</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/20/openai-geometry-conjecture/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>OpenAI обяви историческо постижение в областта на математиката: техен нов модел за разсъждение самостоятелно опроверга една от централните хипотези в дискретната геометрия – проблема за единичните разстояния в равнината, формулиран от Пал Ердьош през 1946 г. [1]. Това е първият случай, в който общоцелеви изкуствен интелект решава значим отворен проблем в математиката без човешка намеса в процеса на доказване.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Линус Торвалдс: AI е просто поредният инструмент, не е фундаментална промяна</title>
-      <link>https://svetni.me/articles/2026/05/20/linus-torvalds-ai-love-hate/</link>
-      <pubDate>Wed, 20 May 2026 22:35:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/20/linus-torvalds-ai-love-hate/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>По време на конференцията Open Source Summit North America 2026, Линус Торвалдс сподели своето нюансирано мнение за изкуствения интелект, описвайки го като „връзка на любов и омраза“ [1]. Създателят на Linux ядрото изрази остро възмущение от маркетинговите твърдения, че AI ще замени програмистите, но същевременно призна, че технологията вече оказва осезаемо влияние върху разработката на софтуер с отворен код.</p>]]></description>
     </item>
   </channel>
 </rss>
