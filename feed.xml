@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 11 Jun 2026 23:59:00 +0000</pubDate>
+    <pubDate>Fri, 12 Jun 2026 21:40:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Google Colab CLI: Локален контрол и автоматизация на отдалечени изчислителни ресурси</title>
+      <link>https://svetni.me/articles/2026/06/12/google-colab-cli/</link>
+      <pubDate>Fri, 12 Jun 2026 21:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/google-colab-cli/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация в корпоративния си блог Google [1] обяви пускането на нов интерфейс за команден ред — <strong>Google Colab CLI</strong>. Този инструмент е проектиран да преодолее разликата между локалната работна среда и отдалечените сървъри на платформата за разработка Google Colab. Новият софтуер предоставя среда за директно стартиране на отдалечени задачи както за софтуерни инженери, така и за автономни AI агенти, разполагащи с достъп до команден ред [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>The Document Foundation настоява Euro-Office да приеме ODF като роден формат</title>
+      <link>https://svetni.me/articles/2026/06/12/euro-office-native-odf/</link>
+      <pubDate>Fri, 12 Jun 2026 20:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/euro-office-native-odf/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Съобщението за предстоящия старт на инициативата Euro-Office привлече сериозно медийно внимание в европейската технологична преса. Организацията The Document Foundation (TDF) приветства засиления интерес към отворените стандарти и поетия ангажимент от страна на консорциума зад проекта. В официална позиция обаче фондацията направи важно уточнение относно историческия контекст и сподели своите очаквания за бъдещото технологично развитие на платформата [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Протести блокираха проекти за центрове за данни за 130 милиарда долара в САЩ</title>
+      <link>https://svetni.me/articles/2026/06/12/data-center-protests-130-billion/</link>
+      <pubDate>Fri, 12 Jun 2026 20:47:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/data-center-protests-130-billion/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Съпротивата на местните общности в САЩ срещу изграждането на инфраструктура за изкуствен интелект достига безпрецедентни мащаби. Според данни на изследователския проект Data Center Watch на фирмата 10a Labs, само за първото тримесечие на 2026 г. протести са блокирали или забавили най-малко 75 проекта за центрове за данни на обща стойност около 130 милиарда долара. Анализаторите посочват, че това не е временен пик, а структурна промяна, при която броят на активните групи за съпротива е нараснал повече от два пъти до 833 организации в 49 щата [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Пълно компресиране на контекст в голям мащаб: Новата ера на LCLM</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/22/d-and-b-rebuilds-database-for-ai-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>За своите 184 години съществуване Dun &amp; Bradstreet (D&amp;B) е изградила най-мащабната в света база данни за бизнес информация, обхващаща над 642 милиона компании. Доскоро тези данни бяха структурирани за консумация от хора – финансови анализатори и експерти по риск, които могат да толерират фрагментирани източници и закъснения при търсене.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Alibaba Qwen3.7-Max: 35 часа автономна работа и интеграция с Claude Code</title>
-      <link>https://svetni.me/articles/2026/05/22/alibabas-qwen3-7-max-autonomous-ai/</link>
-      <pubDate>Fri, 22 May 2026 22:12:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/22/alibabas-qwen3-7-max-autonomous-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Индустрията на изкуствения интелект навлезе в „ерата на агентите“ — парадигма, в която моделите не просто генерират текст, а активно планират, изпълняват и коригират сложни задачи в продължение на дни. В този контекст Alibaba и нейният изследователски екип Qwen представиха Qwen3.7-Max. Новият модел демонстрира способност за непрекъснато автономно изпълнение в продължение на близо 35 часа [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>AI стратегията на Spotify: Повече съдържание, по-малко фокус върху човека</title>
-      <link>https://svetni.me/articles/2026/05/22/spotifys-ai-expansion/</link>
-      <pubDate>Fri, 22 May 2026 20:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/22/spotifys-ai-expansion/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на TechCrunch [1], Spotify преминава през мащабна трансформация, интегрирайки функции с изкуствен интелект (AI) с темпове, които започват да предизвикват опасения за пренасищане на потребителското изживяване. Новата вълна от иновации, обявена по време на деня на инвеститора, е насочена по-скоро към генериране на съдържание, отколкото към подпомагане на потребителите да откриват това, което наистина искат да слушат.</p>]]></description>
-    </item>
-
-    <item>
-      <title>„Слонът в стаята“: Защо техническата експертиза е по-важна от всякога в ерата на AI</title>
-      <link>https://svetni.me/articles/2026/05/22/ai-multiplier-expertise/</link>
-      <pubDate>Fri, 22 May 2026 20:09:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/22/ai-multiplier-expertise/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В нов анализ на състоянието на технологичната индустрия, популярният софтуерен инженер и обучител Джош Комо разглежда „слона в стаята“ — въпросът дали все още има смисъл да се учат нови програмни умения в свят, доминиран от изкуствен интелект [1]. Според Комо, макар големите езикови модели (LLM) да са станали „шокиращо добри“ в програмирането, те не са заместител на разработчиците, а по-скоро мощен множител на тяхната експертиза.</p>]]></description>
     </item>
   </channel>
 </rss>
