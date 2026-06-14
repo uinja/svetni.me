@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 14 Jun 2026 07:30:00 +0000</pubDate>
+    <pubDate>Sun, 14 Jun 2026 20:00:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>WebMCP: Нов стандарт в Chrome за директно управление на уеб сайтове от ИИ агенти</title>
+      <link>https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</link>
+      <pubDate>Sun, 14 Jun 2026 20:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално техническо ръководство за разработчици [1], екипът на Google представи подробности за новия предложен стандарт <strong>WebMCP (Web Model Context Protocol)</strong>. Технологията вече е достъпна за експериментиране в браузъра Chrome 149 в рамките на т.нар. Origin Trials [2]. Целта на WebMCP е да предостави стандартизиран мост, който позволява на уеб сайтовете да излагат своите функции директно към работещите в браузъра ИИ агенти, елиминирайки необходимостта от ненадеждни методи за управление.</p>]]></description>
+    </item>
 
     <item>
       <title>Anthropic спря достъпа до моделите Fable 5 и Mythos 5 след безпрецедентна заповед на САЩ</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/gemini-cli-transition-antigravity/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според официално съобщение на Google [1], компанията започва преход на своя популярен инструмент Gemini CLI към изцяло новата платформа Antigravity CLI. Промяната е продиктувана от бързото развитие на изкуствения интелект и прехода към т.нар. „многоагентна реалност“, при която сложните задачи изискват едновременната работа на множество специализирани агенти [1], [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Слепи петна в защитата: Нови атаки заобикалят филтрите на AI агенти</title>
-      <link>https://svetni.me/articles/2026/05/23/blind-spots-domain-camouflaged-injection/</link>
-      <pubDate>Sat, 23 May 2026 21:17:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/blind-spots-domain-camouflaged-injection/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според научно изследване, публикувано в arXiv [1], съвременните детектори за злонамерени команди в големи езикови модели (LLM) страдат от систематично „сляпо петно“. Нова техника, наречена „домейн-камуфлажна инжекция“ (DCI), позволява на атакуващите да заобикалят защитите, като маскират злонамерения товар с терминологията и структурата на целевия документ.</p>]]></description>
     </item>
   </channel>
 </rss>
