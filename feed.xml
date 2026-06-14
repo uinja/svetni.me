@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 14 Jun 2026 20:00:00 +0000</pubDate>
+    <pubDate>Sun, 14 Jun 2026 20:42:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</title>
+      <link>https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</link>
+      <pubDate>Sun, 14 Jun 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Инжектирането на въглероден диоксид (CO₂) в циментови продукти като бетон се утвърди като обещаващ метод за постоянно съхранение на парникови газове извън атмосферата. Въпреки че индустриалният интерес към тази технология нараства и компании като CarbonCure вече предлагат комерсиални смеси, фундаменталната химия зад този процес оставаше до голяма степен невидима.</p>]]></description>
+    </item>
 
     <item>
       <title>WebMCP: Нов стандарт в Chrome за директно управление на уеб сайтове от ИИ агенти</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/ai-agents-chaos-failures/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според материал на експерта Саяли Патил за изданието VentureBeat [1], в съвременните производствени среди се появява нов тип инциденти, които ИТ екипите все още не класифицират правилно. Проблемът възниква, когато автономен изкуствен интелект предприеме действие, което е технически правилно спрямо собствения му контекст, но поради непълна системна картина предизвиква каскаден срив в инфраструктурата.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Google преминава от Gemini CLI към Antigravity CLI: Бъдещето на многоагентните системи</title>
-      <link>https://svetni.me/articles/2026/05/23/gemini-cli-transition-antigravity/</link>
-      <pubDate>Sat, 23 May 2026 21:24:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/gemini-cli-transition-antigravity/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според официално съобщение на Google [1], компанията започва преход на своя популярен инструмент Gemini CLI към изцяло новата платформа Antigravity CLI. Промяната е продиктувана от бързото развитие на изкуствения интелект и прехода към т.нар. „многоагентна реалност“, при която сложните задачи изискват едновременната работа на множество специализирани агенти [1], [2].</p>]]></description>
     </item>
   </channel>
 </rss>
