@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 12 Jun 2026 21:40:00 +0000</pubDate>
+    <pubDate>Sun, 14 Jun 2026 07:30:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Anthropic спря достъпа до моделите Fable 5 и Mythos 5 след безпрецедентна заповед на САЩ</title>
+      <link>https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</link>
+      <pubDate>Sun, 14 Jun 2026 07:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление, публикувано в блога на компанията [1], американският разработчик на изкуствен интелект Anthropic обяви извънредното преустановяване на достъпа до своите най-нови и мощни модели — <strong>Claude Fable 5</strong> и <strong>Claude Mythos 5</strong>. Решението е директно следствие от извънредна заповед за експортен контрол, издадена от Министерството на търговията на САЩ, която се позовава на съображения за национална сигурност [2]. Заповедта забранява предоставянето на достъп до тези системи на всякакви чуждестранни граждани, независимо дали се намират на територията на САЩ или извън нея.</p>]]></description>
+    </item>
 
     <item>
       <title>Google Colab CLI: Локален контрол и автоматизация на отдалечени изчислителни ресурси</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/23/blind-spots-domain-camouflaged-injection/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според научно изследване, публикувано в arXiv [1], съвременните детектори за злонамерени команди в големи езикови модели (LLM) страдат от систематично „сляпо петно“. Нова техника, наречена „домейн-камуфлажна инжекция“ (DCI), позволява на атакуващите да заобикалят защитите, като маскират злонамерения товар с терминологията и структурата на целевия документ.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Dun &amp; Bradstreet преосмисли базата си данни от 642 милиона фирми за нуждите на AI агентите</title>
-      <link>https://svetni.me/articles/2026/05/22/d-and-b-rebuilds-database-for-ai-agents/</link>
-      <pubDate>Fri, 22 May 2026 22:24:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/22/d-and-b-rebuilds-database-for-ai-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>За своите 184 години съществуване Dun &amp; Bradstreet (D&amp;B) е изградила най-мащабната в света база данни за бизнес информация, обхващаща над 642 милиона компании. Доскоро тези данни бяха структурирани за консумация от хора – финансови анализатори и експерти по риск, които могат да толерират фрагментирани източници и закъснения при търсене.</p>]]></description>
     </item>
   </channel>
 </rss>
