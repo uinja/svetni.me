@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 15 Jun 2026 18:41:00 +0000</pubDate>
+    <pubDate>Mon, 15 Jun 2026 18:45:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Vibe кодерите ще си кодират: Как директорите по сигурност се справят с разрастването на кода</title>
+      <link>https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</link>
+      <pubDate>Mon, 15 Jun 2026 18:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Феноменът vibe coding (кодиране по усещане), термин, въведен от ИИ изследователя Андрей Карпати в началото на 2025 г., описва масовото използване на ИИ инструменти от служители за разработка и внедряване на код чрез текстови инструкции на естествен език. Този стил на работа позволява на широк кръг потребители да създават софтуер без традиционно писане на код, но често заобикаля утвърдените контроли по сигурност. Според репортаж на BleepingComputer [1], това явление създава сериозна криза с видимостта на корпоративните ИТ активи и попада в категорията на т.нар. Shadow AI (сенчест изкуствен интелект).</p>]]></description>
+    </item>
 
     <item>
       <title>Salesforce придобива Fin за 3.6 милиарда долара: Нова ера на автономните агенти</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/microsoft-mdash/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Технологичният гигант Microsoft обяви внедряването на нова експериментална система за киберсигурност, наречена MDASH (Multi-Model Agentic Scanning Harness) [1]. Този проект бележи важен преход в софтуерното инженерство и сигурността — от преминаването от единични prompt-инструкции към оркестрация на десетки и стотици специализирани ИИ агенти, работещи съвместно. Проектът е представен от Тесу Ким (Taesoo Kim), вицепрезидент по въпросите на мултиагентната сигурност в компанията, и цели да реши проблема с мащабното откриване на уязвимости в сложни и чувствителни кодови среди [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Кампанията Megalodon: Мащабна атака в GitHub инфектира над 5500 хранилища с цел кражба на поверителни данни</title>
-      <link>https://svetni.me/articles/2026/05/25/megalodon-github-attack/</link>
-      <pubDate>Mon, 25 May 2026 19:12:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/megalodon-github-attack/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на Mashable [1], мащабна кампания за компрометиране на веригата за доставки на софтуер, наречена Megalodon, е засегнала над 5500 проекта с отворен код в рамките на платформи като GitHub. На 18 май 2026 г., в рамките на шестчасов времеви прозорец, автоматизирана кампания е инжектирала 5718 злонамерени коммита в общо 5561 хранилища [1, 2].</p>]]></description>
     </item>
   </channel>
 </rss>
