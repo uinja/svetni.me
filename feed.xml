@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 15 Jun 2026 14:33:00 +0000</pubDate>
+    <pubDate>Mon, 15 Jun 2026 18:41:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Salesforce придобива Fin за 3.6 милиарда долара: Нова ера на автономните агенти</title>
+      <link>https://svetni.me/articles/2026/06/15/salesforce-acquires-fin/</link>
+      <pubDate>Mon, 15 Jun 2026 18:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/salesforce-acquires-fin/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Технологичният гигант Salesforce обяви сключването на окончателно споразумение за придобиване на Fin (известна в миналото като Intercom) — един от пионерите в разработването на автономни ИИ асистенти за клиентско обслужване [1]. Сделката е на стойност приблизително 3,6 милиарда долара и представлява една от най-значимите консолидации на пазара за обслужване на клиенти, базирано на изкуствен интелект.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Xiaomi пусна MIMO Code: Инструмент за кодиране с ИИ, който превъзхожда Claude Code</title>
+      <link>https://svetni.me/articles/2026/06/11/xiaomi-mimo-code/</link>
+      <pubDate>Mon, 15 Jun 2026 18:39:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/xiaomi-mimo-code/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Езиковите модели за писане на код често страдат от прогресивно влошаване на качеството при дълги работни сесии. Когато контекстният прозорец се препълни, по-ранните решения и текущото състояние на проекта биват компресирани или изгубени, което принуждава разработчиците отново да обясняват контекста на своите проекти.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Имунна система за ИИ агенти: NanoClaw и JFrog блокират свалянето на зловреден код</title>
+      <link>https://svetni.me/articles/2026/06/12/nanoclaw-jfrog-security/</link>
+      <pubDate>Mon, 15 Jun 2026 18:38:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/nanoclaw-jfrog-security/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Автономните ИИ агенти притежават способността динамично да разширяват възможностите си в движение. Когато даден агент срещне задача, за която няма нужния софтуер (например обработка на гласово съобщение), той може самостоятелно да изтегли, инсталира и стартира нужния софтуерен пакет в бекграунда. Тази гъвкавост обаче отваря сериозна пролука за атаки по веригата за доставки на софтуер (supply chain attacks).</p>]]></description>
+    </item>
+
+    <item>
+      <title>Вярна неопределеност: Как Google учи езиковите модели да казват „Не знам“</title>
+      <link>https://svetni.me/articles/2026/06/12/faithful-uncertainty/</link>
+      <pubDate>Mon, 15 Jun 2026 18:27:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/faithful-uncertainty/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Справянето с халюцинациите при големите езикови модели остава едно от най-сериозните препятствия пред внедряването на изкуствен интелект в реалния бизнес. Досегашните опити за намаляване на тези грешки обаче налагат сериозни ограничения, принуждавайки моделите да отказват отговори дори на въпроси, които всъщност знаят.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Оптимизация на ИИ в периферията: Cloudflare привлича екипа на Ensemble AI</title>
+      <link>https://svetni.me/articles/2026/06/15/cloudflare-ensemble-ai/</link>
+      <pubDate>Mon, 15 Jun 2026 18:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/cloudflare-ensemble-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Инфраструктурата за изкуствен интелект навлиза в нов етап на развитие. Разработчиците вече не се нуждаят само от достъп до готови езикови модели, а от изчислителна мрежа, която да ги изпълнява надеждно, икономично и възможно най-близо до крайния потребител. В опит да ускори този преход, Cloudflare обяви привличането на ключови членове от екипа на стартъпа Ensemble AI [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Защо автономните агенти не се мащабират: Инфраструктурният данък на изкуствения интелект</title>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/megalodon-github-attack/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на Mashable [1], мащабна кампания за компрометиране на веригата за доставки на софтуер, наречена Megalodon, е засегнала над 5500 проекта с отворен код в рамките на платформи като GitHub. На 18 май 2026 г., в рамките на шестчасов времеви прозорец, автоматизирана кампания е инжектирала 5718 злонамерени коммита в общо 5561 хранилища [1, 2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Изграждане на Pi с Pi: Ерата на AI и натискът върху отворения код</title>
-      <link>https://svetni.me/articles/2026/05/25/pi-oss/</link>
-      <pubDate>Mon, 25 May 2026 18:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/pi-oss/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В личния си блог известният разработчик Армин Ронахер сподели критични наблюдения и практически опит от работата си като поддържащ на проекта Pi – минималистичен AI агент за кодиране. Инструментът за автоматизирано програмиране сега е част от организацията Earendil, но негов основен създател остава Марио Зехнер. За разработването на Pi екипът прилага класическата практика на „dogfooding“ (самозахранване), използвайки самия агент за промени по неговия собствен код [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Откриване на програмни грешки чрез изкуствен интелект: Опитът на Materialize</title>
-      <link>https://svetni.me/articles/2026/05/24/materialize-llm-bugs/</link>
-      <pubDate>Sun, 24 May 2026 22:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/materialize-llm-bugs/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Инженерите от платформата за бази данни в реално време Materialize споделиха детайли за успешната интеграция на автономни агенти за откриване на дефекти в своя софтуер [1]. Процесът стартира през февруари 2026 г., съвпадайки с пазарния дебют на модела Claude Opus 4.6 на Anthropic, като в момента системата се поддържа основно от версията Claude Opus 4.7 и алтернативно от модела GPT 5.5 на OpenAI.</p>]]></description>
-    </item>
-
-    <item>
-      <title>„Невъзможните“ черни дупки във Вселената се оказват продукт на йерархични сливания</title>
-      <link>https://svetni.me/articles/2026/05/24/impossible-black-holes/</link>
-      <pubDate>Sun, 24 May 2026 22:13:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/impossible-black-holes/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на Wired [1] за ново изследване, публикувано в научното списание Nature Astronomy [2], астрофизиците са открили доказателства за произхода на т.нар. „невъзможни“ черни дупки. Това са обекти с маси между 40 и 100 слънчеви маси (M<sub>☉</sub>), които съгласно конвенционалната звездна физика не могат да се образуват директно от колапса на единична звезда поради явлението чифтна неустойчивост (pair-instability).</p>]]></description>
-    </item>
-
-    <item>
-      <title>Първи резултати от Project Glasswing: Claude Mythos откри над 10 000 уязвимости</title>
-      <link>https://svetni.me/articles/2026/05/24/anthropic-glasswing-update/</link>
-      <pubDate>Sun, 24 May 2026 22:06:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/anthropic-glasswing-update/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Един месец след старта на инициативата Project Glasswing, изследователската компания Anthropic публикува първия си доклад за напредъка в автоматизираното откриване на софтуерни пропуски [1]. Резултатите разкриват фундаментална промяна в динамиката на киберсигурността, предизвикана от използването на специализирания изкуствен интелект Claude Mythos Preview.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Цената на изкуствения интелект: Защо AI се оказва по-скъп от човешкия труд</title>
-      <link>https://svetni.me/articles/2026/05/24/microsoft-ai-cost-tokens/</link>
-      <pubDate>Sun, 24 May 2026 21:57:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/microsoft-ai-cost-tokens/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Въпреки че компаниите масово стимулират служителите си да използват изкуствен интелект (AI) за повишаване на производителността, реалните разходи за внедряването му започват да очертават сериозни финансови проблеми. Примери от индустрията показват, че мащабното използване на AI може да се окаже по-скъпо от наемането на човешки служители.</p>]]></description>
     </item>
   </channel>
 </rss>
