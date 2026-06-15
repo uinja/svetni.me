@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 14 Jun 2026 20:42:00 +0000</pubDate>
+    <pubDate>Mon, 15 Jun 2026 14:33:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Защо автономните агенти не се мащабират: Инфраструктурният данък на изкуствения интелект</title>
+      <link>https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</link>
+      <pubDate>Mon, 15 Jun 2026 14:33:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Разработването на прототип на ИИ агент, който работи успешно в контролирана среда, е сравнително лесна задача. Преходът към производствена система, обслужваща реални потребители, обаче се оказва сериозно предизвикателство. Според анализ на ИИ инженера Рафаел Лопеш, мащабирането на автономните агенти е изцяло системен и инженерен проблем, а не ограничение на самите езикови модели [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/microsoft-ai-cost-tokens/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Въпреки че компаниите масово стимулират служителите си да използват изкуствен интелект (AI) за повишаване на производителността, реалните разходи за внедряването му започват да очертават сериозни финансови проблеми. Примери от индустрията показват, че мащабното използване на AI може да се окаже по-скъпо от наемането на човешки служители.</p>]]></description>
-    </item>
-
-    <item>
-      <title>AI агентите тихомълком предизвикват сривове, които компаниите все още не проследяват</title>
-      <link>https://svetni.me/articles/2026/05/24/ai-agents-chaos-failures/</link>
-      <pubDate>Sun, 24 May 2026 21:37:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/24/ai-agents-chaos-failures/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според материал на експерта Саяли Патил за изданието VentureBeat [1], в съвременните производствени среди се появява нов тип инциденти, които ИТ екипите все още не класифицират правилно. Проблемът възниква, когато автономен изкуствен интелект предприеме действие, което е технически правилно спрямо собствения му контекст, но поради непълна системна картина предизвиква каскаден срив в инфраструктурата.</p>]]></description>
     </item>
   </channel>
 </rss>
