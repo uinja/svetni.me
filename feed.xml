@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 16 Jun 2026 20:30:00 +0000</pubDate>
+    <pubDate>Tue, 16 Jun 2026 21:07:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Трите фатални илюзии на ИИ кодирането: Анализ на Дакс Раад (OpenCode)</title>
+      <link>https://svetni.me/articles/2026/06/16/opencode-dax-raad-interview/</link>
+      <pubDate>Tue, 16 Jun 2026 21:07:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/opencode-dax-raad-interview/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В ново интервю за технологичния подкаст <em>The Pragmatic Engineer</em> [1], Дакс Раад – съосновател на платформата за агентно инженерство OpenCode – споделя критичен поглед върху реалния ефект от изкуствения интелект върху софтуерното инженерство. Раад има богат опит в сектора, преминавайки през модериране на Minecraft сървъри, управление на стартиращи компании като Wright Health и техническо лидерство в SST, където подпомага стартирането на проекта OpenNext. Неговият нов проект OpenCode, лансиран през юни 2025 г. от трима съоснователи, отчита феноменален растеж: от 650 000 месечно активни потребители (MAU) през декември 2025 г., платформата скача на 2,5 милиона през януари 2026 г., а към юни 2026 г. се доближава до границата от 10 милиона потребители [1]. Въпреки този мащабен успех, Раад предупреждава, че сляпото доверие в ИИ инструментите създава опасни илюзии за ефективност.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Бъдещето на програмирането според Rate Limited: GPT 5.5, цената на токените и краят на традиционния софтуерен инженер</title>
+      <link>https://svetni.me/articles/2026/06/16/rate-limited-ep-15/</link>
+      <pubDate>Tue, 16 Jun 2026 20:55:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/rate-limited-ep-15/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В петнадесетия епизод на технологичния подкаст Rate Limited водещите Ерик Бродуор (Eric Brodeur), Адам Ларсон (Adam Larson) и Рей Фернандо (Ray Fernando) направиха подробен преглед на новата реалност в разработката на софтуер [1]. Фокус на дискусията бяха изключителните способности за писане на код на новия модел GPT-5.5 на OpenAI, променящите се ценови и изчислителни лимити, както и навлизането на концепции като „vibe разработка“ (vibe development) и агентно инженерство (agentic engineering) [1]. Според водещите традиционните методи за ръчно писане на код, строго контролирани от старши инженери, бързо отстъпват място на автоматизирани системи и нови начини за сътрудничество между хора и изкуствен интелект [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Ценовата война при моделите с изкуствен интелект в Китай се изостря</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/29/bmw-humanoid-robots-leipzig/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според информация от BBC [1], германският автомобилен концерн BMW започва нов пилотен проект в своя завод в Лайпциг, Германия, в който ще бъде интегриран новият хуманоиден робот AEON. Роботът е разработен от Hexagon Robotics — базирано в Цюрих подразделение на шведския индустриален гигант Hexagon. Проектът е част от по-широката стратегия на компанията за внедряване на концепцията за Физически ИИ (Physical AI) в реални производствени процеси, като целта е подпомагането на работниците при изпълнението на монотонни, ергономично натоварващи или рискови задачи [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Claude Opus 4.8: По-евтин режим и съгласуване на ниво Mythos</title>
-      <link>https://svetni.me/articles/2026/05/28/claude-opus-4-8-launch/</link>
-      <pubDate>Thu, 28 May 2026 22:04:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/28/claude-opus-4-8-launch/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация във VentureBeat [1], технологичната компания Anthropic обяви официалното пускане на новия си флагмански модел Claude Opus 4.8. Обновлението носи значителни подобрения в производителността при програмиране, логическо мислене и управление на автономни системи, като същевременно въвежда нови възможности за потребителите и разработчиците [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Euro-Office: Европейската суверенна алтернатива на Microsoft Office и Google Docs</title>
-      <link>https://svetni.me/articles/2026/05/28/euro-office-sovereign-cloud-alternative/</link>
-      <pubDate>Thu, 28 May 2026 21:41:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/28/euro-office-sovereign-cloud-alternative/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Европейски технологични компании се обединяват за старта на Euro-Office — нов облачен офис пакет с отворен код, проектиран като директен отговор на американските платформи Microsoft Office (Microsoft 365) и Google Docs. Официалното пускане на версия 1.0 е планирано за 9 юни 2026 г., като проектът ще бъде свободно достъпен в публичните хранилища на GitHub. Решението идва в момент на засилен интерес към инициативите за цифров суверенитет в Европа, подхранван от нежеланието на много държавни и частни организации извън САЩ да зависят от американски облачни услуги [1].</p>]]></description>
     </item>
   </channel>
 </rss>
