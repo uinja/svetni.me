@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 15 Jun 2026 18:45:00 +0000</pubDate>
+    <pubDate>Tue, 16 Jun 2026 20:30:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Ценовата война при моделите с изкуствен интелект в Китай се изостря</title>
+      <link>https://svetni.me/articles/2026/06/16/china-ai-price-war/</link>
+      <pubDate>Tue, 16 Jun 2026 20:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/china-ai-price-war/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според публикация на авторитетното хонконгско издание South China Morning Post (SCMP) [1], ценовата война между водещите разработчици на изкуствен интелект в Китай навлиза в нова, още по-интензивна фаза. Водещи технологични конгломерати и нововъзникващи стартъпи предприемат агресивни намаления на тарифите за ползване на своите модели през API, стремейки се да привлекат по-гоял дял от пазара на разработчици и корпоративни клиенти.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Федералните се паникьосаха от Fable 5 след обикновена подкана за поправка на код</title>
+      <link>https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</link>
+      <pubDate>Tue, 16 Jun 2026 20:28:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Случаят около спешното преустановяване на достъпа до авангардните изкуствени интелекти на Anthropic придоби нов и изненадващ обрат. Според публикация в технологичното издание The Register [1], американското правителство е задействало тежката процедура по експортен контрол не заради сложна злонамерена атака или истински джейлбрейк, а заради обикновена потребителска подкана за автоматично отстраняване на грешки в софтуер.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Qualcomm преговаря за придобиване на ИИ чип стартъпа Tenstorrent за 10 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</link>
+      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Американският технологичен гигант Qualcomm води преговори за придобиване на канадския стартъп за специализирани чипове за изкуствен интелект Tenstorrent, съобщават източници на The Information, цитирани от The Register [1]. Стойността на евентуалната сделка се оценява в диапазона между 8 и 10 милиарда долара. Ако преговорите приключат успешно, това ще бъде една изключително значима придобивна трансакция в историята на Qualcomm и ще демонстрира решителна стратегическа промяна на пазара на сървърни чипове.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Нов естонски бенчмарк оценява устойчивостта на ИИ моделите спрямо руска пропаганда</title>
+      <link>https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</link>
+      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><strong>Институтът за естонски език (EKI)</strong> в сътрудничество с доброволческата организация <strong>Propastop</strong> представи нов бенчмарк за оценяване на податливостта на големите езикови модели (LLM) към руска пропаганда [1]. Инструментът, наречен <strong>„Propaganda Resistance“</strong>, е разработен, за да тества как различните алгоритми реагират на дезинформационни кампании и манипулативни внушения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Стартирането на локални ИИ модели вече е напълно достъпно и ефикасно</title>
+      <link>https://svetni.me/articles/2026/06/16/running-local-models/</link>
+      <pubDate>Tue, 16 Jun 2026 20:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/running-local-models/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В последната си публикация инженерът по машинно обучение Вики Бойкис прави подробен преглед на състоянието на локално стартираните големи езикови модели [1]. Тя споделя, че през последната година технологичният напредък е превърнал локалния инференс от експериментално хоби в напълно завършен и ефективен инструмент за ежедневна софтуерна разработка. Нейният собствен хардуерен комплект – компютър Mac Studio M2 от 2022 г. с 64 GB RAM и 1 TB дисково пространство – се оказва напълно достатъчен за безпроблемно изпълнение на тези задачи.</p>]]></description>
+    </item>
 
     <item>
       <title>Vibe кодерите ще си кодират: Как директорите по сигурност се справят с разрастването на кода</title>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/05/28/euro-office-sovereign-cloud-alternative/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Европейски технологични компании се обединяват за старта на Euro-Office — нов облачен офис пакет с отворен код, проектиран като директен отговор на американските платформи Microsoft Office (Microsoft 365) и Google Docs. Официалното пускане на версия 1.0 е планирано за 9 юни 2026 г., като проектът ще бъде свободно достъпен в публичните хранилища на GitHub. Решението идва в момент на засилен интерес към инициативите за цифров суверенитет в Европа, подхранван от нежеланието на много държавни и частни организации извън САЩ да зависят от американски облачни услуги [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>ИИ фабриките: Новата инфраструктура на интелекта</title>
-      <link>https://svetni.me/articles/2026/05/27/ai-factories-new-infrastructure/</link>
-      <pubDate>Wed, 27 May 2026 22:36:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/27/ai-factories-new-infrastructure/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според блог публикация на технологичния гигант NVIDIA, индустрията преминава през фундаментална трансформация от традиционни центрове за данни към изграждане на т.нар. „ИИ фабрики“ (AI factories). Докато в индустриалната ера електроцентралите са превръщали енергията в електричество, в ерата на изкуствения интелект ИИ фабриките преобразуват енергията в токени – основната производствена единица за разсъждения, автономни агенти и интелигентни системи. Икономиката на тези фабрики се дефинира изцяло от показатели като токени в секунда, токени на ват, цена на токен, степен на използване на наличните GPU ресурси и време на непрекъсната работа [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Нова вълна в AI: Преодоляване на предизвикателствата при високочестотните прогнози</title>
-      <link>https://svetni.me/articles/2026/05/27/apex-high-frequency-predictions/</link>
-      <pubDate>Wed, 27 May 2026 22:35:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/27/apex-high-frequency-predictions/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Новата архитектура APEX отбелязва значителен напредък в прогнозирането на вълнови полета, справяйки се с едно от най-големите предизвикателства в тази сфера – симулацията на високочестотни вълни. Според публикация на изданието Machine Brief [1], докато съвременните системи за машинно обучение и дълбоко обучение стават все по-ефективни при стандартни условия, те се сблъскват със сериозни трудности при липсата на достатъчно изходни данни за високите честоти.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Текстови интерфейси в Java: TamboUI обещава модерна конзолна екосистема</title>
-      <link>https://svetni.me/articles/2026/05/26/tamboui-java-tui/</link>
-      <pubDate>Tue, 26 May 2026 22:41:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/26/tamboui-java-tui/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Общността на Java посрещна появата на TamboUI – първата модерна библиотека за изграждане на текстови потребителски интерфейси (TUI) за екосистемата [1]. Вдъхновена от Rust-базираната библиотека Ratatui, която захранва конзолни инструменти като Claude Code CLI, TamboUI обещава поддръжка от ниско ниво на конзолно чертане до високо ниво на компоненти и управление на събития [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Възходът на AI и краят на форума Stack Overflow какъвто го познаваме</title>
-      <link>https://svetni.me/articles/2026/05/26/stack-overflow-decline-ai/</link>
-      <pubDate>Tue, 26 May 2026 22:35:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/26/stack-overflow-decline-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Въвеждането на генеративни асистенти с изкуствен интелект промени драстично софтуерната индустрия, като една от най-значимите жертви се оказа публичният форум на Stack Overflow [1]. Още през юли 2023 г. предприемачът Илон Мъск описа ситуацията около платформата като „смърт чрез големи езикови модели (LLM)“ [2]. Въпреки че активността на потребителите е спаднала драстично, самата компания намира нови начини за генериране на приходи [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Microsoft представи MDASH: Мултиагентна система за автоматизирано откриване на уязвимости в Windows и Azure</title>
-      <link>https://svetni.me/articles/2026/05/25/microsoft-mdash/</link>
-      <pubDate>Mon, 25 May 2026 20:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/25/microsoft-mdash/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Технологичният гигант Microsoft обяви внедряването на нова експериментална система за киберсигурност, наречена MDASH (Multi-Model Agentic Scanning Harness) [1]. Този проект бележи важен преход в софтуерното инженерство и сигурността — от преминаването от единични prompt-инструкции към оркестрация на десетки и стотици специализирани ИИ агенти, работещи съвместно. Проектът е представен от Тесу Ким (Taesoo Kim), вицепрезидент по въпросите на мултиагентната сигурност в компанията, и цели да реши проблема с мащабното откриване на уязвимости в сложни и чувствителни кодови среди [2].</p>]]></description>
     </item>
   </channel>
 </rss>
