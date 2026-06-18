@@ -9,9 +9,63 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Wed, 17 Jun 2026 20:45:00 +0000</pubDate>
+    <pubDate>Thu, 18 Jun 2026 23:00:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Заобикаляне на защитите в ChatGPT позволява генериране на насилие и сексуални изображения</title>
+      <link>https://svetni.me/articles/2026/06/18/chatgpt-images-safety-bypass/</link>
+      <pubDate>Thu, 18 Jun 2026 23:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/chatgpt-images-safety-bypass/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната екосистема на изкуствения интелект сигурността на съдържанието остава едно от най-динамичните и критични направления. Наскоро разкрит случай от британския стартъп за сигурност на изкуствен интелект Mindgard показа сериозна уязвимост в генератора на изображения на ChatGPT, задвижван от новия технологичен стек ChatGPT Images 2.0 (модел GPT-5.4). Според доклад на медията BBC [1], изследователите са успели да заобиколят вградените защитни бариери и да принудят системата да генерира графично насилие и сексуални изображения с помощта на относително проста текстова заявка. В същото време, официалната документация от OpenAI Deployment Safety Hub [2] разкрива сложната многослойна архитектура на защитите, която обаче се оказва податлива на целенасочени тактики за заобикаляне.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Изграждане на дългосрочна памет за ИИ агенти с Elasticsearch</title>
+      <link>https://svetni.me/articles/2026/06/18/agent-memory-elasticsearch/</link>
+      <pubDate>Thu, 18 Jun 2026 22:55:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/agent-memory-elasticsearch/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременните системи с изкуствен интелект поддържането на контекст в рамките на един разговор обикновено се решава чрез „напомпване“ на контекстния прозорец с историята на сесията. Този подход обаче бързо се сблъсква с ограничението на разходите, латентността и т. нар. ефект на „изгубване в средата“ (lost in the middle), при който моделите игнорират факти, намиращи се далеч от краищата на промпта. В инженерна публикация на Elasticsearch Labs [1], авторът Ноам Шварц описва как голям контекстен прозорец от 1 милион токена може да служи като работна чернова за единична извеждаща стъпка (short-term memory), но не представлява истинска дългосрочна памет.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic пусна мащабен ъпдейт за Claude Design с интеграция на дизайн системи и код</title>
+      <link>https://svetni.me/articles/2026/06/18/claude-design-overhaul/</link>
+      <pubDate>Thu, 18 Jun 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/claude-design-overhaul/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на VentureBeat [1], компанията Anthropic обяви мащабен ъпдейт на своята платформа Claude Design. Продуктът беше пуснат за първи път през април под формата на тестова версия (research preview) и бързо привлече над 1 милион потребители. Той обаче беше сериозно критикуван заради изключително високия си разход на токени, което водеше до бързо изчерпване на потребителските лимити [1]. Обновената версия има за цел да се справи с този проблем, като същевременно добавя ключови функции за интеграция на код и дизайн системи.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Amazon планира директни продажби на своите ИИ чипове в сблъсък с Nvidia</title>
+      <link>https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</link>
+      <pubDate>Thu, 18 Jun 2026 22:04:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на TechCrunch [1], технологичният гигант Amazon проучва възможността за директни продажби на своите специализирани чипове за изкуствен интелект Trainium на външни оператори на центрове за данни. Информацията беше потвърдена от Питър ДеСантис, вицепрезидент на AWS (Amazon Web Services), който съобщи, че компанията е в преговори за продажба на хардуерни стелажи с чипове директно на трети страни. Този ход представлява радикална промяна в досегашната стратегия на AWS, фокусирана върху отдаването под наем на изчислителна мощ изключително в собствения ѝ облак.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Локалният ИИ не е просто по-лош Claude Opus, а напълно различен инструмент</title>
+      <link>https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</link>
+      <pubDate>Thu, 18 Jun 2026 22:01:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В технологичната общност често се прокрадват твърдения, че локалните езикови модели с отворен код като Qwen 3.6 27B или 35-A3B вече достигат нивата на водещите комерсиални модели като Claude Opus. Основателят на платформата OpenFaaS Алекс Елис споделя своята гледна точка, базирана на реален бизнес опит и поддръжка на софтуерни продукти [1]. Според него локалните модели не могат да заменят изцяло комерсиалните системи за сложна софтуерна разработка, но представляват напълно различен и ценен инструмент с конкретни приложения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace</title>
+      <link>https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</link>
+      <pubDate>Thu, 18 Jun 2026 21:54:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално съобщение за сигурността [1], публикувано от JetBrains, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата JetBrains Marketplace. Разширенията са били специално разработени с цел тайно извличане на API ключове за доставчици на изкуствен интелект, конфигурирани от потребителите в техните работни среди. Компанията е предприела незабавни действия за премахването им, блокирането на профилите на техните издатели и дистанционното им деактивиране в инсталираните системи.</p>]]></description>
+    </item>
 
     <item>
       <title>Alibaba представи Qwen-Robot Suite: Фамилия от модели за физически въплътен изкуствен интелект</title>
@@ -407,60 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/04/flourish-neuro-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на списание WIRED [1], милиардерът Джеф Безос финансира новия стартъп за изкуствен интелект Flourish с цел радикално преоткриване на технологията. Компанията, съоснована от бившия ръководител в Amazon Роб Уилямс и невроучения Томас Риърдън, е събрала 500 милиона долара и е оценена на 2.5 милиарда долара. Нейната цел е да създаде системата <em>Cortex AI</em>, която да съчетае изчислителната мощ и способността за непрекъснато учене на човешкия мозък с изключително нисък енергиен бюджет [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Mistral AI стартира Vibe, придоби Emmi AI и гради нови центрове за данни</title>
-      <link>https://svetni.me/articles/2026/05/30/mistral-ai-vibe-industrial-push/</link>
-      <pubDate>Sat, 30 May 2026 22:49:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/mistral-ai-vibe-industrial-push/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>По време на първата си среща на върха AI NOW Summit в Париж, френската компания за изкуствен интелект Mistral AI обяви мащабна експанзия, съобщава VentureBeat [1]. С поредица от стратегически ходове — включително ребрандирането на своя чат асистент на Vibe, навлизането в индустриалния сектор и изграждането на собствена изчислителна база — компанията се позиционира като основен суверенен конкурент на американските лидери OpenAI и Anthropic [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Проблемът при корпоративните ИИ агенти не е в моделите, а в правата за достъп</title>
-      <link>https://svetni.me/articles/2026/05/30/ai-agent-permissions-bottleneck/</link>
-      <pubDate>Sat, 30 May 2026 22:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/ai-agent-permissions-bottleneck/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според анализ в технологичното издание VentureBeat, написан от Емилия Дейвид, голямата пречка пред внедряването на автономни ИИ агенти в бизнеса не са ограниченията на моделите, а управлението на правата за достъп [1]. Всеки опит за мащабиране на агентни работни потоци рано или късно се сблъсква с въпроса: как да се контролира какво е оторизиран да прави даден агент, от чие име действа и как се одитват неговите действия [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Microsoft заплаши изследовател по сигурността с наказателно преследване</title>
-      <link>https://svetni.me/articles/2026/05/30/microsoft-threatens-security-researcher/</link>
-      <pubDate>Sat, 30 May 2026 22:27:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/microsoft-threatens-security-researcher/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Както съобщава технологичното издание TechCrunch [1], Microsoft се оказа в центъра на сериозен скандал в сферата на киберсигурността. Корпорацията заплаши с наказателно разследване и сътрудничество с правоприлагащите органи независим изследовател, който публично разкри серия от критични, нерешени уязвимости от типа „нулев ден“ (zero-day) [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Стив Йеги: Краят на традиционните технически интервюта</title>
-      <link>https://svetni.me/articles/2026/05/30/the-last-technical-interview/</link>
-      <pubDate>Sat, 30 May 2026 22:21:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/the-last-technical-interview/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В нов аналитичен блог пост, озаглавен „Последното техническо интервю“, софтуерният пионер Стив Йеги обяви края на традиционния модел за наемане на софтуерни инженери [1]. Базирайки се на своя 35-годишен опит в гиганти като Amazon, Google и Sourcegraph, той твърди, че стандартните интервюта са се превърнали в безсмислен спектакъл, който не корелира с реалните способности на кандидатите [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>MIT разработи евтина и чиста технология за извличане на литий от скали</title>
-      <link>https://svetni.me/articles/2026/05/30/mit-low-cost-lithium-rocks/</link>
-      <pubDate>Sat, 30 May 2026 22:18:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/mit-low-cost-lithium-rocks/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Изследователи от Масачузетския технологичен институт (MIT), под ръководството на известния учен и предприемач проф. Иет-Минг Чианг, разработиха нов метод за извличане на батериен клас литий от твърди скали при стайна температура. Изследването, публикувано в списание Science [1], обещава да намали наполовина производствените разходи и рязко да ограничи въглеродния отпечатък на една от най-важните индустрии за енергийния преход.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Защо взривът на ракетата New Glenn на Blue Origin е катастрофален</title>
-      <link>https://svetni.me/articles/2026/05/30/new-glenn-failure-consequences/</link>
-      <pubDate>Sat, 30 May 2026 22:07:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/05/30/new-glenn-failure-consequences/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според анализ в Ars Technica [1], детонацията на тежката ракета New Glenn на компанията Blue Origin по време на статични изпитания доведе до зрелищно огнено кълбо над Флорида. Инцидентът не просто унищожи хардуера, но нанесе тежки щети върху наземната инфраструктура и предизвика сериозни сътресения в американската космическа индустрия и лунната програма на NASA [1].</p>]]></description>
     </item>
   </channel>
 </rss>
