@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Светни.ме</title>
+    <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://svetni.me</link>
+    <description>Технологии и наука</description>
+    <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+    <generator>Susuma</generator>
+    <language>en</language>
+
+    <item>
+      <title>Добре дошли в „Обществото на плоската крива“: Стив Йеги за платото при големите езикови модели</title>
+      <link>https://svetni.me/articles/2026/06/21/flat-curve-society/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/21/flat-curve-society/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>През юни 2026 г. известният софтуерен разработчик Стив Йеги публикува есето „The Flat Curve Society“ [1], в което анализира пазара на системи с изкуствен интелект. Йеги, който е работил на водещи позиции в технологични гиганти като Google и Amazon, споделя своите наблюдения върху бързо променящата се екосистема. Неговата централна теза е, че ерата на експоненциален растеж в способностите на големите езикови модели (LLMs) бързо преминава в плато, навлизайки в „Ерата на плоската крива“. Според автора това забавяне не е провал, а дългоочаквана стабилизация, която ще донесе големи ползи за софтуерните разработчици.</p>]]></description>
+    </item>
+
+    <item>
+      <title>MBDA разработи нова евтина система за далечни удари CROSSBOW</title>
+      <link>https://svetni.me/articles/2026/06/20/mbda-crossbow-deep-strike/</link>
+      <pubDate>Sat, 20 Jun 2026 23:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/mbda-crossbow-deep-strike/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на специализираното издание Defence Blog [1], най-големият европейски производител на ракетни системи MBDA е завършил разработката и успешните тестове на нова наземно базирана система за удари в дълбочина. Проектът, наречен CROSSBOW OWE (One-Way Effector Heavy), представлява безпилотно оръжие за еднократна употреба с голям обсег на действие.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Проблемът с разделения терминал: Предизвикателства пред оркестрацията на ИИ агенти</title>
+      <link>https://svetni.me/articles/2026/06/20/split-terminal-problem-ai-agents/</link>
+      <pubDate>Sat, 20 Jun 2026 22:56:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/split-terminal-problem-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според материал на разработчика Facundo в технологичния блог ffacu.dev [1], съвременните софтуерни инженери се сблъскват със сериозни архитектурни и практически предизвикателства при управлението на изкуствен интелект в ежедневната си работа. Проблемът, известен като „разделения терминал“ (split-terminal problem), описва примитивния начин, по който се изпълняват паралелни задачи: разработчиците често отварят множество отделни прозорци на терминала, за да стартират паралелно независими инстанции на инструменти като Claude Code [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Финото настройване забравя, RAG губи контекст: Хипермрежите като нова ИИ архитектура за агенти</title>
+      <link>https://svetni.me/articles/2026/06/20/venturebeat-hypernetworks-agents/</link>
+      <pubDate>Sat, 20 Jun 2026 09:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/venturebeat-hypernetworks-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според публикация в технологичното издание VentureBeat [1], авторът Уджас Пател описва сериозните ограничения пред внедряването на корпоративни автономни агенти. Компаниите, които се опитват да преминат от демонстрационни проекти към реална производствена среда, се сблъскват с т.нар. „оркестрационна стена“ (orchestration wall). Традиционните методи за захранване на моделите с фирмени данни и правила, базирани на фино настройване (fine-tuning) и RAG (Retrieval-Augmented Generation), разкриват критични архитектурни недостатъци.</p>]]></description>
+    </item>
+
+    <item>
+      <title>10 начина, по които учителите могат да използват ИИ за спестяване на време</title>
+      <link>https://svetni.me/articles/2026/06/20/teachers-use-ai-save-time/</link>
+      <pubDate>Sat, 20 Jun 2026 09:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/teachers-use-ai-save-time/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната сфера на образователните технологии се наблюдава все по-осезаемо напрежение между бързото навлизане на генеративния изкуствен интелект и фундаменталната нужда от съхраняване на автентичния човешки контакт в класната стая. Според подробен анализ на авторитетната образователна медия TeachThought [1], новите дигитални инструменти не трябва да изместват преподавателите от техните традиционни роли. Напротив, технологията следва да послужи като средство за освобождаване на ценно време, което да бъде инвестирано в по-задълбочени лични взаимоотношения с учениците.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Проучване на Йейл: Изкуственият интелект няма връзка с безработицата в САЩ</title>
+      <link>https://svetni.me/articles/2026/06/20/yale-ai-jobs-impact/</link>
+      <pubDate>Sat, 20 Jun 2026 08:37:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/yale-ai-jobs-impact/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Изследователската лаборатория Yale Budget Lab публикува нов анализ, разпространен от Business Insider и Machine Brief, който показва липса на доказателства за пряка връзка между навлизането на генеративния изкуствен интелект (ИИ) и нивата на безработица в САЩ от края на 2022 г. насам [1]. Въпреки масовите опасения от бърза автоматизация и масови съкращения, данните показват, че новата технология по-скоро променя естеството на съществуващите професии, отколкото да ги елиминира изцяло от пазара на труда.</p>]]></description>
+    </item>
+
+    <item>
+      <title>ИИ и голямото разглобяване на CMS системите</title>
+      <link>https://svetni.me/articles/2026/06/20/dries-cms-unbundling/</link>
+      <pubDate>Sat, 20 Jun 2026 08:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/dries-cms-unbundling/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В публикация на личния си блог [1], създателят на системата с отворен код Drupal и съосновател на компанията Acquia Дрис Байтаерт анализира един от най-често задаваните въпроси в съвременната технологична индустрия: дали изкуственият интелект (ИИ) ще направи системите за управление на съдържание (CMS) излишни. В разговор с софтуерни инженери и изпълнителни директори на стартъпи, Байтаерт отбелязва общото схващане извън CMS индустрията, че генеративните модели и интелигентните агенти ще заменят традиционния софтуер за управление на уебсайтове. Тъй като ИИ вече може да генерира текст, да проектира страници, да пише код, да превежда и да сглобява цели сайтове, за много външни наблюдатели традиционните CMS изглеждат застрашени от изчезване.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Департаментът по приходите на Мисисипи модернизира ИТ инфраструктурата си с фокус върху сигурността на ИИ</title>
+      <link>https://svetni.me/articles/2026/06/20/mississippi-revenue-ai-modernization/</link>
+      <pubDate>Sat, 20 Jun 2026 08:29:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/20/mississippi-revenue-ai-modernization/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Департаментът по приходите на Мисисипи модернизира своята критична ИТ инфраструктура с цел да балансира сигурността на данните с постепенното внедряване на технологии за изкуствен интелект. Този процес се ръководи от техническия директор на ведомството Mike DeHaan, който сподели детайли за стратегията на организацията по време на събитието Pure Accelerate 2026 [1]. Тъй като агенцията управлява силно чувствителни финансови и лични данни на данъкоплатците, нейният подход изключва нерегулираното експериментиране в полза на строг контрол.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Какво е AI Agent Harness: Софтуерната обвивка, която превръща моделите в агенти</title>
+      <link>https://svetni.me/articles/2026/06/19/ai-agent-harness/</link>
+      <pubDate>Fri, 19 Jun 2026 16:22:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/19/ai-agent-harness/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация на корпоративния си блог [1], екипът на Databricks анализира една от най-значимите концептуални промени в разработката на софтуер с изкуствен интелект: прехода от чисти езикови модели към завършени системи. Ключов елемент в тази еволюция е т.нар. <strong>агентна обвивка (AI agent harness)</strong>. Това е софтуерната инфраструктура, която обгражда големия езиков модел (LLM) и му позволява да извършва реални действия, вместо просто да отговаря на текстови промптове.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Заобикаляне на защитите в ChatGPT позволява генериране на насилие и сексуални изображения</title>
+      <link>https://svetni.me/articles/2026/06/18/chatgpt-images-safety-bypass/</link>
+      <pubDate>Thu, 18 Jun 2026 23:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/chatgpt-images-safety-bypass/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната екосистема на изкуствения интелект сигурността на съдържанието остава едно от най-динамичните и критични направления. Наскоро разкрит случай от британския стартъп за сигурност на изкуствен интелект Mindgard показа сериозна уязвимост в генератора на изображения на ChatGPT, задвижван от новия технологичен стек ChatGPT Images 2.0 (модел GPT-5.4). Според доклад на медията BBC [1], изследователите са успели да заобиколят вградените защитни бариери и да принудят системата да генерира графично насилие и сексуални изображения с помощта на относително проста текстова заявка. В същото време, официалната документация от OpenAI Deployment Safety Hub [2] разкрива сложната многослойна архитектура на защитите, която обаче се оказва податлива на целенасочени тактики за заобикаляне.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Изграждане на дългосрочна памет за ИИ агенти с Elasticsearch</title>
+      <link>https://svetni.me/articles/2026/06/18/agent-memory-elasticsearch/</link>
+      <pubDate>Thu, 18 Jun 2026 22:55:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/agent-memory-elasticsearch/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременните системи с изкуствен интелект поддържането на контекст в рамките на един разговор обикновено се решава чрез „напомпване“ на контекстния прозорец с историята на сесията. Този подход обаче бързо се сблъсква с ограничението на разходите, латентността и т. нар. ефект на „изгубване в средата“ (lost in the middle), при който моделите игнорират факти, намиращи се далеч от краищата на промпта. В инженерна публикация на Elasticsearch Labs [1], авторът Ноам Шварц описва как голям контекстен прозорец от 1 милион токена може да служи като работна чернова за единична извеждаща стъпка (short-term memory), но не представлява истинска дългосрочна памет.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic пусна мащабен ъпдейт за Claude Design с интеграция на дизайн системи и код</title>
+      <link>https://svetni.me/articles/2026/06/18/claude-design-overhaul/</link>
+      <pubDate>Thu, 18 Jun 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/claude-design-overhaul/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на VentureBeat [1], компанията Anthropic обяви мащабен ъпдейт на своята платформа Claude Design. Продуктът беше пуснат за първи път през април под формата на тестова версия (research preview) и бързо привлече над 1 милион потребители. Той обаче беше сериозно критикуван заради изключително високия си разход на токени, което водеше до бързо изчерпване на потребителските лимити [1]. Обновената версия има за цел да се справи с този проблем, като същевременно добавя ключови функции за интеграция на код и дизайн системи.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Amazon планира директни продажби на своите ИИ чипове в сблъсък с Nvidia</title>
+      <link>https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</link>
+      <pubDate>Thu, 18 Jun 2026 22:04:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на TechCrunch [1], технологичният гигант Amazon проучва възможността за директни продажби на своите специализирани чипове за изкуствен интелект Trainium на външни оператори на центрове за данни. Информацията беше потвърдена от Питър ДеСантис, вицепрезидент на AWS (Amazon Web Services), който съобщи, че компанията е в преговори за продажба на хардуерни стелажи с чипове директно на трети страни. Този ход представлява радикална промяна в досегашната стратегия на AWS, фокусирана върху отдаването под наем на изчислителна мощ изключително в собствения ѝ облак.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Локалният ИИ не е просто по-лош Claude Opus, а напълно различен инструмент</title>
+      <link>https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</link>
+      <pubDate>Thu, 18 Jun 2026 22:01:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В технологичната общност често се прокрадват твърдения, че локалните езикови модели с отворен код като Qwen 3.6 27B или 35-A3B вече достигат нивата на водещите комерсиални модели като Claude Opus. Основателят на платформата OpenFaaS Алекс Елис споделя своята гледна точка, базирана на реален бизнес опит и поддръжка на софтуерни продукти [1]. Според него локалните модели не могат да заменят изцяло комерсиалните системи за сложна софтуерна разработка, но представляват напълно различен и ценен инструмент с конкретни приложения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace</title>
+      <link>https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</link>
+      <pubDate>Thu, 18 Jun 2026 21:54:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално съобщение за сигурността [1], публикувано от JetBrains, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата JetBrains Marketplace. Разширенията са били специално разработени с цел тайно извличане на API ключове за доставчици на изкуствен интелект, конфигурирани от потребителите в техните работни среди. Компанията е предприела незабавни действия за премахването им, блокирането на профилите на техните издатели и дистанционното им деактивиране в инсталираните системи.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Alibaba представи Qwen-Robot Suite: Фамилия от модели за физически въплътен изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/06/17/qwen-robotsuite/</link>
+      <pubDate>Wed, 17 Jun 2026 20:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/qwen-robotsuite/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Лабораторията за изкуствен интелект Tongyi Lab, част от китайския технологичен конгломерат Alibaba Group, обяви официалното пускане на <strong>Qwen-Robot Suite</strong> [1] — нова фамилия от специализирани фундаментални модели за физически въплътен изкуствен интелект (Embodied AI). Фамилията е проектирана да служи като мост между визуално-езиковото възприятие и реалните физически действия, реализирайки концепцията за Vision-Language-Action (VLA) архитектура. Разработката цели да предостави унифицирана софтуерна инфраструктура за управление на роботизирани системи, преодолявайки сегашната фрагментация в софтуера за контрол на хардуера.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Dario Amodei призова лидерите на G7 да избягват разпокъсването на регулациите за ИИ</title>
+      <link>https://svetni.me/articles/2026/06/17/g7-ai-splinter-amodei/</link>
+      <pubDate>Wed, 17 Jun 2026 20:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/g7-ai-splinter-amodei/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>По време на срещата на върха на G7 във френския курорт Евиан ле Бен, изпълнителният директор на компанията за изкуствен интелект Anthropic, Dario Amodei, отправи официално предупреждение към световните лидери. Според репортаж на Financial Times [1], предприемачът ги е призовал да се противопоставят на изкушението да разпокъсват регулациите и политиките за изкуствен интелект в конкурентни националистически блокове. Този апел идва в момент на силно геополитическо напрежение, предизвикано от новите американски ограничения върху достъпа до технологии.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Джеф Безос на VivaTech: Изкуственият интелект ще доведе до недостиг на работна ръка, а не до масова безработица</title>
+      <link>https://svetni.me/articles/2026/06/17/jeff-bezos-ai-jobs-vivatech/</link>
+      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/jeff-bezos-ai-jobs-vivatech/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на медийната мрежа BBC News [1], основателят на Amazon Джеф Безос направи оптимистична прогноза за бъдещето на пазара на труда под влиянието на изкуствения интелект. По време на изказването си на технологичната конференция VivaTech в Париж, Безос отхвърли широко разпространените опасения, че автоматизацията ще доведе до масова безработица и ще направи хората излишни [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Rheinmetall представи мобилната противовъздушна система Skyranger 30 на Eurosatory 2026</title>
+      <link>https://svetni.me/articles/2026/06/17/rheinmetall-skyranger-eurosatory/</link>
+      <pubDate>Wed, 17 Jun 2026 17:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/rheinmetall-skyranger-eurosatory/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Германският отбранителен концерн Rheinmetall представи най-новата конфигурация на своята мобилна система за противовъздушна отбрана Skyranger 30 по време на престижното международно изложение Eurosatory 2026 в Париж [1]. Акцентът на представянето през тази година е интеграцията на купола Skyranger върху тежката верижна бойна машина на пехотата Lynx KF41. Тази демонстрация подчертава гъвкавостта на концепцията за противовъздушна отбрана от близко разстояние (SHORAD – Short Range Air Defence) в условията на съвременната бойна среда, характеризираща се с масирано използване на дронове.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Границите на ИИ и реалността на софтуерното инженерство: Грейди Буч срещу илюзията за последния ред код</title>
+      <link>https://svetni.me/articles/2026/06/16/grady-booch-software-architecture-ai-limits/</link>
+      <pubDate>Tue, 16 Jun 2026 23:04:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/grady-booch-software-architecture-ai-limits/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В рамките на популярен видео разговор софтуерният инфлуенсър Кент С. Додс интервюира легендарния компютърен учен, съавтор на UML и съосновател на Rational Software Грейди Буч относно бъдещето на разработката [1]. Дискусията е провокирана от есето на Додс „The Last Software Engineer“, в което той излага хипотезата, че изкуственият интелект постепенно ще поеме изцяло имплементацията на системи. Буч категорично отхвърля тази теза, настоявайки за ясно разграничение между простото писане на код с ИИ и цялостната дисциплина на софтуерното инженерство.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Трите фатални илюзии при писането на код с ИИ: Анализ на Дакс Раад (OpenCode)</title>
+      <link>https://svetni.me/articles/2026/06/16/opencode-dax-raad-interview/</link>
+      <pubDate>Tue, 16 Jun 2026 21:07:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/opencode-dax-raad-interview/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В ново интервю за технологичния подкаст <em>The Pragmatic Engineer</em> [1], Дакс Раад – съосновател на платформата за агентно инженерство OpenCode – споделя критичен поглед върху реалния ефект от изкуствения интелект върху софтуерното инженерство. Раад има богат опит в сектора, преминавайки през модериране на Minecraft сървъри, управление на стартиращи компании като Wright Health и техническо лидерство в SST, където подпомага стартирането на проекта OpenNext.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Бъдещето на програмирането според Rate Limited: GPT 5.5, цената на токените и краят на традиционния софтуерен инженер</title>
+      <link>https://svetni.me/articles/2026/06/16/rate-limited-ep-15/</link>
+      <pubDate>Tue, 16 Jun 2026 20:55:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/rate-limited-ep-15/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В петнадесетия епизод на технологичния подкаст Rate Limited водещите Ерик Бродуор (Eric Brodeur), Адам Ларсон (Adam Larson) и Рей Фернандо (Ray Fernando) направиха подробен преглед на новата реалност в разработката на софтуер [1]. Фокус на дискусията бяха изключителните способности за писане на код на новия модел GPT-5.5 на OpenAI, променящите се ценови и изчислителни лимити, както и навлизането на концепции като „vibe разработка“ (vibe development) и агентно инженерство (agentic engineering) [1]. Според водещите традиционните методи за ръчно писане на код, строго контролирани от старши инженери, бързо отстъпват място на автоматизирани системи и нови начини за сътрудничество между хора и изкуствен интелект [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Ценовата война при моделите с изкуствен интелект в Китай се изостря</title>
+      <link>https://svetni.me/articles/2026/06/16/china-ai-price-war/</link>
+      <pubDate>Tue, 16 Jun 2026 20:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/china-ai-price-war/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според публикация на авторитетното хонконгско издание South China Morning Post (SCMP) [1], ценовата война между водещите разработчици на изкуствен интелект в Китай навлиза в нова, още по-интензивна фаза. Водещи технологични конгломерати и нововъзникващи стартъпи предприемат агресивни намаления на тарифите за ползване на своите модели през API, стремейки се да привлекат по-гоял дял от пазара на разработчици и корпоративни клиенти.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Федералните се паникьосаха от Fable 5 след обикновена подкана за поправка на код</title>
+      <link>https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</link>
+      <pubDate>Tue, 16 Jun 2026 20:28:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Случаят около спешното преустановяване на достъпа до авангардните изкуствени интелекти на Anthropic придоби нов и изненадващ обрат. Според публикация в технологичното издание The Register [1], американското правителство е задействало тежката процедура по експортен контрол не заради сложна злонамерена атака или истински джейлбрейк, а заради обикновена потребителска подкана за автоматично отстраняване на грешки в софтуер.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Нов естонски бенчмарк оценява устойчивостта на ИИ моделите спрямо руска пропаганда</title>
+      <link>https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</link>
+      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><strong>Институтът за естонски език (EKI)</strong> в сътрудничество с доброволческата организация <strong>Propastop</strong> представи нов бенчмарк за оценяване на податливостта на големите езикови модели (LLM) към руска пропаганда [1]. Инструментът, наречен <strong>„Propaganda Resistance“</strong>, е разработен, за да тества как различните алгоритми реагират на дезинформационни кампании и манипулативни внушения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Qualcomm преговаря за придобиване на ИИ чип стартъпа Tenstorrent за 10 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</link>
+      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Американският технологичен гигант Qualcomm води преговори за придобиване на канадския стартъп за специализирани чипове за изкуствен интелект Tenstorrent, съобщават източници на The Information, цитирани от The Register [1]. Стойността на евентуалната сделка се оценява в диапазона между 8 и 10 милиарда долара. Ако преговорите приключат успешно, това ще бъде една изключително значима придобивна трансакция в историята на Qualcomm и ще демонстрира решителна стратегическа промяна на пазара на сървърни чипове.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Стартирането на локални ИИ модели вече е напълно достъпно и ефикасно</title>
+      <link>https://svetni.me/articles/2026/06/16/running-local-models/</link>
+      <pubDate>Tue, 16 Jun 2026 20:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/running-local-models/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В последната си публикация инженерът по машинно обучение Вики Бойкис прави подробен преглед на състоянието на локално стартираните големи езикови модели [1]. Тя споделя, че през последната година технологичният напредък е превърнал локалния инференс от експериментално хоби в напълно завършен и ефективен инструмент за ежедневна софтуерна разработка. Нейният собствен хардуерен комплект – компютър Mac Studio M2 от 2022 г. с 64 GB RAM и 1 TB дисково пространство – се оказва напълно достатъчен за безпроблемно изпълнение на тези задачи.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Vibe кодерите ще си кодират: Как директорите по сигурност се справят с разрастването на кода</title>
+      <link>https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</link>
+      <pubDate>Mon, 15 Jun 2026 18:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Феноменът vibe coding (кодиране по усещане), термин, въведен от ИИ изследователя Андрей Карпати в началото на 2025 г., описва масовото използване на ИИ инструменти от служители за разработка и внедряване на код чрез текстови инструкции на естествен език. Този стил на работа позволява на широк кръг потребители да създават софтуер без традиционно писане на код, но често заобикаля утвърдените контроли по сигурност. Според репортаж на BleepingComputer [1], това явление създава сериозна криза с видимостта на корпоративните ИТ активи и попада в категорията на т.нар. Shadow AI (сенчест изкуствен интелект).</p>]]></description>
+    </item>
+
+    <item>
+      <title>Salesforce придобива Fin за 3.6 милиарда долара: Нова ера на автономните агенти</title>
+      <link>https://svetni.me/articles/2026/06/15/salesforce-acquires-fin/</link>
+      <pubDate>Mon, 15 Jun 2026 18:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/salesforce-acquires-fin/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Технологичният гигант Salesforce обяви сключването на окончателно споразумение за придобиване на Fin (известна в миналото като Intercom) — един от пионерите в разработването на автономни ИИ асистенти за клиентско обслужване [1]. Сделката е на стойност приблизително 3,6 милиарда долара и представлява една от най-значимите консолидации на пазара за обслужване на клиенти, базирано на изкуствен интелект.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Xiaomi пусна MIMO Code: Инструмент за кодиране с ИИ, който превъзхожда Claude Code</title>
+      <link>https://svetni.me/articles/2026/06/11/xiaomi-mimo-code/</link>
+      <pubDate>Mon, 15 Jun 2026 18:39:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/xiaomi-mimo-code/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Езиковите модели за писане на код често страдат от прогресивно влошаване на качеството при дълги работни сесии. Когато контекстният прозорец се препълни, по-ранните решения и текущото състояние на проекта биват компресирани или изгубени, което принуждава разработчиците отново да обясняват контекста на своите проекти.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Имунна система за ИИ агенти: NanoClaw и JFrog блокират свалянето на зловреден код</title>
+      <link>https://svetni.me/articles/2026/06/12/nanoclaw-jfrog-security/</link>
+      <pubDate>Mon, 15 Jun 2026 18:38:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/nanoclaw-jfrog-security/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Автономните ИИ агенти притежават способността динамично да разширяват възможностите си в движение. Когато даден агент срещне задача, за която няма нужния софтуер (например обработка на гласово съобщение), той може самостоятелно да изтегли, инсталира и стартира нужния софтуерен пакет в бекграунда. Тази гъвкавост обаче отваря сериозна пролука за атаки по веригата за доставки на софтуер (supply chain attacks).</p>]]></description>
+    </item>
+
+    <item>
+      <title>Вярна неопределеност: Как Google учи езиковите модели да казват „Не знам“</title>
+      <link>https://svetni.me/articles/2026/06/12/faithful-uncertainty/</link>
+      <pubDate>Mon, 15 Jun 2026 18:27:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/faithful-uncertainty/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Справянето с халюцинациите при големите езикови модели остава едно от най-сериозните препятствия пред внедряването на изкуствен интелект в реалния бизнес. Досегашните опити за намаляване на тези грешки обаче налагат сериозни ограничения, принуждавайки моделите да отказват отговори дори на въпроси, които всъщност знаят.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Оптимизация на ИИ в периферията: Cloudflare привлича екипа на Ensemble AI</title>
+      <link>https://svetni.me/articles/2026/06/15/cloudflare-ensemble-ai/</link>
+      <pubDate>Mon, 15 Jun 2026 18:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/cloudflare-ensemble-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Инфраструктурата за изкуствен интелект навлиза в нов етап на развитие. Разработчиците вече не се нуждаят само от достъп до готови езикови модели, а от изчислителна мрежа, която да ги изпълнява надеждно, икономично и възможно най-близо до крайния потребител. В опит да ускори този преход, Cloudflare обяви привличането на ключови членове от екипа на стартъпа Ensemble AI [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Защо автономните агенти не се мащабират: Инфраструктурният данък на изкуствения интелект</title>
+      <link>https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</link>
+      <pubDate>Mon, 15 Jun 2026 14:33:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Разработването на прототип на ИИ агент, който работи успешно в контролирана среда, е сравнително лесна задача. Преходът към производствена система, обслужваща реални потребители, обаче се оказва сериозно предизвикателство. Според анализ на ИИ инженера Рафаел Лопеш, мащабирането на автономните агенти е изцяло системен и инженерен проблем, а не ограничение на самите езикови модели [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</title>
+      <link>https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</link>
+      <pubDate>Sun, 14 Jun 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Инжектирането на въглероден диоксид (CO₂) в циментови продукти като бетон се утвърди като обещаващ метод за постоянно съхранение на парникови газове извън атмосферата. Въпреки че индустриалният интерес към тази технология нараства и компании като CarbonCure вече предлагат комерсиални смеси, фундаменталната химия зад този процес оставаше до голяма степен невидима.</p>]]></description>
+    </item>
+
+    <item>
+      <title>WebMCP: Нов стандарт в Chrome за директно управление на уеб сайтове от ИИ агенти</title>
+      <link>https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</link>
+      <pubDate>Sun, 14 Jun 2026 20:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално техническо ръководство за разработчици [1], екипът на Google представи подробности за новия предложен стандарт <strong>WebMCP (Web Model Context Protocol)</strong>. Технологията вече е достъпна за експериментиране в браузъра Chrome 149 в рамките на т.нар. Origin Trials [2]. Целта на WebMCP е да предостави стандартизиран мост, който позволява на уеб сайтовете да излагат своите функции директно към работещите в браузъра ИИ агенти, елиминирайки необходимостта от ненадеждни методи за управление.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic спря достъпа до моделите Fable 5 и Mythos 5 след безпрецедентна заповед на САЩ</title>
+      <link>https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</link>
+      <pubDate>Sun, 14 Jun 2026 07:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление, публикувано в блога на компанията [1], американският разработчик на изкуствен интелект Anthropic обяви извънредното преустановяване на достъпа до своите най-нови и мощни модели — <strong>Claude Fable 5</strong> и <strong>Claude Mythos 5</strong>. Решението е директно следствие от извънредна заповед за експортен контрол, издадена от Министерството на търговията на САЩ, която се позовава на съображения за национална сигурност [2]. Заповедта забранява предоставянето на достъп до тези системи на всякакви чуждестранни граждани, независимо дали се намират на територията на САЩ или извън нея.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Google Colab CLI: Локален контрол и автоматизация на отдалечени изчислителни ресурси</title>
+      <link>https://svetni.me/articles/2026/06/12/google-colab-cli/</link>
+      <pubDate>Fri, 12 Jun 2026 21:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/google-colab-cli/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация в корпоративния си блог Google [1] обяви пускането на нов интерфейс за команден ред — <strong>Google Colab CLI</strong>. Този инструмент е проектиран да преодолее разликата между локалната работна среда и отдалечените сървъри на платформата за разработка Google Colab. Новият софтуер предоставя среда за директно стартиране на отдалечени задачи както за софтуерни инженери, така и за автономни AI агенти, разполагащи с достъп до команден ред [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>The Document Foundation настоява Euro-Office да приеме ODF като роден формат</title>
+      <link>https://svetni.me/articles/2026/06/12/euro-office-native-odf/</link>
+      <pubDate>Fri, 12 Jun 2026 20:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/euro-office-native-odf/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Съобщението за предстоящия старт на инициативата Euro-Office привлече сериозно медийно внимание в европейската технологична преса. Организацията The Document Foundation (TDF) приветства засиления интерес към отворените стандарти и поетия ангажимент от страна на консорциума зад проекта. В официална позиция обаче фондацията направи важно уточнение относно историческия контекст и сподели своите очаквания за бъдещото технологично развитие на платформата [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Протести блокираха проекти за центрове за данни за 130 милиарда долара в САЩ</title>
+      <link>https://svetni.me/articles/2026/06/12/data-center-protests-130-billion/</link>
+      <pubDate>Fri, 12 Jun 2026 20:47:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/data-center-protests-130-billion/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Съпротивата на местните общности в САЩ срещу изграждането на инфраструктура за изкуствен интелект достига безпрецедентни мащаби. Според данни на изследователския проект Data Center Watch на фирмата 10a Labs, само за първото тримесечие на 2026 г. протести са блокирали или забавили най-малко 75 проекта за центрове за данни на обща стойност около 130 милиарда долара. Анализаторите посочват, че това не е временен пик, а структурна промяна, при която броят на активните групи за съпротива е нараснал повече от два пъти до 833 организации в 49 щата [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Пълно компресиране на контекст в голям мащаб: Новата ера на LCLM</title>
+      <link>https://svetni.me/articles/2026/06/11/context-compression-lclm/</link>
+      <pubDate>Thu, 11 Jun 2026 23:59:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/context-compression-lclm/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официален научен труд, публикуван в платформата arXiv [1], съвместен екип от изследователи от NYU, Modal Labs, UMD, Princeton, Columbia, Harvard, LLNL и изследователското звено FAIR на Meta представи нова фамилия модели, наречена LCLM (Latent Context Language Models). Проектът цели да разреши един от най-сериозните технологични проблеми при работата с големи езикови модели (LLM) — паметовото и изчислително тесно гърло, породено от разрастването на т.нар. KV cache при обработката на дълги контексти. Докладът, разгледан и от технологичното издание VentureBeat, демонстрира как едновременното пълно (end-to-end) обучение на компактен енкодер и голям декодер може да компресира входящия контекст до 16 пъти без значително влошаване на точността на модела.</p>]]></description>
+    </item>
+
+    <item>
+      <title>От Starlink към земната енергия: Ветерани от SpaceX строят слънчеви електроцентрали с батерии</title>
+      <link>https://svetni.me/articles/2026/06/11/ambrosia-energy/</link>
+      <pubDate>Thu, 11 Jun 2026 23:36:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/ambrosia-energy/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Двама ключови ветерани от SpaceX насочват опита си от разработката на Starlink и космоса към справяне с един от най-големите проблеми на Земята — енергийния глад на центровете за данни. Съоснователите на успешния сателитен стартъп Swarm Technologies (придобит през 2021 г.), Бен Лонгмиър и Сара Спенджълоу, представиха новия си проект Ambrosia Energy [1]. Техният план предвижда бързо и евтино изграждане на слънчеви електроцентрали, комбинирани с батерии, които да осигуряват денонощно захранване [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Могат ли технологичните компании да обикнат по-евтините AI модели?</title>
+      <link>https://svetni.me/articles/2026/06/09/can-tech-love-cheaper-models/</link>
+      <pubDate>Tue, 9 Jun 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/09/can-tech-love-cheaper-models/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Бумът на изкуствения интелект през последните години беше изграден върху едно основно предположение: по-големите модели са по-мощни, а най-мощните модели винаги печелят. Сега обаче индустрията е напът да разбере какво се случва, когато това предположение започне да се пропуква под натиска на икономическата реалност [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Крипто-финансираният възход на сивия пазар за пептиди: От фентанил към looksmaxxing</title>
+      <link>https://svetni.me/articles/2026/06/09/crypto-funded-chinese-peptide-labs/</link>
+      <pubDate>Tue, 9 Jun 2026 22:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/09/crypto-funded-chinese-peptide-labs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според седмичния обзор на престижното технологично списание Wired [1], пазарът на нерегулирани здравословни и козметични добавки преминава през дълбока трансформация, задвижвана от дигиталните активи и променящите се геополитически реалности. Новият анализ на компанията за блокчейн разузнаване Chainalysis [2] разкрива как сивият пазар на пептиди (къси вериги от аминокиселини, използвани за отслабване, изграждане на мускулна маса и подмладяване) се е превърнал в сенчеста икономика за над 100 милиона долара годишно. Най-тревожното разкритие в доклада е, че същите китайски химически лаборатории, които преди това доставяха прекурсори за фентанил на латиноамериканските наркокартели, сега пренасочват дейността си към директна продажба на пептиди на крайни клиенти на Запад.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Червеят Miasma удари Microsoft: Блокирани са 73 хранилища в GitHub след атака срещу AI асистенти</title>
+      <link>https://svetni.me/articles/2026/06/09/github-fake-microsoft-repos-malware/</link>
+      <pubDate>Tue, 9 Jun 2026 22:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/09/github-fake-microsoft-repos-malware/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>На 5 юни 2026 г. кампанията на червея Miasma [1] достигна облачната екосистема Azure на Microsoft [1]. Автоматизираната система за защита на платформата GitHub блокира 73 хранилища в рамките на 105 секунди, след като беше открито, че компрометиран акаунт на сътрудник е качил злонамерен комит в хранилището Durable Task Framework [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Meta иска съдът да обяви NSO Group в неподчинение след нови атаки в WhatsApp</title>
+      <link>https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</link>
+      <pubDate>Mon, 8 Jun 2026 22:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление [1] технологичният гигант Meta обяви, че е подал съдебен иск за неуважение към съда (motion for contempt) срещу израелската компания за кибер-разузнаване NSO Group. Правното действие, предприето във федералния съд на САЩ, е в отговор на нови разкрития за шпионски атаки, извършени чрез популярното приложение за съобщения WhatsApp. Искът твърди, че NSO Group е нарушила постоянната съдебна забрана от 2025 г., която изрично забранява на фирмата да атакува платформата и нейните потребители.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Allen Control Systems събра 200 милиона долара за автономната система за борба с дронове Bullfrog</title>
+      <link>https://svetni.me/articles/2026/06/08/acs-bullfrog-counter-drone/</link>
+      <pubDate>Mon, 8 Jun 2026 21:43:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/acs-bullfrog-counter-drone/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Американската компания за отбранителни технологии Allen Control Systems (ACS) успешно привлече 200 милиона долара в кръг от серия B, воден от Smash Capital, с което пазарната оценка на стартъпа достигна 2,2 милиарда долара. Според официално прессъобщение, разпространено от BusinessWire [1], финансовите ресурси са предназначени за мащабиране на производствената база в Тексас и внедряването на автономната противовъздушна система Bullfrog с участието на Craft Ventures, Rally Ventures и Inspired Capital.</p>]]></description>
+    </item>
+
+    <item>
+      <title>САЩ разшириха военния черен списък: Добавиха Alibaba, BYD и Baidu</title>
+      <link>https://svetni.me/articles/2026/06/08/us-blacklist-alibaba-byd/</link>
+      <pubDate>Mon, 8 Jun 2026 21:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/us-blacklist-alibaba-byd/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на South China Morning Post [1], Министерството на отбраната на САЩ (DOD) е разширило своя списък с „китайски военни компании“, опериращи пряко или косвено на територията на САЩ. Актуализацията е извършена съгласно член 1260H от Закона за националната отбрана (NDAA), като в списъка са добавени технологични лидери като Alibaba, BYD, Baidu и Nio. Това решение представлява сериозно разширяване на обхвата на американските мерки за сигурност спрямо китайския технологичен сектор.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Големият обрат в изкуствения интелект: Краят на „tokenmaxxing“ и сблъсъкът с реалността</title>
+      <link>https://svetni.me/articles/2026/06/08/ai-backlash-vibe-shift/</link>
+      <pubDate>Mon, 8 Jun 2026 10:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/ai-backlash-vibe-shift/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Светът на технологиите преживява дълбок обрат през 2026 г. Докато през изминалите години основна тема беше т.нар. vibe coding и безграничният ентусиазъм около моделите, сега секторът се сблъсква с явлението „vibe shift“ – отрезвяване, продиктувано от икономическата реалност, техническите ограничения на генеративния изкуствен интелект (ИИ) и нарастващия обществен отпор.</p>]]></description>
+    </item>
+
+    <item>
+      <title>От силози към сервизна топология: Защо Netflix изгради карта на зависимостите в реално време</title>
+      <link>https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</link>
+      <pubDate>Sun, 7 Jun 2026 23:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременните софтуерни архитектури мащабът и сложността на системите често надхвърлят капацитета на човешкото възприятие. Когато една платформа се състои от хиляди независими компоненти, разбирането на техните взаимовръзки по време на работа се превръща в критично предизвикателство. В официална публикация на своя инженерен блог [1], технологичният екип на Netflix сподели подробности за разработването на нова вътрешна система, наречена <strong>Service Topology</strong> (Сервизна топология) – динамична карта на разпределената инфраструктура в реално време, проектирана да преодолее традиционните ограничения на мониторинга.</p>]]></description>
+    </item>
+  </channel>
+</rss>

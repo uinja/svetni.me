@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Ring 3 -->
+  <rect x="100" y="40" width="600" height="60" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="400" y="75" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Ring 3: Потребителски приложения</text>
+  
+  <!-- Ring 0 -->
+  <rect x="100" y="120" width="600" height="60" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="400" y="155" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Ring 0: Ядро на ОС (Kernel)</text>
+  
+  <!-- Ring -1 -->
+  <rect x="100" y="200" width="600" height="60" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="400" y="235" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Ring -1: Хипервайзор (Hypervisor)</text>
+  
+  <!-- Ring -2 -->
+  <rect x="100" y="280" width="600" height="60" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="400" y="315" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Ring -2: System Management Mode (SMM)</text>
+  
+  <!-- Ring -3 (Highlighted) -->
+  <rect x="100" y="360" width="600" height="100" rx="8" fill="var(--color-tertiary)" stroke="var(--color-primary)" stroke-width="4" />
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--color-background)" text-anchor="middle" dominant-baseline="central">Ring -3: Management Engine / PSP</text>
+  <text x="400" y="430" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="var(--color-background)" text-anchor="middle" dominant-baseline="central">(Intel ME / AMD PSP - Пълен хардуерен контрол)</text>
+
+  <!-- Connection arrows -->
+  <path d="M400 100 V120" stroke="var(--color-on-surface)" stroke-width="2" fill="none" />
+  <path d="M400 180 V200" stroke="var(--color-on-surface)" stroke-width="2" fill="none" />
+  <path d="M400 260 V280" stroke="var(--color-on-surface)" stroke-width="2" fill="none" />
+  <path d="M400 340 V360" stroke="var(--color-on-surface)" stroke-width="2" fill="none" />
+</svg>

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Backbone Model (Frozen) -->
+  <rect x="100" y="100" width="200" height="300" rx="8" fill="var(--color-secondary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="200" y="250" font-family="system-ui, sans-serif" font-size="20" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-secondary)">Frozen LLM Backbone</text>
+  
+  <!-- OSAM (Online State of Associative Memory) -->
+  <rect x="500" y="150" width="200" height="200" rx="8" fill="var(--color-primary)" stroke="var(--color-on-surface)" stroke-width="2" />
+  <text x="600" y="250" font-family="system-ui, sans-serif" font-size="20" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-primary)">OSAM (0.12%)</text>
+  
+  <!-- Connections -->
+  <!-- Context to Backbone -->
+  <path d="M40 250 L100 250" stroke="var(--color-on-surface)" stroke-width="3" marker-end="url(#arrowhead)" />
+  <text x="70" y="230" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="var(--color-on-surface)">Context</text>
+  
+  <!-- Interaction to OSAM (Write) -->
+  <path d="M300 200 L500 200" stroke="var(--color-tertiary)" stroke-width="3" marker-end="url(#arrowhead)" />
+  <text x="400" y="180" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="var(--color-on-surface)">Delta-Rule Write</text>
+  
+  <!-- OSAM to Backbone (Read/Correct) -->
+  <path d="M500 300 L300 300" stroke="var(--color-primary)" stroke-width="3" marker-end="url(#arrowhead)" />
+  <text x="400" y="320" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="var(--color-on-surface)">Low-Rank Correction</text>
+  
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-on-surface)" />
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="400" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="var(--color-on-surface)">δ-mem Architecture</text>
+</svg>

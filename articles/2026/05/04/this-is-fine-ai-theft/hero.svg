@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff" />
+  
+  <!-- Grid/Pattern -->
+  <path d="M0 400 L800 400 M0 300 L800 300 M0 200 L800 200 M0 100 L800 100 M100 0 L100 500 M200 0 L200 500 M300 0 L300 500 M400 0 L400 500 M500 0 L500 500 M600 0 L600 500 M700 0 L700 500" stroke="#3b82f6" stroke-opacity="0.05" stroke-width="1" />
+
+  <!-- Artist Side -->
+  <rect x="100" y="150" width="200" height="200" rx="8" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2" />
+  <text x="200" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="#3b82f6">ХУДОЖНИК</text>
+  <circle cx="200" cy="250" r="50" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8 4" />
+  <text x="200" y="255" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#3b82f6">ОРИГИНАЛ</text>
+
+  <!-- Flow Arrows -->
+  <line x1="320" y1="250" x2="480" y2="250" stroke="#ef4444" stroke-width="3" />
+  <path d="M480 250 L470 245 L470 255 Z" fill="#ef4444" />
+  <text x="400" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#ef4444">БЕЗ РАЗРЕШЕНИЕ</text>
+
+  <!-- AI Startup Side -->
+  <rect x="500" y="150" width="200" height="200" rx="8" fill="#6366f1" fill-opacity="0.1" stroke="#6366f1" stroke-width="2" />
+  <text x="600" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="#6366f1">AI СТАРТЪП</text>
+  <path d="M560 250 L640 250 M600 210 L600 290 M570 220 L630 280 M570 280 L630 220" stroke="#6366f1" stroke-width="3" />
+  <text x="600" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#6366f1">РЕКЛАМА / AI</text>
+
+  <!-- Conflict Indicator -->
+  <circle cx="400" cy="380" r="40" fill="#1e293b" fill-opacity="0.05" stroke="#1e293b" stroke-width="1" />
+  <text x="400" y="385" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#ef4444">⚖️</text>
+  <text x="400" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e293b">АВТОРСКО ПРАВО</text>
+</svg>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="В официално съобщение за сигурността [1], публикувано от JetBrains, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата Jet..."><title>JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace - Светни.ме</title><meta property="og:title" content="JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace - Светни.ме"><meta property="og:description" content="В официално съобщение за сигурността [1], публикувано от JetBrains, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата Jet..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/./jetbrains-marketplace-security.svg"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 юни 2026 г.</p><div><p>В официално съобщение за сигурността [1], публикувано от <a href="/pages/jetbrains.html">JetBrains</a>, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата <a href="/pages/jetbrains-marketplace.html">JetBrains Marketplace</a>. Разширенията са били специално разработени с цел тайно извличане на API ключове за доставчици на изкуствен интелект, конфигурирани от потребителите в техните работни среди. Компанията е предприела незабавни действия за премахването им, блокирането на профилите на техните издатели и дистанционното им деактивиране в инсталираните системи.</p>
+<p>От JetBrains потвърждават, че няма пробив във вътрешните системи, изходния код или корпоративната инфраструктура на компанията. Въпреки това инцидентът подчертава нарастващите рискове около сигурността на локалните среди за разработка и необходимостта от по-строг контрол върху разширенията, които разработчиците интегрират в ежедневието си.</p>
+<h2>Анатомия на атаката: Как са работили зловредните плъгини</h2>
+<p>За да останат неоткрити възможно най-дълго време, зловредните плъгини са функционирали точно според очакванията – предоставяли са реални услуги за генериране на текст или писане на автоматизирани тестове. Този подход поддържа ниска видимост и предотвратява бързото разпознаване на злонамерената дейност от потребителите [1].</p>
+<p>Вътрешният механизъм на компрометиране е разчитал на следната последователност:</p>
+<ol>
+<li><strong>Капанът:</strong> Когато разработчикът въведе своя личен API ключ (например за OpenAI, <a href="/pages/deepseek.html">DeepSeek</a> или SiliconFlow) в настройките на плъгина и натисне бутона за потвърждение, разширението задейства неоторизирана фонова функция.</li>
+<li><strong>Заобикаляне на предупрежденията:</strong> За да избегнат засичане от страна на локалния мрежов трафик или инструменти за дебъгване в средата, плъгините тихомълком инсталират системен <code>X509TrustManager</code> на ниво виртуална машина (JVM). Тази стъпка деактивира стандартните TLS предупреждения за неподписани и самоподписани сертификати.</li>
+<li><strong>Ексфилтрация:</strong> Компрометираният ключ се предава като JSON полезен товар (payload) в чист, некриптиран текст през HTTP директно към твърдо зададен IP адрес на контролен сървър (C2) с адрес <code>39.107.60.51</code>.</li>
+</ol>
+<p>Досега инструментът за техническа проверка на плъгини (Plugin Verifier) на JetBrains е бил проектиран предимно да анализира съвместимостта на приложните програмни интерфейси (API), а не за сканиране на потоци от данни или защита от зловреден софтуер [1]. Тъй като използваните функции са изглеждали стандартни за ИИ асистенти, индивидуалните некриптирани крайни точки и TLS конфигурации не са били засечени по време на първоначалното качване на кода.</p>
+<h2>Премахнати плъгини и незабавни мерки</h2>
+<p>След получаване на докладите за сигурност, екипите на JetBrains са извършили пълно прочистване на екосистемата [1]. Предприетите мерки включват:</p>
+<ul>
+<li><strong>Пълно премахване:</strong> Всички 15 идентифицирани разширения са трайно премахнати от JetBrains Marketplace и не могат да бъдат изтеглени отново.</li>
+<li><strong>Блокиране на издатели:</strong> Изцяло са прекратени акаунтите на 7 издатели, свързани с киберкампанията.</li>
+<li><strong>Дистанционно изключване:</strong> Задействан е вграденият в платформите механизъм за спешно спиране (kill-switch). Плъгините са маркирани като повредени в архитектурата на JetBrains, което автоматично ги деактивира в потребителските среди при следващото стартиране на IDE редактора.</li>
+</ul>
+<p>Списъкът с компрометираните разширения включва следните пакети, които разработчиците трябва незабавно да проверят:</p>
+<ol>
+<li>DeepSeek Junit Test (<code>org.sm.yms.toolkit</code>)</li>
+<li>DeepSeek Git Commit (<code>com.json.simple.kit</code>)</li>
+<li>DeepSeek FindBugs (<code>org.bug.find.tools</code>)</li>
+<li>DeepSeek AI Chat (<code>org.translate.ai.simple</code>)</li>
+<li>DeepSeek Dev AI (<code>com.yy.test.ai.simple</code>)</li>
+<li>DeepSeek AI Coding (<code>com.dev.ai.toolkit</code>)</li>
+<li>AI FindBugs (<code>com.json.view.simple</code>)</li>
+<li>AI Git Commitor (<code>com.my.git.ai.kit</code>)</li>
+<li>AI Coder Review (<code>org.check.ai.ds</code>)</li>
+<li>DeepSeek Coder AI (<code>com.review.tool.code</code>)</li>
+<li>AI Coder Assistant (<code>org.code.assist.dev.tool</code>)</li>
+<li>DeepSeek Code Review (<code>com.coder.ai.dpt</code>)</li>
+<li>CodeGPT AI Assistant (<code>com.my.code.tools</code>)</li>
+<li>DeepSeek AI Assist (<code>ord.cp.code.ai.kit</code>)</li>
+<li>Coding Simple Tool (<code>com.dp.git.ai.tool</code>)</li>
+</ol>
+<h2>Препоръчителни стъпки за почистване и защита</h2>
+<p>Всички потребители, които са използвали или инсталирали някой от горепосочените плъгини преди 17 юни 2026 г., трябва да третират въведените си идентификационни данни като изложени на риск и да извършат следното почистване [1]:</p>
+<ul>
+<li><strong>Деактивиране на разширенията:</strong> Отидете в менюто на вашето IDE (<code>Settings &gt; Plugins &gt; Installed</code>) и се уверете, че злонамерените инструменти са напълно деинсталирани от вашата система. Припомняме, че баджът за проверен разработчик (Verified Vendor) потвърждава единствено легалната идентичност на издателя, но не е абсолютна гаранция за качеството или безопасността на неговия код.</li>
+<li><strong>Анулиране на API ключове:</strong> Веднага прекратете съществуващите ключове в порталите на вашите ИИ доставчици (OpenAI, DeepSeek, SiliconFlow и др.) и генерирайте нови секрети.</li>
+<li><strong>Анализ на лог файловете:</strong> Проверете потреблението на своите API акаунти за необичайни скокове в разходите или заявки от непознати IP адреси, съвпадащи с мрежата на C2 сървъра (<code>39.107.60.51</code>).</li>
+<li><strong>Мрежова защита:</strong> Добавете IP адреса <code>39.107.60.51</code> в локалните си защитни стени или корпоративните DNS списъци за блокиране.</li>
+<li><strong>Ограничаване на привилегиите:</strong> В бъдеще използвайте ключове с ограничена валидност и бюджетни лимити, вместо коренови (root) ключове с пълен достъп.</li>
+<li><strong>Сканиране на кодови хранилища:</strong> Уверете се, че API токените не са изтекли инцидентно във вашите кодови бази и не са записани в Git хронологията.</li>
+</ul>
+<h2>Дългосрочно затягане на защитите и ролята на ACP</h2>
+<p>Като част от плановете си за предотвратяване на подобни инциденти в бъдеще, JetBrains активно внедрява нови правила в процеса на автоматизиран преглед на плъгини при качване в Marketplace [1]. Новите проверки ще блокират автоматично разширения, които съдържат некриптирани HTTP или директни IP адреси, извършват TLS отслабване чрез потребителски <code>X509TrustManager</code> методи или изискват въвеждане на чувствителни системни токени в несигурни полета.</p>
+<p>В допълнение към тези промени, JetBrains насърчава софтуерните разработчици да мигрират към новия стандарт <a href="/pages/agent-client-protocol.html">Agent Client Protocol (ACP)</a>, разработен съвместно с създателите на <a href="/pages/zed.html">Zed</a> [1]. За разлика от класическите плъгини с пълен достъп до операционната система, ACP стандартизира интерфейса между IDE средите и изкуствения интелект. Чрез сигурна изолация и комуникация само през стандартни входно-изходни потоци (stdin/stdout), протоколът елиминира риска от компрометиране на локалната машина от страна на външни разширения.</p>
+<p><img src="/articles/2026/06/18/jetbrains-marketplace-security/jetbrains-marketplace-security.svg" alt="JetBrains Marketplace Security Diagram"><br><small>Изображение: Svetni.me / Авторско изображение</small></p>
+<p><strong>Източници:</strong></p>
+<ol>
+<li><a href="https://blog.jetbrains.com/platform/2026/06/marketplace-ecosystem-security-update-malicious-ai-plugins/">JetBrains Marketplace Ecosystem Security Update: Addressing Malicious Third-Party AI Plugins</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zed.html">Zed</a><p>Zed е високопроизводителен текстов редактор за съвместна работа, разработен от създателите на Atom и Tree-sitter.</p></li><li><a href="/pages/jetbrains-marketplace.html">JetBrains Marketplace</a><p>JetBrains Marketplace е официалната платформа за разширения, плъгини и теми, съвместими с различните среди за разработка на JetBrains.</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/agent-client-protocol.html">Agent Client Protocol (ACP)</a><p>Agent Client Protocol (ACP) е отворен комуникационен стандарт, разработен съвместно от JetBrains и Zed, който има за цел да дефинира стандартизиран и ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>

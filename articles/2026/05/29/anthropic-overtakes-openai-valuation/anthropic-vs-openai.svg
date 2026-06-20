@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1" flood-color="#202124" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff" />
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#202124">Сравнение: Anthropic срещу OpenAI (Май 2026)</text>
+  <text x="400" y="72" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#64748b">Пазарна оценка и годишен темп на приходите (Revenue Run Rate)</text>
+
+  <!-- LEFT SECTION: Valuation ($ млрд.) -->
+  <g transform="translate(60, 110)">
+    <!-- Section Title -->
+    <text x="160" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#1a30ae">ПАЗАРНА ОЦЕНКА</text>
+    
+    <!-- Anthropic Valuation Card -->
+    <g filter="url(#shadow)">
+      <rect x="0" y="50" width="320" height="90" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+    </g>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124">Anthropic</text>
+    <text x="20" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">След последен рунд от $65 млрд.</text>
+    <text x="300" y="100" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#1a30ae">$965 млрд.</text>
+
+    <!-- OpenAI Valuation Card -->
+    <g filter="url(#shadow)">
+      <rect x="0" y="165" width="320" height="90" rx="8" fill="#f8f9fa" stroke="#94a3b8" stroke-width="1.5" />
+    </g>
+    <text x="20" y="195" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#475569">OpenAI</text>
+    <text x="20" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Оценка от март 2026 г.</text>
+    <text x="300" y="215" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#475569">$852 млрд.</text>
+  </g>
+
+  <!-- RIGHT SECTION: Annualized Revenue Run Rate ($ млрд.) -->
+  <g transform="translate(420, 110)">
+    <!-- Section Title -->
+    <text x="160" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#1e33af">ТЕМП НА ПРИХОДИТЕ</text>
+    
+    <!-- Anthropic Revenue Card -->
+    <g filter="url(#shadow)">
+      <rect x="0" y="50" width="320" height="90" rx="8" fill="#f8f9fa" stroke="#1e33af" stroke-width="2" />
+    </g>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#202124">Anthropic</text>
+    <text x="20" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Годишен темп към май 2026 г.</text>
+    <text x="300" y="100" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#1e33af">$47 млрд.</text>
+
+    <!-- OpenAI Revenue Card -->
+    <g filter="url(#shadow)">
+      <rect x="0" y="165" width="320" height="90" rx="8" fill="#f8f9fa" stroke="#94a3b8" stroke-width="1.5" />
+    </g>
+    <text x="20" y="195" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#475569">OpenAI</text>
+    <text x="20" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Годишен темп към май 2026 г.</text>
+    <text x="300" y="215" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#475569">$30 млрд.</text>
+  </g>
+
+  <!-- Footnote -->
+  <rect x="60" y="420" width="680" height="40" rx="6" fill="#f1f5f9" />
+  <text x="400" y="440" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="12" fill="#475569">Данните отразяват рунда на финансиране от май 2026 г. и годишните темпове на приходите.</text>
+</svg>

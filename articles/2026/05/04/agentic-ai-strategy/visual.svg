@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#ffffff" />
+  
+  <!-- Path -->
+  <path d="M 100 400 L 700 100" stroke="#3b82f6" stroke-width="40" fill="none" opacity="0.2" />
+  <path d="M 100 400 L 700 100" stroke="#3b82f6" stroke-width="4" fill="none" stroke-dasharray="8 8" />
+  
+  <!-- Guardrails -->
+  <path d="M 80 420 L 680 120" stroke="#ef4444" stroke-width="8" fill="none" />
+  <path d="M 120 380 L 720 80" stroke="#ef4444" stroke-width="8" fill="none" />
+  
+  <!-- Risk Zone -->
+  <circle cx="250" cy="150" r="40" fill="#f59e0b" opacity="0.1" />
+  <text x="250" y="150" font-family="system-ui, sans-serif" font-size="20" fill="#f59e0b" text-anchor="middle" dominant-baseline="central">Рискове</text>
+  <path d="M 230 170 L 210 210" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Success Zone -->
+  <circle cx="650" cy="150" r="50" fill="#3b82f6" opacity="0.1" />
+  <text x="650" y="150" font-family="system-ui, sans-serif" font-size="20" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Успех / ROI</text>
+  
+  <!-- Labels -->
+  <text x="150" y="450" font-family="system-ui, sans-serif" font-size="18" fill="#1e293b" text-anchor="middle">Старт</text>
+  <text x="400" y="270" font-family="system-ui, sans-serif" font-size="16" fill="#ef4444" text-anchor="middle" transform="rotate(-26, 400, 270)">Предпазни релси (Guardrails)</text>
+  
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+</svg>

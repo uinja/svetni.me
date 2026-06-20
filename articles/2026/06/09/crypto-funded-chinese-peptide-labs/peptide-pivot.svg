@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <!-- Arrowhead definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--color-outline, #5a5a5a)" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+
+  <!-- Title -->
+  <text x="400" y="25" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="700" font-size="20" text-anchor="middle" dominant-baseline="central">Еволюция на сивата икономика: Трансформация на китайските химически лаборатории</text>
+
+  <!-- Common Origin: Chinese Labs -->
+  <rect x="250" y="48" width="300" height="60" rx="8" fill="var(--color-primary-container, #e8eaf6)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="400" y="68" fill="var(--color-on-primary-container, #1a30ae)" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle" dominant-baseline="central">Китайски химически лаборатории</text>
+  <text x="400" y="88" fill="var(--color-on-primary-container, #1a30ae)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="middle" dominant-baseline="central">Shanghai Sigma Audley / Bigreat Technology</text>
+
+  <!-- Left Path: Fentanyl Precursors (Black Market) -->
+  <!-- Diagonal Arrow Left -->
+  <line x1="330" y1="108" x2="200" y2="176" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="235" y="130" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="500" font-size="11" text-anchor="middle" dominant-baseline="central">1. Прекурсори за фентанил</text>
+
+  <!-- Cartels Node -->
+  <rect x="80" y="180" width="200" height="60" rx="8" fill="var(--color-surface)" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" />
+  <text x="180" y="200" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Наркокартели и дилъри</text>
+  <text x="180" y="220" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central">Транснационална организирана престъпност</text>
+
+  <!-- Arrow Cartels -> Darknet -->
+  <line x1="180" y1="240" x2="180" y2="296" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Darknet Markets Node -->
+  <rect x="80" y="300" width="200" height="60" rx="8" fill="var(--color-surface)" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" />
+  <text x="180" y="320" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Darknet пазари</text>
+  <text x="180" y="340" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central">Нелегална продажба на опиоиди</text>
+
+  <!-- Arrow Darknet -> Opioid Users -->
+  <line x1="180" y1="360" x2="180" y2="416" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Opioid Users Node -->
+  <rect x="80" y="420" width="200" height="60" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" />
+  <text x="180" y="440" fill="#c62828" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Крайни потребители</text>
+  <text x="180" y="460" fill="#c62828" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central">Опасни за живота опиоиди</text>
+
+
+  <!-- Right Path: Cosmetic Peptides (Gray Market) -->
+  <!-- Diagonal Arrow Right -->
+  <line x1="470" y1="108" x2="600" y2="176" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="565" y="130" fill="var(--color-secondary)" font-family="system-ui, sans-serif" font-weight="500" font-size="11" text-anchor="middle" dominant-baseline="central">2. Козметични пептиди (GLP-1)</text>
+
+  <!-- Direct Sales Node -->
+  <rect x="520" y="180" width="200" height="60" rx="8" fill="var(--color-surface)" stroke="var(--color-secondary)" stroke-width="2" />
+  <text x="620" y="200" fill="var(--color-secondary)" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Директни крипто продажби</text>
+  <text x="620" y="220" fill="var(--color-secondary)" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central">Избягване на банкови ограничения</text>
+
+  <!-- Arrow Direct Sales -> Socials -->
+  <line x1="620" y1="240" x2="620" y2="296" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- TikTok / Forums Node -->
+  <rect x="520" y="300" width="200" height="60" rx="8" fill="var(--color-surface)" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" />
+  <text x="620" y="320" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Социални мрежи и форуми</text>
+  <text x="620" y="340" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central"> Looksmaxxing субкултура (TikTok)</text>
+
+  <!-- Arrow Socials -> Looksmaxxers -->
+  <line x1="620" y1="360" x2="620" y2="416" stroke="var(--color-outline, #5a5a5a)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Looksmaxxers Node -->
+  <rect x="520" y="420" width="200" height="60" rx="8" fill="var(--color-surface)" stroke="var(--color-tertiary)" stroke-width="2" />
+  <text x="620" y="440" fill="var(--color-tertiary)" font-family="system-ui, sans-serif" font-weight="700" font-size="13" text-anchor="middle" dominant-baseline="central">Looksmaxxers и биохакери</text>
+  <text x="620" y="460" fill="var(--color-tertiary)" font-family="system-ui, sans-serif" font-weight="400" font-size="11" text-anchor="middle" dominant-baseline="central">Инжектиране на нестерилни съединения</text>
+</svg>

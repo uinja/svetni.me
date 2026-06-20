@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="system-ui, sans-serif">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Passive RAG Section -->
+  <text x="200" y="40" text-anchor="middle" font-weight="500" fill="var(--color-on-surface)">Пасивен RAG (Стандартен)</text>
+  <rect x="50" y="60" width="300" height="400" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-dasharray="4" />
+  
+  <rect x="100" y="100" width="200" height="60" rx="4" fill="var(--color-primary)" />
+  <text x="200" y="135" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14">LLM (Reasoning)</text>
+  
+  <rect x="100" y="300" width="200" height="60" rx="4" fill="var(--color-secondary)" />
+  <text x="200" y="335" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14">Векторна база данни</text>
+  
+  <path d="M 200 290 L 200 170" fill="none" stroke="var(--color-on-surface)" stroke-width="2" marker-end="url(#arrowhead)" />
+  <text x="210" y="240" fill="var(--color-on-surface)" font-size="12">Търсене на документи</text>
+  
+  <!-- Frozen Cortex Section -->
+  <text x="600" y="40" text-anchor="middle" font-weight="500" fill="var(--color-on-surface)">Frozen Cortex (Агентен)</text>
+  <rect x="450" y="60" width="300" height="400" rx="8" fill="none" stroke="var(--color-tertiary)" stroke-width="2" />
+  
+  <rect x="500" y="100" width="200" height="60" rx="4" fill="var(--color-primary)" opacity="0.6" />
+  <text x="600" y="135" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14">Frozen LLM (Cortex)</text>
+  
+  <rect x="500" y="220" width="200" height="60" rx="4" fill="var(--color-tertiary)" />
+  <text x="600" y="255" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14">Dynamic Memory (MemRL)</text>
+  
+  <rect x="500" y="340" width="200" height="60" rx="4" fill="var(--color-secondary)" />
+  <text x="600" y="375" text-anchor="middle" dominant-baseline="central" fill="white" font-size="14">Tool Context (DCG)</text>
+  
+  <!-- Arrows for Frozen Cortex -->
+  <path d="M 600 210 L 600 170" fill="none" stroke="var(--color-on-surface)" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M 600 330 L 600 290" fill="none" stroke="var(--color-on-surface)" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Definition of Arrowhead -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-on-surface)" />
+    </marker>
+  </defs>
+  
+  <!-- Legend/Footer -->
+  <text x="400" y="485" text-anchor="middle" font-size="12" fill="var(--color-on-surface)" opacity="0.7">Еволюция от пасивно извличане към активно учене</text>
+</svg>
