@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 22 Jun 2026 18:32:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Двуседмичният път към внедряването на „моменталното“ ИИ решение на Claude Code</title>
+      <link>https://svetni.me/articles/2026/06/22/thoughtbot-flaky-tests-ai/</link>
+      <pubDate>Mon, 22 Jun 2026 18:32:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/22/thoughtbot-flaky-tests-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В статия за блога на консултантската компания Thoughtbot разработчикът Fritz Meissner споделя опита си от внедряването на „моментално“ решение за нестабилни тестове (flaky tests), генерирано от изкуствен интелект [1]. Докато инструментът Claude Code е успял да локализира и коригира критичните грешки за една нощ, последващата преработка и изчистване на генерирания код са отнели две седмици интензивен човешки труд.</p>]]></description>
+    </item>
 
     <item>
       <title>Добре дошли в „Обществото на плоската крива“: Стив Йеги за платото при големите езикови модели</title>
@@ -230,21 +239,21 @@
     </item>
 
     <item>
-      <title>Qualcomm преговаря за придобиване на ИИ чип стартъпа Tenstorrent за 10 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</link>
-      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Американският технологичен гигант Qualcomm води преговори за придобиване на канадския стартъп за специализирани чипове за изкуствен интелект Tenstorrent, съобщават източници на The Information, цитирани от The Register [1]. Стойността на евентуалната сделка се оценява в диапазона между 8 и 10 милиарда долара. Ако преговорите приключат успешно, това ще бъде една изключително значима придобивна трансакция в историята на Qualcomm и ще демонстрира решителна стратегическа промяна на пазара на сървърни чипове.</p>]]></description>
-    </item>
-
-    <item>
       <title>Нов естонски бенчмарк оценява устойчивостта на ИИ моделите спрямо руска пропаганда</title>
       <link>https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</link>
       <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><strong>Институтът за естонски език (EKI)</strong> в сътрудничество с доброволческата организация <strong>Propastop</strong> представи нов бенчмарк за оценяване на податливостта на големите езикови модели (LLM) към руска пропаганда [1]. Инструментът, наречен <strong>„Propaganda Resistance“</strong>, е разработен, за да тества как различните алгоритми реагират на дезинформационни кампании и манипулативни внушения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Qualcomm преговаря за придобиване на ИИ чип стартъпа Tenstorrent за 10 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</link>
+      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Американският технологичен гигант Qualcomm води преговори за придобиване на канадския стартъп за специализирани чипове за изкуствен интелект Tenstorrent, съобщават източници на The Information, цитирани от The Register [1]. Стойността на евентуалната сделка се оценява в диапазона между 8 и 10 милиарда долара. Ако преговорите приключат успешно, това ще бъде една изключително значима придобивна трансакция в историята на Qualcomm и ще демонстрира решителна стратегическа промяна на пазара на сървърни чипове.</p>]]></description>
     </item>
 
     <item>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/ai-backlash-vibe-shift/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Светът на технологиите преживява дълбок обрат през 2026 г. Докато през изминалите години основна тема беше т.нар. vibe coding и безграничният ентусиазъм около моделите, сега секторът се сблъсква с явлението „vibe shift“ – отрезвяване, продиктувано от икономическата реалност, техническите ограничения на генеративния изкуствен интелект (ИИ) и нарастващия обществен отпор.</p>]]></description>
-    </item>
-
-    <item>
-      <title>От силози към сервизна топология: Защо Netflix изгради карта на зависимостите в реално време</title>
-      <link>https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</link>
-      <pubDate>Sun, 7 Jun 2026 23:13:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/07/netflix-real-time-service-map/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В съвременните софтуерни архитектури мащабът и сложността на системите често надхвърлят капацитета на човешкото възприятие. Когато една платформа се състои от хиляди независими компоненти, разбирането на техните взаимовръзки по време на работа се превръща в критично предизвикателство. В официална публикация на своя инженерен блог [1], технологичният екип на Netflix сподели подробности за разработването на нова вътрешна система, наречена <strong>Service Topology</strong> (Сервизна топология) – динамична карта на разпределената инфраструктура в реално време, проектирана да преодолее традиционните ограничения на мониторинга.</p>]]></description>
     </item>
   </channel>
 </rss>
