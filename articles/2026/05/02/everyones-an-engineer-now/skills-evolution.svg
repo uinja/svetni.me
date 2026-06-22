@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="500" fill="var(--color-on-surface)">Еволюция на уменията в ерата на ИИ</text>
+  
+  <!-- Pre-AI Era -->
+  <rect x="100" y="120" width="280" height="260" fill="var(--color-surface)" stroke="var(--color-secondary)" stroke-width="2" rx="8" />
+  <text x="240" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" opacity="0.7">Преди ИИ</text>
+  
+  <rect x="120" y="180" width="240" height="40" fill="var(--color-secondary)" opacity="0.1" rx="4" />
+  <text x="240" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-on-surface)">Техническа спецификация</text>
+  
+  <path d="M 240 220 L 240 250" stroke="var(--color-secondary)" stroke-width="2" fill="none" />
+  <polygon points="235,245 240,255 245,245" fill="var(--color-secondary)" />
+  
+  <rect x="120" y="260" width="240" height="40" fill="var(--color-primary)" rx="4" />
+  <text x="240" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-surface)">Ръчно кодиране</text>
+  
+  <text x="240" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">Основно умение: Реализация</text>
+
+  <!-- AI Era -->
+  <rect x="420" y="120" width="280" height="260" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" rx="8" />
+  <text x="560" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-primary)">С ИИ (Claude Code)</text>
+  
+  <rect x="440" y="180" width="240" height="40" fill="var(--color-secondary)" opacity="0.2" rx="4" />
+  <text x="560" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-primary)">Продуктов вкус &amp; Визия</text>
+  
+  <path d="M 560 220 L 560 250" stroke="var(--color-primary)" stroke-width="2" fill="none" />
+  <polygon points="555,245 560,255 565,245" fill="var(--color-primary)" />
+  
+  <rect x="440" y="260" width="240" height="40" fill="var(--color-surface)" rx="4" stroke="var(--color-primary)" stroke-dasharray="4" />
+  <text x="560" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-primary)">Агентно генериране</text>
+  
+  <path d="M 560 300 L 560 330" stroke="var(--color-primary)" stroke-width="2" fill="none" />
+  <polygon points="555,325 560,335 565,325" fill="var(--color-primary)" />
+  
+  <rect x="440" y="340" width="240" height="40" fill="var(--color-primary)" rx="4" />
+  <text x="560" y="365" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-surface)">Агентно ревю на код (Review)</text>
+  
+  <text x="560" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7">Основно умение: Преценка &amp; Вкус</text>
+
+  <!-- Connection line -->
+  <path d="M 380 250 L 420 250" stroke="var(--color-secondary)" stroke-width="1" stroke-dasharray="4" fill="none" />
+</svg>

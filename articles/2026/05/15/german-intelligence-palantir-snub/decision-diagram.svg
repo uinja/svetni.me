@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Entities -->
+  <!-- German Intelligence (BfV) -->
+  <rect x="300" y="50" width="200" height="80" rx="8" fill="var(--color-primary)" />
+  <text x="400" y="90" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Германско разузнаване (BfV)</text>
+  
+  <!-- Decision Point -->
+  <rect x="300" y="210" width="200" height="80" rx="40" fill="var(--color-secondary)" />
+  <text x="400" y="250" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Избор на софтуер</text>
+  
+  <!-- ChapsVision (Selected) -->
+  <rect x="500" y="370" width="180" height="80" rx="8" fill="var(--color-tertiary)" />
+  <text x="590" y="410" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">ChapsVision (Франция)</text>
+  
+  <!-- Palantir (Snubbed) -->
+  <rect x="120" y="370" width="180" height="80" rx="8" fill="var(--color-background)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="210" y="410" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Palantir (САЩ)</text>
+  
+  <!-- Connectors -->
+  <!-- BfV to Decision -->
+  <line x1="400" y1="130" x2="400" y2="210" stroke="var(--color-primary)" stroke-width="4" marker-end="url(#arrowhead)" />
+  
+  <!-- Decision to ChapsVision -->
+  <path d="M 450 290 Q 590 330 590 370" fill="none" stroke="var(--color-tertiary)" stroke-width="4" marker-end="url(#arrowhead)" />
+  <text x="560" y="330" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-on-surface)" text-anchor="middle">Избран</text>
+  
+  <!-- Decision to Palantir -->
+  <path d="M 350 290 Q 210 330 210 370" fill="none" stroke="var(--color-primary)" stroke-width="4" stroke-dasharray="8,4" marker-end="url(#cross)" />
+  <text x="240" y="330" font-family="system-ui, sans-serif" font-size="16" fill="var(--color-on-surface)" text-anchor="middle">Отхвърлен</text>
+  
+  <!-- Arrows and Markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)" />
+    </marker>
+    <marker id="cross" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <line x1="2" y1="2" x2="8" y2="8" stroke="var(--color-primary)" stroke-width="2" />
+      <line x1="2" y1="8" x2="8" y2="2" stroke="var(--color-primary)" stroke-width="2" />
+    </marker>
+  </defs>
+</svg>

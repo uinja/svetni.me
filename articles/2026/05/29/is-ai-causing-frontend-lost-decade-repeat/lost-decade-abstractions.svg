@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1a30ae" />
+    </marker>
+    <marker id="arrow-leak" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d93025" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff" />
+
+  <!-- Title -->
+  <text x="400" y="44" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#202124" text-anchor="middle" dominant-baseline="central">Сравнение на слоевете на абстракция: Рамки vs. ИИ</text>
+
+  <!-- Column Titles -->
+  <text x="240" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1a30ae" text-anchor="middle" dominant-baseline="central">Фронтенд рамки (JS / React)</text>
+  <text x="560" y="80" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e33af" text-anchor="middle" dominant-baseline="central">ИИ генератори на код</text>
+
+  <!-- LEFT COLUMN (Frameworks) -->
+  <!-- Top Box: Developer -->
+  <rect x="120" y="100" width="240" height="72" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <text x="240" y="124" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#202124" text-anchor="middle" dominant-baseline="central">Разработчик</text>
+  <text x="240" y="148" font-family="system-ui, sans-serif" font-size="12" fill="#202124" text-anchor="middle" dominant-baseline="central">Пише декларативен код (React)</text>
+
+  <!-- Left Arrow 1 -->
+  <line x1="240" y1="172" x2="240" y2="212" stroke="#1a30ae" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Middle Box: Abstraction Layer -->
+  <rect x="120" y="220" width="240" height="92" rx="8" fill="#1a30ae" />
+  <text x="240" y="242" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">JavaScript рамки</text>
+  <text x="240" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Абстрахират DOM операциите</text>
+  <text x="240" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" dominant-baseline="central">(Пренебрегват семантика и А11y)</text>
+
+  <!-- Left Arrow 2 -->
+  <line x1="240" y1="312" x2="240" y2="352" stroke="#1a30ae" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Bottom Box: Underlying platform -->
+  <rect x="120" y="360" width="240" height="72" rx="8" fill="#f8f9fa" stroke="#1b31ae" stroke-width="2" />
+  <text x="240" y="384" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#202124" text-anchor="middle" dominant-baseline="central">Браузърна среда</text>
+  <text x="240" y="408" font-family="system-ui, sans-serif" font-size="12" fill="#202124" text-anchor="middle" dominant-baseline="central">HTML / CSS / Web APIs / DOM</text>
+
+  <!-- Left Leak Curved Arrow -->
+  <path d="M 120 396 Q 50 266 120 136" fill="none" stroke="#d93025" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-leak)" />
+  <text x="44" y="266" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#d93025" transform="rotate(-90 44 266)" text-anchor="middle" dominant-baseline="central">Теч на абстракцията</text>
+
+
+  <!-- RIGHT COLUMN (AI Code Gen) -->
+  <!-- Top Box: Prompter -->
+  <rect x="440" y="100" width="240" height="72" rx="8" fill="#f8f9fa" stroke="#1e33af" stroke-width="2" />
+  <text x="560" y="124" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#202124" text-anchor="middle" dominant-baseline="central">Потребител / Промптър</text>
+  <text x="560" y="148" font-family="system-ui, sans-serif" font-size="12" fill="#202124" text-anchor="middle" dominant-baseline="central">Задава промпт в естествен език</text>
+
+  <!-- Right Arrow 1 -->
+  <line x1="560" y1="172" x2="560" y2="212" stroke="#1e33af" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Middle Box: AI Abstraction -->
+  <rect x="440" y="220" width="240" height="92" rx="8" fill="#1e33af" />
+  <text x="560" y="242" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">ИИ генератори (LLM / Агенти)</text>
+  <text x="560" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Абстрахират самото писане на код</text>
+  <text x="560" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" dominant-baseline="central">(Недетерминиран, пропусклив слой)</text>
+
+  <!-- Right Arrow 2 -->
+  <line x1="560" y1="312" x2="560" y2="352" stroke="#1e33af" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Bottom Box: Written Codebase -->
+  <rect x="440" y="360" width="240" height="72" rx="8" fill="#f8f9fa" stroke="#1b31ae" stroke-width="2" />
+  <text x="560" y="384" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#202124" text-anchor="middle" dominant-baseline="central">Кодова база и логика</text>
+  <text x="560" y="408" font-family="system-ui, sans-serif" font-size="12" fill="#202124" text-anchor="middle" dominant-baseline="central">Реален код, архитектура и контекст</text>
+
+  <!-- Right Leak Curved Arrow -->
+  <path d="M 680 396 Q 750 266 680 136" fill="none" stroke="#d93025" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-leak)" />
+  <text x="756" y="266" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#d93025" transform="rotate(90 756 266)" text-anchor="middle" dominant-baseline="central">Теч на абстракцията</text>
+
+</svg>

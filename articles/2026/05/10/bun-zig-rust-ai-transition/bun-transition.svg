@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Zig Box -->
+  <rect x="100" y="150" width="160" height="80" rx="8" fill="#1a30ae" stroke="#202124" stroke-width="2" />
+  <text x="180" y="195" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Zig Codebase</text>
+  
+  <!-- Policy Barrier -->
+  <line x1="260" y1="190" x2="340" y2="190" stroke="#202124" stroke-width="4" stroke-dasharray="8 4" />
+  <rect x="340" y="165" width="40" height="50" fill="#EA4335" stroke="#202124" stroke-width="2" />
+  <text x="360" y="235" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#202124" text-anchor="middle">No-AI Policy</text>
+
+  <!-- AI Orchestrator -->
+  <circle cx="400" cy="350" r="50" fill="#1e33af" stroke="#202124" stroke-width="2" />
+  <text x="400" y="350" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="#ffffff" text-anchor="middle" dominant-baseline="central">AI Agents</text>
+  
+  <!-- Rust Box -->
+  <rect x="540" y="150" width="160" height="80" rx="8" fill="#1b31ae" stroke="#202124" stroke-width="2" />
+  <text x="620" y="195" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="#ffffff" text-anchor="middle" dominant-baseline="central">Rust (Exploration)</text>
+  
+  <!-- Arrows -->
+  <path d="M 180 230 L 180 350 L 350 350" fill="none" stroke="#202124" stroke-width="2" marker-end="url(#arrowhead)" />
+  <path d="M 450 350 L 620 350 L 620 230" fill="none" stroke="#202124" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#202124" />
+    </marker>
+  </defs>
+  
+  <text x="400" y="450" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#202124" text-anchor="middle">Процес на AI-асистиран преход между езици</text>
+</svg>

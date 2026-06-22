@@ -1,0 +1,71 @@
+flowchart TB
+    subgraph Agent["AI Агент (Agent = Model + Harness)"]
+        direction TB
+        
+        subgraph Brain["Модел (LLM - 'Мозък')"]
+            direction TB
+            Reason["Разсъждение (Reason)<br/>Анализира контекста и взема решения"]
+        end
+
+        subgraph Harness["Агентна обвивка (Harness - 'Тяло' & Работно пространство)"]
+            direction TB
+            
+            subgraph Loop["Цикъл за изпълнение (ReAct)"]
+                direction LR
+                Act["Действие (Act)<br/>Извиква инструменти, пуска код"]
+                Observe["Наблюдение (Observe)<br/>Записва резултатите като контекст"]
+                Act --> Observe
+            end
+
+            subgraph Blocks["Осем градивни блока на обвивката"]
+                direction TB
+                B1["1. Системни промптове (Инструкции)"]
+                B2["2. Инструменти (Динамичен код & APIs)"]
+                B3["3. Изолирани среди (Sandboxes)"]
+                B4["4. Файлова система (Durable Storage)"]
+                B5["5. Памет (Context Compaction)"]
+                B6["6. Обратна връзка (Self-Verification)"]
+                B7["7. Guardrails (Human-in-the-Loop)"]
+                B8["8. Обсервабилност (Logging & Tracing)"]
+            end
+        end
+
+        Reason -->|"Решение за действие"| Act
+        Observe -->|"Нов контекст"| Reason
+    end
+
+    subgraph ControlPlane["Корпоративен контролен панел (Enterprise Control Plane)"]
+        direction TB
+        AgentBricks["Databricks Agent Bricks"]
+        UnityCatalog["Unity Catalog (Управление на достъпа)"]
+        MLflow["MLflow (Оценка & Трасиране)"]
+        
+        AgentBricks --> UnityCatalog
+        AgentBricks --> MLflow
+    end
+
+    ControlPlane -->|"Интегрира, управлява и одитира"| Harness
+
+    %% Colors matching contents/css/palette.json
+    %% primary: #1a30ae, secondary: #1b31ae, tertiary: #1e33af, background: #ffffff, surface: #f8f9fa, onPrimary: #ffffff, onSurface: #202124
+    style Agent fill:#ffffff,stroke:#1a30ae,stroke-width:2px,color:#202124
+    style Brain fill:#f8f9fa,stroke:#1e33af,stroke-width:2px,color:#202124
+    style Reason fill:#1a30ae,stroke:#1a30ae,color:#ffffff
+    
+    style Harness fill:#f8f9fa,stroke:#1e33af,stroke-width:2px,color:#202124
+    style Act fill:#1e33af,stroke:#1e33af,color:#ffffff
+    style Observe fill:#1e33af,stroke:#1e33af,color:#ffffff
+    
+    style ControlPlane fill:#ffffff,stroke:#1b31ae,stroke-width:2px,color:#202124
+    style AgentBricks fill:#1a30ae,stroke:#1a30ae,color:#ffffff
+    style UnityCatalog fill:#f8f9fa,stroke:#1a30ae,color:#202124
+    style MLflow fill:#f8f9fa,stroke:#1a30ae,color:#202124
+
+    style B1 fill:#ffffff,stroke:#202124,color:#202124
+    style B2 fill:#ffffff,stroke:#202124,color:#202124
+    style B3 fill:#ffffff,stroke:#202124,color:#202124
+    style B4 fill:#ffffff,stroke:#202124,color:#202124
+    style B5 fill:#ffffff,stroke:#202124,color:#202124
+    style B6 fill:#ffffff,stroke:#202124,color:#202124
+    style B7 fill:#ffffff,stroke:#202124,color:#202124
+    style B8 fill:#ffffff,stroke:#202124,color:#202124

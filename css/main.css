@@ -1,0 +1,709 @@
+/* -----------------------------------------------
+   Fonts
+   ----------------------------------------------- */
+/* Rubik - Cyrillic */
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik-cyrillic.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Rubik - Latin */
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik-latin.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+  font-style: normal;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Source Code Pro - Cyrillic */
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/source-code-pro-cyrillic.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Source Code Pro - Latin */
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../fonts/source-code-pro-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* -----------------------------------------------
+   Custom Properties & Design Tokens
+   ----------------------------------------------- */
+:root {
+  /* Spacing System */
+  --spacing-xs: 0.5rem;
+  --spacing-s: 1rem;
+  --spacing: 2rem;
+  --spacing-m: 3rem;
+  --spacing-l: 4rem;
+  --spacing-xl: 6rem;
+
+  /* Colors - Light (Default) - Aligned with reference */
+  --foreground: #000000;
+  --background: #ffffff;
+  --surface-soft: #fafafa;
+  --surface-accent: #f0f9ff;
+  --surface-overlay: #ffffff;
+  --muted: #4b5563;
+  --muted-soft: #6b7280;
+  --muted-faint: #9ca3af;
+  --border-subtle: #f3f4f6;
+  --code-border: #e8c0c0;
+  --red: #f83735;
+  --red-light: #fecbca;
+  --yellow: #fac832;
+  --yellow-dark: #ca8a04;
+  --yellow-light: #fef9c3;
+  --blue: #1231b5;
+  --blue-light: #84b4f9;
+  --logo-color: var(--yellow);
+
+  /* Typography */
+  --font-size-base: 0.9375rem;
+  /* 15px */
+  --font-size-s: 1.0625rem;
+  /* 17px */
+  --font-size-xs: 0.875rem;
+  /* 14px */
+
+  --line-height-base: 1.6;
+  --line-height-tight: 1.25;
+
+  /* Layout */
+  --content-width: 50rem;
+  --sidebar-width: 21.25rem;
+  --grid-gap: 5rem;
+  --site-max-width: 80rem;
+}
+
+/* -----------------------------------------------
+   Reset & Base Styles
+   ----------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Rubik",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: var(--line-height-base);
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--red-light);
+  color: var(--foreground);
+}
+
+/* Typography Reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+pre,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------------------------------
+   Layout Containers
+   ----------------------------------------------- */
+.content-wrap {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-m);
+}
+
+@media screen and (max-width: 48rem) {
+  .content-wrap {
+    padding: 0 var(--spacing-s);
+  }
+}
+
+/* -----------------------------------------------
+   Links & Navigation
+   ----------------------------------------------- */
+/* Global link style: no underline by default, except in body text */
+a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/* Underline in body paragraphs ONLY */
+.content p a {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+/* Titles, sidebars, and explicit lists should NOT have underlined links and should match foreground color */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+.site-name a,
+.related-entities a,
+.header-nav a,
+.footer-nav a,
+.content ul a,
+.content ol a,
+.nav a,
+.pagination a {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+.site-name a:hover,
+.related-entities a:hover,
+.header-nav a:hover,
+.footer-nav a:hover,
+.content ul a:hover,
+.content ol a:hover,
+.nav a:hover,
+.pagination a:hover {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+h1 a:hover::before,
+h2 a:hover::before,
+h3 a:hover::before,
+h4 a:hover::before,
+.site-name a:hover::before,
+.related-entities a:hover::before,
+.header-nav a:hover::before,
+.footer-nav a:hover::before,
+.content ul a:hover::before,
+.content ol a:hover::before,
+.nav a:hover::before,
+.pagination a:hover::before {
+  position: absolute;
+  display: block;
+  left: -0.4rem;
+  bottom: -0.1rem;
+  content: "";
+  height: 0.8rem;
+  width: calc(100% + 0.8rem);
+  background-image: repeating-linear-gradient(-45deg,
+      var(--blue-light),
+      var(--blue-light) 2px,
+      transparent 2px,
+      transparent 6px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* -----------------------------------------------
+   Headings
+   ----------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+  line-height: var(--line-height-tight);
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-xs);
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-s);
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 48rem) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* -----------------------------------------------
+   Header
+   ----------------------------------------------- */
+.header {
+  padding: var(--spacing-xs) 0;
+  border-bottom: 0.5rem solid var(--yellow);
+  margin-bottom: var(--spacing);
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--spacing-s);
+  flex-wrap: wrap;
+}
+
+.logo .site-name {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.0;
+  color: var(--foreground);
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.logo .site-name a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.logo .site-name a:hover {
+  color: var(--red);
+}
+
+.header .description {
+  color: var(--foreground);
+  font-size: var(--font-size-xs);
+  margin-top: 0.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--spacing-s);
+  padding-bottom: 0.2rem;
+  /* Align better with tight logo */
+}
+
+.header-nav a {
+  color: var(--foreground);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.header-nav a:hover {
+  color: var(--red);
+}
+
+
+/* -----------------------------------------------
+   Main Grid Layout
+   ----------------------------------------------- */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media screen and (min-width: 64rem) {
+  .main-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.main-content {
+  min-width: 0;
+  /* Prevents grid blowout */
+}
+
+/* -----------------------------------------------
+   Article Content
+   ----------------------------------------------- */
+.article {
+  margin-bottom: var(--spacing-l);
+}
+
+.article-header {
+  margin-bottom: var(--spacing-s);
+}
+
+.article h1 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.author-meta {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-soft);
+  font-weight: 600;
+  margin-bottom: var(--spacing-s);
+  display: flex;
+  gap: var(--spacing-s);
+  align-items: center;
+}
+
+.content p,
+.content .author {
+  margin-bottom: 1.8rem;
+  font-size: 1.0625rem;
+}
+
+.content .author {
+  color: var(--muted-soft);
+  font-weight: 500;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 48rem) {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .article h1 {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .content img {
+    margin: var(--spacing-s) 0;
+  }
+}
+
+/* List Formatting */
+.content ul,
+.content ol {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+
+.content li {
+  margin-bottom: 0.75rem;
+  font-size: 1.0625rem;
+  padding-left: 0.5rem;
+}
+
+.content li>ul,
+.content li>ol {
+  margin-top: 0.75rem;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------
+   Listings (Archive & Pages)
+   ----------------------------------------------- */
+.listing {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listing li {
+  font-size: var(--font-size-s);
+  padding: 0.4rem 0.2rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.listing.table li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+}
+
+.listing.fancy a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.listing.fancy a:hover {
+  color: var(--foreground);
+}
+
+.listing.fancy a:hover::before {
+  position: absolute;
+  display: block;
+  left: -0.5rem;
+  bottom: -0.2rem;
+  content: "";
+  height: 0.8rem;
+  width: 110%;
+  background-image: repeating-linear-gradient(-45deg,
+      var(--blue-light),
+      var(--blue-light) 2px,
+      transparent 2px,
+      transparent 6px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.listing span {
+  font-family: "Rubik", sans-serif;
+  font-size: var(--font-size-xs);
+  text-align: right;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted-soft);
+}
+
+/* Year Headers & Special Underlines */
+.with-butt {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--spacing);
+}
+
+.with-butt:after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.5rem;
+  bottom: -0.6rem;
+  left: 0;
+  border-bottom: 6px solid var(--red);
+}
+
+/* -----------------------------------------------
+   Sidebar
+   ----------------------------------------------- */
+.sidebar {
+  font-size: var(--font-size-s);
+}
+
+@media screen and (min-width: 64rem) {
+  .sidebar {
+    position: sticky;
+    top: var(--spacing);
+  }
+}
+
+.sidebar h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--spacing);
+  font-weight: 600;
+  color: var(--muted-faint);
+  border-bottom: 0.125rem solid var(--border-subtle);
+  padding-bottom: var(--spacing-xs);
+}
+
+/* -----------------------------------------------
+   Code Blocks
+   ----------------------------------------------- */
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9em;
+  background: var(--surface-soft);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-subtle);
+}
+
+pre {
+  background: var(--surface-soft);
+  padding: var(--spacing-s);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: var(--spacing);
+  border: 1px solid var(--border-subtle);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.related-entities {
+  list-style: none;
+  padding: 0;
+}
+
+.related-entities li {
+  margin-bottom: var(--spacing);
+}
+
+.related-entities p {
+  font-size: var(--font-size-xs);
+  color: var(--muted-soft);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* -----------------------------------------------
+   Navigation
+   ----------------------------------------------- */
+.nav {
+  margin-top: var(--spacing-l);
+  padding-top: var(--spacing-s);
+  border-top: 0.0625rem solid var(--border-subtle);
+}
+
+.article-nav,
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.article-nav .next,
+.pagination .next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* -----------------------------------------------
+   Footer
+   ----------------------------------------------- */
+.footer {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-l) 0;
+  background: var(--surface-soft);
+  border-top: 0.0625rem solid var(--border-subtle);
+  color: var(--muted-soft);
+  font-size: var(--font-size-xs);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--spacing-s);
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  background: none;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-nav a:hover {
+  color: var(--red);
+}
+
+.copy {
+  font-weight: 500;
+}
+
+/* -----------------------------------------------
+   Dark Mode Refinements
+   ----------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #e5e0d6;
+    --background: #191d28;
+    --surface-soft: #222838;
+    --surface-accent: #222838;
+    --muted: #94a3b8;
+    --muted-soft: #64748b;
+    --muted-faint: #475569;
+    --border-subtle: #222838;
+    --blue: #9ec2ff;
+    --red: #ff6e68;
+    --yellow: #ffd56a;
+    --logo-color: var(--yellow);
+  }
+
+  .content img {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .content img:hover {
+    opacity: 1;
+  }
+}

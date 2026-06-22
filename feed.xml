@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 22 Jun 2026 18:32:00 +0000</pubDate>
+    <pubDate>Mon, 22 Jun 2026 22:08:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Нов софтуер от NVIDIA ускорява научните изследвания от астрономията до материалознанието</title>
+      <link>https://svetni.me/articles/2026/06/22/nvidia-ai-science-cuda/</link>
+      <pubDate>Mon, 22 Jun 2026 22:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/22/nvidia-ai-science-cuda/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>По време на международната конференция за високопроизводителни изчисления ISC High Performance 2026 (ISC26), компанията NVIDIA представи значително разширение на своя софтуерен стек CUDA [1]. В официално изявление авторът Крис Портър разкрива серия от нови библиотеки, референтен код и микроуслуги в рамките на платформата CUDA-X. Тяхната основна цел е да осигурят необходимата изчислителна мощност за следващото поколение научни изследвания, вариращи от космологични наблюдения до симулации на молекулярно ниво.</p>]]></description>
+    </item>
 
     <item>
       <title>Двуседмичният път към внедряването на „моменталното“ ИИ решение на Claude Code</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/us-blacklist-alibaba-byd/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на South China Morning Post [1], Министерството на отбраната на САЩ (DOD) е разширило своя списък с „китайски военни компании“, опериращи пряко или косвено на територията на САЩ. Актуализацията е извършена съгласно член 1260H от Закона за националната отбрана (NDAA), като в списъка са добавени технологични лидери като Alibaba, BYD, Baidu и Nio. Това решение представлява сериозно разширяване на обхвата на американските мерки за сигурност спрямо китайския технологичен сектор.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Големият обрат в изкуствения интелект: Краят на „tokenmaxxing“ и сблъсъкът с реалността</title>
-      <link>https://svetni.me/articles/2026/06/08/ai-backlash-vibe-shift/</link>
-      <pubDate>Mon, 8 Jun 2026 10:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/ai-backlash-vibe-shift/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Светът на технологиите преживява дълбок обрат през 2026 г. Докато през изминалите години основна тема беше т.нар. vibe coding и безграничният ентусиазъм около моделите, сега секторът се сблъсква с явлението „vibe shift“ – отрезвяване, продиктувано от икономическата реалност, техническите ограничения на генеративния изкуствен интелект (ИИ) и нарастващия обществен отпор.</p>]]></description>
     </item>
   </channel>
 </rss>
