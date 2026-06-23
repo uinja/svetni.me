@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 22 Jun 2026 22:08:00 +0000</pubDate>
+    <pubDate>Tue, 23 Jun 2026 21:20:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Nvidia и DDN оптимизират архитектурата на ИИ фабриките за намаляване на цената на токените</title>
+      <link>https://svetni.me/articles/2026/06/23/ddn-nvidia-ai-infrastructure/</link>
+      <pubDate>Tue, 23 Jun 2026 21:20:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/ddn-nvidia-ai-infrastructure/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В контекста на бързото разрастване на пазара на изкуствен интелект, постигането на реална възвръщаемост на мащабните инвестиции се превръща в основна цел за бизнеса. Според репортаж на SiliconANGLE [1], това изисква дълбока оптимизация и съвместна работа между нивата на данни и изчисления. За целта технологичният лидер Nvidia и разработчикът на високопроизводителни системи за съхранение DDN обявиха стратегическо партньорство за подобряване на икономиката на изчислителната инфраструктура и т.нар. „ИИ фабрики“.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic представи Claude Tag: Постоянен ИИ колега в Slack</title>
+      <link>https://svetni.me/articles/2026/06/23/anthropic-claude-tag-slack/</link>
+      <pubDate>Tue, 23 Jun 2026 21:12:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/anthropic-claude-tag-slack/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Компанията за изследвания и безопасност на изкуствения интелект Anthropic обяви пускането на нова интеграция, наречена Claude Tag [1]. Тя представлява еволюция на съществуващите решения на компанията, включително интерактивния интерфейс Claude Code, като позволява на организациите да добавят споделена версия на ИИ асистента Claude като пълноправен колега в каналите на Slack [2]. Всяка група може да делегира асинхронни задачи на модела, който планира и изпълнява проекти в продължение на часове или дни.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Елитни украински войски тренират с мощната акустична система Genasys LRAD</title>
+      <link>https://svetni.me/articles/2026/06/23/ukrainian-troops-acoustic-lrad/</link>
+      <pubDate>Tue, 23 Jun 2026 21:07:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/ukrainian-troops-acoustic-lrad/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според информация на отбранителното издание Defence Blog [1], в публичното пространство се появиха снимкови доказателства, показващи как Силите за специални операции на Украйна (ССО) провеждат обучения с високотехнологична акустична система, монтирана върху тактически автомобили. Военни аналитици идентифицираха оборудването като Genasys LRAD 1950XL-RT – най-мощното и мащабно акустично устройство с един излъчвател в продуктовата гама на производителя.</p>]]></description>
+    </item>
 
     <item>
       <title>Нов софтуер от NVIDIA ускорява научните изследвания от астрономията до материалознанието</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/09/github-fake-microsoft-repos-malware/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>На 5 юни 2026 г. кампанията на червея Miasma [1] достигна облачната екосистема Azure на Microsoft [1]. Автоматизираната система за защита на платформата GitHub блокира 73 хранилища в рамките на 105 секунди, след като беше открито, че компрометиран акаунт на сътрудник е качил злонамерен комит в хранилището Durable Task Framework [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Meta иска съдът да обяви NSO Group в неподчинение след нови атаки в WhatsApp</title>
-      <link>https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</link>
-      <pubDate>Mon, 8 Jun 2026 22:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/whatsapp-nso-spyware-contempt/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление [1] технологичният гигант Meta обяви, че е подал съдебен иск за неуважение към съда (motion for contempt) срещу израелската компания за кибер-разузнаване NSO Group. Правното действие, предприето във федералния съд на САЩ, е в отговор на нови разкрития за шпионски атаки, извършени чрез популярното приложение за съобщения WhatsApp. Искът твърди, че NSO Group е нарушила постоянната съдебна забрана от 2025 г., която изрично забранява на фирмата да атакува платформата и нейните потребители.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Allen Control Systems събра 200 милиона долара за автономната система за борба с дронове Bullfrog</title>
-      <link>https://svetni.me/articles/2026/06/08/acs-bullfrog-counter-drone/</link>
-      <pubDate>Mon, 8 Jun 2026 21:43:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/acs-bullfrog-counter-drone/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Американската компания за отбранителни технологии Allen Control Systems (ACS) успешно привлече 200 милиона долара в кръг от серия B, воден от Smash Capital, с което пазарната оценка на стартъпа достигна 2,2 милиарда долара. Според официално прессъобщение, разпространено от BusinessWire [1], финансовите ресурси са предназначени за мащабиране на производствената база в Тексас и внедряването на автономната противовъздушна система Bullfrog с участието на Craft Ventures, Rally Ventures и Inspired Capital.</p>]]></description>
-    </item>
-
-    <item>
-      <title>САЩ разшириха военния черен списък: Добавиха Alibaba, BYD и Baidu</title>
-      <link>https://svetni.me/articles/2026/06/08/us-blacklist-alibaba-byd/</link>
-      <pubDate>Mon, 8 Jun 2026 21:13:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/08/us-blacklist-alibaba-byd/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на South China Morning Post [1], Министерството на отбраната на САЩ (DOD) е разширило своя списък с „китайски военни компании“, опериращи пряко или косвено на територията на САЩ. Актуализацията е извършена съгласно член 1260H от Закона за националната отбрана (NDAA), като в списъка са добавени технологични лидери като Alibaba, BYD, Baidu и Nio. Това решение представлява сериозно разширяване на обхвата на американските мерки за сигурност спрямо китайския технологичен сектор.</p>]]></description>
     </item>
   </channel>
 </rss>
