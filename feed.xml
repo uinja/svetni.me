@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 25 Jun 2026 22:52:00 +0000</pubDate>
+    <pubDate>Sat, 27 Jun 2026 16:31:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Една седмица за овладяване на генеративния ИИ в продуктовите роли: Опитът на OCTO Technology</title>
+      <link>https://svetni.me/articles/2026/06/27/ia-generative-produit-octo/</link>
+      <pubDate>Sat, 27 Jun 2026 16:31:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/ia-generative-produit-octo/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В публикация в корпоративния блог на френската консултантска компания OCTO Technology [1] е споделен опитът от провеждането на интензивна обучителна седмица, посветена на навлизането на генеративния изкуствен интелект в продуктовите роли. В инициативата са се включили 14 консултанти — продуктови мениджъри (PM), продуктови оунъри (PO), дизайнери и коучове. Целта е била преминаването от фрагментарно използване на отделни инструменти към изграждане на обща основа, изпробване на технологиите на практика и дефиниране на стратегически предложения.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Инфраструктура, съобразяваща се с поверителността: Управление на активи в ерата на изкуствения интелект</title>
+      <link>https://svetni.me/articles/2026/06/27/privacy-aware-infrastructure-meta/</link>
+      <pubDate>Sat, 27 Jun 2026 16:17:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/privacy-aware-infrastructure-meta/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация в корпоративния си инженерен блог Meta представи детайлно изследване на своята архитектура за класификация на активи [1]. Проектът е част от по-широката инициатива за изграждане на инфраструктура, съобразяваща се с поверителността (Privacy-Aware Infrastructure или PAI), която има за цел да наложи автоматизирано спазване на правилата за защита на личните данни директно на системно ниво. В съвременната AI-native ера, характеризираща се с бързи цикли на разработка и неструктурирани потоци от данни, традиционните методи за ръчен одит са напълно нерентабилни. Решението на Meta залага на иновативен хибриден модел: съчетание от детерминистичен механизъм с нулево забавяне и резервен предпазен филтър, базиран на големи езикови модели (LLM).</p>]]></description>
+    </item>
+
+    <item>
+      <title>Какво изисква Законът за изкуствения интелект на ЕС и как Docker подпомага съвместимостта</title>
+      <link>https://svetni.me/articles/2026/06/27/docker-eu-ai-act-compliance/</link>
+      <pubDate>Sat, 27 Jun 2026 15:57:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/docker-eu-ai-act-compliance/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление на корпоративния си блог, технологичният гигант Docker представи обстоен анализ на новите регулаторни изисквания, наложени от Закона за изкуствения интелект на ЕС (EU AI Act), и очерта практически стъпки, с които софтуерните инженери и организациите могат да гарантират техническо съответствие на своите системи [1]. Законът за изкуствения интелект на ЕС (Регламент (ЕС) 2024/1689) влезе в сила през август 2024 г., като неговите изисквания се въвеждат поетапно до 2027 г. Регламентът има екстратериториално действие – той засяга всеки доставчик или потребител, чиито AI системи се предлагат, внедряват или техните резултати се използват на пазара в ЕС, независимо от местоположението на централата на компанията [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Qwen-AgentWorld: Alibaba представи първите езикови световни модели за захранване на ИИ агенти</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Инжектирането на въглероден диоксид (CO₂) в циментови продукти като бетон се утвърди като обещаващ метод за постоянно съхранение на парникови газове извън атмосферата. Въпреки че индустриалният интерес към тази технология нараства и компании като CarbonCure вече предлагат комерсиални смеси, фундаменталната химия зад този процес оставаше до голяма степен невидима.</p>]]></description>
-    </item>
-
-    <item>
-      <title>WebMCP: Нов стандарт в Chrome за директно управление на уеб сайтове от ИИ агенти</title>
-      <link>https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</link>
-      <pubDate>Sun, 14 Jun 2026 20:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/webmcp-web-agent-standard-chrome/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално техническо ръководство за разработчици [1], екипът на Google представи подробности за новия предложен стандарт <strong>WebMCP (Web Model Context Protocol)</strong>. Технологията вече е достъпна за експериментиране в браузъра Chrome 149 в рамките на т.нар. Origin Trials [2]. Целта на WebMCP е да предостави стандартизиран мост, който позволява на уеб сайтовете да излагат своите функции директно към работещите в браузъра ИИ агенти, елиминирайки необходимостта от ненадеждни методи за управление.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic спря достъпа до моделите Fable 5 и Mythos 5 след безпрецедентна заповед на САЩ</title>
-      <link>https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</link>
-      <pubDate>Sun, 14 Jun 2026 07:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/14/anthropic-fable-mythos-suspension/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление, публикувано в блога на компанията [1], американският разработчик на изкуствен интелект Anthropic обяви извънредното преустановяване на достъпа до своите най-нови и мощни модели — <strong>Claude Fable 5</strong> и <strong>Claude Mythos 5</strong>. Решението е директно следствие от извънредна заповед за експортен контрол, издадена от Министерството на търговията на САЩ, която се позовава на съображения за национална сигурност [2]. Заповедта забранява предоставянето на достъп до тези системи на всякакви чуждестранни граждани, независимо дали се намират на територията на САЩ или извън нея.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Google Colab CLI: Локален контрол и автоматизация на отдалечени изчислителни ресурси</title>
-      <link>https://svetni.me/articles/2026/06/12/google-colab-cli/</link>
-      <pubDate>Fri, 12 Jun 2026 21:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/12/google-colab-cli/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официална публикация в корпоративния си блог Google [1] обяви пускането на нов интерфейс за команден ред — <strong>Google Colab CLI</strong>. Този инструмент е проектиран да преодолее разликата между локалната работна среда и отдалечените сървъри на платформата за разработка Google Colab. Новият софтуер предоставя среда за директно стартиране на отдалечени задачи както за софтуерни инженери, така и за автономни AI агенти, разполагащи с достъп до команден ред [1].</p>]]></description>
     </item>
   </channel>
 </rss>
