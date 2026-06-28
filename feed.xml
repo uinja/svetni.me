@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sat, 27 Jun 2026 16:31:00 +0000</pubDate>
+    <pubDate>Sat, 27 Jun 2026 22:53:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>По-горещо от джакузи: Пробивът на NVIDIA с 45°C течно охлаждане за ИИ суперкомпютри</title>
+      <link>https://svetni.me/articles/2026/06/27/nvidia-rubin-liquid-cooling-evaporator-free/</link>
+      <pubDate>Sat, 27 Jun 2026 22:53:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/nvidia-rubin-liquid-cooling-evaporator-free/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: NVIDIA чрез Hackaday</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>GLM-5.2: Отвореният ИИ модел, който променя правилата при кодирането</title>
+      <link>https://svetni.me/articles/2026/06/27/glm-5-2-open-ai-model/</link>
+      <pubDate>Sat, 27 Jun 2026 22:49:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/glm-5-2-open-ai-model/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Надпреварата между отворените и затворените модели с изкуствен интелект навлезе в нова и изключително динамична фаза. Години наред разработчиците приемаха, че най-способните асистенти за програмиране ще останат достъпни единствено зад платени, проприетарни API интерфейси. Появата на новия модел GLM-5.2, разработен от китайската компания Zhipu AI, обаче сериозно предизвиква това статукво [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Една седмица за овладяване на генеративния ИИ в продуктовите роли: Опитът на OCTO Technology</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/cloudflare-ensemble-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Инфраструктурата за изкуствен интелект навлиза в нов етап на развитие. Разработчиците вече не се нуждаят само от достъп до готови езикови модели, а от изчислителна мрежа, която да ги изпълнява надеждно, икономично и възможно най-близо до крайния потребител. В опит да ускори този преход, Cloudflare обяви привличането на ключови членове от екипа на стартъпа Ensemble AI [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Защо автономните агенти не се мащабират: Инфраструктурният данък на изкуствения интелект</title>
-      <link>https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</link>
-      <pubDate>Mon, 15 Jun 2026 14:33:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/why-agents-dont-scale/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Разработването на прототип на ИИ агент, който работи успешно в контролирана среда, е сравнително лесна задача. Преходът към производствена система, обслужваща реални потребители, обаче се оказва сериозно предизвикателство. Според анализ на ИИ инженера Рафаел Лопеш, мащабирането на автономните агенти е изцяло системен и инженерен проблем, а не ограничение на самите езикови модели [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</title>
-      <link>https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</link>
-      <pubDate>Sun, 14 Jun 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/11/carbon-dioxide-cement-setting/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Инжектирането на въглероден диоксид (CO₂) в циментови продукти като бетон се утвърди като обещаващ метод за постоянно съхранение на парникови газове извън атмосферата. Въпреки че индустриалният интерес към тази технология нараства и компании като CarbonCure вече предлагат комерсиални смеси, фундаменталната химия зад този процес оставаше до голяма степен невидима.</p>]]></description>
     </item>
   </channel>
 </rss>
