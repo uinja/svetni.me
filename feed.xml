@@ -9,9 +9,45 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 2 Jul 2026 22:26:00 +0000</pubDate>
+    <pubDate>Fri, 3 Jul 2026 21:26:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Мултивендорна стратегия: Как да се справим с ограниченията при моделите</title>
+      <link>https://svetni.me/articles/2026/07/03/oreilly-ai-multivendor-strategy/</link>
+      <pubDate>Fri, 3 Jul 2026 21:26:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/oreilly-ai-multivendor-strategy/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според седмичния преглед на O&#39;Reilly Media [1], стабилността на инфраструктурата за изкуствен интелект (ИИ), на която разчитат повечето съвременни екипи, става все по-несигурна. Поради въвеждането на нови правителствени ограничения върху износа на най-съвременните модели от САЩ, технологичните лидери са изправени пред сериозни инфраструктурни рискове. Зависимостта от един доставчик вече не е просто търговски въпрос, а сериозна архитектурна уязвимост.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Нов метод за 4D принтиране създава по-леки и по-бързи перки за вятърни турбини</title>
+      <link>https://svetni.me/articles/2026/07/03/4d-printed-wind-turbine-blades/</link>
+      <pubDate>Fri, 3 Jul 2026 19:10:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/4d-printed-wind-turbine-blades/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално съобщение на канадския изследователски университет Concordia University [1] се съобщава за разработката на изцяло нов метод за производство на извити перки за вертикални вятърни турбини. Технологията се базира на 4D принтиране на композитни материали и позволява автоматичното деформиране на плоски плоскости в прецизни извити геометрии по време на процеса на охлаждане. Научният труд, описващ разработката, е публикуван в престижното списание Polymer Composites [2].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
+      <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
+      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
+      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
+      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
+    </item>
 
     <item>
       <title>Защо предвиждането на намерения изисква повече от големи езикови модели</title>
@@ -425,42 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Случаят около спешното преустановяване на достъпа до авангардните изкуствени интелекти на Anthropic придоби нов и изненадващ обрат. Според публикация в технологичното издание The Register [1], американското правителство е задействало тежката процедура по експортен контрол не заради сложна злонамерена атака или истински джейлбрейк, а заради обикновена потребителска подкана за автоматично отстраняване на грешки в софтуер.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Qualcomm преговаря за придобиване на ИИ чип стартъпа Tenstorrent за 10 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</link>
-      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/qualcomm-tenstorrent-acquisition/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Американският технологичен гигант Qualcomm води преговори за придобиване на канадския стартъп за специализирани чипове за изкуствен интелект Tenstorrent, съобщават източници на The Information, цитирани от The Register [1]. Стойността на евентуалната сделка се оценява в диапазона между 8 и 10 милиарда долара. Ако преговорите приключат успешно, това ще бъде една изключително значима придобивна трансакция в историята на Qualcomm и ще демонстрира решителна стратегическа промяна на пазара на сървърни чипове.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Нов естонски бенчмарк оценява устойчивостта на ИИ моделите спрямо руска пропаганда</title>
-      <link>https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</link>
-      <pubDate>Tue, 16 Jun 2026 20:23:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/estonian-propaganda-benchmark/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><strong>Институтът за естонски език (EKI)</strong> в сътрудничество с доброволческата организация <strong>Propastop</strong> представи нов бенчмарк за оценяване на податливостта на големите езикови модели (LLM) към руска пропаганда [1]. Инструментът, наречен <strong>„Propaganda Resistance“</strong>, е разработен, за да тества как различните алгоритми реагират на дезинформационни кампании и манипулативни внушения.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Стартирането на локални ИИ модели вече е напълно достъпно и ефикасно</title>
-      <link>https://svetni.me/articles/2026/06/16/running-local-models/</link>
-      <pubDate>Tue, 16 Jun 2026 20:21:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/running-local-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В последната си публикация инженерът по машинно обучение Вики Бойкис прави подробен преглед на състоянието на локално стартираните големи езикови модели [1]. Тя споделя, че през последната година технологичният напредък е превърнал локалния инференс от експериментално хоби в напълно завършен и ефективен инструмент за ежедневна софтуерна разработка. Нейният собствен хардуерен комплект – компютър Mac Studio M2 от 2022 г. с 64 GB RAM и 1 TB дисково пространство – се оказва напълно достатъчен за безпроблемно изпълнение на тези задачи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Vibe кодерите ще си кодират: Как директорите по сигурност се справят с разрастването на кода</title>
-      <link>https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</link>
-      <pubDate>Mon, 15 Jun 2026 18:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/15/vibe-coders-code-sprawl/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Феноменът vibe coding (кодиране по усещане), термин, въведен от ИИ изследователя Андрей Карпати в началото на 2025 г., описва масовото използване на ИИ инструменти от служители за разработка и внедряване на код чрез текстови инструкции на естествен език. Този стил на работа позволява на широк кръг потребители да създават софтуер без традиционно писане на код, но често заобикаля утвърдените контроли по сигурност. Според репортаж на BleepingComputer [1], това явление създава сериозна криза с видимостта на корпоративните ИТ активи и попада в категорията на т.нар. Shadow AI (сенчест изкуствен интелект).</p>]]></description>
     </item>
   </channel>
 </rss>
