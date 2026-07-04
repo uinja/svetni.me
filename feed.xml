@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 3 Jul 2026 21:26:00 +0000</pubDate>
+    <pubDate>Sat, 4 Jul 2026 07:50:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Как DoorDash изгражда метаданни за храни чрез журита от езикови модели (LLM Juries) и мултимодален ИИ</title>
+      <link>https://svetni.me/articles/2026/07/04/doordash-food-metadata-llm-juries/</link>
+      <pubDate>Sat, 4 Jul 2026 07:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/04/doordash-food-metadata-llm-juries/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В публикация на официалния си инженерен блог, технологичната платформа DoorDash разкри детайли за своята нова архитектура за автоматизирано генериране и валидиране на хранителни метаданни в голям мащаб [1]. Системата е проектирана да се справя с изключителното разнообразие на артикули в менютата на ресторантите, като извлича детайлни характеристики като степен на лютивост, тип кухня, хранителни и диетични категории. Чрез комбиниране на мултимодални данни, интелигентно гласуване и автоматизирана оптимизация, компанията успява да автоматизира процес, който досега е изисквал скъп и бавен ръчен труд.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Физическите ограничения на изкуствения интелект: Как ИИ пренаписа правилата за центровете за данни</title>
+      <link>https://svetni.me/articles/2026/07/04/how-ai-rewired-the-data-center/</link>
+      <pubDate>Sat, 4 Jul 2026 07:48:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/04/how-ai-rewired-the-data-center/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В публикация на своя корпоративен блог, технологичната компания Tiger Data представя подробен анализ [1] за това как вълната от изкуствен интелект се сблъсква с твърдите физически ограничения на реалния свят. През по-голямата част от облачната ера типичният сървърен шкаф консумираше между 5 и 20 киловата, което позволяваше охлаждане просто чрез движение на въздух в стандартни сгради.</p>]]></description>
+    </item>
 
     <item>
       <title>Мултивендорна стратегия: Как да се справим с ограниченията при моделите</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/rate-limited-ep-15/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В петнадесетия епизод на технологичния подкаст Rate Limited водещите Ерик Бродуор (Eric Brodeur), Адам Ларсон (Adam Larson) и Рей Фернандо (Ray Fernando) направиха подробен преглед на новата реалност в разработката на софтуер [1]. Фокус на дискусията бяха изключителните способности за писане на код на новия модел GPT-5.5 на OpenAI, променящите се ценови и изчислителни лимити, както и навлизането на концепции като „vibe разработка“ (vibe development) и агентно инженерство (agentic engineering) [1]. Според водещите традиционните методи за ръчно писане на код, строго контролирани от старши инженери, бързо отстъпват място на автоматизирани системи и нови начини за сътрудничество между хора и изкуствен интелект [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Ценовата война при моделите с изкуствен интелект в Китай се изостря</title>
-      <link>https://svetni.me/articles/2026/06/16/china-ai-price-war/</link>
-      <pubDate>Tue, 16 Jun 2026 20:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/china-ai-price-war/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според публикация на авторитетното хонконгско издание South China Morning Post (SCMP) [1], ценовата война между водещите разработчици на изкуствен интелект в Китай навлиза в нова, още по-интензивна фаза. Водещи технологични конгломерати и нововъзникващи стартъпи предприемат агресивни намаления на тарифите за ползване на своите модели през API, стремейки се да привлекат по-гоял дял от пазара на разработчици и корпоративни клиенти.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Федералните се паникьосаха от Fable 5 след обикновена подкана за поправка на код</title>
-      <link>https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</link>
-      <pubDate>Tue, 16 Jun 2026 20:28:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/fable-5-jailbreak-scare/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Случаят около спешното преустановяване на достъпа до авангардните изкуствени интелекти на Anthropic придоби нов и изненадващ обрат. Според публикация в технологичното издание The Register [1], американското правителство е задействало тежката процедура по експортен контрол не заради сложна злонамерена атака или истински джейлбрейк, а заради обикновена потребителска подкана за автоматично отстраняване на грешки в софтуер.</p>]]></description>
     </item>
   </channel>
 </rss>
