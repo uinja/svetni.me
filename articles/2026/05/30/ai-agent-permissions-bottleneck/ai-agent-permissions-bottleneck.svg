@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="100%" height="auto">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" rx="16" />
+
+  <!-- Title / Header -->
+  <text x="40" y="45" font-family="'Inter', 'Roboto', sans-serif" font-size="20" font-weight="bold" fill="#202124">Интеграция на правата при ИИ агенти</text>
+  <text x="40" y="70" font-family="'Inter', 'Roboto', sans-serif" font-size="14" fill="#666666">Защо правата за достъп трябва да се управляват от Системата от записи (System of Record)</text>
+
+  <!-- Left: DIY Agent Setup (Insecure) -->
+  <g transform="translate(40, 110)">
+    <rect width="330" height="210" rx="8" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" />
+    <rect width="330" height="40" rx="8" fill="#545a57" />
+    <rect width="330" height="20" y="20" fill="#545a57" />
+    <text x="165" y="25" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Самостоятелно решение (DIY)</text>
+    
+    <!-- Points -->
+    <circle cx="30" cy="75" r="4" fill="#545a57" />
+    <text x="45" y="79" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#202124" font-weight="bold">Директен достъп до сурови данни</text>
+    <text x="45" y="96" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#666666">Агентът чете директно от базата данни без филтри</text>
+    
+    <circle cx="30" cy="130" r="4" fill="#545a57" />
+    <text x="45" y="134" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#202124" font-weight="bold">Външно управление на правата</text>
+    <text x="45" y="151" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#666666">Правилата за сигурност се дефинират извън данните</text>
+    
+    <circle cx="30" cy="185" r="4" fill="#d93025" />
+    <text x="45" y="189" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#d93025" font-weight="bold">Висок риск за сигурността</text>
+    <text x="45" y="206" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#d93025">Липса на одитна пътека и опасност от изтичане на данни</text>
+  </g>
+
+  <!-- Right: Governed SOR Setup (Secure) -->
+  <g transform="translate(430, 110)">
+    <rect width="330" height="210" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+    <rect width="330" height="40" rx="8" fill="#1a30ae" />
+    <rect width="330" height="20" y="20" fill="#1a30ae" />
+    <text x="165" y="25" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Интегрирано в системата от записи</text>
+    
+    <!-- Points -->
+    <circle cx="30" cy="75" r="4" fill="#1a30ae" />
+    <text x="45" y="79" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#202124" font-weight="bold">Посредничество на софтуера (SOR)</text>
+    <text x="45" y="96" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#666666">Агентът действа само през приложния слой на Workday</text>
+    
+    <circle cx="30" cy="130" r="4" fill="#1a30ae" />
+    <text x="45" y="134" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#202124" font-weight="bold">Наследяване на роли &amp; контроли</text>
+    <text x="45" y="151" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#666666">Автоматично спазване на съществуващите потребителски роли</text>
+    
+    <circle cx="30" cy="185" r="4" fill="#1a30ae" />
+    <text x="45" y="189" font-family="'Inter', 'Roboto', sans-serif" font-size="13" fill="#1a30ae" font-weight="bold">Пълен одит &amp; безопасност</text>
+    <text x="45" y="206" font-family="'Inter', 'Roboto', sans-serif" font-size="11" fill="#1a30ae">Всички действия се записват в корпоративния дневник</text>
+  </g>
+
+  <!-- Connection / Shield Indicator -->
+  <g transform="translate(378, 195)">
+    <circle cx="22" cy="22" r="20" fill="#ffffff" stroke="#1a30ae" stroke-width="2" />
+    <!-- Lock icon -->
+    <rect x="15" y="20" width="14" height="10" rx="1.5" fill="#1a30ae" />
+    <path d="M17 20 V16 A5 5 0 0 1 27 16 V20" fill="none" stroke="#1a30ae" stroke-width="2" />
+  </g>
+</svg>

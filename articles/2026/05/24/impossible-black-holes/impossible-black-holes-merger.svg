@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="var(--color-surface)"/>
+      <stop offset="100%" stop-color="var(--color-background)"/>
+    </linearGradient>
+    
+    <!-- Mass Gap Shading -->
+    <linearGradient id="gap-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="var(--color-tertiary)" stop-opacity="0.05"/>
+      <stop offset="50%" stop-color="var(--color-tertiary)" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="var(--color-tertiary)" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Marker for Arrows -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--color-primary)" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--color-tertiary)" />
+    </marker>
+    <marker id="spin-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="var(--color-secondary)" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad)" rx="12"/>
+
+  <!-- Vertical Zones -->
+  <!-- Mass Gap Zone (> 40 M☉) -->
+  <rect x="320" y="90" width="450" height="330" fill="url(#gap-grad)" rx="8"/>
+  <line x1="320" y1="90" x2="320" y2="420" stroke="var(--color-tertiary)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="330" y="115" fill="var(--color-tertiary)" font-size="13" font-weight="700" text-anchor="start">
+    ЗАБРАНЕНА ЗОНА (ЧИФТНА НЕУСТОЙЧИВОСТ)
+  </text>
+  <text x="330" y="132" fill="var(--color-on-surface)" font-size="11" opacity="0.8" text-anchor="start">
+    Тук не могат да се раждат черни дупки директно от колапс
+  </text>
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="var(--color-primary)">
+    Йерархично сливане в плътни звездни купове
+  </text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="var(--color-on-surface)" opacity="0.8">
+    Как черните дупки надхвърлят теоретичната граница от ~40 слънчеви маси (M☉)
+  </text>
+
+  <!-- Horizontal Axis / Scale at bottom -->
+  <line x1="80" y1="440" x2="720" y2="440" stroke="var(--color-on-surface)" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Scale ticks -->
+  <line x1="150" y1="440" x2="150" y2="446" stroke="var(--color-on-surface)" stroke-width="1.5" opacity="0.7"/>
+  <text x="150" y="462" text-anchor="middle" font-size="11" fill="var(--color-on-surface)" opacity="0.8">~20 M☉</text>
+  
+  <line x1="320" y1="440" x2="320" y2="448" stroke="var(--color-tertiary)" stroke-width="2"/>
+  <text x="320" y="462" text-anchor="middle" font-size="11" font-weight="700" fill="var(--color-tertiary)">~40 M☉ (Граница)</text>
+
+  <line x1="450" y1="440" x2="450" y2="446" stroke="var(--color-on-surface)" stroke-width="1.5" opacity="0.7"/>
+  <text x="450" y="462" text-anchor="middle" font-size="11" fill="var(--color-on-surface)" opacity="0.8">~45 M☉</text>
+
+  <line x1="680" y1="440" x2="680" y2="446" stroke="var(--color-on-surface)" stroke-width="1.5" opacity="0.7"/>
+  <text x="680" y="462" text-anchor="middle" font-size="11" fill="var(--color-on-surface)" opacity="0.8">~75 M☉</text>
+
+  <text x="735" y="444" font-size="11" font-weight="700" fill="var(--color-on-surface)" opacity="0.7" text-anchor="start">Маса (M☉)</text>
+
+  <!-- Process Flow Connections (Arrows) -->
+  <!-- 1G Merging to 2G -->
+  <path d="M 180 180 Q 300 180 410 225" fill="none" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 180 300 Q 300 300 410 255" fill="none" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- 2G + 1G Merging to 3G -->
+  <path d="M 485 240 Q 580 240 640 285" fill="none" stroke="var(--color-tertiary)" stroke-width="2.5" stroke-dasharray="4 2" marker-end="url(#arrow-red)"/>
+  <path d="M 480 370 Q 580 370 645 325" fill="none" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Nodes (Black Holes) -->
+  
+  <!-- Node 1: 1G (20 M☉) -->
+  <circle cx="150" cy="180" r="18" fill="var(--color-on-surface)"/>
+  <circle cx="150" cy="180" r="22" fill="none" stroke="var(--color-primary)" stroke-width="2" opacity="0.8"/>
+  <!-- Spin Vector 1G: Small, aligned -->
+  <line x1="150" y1="180" x2="150" y2="148" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#spin-arrow)"/>
+  <text x="150" y="214" font-size="11" font-weight="700" fill="var(--color-on-surface)" text-anchor="middle">1G Черна дупка</text>
+  <text x="150" y="228" font-size="10" fill="var(--color-on-surface)" opacity="0.7" text-anchor="middle">20 M☉ | Слаб/подреден спин</text>
+
+  <!-- Node 2: 1G (25 M☉) -->
+  <circle cx="150" cy="300" r="20" fill="var(--color-on-surface)"/>
+  <circle cx="150" cy="300" r="24" fill="none" stroke="var(--color-primary)" stroke-width="2" opacity="0.8"/>
+  <!-- Spin Vector 1G: Small, aligned -->
+  <line x1="150" y1="300" x2="150" y2="268" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#spin-arrow)"/>
+  <text x="150" y="336" font-size="11" font-weight="700" fill="var(--color-on-surface)" text-anchor="middle">1G Черна дупка</text>
+  <text x="150" y="350" font-size="10" fill="var(--color-on-surface)" opacity="0.7" text-anchor="middle">25 M☉ | Слаб/подреден спин</text>
+
+  <!-- Node 3: 2G (45 M☉) - First generation Merger Product inside Mass Gap -->
+  <circle cx="450" cy="240" r="28" fill="var(--color-on-surface)"/>
+  <circle cx="450" cy="240" r="34" fill="none" stroke="var(--color-tertiary)" stroke-width="2.5"/>
+  <!-- Spin Vector 2G: Large, chaotic/tilted -->
+  <line x1="450" y1="240" x2="480" y2="195" stroke="var(--color-secondary)" stroke-width="3.5" marker-end="url(#spin-arrow)"/>
+  <!-- Spin Curve to show rapid rotation -->
+  <path d="M 425 225 A 30 30 0 0 1 475 225" fill="none" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <text x="450" y="284" font-size="11" font-weight="700" fill="var(--color-tertiary)" text-anchor="middle">2G Черна дупка (Междинна)</text>
+  <text x="450" y="298" font-size="10" fill="var(--color-on-surface)" text-anchor="middle">45 M☉ | Бърз и хаотичен спин</text>
+  <text x="450" y="310" font-size="9" fill="var(--color-tertiary)" font-weight="700" text-anchor="middle">НАДХВЪРЛЯ ГРАНИЦАТА</text>
+
+  <!-- Node 4: Another 1G (30 M☉) inside cluster -->
+  <circle cx="450" cy="370" r="22" fill="var(--color-on-surface)"/>
+  <circle cx="450" cy="370" r="26" fill="none" stroke="var(--color-primary)" stroke-width="2" opacity="0.8"/>
+  <!-- Spin Vector 1G -->
+  <line x1="450" y1="370" x2="450" y2="340" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#spin-arrow)"/>
+  <text x="520" y="374" font-size="11" font-weight="700" fill="var(--color-on-surface)" text-anchor="start">1G Черна дупка</text>
+  <text x="520" y="388" font-size="10" fill="var(--color-on-surface)" opacity="0.7" text-anchor="start">30 M☉ | Обикновен колапс</text>
+
+  <!-- Node 5: 3G (75 M☉) - Repeated Merger Product deep in the Mass Gap -->
+  <circle cx="680" cy="300" r="34" fill="var(--color-on-surface)"/>
+  <circle cx="680" cy="300" r="40" fill="none" stroke="var(--color-tertiary)" stroke-width="3"/>
+  <circle cx="680" cy="300" r="44" fill="none" stroke="var(--color-tertiary)" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <!-- Spin Vector 3G: Tilted in a different direction, chaotic -->
+  <line x1="680" y1="300" x2="640" y2="270" stroke="var(--color-secondary)" stroke-width="4" marker-end="url(#spin-arrow)"/>
+  <text x="680" y="358" font-size="12" font-weight="700" fill="var(--color-tertiary)" text-anchor="middle">3G Черна дупка</text>
+  <text x="680" y="374" font-size="10" fill="var(--color-on-surface)" text-anchor="middle">75 M☉ | Силно хаотично въртене</text>
+  <text x="680" y="388" font-size="10" font-weight="700" fill="var(--color-tertiary)" text-anchor="middle">„Невъзможна“ маса</text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="520" fill="#ffffff" rx="12" stroke="#e4e7eb" stroke-width="2" />
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1a30ae" text-anchor="middle">Двуетапен процес на прогнозиране при APEX</text>
+
+  <!-- Stage 1 Boundary -->
+  <rect x="30" y="70" width="740" height="150" fill="none" stroke="#1a30ae" stroke-width="1" stroke-dasharray="4,4" rx="8" opacity="0.3" />
+  <text x="45" y="92" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a30ae" opacity="0.8">ЕТАП 1: Грубо вълново прогнозиране</text>
+
+  <!-- Box: Low-Frequency Simulation Input -->
+  <rect x="50" y="115" width="180" height="80" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <text x="140" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#202124" text-anchor="middle">Нискочестотна</text>
+  <text x="140" y="170" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#202124" text-anchor="middle">вълнова симулация</text>
+
+  <!-- Arrow -->
+  <path d="M 230 155 L 270 155" stroke="#1a30ae" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Box: Neural Operator -->
+  <rect x="280" y="115" width="180" height="80" rx="8" fill="#1a30ae" />
+  <text x="370" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Невронен оператор</text>
+  <text x="370" y="170" font-family="system-ui, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">(Neural Operator)</text>
+
+  <!-- Arrow -->
+  <path d="M 460 155 L 500 155" stroke="#1a30ae" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Box: Coarse Amplitude Anchor -->
+  <rect x="510" y="115" width="230" height="80" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2" />
+  <text x="625" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#202124" text-anchor="middle">Груба амплитуда</text>
+  <text x="625" y="170" font-family="system-ui, sans-serif" font-size="12" fill="#1b31ae" text-anchor="middle">(Структурен котва / Фиксатор)</text>
+
+  <!-- Stage 2 Boundary -->
+  <rect x="30" y="240" width="740" height="255" fill="none" stroke="#1b31ae" stroke-width="1" stroke-dasharray="4,4" rx="8" opacity="0.3" />
+  <text x="45" y="262" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1b31ae" opacity="0.8">ЕТАП 2: Кондиционирано високочестотно възстановяване</text>
+
+  <!-- Box: Green's Function Phase Prior -->
+  <rect x="280" y="290" width="180" height="80" rx="8" fill="#f8f9fa" stroke="#1e33af" stroke-width="2" />
+  <text x="370" y="325" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#202124" text-anchor="middle">Фазово приближение</text>
+  <text x="370" y="345" font-family="system-ui, sans-serif" font-size="12" fill="#1e33af" text-anchor="middle">(Функция на Грийн)</text>
+
+  <!-- Arrow from Phase Prior to CFM Enhancer -->
+  <path d="M 460 330 L 500 330" stroke="#1e33af" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Arrow from Coarse Amplitude to CFM Enhancer -->
+  <path d="M 625 195 L 625 280" stroke="#1b31ae" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Box: CFM Enhancer -->
+  <rect x="510" y="290" width="230" height="80" rx="8" fill="#1b31ae" />
+  <text x="625" y="325" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">CFM подобрител</text>
+  <text x="625" y="345" font-family="system-ui, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">(Conditional Flow Matching)</text>
+
+  <!-- Arrow from CFM to Final Prediction -->
+  <path d="M 625 370 L 625 400" stroke="#1e33af" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+
+  <!-- Box: High-Frequency Wave Prediction -->
+  <rect x="510" y="410" width="230" height="65" rx="8" fill="#1e33af" />
+  <text x="625" y="440" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Високочестотно поле</text>
+  <text x="625" y="455" font-family="system-ui, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">(Крайна точна прогноза)</text>
+
+  <!-- Decorative Wave Graphics on Left of Stage 2 -->
+  <g transform="translate(50, 310)" stroke="#1a30ae" stroke-width="2" fill="none" opacity="0.7">
+    <!-- Low freq wave -->
+    <path d="M 0,30 Q 15,0 30,30 T 60,30 T 90,30 T 120,30 T 150,30" stroke="#1a30ae" stroke-width="3" />
+    <text x="75" y="-15" font-family="system-ui, sans-serif" font-size="11" fill="#1a30ae" text-anchor="middle">Груба вълна (Амплитуда)</text>
+    <!-- High freq wave -->
+    <path d="M 0,90 Q 5,75 10,90 T 20,90 T 30,90 T 40,90 T 50,90 T 60,90 T 70,90 T 80,90 T 90,90 T 100,90 T 110,90 T 120,90 T 130,90 T 140,90 T 150,90" stroke="#1e33af" />
+    <text x="75" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#1e33af" text-anchor="middle">Детайлна вълна (Фаза)</text>
+  </g>
+
+  <!-- Definitions for Markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="context-stroke" />
+    </marker>
+  </defs>
+</svg>

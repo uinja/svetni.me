@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1a30ae" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-surface)" rx="16" />
+
+  <!-- Main Title -->
+  <text x="400" y="44" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">Операционна система за сътрудничество човек-AI (Asana)</text>
+
+  <!-- Human/Team Container -->
+  <rect x="40" y="180" width="180" height="120" fill="var(--color-primary)" rx="8" />
+  <text x="130" y="230" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Човешки екипи</text>
+  <text x="130" y="254" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Управление и контрол</text>
+
+  <!-- Flow Arrow -->
+  <line x1="220" y1="240" x2="272" y2="240" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="246" y="224" font-family="system-ui, sans-serif" font-size="11" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Възлагане</text>
+
+  <!-- Agentic Work Management Container -->
+  <rect x="280" y="100" width="480" height="340" fill="none" stroke="var(--color-primary)" stroke-width="2" rx="8" />
+  <text x="520" y="124" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">Agentic Work Management (Операционна система)</text>
+
+  <!-- Dash (AI Coordinator) -->
+  <rect x="300" y="152" width="210" height="72" fill="var(--color-tertiary)" rx="6" />
+  <text x="405" y="178" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Dash (AI Координатор)</text>
+  <text x="405" y="198" font-family="system-ui, sans-serif" font-size="11" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Синхронизиране на цели &amp; задачи</text>
+
+  <!-- Work Graph (Data Model) -->
+  <rect x="530" y="152" width="210" height="72" fill="var(--color-primary)" rx="6" />
+  <text x="635" y="178" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Work Graph</text>
+  <text x="635" y="198" font-family="system-ui, sans-serif" font-size="11" fill="var(--color-on-primary)" text-anchor="middle" dominant-baseline="central">Карта на организационните връзки</text>
+
+  <!-- AI Teammates -->
+  <rect x="300" y="248" width="440" height="72" fill="var(--color-surface)" stroke="var(--color-tertiary)" stroke-width="1.5" rx="6" />
+  <text x="520" y="274" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">AI Teammates (AI колеги с готови умения)</text>
+  <text x="520" y="294" font-family="system-ui, sans-serif" font-size="11" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Slack, Gmail, HubSpot, Canva, Figma, Outlook</text>
+
+  <!-- Specialized Applications -->
+  <rect x="300" y="344" width="440" height="72" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="1.5" rx="6" />
+  <text x="520" y="370" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Специализирани приложения</text>
+  <text x="520" y="390" font-family="system-ui, sans-serif" font-size="11" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">Service Management | Command | Client Management</text>
+</svg>

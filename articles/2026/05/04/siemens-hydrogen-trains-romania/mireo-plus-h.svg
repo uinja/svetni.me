@@ -1,0 +1,57 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" />
+  
+  <!-- Rails -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#6c757d" stroke-width="4" />
+  <line x1="50" y1="355" x2="750" y2="355" stroke="#6c757d" stroke-width="2" />
+
+  <!-- Train Body (Mireo Plus H) -->
+  <rect x="100" y="150" width="280" height="150" rx="10" fill="#005f73" /> <!-- Car 1 -->
+  <rect x="390" y="150" width="280" height="150" rx="10" fill="#005f73" /> <!-- Car 2 -->
+  <rect x="370" y="270" width="30" height="10" fill="#333" /> <!-- Coupler -->
+
+  <!-- Windows -->
+  <rect x="120" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="180" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="240" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="300" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+
+  <rect x="410" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="470" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="530" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+  <rect x="590" y="170" width="40" height="40" rx="5" fill="#e9d8a6" />
+
+  <!-- Wheels -->
+  <circle cx="150" cy="320" r="15" fill="#333" />
+  <circle cx="330" cy="320" r="15" fill="#333" />
+  <circle cx="440" cy="320" r="15" fill="#333" />
+  <circle cx="620" cy="320" r="15" fill="#333" />
+
+  <!-- Hydrogen Component (Roof) -->
+  <rect x="150" y="120" width="180" height="30" rx="5" fill="#94d2bd" />
+  <text x="240" y="140" font-family="Arial" font-size="14" text-anchor="middle" fill="#001219">H2 Fuel Cells</text>
+
+  <!-- Battery Component (Roof) -->
+  <rect x="440" y="120" width="180" height="30" rx="5" fill="#ee9b00" />
+  <text x="530" y="140" font-family="Arial" font-size="14" text-anchor="middle" fill="#001219">Battery Storage</text>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#005f73">Siemens Mireo Plus H</text>
+  <text x="400" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="#0a9396">Hydrogen-Powered Mobility</text>
+
+  <!-- Labels -->
+  <text x="240" y="340" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Zero Emissions</text>
+  <text x="530" y="340" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">120 km/h Max Speed</text>
+</svg>

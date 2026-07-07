@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="background: var(--color-background)">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-primary)" />
+    </marker>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="36" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">5-те класически типа ИИ агенти</text>
+  <text x="400" y="64" font-family="system-ui, sans-serif" font-size="14" fill="var(--color-on-surface)" opacity="0.7" text-anchor="middle" dominant-baseline="middle">Класификация по Ръсел и Норвиг — от реактивност към пълна адаптация</text>
+
+  <!-- Card 1: Simple Reflex -->
+  <rect x="40" y="104" width="128" height="304" rx="12" ry="12" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.15" />
+  <rect x="40" y="104" width="128" height="12" rx="4" ry="4" fill="var(--color-primary)" fill-opacity="0.2" />
+  <text x="104" y="136" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Прост</text>
+  <text x="104" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">рефлексен</text>
+  <line x1="56" y1="172" x2="152" y2="172" stroke="var(--color-primary)" stroke-opacity="0.1" stroke-width="1" />
+  <text x="104" y="192" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">МЕХАНИЗЪМ</text>
+  <text x="104" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Ако / То правила</text>
+  <text x="104" y="240" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПАМЕТ</text>
+  <text x="104" y="256" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Липсва</text>
+  <text x="104" y="288" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">АВТОНОМИЯ</text>
+  <text x="104" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Минимална</text>
+  <text x="104" y="336" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПРИМЕР</text>
+  <text x="104" y="352" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Термостат</text>
+  <text x="104" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Спам филтър</text>
+
+  <!-- Card 2: Model-Based -->
+  <rect x="188" y="104" width="128" height="304" rx="12" ry="12" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.15" />
+  <rect x="188" y="104" width="128" height="12" rx="4" ry="4" fill="var(--color-primary)" fill-opacity="0.4" />
+  <text x="252" y="136" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Базиран</text>
+  <text x="252" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">на модел</text>
+  <line x1="204" y1="172" x2="300" y2="172" stroke="var(--color-primary)" stroke-opacity="0.1" stroke-width="1" />
+  <text x="252" y="192" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">МЕХАНИЗЪМ</text>
+  <text x="252" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Вътрешен модел</text>
+  <text x="252" y="240" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПАМЕТ</text>
+  <text x="252" y="256" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Краткосрочна</text>
+  <text x="252" y="288" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">АВТОНОМИЯ</text>
+  <text x="252" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Ограничена</text>
+  <text x="252" y="336" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПРИМЕР</text>
+  <text x="252" y="352" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Робот-чистач</text>
+  <text x="252" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Сензорен трафик</text>
+
+  <!-- Card 3: Goal-Based -->
+  <rect x="336" y="104" width="128" height="304" rx="12" ry="12" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.15" />
+  <rect x="336" y="104" width="128" height="12" rx="4" ry="4" fill="var(--color-primary)" fill-opacity="0.6" />
+  <text x="400" y="136" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Базиран</text>
+  <text x="400" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">на цели</text>
+  <line x1="352" y1="172" x2="448" y2="172" stroke="var(--color-primary)" stroke-opacity="0.1" stroke-width="1" />
+  <text x="400" y="192" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">МЕХАНИЗЪМ</text>
+  <text x="400" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Планиране</text>
+  <text x="400" y="240" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПАМЕТ</text>
+  <text x="400" y="256" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Пълна памет</text>
+  <text x="400" y="288" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">АВТОНОМИЯ</text>
+  <text x="400" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Умерена</text>
+  <text x="400" y="336" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПРИМЕР</text>
+  <text x="400" y="352" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">GPS навигация</text>
+  <text x="400" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Логистичен ИИ</text>
+
+  <!-- Card 4: Utility-Based -->
+  <rect x="484" y="104" width="128" height="304" rx="12" ry="12" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.15" />
+  <rect x="484" y="104" width="128" height="12" rx="4" ry="4" fill="var(--color-primary)" fill-opacity="0.8" />
+  <text x="548" y="136" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Базиран</text>
+  <text x="548" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">на полезност</text>
+  <line x1="500" y1="172" x2="596" y2="172" stroke="var(--color-primary)" stroke-opacity="0.1" stroke-width="1" />
+  <text x="548" y="192" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">МЕХАНИЗЪМ</text>
+  <text x="548" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Оптимизация</text>
+  <text x="548" y="240" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПАМЕТ</text>
+  <text x="548" y="256" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Пълна памет</text>
+  <text x="548" y="288" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">АВТОНОМИЯ</text>
+  <text x="548" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Висока</text>
+  <text x="548" y="336" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПРИМЕР</text>
+  <text x="548" y="352" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Борсова търговия</text>
+  <text x="548" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Автопилот (коли)</text>
+
+  <!-- Card 5: Learning -->
+  <rect x="632" y="104" width="128" height="304" rx="12" ry="12" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.25" />
+  <rect x="632" y="104" width="128" height="12" rx="4" ry="4" fill="var(--color-primary)" />
+  <text x="696" y="136" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Обучаващ</text>
+  <text x="696" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">се</text>
+  <line x1="648" y1="172" x2="744" y2="172" stroke="var(--color-primary)" stroke-opacity="0.1" stroke-width="1" />
+  <text x="696" y="192" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">МЕХАНИЗЪМ</text>
+  <text x="696" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Адаптиране</text>
+  <text x="696" y="240" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПАМЕТ</text>
+  <text x="696" y="256" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Еволюираща</text>
+  <text x="696" y="288" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">АВТОНОМИЯ</text>
+  <text x="696" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">Пълна</text>
+  <text x="696" y="336" font-family="system-ui, sans-serif" font-size="10" fill="var(--color-on-surface)" fill-opacity="0.6" text-anchor="middle" dominant-baseline="middle">ПРИМЕР</text>
+  <text x="696" y="352" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">ИИ агенти (LLM)</text>
+  <text x="696" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="middle">AlphaZero</text>
+
+  <!-- Flow / Complexity Arrow -->
+  <line x1="40" y1="440" x2="752" y2="440" stroke="var(--color-primary)" stroke-width="3" marker-end="url(#arrow)" />
+  <text x="400" y="468" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="middle">Нарастваща сложност на решенията, памет и ниво на автономия →</text>
+</svg>

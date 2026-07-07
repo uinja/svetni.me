@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+    <rect width="800" height="400" fill="#1a1a1a"/>
+    <circle cx="400" cy="200" r="120" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="8 4"/>
+    <rect x="360" y="160" width="80" height="80" rx="10" fill="#4a90e2"/>
+    <path d="M380 180 L420 220 M420 180 L380 220" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="250" cy="200" r="40" fill="#333333"/>
+    <circle cx="550" cy="200" r="40" fill="#333333"/>
+    <text x="400" y="360" font-family="sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">The AI Operator: Redesigning Work</text>
+    <path d="M290 200 L350 200 M450 200 L510 200" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+        </marker>
+    </defs>
+</svg>

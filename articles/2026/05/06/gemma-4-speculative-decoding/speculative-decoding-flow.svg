@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <style>
+    :root {
+      --color-background: #ffffff;
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-on-surface: #202124;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-background: #191d28;
+        --color-primary: #9ec2ff;
+        --color-secondary: #ffd56a;
+        --color-tertiary: #ff6e68;
+        --color-on-surface: #e5e0d6;
+      }
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Leader Lines / Margin (28% width) -->
+  <!-- Main Container -->
+  <rect x="230" y="50" width="520" height="400" rx="12" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-dasharray="8 4" />
+  <text x="240" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="var(--color-primary)">ПРОЦЕС НА СПЕКУЛАТИВНО ДЕКОДИРАНЕ</text>
+
+  <!-- Inputs -->
+  <rect x="40" y="210" width="150" height="80" rx="8" fill="var(--color-secondary)" />
+  <text x="115" y="250" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-background)">Входни данни</text>
+
+  <!-- Arrow Input to Process -->
+  <line x1="190" y1="250" x2="260" y2="250" stroke="var(--color-on-surface)" stroke-width="2" />
+  <polygon points="260,250 250,245 250,255" fill="var(--color-on-surface)" />
+
+  <!-- Drafter Model (Small) -->
+  <rect x="280" y="120" width="180" height="100" rx="8" fill="var(--color-tertiary)" />
+  <text x="370" y="160" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-on-surface)">Drafter (74M)</text>
+  <text x="370" y="180" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)">Предвижда токени</text>
+
+  <!-- Main Model (Large) -->
+  <rect x="520" y="210" width="180" height="100" rx="8" fill="var(--color-primary)" />
+  <text x="610" y="250" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="var(--color-background)">Main Model</text>
+  <text x="610" y="270" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-background)">Верифицира паралелно</text>
+
+  <!-- Arrows -->
+  <!-- Input to Drafter -->
+  <path d="M 260 250 L 260 170 L 280 170" fill="none" stroke="var(--color-on-surface)" stroke-width="2" />
+  <polygon points="280,170 272,166 272,174" fill="var(--color-on-surface)" />
+
+  <!-- Drafter to Main -->
+  <path d="M 460 170 L 490 170 L 490 260 L 520 260" fill="none" stroke="var(--color-on-surface)" stroke-width="2" />
+  <polygon points="520,260 512,256 512,264" fill="var(--color-on-surface)" />
+
+  <!-- Output -->
+  <rect x="650" y="400" width="120" height="60" rx="8" fill="var(--color-secondary)" />
+  <text x="710" y="430" text-anchor="middle" dominant-baseline="central" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="var(--color-background)">Изход (3x)</text>
+
+  <!-- Main to Output -->
+  <path d="M 610 310 L 610 430 L 650 430" fill="none" stroke="var(--color-on-surface)" stroke-width="2" />
+  <polygon points="650,430 642,426 642,434" fill="var(--color-on-surface)" />
+
+</svg>
