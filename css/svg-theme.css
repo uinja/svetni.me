@@ -1,0 +1,29 @@
+:root {
+  --foreground: #000000;
+  --background: #ffffff;
+  --surface-soft: #fafafa;
+  --blue: #1231b5;
+  --yellow: #fac832;
+  --red: #f83735;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #e5e0d6;
+    --background: #191d28;
+    --surface-soft: #222838;
+    --blue: #9ec2ff;
+    --yellow: #ffd56a;
+    --red: #ff6e68;
+  }
+}
+
+/* Helper classes for SVG implementation */
+svg { background-color: var(--background); }
+.bg { fill: var(--background); }
+.surface { fill: var(--surface-soft); }
+.accent-blue { fill: var(--blue); stroke: var(--blue); }
+.accent-yellow { fill: var(--yellow); stroke: var(--yellow); }
+.accent-red { fill: var(--red); stroke: var(--red); }
+.text-main { fill: var(--foreground); }
+text { font-family: system-ui, sans-serif; }
