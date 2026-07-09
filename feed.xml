@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 7 Jul 2026 22:00:00 +0000</pubDate>
+    <pubDate>Thu, 9 Jul 2026 20:58:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Пазарният парадокс: Защо NVIDIA се оказа жертва на собствения си успех</title>
+      <link>https://svetni.me/articles/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/</link>
+      <pubDate>Thu, 9 Jul 2026 20:58:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>През последните две години глобалният технологичен сектор беше доминиран от едно неоспоримо име. Пионерът в производството на графични ускорители NVIDIA се превърна в синоним на революцията в сферата на изкуствения интелект, благодарение на своите забележителни хардуерни постижения и софтуерната си екосистема CUDA [1]. Напоследък обаче пазарната динамика започна да се променя по изключително неочакван начин, изправяйки лидера пред нов тип предизвикателство. Компанията се оказва в парадоксалната ситуация да бъде притисната от собствения си пазарен успех, докато по-прости и по-малко забележителни технологии бележат исторически финансови рекорди.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Новите AI чипове на Meta влизат в производство през септември</title>
+      <link>https://svetni.me/articles/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/</link>
+      <pubDate>Thu, 9 Jul 2026 20:54:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Американският технологичен гигант Meta се готви да стартира производството на най-новата версия на своите специализирани чипове за изкуствен интелект през септември 2026 г. Според информация на агенция Reuters, цитираща вътрешен документ на компанията [1], поне една от версиите на новия хардуер вече е преминала успешно тестовата си фаза в рамките на около шест седмици [2]. С тази стъпка компанията цели да намали зависимостта си от външни доставчици на графични ускорители и да оптимизира разходите си за инфраструктура в условията на глобален дефицит на компоненти.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Осъзнато ползване или задържане на потребителите: Anthropic пусна Claude Reflect</title>
+      <link>https://svetni.me/articles/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/</link>
+      <pubDate>Thu, 9 Jul 2026 20:49:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В момент, когато недоволството срещу изкуствения интелект и протестите срещу центровете за данни често попадат в новинарските заглавия, Anthropic пуска нова функция за своя чатбот Claude, която фино се опитва да убеди потребителите защо трябва да продължат да го използват. Според репортаж на TechCrunch, компанията представи Claude Reflect — вграден панел за анализи, който позволява проследяване и визуализиране на потребителските навици и взаимодействие с изкуствения интелект [1].</p>]]></description>
+    </item>
 
     <item>
       <title>NVIDIA и Hugging Face обединяват сили: Пълна интеграция на Isaac GR00T, Isaac Teleop и Cosmos в LeRobot</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/g7-ai-splinter-amodei/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>По време на срещата на върха на G7 във френския курорт Евиан ле Бен, изпълнителният директор на компанията за изкуствен интелект Anthropic, Dario Amodei, отправи официално предупреждение към световните лидери. Според репортаж на Financial Times [1], предприемачът ги е призовал да се противопоставят на изкушението да разпокъсват регулациите и политиките за изкуствен интелект в конкурентни националистически блокове. Този апел идва в момент на силно геополитическо напрежение, предизвикано от новите американски ограничения върху достъпа до технологии.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Джеф Безос на VivaTech: Изкуственият интелект ще доведе до недостиг на работна ръка, а не до масова безработица</title>
-      <link>https://svetni.me/articles/2026/06/17/jeff-bezos-ai-jobs-vivatech/</link>
-      <pubDate>Wed, 17 Jun 2026 20:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/jeff-bezos-ai-jobs-vivatech/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на медийната мрежа BBC News [1], основателят на Amazon Джеф Безос направи оптимистична прогноза за бъдещето на пазара на труда под влиянието на изкуствения интелект. По време на изказването си на технологичната конференция VivaTech в Париж, Безос отхвърли широко разпространените опасения, че автоматизацията ще доведе до масова безработица и ще направи хората излишни [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Rheinmetall представи мобилната противовъздушна система Skyranger 30 на Eurosatory 2026</title>
-      <link>https://svetni.me/articles/2026/06/17/rheinmetall-skyranger-eurosatory/</link>
-      <pubDate>Wed, 17 Jun 2026 17:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/rheinmetall-skyranger-eurosatory/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Германският отбранителен концерн Rheinmetall представи най-новата конфигурация на своята мобилна система за противовъздушна отбрана Skyranger 30 по време на престижното международно изложение Eurosatory 2026 в Париж [1]. Акцентът на представянето през тази година е интеграцията на купола Skyranger върху тежката верижна бойна машина на пехотата Lynx KF41. Тази демонстрация подчертава гъвкавостта на концепцията за противовъздушна отбрана от близко разстояние (SHORAD – Short Range Air Defence) в условията на съвременната бойна среда, характеризираща се с масирано използване на дронове.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Границите на ИИ и реалността на софтуерното инженерство: Грейди Буч срещу илюзията за последния ред код</title>
-      <link>https://svetni.me/articles/2026/06/16/grady-booch-software-architecture-ai-limits/</link>
-      <pubDate>Tue, 16 Jun 2026 23:04:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/16/grady-booch-software-architecture-ai-limits/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В рамките на популярен видео разговор софтуерният инфлуенсър Кент С. Додс интервюира легендарния компютърен учен, съавтор на UML и съосновател на Rational Software Грейди Буч относно бъдещето на разработката [1]. Дискусията е провокирана от есето на Додс „The Last Software Engineer“, в което той излага хипотезата, че изкуственият интелект постепенно ще поеме изцяло имплементацията на системи. Буч категорично отхвърля тази теза, настоявайки за ясно разграничение между простото писане на код с ИИ и цялостната дисциплина на софтуерното инженерство.</p>]]></description>
     </item>
   </channel>
 </rss>
