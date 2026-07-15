@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 14 Jul 2026 08:58:00 +0000</pubDate>
+    <pubDate>Wed, 15 Jul 2026 20:21:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Може ли изкуствен интелект да построи реактивен двигател? Уроците от JARVIS Challenge в MIT</title>
+      <link>https://svetni.me/articles/2026/07/15/can-ai-build-jet-engine-jarvis-challenge/</link>
+      <pubDate>Wed, 15 Jul 2026 20:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/15/can-ai-build-jet-engine-jarvis-challenge/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Генеративният изкуствен интелект и големите езикови модели (LLM) вече трансформираха софтуерното инженерство, автоматизирайки писането на код, документацията и откриването на уязвимости. Но когато задачата се пренесе във физическия свят и изисква проектиране и изграждане на сложна механична система като газова турбина, възможностите на изкуствения интелект са изправени пред напълно нови предизвикателства.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Новият жизнен цикъл на софтуера: От „вайб кодинг“ към агентно инженерство</title>
+      <link>https://svetni.me/articles/2026/07/15/the-new-software-lifecycle/</link>
+      <pubDate>Wed, 15 Jul 2026 20:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/15/the-new-software-lifecycle/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според новия доклад на Google „The New SDLC With Vibe Coding“, съавтор на който е известният софтуерен инженер Ади Османи (Addy Osmani) [1], жизненият цикъл на разработка на софтуер (SDLC) претърпява радикална трансформация. Работата на разработчиците бързо се премества от писане на код към неговото оценяване и валидиране. Този преход бележи еволюцията от хаотичния вайб кодинг (Vibe Coding) към дисциплинираното агентно инженерство (Agentic Engineering).</p>]]></description>
+    </item>
 
     <item>
       <title>Как промпт инжекция може да доведе до изтичане на данни в три стъпки: Защо NetworkPolicy не е достатъчна</title>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В технологичната общност често се прокрадват твърдения, че локалните езикови модели с отворен код като Qwen 3.6 27B или 35-A3B вече достигат нивата на водещите комерсиални модели като Claude Opus. Основателят на платформата OpenFaaS Алекс Елис споделя своята гледна точка, базирана на реален бизнес опит и поддръжка на софтуерни продукти [1]. Според него локалните модели не могат да заменят изцяло комерсиалните системи за сложна софтуерна разработка, но представляват напълно различен и ценен инструмент с конкретни приложения.</p>]]></description>
-    </item>
-
-    <item>
-      <title>JetBrains премахна 15 зловредни ИИ плъгина, крадящи API ключове от Marketplace</title>
-      <link>https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</link>
-      <pubDate>Thu, 18 Jun 2026 21:54:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/jetbrains-marketplace-security/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално съобщение за сигурността [1], публикувано от JetBrains, се разкриват подробности за откриването и неутрализирането на 15 зловредни плъгина от трети страни, предлагани на платформата JetBrains Marketplace. Разширенията са били специално разработени с цел тайно извличане на API ключове за доставчици на изкуствен интелект, конфигурирани от потребителите в техните работни среди. Компанията е предприела незабавни действия за премахването им, блокирането на профилите на техните издатели и дистанционното им деактивиране в инсталираните системи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Alibaba представи Qwen-Robot Suite: Фамилия от модели за физически въплътен изкуствен интелект</title>
-      <link>https://svetni.me/articles/2026/06/17/qwen-robotsuite/</link>
-      <pubDate>Wed, 17 Jun 2026 20:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/17/qwen-robotsuite/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Лабораторията за изкуствен интелект Tongyi Lab, част от китайския технологичен конгломерат Alibaba Group, обяви официалното пускане на <strong>Qwen-Robot Suite</strong> [1] — нова фамилия от специализирани фундаментални модели за физически въплътен изкуствен интелект (Embodied AI). Фамилията е проектирана да служи като мост между визуално-езиковото възприятие и реалните физически действия, реализирайки концепцията за Vision-Language-Action (VLA) архитектура. Разработката цели да предостави унифицирана софтуерна инфраструктура за управление на роботизирани системи, преодолявайки сегашната фрагментация в софтуера за контрол на хардуера.</p>]]></description>
     </item>
   </channel>
 </rss>
