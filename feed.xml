@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Wed, 15 Jul 2026 20:21:00 +0000</pubDate>
+    <pubDate>Fri, 17 Jul 2026 22:11:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Китайският стартъп Moonshot AI представи Kimi K3: Първият 3-трилионен модел с отворен код</title>
+      <link>https://svetni.me/articles/2026/07/17/moonshot-kimi-k3-open-source/</link>
+      <pubDate>Fri, 17 Jul 2026 22:11:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/17/moonshot-kimi-k3-open-source/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Китайският стартъп за изкуствен интелект Moonshot AI представи новия си мащабен модел Kimi K3, за който твърди, че може да се конкурира с водещите американски технологични компании. Според информация на BBC News [1], това е първият в света модел с отворен код от клас с три трилиона параметри.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Apple засилва натиска срещу OpenAI с правни писма до десетки бивши служители</title>
+      <link>https://svetni.me/articles/2026/07/17/apple-openai-legal-letters/</link>
+      <pubDate>Fri, 17 Jul 2026 22:04:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/17/apple-openai-legal-letters/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на Mashable [1], позоваващ се на информация от Financial Times, технологичният гигант Apple е изпратил официални правни писма за запазване на доказателства (preservation letters) до приблизително 40 свои бивши служители, които в момента работят в OpenAI.</p>]]></description>
+    </item>
 
     <item>
       <title>Може ли изкуствен интелект да построи реактивен двигател? Уроците от JARVIS Challenge в MIT</title>
@@ -122,21 +140,21 @@
     </item>
 
     <item>
-      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
-      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
-      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
-    </item>
-
-    <item>
       <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
       <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
       <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
+      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
+      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
     </item>
 
     <item>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/claude-design-overhaul/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на VentureBeat [1], компанията Anthropic обяви мащабен ъпдейт на своята платформа Claude Design. Продуктът беше пуснат за първи път през април под формата на тестова версия (research preview) и бързо привлече над 1 милион потребители. Той обаче беше сериозно критикуван заради изключително високия си разход на токени, което водеше до бързо изчерпване на потребителските лимити [1]. Обновената версия има за цел да се справи с този проблем, като същевременно добавя ключови функции за интеграция на код и дизайн системи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Amazon планира директни продажби на своите ИИ чипове в сблъсък с Nvidia</title>
-      <link>https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</link>
-      <pubDate>Thu, 18 Jun 2026 22:04:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/amazon-trainium-nvidia-challenge/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на TechCrunch [1], технологичният гигант Amazon проучва възможността за директни продажби на своите специализирани чипове за изкуствен интелект Trainium на външни оператори на центрове за данни. Информацията беше потвърдена от Питър ДеСантис, вицепрезидент на AWS (Amazon Web Services), който съобщи, че компанията е в преговори за продажба на хардуерни стелажи с чипове директно на трети страни. Този ход представлява радикална промяна в досегашната стратегия на AWS, фокусирана върху отдаването под наем на изчислителна мощ изключително в собствения ѝ облак.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Локалният ИИ не е просто по-лош Claude Opus, а напълно различен инструмент</title>
-      <link>https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</link>
-      <pubDate>Thu, 18 Jun 2026 22:01:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/18/local-ai-is-not-opus/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В технологичната общност често се прокрадват твърдения, че локалните езикови модели с отворен код като Qwen 3.6 27B или 35-A3B вече достигат нивата на водещите комерсиални модели като Claude Opus. Основателят на платформата OpenFaaS Алекс Елис споделя своята гледна точка, базирана на реален бизнес опит и поддръжка на софтуерни продукти [1]. Според него локалните модели не могат да заменят изцяло комерсиалните системи за сложна софтуерна разработка, но представляват напълно различен и ценен инструмент с конкретни приложения.</p>]]></description>
     </item>
   </channel>
 </rss>
