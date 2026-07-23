@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="#0f172a" />
+
+  <!-- Header Section -->
+  <rect x="24" y="24" width="752" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="40" y="50" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#38bdf8" dominant-baseline="middle">Gemini 3.6 Flash: Агентна архитектура &amp; Токенова ефективност</text>
+  <text x="40" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="400" fill="#94a3b8" dominant-baseline="middle">Оптимизиран пайплайн за многостъпково разсъждение в Google Cloud Model Garden</text>
+
+  <!-- Left Column: Token Efficiency & Benchmarks -->
+  <rect x="24" y="100" width="364" height="376" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="44" y="125" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" dominant-baseline="middle">Ефективност и производителност</text>
+
+  <!-- Comparison Bar 1: Gemini 3.5 Flash -->
+  <rect x="44" y="150" width="324" height="64" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1" />
+  <text x="56" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" dominant-baseline="middle">Gemini 3.5 Flash (Предишно поколение)</text>
+  <rect x="56" y="184" width="220" height="14" rx="3" fill="#f43f5e" />
+  <text x="284" y="191" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#f43f5e" dominant-baseline="middle">100% токени</text>
+
+  <!-- Comparison Bar 2: Gemini 3.6 Flash -->
+  <rect x="44" y="228" width="324" height="64" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+  <text x="56" y="248" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" dominant-baseline="middle">Gemini 3.6 Flash (Нов модел)</text>
+  <rect x="56" y="262" width="182" height="14" rx="3" fill="#34d399" />
+  <text x="246" y="269" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#34d399" dominant-baseline="middle">-17% изходни токена</text>
+
+  <!-- Benchmark Badges -->
+  <rect x="44" y="306" width="156" height="70" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1" />
+  <text x="56" y="326" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#818cf8" dominant-baseline="middle">DeepSWE Benchmark</text>
+  <text x="56" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">Значителни успехи при</text>
+  <text x="56" y="366" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">софтуерни агенти</text>
+
+  <rect x="212" y="306" width="156" height="70" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1" />
+  <text x="224" y="326" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#818cf8" dominant-baseline="middle">MLE Bench</text>
+  <text x="224" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">Високи резултати при</text>
+  <text x="224" y="366" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">ML инженерство</text>
+
+  <!-- Pricing Info -->
+  <rect x="44" y="390" width="324" height="70" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="56" y="412" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" dominant-baseline="middle">Ценообразуване (Gemini 3.6 Flash)</text>
+  <text x="56" y="432" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#38bdf8" dominant-baseline="middle">$1.50 / 1M входни токени</text>
+  <text x="220" y="432" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34d399" dominant-baseline="middle">$7.50 / 1M изходни</text>
+
+  <!-- Right Column: Agentic Workflow Pipeline -->
+  <rect x="412" y="100" width="364" height="376" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="432" y="125" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" dominant-baseline="middle">Автономен агентен пайплайн</text>
+
+  <!-- Step 1: Input -->
+  <rect x="432" y="148" width="324" height="54" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+  <text x="448" y="167" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" dominant-baseline="middle">1. Мултимодален вход (1M контекст)</text>
+  <text x="448" y="187" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" dominant-baseline="middle">Текст, изображения, аудио, видео &amp; код</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 594 202 L 594 216" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Step 2: Optimized Reasoning -->
+  <rect x="432" y="220" width="324" height="60" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1" />
+  <text x="448" y="242" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#818cf8" dominant-baseline="middle">2. Оптимизирано многостъпково разсъждение</text>
+  <text x="448" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">Редуциран брой междинни токени и мисловни стъпки</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 594 280 L 594 294" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Step 3: Tool Execution -->
+  <rect x="432" y="298" width="324" height="60" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1" />
+  <text x="448" y="320" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#34d399" dominant-baseline="middle">3. Автономна интеграция с инструменти</text>
+  <text x="448" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">По-малко извиквания на инструменти за завършване</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 594 358 L 594 372" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Step 4: Final Response -->
+  <rect x="432" y="376" width="324" height="84" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+  <text x="448" y="398" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" dominant-baseline="middle">4. Резултат и разгръщане</text>
+  <text x="448" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle">Ниско закъснение (latency) и намалени разходи</text>
+  <text x="448" y="440" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34d399" dominant-baseline="middle">Интеграции: Model Garden, Copilot, Enterprise Agent</text>
+
+  <!-- Marker Definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+</svg>

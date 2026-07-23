@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="600" height="400" fill="#f8fafc" />
+  
+  <text x="300" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e293b">Четири измерения на надеждността</text>
+  
+  <g transform="translate(150, 100)">
+    <rect x="0" y="0" width="130" height="100" rx="10" fill="#3b82f6" />
+    <text x="65" y="55" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Последователност</text>
+  </g>
+  
+  <g transform="translate(320, 100)">
+    <rect x="0" y="0" width="130" height="100" rx="10" fill="#10b981" />
+    <text x="65" y="55" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Устойчивост</text>
+  </g>
+  
+  <g transform="translate(150, 230)">
+    <rect x="0" y="0" width="130" height="100" rx="10" fill="#8b5cf6" />
+    <text x="65" y="55" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Предвидимост</text>
+  </g>
+  
+  <g transform="translate(320, 230)">
+    <rect x="0" y="0" width="130" height="100" rx="10" fill="#ef4444" />
+    <text x="65" y="55" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Безопасност</text>
+  </g>
+</svg>

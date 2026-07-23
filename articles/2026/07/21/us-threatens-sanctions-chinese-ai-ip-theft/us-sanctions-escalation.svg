@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#0f172a" rx="12"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central">Ескалация на американските ограничения спрямо китайския ИИ</text>
+  <text x="400" y="75" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="central">От хардуерни експортни контроли до софтуерни санкции върху модели</text>
+  
+  <!-- Stage 1 -->
+  <g transform="translate(50, 120)">
+    <rect width="210" height="280" fill="#1e293b" stroke="#334155" stroke-width="2" rx="10"/>
+    <rect width="210" height="48" fill="#1e3a8a" rx="10"/>
+    <rect y="38" width="210" height="10" fill="#1e3a8a"/>
+    <text x="105" y="24" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="central">Етап 1: Хардуер</text>
+    
+    <text x="105" y="80" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="central">Експортен контрол</text>
+    
+    <circle cx="105" cy="140" r="32" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+    <!-- Microchip Icon -->
+    <rect x="90" y="125" width="30" height="30" fill="none" stroke="#60a5fa" stroke-width="2" rx="3"/>
+    <line x1="97" y1="120" x2="97" y2="125" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="105" y1="120" x2="105" y2="125" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="113" y1="120" x2="113" y2="125" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="97" y1="155" x2="97" y2="160" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="105" y1="155" x2="105" y2="160" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="113" y1="155" x2="113" y2="160" stroke="#60a5fa" stroke-width="2"/>
+    
+    <text x="105" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Ограничения за чипове</text>
+    <text x="105" y="225" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">и GPU инфраструктура</text>
+    <text x="105" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-style="italic" text-anchor="middle" dominant-baseline="central">Блокиране на хардуера</text>
+  </g>
+  
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(265, 250)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#f59e0b" stroke-width="3" stroke-dasharray="4"/>
+    <polygon points="20,-6 30,0 20,6" fill="#f59e0b"/>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(295, 120)">
+    <rect width="210" height="280" fill="#1e293b" stroke="#334155" stroke-width="2" rx="10"/>
+    <rect width="210" height="48" fill="#78350f" rx="10"/>
+    <rect y="38" width="210" height="10" fill="#78350f"/>
+    <text x="105" y="24" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="central">Етап 2: Разследване</text>
+    
+    <text x="105" y="80" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="central">Проверка за IP кражба</text>
+    
+    <circle cx="105" cy="140" r="32" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+    <!-- Shield / Magnifier Icon -->
+    <path d="M 95 130 L 105 125 L 115 130 L 115 142 C 115 150 105 155 105 155 C 105 155 95 150 95 142 Z" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    
+    <text x="105" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Инспекция на софтуер</text>
+    <text x="105" y="225" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">и нерегламентиран тренинг</text>
+    <text x="105" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-style="italic" text-anchor="middle" dominant-baseline="central">Федерален контрол</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(510, 250)">
+    <line x1="0" y1="0" x2="20" y2="0" stroke="#ef4444" stroke-width="3"/>
+    <polygon points="20,-6 30,0 20,6" fill="#ef4444"/>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(540, 120)">
+    <rect width="210" height="280" fill="#1e293b" stroke="#334155" stroke-width="2" rx="10"/>
+    <rect width="210" height="48" fill="#7f1d1d" rx="10"/>
+    <rect y="38" width="210" height="10" fill="#7f1d1d"/>
+    <text x="105" y="24" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="central">Етап 3: Моделни санкции</text>
+    
+    <text x="105" y="80" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle" dominant-baseline="central">Забрана и ограничения</text>
+    
+    <circle cx="105" cy="140" r="32" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+    <!-- Lock / Ban Icon -->
+    <circle cx="105" cy="140" r="14" fill="none" stroke="#fca5a5" stroke-width="2"/>
+    <line x1="95" y1="130" x2="115" y2="150" stroke="#ef4444" stroke-width="2.5"/>
+    
+    <text x="105" y="200" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Директни санкции срещу</text>
+    <text x="105" y="225" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">отворени китайски ИИ</text>
+    <text x="105" y="255" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-style="italic" text-anchor="middle" dominant-baseline="central">Контрол над дистилацията</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="400" y="440" fill="#64748b" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dominant-baseline="central">Графика: Svetni.me | Източник на данни: Министерство на финансите на САЩ / TechCrunch</text>
+</svg>
