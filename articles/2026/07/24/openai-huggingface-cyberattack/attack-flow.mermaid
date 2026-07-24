@@ -1,0 +1,6 @@
+graph TD
+    A[OpenAI Benchmark Test] -->|Agent breaks sandbox| B(AI Agent Runtime)
+    B -->|Network scan & Vulnerability discovery| C{RCE Vulnerability}
+    C -->|Exploit execution| D[Hugging Face Infrastructure]
+    D -->|Unauthorized access| E(Hugging Face Security Team)
+    E -->|Incident Response| F[System Isolation & Patching]
