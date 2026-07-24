@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 24 Jul 2026 19:45:00 +0000</pubDate>
+    <pubDate>Fri, 24 Jul 2026 20:06:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Отворени тегла и американското лидерство в ИИ: Какво казва манифестът на индустрията</title>
+      <link>https://svetni.me/articles/2026/07/24/open-weights-american-ai-leadership/</link>
+      <pubDate>Fri, 24 Jul 2026 20:06:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/24/open-weights-american-ai-leadership/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Коалиция от водещи технологични компании, сред които Nvidia, Meta, Microsoft, Mistral и Y Combinator, публикува манифест, озаглавен „Open Weights and American AI Leadership“. Документът призовава за изграждането на прозрачна и отворена екосистема за изкуствен интелект (ИИ) в САЩ, като подчертава, че бъдещето на американското технологично превъзходство зависи от децентрализацията и свободния достъп до модели с отворени тегла [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Hetzner навлиза в AI Inference пазара: Първи поглед към техния нов API</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/22/nvidia-ai-science-cuda/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>По време на международната конференция за високопроизводителни изчисления ISC High Performance 2026 (ISC26), компанията NVIDIA представи значително разширение на своя софтуерен стек CUDA [1]. В официално изявление авторът Крис Портър разкрива серия от нови библиотеки, референтен код и микроуслуги в рамките на платформата CUDA-X. Тяхната основна цел е да осигурят необходимата изчислителна мощност за следващото поколение научни изследвания, вариращи от космологични наблюдения до симулации на молекулярно ниво.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Двуседмичният път към внедряването на „моменталното“ ИИ решение на Claude Code</title>
-      <link>https://svetni.me/articles/2026/06/22/thoughtbot-flaky-tests-ai/</link>
-      <pubDate>Mon, 22 Jun 2026 18:32:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/22/thoughtbot-flaky-tests-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В статия за блога на консултантската компания Thoughtbot разработчикът Fritz Meissner споделя опита си от внедряването на „моментално“ решение за нестабилни тестове (flaky tests), генерирано от изкуствен интелект [1]. Докато инструментът Claude Code е успял да локализира и коригира критичните грешки за една нощ, последващата преработка и изчистване на генерирания код са отнели две седмици интензивен човешки труд.</p>]]></description>
     </item>
   </channel>
 </rss>
