@@ -9,9 +9,45 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 27 Jul 2026 07:30:00 +0000</pubDate>
+    <pubDate>Mon, 27 Jul 2026 20:44:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Могат ли Китай и Русия да унищожат Starlink? Само с ефекта на бумеранга</title>
+      <link>https://svetni.me/articles/2026/07/27/starlink-boomerang-defense/</link>
+      <pubDate>Mon, 27 Jul 2026 20:44:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/starlink-boomerang-defense/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според аналитичен репортаж на технологичното издание Ars Technica [1], базиран на мащабно съвместно разследване на The Insider [2], Der Spiegel и Le Monde, Китай и Русия развиват дълбоко военно сътрудничество в космоса. Основен фокус на техните съвместни планове е разработването на стратегии за противодействие и евентуално унищожаване на спътниковата мрежа Starlink на американската компания SpaceX, основана от милиардера Илон Мъск.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Microsoft намалява разходите за ИИ с до 89% чрез собствените си модели MAI</title>
+      <link>https://svetni.me/articles/2026/07/27/microsoft-mai-models-cost-reduction/</link>
+      <pubDate>Mon, 27 Jul 2026 20:43:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/microsoft-mai-models-cost-reduction/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Подразделението Microsoft AI обяви официално пускането в публичен преглед на два нови модела с изкуствен интелект, разработени изцяло вътрешно — MAI-Image-2.5-Pro и MAI-Voice-2-Flash [1]. Тези премиери са съпроводени от първите официални производствени данни на компанията, които показват мащабно свиване на разходите за изчислителна мощ при замяна на външни базови модели. Корпоративният блог на Microsoft представя най-агресивния си аргумент досега, че компанията вече може самостоятелно да захранва ключовите си продукти, без да разчита изцяло на технологичния си партньор OpenAI.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
+      <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
+      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
+      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
+    </item>
 
     <item>
       <title>Радикална прозрачност: Hugging Face настоява за мерки от OpenAI след безпрецедентната ИИ атака</title>
@@ -425,42 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/24/gemini-3-5-flash-computer-use/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Сферата на изкуствения интелект направи важна стъпка напред към реалната автономност на софтуерните агенти. В официално съобщение на своя корпоративен блог [1], технологичният гигант Google обяви пълната интеграция на технологията за компютърна употреба (computer use) като вграден инструмент в своя модел от среден клас Gemini 3.5 Flash. Досега тази функционалност беше достъпна само като експериментален и самостоятелен модел в рамките на Gemini 2.5, но сега тя става част от основната продуктова линия за разработчици и корпоративни клиенти.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Krea 2 Raw и Turbo: 12-милиардни AI модели за изображения с отворени тегла</title>
-      <link>https://svetni.me/articles/2026/06/24/krea-2-raw-turbo-open-weights/</link>
-      <pubDate>Wed, 24 Jun 2026 20:07:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/24/krea-2-raw-turbo-open-weights/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Сферата на генеративния изкуствен интелект за изображения отбеляза нов важен етап с представянето на моделното семейство Krea 2. В официална публикация в своето GitHub хранилище [1], творческият ИИ стартъп Krea AI обяви пускането на отворените тегла за два нови модела с обем от 12 милиарда параметри: Krea 2 Raw и Krea 2 Turbo. Новите разработки са базирани на модерната архитектура Diffusion Transformer (DiT) и са достъпни за свободно изтегляне в платформата Hugging Face.</p>]]></description>
-    </item>
-
-    <item>
-      <title>OpenAI и Broadcom представиха първия си съвместен ИИ чип Jalapeño</title>
-      <link>https://svetni.me/articles/2026/06/24/openai-custom-chip-jalapeno-broadcom/</link>
-      <pubDate>Wed, 24 Jun 2026 20:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/24/openai-custom-chip-jalapeno-broadcom/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В опит да намали зависимостта си от външни доставчици на графични ускорители и да оптимизира разходите за работа на своите модели, OpenAI представи първия си собствен силициев чип. Според репортаж на VentureBeat [1], специализираният процесор за инференция с кодово име <strong>Jalapeño</strong> е разработен в партньорство с Broadcom. Проектът бележи началото на дългосрочна стратегия на компанията за изграждане на собствен хардуерен стек.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Amazon ще представи рамка за изграждане на надеждни ИИ агенти на VB Transform 2026</title>
-      <link>https://svetni.me/articles/2026/06/24/amazon-trustworthy-ai-agents-framework/</link>
-      <pubDate>Wed, 24 Jun 2026 19:57:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/24/amazon-trustworthy-ai-agents-framework/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Въвеждането на автономни технологии в корпоративния сектор се сблъсква с критично предизвикателство — липсата на пълно доверие в действията на изкуствения интелект. Според репортаж на VentureBeat [1], технологичният гигант Amazon се готви да представи нова методологическа рамка за изграждане на предвидими и сигурни ИИ агенти. Това ще се случи по време на предстоящата индустриална конференция VB Transform 2026.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Nvidia и DDN оптимизират архитектурата на ИИ фабриките за намаляване на цената на токените</title>
-      <link>https://svetni.me/articles/2026/06/23/ddn-nvidia-ai-infrastructure/</link>
-      <pubDate>Tue, 23 Jun 2026 21:20:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/ddn-nvidia-ai-infrastructure/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В контекста на бързото разрастване на пазара на изкуствен интелект, постигането на реална възвръщаемост на мащабните инвестиции се превръща в основна цел за бизнеса. Според репортаж на SiliconANGLE [1], това изисква дълбока оптимизация и съвместна работа между нивата на данни и изчисления. За целта технологичният лидер Nvidia и разработчикът на високопроизводителни системи за съхранение DDN обявиха стратегическо партньорство за подобряване на икономиката на изчислителната инфраструктура и т.нар. „ИИ фабрики“.</p>]]></description>
     </item>
   </channel>
 </rss>

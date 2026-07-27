@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%" height="100%" style="background-color: #0f172a; font-family: system-ui, -apple-system, sans-serif; border-radius: 12px;">
+  <!-- Title / Header -->
+  <text x="400" y="35" fill="#f8fafc" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="0.5">Механизъм на индексиране на споделените Claude връзки</text>
+  
+  <!-- Step 1 Card -->
+  <rect x="30" y="70" width="150" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <circle cx="105" cy="105" r="20" fill="#38bdf8" fill-opacity="0.15" />
+  <!-- Share Icon -->
+  <path d="M105 93v16m-6-10l6-6 6 6m-12 18h12" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <text x="105" y="145" fill="#f8fafc" font-size="12" font-weight="600" text-anchor="middle">1. Генериране</text>
+  <text x="105" y="162" fill="#94a3b8" font-size="10" text-anchor="middle">Потребител създава</text>
+  <text x="105" y="176" fill="#94a3b8" font-size="10" text-anchor="middle">публична връзка (URL)</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M195 135h15" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <path d="M205 130l5 5-5 5" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Step 2 Card -->
+  <rect x="220" y="70" width="150" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <circle cx="295" cy="105" r="20" fill="#fbbf24" fill-opacity="0.15" />
+  <!-- Public Web / Link Icon -->
+  <path d="M285 105a10 10 0 0110-10h10a10 10 0 010 20h-10a10 10 0 01-10-10z" stroke="#fbbf24" stroke-width="2" fill="none" />
+  <path d="M295 105h10" stroke="#fbbf24" stroke-width="2" />
+  <text x="295" y="145" fill="#f8fafc" font-size="12" font-weight="600" text-anchor="middle">2. Публикуване</text>
+  <text x="295" y="162" fill="#94a3b8" font-size="10" text-anchor="middle">Връзката се споделя</text>
+  <text x="295" y="176" fill="#94a3b8" font-size="10" text-anchor="middle">във форум или сайт</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M385 135h15" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <path d="M395 130l5 5-5 5" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Step 3 Card -->
+  <rect x="410" y="70" width="150" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <circle cx="485" cy="105" r="20" fill="#a855f7" fill-opacity="0.15" />
+  <!-- Crawler / Search bot Icon -->
+  <path d="M475 100l10 10 10-10m-10 10v10m-8-5h16" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <text x="485" y="145" fill="#f8fafc" font-size="12" font-weight="600" text-anchor="middle">3. Сканиране</text>
+  <text x="485" y="162" fill="#94a3b8" font-size="10" text-anchor="middle">Търсещият бот</text>
+  <text x="485" y="176" fill="#94a3b8" font-size="10" text-anchor="middle">открива и индексира</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M575 135h15" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <path d="M585 130l5 5-5 5" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Step 4 Card -->
+  <rect x="600" y="70" width="150" height="130" rx="8" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5" />
+  <circle cx="675" cy="105" r="20" fill="#f43f5e" fill-opacity="0.15" />
+  <!-- Search Icon -->
+  <circle cx="670" cy="100" r="6" stroke="#f43f5e" stroke-width="2" fill="none" />
+  <path d="M675 105l6 6" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" />
+  <text x="675" y="145" fill="#f8fafc" font-size="12" font-weight="600" text-anchor="middle">4. Разкриване</text>
+  <text x="675" y="162" fill="#94a3b8" font-size="10" text-anchor="middle">Страницата е откриваема</text>
+  <text x="675" y="176" fill="#94a3b8" font-size="10" text-anchor="middle">чрез Google Search</text>
+</svg>
