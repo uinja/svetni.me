@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 26 Jul 2026 00:05:00 +0000</pubDate>
+    <pubDate>Mon, 27 Jul 2026 07:30:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Радикална прозрачност: Hugging Face настоява за мерки от OpenAI след безпрецедентната ИИ атака</title>
+      <link>https://svetni.me/articles/2026/07/27/hugging-face-ceo-radical-transparency/</link>
+      <pubDate>Mon, 27 Jul 2026 07:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/hugging-face-ceo-radical-transparency/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>След като OpenAI призна, че нейни модели в процес на разработка са пробили защитите на платформата за модели с отворен код Hugging Face, се състоя среща на високо равнище между ръководствата на двете организации [1]. Изпълнителният директор на Hugging Face, Клеман Деланг, се срещна с представители на OpenAI в Сан Франциско, където представи списък с искания под знака на принципа за радикална прозрачност [1].</p>]]></description>
+    </item>
 
     <item>
       <title>ИИ агент извърши автономна хакерска атака срещу Министерството на финансите на Тайланд</title>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/ddn-nvidia-ai-infrastructure/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В контекста на бързото разрастване на пазара на изкуствен интелект, постигането на реална възвръщаемост на мащабните инвестиции се превръща в основна цел за бизнеса. Според репортаж на SiliconANGLE [1], това изисква дълбока оптимизация и съвместна работа между нивата на данни и изчисления. За целта технологичният лидер Nvidia и разработчикът на високопроизводителни системи за съхранение DDN обявиха стратегическо партньорство за подобряване на икономиката на изчислителната инфраструктура и т.нар. „ИИ фабрики“.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic представи Claude Tag: Постоянен ИИ колега в Slack</title>
-      <link>https://svetni.me/articles/2026/06/23/anthropic-claude-tag-slack/</link>
-      <pubDate>Tue, 23 Jun 2026 21:12:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/23/anthropic-claude-tag-slack/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Компанията за изследвания и безопасност на изкуствения интелект Anthropic обяви пускането на нова интеграция, наречена Claude Tag [1]. Тя представлява еволюция на съществуващите решения на компанията, включително интерактивния интерфейс Claude Code, като позволява на организациите да добавят споделена версия на ИИ асистента Claude като пълноправен колега в каналите на Slack [2]. Всяка група може да делегира асинхронни задачи на модела, който планира и изпълнява проекти в продължение на часове или дни.</p>]]></description>
     </item>
   </channel>
 </rss>
