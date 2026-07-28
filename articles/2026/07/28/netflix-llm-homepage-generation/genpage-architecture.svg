@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="background-color: var(--color-background); font-family: system-ui, sans-serif;">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Context Tokens Box -->
+  <rect x="50" y="150" width="200" height="200" rx="12" fill="var(--color-secondary)" opacity="0.1" stroke="var(--color-secondary)" stroke-width="2" />
+  <text x="150" y="190" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="20" font-weight="600">Контекст (Prompt)</text>
+  <rect x="70" y="210" width="160" height="30" rx="6" fill="var(--color-surface-variant)" stroke="var(--color-secondary)" stroke-width="1" />
+  <text x="150" y="225" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="14">Потребителска история</text>
+  <rect x="70" y="250" width="160" height="30" rx="6" fill="var(--color-surface-variant)" stroke="var(--color-secondary)" stroke-width="1" />
+  <text x="150" y="265" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="14">Профил &amp; Среда</text>
+  <rect x="70" y="290" width="160" height="30" rx="6" fill="var(--color-surface-variant)" stroke="var(--color-secondary)" stroke-width="1" />
+  <text x="150" y="305" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="14">Време &amp; Устройство</text>
+
+  <!-- Arrow -->
+  <line x1="250" y1="250" x2="330" y2="250" stroke="var(--color-on-surface)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Transformer Box -->
+  <rect x="340" y="150" width="160" height="200" rx="16" fill="var(--color-primary)" opacity="0.15" stroke="var(--color-primary)" stroke-width="3" />
+  <text x="420" y="250" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="22" font-weight="600">GenPage</text>
+  <text x="420" y="280" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="16">(Transformer)</text>
+  
+  <!-- Arrow -->
+  <line x1="500" y1="250" x2="580" y2="250" stroke="var(--color-on-surface)" stroke-width="3" marker-end="url(#arrow)" />
+
+  <!-- Page Tokens Box -->
+  <rect x="590" y="110" width="160" height="280" rx="12" fill="var(--color-tertiary)" opacity="0.1" stroke="var(--color-tertiary)" stroke-width="2" />
+  <text x="670" y="150" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="20" font-weight="600">Отговор</text>
+  <rect x="610" y="170" width="120" height="30" rx="4" fill="var(--color-surface-variant)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="670" y="185" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="14">Ред 1: Комедии</text>
+  
+  <rect x="620" y="210" width="45" height="40" rx="4" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="642" y="230" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="10">Филм A</text>
+  
+  <rect x="675" y="210" width="45" height="40" rx="4" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="697" y="230" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="10">Филм B</text>
+
+  <rect x="610" y="270" width="120" height="30" rx="4" fill="var(--color-surface-variant)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="670" y="285" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="14">Ред 2: Драми</text>
+  
+  <rect x="620" y="310" width="45" height="40" rx="4" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="642" y="330" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="10">Шоу C</text>
+
+  <rect x="675" y="310" width="45" height="40" rx="4" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1" />
+  <text x="697" y="330" text-anchor="middle" dominant-baseline="middle" fill="var(--color-on-surface)" font-size="10">Шоу D</text>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-on-surface)" />
+    </marker>
+  </defs>
+</svg>

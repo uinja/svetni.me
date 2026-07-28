@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 27 Jul 2026 20:44:00 +0000</pubDate>
+    <pubDate>Tue, 28 Jul 2026 21:59:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>GenPage: Netflix Заменя Традиционните Препоръчителни Системи с Генеративен Изкуствен Интелект</title>
+      <link>https://svetni.me/articles/2026/07/28/netflix-llm-homepage-generation/</link>
+      <pubDate>Tue, 28 Jul 2026 21:59:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/netflix-llm-homepage-generation/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Netflix обяви радикална промяна в начина, по който изгражда своята начална страница. В официална публикация в инженерния си блог [1], компанията представи GenPage – нов, напълно генеративен подход, който замества традиционния, многостепенен препоръчителен конвейер с единен Transformer модел, оптимизиран да създава двумерното оформление на страницата авторегресивно, елемент по елемент.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Сигурност и управление на AI агенти в облака: AWS представя Loom</title>
+      <link>https://svetni.me/articles/2026/07/28/loom-aws-agent-platform/</link>
+      <pubDate>Tue, 28 Jul 2026 21:58:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/loom-aws-agent-platform/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>С навлизането на автономните системи в корпоративния сектор, организациите са изправени пред сериозни предизвикателства, свързани със сигурността, управлението и мащабирането на тези нови технологии. Докато разработването на единичен прототип е относително лесна задача, осигуряването на съвместимост с корпоративните изисквания за сигурност е сложен процес. В официална публикация на корпоративния си блог [1], облачният гигант AWS разглежда тези предизвикателства и предлага практически отговори.</p>]]></description>
+    </item>
+
+    <item>
+      <title>General Motors утрои приетите промени в кода си чрез агенти с изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/07/28/gm-engineering-workflows-ai-agents/</link>
+      <pubDate>Tue, 28 Jul 2026 21:53:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/gm-engineering-workflows-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Отделът за автономни превозни средства на General Motors отчита впечатляващ ръст в продуктивността след преструктуриране на инженерните си работни процеси. Компанията е постигнала трикратно увеличение на успешно интегрираните промени в кода (merged pull requests), благодарение на мащабното внедряване на AI агенти [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Сатя Надела: Компаниите, които разчитат на един AI за всичко, може да не оцелеят</title>
+      <link>https://svetni.me/articles/2026/07/28/nadella-one-ai-warning/</link>
+      <pubDate>Tue, 28 Jul 2026 21:51:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/nadella-one-ai-warning/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Изпълнителният директор на Microsoft Сатя Надела отправи остро предупреждение към бизнеса по отношение на интеграцията на технологии с изкуствен интелект. В интервю за предаването „Fareed Zakaria GPS“ по CNN [1], отразено от TechCrunch [2], той заяви, че компаниите, които разчитат изцяло на външни комерсиални лаборатории за своите ИИ нужди, в крайна сметка няма да оцелеят. Според него липсата на контрол върху тази инфраструктура е равносилна на аутсорсване на самото мислене на организацията.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Позицията на Anthropic за моделите с отворени тегла и заплахата от Китай</title>
+      <link>https://svetni.me/articles/2026/07/28/anthropic-open-weights-position/</link>
+      <pubDate>Tue, 28 Jul 2026 21:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/anthropic-open-weights-position/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официално изявление, публикувано в блога на компанията, съоснователят и изпълнителен директор на Anthropic Дарио Амодей категорично отрече обвиненията, че неговата фирма лобира за забрана на модели с отворени тегла [1]. Изявлението идва в момент на разгорещени дискусии в технологичната индустрия относно потенциалните заплахи за националната сигурност на САЩ от страна на авангардни изкуствени интелекти, разработени или придобити от Китай. Амодей подчертава, че Anthropic никога не е настоявала за подобни ограничителни мерки, които според него не само че не решават реалните проблеми, но и засягат технологии с характер на обществено благо.</p>]]></description>
+    </item>
 
     <item>
       <title>Могат ли Китай и Русия да унищожат Starlink? Само с ефекта на бумеранга</title>
@@ -32,21 +77,21 @@
     </item>
 
     <item>
-      <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
-      <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
-      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
-    </item>
-
-    <item>
       <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
       <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
       <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
+      <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
+      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
     </item>
 
     <item>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/privacy-aware-infrastructure-meta/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В официална публикация в корпоративния си инженерен блог Meta представи детайлно изследване на своята архитектура за класификация на активи [1]. Проектът е част от по-широката инициатива за изграждане на инфраструктура, съобразяваща се с поверителността (Privacy-Aware Infrastructure или PAI), която има за цел да наложи автоматизирано спазване на правилата за защита на личните данни директно на системно ниво. В съвременната AI-native ера, характеризираща се с бързи цикли на разработка и неструктурирани потоци от данни, традиционните методи за ръчен одит са напълно нерентабилни. Решението на Meta залага на иновативен хибриден модел: съчетание от детерминистичен механизъм с нулево забавяне и резервен предпазен филтър, базиран на големи езикови модели (LLM).</p>]]></description>
-    </item>
-
-    <item>
-      <title>Какво изисква Законът за изкуствения интелект на ЕС и как Docker подпомага съвместимостта</title>
-      <link>https://svetni.me/articles/2026/06/27/docker-eu-ai-act-compliance/</link>
-      <pubDate>Sat, 27 Jun 2026 15:57:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/docker-eu-ai-act-compliance/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление на корпоративния си блог, технологичният гигант Docker представи обстоен анализ на новите регулаторни изисквания, наложени от Закона за изкуствения интелект на ЕС (EU AI Act), и очерта практически стъпки, с които софтуерните инженери и организациите могат да гарантират техническо съответствие на своите системи [1]. Законът за изкуствения интелект на ЕС (Регламент (ЕС) 2024/1689) влезе в сила през август 2024 г., като неговите изисквания се въвеждат поетапно до 2027 г. Регламентът има екстратериториално действие – той засяга всеки доставчик или потребител, чиито AI системи се предлагат, внедряват или техните резултати се използват на пазара в ЕС, независимо от местоположението на централата на компанията [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Qwen-AgentWorld: Alibaba представи първите езикови световни модели за захранване на ИИ агенти</title>
-      <link>https://svetni.me/articles/2026/06/25/qwen-agentworld-language-world-models/</link>
-      <pubDate>Thu, 25 Jun 2026 22:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/25/qwen-agentworld-language-world-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В бързо развиващия се свят на изкуствения интелект изследванията традиционно се фокусират върху оптимизирането на „политиката“ на агентите – способността им да вземат решения и да избират следващото действие. Изследователският екип на Tongyi Lab към китайския технологичен гигант Alibaba обаче предлага радикално различна парадигма. В нов научен труд, публикуван в препринт платформата arXiv [1], те представят проектa <strong>Qwen-AgentWorld</strong>. Това е първата фамилия от т.нар. езикови световни модели (Language World Models), които са обучени не да действат като агенти, а да симулират самата среда, с която агентите взаимодействат [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic обвини Alibaba в кражба на данни от модела Claude чрез дистилация</title>
-      <link>https://svetni.me/articles/2026/06/25/anthropic-accuses-alibaba-claude-distillation/</link>
-      <pubDate>Thu, 25 Jun 2026 22:44:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/25/anthropic-accuses-alibaba-claude-distillation/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според официално писмо на американския гигант в сферата на изкуствения интелект Anthropic, изпратено до сенаторите Тим Скот и Елизабет Уорън, китайската компания Alibaba е извършила мащабна кампания за неправомерно извличане на интелектуална собственост от нейния водещ изкуствен интелект Claude [1]. В писмото с дата 10 юни компанията описва случая като най-голямата по рода си атака, при която оператори, свързани с китайската корпорация, са извършили близо 29 милиона взаимодействия с модела през хиляди фалшиви акаунти.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Потискане на микротурбуленцията: Как алфа частиците от термоядрения синтез стабилизират плазмата</title>
-      <link>https://svetni.me/articles/2026/06/25/nuclear-fusion-alpha-particles/</link>
-      <pubDate>Thu, 25 Jun 2026 22:39:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/25/nuclear-fusion-alpha-particles/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Вълнуваща нова хипотеза в областта на термоядрената физика получава сериозна подкрепа от най-съвременните суперкомпютърни симулации. Дълго време изследователите бяха несигурни дали високоенергийните продукти на термоядрения процес ще подпомогнат, или напротив – ще попречат на стабилността на плазмата в реакторите. Нова научна публикация, представена в препринт архива arXiv [1], разкрива, че бързите алфа частици всъщност играят ключова роля в потискането на микротурбуленцията, която иначе източва топлина от ядрото на реактора. Това откритие може значително да ускори пътя към постигане на икономически изгодна и самоподдържаща се термоядрена енергия.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Google интегрира компютърна употреба (Computer use) директно в Gemini 3.5 Flash</title>
-      <link>https://svetni.me/articles/2026/06/24/gemini-3-5-flash-computer-use/</link>
-      <pubDate>Wed, 24 Jun 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/24/gemini-3-5-flash-computer-use/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Сферата на изкуствения интелект направи важна стъпка напред към реалната автономност на софтуерните агенти. В официално съобщение на своя корпоративен блог [1], технологичният гигант Google обяви пълната интеграция на технологията за компютърна употреба (computer use) като вграден инструмент в своя модел от среден клас Gemini 3.5 Flash. Досега тази функционалност беше достъпна само като експериментален и самостоятелен модел в рамките на Gemini 2.5, но сега тя става част от основната продуктова линия за разработчици и корпоративни клиенти.</p>]]></description>
     </item>
   </channel>
 </rss>
