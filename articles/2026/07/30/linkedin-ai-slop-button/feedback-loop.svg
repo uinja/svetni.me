@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <!-- Arrowhead definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-secondary)" />
+    </marker>
+  </defs>
+  
+  <!-- Canvas background -->
+  <rect width="800" height="500" fill="var(--color-background)" rx="16" />
+  
+  <!-- Title of the diagram -->
+  <text x="400" y="40" text-anchor="middle" dominant-baseline="central" fill="var(--color-primary)" font-family="system-ui, sans-serif" font-size="20" font-weight="500">
+    Обратна връзка при докладване на ИИ спам (AI Slop)
+  </text>
+  
+  <!-- CARD 1: USER -->
+  <rect x="80" y="100" width="240" height="80" rx="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="200" y="128" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="14" font-weight="500">1. Потребител в LinkedIn</text>
+  <text x="200" y="152" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="12" opacity="0.8">Открива досаден ИИ спам</text>
+  
+  <!-- CARD 2: REPORT -->
+  <rect x="480" y="100" width="240" height="80" rx="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="600" y="128" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="14" font-weight="500">2. Докладване като ИИ плява</text>
+  <text x="600" y="152" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="12" opacity="0.8">Бутон „Seems like AI slop“</text>
+  
+  <!-- CARD 3: MACHINE LEARNING / TRAINING -->
+  <rect x="480" y="320" width="240" height="80" rx="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="600" y="348" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="14" font-weight="500">3. Обучение на класификатори</text>
+  <text x="600" y="372" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="12" opacity="0.8">Захранване на ИИ алгоритмите</text>
+  
+  <!-- CARD 4: FEED FILTERING -->
+  <rect x="80" y="320" width="240" height="80" rx="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+  <text x="200" y="348" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="14" font-weight="500">4. Филтриране на съдържанието</text>
+  <text x="200" y="372" text-anchor="middle" dominant-baseline="central" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-size="12" opacity="0.8">Намаляване на спама във фийда</text>
+  
+  <!-- CONNECTIONS WITH ARROWS -->
+  <!-- Arrow 1 (1 -> 2) -->
+  <path d="M 320 140 L 472 140" stroke="var(--color-secondary)" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Arrow 2 (2 -> 3) -->
+  <path d="M 600 180 L 600 312" stroke="var(--color-secondary)" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Arrow 3 (3 -> 4) -->
+  <path d="M 480 360 L 328 360" stroke="var(--color-secondary)" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Arrow 4 (4 -> 1) -->
+  <path d="M 200 320 L 200 188" stroke="var(--color-secondary)" stroke-width="3" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Central explanation label -->
+  <rect x="300" y="228" width="200" height="48" rx="4" fill="var(--color-background)" stroke="var(--color-secondary)" stroke-width="1" stroke-dasharray="4" />
+  <text x="400" y="252" text-anchor="middle" dominant-baseline="central" fill="var(--color-secondary)" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Затворен цикъл на модерация</text>
+</svg>

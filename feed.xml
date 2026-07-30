@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 28 Jul 2026 21:59:00 +0000</pubDate>
+    <pubDate>Thu, 30 Jul 2026 22:44:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>LinkedIn добавя бутон за докладване на съдържание, което изглежда като „ИИ спам“</title>
+      <link>https://svetni.me/articles/2026/07/30/linkedin-ai-slop-button/</link>
+      <pubDate>Thu, 30 Jul 2026 22:44:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/linkedin-ai-slop-button/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>ИИ революция в Chrome: Google отстрани повече уязвимости за месец, отколкото за две години</title>
+      <link>https://svetni.me/articles/2026/07/30/chrome-security-bugs-fixed-by-ai/</link>
+      <pubDate>Thu, 30 Jul 2026 22:07:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/chrome-security-bugs-fixed-by-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Microsoft засилва конкуренцията с OpenAI и Anthropic чрез собствени модели и чипове</title>
+      <link>https://svetni.me/articles/2026/07/30/microsoft-competing-openai-anthropic/</link>
+      <pubDate>Thu, 30 Jul 2026 22:06:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/microsoft-competing-openai-anthropic/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официални изявления по повод тримесечния си отчет [1], технологичният гигант Microsoft демонстрира сериозна промяна в стратегията си за изкуствен интелект. Компанията обяви рекордни финансови резултати, като за последното тримесечие приходите достигат 90 милиарда долара, а нетната печалба е 35,8 милиарда долара [1]. За цялата фискална година, приключила на 30 юни 2026 г., приходите на Microsoft възлизат на 331,8 милиарда долара, а чистата печалба е 133,7 милиарда долара [1]. Този финансов успех съвпада с по-широка кампания на компанията да предлага собствени алтернативи на услугите на водещите лаборатории за изкуствен интелект.</p>]]></description>
+    </item>
 
     <item>
       <title>GenPage: Netflix Заменя Традиционните Препоръчителни Системи с Генеративен Изкуствен Интелект</title>
@@ -19,7 +46,7 @@
       <pubDate>Tue, 28 Jul 2026 21:59:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/netflix-llm-homepage-generation/</guid>
       <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Netflix обяви радикална промяна в начина, по който изгражда своята начална страница. В официална публикация в инженерния си блог [1], компанията представи GenPage – нов, напълно генеративен подход, който замества традиционния, многостепенен препоръчителен конвейер с единен Transformer модел, оптимизиран да създава двумерното оформление на страницата авторегресивно, елемент по елемент.</p>]]></description>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
     </item>
 
     <item>
@@ -365,21 +392,21 @@
     </item>
 
     <item>
-      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
-      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
-      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
-    </item>
-
-    <item>
       <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
       <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
       <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
+      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
+      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
     </item>
 
     <item>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/nvidia-rubin-liquid-cooling-evaporator-free/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Изображение: NVIDIA чрез Hackaday</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>GLM-5.2: Отвореният ИИ модел, който променя правилата при кодирането</title>
-      <link>https://svetni.me/articles/2026/06/27/glm-5-2-open-ai-model/</link>
-      <pubDate>Sat, 27 Jun 2026 22:49:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/glm-5-2-open-ai-model/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Надпреварата между отворените и затворените модели с изкуствен интелект навлезе в нова и изключително динамична фаза. Години наред разработчиците приемаха, че най-способните асистенти за програмиране ще останат достъпни единствено зад платени, проприетарни API интерфейси. Появата на новия модел GLM-5.2, разработен от китайската компания Zhipu AI, обаче сериозно предизвиква това статукво [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Една седмица за овладяване на генеративния ИИ в продуктовите роли: Опитът на OCTO Technology</title>
-      <link>https://svetni.me/articles/2026/06/27/ia-generative-produit-octo/</link>
-      <pubDate>Sat, 27 Jun 2026 16:31:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/ia-generative-produit-octo/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В публикация в корпоративния блог на френската консултантска компания OCTO Technology [1] е споделен опитът от провеждането на интензивна обучителна седмица, посветена на навлизането на генеративния изкуствен интелект в продуктовите роли. В инициативата са се включили 14 консултанти — продуктови мениджъри (PM), продуктови оунъри (PO), дизайнери и коучове. Целта е била преминаването от фрагментарно използване на отделни инструменти към изграждане на обща основа, изпробване на технологиите на практика и дефиниране на стратегически предложения.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Инфраструктура, съобразяваща се с поверителността: Управление на активи в ерата на изкуствения интелект</title>
-      <link>https://svetni.me/articles/2026/06/27/privacy-aware-infrastructure-meta/</link>
-      <pubDate>Sat, 27 Jun 2026 16:17:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/privacy-aware-infrastructure-meta/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официална публикация в корпоративния си инженерен блог Meta представи детайлно изследване на своята архитектура за класификация на активи [1]. Проектът е част от по-широката инициатива за изграждане на инфраструктура, съобразяваща се с поверителността (Privacy-Aware Infrastructure или PAI), която има за цел да наложи автоматизирано спазване на правилата за защита на личните данни директно на системно ниво. В съвременната AI-native ера, характеризираща се с бързи цикли на разработка и неструктурирани потоци от данни, традиционните методи за ръчен одит са напълно нерентабилни. Решението на Meta залага на иновативен хибриден модел: съчетание от детерминистичен механизъм с нулево забавяне и резервен предпазен филтър, базиран на големи езикови модели (LLM).</p>]]></description>
     </item>
   </channel>
 </rss>
