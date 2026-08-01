@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" rx="12" fill="#131722"/>
+  
+  <!-- Header -->
+  <text x="400" y="40" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">СРАВНЕНИЕ В СКЛАДОВАТА ЛОГИСТИКА</text>
+  <text x="400" y="65" font-family="system-ui, sans-serif" font-size="14" fill="#8f9cae" text-anchor="middle">Фиксирани конвейерни системи спрямо Автономни мобилни роботи (AMR)</text>
+  
+  <!-- Left Panel: Fixed Systems -->
+  <rect x="40" y="95" width="340" height="360" rx="8" fill="#1c2030" stroke="#31374d" stroke-width="2"/>
+  <text x="210" y="130" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ff6d00" text-anchor="middle">Традиционни конвейери</text>
+  
+  <!-- Conveyor Illustration -->
+  <!-- Base track structure -->
+  <path d="M 80,185 L 340,185 L 340,200 L 80,200 Z" fill="#2d334a"/>
+  <!-- Leg supports -->
+  <rect x="110" y="200" width="8" height="40" fill="#3a425f"/>
+  <rect x="290" y="200" width="8" height="40" fill="#3a425f"/>
+  <rect x="200" y="200" width="8" height="40" fill="#3a425f"/>
+  <!-- Rollers -->
+  <circle cx="100" cy="192" r="6" fill="#8f9cae"/>
+  <circle cx="140" cy="192" r="6" fill="#8f9cae"/>
+  <circle cx="180" cy="192" r="6" fill="#8f9cae"/>
+  <circle cx="220" cy="192" r="6" fill="#8f9cae"/>
+  <circle cx="260" cy="192" r="6" fill="#8f9cae"/>
+  <circle cx="300" cy="192" r="6" fill="#8f9cae"/>
+  <!-- Box on conveyor -->
+  <rect x="190" y="160" width="50" height="25" rx="3" fill="#a1a8c1"/>
+  <!-- Flow arrows on belt -->
+  <path d="M 120,192 L 130,192 M 235,172 L 245,172" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Left Side Text Bullets -->
+  <text x="60" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Разчита на фиксирана инфраструктура</text>
+  <text x="60" y="310" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Трудно и скъпо реорганизиране на склада</text>
+  <text x="60" y="340" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Изисква голяма площ и предпазни огради</text>
+  <text x="60" y="370" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Постоянни инвестиционни разходи (CapEx)</text>
+  <text x="60" y="400" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Ограничена гъвкавост при пикови натоварвания</text>
+  
+  <!-- Right Panel: AMRs -->
+  <rect x="420" y="95" width="340" height="360" rx="8" fill="#1c2030" stroke="#31374d" stroke-width="2"/>
+  <text x="590" y="130" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#00c853" text-anchor="middle">Автономни мобилни роботи (AMR)</text>
+  
+  <!-- AMR Illustration -->
+  <!-- Floor Grid (dashed lines representing QR navigation coordinates) -->
+  <path d="M 460,225 L 720,225" stroke="#3a425f" stroke-dasharray="4,4" stroke-width="1"/>
+  <path d="M 460,195 L 720,195" stroke="#3a425f" stroke-dasharray="4,4" stroke-width="1"/>
+  <!-- QR Markers on grid intersections -->
+  <rect x="490" y="222" width="6" height="6" fill="#8f9cae"/>
+  <rect x="570" y="222" width="6" height="6" fill="#8f9cae"/>
+  <rect x="650" y="222" width="6" height="6" fill="#8f9cae"/>
+  
+  <!-- AMR Robot underneath a shelf -->
+  <!-- Robot Body -->
+  <rect x="540" y="205" width="70" height="20" rx="5" fill="#4d7cfe"/>
+  <circle cx="555" cy="225" r="5" fill="#0f111a"/>
+  <circle cx="595" cy="225" r="5" fill="#0f111a"/>
+  <rect x="555" y="200" width="40" height="5" fill="#00c853"/> <!-- Lift plate -->
+  
+  <!-- Shelf Rack -->
+  <rect x="525" y="145" width="100" height="55" fill="#2d334a" stroke="#4d7cfe" stroke-width="2" rx="3"/>
+  <line x1="575" y1="145" x2="575" y2="200" stroke="#4d7cfe" stroke-width="1.5"/>
+  <line x1="525" y1="172" x2="625" y2="172" stroke="#4d7cfe" stroke-width="1.5"/>
+  <rect x="535" y="150" width="30" height="15" fill="#a1a8c1" rx="2"/>
+  <rect x="585" y="177" width="30" height="15" fill="#a1a8c1" rx="2"/>
+  
+  <!-- Right Side Text Bullets -->
+  <text x="440" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Гъвкава интеграция без тежка инфраструктура</text>
+  <text x="440" y="310" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Бързо внедряване чрез QR кодове по пода</text>
+  <text x="440" y="340" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Динамично управление на трафика и маршрутите</text>
+  <text x="440" y="370" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Оптимизиране на складовата площ с до 40%</text>
+  <text x="440" y="400" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" text-anchor="start">Лесно мащабиране чрез добавяне на нови роботи</text>
+</svg>
