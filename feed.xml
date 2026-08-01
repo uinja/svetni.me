@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 30 Jul 2026 22:44:00 +0000</pubDate>
+    <pubDate>Sat, 1 Aug 2026 12:30:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>GPT 5.6 Slopus? Инженерите няма да си отидат, а уволняват за използване на AI?</title>
+      <link>https://svetni.me/articles/2026/08/01/gpt-5-6-slopus-rate-limited-ep20/</link>
+      <pubDate>Sat, 1 Aug 2026 12:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/gpt-5-6-slopus-rate-limited-ep20/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В новия 20-и епизод на технологичния подкаст Rate Limited водещите Рей Фернандо и Адам Ларсон (познат като GosuCoder), съвместно с гост-водещия Нейтън Снел, обсъждат дългосрочното бъдеще на софтуерните инженери, новите модели с изкуствен интелект и крайните мерки срещу автоматизираното генериране на код [1]. Участниците изразяват категорично мнение, че въпреки бурното развитие на технологията, програмистите ще запазят ключовата си роля през следващите 20 години. Разликата в системното мислене и способността за проектиране на сложни архитектури остава непреодолима преграда за нетехническите потребители.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Китайската армия дестилира GPT-3.5 и Claude за военен изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/08/01/chinese-military-distilled-us-llms/</link>
+      <pubDate>Sat, 1 Aug 2026 12:26:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/chinese-military-distilled-us-llms/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>LinkedIn добавя бутон за докладване на съдържание, което изглежда като „ИИ спам“</title>
@@ -392,21 +410,21 @@
     </item>
 
     <item>
-      <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
-      <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
-      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
-    </item>
-
-    <item>
       <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
       <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
       <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
+      <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
+      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
     </item>
 
     <item>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/06/30/spark-sql-plans-llm-debugging/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Всеки инженер, който е прекарал безсънни нощи в 2 часа сутринта, взирайки се във физически план на изпълнение с над 300 възела в опит да открие липсващо излъчване (broadcast join) или грешно разпределен партишън (skewed partition), е наясно с трудностите при оптимизацията на мащабни задачи за обработка на данни. Apache Spark улеснява писането на сложни SQL заявки, които изглеждат коректни, но при мащабиране се превръщат в сериозен проблем за производителността и разходите. Заявка, която работи нормално при първоначалните тестове, може да се забави драстично с нарастването на обема данни.</p>]]></description>
-    </item>
-
-    <item>
-      <title>10 фактора за оценка на ИИ готовността на вашите API</title>
-      <link>https://svetni.me/articles/2026/06/30/api-ai-readiness-factors/</link>
-      <pubDate>Tue, 30 Jun 2026 20:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/30/api-ai-readiness-factors/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Начинът на потребление на съвременните приложни програмни интерфейси (API) претърпява радикална промяна. Потокът от данни, който в миналото обслужваше основно връзката между хора и машини, днес се пренасочва все по-интензивно към AI агенти. Това създава сериозни предизвикателства за доставчиците на услуги, тъй като съществуващите интерфейси са проектирани с мисъл за човека-разработчик [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>По-горещо от джакузи: Пробивът на NVIDIA с 45°C течно охлаждане за ИИ суперкомпютри</title>
-      <link>https://svetni.me/articles/2026/06/27/nvidia-rubin-liquid-cooling-evaporator-free/</link>
-      <pubDate>Sat, 27 Jun 2026 22:53:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/06/27/nvidia-rubin-liquid-cooling-evaporator-free/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: NVIDIA чрез Hackaday</small></p>]]></description>
     </item>
   </channel>
 </rss>
