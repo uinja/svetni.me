@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-background)" />
+  
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--color-on-surface)">Конфликтни сили при изграждането на центрове за данни</text>
+
+  <!-- Section 1: Proponents -->
+  <rect x="30" y="80" width="230" height="260" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" rx="8" />
+  <text x="145" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="var(--color-primary)">ПРИВЪРЖЕНИЦИ</text>
+  
+  <!-- Proponent Box 1 -->
+  <rect x="45" y="130" width="200" height="50" fill="var(--color-background)" stroke="var(--color-secondary)" stroke-width="1.5" rx="6" />
+  <text x="145" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Нужда от AI изчисления</text>
+
+  <!-- Proponent Box 2 -->
+  <rect x="45" y="195" width="200" height="50" fill="var(--color-background)" stroke="var(--color-secondary)" stroke-width="1.5" rx="6" />
+  <text x="145" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Данъчни приходи ($1.3B)</text>
+
+  <!-- Proponent Box 3 -->
+  <rect x="45" y="260" width="200" height="50" fill="var(--color-background)" stroke="var(--color-secondary)" stroke-width="1.5" rx="6" />
+  <text x="145" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Училищни бонуси ($50K)</text>
+
+  <!-- Section 2: Opponents -->
+  <rect x="540" y="80" width="230" height="260" fill="var(--color-surface)" stroke="var(--color-tertiary)" stroke-width="2" rx="8" />
+  <text x="655" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="var(--color-tertiary)">ПРОТИВНИЦИ</text>
+  
+  <!-- Opponent Box 1 -->
+  <rect x="555" y="130" width="200" height="40" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1.5" rx="6" />
+  <text x="655" y="154" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Натоварване на ел. мрежа</text>
+
+  <!-- Opponent Box 2 -->
+  <rect x="555" y="180" width="200" height="40" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1.5" rx="6" />
+  <text x="655" y="204" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Разход на водни ресурси</text>
+
+  <!-- Opponent Box 3 -->
+  <rect x="555" y="230" width="200" height="40" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1.5" rx="6" />
+  <text x="655" y="254" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Шум от охлаждане</text>
+
+  <!-- Opponent Box 4 -->
+  <rect x="555" y="280" width="200" height="40" fill="var(--color-background)" stroke="var(--color-tertiary)" stroke-width="1.5" rx="6" />
+  <text x="655" y="304" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="var(--color-on-surface)">Липса на еко-оценки</text>
+
+  <!-- Center: Conflict Node -->
+  <polygon points="400,150 480,210 400,270 320,210" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="3" />
+  <text x="400" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="var(--color-primary)">СБЛЪСЪК</text>
+  <text x="400" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-on-surface)">НА ИНТЕРЕСИ</text>
+
+  <!-- Bottom: Political Response Node -->
+  <rect x="150" y="375" width="500" height="85" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2.5" rx="8" />
+  <text x="400" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="var(--color-primary)">ПОЛИТИЧЕСКИ ОТГОВОР</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-on-surface)" opacity="0.9">Мораториум на AOC и Сандърс | Натиск върху EPA | Рамка за развитие в Илинойс</text>
+  <text x="400" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="var(--color-primary)" font-weight="500">Блокирани проекти за $130 млрд. (Q1 2026)</text>
+
+  <!-- Flow Arrows (Proponents to Conflict) -->
+  <path d="M 260 210 L 310 210" stroke="var(--color-secondary)" stroke-width="2" fill="none" marker-end="url(#arrow-head)" />
+  
+  <!-- Flow Arrows (Opponents to Conflict) -->
+  <path d="M 540 210 L 490 210" stroke="var(--color-tertiary)" stroke-width="2" fill="none" marker-end="url(#arrow-head)" />
+
+  <!-- Flow Arrow (Conflict to Political Response) -->
+  <path d="M 400 270 L 400 365" stroke="var(--color-primary)" stroke-width="2.5" fill="none" marker-end="url(#arrow-head-large)" />
+
+  <defs>
+    <marker id="arrow-head" markerWidth="8" markerHeight="8" refX="7" refY="4" orientation="auto">
+      <path d="M0,0 L0,8 L8,4 Z" fill="var(--color-on-surface)" />
+    </marker>
+    <marker id="arrow-head-large" markerWidth="10" markerHeight="10" refX="8" refY="5" orientation="auto">
+      <path d="M0,0 L0,10 L10,5 Z" fill="var(--color-primary)" />
+    </marker>
+  </defs>
+</svg>

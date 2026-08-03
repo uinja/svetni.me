@@ -1,0 +1,84 @@
+<svg width="100%" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="var(--color-secondary)" />
+    </marker>
+  </defs>
+
+  <!-- Background card container -->
+  <rect x="12" y="12" width="776" height="476" rx="16" ry="16" fill="var(--color-surface)" stroke="var(--color-secondary)" stroke-width="2" />
+
+  <!-- Pillar 1 Card -->
+  <rect x="48" y="100" width="336" height="168" rx="8" ry="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+
+  <!-- Pillar 2 Card -->
+  <rect x="416" y="100" width="336" height="168" rx="8" ry="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+
+  <!-- Pillar 3 Card -->
+  <rect x="48" y="296" width="336" height="168" rx="8" ry="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+
+  <!-- Pillar 4 Card -->
+  <rect x="416" y="296" width="336" height="168" rx="8" ry="8" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2" />
+
+  <!-- Connector Loops / Arrows -->
+  <line x1="384" y1="184" x2="408" y2="184" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="584" y1="268" x2="584" y2="288" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="416" y1="380" x2="392" y2="380" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="216" y1="296" x2="216" y2="276" stroke="var(--color-secondary)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Bullets for Pillar 1 -->
+  <circle cx="72" cy="156" r="4" fill="var(--color-tertiary)" />
+  <circle cx="72" cy="188" r="4" fill="var(--color-tertiary)" />
+  <circle cx="72" cy="220" r="4" fill="var(--color-tertiary)" />
+
+  <!-- Bullets for Pillar 2 -->
+  <circle cx="440" cy="168" r="4" fill="var(--color-tertiary)" />
+  <circle cx="440" cy="208" r="4" fill="var(--color-tertiary)" />
+
+  <!-- Bullets for Pillar 3 -->
+  <circle cx="72" cy="352" r="4" fill="var(--color-tertiary)" />
+  <circle cx="72" cy="384" r="4" fill="var(--color-tertiary)" />
+  <circle cx="72" cy="416" r="4" fill="var(--color-tertiary)" />
+
+  <!-- Bullets for Pillar 4 -->
+  <circle cx="440" cy="368" r="4" fill="var(--color-tertiary)" />
+  <circle cx="440" cy="408" r="4" fill="var(--color-tertiary)" />
+
+  <!-- Text Layer (MUST be defined after shapes/lines to prevent occlusion) -->
+  
+  <!-- Header Title -->
+  <text x="400" y="52" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="500" font-size="20" text-anchor="middle" dominant-baseline="middle">РАМКА ЗА ИИ ГОТОВНОСТ НА API</text>
+
+  <!-- Pillar 1 Titles & Content -->
+  <text x="216" y="124" fill="var(--color-primary)" font-family="system-ui, sans-serif" font-weight="500" font-size="15" text-anchor="middle" dominant-baseline="middle">1. Семантика и интерфейси</text>
+  <text x="88" y="156" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Машинно-четима документация</text>
+  <text x="88" y="188" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Спецификация, съответстваща на реалността</text>
+  <text x="88" y="220" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Качествени MCP сървъри и инструменти</text>
+
+  <!-- Pillar 2 Titles & Content -->
+  <text x="584" y="124" fill="var(--color-primary)" font-family="system-ui, sans-serif" font-weight="500" font-size="15" text-anchor="middle" dominant-baseline="middle">2. Сигурност и транзакции</text>
+  <text x="456" y="168" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Прецизен контрол на достъпа (Scopes)</text>
+  <text x="456" y="208" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Идемпотентност при променящи състоянието методи</text>
+
+  <!-- Pillar 3 Titles & Content -->
+  <text x="216" y="320" fill="var(--color-primary)" font-family="system-ui, sans-serif" font-weight="500" font-size="15" text-anchor="middle" dominant-baseline="middle">3. Оперативна надеждност</text>
+  <text x="88" y="352" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Ясни и съобразени лимити за агенти</text>
+  <text x="88" y="384" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Стабилно версиониране и известяване</text>
+  <text x="88" y="416" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Еднозначни и структурирани грешки</text>
+
+  <!-- Pillar 4 Titles & Content -->
+  <text x="584" y="320" fill="var(--color-primary)" font-family="system-ui, sans-serif" font-weight="500" font-size="15" text-anchor="middle" dominant-baseline="middle">4. Сценарии и наблюдение</text>
+  <text x="456" y="368" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Ръководства за сложни процеси (Workflows)</text>
+  <text x="456" y="408" fill="var(--color-on-surface)" font-family="system-ui, sans-serif" font-weight="400" font-size="12" text-anchor="start" dominant-baseline="middle">Наблюдаемост, съобразена с агентски трафик</text>
+</svg>

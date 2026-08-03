@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <!-- Arrow marker definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1a30ae"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <!-- US Government / Public Wealth Fund Box -->
+  <rect x="260" y="50" width="280" height="110" rx="8" fill="#1a30ae" stroke="#1a30ae" stroke-width="2"/>
+  <text x="400" y="90" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Правителство на САЩ</text>
+  <text x="400" y="120" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Идея за държавен суверенен фонд</text>
+
+  <!-- AI Companies Box -->
+  <rect x="60" y="320" width="280" height="110" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2"/>
+  <text x="200" y="355" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#202124" text-anchor="middle" dominant-baseline="middle">AI компании</text>
+  <text x="200" y="385" font-family="system-ui, sans-serif" font-size="14" fill="#202124" text-anchor="middle" dominant-baseline="middle">(OpenAI, Anthropic, SpaceX)</text>
+
+  <!-- American Public Box -->
+  <rect x="460" y="320" width="280" height="110" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2"/>
+  <text x="600" y="355" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#202124" text-anchor="middle" dominant-baseline="middle">Американско общество</text>
+  <text x="600" y="385" font-family="system-ui, sans-serif" font-size="14" fill="#202124" text-anchor="middle" dominant-baseline="middle">Универсален основен капитал</text>
+
+  <!-- Connection: AI Companies -> US Government (Equity) -->
+  <path d="M 180,320 L 290,175" stroke="#1a30ae" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <rect x="135" y="210" width="130" height="30" rx="4" fill="#ffffff" stroke="#1a30ae" stroke-width="1"/>
+  <text x="200" y="225" font-family="system-ui, sans-serif" font-size="12" fill="#202124" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Прехвърляне на акции</text>
+
+  <!-- Connection: US Government -> American Public (Dividends) -->
+  <path d="M 510,175 L 620,320" stroke="#1a30ae" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <rect x="535" y="210" width="130" height="30" rx="4" fill="#ffffff" stroke="#1a30ae" stroke-width="1"/>
+  <text x="600" y="225" font-family="system-ui, sans-serif" font-size="12" fill="#202124" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Дивиденти за гражданите</text>
+
+  <!-- Connection: American Public -> AI Companies (Feedback loop: support, market, data) -->
+  <path d="M 460,375 L 355,375" stroke="#1a30ae" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <rect x="345" y="360" width="120" height="30" rx="4" fill="#ffffff" stroke="#1a30ae" stroke-width="1"/>
+  <text x="405" y="375" font-family="system-ui, sans-serif" font-size="12" fill="#202124" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Потребители &amp; данни</text>
+</svg>

@@ -1,0 +1,32 @@
+flowchart LR
+    subgraph Imp["Имплементация (Писането на код с ИИ)"]
+        direction TB
+        L1["Навигиране в латентни пространства"] --> L2["Вероятностно генериране на кодови редове"]
+        L2 --> L3["Несигурни резултати (Кодови миризми)"]
+        L3 --> L4["Конфабулации (Липса на заземяване в истината)"]
+    end
+
+    subgraph SE["Софтуерно инженерство (По-широката дисциплина)"]
+        direction TB
+        H1["Човешка преценка (Опитност и надзор)"] --> H2["Софтуерна архитектура (Цена на промяната)"]
+        H2 --> H3["Управление на риска и безопасност"]
+        H2 --> H4["Организационен мащаб и дълголетие"]
+        H2 --> H5["Икономически фактори и бюджет"]
+        H2 --> H6["Етични и морални съображения"]
+    end
+
+    Imp -->|"Подаване на код за проверка"| H1
+
+    %% Styling with hardcoded hex colors to avoid var(--color-*)
+    style Imp fill:#f8f9fa,stroke:#1e33af,stroke-width:2px,color:#202124
+    style SE fill:#ffffff,stroke:#1a30ae,stroke-width:3px,color:#202124
+    style L1 fill:#ffffff,stroke:#202124,color:#202124
+    style L2 fill:#ffffff,stroke:#202124,color:#202124
+    style L3 fill:#ffffff,stroke:#202124,color:#202124
+    style L4 fill:#ffffff,stroke:#202124,color:#202124
+    style H1 fill:#1a30ae,stroke:#1a30ae,color:#ffffff
+    style H2 fill:#1a30ae,stroke:#1a30ae,color:#ffffff
+    style H3 fill:#f8f9fa,stroke:#1e33af,color:#202124
+    style H4 fill:#f8f9fa,stroke:#1e33af,color:#202124
+    style H5 fill:#f8f9fa,stroke:#1e33af,color:#202124
+    style H6 fill:#f8f9fa,stroke:#1e33af,color:#202124
