@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sat, 1 Aug 2026 22:12:00 +0000</pubDate>
+    <pubDate>Mon, 3 Aug 2026 22:36:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Истинското тайно оръжие зад OpenAI Codex: Агентната обвивка</title>
+      <link>https://svetni.me/articles/2026/08/03/openai-secret-weapon-codex/</link>
+      <pubDate>Mon, 3 Aug 2026 22:36:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/openai-secret-weapon-codex/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Въпреки че голяма част от общественото внимание около последните пробиви на OpenAI е насочена към модели като Codex, анализи в технологичната индустрия показват, че истинският двигател на тяхната автономност е друг. Става дума за т.нар. „агентна обвивка“ (agent harness) – специализиран инфраструктурен слой, който превръща суровата интелигентност на езиковия модел в работещ и ефективен ИИ агент [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>По-сигурни с всяка актуализация: Как Google използва ИИ агенти за отстраняване на 1072 уязвимости в Chrome</title>
+      <link>https://svetni.me/articles/2026/08/03/google-chrome-ai-security/</link>
+      <pubDate>Mon, 3 Aug 2026 21:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/google-chrome-ai-security/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според репортаж на ZDNet [1], технологичният гигант Google е внедрил иновативна инфраструктура, базирана на изкуствен интелект, за мащабно подсигуряване на своя уеб браузър. В рамките на едва 60 дни компанията е успяла да отстрани 1072 уязвимости в кода на Chrome, използвайки специализирани AI модели [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>SQLite и критичните CVE уязвимости: Реални заплахи или генериран от ИИ шум?</title>
+      <link>https://svetni.me/articles/2026/08/03/sqlite-cves-llm-slop/</link>
+      <pubDate>Mon, 3 Aug 2026 21:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/sqlite-cves-llm-slop/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>През последните години изкуственият интелект улесни автоматизацията на множество процеси, но същевременно създаде и нови предизвикателства за сигурността. Наскоро в публичното пространство се появи нова вълна от фалшиви сигнали за пропуски в сигурността, описвани като ИИ спам (AI slop) — автоматично генерирано съдържание с ниско качество, което имитира реални технически анализи. Киберсигурността се оказа пряка жертва на този феномен, след като в края на юли 2026 г. потребителски профил в GitHub публикува десетки несъществуващи уязвимости в популярни софтуерни продукти с отворен код [1, 4].</p>]]></description>
+    </item>
+
+    <item>
+      <title>OpenAI загатна за Astra: Следващото голямо AI поколение решава 10 дългогодишни математически задачи</title>
+      <link>https://svetni.me/articles/2026/08/03/openai-astra-math-advances/</link>
+      <pubDate>Mon, 3 Aug 2026 21:39:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/openai-astra-math-advances/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална научна публикация, озаглавена „Ten advances in mathematics and theoretical computer science“ [1], компанията OpenAI обяви забележителен научен пробив, загатвайки за следващото си голямо поколение изкуствен интелект под кодовото име Astra. Съобщението веднага привлече медийния отзвук и вниманието на технологичната общност [2]. Според разкритите данни, вътрешна версия на новия модел успешно е решила или е постигнала безпрецедентен напредък по 10 дългогодишни отворени математически и компютърни проблеми.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Бивш инженер от Perplexity стартира Polar — AI браузър за автоматизация на интелектуалния труд</title>
+      <link>https://svetni.me/articles/2026/08/02/polar-ai-browser-knowledge-work/</link>
+      <pubDate>Sun, 2 Aug 2026 21:32:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/02/polar-ai-browser-knowledge-work/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>Китайските роботи: Трансформацията на британската търговия на дребно</title>
@@ -131,21 +176,21 @@
     </item>
 
     <item>
-      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
-      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
       <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
       <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
+      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
     </item>
 
     <item>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/4d-printed-wind-turbine-blades/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В официално съобщение на канадския изследователски университет Concordia University [1] се съобщава за разработката на изцяло нов метод за производство на извити перки за вертикални вятърни турбини. Технологията се базира на 4D принтиране на композитни материали и позволява автоматичното деформиране на плоски плоскости в прецизни извити геометрии по време на процеса на охлаждане. Научният труд, описващ разработката, е публикуван в престижното списание Polymer Composites [2].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Кодиращите агенти са толкова добри, колкото е добър техният цикъл на обратна връзка</title>
-      <link>https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</link>
-      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/coding-agents-feedback-loops/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>С бързото развитие на изкуствения интелект в софтуерното инженерство, автономните инструменти за програмиране преминават от прости генератори на код към комплексни асистенти, които управляват цели работни процеси. В публикация на блога „Spin“ на консултантската компания Atomic Object [1] се разглежда един фундаментален проблем на съвременните проекти: как да се осигури ефективна паралелна работа на ИИ агенти в наследена кодова база. Основният извод е, че възможностите на един кодиращ агент са ограничени от качеството на неговия цикъл на обратна връзка и способността му самостоятелно да валидира своите промени.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Типове AI агенти: От прости рефлекси до самообучаващи се системи</title>
-      <link>https://svetni.me/articles/2026/07/03/types-of-ai-agents/</link>
-      <pubDate>Fri, 3 Jul 2026 19:08:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/types-of-ai-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В съвременната технологична индустрия преходът от класическа автоматизация към агентен ИИ променя начина, по който софтуерът взаимодейства със света. В свое обстойно ръководство платформата Zapier [1] разглежда фундаменталните видове ИИ агенти, базирани на академичната класификация на компютърните учени Стюарт Ръсел и Питър Норвиг. Тези пет типа описват пътя от най-елементарните системи за реакция до сложни самообучаващи се платформи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Защо предвиждането на намерения изисква повече от големи езикови модели</title>
-      <link>https://svetni.me/articles/2026/07/02/why-intent-prediction-needs-more-than-an-llm/</link>
-      <pubDate>Thu, 2 Jul 2026 22:26:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/02/why-intent-prediction-needs-more-than-an-llm/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В новия епизод на технологичния подкаст на Stack Overflow, водещият Райън Донован разговаря с Франк Портман, технически директор и съосновател на компанията Yobi, за ограниченията на големите езикови модели при нелингвистични задачи [1]. Разговорът се фокусира върху въпроса защо стандартният голям езиков модел (LLM) не е оптималното решение за предвиждане на намерения и моделиране на човешкото поведение. Портман споделя, че докато съвременните текстови модели са изключително ефективни при синтезиране на информация и генериране на софтуерен код, вземането на решения под влияние на неопределеност изисква различен индуктивен подход.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Краят на tokenmaxxing: Преходът към разумна консумация на токени</title>
-      <link>https://svetni.me/articles/2026/07/02/the-end-of-tokenmaxxing/</link>
-      <pubDate>Thu, 2 Jul 2026 22:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/02/the-end-of-tokenmaxxing/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според подробен анализ на Майк Лукидес [1] от O&#39;Reilly Media, практиката на tokenmaxxing – безконтролното изразходване на токени с цел бързо демонстриране на изкуствена продуктивност – вече среща своите физически и финансови лимити. Една от ключовите индикации за тази фундаментална промяна е решението на GitHub Copilot да премине към кредитна система на таксуване вместо досегашния неограничен плосък абонамент [1]. Това маркира края на ерата, в която разработчиците можеха напълно да пренебрегват цената на заявките към големите езикови модели (LLM) [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Когато AI изглежда човечен: Как да учим учениците на антропоморфизъм</title>
-      <link>https://svetni.me/articles/2026/07/02/when-ai-feels-human/</link>
-      <pubDate>Thu, 2 Jul 2026 22:06:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/02/when-ai-feels-human/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Навлизането на инструментите с изкуствен интелект в класната стая променя изцяло образователната среда и налага нови стандарти в областта на образователните технологии. Според статия на образователната медия TeachThought [1], способността на съвременните големи езикови модели (LLM) да водят плавен диалог създава сериозен риск от развиване на неуместно доверие у децата. За да се справят с това предизвикателство, преподавателите трябва активно да адресират проблема с явлението антропоморфизъм – естествената човешка склонност да се приписват човешки емоции, съзнание и намерения на неодушевени предмети или алгоритми.</p>]]></description>
     </item>
   </channel>
 </rss>

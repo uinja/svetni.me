@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <!-- background -->
+  <rect width="800" height="400" fill="#0f172a" rx="12"/>
+  
+  <!-- grid background effect -->
+  <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350" stroke="#1e293b" stroke-width="1"/>
+  <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400 M 400,0 L 400,400 M 500,0 L 500,400 M 600,0 L 600,400 M 700,0 L 700,400" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- connection lines -->
+  <path d="M 180,200 L 360,200 M 480,200 L 620,200" stroke="#38bdf8" stroke-dasharray="4" stroke-width="2"/>
+  <path d="M 420,240 L 420,300 C 420,330 520,330 620,330" fill="none" stroke="#f43f5e" stroke-dasharray="4" stroke-width="2"/>
+
+  <!-- Astra node -->
+  <rect x="50" y="150" width="130" height="100" rx="8" fill="#1e1b4b" stroke="#4f46e5" stroke-width="2"/>
+  <text x="115" y="195" fill="#f8fafc" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">OpenAI</text>
+  <text x="115" y="225" fill="#818cf8" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">ASTRA</text>
+
+  <!-- 10 Problems node -->
+  <rect x="360" y="150" width="120" height="100" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+  <text x="420" y="195" fill="#f8fafc" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">10 Научни</text>
+  <text x="420" y="225" fill="#34d399" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Проблема</text>
+
+  <!-- Lean Verification node -->
+  <rect x="620" y="150" width="130" height="100" rx="8" fill="#701a75" stroke="#d946ef" stroke-width="2"/>
+  <text x="685" y="195" fill="#f8fafc" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Lean 4</text>
+  <text x="685" y="225" fill="#f472b6" font-family="sans-serif" font-size="14" text-anchor="middle">Верификация</text>
+
+  <!-- Human researchers node -->
+  <rect x="620" y="290" width="130" height="70" rx="8" fill="#7c2d12" stroke="#ea580c" stroke-width="2"/>
+  <text x="685" y="325" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Ръкописи</text>
+  <text x="685" y="345" fill="#fdba74" font-family="sans-serif" font-size="12" text-anchor="middle">(Човешки екип)</text>
+
+  <!-- Title top -->
+  <text x="400" y="45" fill="#f8fafc" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Научен пробив на OpenAI Astra</text>
+  
+  <!-- Subtitle bottom -->
+  <text x="400" y="380" fill="#94a3b8" font-family="sans-serif" font-size="12" text-anchor="middle">Генериране на доказателства и компютърно сертифициране в Lean 4</text>
+</svg>
