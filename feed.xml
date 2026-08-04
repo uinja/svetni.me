@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 3 Aug 2026 22:36:00 +0000</pubDate>
+    <pubDate>Tue, 4 Aug 2026 22:05:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Сделка за $10 милиарда: Anthropic си осигурява мащабен изчислителен капацитет от Volta</title>
+      <link>https://svetni.me/articles/2026/08/04/anthropic-volta-compute-deal/</link>
+      <pubDate>Tue, 4 Aug 2026 22:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/04/anthropic-volta-compute-deal/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Лабораторията за изследвания в областта на изкуствения интелект Anthropic сключи мащабен дългосрочен договор за наем на изчислителна мощност на стойност 10 милиарда долара с новия доставчик на облачна инфраструктура Volta Infra Holdings [1]. Споразумението, което е с продължителност шест години, е сред най-големите сделки за изчислителни ресурси в историята на сектора. Необходимият за договора хардуерен капацитет ще бъде разположен в специализиран център за данни в Норвегия, захранван изцяло с чиста хидроенергия [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>ИИ кодиращите агенти изтощават ИТ бюджетите: Как Replit, Kilo Code и Symbotic управляват разходите</title>
+      <link>https://svetni.me/articles/2026/08/04/ai-coding-agents-budgets/</link>
+      <pubDate>Tue, 4 Aug 2026 21:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/04/ai-coding-agents-budgets/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Развитието на софтуерното инженерство преминава през дълбока трансформация, задвижвана от автономни инструменти. Въпреки обещанията за главоломно повишаване на производителността, практическото внедряване на агентния ИИ разкрива сериозен финансов проблем: неконтролируемо нарастване на разходите за API токени. По време на конференцията VB Transform 2026, панелът „Ентърпрайз софтуерът в ерата на агентното програмиране“, модериран от Сам Уитевийн, събра технологични лидери, за да обсъдят как техните организации се справят с този икономически натиск [1].</p>]]></description>
+    </item>
+
+    <item>
+      <title>Илон Мъск посвещава половината от времето си на ИИ и роботи в отчетите на Tesla</title>
+      <link>https://svetni.me/articles/2026/08/04/elon-musk-tesla-earnings-calls-ai-robots/</link>
+      <pubDate>Tue, 4 Aug 2026 21:51:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/04/elon-musk-tesla-earnings-calls-ai-robots/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>Истинското тайно оръжие зад OpenAI Codex: Агентната обвивка</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/04/doordash-food-metadata-llm-juries/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>В публикация на официалния си инженерен блог, технологичната платформа DoorDash разкри детайли за своята нова архитектура за автоматизирано генериране и валидиране на хранителни метаданни в голям мащаб [1]. Системата е проектирана да се справя с изключителното разнообразие на артикули в менютата на ресторантите, като извлича детайлни характеристики като степен на лютивост, тип кухня, хранителни и диетични категории. Чрез комбиниране на мултимодални данни, интелигентно гласуване и автоматизирана оптимизация, компанията успява да автоматизира процес, който досега е изисквал скъп и бавен ръчен труд.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Физическите ограничения на изкуствения интелект: Как ИИ пренаписа правилата за центровете за данни</title>
-      <link>https://svetni.me/articles/2026/07/04/how-ai-rewired-the-data-center/</link>
-      <pubDate>Sat, 4 Jul 2026 07:48:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/04/how-ai-rewired-the-data-center/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В публикация на своя корпоративен блог, технологичната компания Tiger Data представя подробен анализ [1] за това как вълната от изкуствен интелект се сблъсква с твърдите физически ограничения на реалния свят. През по-голямата част от облачната ера типичният сървърен шкаф консумираше между 5 и 20 киловата, което позволяваше охлаждане просто чрез движение на въздух в стандартни сгради.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Мултивендорна стратегия: Как да се справим с ограниченията при моделите</title>
-      <link>https://svetni.me/articles/2026/07/03/oreilly-ai-multivendor-strategy/</link>
-      <pubDate>Fri, 3 Jul 2026 21:26:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/oreilly-ai-multivendor-strategy/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според седмичния преглед на O&#39;Reilly Media [1], стабилността на инфраструктурата за изкуствен интелект (ИИ), на която разчитат повечето съвременни екипи, става все по-несигурна. Поради въвеждането на нови правителствени ограничения върху износа на най-съвременните модели от САЩ, технологичните лидери са изправени пред сериозни инфраструктурни рискове. Зависимостта от един доставчик вече не е просто търговски въпрос, а сериозна архитектурна уязвимост.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Нов метод за 4D принтиране създава по-леки и по-бързи перки за вятърни турбини</title>
-      <link>https://svetni.me/articles/2026/07/03/4d-printed-wind-turbine-blades/</link>
-      <pubDate>Fri, 3 Jul 2026 19:10:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/03/4d-printed-wind-turbine-blades/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално съобщение на канадския изследователски университет Concordia University [1] се съобщава за разработката на изцяло нов метод за производство на извити перки за вертикални вятърни турбини. Технологията се базира на 4D принтиране на композитни материали и позволява автоматичното деформиране на плоски плоскости в прецизни извити геометрии по време на процеса на охлаждане. Научният труд, описващ разработката, е публикуван в престижното списание Polymer Composites [2].</p>]]></description>
     </item>
   </channel>
 </rss>

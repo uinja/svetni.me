@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%">
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 700; fill: #202124; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; fill: #4b5563; }
+    .node-title { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .node-text { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: #f8f9fa; }
+    .label-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #202124; }
+    .link-line { stroke: #9ca3af; stroke-dasharray: 4,4; stroke-width: 1.5; fill: none; }
+    .solid-line { stroke: #1a30ae; stroke-width: 2; fill: none; }
+    .arrow { fill: #1a30ae; }
+    .arrow-gray { fill: #9ca3af; }
+    .card-title-dark { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #202124; }
+    .card-text-dark { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #4b5563; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="#ffffff" stroke="#f8f9fa" stroke-width="2"/>
+  
+  <!-- Outer Title -->
+  <text x="40" y="45" class="title">Структура на сделката за AI изчисления на Anthropic &amp; Volta</text>
+  <text x="40" y="65" class="subtitle">Интеграция между финансов капитал, неоклауд платформа и физическа инфраструктура в Норвегия</text>
+
+  <!-- Group 1: Финансови инвестиции (Left Col) -->
+  <!-- Card: Инвеститори -->
+  <rect x="40" y="90" width="220" height="90" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="40" y="90" width="220" height="6" rx="4" fill="#1b31ae"/>
+  <text x="55" y="115" class="card-title-dark">Рисков капитал (Series A)</text>
+  <text x="55" y="135" class="card-text-dark">a16z &amp; Altimeter Capital (Лидери)</text>
+  <text x="55" y="152" class="card-text-dark">Nvidia, Michael Dell (Съинвеститори)</text>
+  <text x="55" y="168" class="card-text-dark">Инвестиция: $300M (Оценка: $2.4B)</text>
+
+  <!-- Card: Гаранции -->
+  <rect x="40" y="220" width="220" height="90" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="40" y="220" width="220" height="6" rx="4" fill="#1e33af"/>
+  <text x="55" y="245" class="card-title-dark">Кредитен бекстоп</text>
+  <text x="55" y="265" class="card-text-dark">J.P. Morgan &amp; Global Bank</text>
+  <text x="55" y="285" class="card-text-dark">Акредитиви: $1.3 милиарда</text>
+
+  <!-- Card: Финансов пул -->
+  <rect x="40" y="350" width="220" height="90" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="40" y="350" width="220" height="6" rx="4" fill="#1a30ae"/>
+  <text x="55" y="375" class="card-title-dark">Пул за хардуерно финансиране</text>
+  <text x="55" y="395" class="card-text-dark">Финансиращ пул на Volta: $5 милиарда</text>
+  <text x="55" y="412" class="card-text-dark">Цел: Подпомагане закупуването на</text>
+  <text x="55" y="426" class="card-text-dark">скъп AI хардуер от клиенти</text>
+
+  <!-- Group 2: Сърцевина на сделката (Middle Col) -->
+  <!-- Card: Volta Infra Holdings -->
+  <rect x="290" y="160" width="220" height="110" rx="8" fill="#1a30ae" />
+  <text x="305" y="185" class="node-title">Volta Infra Holdings</text>
+  <text x="305" y="205" class="node-text">AI Неоклауд доставчик</text>
+  <text x="305" y="225" class="node-text">Основан: Началото на 2026 г.</text>
+  <text x="305" y="245" class="node-text">Договор с Anthropic: $10B (6 г.)</text>
+
+  <!-- Card: Anthropic -->
+  <rect x="290" y="320" width="220" height="90" rx="8" fill="#1b31ae" />
+  <text x="305" y="345" class="node-title">Anthropic</text>
+  <text x="305" y="365" class="node-text">Краен клиент / AI Лаборатория</text>
+  <text x="305" y="385" class="node-text">Модели: Claude 3 / 4</text>
+
+  <!-- Group 3: Физическа инфраструктура (Right Col) -->
+  <!-- Card: Bitdeer Campus -->
+  <rect x="540" y="90" width="220" height="110" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="540" y="90" width="220" height="6" rx="4" fill="#1a30ae"/>
+  <text x="555" y="115" class="card-title-dark">Кампус Tydal, Норвегия</text>
+  <text x="555" y="135" class="card-text-dark">Bitdeer (NASDAQ: BTDR)</text>
+  <text x="555" y="152" class="card-text-dark">Договор: $4.7B приходи (16 г.)</text>
+  <text x="555" y="168" class="card-text-dark">Капацитет: 121 IT MW (133 MW бруто)</text>
+  <text x="555" y="184" class="card-text-dark">100% ВЕИ (Хидро), PUE ~1.1</text>
+
+  <!-- Card: Dell Technologies -->
+  <rect x="540" y="235" width="220" height="85" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="540" y="235" width="220" height="6" rx="4" fill="#1b31ae"/>
+  <text x="555" y="260" class="card-title-dark">Dell Technologies</text>
+  <text x="555" y="280" class="card-text-dark">Хардуерен партньор</text>
+  <text x="555" y="298" class="card-text-dark">Доставка на сървъри &amp; ракове</text>
+
+  <!-- Card: Nvidia GPU -->
+  <rect x="540" y="350" width="220" height="90" rx="8" fill="#f8f9fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="540" y="350" width="220" height="6" rx="4" fill="#1e33af"/>
+  <text x="555" y="375" class="card-title-dark">Nvidia</text>
+  <text x="555" y="395" class="card-text-dark">GPU ускорители: "Vera Rubin"</text>
+  <text x="555" y="412" class="card-text-dark">Следващо поколение чипове</text>
+  <text x="555" y="428" class="card-text-dark">за водещи ИИ модели</text>
+
+  <!-- Connections -->
+  <!-- Investors to Volta -->
+  <path d="M 260 135 L 290 190" class="solid-line" />
+  <polygon points="290,190 280,188 285,180" class="arrow" />
+  <text x="245" y="170" class="label-text" text-anchor="middle">Капитал</text>
+
+  <!-- JPM Backstop to Volta Tydal/Bitdeer -->
+  <path d="M 260 265 L 530 265" class="link-line" />
+  <polygon points="530,265 520,260 520,270" class="arrow-gray" />
+  <text x="400" y="258" class="label-text" text-anchor="middle">Финансови гаранции за Bitdeer ($1.3B)</text>
+
+  <!-- Volta to Anthropic -->
+  <path d="M 400 270 L 400 310" class="solid-line" stroke-width="3" />
+  <polygon points="400,312 395,302 405,302" class="arrow" />
+  <text x="410" y="295" class="label-text">Капацитет ($10B)</text>
+
+  <!-- Bitdeer to Volta -->
+  <path d="M 540 145 L 510 180" class="solid-line" />
+  <polygon points="510,180 520,182 515,190" class="arrow" />
+  <text x="535" y="173" class="label-text" text-anchor="middle">Наем</text>
+
+  <!-- Dell and Nvidia supply Bitdeer -->
+  <path d="M 650 235 L 650 205" class="link-line" />
+  <polygon points="650,205 645,215 655,215" class="arrow-gray" />
+  
+  <path d="M 650 350 L 650 328" class="link-line" />
+  <polygon points="650,328 645,338 655,338" class="arrow-gray" />
+</svg>
