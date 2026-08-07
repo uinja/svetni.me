@@ -1,0 +1,110 @@
+<svg width="100%" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--color-primary, #1a30ae)" />
+    </marker>
+    <marker id="arrow-secondary" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--color-secondary, #1b31ae)" />
+    </marker>
+  </defs>
+  
+  <style>
+    .title-text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+    }
+    .body-text {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="var(--color-background, #ffffff)" stroke="var(--color-primary, #1a30ae)" stroke-width="2" />
+
+  <!-- Layout Containers -->
+  <!-- Left Column Container -->
+  <rect x="60" y="120" width="200" height="300" rx="8" fill="var(--color-surface, #f8f9fa)" stroke="var(--color-secondary, #1b31ae)" stroke-dasharray="4" stroke-width="1.5" />
+  
+  <!-- Middle Column Container -->
+  <rect x="300" y="120" width="200" height="300" rx="8" fill="var(--color-surface, #f8f9fa)" stroke="var(--color-primary, #1a30ae)" stroke-width="2" />
+  
+  <!-- Right Column Container -->
+  <rect x="540" y="120" width="200" height="300" rx="8" fill="var(--color-surface, #f8f9fa)" stroke="var(--color-secondary, #1b31ae)" stroke-dasharray="4" stroke-width="1.5" />
+
+  <!-- Inner Cards -->
+  <!-- Left Element 1 -->
+  <rect x="80" y="180" width="160" height="80" rx="6" fill="var(--color-primary, #1a30ae)" fill-opacity="0.08" stroke="var(--color-on-surface, #202124)" stroke-opacity="0.1" stroke-width="1" />
+  <!-- Left Element 2 -->
+  <rect x="80" y="290" width="160" height="80" rx="6" fill="var(--color-primary, #1a30ae)" fill-opacity="0.08" stroke="var(--color-on-surface, #202124)" stroke-opacity="0.1" stroke-width="1" />
+
+  <!-- Middle Element 1 -->
+  <rect x="320" y="180" width="160" height="80" rx="6" fill="var(--color-primary, #1a30ae)" stroke="var(--color-primary, #1a30ae)" stroke-width="1" />
+  <!-- Middle Element 2 -->
+  <rect x="320" y="290" width="160" height="80" rx="6" fill="var(--color-tertiary, #1e33af)" stroke="var(--color-tertiary, #1e33af)" stroke-width="1" />
+
+  <!-- Right Element 1 -->
+  <rect x="560" y="180" width="160" height="80" rx="6" fill="var(--color-primary, #1a30ae)" fill-opacity="0.08" stroke="var(--color-on-surface, #202124)" stroke-opacity="0.1" stroke-width="1" />
+  <!-- Right Element 2 -->
+  <rect x="560" y="290" width="160" height="80" rx="6" fill="var(--color-primary, #1a30ae)" fill-opacity="0.08" stroke="var(--color-on-surface, #202124)" stroke-opacity="0.1" stroke-width="1" />
+
+  <!-- OSAA Container at the Bottom -->
+  <rect x="280" y="430" width="240" height="50" rx="6" fill="var(--color-secondary, #1b31ae)" stroke="var(--color-secondary, #1b31ae)" stroke-width="1" />
+
+  <!-- Flows / Connections -->
+  <line x1="240" y1="220" x2="312" y2="220" stroke="var(--color-primary, #1a30ae)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="240" y1="330" x2="312" y2="330" stroke="var(--color-primary, #1a30ae)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <line x1="480" y1="220" x2="552" y2="220" stroke="var(--color-primary, #1a30ae)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="480" y1="330" x2="552" y2="330" stroke="var(--color-primary, #1a30ae)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <line x1="400" y1="430" x2="400" y2="378" stroke="var(--color-secondary, #1b31ae)" stroke-width="2" marker-end="url(#arrow-secondary)" />
+
+  <!-- Text Labels -->
+  <!-- Headers -->
+  <text x="400" y="45" font-size="22" text-anchor="middle" fill="var(--color-primary, #1a30ae)" class="title-text">NVIDIA AI SAFETY &amp; SECURITY</text>
+  <text x="400" y="70" font-size="14" text-anchor="middle" fill="var(--color-on-surface, #202124)" opacity="0.8" class="body-text">Оценка на модели с отворени тегла и защита на ИИ агенти</text>
+
+  <!-- Column Labels -->
+  <text x="160" y="145" font-size="15" font-weight="700" text-anchor="middle" fill="var(--color-secondary, #1b31ae)" class="title-text">Входни Системи</text>
+  <text x="400" y="145" font-size="15" font-weight="700" text-anchor="middle" fill="var(--color-primary, #1a30ae)" class="title-text">AI Safety &amp; Security</text>
+  <text x="640" y="145" font-size="15" font-weight="700" text-anchor="middle" fill="var(--color-secondary, #1b31ae)" class="title-text">Резултати</text>
+
+  <!-- Left Card 1 Text -->
+  <text x="160" y="215" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-on-surface, #202124)" class="body-text">Отворени модели</text>
+  <text x="160" y="235" font-size="11" text-anchor="middle" fill="var(--color-on-surface, #202124)" opacity="0.75" class="body-text">(Llama, Nemotron)</text>
+
+  <!-- Left Card 2 Text -->
+  <text x="160" y="325" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-on-surface, #202124)" class="body-text">Автономни ИИ агенти</text>
+  <text x="160" y="345" font-size="11" text-anchor="middle" fill="var(--color-on-surface, #202124)" opacity="0.75" class="body-text">(Интеграция с данни)</text>
+
+  <!-- Middle Card 1 Text -->
+  <text x="400" y="215" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-background, #ffffff)" class="body-text">Оценка &amp; Симулация</text>
+  <text x="400" y="235" font-size="11" text-anchor="middle" fill="var(--color-background, #ffffff)" opacity="0.9" class="body-text">(Тестване преди пускане)</text>
+
+  <!-- Middle Card 2 Text -->
+  <text x="400" y="320" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-background, #ffffff)" class="body-text">ИИ инструменти за пачове</text>
+  <text x="400" y="340" font-size="11" text-anchor="middle" fill="var(--color-background, #ffffff)" opacity="0.9" class="body-text">(Автоматично отстраняване)</text>
+  <text x="400" y="355" font-size="11" text-anchor="middle" fill="var(--color-background, #ffffff)" opacity="0.9" class="body-text">на уязвимости</text>
+
+  <!-- Right Card 1 Text -->
+  <text x="640" y="215" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-on-surface, #202124)" class="body-text">Бизнес доверие</text>
+  <text x="640" y="235" font-size="11" text-anchor="middle" fill="var(--color-on-surface, #202124)" opacity="0.75" class="body-text">(Сигурно внедряване)</text>
+
+  <!-- Right Card 2 Text -->
+  <text x="640" y="325" font-size="13" font-weight="600" text-anchor="middle" fill="var(--color-on-surface, #202124)" class="body-text">Лидерство &amp; Защита</text>
+  <text x="640" y="345" font-size="11" text-anchor="middle" fill="var(--color-on-surface, #202124)" opacity="0.75" class="body-text">(Отворен код &amp; сигурност)</text>
+
+  <!-- OSAA Text -->
+  <text x="400" y="460" font-size="13" font-weight="700" text-anchor="middle" fill="var(--color-background, #ffffff)" class="body-text">Open Secure AI Alliance (OSAA)</text>
+</svg>

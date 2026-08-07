@@ -1,0 +1,116 @@
+<svg width="100%" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Node Gradient -->
+    <linearGradient id="node-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <!-- Highlight Node Gradient (Stage 4 / Loop) -->
+    <linearGradient id="highlight-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#3b82f6" flood-opacity="0.3" />
+    </filter>
+    
+    <!-- Glow Filter for Feedback Loop -->
+    <filter id="glow-orange" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f97316" flood-opacity="0.4" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b" />
+    </marker>
+    
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f97316" />
+    </marker>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .node { stroke: #38bdf8; stroke-width: 1.5px; fill: url(#node-grad); }
+    .node-highlight { stroke: #f97316; stroke-width: 2px; fill: url(#highlight-grad); filter: url(#glow-orange); }
+    .text-title { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #f8fafc; text-anchor: middle; }
+    .text-desc { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #94a3b8; text-anchor: middle; }
+    .text-header { font-family: system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 800; fill: #38bdf8; text-anchor: middle; letter-spacing: 0.5px; }
+    .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .edge-loop { stroke: #f97316; stroke-width: 2.5; stroke-dasharray: 4 4; fill: none; marker-end: url(#arrow-orange); }
+    .loop-label { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #f97316; text-anchor: middle; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" rx="12" />
+
+  <!-- Diagram Title -->
+  <text x="400" y="45" class="text-header">5-ТЕ ЕТАПА НА АГЕНТНИЯ РАБОТЕН ПОТОК</text>
+
+  <!-- ==================== STAGE 1 ==================== -->
+  <g transform="translate(40, 80)">
+    <rect width="210" height="90" rx="8" class="node" />
+    <text x="105" y="32" class="text-title">1. Разбиране на проблема</text>
+    <text x="105" y="52" class="text-desc">Разбиване на целта на подцели,</text>
+    <text x="105" y="68" class="text-desc">анализ и определяне на ресурсите</text>
+  </g>
+
+  <!-- Connection Stage 1 -> 2 -->
+  <line x1="250" y1="125" x2="280" y2="125" class="edge" />
+
+  <!-- ==================== STAGE 2 ==================== -->
+  <g transform="translate(290, 80)">
+    <rect width="210" height="90" rx="8" class="node" />
+    <text x="105" y="32" class="text-title">2. Диагностични стъпки</text>
+    <text x="105" y="52" class="text-desc">Активно събиране на данни,</text>
+    <text x="105" y="68" class="text-desc">четене на документи и API заявки</text>
+  </g>
+
+  <!-- Connection Stage 2 -> 3 -->
+  <line x1="500" y1="125" x2="530" y2="125" class="edge" />
+
+  <!-- ==================== STAGE 3 ==================== -->
+  <g transform="translate(540, 80)">
+    <rect width="210" height="90" rx="8" class="node" />
+    <text x="105" y="32" class="text-title">3. Избор на инструменти</text>
+    <text x="105" y="52" class="text-desc">Динамичен избор на код интерпретатор,</text>
+    <text x="105" y="68" class="text-desc">търсачки или специализирани модели</text>
+  </g>
+
+  <!-- Connection Stage 3 -> 4 (Downward arrow) -->
+  <path d="M 645 170 L 645 220" class="edge" />
+
+  <!-- ==================== STAGE 4 ==================== -->
+  <g transform="translate(540, 230)">
+    <rect width="210" height="90" rx="8" class="node-highlight" />
+    <text x="105" y="32" class="text-title" style="fill:#ffedd5;">4. Самооценка &amp; Итерация</text>
+    <text x="105" y="52" class="text-desc" style="fill:#fed7aa;">Оценка на междинните резултати</text>
+    <text x="105" y="68" class="text-desc" style="fill:#fed7aa;">и коригиране при грешка</text>
+  </g>
+
+  <!-- Connection Stage 4 -> 5 -->
+  <line x1="540" y1="275" x2="510" y2="275" class="edge" />
+
+  <!-- ==================== STAGE 5 ==================== -->
+  <g transform="translate(290, 230)">
+    <rect width="210" height="90" rx="8" class="node" />
+    <text x="105" y="32" class="text-title">5. Окончателен резултат</text>
+    <text x="105" y="52" class="text-desc">Предоставяне на готовия отговор</text>
+    <text x="105" y="68" class="text-desc">и запис на лог за наученото</text>
+  </g>
+
+  <!-- FEEDBACK LOOP PATH (From Stage 4 back to Stage 2) -->
+  <path d="M 645 320 C 645 380, 395 380, 395 180" class="edge-loop" />
+  
+  <!-- Loop Label -->
+  <text x="510" y="380" class="loop-label">Итеративен цикъл (при неуспех / непълни данни)</text>
+</svg>

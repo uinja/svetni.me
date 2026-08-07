@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 4 Aug 2026 22:41:00 +0000</pubDate>
+    <pubDate>Fri, 7 Aug 2026 21:28:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>ByteDance разработва ИИ модел с 10 трилиона параметъра</title>
+      <link>https://svetni.me/articles/2026/08/07/bytedance-10-trillion-parameter-model/</link>
+      <pubDate>Fri, 7 Aug 2026 21:28:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/07/bytedance-10-trillion-parameter-model/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Китайският технологичен гигант ByteDance е започнал предварително обучение (pre-training) на нов модел с изкуствен интелект, чийто мащаб може да достигне до 10 трилиона параметъра, според информация от Financial Times [2]. Проектът демонстрира стремежа на компанията майка на TikTok да се конкурира директно с най-големите системи в глобалната индустрия, разработвани от водещи американски лаборатории.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Какво представляват агентните работни потоци (Agentic Workflows)?</title>
+      <link>https://svetni.me/articles/2026/08/07/agentic-workflows/</link>
+      <pubDate>Fri, 7 Aug 2026 15:10:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/07/agentic-workflows/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Генерирано чрез Svetni.me AI</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Бъдещето на агентския интернет: Инициативите на Cloudflare</title>
+      <link>https://svetni.me/articles/2026/08/07/agentic-internet/</link>
+      <pubDate>Fri, 7 Aug 2026 15:09:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/07/agentic-internet/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация в корпоративния си блог [1], мрежовият и облачен доставчик Cloudflare представи своята дългосрочна стратегия и технологични инициативи за изграждането на т.нар. „Агентски Интернет“ (Agentic Internet). Според анализа на компанията, световната мрежа в момента преминава през дълбока структурна трансформация. Мрежата, която първоначално беше проектирана и изградена за хора, се посещава все по-често от нов тип потребители – автономни софтуерни агенти, захранвани от изкуствен интелект.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Nvidia сформира екип за безопасност на ИИ в подкрепа на моделите с отворени тегла</title>
+      <link>https://svetni.me/articles/2026/08/06/nvidia-ai-safety-open-models/</link>
+      <pubDate>Thu, 6 Aug 2026 20:33:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/06/nvidia-ai-safety-open-models/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Технологичният гигант Nvidia сформира нов инженерен екип за безопасност и сигурност на изкуствения интелект („AI Safety and Security“), научи Business Insider [1]. Според публикувани обяви за работа от края на миналия месец, компанията търси изтъкнат инженер, който да поеме ролята на технически лидер на новия отдел. Отделът се създава на фона на засилената подкрепа от страна на компанията за ИИ модели с отворени тегла.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Убер обяви края на ерата на „токенмаксимализма“ (tokenmaxxing)</title>
+      <link>https://svetni.me/articles/2026/08/06/uber-cto-tokenmaxxing-era-end/</link>
+      <pubDate>Thu, 6 Aug 2026 20:28:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/06/uber-cto-tokenmaxxing-era-end/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>Решаване на проблема с разтворителите при натриево-металните батерии</title>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/14/prompt-injection-to-data-exfil-in-3-hops/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Представете си следния сценарий: служител изисква от AI агент да обобщи клиентски тикет за поддръжка. Агентът изпълнява задачата успешно, но в същия момент чувствителни данни за клиентите напускат мрежата чрез обикновена HTTPS заявка към неизвестен външен домейн. Никакви аларми не се задействат, защото нищо не е изтрито или компрометирано на ниво процеси.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Пазарният парадокс: Защо NVIDIA се оказа жертва на собствения си успех</title>
-      <link>https://svetni.me/articles/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/</link>
-      <pubDate>Thu, 9 Jul 2026 20:58:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>През последните две години глобалният технологичен сектор беше доминиран от едно неоспоримо име. Пионерът в производството на графични ускорители NVIDIA се превърна в синоним на революцията в сферата на изкуствения интелект, благодарение на своите забележителни хардуерни постижения и софтуерната си екосистема CUDA [1]. Напоследък обаче пазарната динамика започна да се променя по изключително неочакван начин, изправяйки лидера пред нов тип предизвикателство. Компанията се оказва в парадоксалната ситуация да бъде притисната от собствения си пазарен успех, докато по-прости и по-малко забележителни технологии бележат исторически финансови рекорди.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Новите AI чипове на Meta влизат в производство през септември</title>
-      <link>https://svetni.me/articles/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/</link>
-      <pubDate>Thu, 9 Jul 2026 20:54:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Американският технологичен гигант Meta се готви да стартира производството на най-новата версия на своите специализирани чипове за изкуствен интелект през септември 2026 г. Според информация на агенция Reuters, цитираща вътрешен документ на компанията [1], поне една от версиите на новия хардуер вече е преминала успешно тестовата си фаза в рамките на около шест седмици [2]. С тази стъпка компанията цели да намали зависимостта си от външни доставчици на графични ускорители и да оптимизира разходите си за инфраструктура в условията на глобален дефицит на компоненти.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Осъзнато ползване или задържане на потребителите: Anthropic пусна Claude Reflect</title>
-      <link>https://svetni.me/articles/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/</link>
-      <pubDate>Thu, 9 Jul 2026 20:49:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В момент, когато недоволството срещу изкуствения интелект и протестите срещу центровете за данни често попадат в новинарските заглавия, Anthropic пуска нова функция за своя чатбот Claude, която фино се опитва да убеди потребителите защо трябва да продължат да го използват. Според репортаж на TechCrunch, компанията представи Claude Reflect — вграден панел за анализи, който позволява проследяване и визуализиране на потребителските навици и взаимодействие с изкуствения интелект [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>NVIDIA и Hugging Face обединяват сили: Пълна интеграция на Isaac GR00T, Isaac Teleop и Cosmos в LeRobot</title>
-      <link>https://svetni.me/articles/2026/07/07/nvidia-hugging-face-lerobot-open-robotics/</link>
-      <pubDate>Tue, 7 Jul 2026 22:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/07/nvidia-hugging-face-lerobot-open-robotics/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В публикация на официалния корпоративен блог на технологичния гигант NVIDIA беше обявено мащабно партньорство с платформата за изкуствен интелект Hugging Face [1]. Двете компании обединяват своите ресурси, за да интегрират водещия базов модел за хуманоидна роботика Isaac GR00T 1.7 и софтуерната рамка за дистанционно събиране на данни Isaac Teleop в LeRobot – библиотеката с отворен код на Hugging Face за роботика. В близко бъдеще се планира и интеграцията на моделите от фамилията Cosmos 3. Тази съвместна инициатива цели да предостави на глобалната общност от разработчици по-достъпен, стандартизиран и ефикасен път за разработка от край до край на системи с физически изкуствен интелект (physical AI) и хуманоидни роботи [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Революция в юридическите услуги: Norm Ai събра 120 млн. долара за развитие на „агентско право“</title>
-      <link>https://svetni.me/articles/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/</link>
-      <pubDate>Tue, 7 Jul 2026 21:48:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление [1] американският стартъп Norm Ai съобщи за успешното привличане на 120 милиона долара в рамките на инвестиционен кръг от Серия C. Финансирането е водено от фонда Khosla Ventures – първият институционален инвеститор в OpenAI – и оценява младата компания на 1,2 милиарда долара, с което тя официално достига статут на еднорог. В кръга се включват още водещи финансови институции и инвеститори като Blackstone, Bain Capital Ventures, Craft Ventures, Coatue, Vanguard, New York Life и TIAA. С новия капитал общата сума на привлечените от компанията средства от основаването ѝ преди по-малко от три години надхвърля 260 милиона долара.</p>]]></description>
     </item>
   </channel>
 </rss>
