@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <!-- Definitions for gradients and shadows -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a30ae" />
+      <stop offset="100%" stop-color="#1e33af" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a30ae" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <rect x="20" y="20" width="760" height="460" rx="16" fill="#f8f9fa" stroke="#eef0f6" stroke-width="2" />
+
+  <!-- Title Section -->
+  <text x="50" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" fill="#1a30ae">4 СЪВЕТА ЗА МЛАДИТЕ КОНСУЛТАНТИ</text>
+  <text x="50" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#202124" opacity="0.7">Според старши партньори в McKinsey &amp; Company</text>
+
+  <!-- Card 1: Stop AI Slop -->
+  <g transform="translate(50, 130)" filter="url(#shadow)">
+    <rect width="330" height="140" rx="12" fill="#ffffff" stroke="#1a30ae" stroke-width="1" />
+    <!-- Number Badge -->
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="url(#blueGrad)" />
+    <text x="30" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <!-- Title -->
+    <text x="60" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#202124">Спрете „ИИ помията“ (AI Slop)</text>
+    <!-- Bullet points / text -->
+    <text x="20" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Използвайте ИИ за начален тласък, но не</text>
+    <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">разчитайте сляпо. Проверявайте фактите</text>
+    <text x="20" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">и прилагайте критично мислене.</text>
+  </g>
+
+  <!-- Card 2: Socialize -->
+  <g transform="translate(420, 130)" filter="url(#shadow)">
+    <rect width="330" height="140" rx="12" fill="#ffffff" stroke="#1a30ae" stroke-width="1" />
+    <!-- Number Badge -->
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="url(#blueGrad)" />
+    <text x="30" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <!-- Title -->
+    <text x="60" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#202124">Социализирайте се активно</text>
+    <!-- Bullet points / text -->
+    <text x="20" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Кариерата не е само цели, но и взаимоотношения.</text>
+    <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Участвайте в събития и градете микрообщности</text>
+    <text x="20" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">вътре в екипите и с клиентите.</text>
+  </g>
+
+  <!-- Card 3: Avoid overplanning -->
+  <g transform="translate(50, 300)" filter="url(#shadow)">
+    <rect width="330" height="140" rx="12" fill="#ffffff" stroke="#1a30ae" stroke-width="1" />
+    <!-- Number Badge -->
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="url(#blueGrad)" />
+    <text x="30" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <!-- Title -->
+    <text x="60" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#202124">Без твърде много планиране</text>
+    <!-- Bullet points / text -->
+    <text x="20" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Прекомерното чертане на пътя до партньор</text>
+    <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">е рецепта за нещастие. Фокусирайте се върху</text>
+    <text x="20" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">това, което ви носи удоволствие в момента.</text>
+  </g>
+
+  <!-- Card 4: Change circumstances -->
+  <g transform="translate(420, 300)" filter="url(#shadow)">
+    <rect width="330" height="140" rx="12" fill="#ffffff" stroke="#1a30ae" stroke-width="1" />
+    <!-- Number Badge -->
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="url(#blueGrad)" />
+    <text x="30" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <!-- Title -->
+    <text x="60" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#202124">Променяйте обстоятелствата</text>
+    <!-- Bullet points / text -->
+    <text x="20" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Не се отказвайте предварително. Говорете,</text>
+    <text x="20" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">когато изискванията са физически непосилни.</text>
+    <text x="20" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#202124" opacity="0.85">Работната среда може да се адаптира към вас.</text>
+  </g>
+</svg>

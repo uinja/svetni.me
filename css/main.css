@@ -432,11 +432,11 @@ h4 {
 }
 
 .article.intro .content p:has(img) {
-  float: left;
-  max-width: 180px;
+  float: none;
+  max-width: 100%;
   margin-top: 0.25rem;
-  margin-right: 1.25rem;
-  margin-bottom: 0.75rem;
+  margin-right: 0;
+  margin-bottom: 1.25rem;
 }
 
 .article.intro .content img {
@@ -462,9 +462,9 @@ h4 {
 
 @media screen and (min-width: 48rem) {
   .article.intro .content p:has(img) {
-    max-width: 240px;
-    margin-right: 1.75rem;
-    margin-bottom: 0.75rem;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.25rem;
   }
 }
 
