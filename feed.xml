@@ -9,9 +9,45 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 9 Aug 2026 19:40:00 +0000</pubDate>
+    <pubDate>Mon, 10 Aug 2026 22:35:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Токен-максимизирането приключи. Агентната памет е следващата стъпка в развитието на ИИ</title>
+      <link>https://svetni.me/articles/2026/08/10/token-maxxing-is-dead-agentic-memory-is-what-comes-next/</link>
+      <pubDate>Mon, 10 Aug 2026 22:35:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/10/token-maxxing-is-dead-agentic-memory-is-what-comes-next/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Разработчик от OpenAI предупреждава: милиони ИИ модели ще сканират за изложени API ключове и крипто портфейли</title>
+      <link>https://svetni.me/articles/2026/08/10/openai-developer-warns-tireless-eagle-eyes/</link>
+      <pubDate>Mon, 10 Aug 2026 22:33:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/10/openai-developer-warns-tireless-eagle-eyes/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Изследователят от компанията OpenAI, известен под псевдонима roon (@tszzl), предупреди публично в социалната мрежа X за бързо нарастващи рискове в сферата на цифровата сигурност [1]. Той призова потребителите незабавно да премахнат своите API ключове, пароли и идентификационни данни за криптовалутни портфейли, съхранявани на открито в интернет. Според него автономното сканиране от милиони специализирани модели ще превърне всяка публично изложена чувствителна информация в лесна мишена.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Защо отвореният код е от съществено значение за изкуствения интелект</title>
+      <link>https://svetni.me/articles/2026/08/10/why-open-source-matters-for-ai/</link>
+      <pubDate>Mon, 10 Aug 2026 22:20:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/10/why-open-source-matters-for-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Хронология на инцидента: Как автономни агенти на OpenAI пробиха Hugging Face</title>
+      <link>https://svetni.me/articles/2026/08/10/openai-hugging-face-timeline/</link>
+      <pubDate>Mon, 10 Aug 2026 22:14:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/10/openai-hugging-face-timeline/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>75% от европейските бизнеси се опасяват от американски технологичен „прекъсвач“</title>
@@ -425,42 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/21/us-threatens-sanctions-chinese-ai-ip-theft/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>САЩ подготвят нова фаза в технологичното си противопоставяне с Китай, като този път обект на потенциални санкции са директно самите софтуерни модели за изкуствен интелект. Според репортаж на TechCrunch [1], американският министър на финансите Скот Бесент заяви по Fox Business, че правителството ще разследва китайски модели с отворен код за евентуална кражба на интелектуална собственост от американски компании.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Claude не е просто компилатор: Преходът от вайб кодинг към вайб инженерство</title>
-      <link>https://svetni.me/articles/2026/07/20/claude-is-not-a-compiler-vibe-engineering/</link>
-      <pubDate>Mon, 20 Jul 2026 18:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/20/claude-is-not-a-compiler-vibe-engineering/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В софтуерната индустрия през последните години се наложи аналогията, че големите езикови модели (LLM) действат като новият слой компилатори — системи, които автоматично „превеждат“ спецификации на естествен език в работещ програмен код. В подробна инженерна публикация в блога на exe.dev [1], съоснователят и инфраструктурен архитект Джош Блийчър Снайдър определя това възприемане като съществена категорийна грешка (category error). Според него модели като Claude не са просто компилатори, а представляват нещо далеч по-мощно: вертикално интегриран инженерни асистент, който оперира през всички нива на софтуерния стек.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Локално обслужване на LLM в Netflix: Архитектура, предизвикателства и решения</title>
-      <link>https://svetni.me/articles/2026/07/19/in-house-llm-serving-netflix/</link>
-      <pubDate>Sun, 19 Jul 2026 08:06:37 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/19/in-house-llm-serving-netflix/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Повечето съвременни организации консумират големи езикови модели (LLM) чрез външни хоствани приложни програмни интерфейси (APIs). Технологичният гигант Netflix обаче избира различен подход, внедрявайки изцяло собствена инфраструктура за LLM инференция и разгръщане [1]. Вместо да обособява отделни и изолирани технологични силози за машинно обучение, компанията интегрира обслужването на моделите директно в съществуващата си микросервизна архитектура и производствена среда. Този избор им позволява да контролират жизнения цикъл на инференцията, да оптимизират закъснението (latency) и да намалят разходите при голям мащаб.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Китайският стартъп Moonshot AI представи Kimi K3: Първият 3-трилионен модел с отворен код</title>
-      <link>https://svetni.me/articles/2026/07/17/moonshot-kimi-k3-open-source/</link>
-      <pubDate>Fri, 17 Jul 2026 22:11:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/17/moonshot-kimi-k3-open-source/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Китайският стартъп за изкуствен интелект Moonshot AI представи новия си мащабен модел Kimi K3, за който твърди, че може да се конкурира с водещите американски технологични компании. Според информация на BBC News [1], това е първият в света модел с отворен код от клас с три трилиона параметри.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Apple засилва натиска срещу OpenAI с правни писма до десетки бивши служители</title>
-      <link>https://svetni.me/articles/2026/07/17/apple-openai-legal-letters/</link>
-      <pubDate>Fri, 17 Jul 2026 22:04:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/17/apple-openai-legal-letters/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на Mashable [1], позоваващ се на информация от Financial Times, технологичният гигант Apple е изпратил официални правни писма за запазване на доказателства (preservation letters) до приблизително 40 свои бивши служители, които в момента работят в OpenAI.</p>]]></description>
     </item>
   </channel>
 </rss>
