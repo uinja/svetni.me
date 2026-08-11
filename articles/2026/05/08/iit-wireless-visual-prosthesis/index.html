@@ -19,4 +19,55 @@
 <p>Успехът на проекта е резултат от близо три десетилетия изследователска дейност и сътрудничество между множество институции, включително Johns Hopkins и The Chicago Lighthouse [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.iit.edu/news/third-successful-implantation-wireless-visual-prosthesis-brain-implant-continues-redefine">Third Successful Implantation of Wireless Visual Prosthesis Brain Implant Continues to Redefine Possibilities - Illinois Tech News</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/visual-prosthesis.html">Визуална протеза (Visual Prosthesis)</a><p>Визуалната протеза (известна още като „бионично око“) е медицинско устройство, предназначено да възстанови частична визуална представа чрез стимулиран...</p></li><li><a href="/pages/neurotechnology.html">Невротехнология (Neurotechnology)</a><p>Невротехнологията е широко поле от технологии, предназначени да взаимодействат с нервната система, да измерват нейните функции или да я манипулират за...</p></li><li><a href="/pages/illinois-tech.html">Illinois Institute of Technology (Illinois Tech)</a><p>Технологичният институт на Илинойс (Illinois Institute of Technology или Illinois Tech) е частен изследователски университет в Чикаго, Илинойс.</p></li><li><a href="/pages/brain-implant.html">Мозъчен имплант (Brain Implant)</a><p>Мозъчният имплант е технологично устройство, което се поставя хирургично на повърхността на мозъка или в неговия кортекс.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/visual-prosthesis.html">Визуална протеза (Visual Prosthesis)</a><p>Визуалната протеза (известна още като „бионично око“) е медицинско устройство, предназначено да възстанови частична визуална представа чрез стимулиран...</p></li><li><a href="/pages/neurotechnology.html">Невротехнология (Neurotechnology)</a><p>Невротехнологията е широко поле от технологии, предназначени да взаимодействат с нервната система, да измерват нейните функции или да я манипулират за...</p></li><li><a href="/pages/illinois-tech.html">Illinois Institute of Technology (Illinois Tech)</a><p>Технологичният институт на Илинойс (Illinois Institute of Technology или Illinois Tech) е частен изследователски университет в Чикаго, Илинойс.</p></li><li><a href="/pages/brain-implant.html">Мозъчен имплант (Brain Implant)</a><p>Мозъчният имплант е технологично устройство, което се поставя хирургично на повърхността на мозъка или в неговия кортекс.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

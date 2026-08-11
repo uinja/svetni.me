@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 10 Aug 2026 22:35:00 +0000</pubDate>
+    <pubDate>Tue, 11 Aug 2026 23:00:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Как JetBrains овладя десетократния ръст в разходите си за изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/08/11/jetbrains-ai-spend/</link>
+      <pubDate>Tue, 11 Aug 2026 23:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/11/jetbrains-ai-spend/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Как Netflix мащабира своята система за топология на услугите в реално време</title>
+      <link>https://svetni.me/articles/2026/08/11/netflix-service-topology/</link>
+      <pubDate>Tue, 11 Aug 2026 22:53:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/11/netflix-service-topology/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Mistral AI изгражда 1 гигават суверенен облачен капацитет в Европа</title>
+      <link>https://svetni.me/articles/2026/08/11/mistral-sovereign-compute/</link>
+      <pubDate>Tue, 11 Aug 2026 22:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/11/mistral-sovereign-compute/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според официално съобщение на френския ИИ стартъп Mistral AI [1] и допълнителни данни от ексклузивно интервю за VentureBeat [2], компанията планира да изгради до 1 GW суверенен капацитет за изкуствен интелект в Европа до 2030 г. Междинната цел е достигане на 200 MW капацитет до края на 2027 г. [2].</p>]]></description>
+    </item>
 
     <item>
       <title>Токен-максимизирането приключи. Агентната памет е следващата стъпка в развитието на ИИ</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/23/amazon-agi-reliability-enterprise/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>На технологичната конференция VB Transform 2026, Брайън Силвърторн, директор на AGI Autonomy в Amazon, сподели ключови наблюдения относно развитието и внедряването на AI агенти в корпоративната среда. Според него основната пречка за широкото разпространение на тези технологии не е липсата на възможности, а недостигът на надеждност.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Сигурност за AI агенти: Защо CISO лидерите настояват за предпазни огради, а не за догадки</title>
-      <link>https://svetni.me/articles/2026/07/23/docker-ciso-panel-agentic-ai/</link>
-      <pubDate>Thu, 23 Jul 2026 15:26:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/23/docker-ciso-panel-agentic-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me AI чрез собствена разработка</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Google пусна Gemini 3.6 Flash в Model Garden с подобрена агентна ефективност</title>
-      <link>https://svetni.me/articles/2026/07/21/google-gemini-3-6-flash-model-garden/</link>
-      <pubDate>Tue, 21 Jul 2026 20:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/21/google-gemini-3-6-flash-model-garden/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление в платформата Model Garden [1] компанията Google обяви официалния си дебют на най-новия модел от среден клас — Gemini 3.6 Flash. Новото попълнение в семейството Gemini е достъпно в Google Cloud Model Garden, Google AI Studio, Gemini Enterprise Agent Platform, както и директно интегрирано в средата за разработка GitHub Copilot.</p>]]></description>
-    </item>
-
-    <item>
-      <title>САЩ заплашват със санкции китайските ИИ модели заради кражба на интелектуална собственост</title>
-      <link>https://svetni.me/articles/2026/07/21/us-threatens-sanctions-chinese-ai-ip-theft/</link>
-      <pubDate>Tue, 21 Jul 2026 19:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/21/us-threatens-sanctions-chinese-ai-ip-theft/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>САЩ подготвят нова фаза в технологичното си противопоставяне с Китай, като този път обект на потенциални санкции са директно самите софтуерни модели за изкуствен интелект. Според репортаж на TechCrunch [1], американският министър на финансите Скот Бесент заяви по Fox Business, че правителството ще разследва китайски модели с отворен код за евентуална кражба на интелектуална собственост от американски компании.</p>]]></description>
     </item>
   </channel>
 </rss>

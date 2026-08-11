@@ -19,4 +19,55 @@
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.anthropic.com/news/introducing-claude-tag">Introducing Claude Tag - Anthropic</a></p>
 <p>[2]: <a href="https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/">Anthropic’s Claude Tag is learning your company, one Slack message at a time - TechCrunch</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/claude-tag.html">Claude Tag</a><p>Claude Tag е специализирана интеграция на изкуствения интелект Claude в комуникационната платформа Slack, разработена от Anthropic и представена на 23...</p></li><li><a href="/pages/claude-opus-4-8.html">Claude Opus 4.8</a><p>Claude Opus 4.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/claude-tag.html">Claude Tag</a><p>Claude Tag е специализирана интеграция на изкуствения интелект Claude в комуникационната платформа Slack, разработена от Anthropic и представена на 23...</p></li><li><a href="/pages/claude-opus-4-8.html">Claude Opus 4.8</a><p>Claude Opus 4.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

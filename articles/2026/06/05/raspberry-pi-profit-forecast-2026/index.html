@@ -29,4 +29,55 @@
 <p>Това IPO се разглеждаше като изключително важно събитие за финансовото сити в Лондон, което страдаше от липса на нови технологични листвания и изтичане на капитали към борсите в Ню Йорк. Успехът на Raspberry Pi бързо я нареди сред най-обещаващите британски технологични компании, което доведе и до нейното включване в престижния индекс FTSE 250 през септември 2024 г. Настоящото повишаване на прогнозите за 2026 г. окончателно затвърждава доверието на инвеститорите в способността на компанията да монетизира хардуерните си разработки в условията на глобалната AI вълна.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.londonstockexchange.com/news-article/RPI/trading-update/16503628">Trading Update - London Stock Exchange</a><br>[2]: <a href="https://www.bbc.com/news/articles/czx2x3yl9rgo">Raspberry Pi raises profit forecast as AI demand grows - BBC News</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/raspberry-pi.html">Raspberry Pi</a><p>Raspberry Pi е британска компания, известна със своята серия от едноплаткови компютри с ниска цена и малки размери, първоначално създадени за насърчав...</p></li><li><a href="/pages/london-stock-exchange.html">London Stock Exchange</a><p>Лондонската фондова борса (London Stock Exchange, LSE) е една от най-старите и най-големи фондови борси в света, разположена в Лондон, Обединеното кра...</p></li><li><a href="/pages/dram.html">DRAM</a><p>DRAM (Dynamic Random-Access Memory — Динамична памет с произволен достъп) е широко разпространен тип полупроводникова оперативна памет (RAM), използва...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/raspberry-pi.html">Raspberry Pi</a><p>Raspberry Pi е британска компания, известна със своята серия от едноплаткови компютри с ниска цена и малки размери, първоначално създадени за насърчав...</p></li><li><a href="/pages/london-stock-exchange.html">London Stock Exchange</a><p>Лондонската фондова борса (London Stock Exchange, LSE) е една от най-старите и най-големи фондови борси в света, разположена в Лондон, Обединеното кра...</p></li><li><a href="/pages/dram.html">DRAM</a><p>DRAM (Dynamic Random-Access Memory — Динамична памет с произволен достъп) е широко разпространен тип полупроводникова оперативна памет (RAM), използва...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

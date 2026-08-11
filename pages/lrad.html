@@ -16,4 +16,55 @@
 </li>
 </ul>
 <p>Тези системи се използват широко от военноморски и сухопътни сили, гранични служби и правоохранителни органи за контрол на тълпи, ескалация на силата (Escalation of Force) и провеждане на психологически операции (PSYOPS).</p>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/23/ukrainian-troops-acoustic-lrad/">Елитни украински войски тренират с мощната акустична система Genasys LRAD</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/zapier.html">Zapier</a></li><li><a href="/pages/oam.html">OAM (Open Accelerator Module)</a></li><li><a href="/pages/neural-network.html">Невронна мрежа (Neural Network)</a></li><li><a href="/pages/obelisk.html">Obelisk</a></li><li><a href="/pages/noam-schwartz.html">Ноам Шварц</a></li><li><a href="/pages/aviatrix.html">Aviatrix</a></li><li><a href="/pages/peak-end-rule.html">Правило на върха и края (Peak-End Rule)</a></li><li><a href="/pages/nvidia-nemotron.html">NVIDIA Nemotron</a></li><li><a href="/pages/ollama.html">Ollama</a></li><li><a href="/pages/oauth.html">OAuth</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/23/ukrainian-troops-acoustic-lrad/">Елитни украински войски тренират с мощната акустична система Genasys LRAD</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/green-mobility.html">Зелена мобилност</a></li><li><a href="/pages/john-hardy.html">Джон Харди</a></li><li><a href="/pages/digital-crimes-unit.html">Digital Crimes Unit (DCU)</a></li><li><a href="/pages/harvey.html">Harvey</a></li><li><a href="/pages/dmtmsa.html">DMTMSA</a></li><li><a href="/pages/derek-whitfield.html">Дерек Уитфийлд</a></li><li><a href="/pages/jensen-huang.html">Дженсън Хуанг</a></li><li><a href="/pages/elevenlabs.html">ElevenLabs</a></li><li><a href="/pages/donald-trump.html">Доналд Тръмп (Donald Trump)</a></li><li><a href="/pages/ensemble-ai.html">Ensemble AI</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

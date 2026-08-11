@@ -18,4 +18,55 @@
 <p>До неделя сутринта голяма част от резултатите за споделени чатове на Claude изчезнаха от индекса на Google Search, което предполага, че Anthropic и Google вече предприемат действия за ограничаване на видимостта им [1]. Въпреки това, експертите съветват организациите да преразгледат споделеното съдържание и да прилагат същите строги политики за ИИ инструменти, каквито важат за корпоративните пространства в Google Docs или Slack [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://venturebeat.com/technology/uh-oh-some-claude-shared-conversations-and-artifacts-appear-to-be-indexed-and-publicly-accessible-on-google-search">Uh-oh: Some Claude shared conversations and Artifacts appear to be indexed and publicly accessible on Google Search - VentureBeat</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reddit.html">Reddit</a><p>Reddit е платформа за социални новини и дискусии, организирана в хиляди тематични общности, наречени „субредити“ (subreddits).</p></li><li><a href="/pages/privacy.html">Поверителност (Privacy)</a><p>Поверителността (privacy) е фундаменталното право на индивида да контролира достъпа до своята лична информация и да бъде защитен от неоправдано наблюд...</p></li><li><a href="/pages/google-search.html">Google Search</a><p>Google Search (Търсачката на Google) е най-популярната търсачка за уеб съдържание в света, разработена и поддържана от компанията Google.</p></li><li><a href="/pages/data-leak.html">Изтичане на данни (Data Leak)</a><p>Изтичането на данни (data leak или data exposure) е инцидент с информационната сигурност, при който поверителна, защитена или чувствителна информация ...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reddit.html">Reddit</a><p>Reddit е платформа за социални новини и дискусии, организирана в хиляди тематични общности, наречени „субредити“ (subreddits).</p></li><li><a href="/pages/privacy.html">Поверителност (Privacy)</a><p>Поверителността (privacy) е фундаменталното право на индивида да контролира достъпа до своята лична информация и да бъде защитен от неоправдано наблюд...</p></li><li><a href="/pages/google-search.html">Google Search</a><p>Google Search (Търсачката на Google) е най-популярната търсачка за уеб съдържание в света, разработена и поддържана от компанията Google.</p></li><li><a href="/pages/data-leak.html">Изтичане на данни (Data Leak)</a><p>Изтичането на данни (data leak или data exposure) е инцидент с информационната сигурност, при който поверителна, защитена или чувствителна информация ...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

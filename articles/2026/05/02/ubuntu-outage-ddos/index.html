@@ -16,4 +16,55 @@
 <p>Неясно остава защо възстановяването отнема толкова време, като се има предвид наличието на множество професионални услуги за защита срещу DDoS атаки.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://arstechnica.com/security/2026/05/ubuntu-infrastructure-has-been-down-for-more-than-a-day/">Ubuntu infrastructure has been down for more than a day - Ars Technica</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/ubuntu.html">Ubuntu</a><p>Ubuntu е най-широко използваната операционна система с отворен код, базирана на ядрото Linux.</p></li><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li><li><a href="/pages/dan-goodin.html">Дан Гудин</a><p>Дан Гудин (Dan Goodin) е известен технологичен журналист и старши редактор по въпросите на сигурността в Ars Technica.</p></li><li><a href="/pages/canonical.html">Canonical</a><p>Canonical е британска технологична компания, известна основно като издател на Ubuntu – най-популярната дистрибуция на Linux в света.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/ubuntu.html">Ubuntu</a><p>Ubuntu е най-широко използваната операционна система с отворен код, базирана на ядрото Linux.</p></li><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li><li><a href="/pages/dan-goodin.html">Дан Гудин</a><p>Дан Гудин (Dan Goodin) е известен технологичен журналист и старши редактор по въпросите на сигурността в Ars Technica.</p></li><li><a href="/pages/canonical.html">Canonical</a><p>Canonical е британска технологична компания, известна основно като издател на Ubuntu – най-популярната дистрибуция на Linux в света.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

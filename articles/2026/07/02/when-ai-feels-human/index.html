@@ -28,4 +28,55 @@
 <p>Крайната цел на тези упражнения е да се развие критично самосъзнание и здравословно <a href="/pages/critical-thinking.html">критично мислене</a> спрямо информацията от машините [1]. Разбирането на техническата същност на алгоритмите помага на учениците да осъзнаят, че софтуерът не притежава морал или разбиране, а неговите грешки или <a href="/pages/hallucination.html">халюцинации</a> са следствие от статистически модели, а не от лоши намерения. Доверието към технологиите трябва да се гради на базата на проверими доказателства, а не на базата на човекоподобния им език.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.teachthought.com/education-posts/teach-students-when-ai-feels-human/">When AI Feels Human: Ways To Teach Students About Anthropomorphism - TeachThought</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/teachthought.html">TeachThought</a><p>TeachThought е популярна дигитална платформа и онлайн медия, специализирана в публикуването на образователни ресурси, педагогически стратегии и матери...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/hallucination.html">Халюцинация (Hallucination)</a><p>В контекста на ИИ, халюцинация възниква, когато голям езиков модел (LLM) генерира фактологично неправилна, безсмислена или откъсната от реалността инф...</p></li><li><a href="/pages/education-technology.html">Образователни технологии</a><p>Образователните технологии (EdTech) включват използването на компютърен хардуер, софтуер, дигитални инструменти и педагогически подходи за подобряване...</p></li><li><a href="/pages/critical-thinking.html">Критично мислене</a><p>Критичното мислене е дисциплиниран интелектуален процес на активно анализиране, синтезиране и оценяване на информация с цел формиране на обосновано за...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/anthropomorphism.html">Антропоморфизъм</a><p>Антропоморфизмът е психологически феномен, при който хората приписват човешки качества, характеристики, намерения, емоции или съзнание на нечовешки об...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/teachthought.html">TeachThought</a><p>TeachThought е популярна дигитална платформа и онлайн медия, специализирана в публикуването на образователни ресурси, педагогически стратегии и матери...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/hallucination.html">Халюцинация (Hallucination)</a><p>В контекста на ИИ, халюцинация възниква, когато голям езиков модел (LLM) генерира фактологично неправилна, безсмислена или откъсната от реалността инф...</p></li><li><a href="/pages/education-technology.html">Образователни технологии</a><p>Образователните технологии (EdTech) включват използването на компютърен хардуер, софтуер, дигитални инструменти и педагогически подходи за подобряване...</p></li><li><a href="/pages/critical-thinking.html">Критично мислене</a><p>Критичното мислене е дисциплиниран интелектуален процес на активно анализиране, синтезиране и оценяване на информация с цел формиране на обосновано за...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/anthropomorphism.html">Антропоморфизъм</a><p>Антропоморфизмът е психологически феномен, при който хората приписват човешки качества, характеристики, намерения, емоции или съзнание на нечовешки об...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

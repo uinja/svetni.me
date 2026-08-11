@@ -18,4 +18,55 @@
 <li>Редовни одити на споделените ресурси и облачните конфигурации.</li>
 <li>Използване на удостоверяване (автентификация) за всяка чувствителна информация, вместо разчитане само на секретността на уеб адреса (URL).</li>
 </ul>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/27/claude-shared-chats-indexed-google/">Индексираха публично споделени чатове и артефакти от Claude в Google Search</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/matt-muller.html">Matt Muller</a></li><li><a href="/pages/cisco.html">Cisco</a></li><li><a href="/pages/bernie-sanders.html">Бърни Сандърс</a></li><li><a href="/pages/kimi-k3.html">Kimi K3</a></li><li><a href="/pages/iclr-2026.html">ICLR 2026</a></li><li><a href="/pages/automation.html">Automation (Автоматизация)</a></li><li><a href="/pages/apex.html">APEX</a></li><li><a href="/pages/apache-zeppelin.html">Apache Zeppelin</a></li><li><a href="/pages/alphazero.html">AlphaZero</a></li><li><a href="/pages/gpt-5.html">GPT-5</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/27/claude-shared-chats-indexed-google/">Индексираха публично споделени чатове и артефакти от Claude в Google Search</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/cyberbullying-research-center.html">Cyberbullying Research Center (Център за изследване на кибертормоза)</a></li><li><a href="/pages/nyu.html">NYU</a></li><li><a href="/pages/nvidia-nemotron.html">NVIDIA Nemotron</a></li><li><a href="/pages/open-design.html">Open Design</a></li><li><a href="/pages/peak-end-rule.html">Правило на върха и края (Peak-End Rule)</a></li><li><a href="/pages/obelisk.html">Obelisk</a></li><li><a href="/pages/praveen-neppalli-naga.html">Правен Непали Нага</a></li><li><a href="/pages/openssf.html">Open Source Security Foundation (OpenSSF)</a></li><li><a href="/pages/solar-roof.html">Solar Roof</a></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

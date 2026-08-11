@@ -23,4 +23,55 @@
 <p>Финансово Airbnb остава в силна позиция, като нетната печалба е нараснала с 3,9% до 160 милиона долара при приходи от 2,7 милиарда долара за тримесечието [1]. Броят на резервираните нощувки също отчита стабилен ръст от 9%.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://techcrunch.com/2026/05/08/airbnb-says-ai-now-writes-60-of-its-new-code/">Airbnb says AI now writes 60% of its new code - TechCrunch</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/brian-chesky.html">Брайън Чески</a><p>Брайън Чески (Brian Chesky) е американски предприемач и съосновател на Airbnb.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/airbnb.html">Airbnb</a><p>Airbnb е глобална онлайн платформа за отдаване под наем на жилища и преживявания.</p></li><li><a href="/pages/ai-agent.html">ИИ Агент (AI Agent)</a><p>ИИ Агентът е система, която използва голям езиков модел като свой „мозък“, за да изпълнява автономно задачи в няколко стъпки.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/brian-chesky.html">Брайън Чески</a><p>Брайън Чески (Brian Chesky) е американски предприемач и съосновател на Airbnb.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/airbnb.html">Airbnb</a><p>Airbnb е глобална онлайн платформа за отдаване под наем на жилища и преживявания.</p></li><li><a href="/pages/ai-agent.html">ИИ Агент (AI Agent)</a><p>ИИ Агентът е система, която използва голям езиков модел като свой „мозък“, за да изпълнява автономно задачи в няколко стъпки.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

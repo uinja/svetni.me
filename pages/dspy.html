@@ -18,4 +18,55 @@
 <li><strong>Надеждност:</strong> Превръща „черната магия“ на промпт инженеринга в повторяем софтуерен процес.</li>
 </ul>
 <p>През 2026 г. DSPy е предпочитаният инструмент за разработчици, които изграждат сложни агентни системи и искат те да работят стабилно в производствена среда.</p>
-</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/mythos.html">Mythos</a></li><li><a href="/pages/celestica.html">Celestica</a></li><li><a href="/pages/coze.html">Coze</a></li><li><a href="/pages/ant-group.html">Ant Group</a></li><li><a href="/pages/broadcom.html">Broadcom</a></li><li><a href="/pages/accenture.html">Accenture</a></li><li><a href="/pages/howard-lutnick.html">Хауърд Лутник</a></li><li><a href="/pages/kong.html">Kong</a></li><li><a href="/pages/business-insider.html">Business Insider</a></li><li><a href="/pages/4d-printing.html">4D Printing</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/tokens.html">Токени (Tokens)</a></li><li><a href="/pages/jonathan-blow.html">Джонатан Блоу</a></li><li><a href="/pages/deepak-iyer.html">Deepak Iyer</a></li><li><a href="/pages/clifton-ai.html">Clifton AI</a></li><li><a href="/pages/antigravity-cli.html">Antigravity CLI</a></li><li><a href="/pages/alta-ares.html">Alta Ares</a></li><li><a href="/pages/adept-ai.html">Adept AI</a></li><li><a href="/pages/databricks-genie.html">Databricks Genie</a></li><li><a href="/pages/acquia.html">Acquia</a></li><li><a href="/pages/broadcom.html">Broadcom</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

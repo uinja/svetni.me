@@ -23,4 +23,55 @@
 <p>Работата на изследователите ще бъде представена на Международната конференция по представяне на обучението (ICLR) по-късно този месец [2].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://news.mit.edu/2026/teaching-ai-models-to-say-im-not-sure-0422">Teaching AI models to say “I’m not sure” - MIT News</a><br>[2]: <a href="https://arxiv.org/abs/2507.16806">RLCR: Reinforcement Learning with Calibration Rewards - arXiv</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rlcr.html">RLCR (Reinforcement Learning with Calibration Rewards)</a><p>RLCR (Reinforcement Learning with Calibration Rewards) е иновативен метод за обучение на изкуствен интелект, разработен от изследователи в MIT CSAIL п...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/mit-csail.html">MIT CSAIL</a><p>Лабораторията за компютърни науки и изкуствен интелект на MIT (MIT CSAIL) е един от най-големите и престижни изследователски центрове в света в област...</p></li><li><a href="/pages/brier-score.html">Оценка на Брайър (Brier score)</a><p>Оценката на Брайър (Brier score) е статистическа мярка, използвана за оценка на точността на вероятностни предсказания.</p></li><li><a href="/pages/arxiv.html">arXiv</a><p>arXiv е хранилище за електронен предпечат (preprint) на научни статии в областите на физиката, математиката, компютърните науки и други.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rlcr.html">RLCR (Reinforcement Learning with Calibration Rewards)</a><p>RLCR (Reinforcement Learning with Calibration Rewards) е иновативен метод за обучение на изкуствен интелект, разработен от изследователи в MIT CSAIL п...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/mit-csail.html">MIT CSAIL</a><p>Лабораторията за компютърни науки и изкуствен интелект на MIT (MIT CSAIL) е един от най-големите и престижни изследователски центрове в света в област...</p></li><li><a href="/pages/brier-score.html">Оценка на Брайър (Brier score)</a><p>Оценката на Брайър (Brier score) е статистическа мярка, използвана за оценка на точността на вероятностни предсказания.</p></li><li><a href="/pages/arxiv.html">arXiv</a><p>arXiv е хранилище за електронен предпечат (preprint) на научни статии в областите на физиката, математиката, компютърните науки и други.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

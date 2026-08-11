@@ -21,4 +21,55 @@
 <p>OpenAI работи съвместно с Broadcom по собствен процесор за извличане на изводи, а Anthropic проучва възможности за разработка на чипове със Samsung [2]. В същото време облачни гиганти като Google и Amazon вече имат утвърдени серии от собствени ИИ чипове, за да посрещнат експлозивното търсене в индустрията [2].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.reuters.com/world/asia-pacific/meta-put-ai-chip-into-production-september-it-looks-double-computing-capacity-2026-07-09/">Meta to put AI chip into production in September as it looks to double computing capacity - Reuters scoop</a><br>[2]: <a href="https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/">Meta’s new AI chips will begin production in September - TechCrunch</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tsmc.html">TSMC</a><p>Taiwan Semiconductor Manufacturing Company (TSMC) е най-големият независим производител на полупроводници в света.</p></li><li><a href="/pages/samsung.html">Samsung</a><p>Samsung Electronics е южнокорейски конгломерат и глобален технологичен гигант, който е най-големият производител на чипове с памет (DRAM и NAND) в све...</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/mtia.html">MTIA</a><p>MTIA (Meta Training and Inference Accelerator) е семейство от специализирани интегрални схеми (ASIC), разработвани от компанията Meta за ускоряване на...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/broadcom.html">Broadcom</a><p>Broadcom Inc.</p></li><li><a href="/pages/amd.html">AMD</a><p>Advanced Micro Devices (AMD) е американска мултинационална компания за полупроводници, която проектира компютърни процесори и графични технологии.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tsmc.html">TSMC</a><p>Taiwan Semiconductor Manufacturing Company (TSMC) е най-големият независим производител на полупроводници в света.</p></li><li><a href="/pages/samsung.html">Samsung</a><p>Samsung Electronics е южнокорейски конгломерат и глобален технологичен гигант, който е най-големият производител на чипове с памет (DRAM и NAND) в све...</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/mtia.html">MTIA</a><p>MTIA (Meta Training and Inference Accelerator) е семейство от специализирани интегрални схеми (ASIC), разработвани от компанията Meta за ускоряване на...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/broadcom.html">Broadcom</a><p>Broadcom Inc.</p></li><li><a href="/pages/amd.html">AMD</a><p>Advanced Micro Devices (AMD) е американска мултинационална компания за полупроводници, която проектира компютърни процесори и графични технологии.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

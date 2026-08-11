@@ -11,4 +11,55 @@
 <p>За да се гарантира непрекъсваемост на сигнала, Netflix внедрява принципа на тройната <a href="/pages/redundancy.html">резервираност</a>. Всеки критичен път на предаване се дублира трикратно през различни географски локации и доставчици. Това позволява на системата да превключи мигновено към резервен канал при технически срив, без зрителите да усетят прекъсване.</p>
 <p>По време на финала на World Baseball Classic, Netflix отчете рекордните 17,9 милиона едновременни зрители [1]. Този успех е резултат от интеграцията на облачни технологии с прецизни оперативни протоколи, които позволяват на компанията да управлява сложни събития – от комедийни шоута до спортни първенства – с качеството на традиционна телевизия, но в мащаба на глобалния <a href="/pages/streaming.html">стрийминг</a>.</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597">The Human Infrastructure: How Netflix Built the Operations Layer Behind Live at Scale - Netflix Tech Blog</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/streaming.html">Стрийминг</a><p>Стриймингът е технология за предаване на аудио и видео данни в реално време през интернет, без необходимост от предварително изтегляне на целия файл.</p></li><li><a href="/pages/redundancy.html">Резервираност</a><p>Резервираността (redundancy) е архитектурен принцип в инженерството, при който критични компоненти на системата са дублирани.</p></li><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/live-broadcasting.html">Излъчване на живо</a><p>Излъчването на живо (live broadcasting) е процесът на едновременно заснемане и предаване на съдържание до зрителите в реално време.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/streaming.html">Стрийминг</a><p>Стриймингът е технология за предаване на аудио и видео данни в реално време през интернет, без необходимост от предварително изтегляне на целия файл.</p></li><li><a href="/pages/redundancy.html">Резервираност</a><p>Резервираността (redundancy) е архитектурен принцип в инженерството, при който критични компоненти на системата са дублирани.</p></li><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/live-broadcasting.html">Излъчване на живо</a><p>Излъчването на живо (live broadcasting) е процесът на едновременно заснемане и предаване на съдържание до зрителите в реално време.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

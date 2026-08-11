@@ -13,4 +13,55 @@
 <p>Успехът на Baidu подчертава нарастващата тенденция в ИИ индустрията към търсене на методи за оптимизация, които правят мащабните езикови модели (<a href="/pages/ernie.html">ERNIE</a>) по-достъпни и устойчиви, намалявайки едновременно финансовата бариера и екологичния отпечатък от тяхната разработка.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.machinebrief.com/news/baidus-ernie-51-cuts-94-percent-of-pre-training-costs-while-qeyp">Baidu&#39;s Ernie 5.1 cuts 94 percent of pre-training costs while competing with top models - Machine Brief</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/pre-training.html">Предварително обучение</a><p>Предварителното обучение (Pre-training) е началната и най-ресурсоемка фаза от създаването на мащабен езиков модел.</p></li><li><a href="/pages/once-for-all.html">Once-For-All (OFA)</a><p>Once-For-All (OFA) е иновативна методология за обучение на невронни мрежи, която позволява създаването на един голям „супер-модел“, от който могат дир...</p></li><li><a href="/pages/ernie.html">ERNIE</a><p>ERNIE (Enhanced Representation through Knowledge Integration) е фамилия от мащабни езикови модели (LLM), разработени от китайския технологичен гигант ...</p></li><li><a href="/pages/baidu.html">Baidu</a><p>Baidu е водеща китайска технологична компания, специализирана в интернет услуги и изкуствен интелект.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/pre-training.html">Предварително обучение</a><p>Предварителното обучение (Pre-training) е началната и най-ресурсоемка фаза от създаването на мащабен езиков модел.</p></li><li><a href="/pages/once-for-all.html">Once-For-All (OFA)</a><p>Once-For-All (OFA) е иновативна методология за обучение на невронни мрежи, която позволява създаването на един голям „супер-модел“, от който могат дир...</p></li><li><a href="/pages/ernie.html">ERNIE</a><p>ERNIE (Enhanced Representation through Knowledge Integration) е фамилия от мащабни езикови модели (LLM), разработени от китайския технологичен гигант ...</p></li><li><a href="/pages/baidu.html">Baidu</a><p>Baidu е водеща китайска технологична компания, специализирана в интернет услуги и изкуствен интелект.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

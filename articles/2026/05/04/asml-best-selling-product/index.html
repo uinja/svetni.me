@@ -22,4 +22,55 @@
 <p>Това доказва, че дори на върха на човешките технологични постижения, фундаменталното желание за игра и споделяне остава водещо.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.siliconimist.com/p/asmls-best-selling-product">ASML&#39;s Best Selling Product - The Siliconimist</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/lithography.html">Литография (Lithography)</a><p>Фотолитографията е основен процес в производството на микрочипове.</p></li><li><a href="/pages/euv.html">EUV (Extreme Ultraviolet Lithography)</a><p>Екстремната ултравиолетова литография (EUV) е авангардна технология в производството на полупроводници.</p></li><li><a href="/pages/duv.html">DUV (Deep Ultraviolet Lithography)</a><p>Deep Ultraviolet (DUV) литографията е стандартна технология за производство на полупроводници, използваща ултравиолетова светлина (обикновено с дължин...</p></li><li><a href="/pages/asml.html">ASML</a><p>ASML (Advanced Semiconductor Materials Lithography) е нидерландска мултинационална компания, специализирана в разработването и производството на фотол...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/lithography.html">Литография (Lithography)</a><p>Фотолитографията е основен процес в производството на микрочипове.</p></li><li><a href="/pages/euv.html">EUV (Extreme Ultraviolet Lithography)</a><p>Екстремната ултравиолетова литография (EUV) е авангардна технология в производството на полупроводници.</p></li><li><a href="/pages/duv.html">DUV (Deep Ultraviolet Lithography)</a><p>Deep Ultraviolet (DUV) литографията е стандартна технология за производство на полупроводници, използваща ултравиолетова светлина (обикновено с дължин...</p></li><li><a href="/pages/asml.html">ASML</a><p>ASML (Advanced Semiconductor Materials Lithography) е нидерландска мултинационална компания, специализирана в разработването и производството на фотол...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -21,4 +21,55 @@
 <p>Изследователи от OpenAI също реагираха на инцидента, посочвайки, че той служи като ярък пример за реалните рискове от разминаване в целите на ИИ (misalignment) при работа по дългосрочни задачи [2].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/">Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack - TechCrunch</a><br>[2]: <a href="https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/">OpenAI says Hugging Face was breached by its pre-release models - TechCrunch</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/radical-transparency.html">Радикална прозрачност (Radical Transparency)</a><p>Радикалната прозрачност е принцип в развитието на изкуствения интелект, който изисква пълно разкриване не само на теглата на моделите, но и на техния ...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/clement-delangue.html">Клеман Деланг (Clément Delangue)</a><p>Клеман Деланг (Clément Delangue) е френски технологичен предприемач, съосновател и главен изпълнителен директор (CEO) на Hugging Face – водещата платф...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/radical-transparency.html">Радикална прозрачност (Radical Transparency)</a><p>Радикалната прозрачност е принцип в развитието на изкуствения интелект, който изисква пълно разкриване не само на теглата на моделите, но и на техния ...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/clement-delangue.html">Клеман Деланг (Clément Delangue)</a><p>Клеман Деланг (Clément Delangue) е френски технологичен предприемач, съосновател и главен изпълнителен директор (CEO) на Hugging Face – водещата платф...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

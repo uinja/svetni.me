@@ -37,4 +37,55 @@
 <p>Service Topology на Netflix е ярък пример за това как модерното софтуерно инженерство преминава от фрагментирани телеметрични силози към единни, интелигентни карти на разпределената инфраструктура. Чрез автоматизиране на мрежовия анализ и обединяване на ядрото с приложното ниво, стрийминг гигантът поставя нови стандарти за надеждност в ерата на облачните технологии.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc">From Silos to Service Topology: Why Netflix Built a Real-Time Service Map - Netflix TechBlog</a><br>[2]: <a href="https://netflixtechblog.com/introducing-bpftop-streamlining-ebpf-performance-optimization-6a727c7d3126">Introducing bpftop: Streamlining eBPF performance optimization - Netflix TechBlog</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/observability.html">Наблюдаемост (Observability)</a><p>Наблюдаемостта (Observability) е способността за разбиране на вътрешното състояние на една сложна система чрез анализ на нейните външни сигнали (телем...</p></li><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/microservices.html">Microservices (Микроуслуги)</a><p>Микроуслугите (Microservices) са архитектурен стил за разработка на софтуер, при който голямо приложение се изгражда като набор от малки, независими у...</p></li><li><a href="/pages/ebpf.html">eBPF (Extended Berkeley Packet Filter)</a><p>eBPF (Extended Berkeley Packet Filter) е технология в ядрото на Linux, която позволява изпълнението на безопасни програми в защитена среда (sandbox) д...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/observability.html">Наблюдаемост (Observability)</a><p>Наблюдаемостта (Observability) е способността за разбиране на вътрешното състояние на една сложна система чрез анализ на нейните външни сигнали (телем...</p></li><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/microservices.html">Microservices (Микроуслуги)</a><p>Микроуслугите (Microservices) са архитектурен стил за разработка на софтуер, при който голямо приложение се изгражда като набор от малки, независими у...</p></li><li><a href="/pages/ebpf.html">eBPF (Extended Berkeley Packet Filter)</a><p>eBPF (Extended Berkeley Packet Filter) е технология в ядрото на Linux, която позволява изпълнението на безопасни програми в защитена среда (sandbox) д...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

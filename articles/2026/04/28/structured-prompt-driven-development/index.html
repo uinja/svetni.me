@@ -26,4 +26,55 @@
 <p>Инструменти с отворен код като <code>openspdd</code> вече помагат за автоматизирането на този цикъл, позволявайки на екипите да поддържат синхрон между намерението и реализацията. С тази методология, ИИ спира да бъде непредвидим асистент и се превръща в прецизен инструмент в ръцете на истинския архитект.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://martinfowler.com/articles/structured-prompt-driven/">Structured-Prompt-Driven Development (SPDD) - Martin Fowler</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wei-zhang.html">Уей Джан (Wei Zhang)</a><p>Уей Джан е експерт по доставка на софтуер с помощта на ИИ и софтуерен архитект в Thoughtworks.</p></li><li><a href="/pages/thoughtworks.html">Thoughtworks</a><p>Thoughtworks е глобална технологична консултантска компания, известна със своя принос към гъвкавата разработка (Agile), софтуерната архитектура и инже...</p></li><li><a href="/pages/spdd.html">SPDD (Structured-Prompt-Driven Development)</a><p>Structured-Prompt-Driven Development (SPDD) е инженерна методология за разработка на софтуер, която третира промптовете (prompts) като първокласни арт...</p></li><li><a href="/pages/neural-network.html">Невронна мрежа (Neural Network)</a><p>Изкуствената невронна мрежа (ANN) е изчислителен модел, вдъхновен от структурата и функцията на биологичния мозък.</p></li><li><a href="/pages/martin-fowler.html">Мартин Фаулър (Martin Fowler)</a><p>Мартин Фаулър е британски софтуерен инженер, автор и международен лектор по софтуерна архитектура и дизайн.</p></li><li><a href="/pages/jessie-jie-xia.html">Джеси Дзи Ся (Jessie Jie Xia)</a><p>Джеси Дзи Ся е глобален ИТ директор (Global CIO) в Thoughtworks.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wei-zhang.html">Уей Джан (Wei Zhang)</a><p>Уей Джан е експерт по доставка на софтуер с помощта на ИИ и софтуерен архитект в Thoughtworks.</p></li><li><a href="/pages/thoughtworks.html">Thoughtworks</a><p>Thoughtworks е глобална технологична консултантска компания, известна със своя принос към гъвкавата разработка (Agile), софтуерната архитектура и инже...</p></li><li><a href="/pages/spdd.html">SPDD (Structured-Prompt-Driven Development)</a><p>Structured-Prompt-Driven Development (SPDD) е инженерна методология за разработка на софтуер, която третира промптовете (prompts) като първокласни арт...</p></li><li><a href="/pages/neural-network.html">Невронна мрежа (Neural Network)</a><p>Изкуствената невронна мрежа (ANN) е изчислителен модел, вдъхновен от структурата и функцията на биологичния мозък.</p></li><li><a href="/pages/martin-fowler.html">Мартин Фаулър (Martin Fowler)</a><p>Мартин Фаулър е британски софтуерен инженер, автор и международен лектор по софтуерна архитектура и дизайн.</p></li><li><a href="/pages/jessie-jie-xia.html">Джеси Дзи Ся (Jessie Jie Xia)</a><p>Джеси Дзи Ся е глобален ИТ директор (Global CIO) в Thoughtworks.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

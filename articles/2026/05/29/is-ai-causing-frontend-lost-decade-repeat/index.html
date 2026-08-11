@@ -15,4 +15,55 @@
 <p>Вместо да се борим срещу неизбежната индустриализация на кода, Биег предлага да се поучим от движението <a href="/pages/bauhaus.html">Баухаус</a> [1]. Когато машините заплашват традиционните занаяти, Баухаус обединява занаятчийството с индустриалните процеси, като акцентира върху разбирането на материалите и фокуса върху крайния потребител. Днес разработчиците трябва да гледат на ИИ като на поредния инструмент в кутията, без обаче да изоставят овладяването на базовите технологии като <a href="/pages/html.html">HTML</a> и <a href="/pages/css.html">CSS</a> [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">Is AI causing a repeat of Frontend&#39;s Lost Decade? - Mauro Bieg</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/react.html">React</a><p>React е JavaScript библиотека с отворен код за изграждане на потребителски интерфейси, поддържана от Meta и широка общност от разработчици.</p></li><li><a href="/pages/mauro-bieg.html">Mauro Bieg</a><p>Мауро Биег (Mauro Bieg) е софтуерен разработчик и автор, известен с публикациите си в сферата на уеб разработката, дизайна на софтуерни архитектури и ...</p></li><li><a href="/pages/javascript.html">JavaScript</a><p>JavaScript е основният език за програмиране в уеб браузърите, позволяващ създаването на интерактивно съдържание.</p></li><li><a href="/pages/html.html">HTML</a><p>HTML (HyperText Markup Language) е стандартният маркиращ език за структуриране и представяне на съдържание в Световната мрежа (WWW).</p></li><li><a href="/pages/css.html">CSS</a><p>CSS (Cascading Style Sheets) е език за стилизиране, използван за определяне на визуалния облик и оформлението на уеб страници, написани на HTML.</p></li><li><a href="/pages/bauhaus.html">Bauhaus</a><p>Баухаус (Bauhaus) е влиятелно германско училище за дизайн, архитектура и приложни изкуства, основано през 1919 г.</p></li><li><a href="/pages/alex-russell.html">Alex Russell</a><p>Алекс Ръсел (Alex Russell) е изтъкнат софтуерен инженер и защитник на уеб стандартите, известен с работата си по Google Chrome и Microsoft Edge.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/react.html">React</a><p>React е JavaScript библиотека с отворен код за изграждане на потребителски интерфейси, поддържана от Meta и широка общност от разработчици.</p></li><li><a href="/pages/mauro-bieg.html">Mauro Bieg</a><p>Мауро Биег (Mauro Bieg) е софтуерен разработчик и автор, известен с публикациите си в сферата на уеб разработката, дизайна на софтуерни архитектури и ...</p></li><li><a href="/pages/javascript.html">JavaScript</a><p>JavaScript е основният език за програмиране в уеб браузърите, позволяващ създаването на интерактивно съдържание.</p></li><li><a href="/pages/html.html">HTML</a><p>HTML (HyperText Markup Language) е стандартният маркиращ език за структуриране и представяне на съдържание в Световната мрежа (WWW).</p></li><li><a href="/pages/css.html">CSS</a><p>CSS (Cascading Style Sheets) е език за стилизиране, използван за определяне на визуалния облик и оформлението на уеб страници, написани на HTML.</p></li><li><a href="/pages/bauhaus.html">Bauhaus</a><p>Баухаус (Bauhaus) е влиятелно германско училище за дизайн, архитектура и приложни изкуства, основано през 1919 г.</p></li><li><a href="/pages/alex-russell.html">Alex Russell</a><p>Алекс Ръсел (Alex Russell) е изтъкнат софтуерен инженер и защитник на уеб стандартите, известен с работата си по Google Chrome и Microsoft Edge.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

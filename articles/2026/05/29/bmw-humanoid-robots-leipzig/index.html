@@ -14,4 +14,55 @@
 <p>Според изявления на ръководството на концерна, хуманоидните роботи не са предназначени да заменят изцяло човешкия труд, а да работят съвместно с него. Тази вълна на автоматизация се сравнява с промените от 70-те години на миналия век, довели в крайна сметка до появата на нови видове работни места [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.bbc.com/news/articles/cgmpwzzvxr2o">Humanoid robots &#39;the future&#39; of car making, says BMW - BBC</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/physical-ai.html">Физически ИИ (Physical AI)</a><p>Физическият ИИ се отнася до прилагането на изкуствен интелект в реалния свят, специално в области като роботика, индустриална автоматизация и автономн...</p></li><li><a href="/pages/humanoid-robot.html">Хуманоиден робот</a><p>Хуманоидният робот е машина, чиято форма на тялото е проектирана да наподобява човешката.</p></li><li><a href="/pages/hexagon-robotics.html">Hexagon Robotics</a><p>Hexagon Robotics е базирано в Цюрих, Швейцария, специализирано подразделение на шведския индустриален гигант Hexagon.</p></li><li><a href="/pages/figure-ai.html">Figure AI</a><p>Figure AI е американска технологична компания, базирана в Силициевата долина, която разработва хуманоидни роботи с общо предназначение.</p></li><li><a href="/pages/bmw.html">BMW</a><p>BMW (Bayerische Motoren Werke AG) е един от водещите германски производители на луксозни автомобили и мотоциклети със седалище в Мюнхен.</p></li><li><a href="/pages/bbc.html">BBC</a><p>BBC (British Broadcasting Corporation) е британската обществена медийна корпорация, която е най-старият и един от най-големите телевизионни и радиораз...</p></li><li><a href="/pages/aeon.html">AEON</a><p>AEON е мобилен хуманоиден робот, разработен от Hexagon Robotics.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/physical-ai.html">Физически ИИ (Physical AI)</a><p>Физическият ИИ се отнася до прилагането на изкуствен интелект в реалния свят, специално в области като роботика, индустриална автоматизация и автономн...</p></li><li><a href="/pages/humanoid-robot.html">Хуманоиден робот</a><p>Хуманоидният робот е машина, чиято форма на тялото е проектирана да наподобява човешката.</p></li><li><a href="/pages/hexagon-robotics.html">Hexagon Robotics</a><p>Hexagon Robotics е базирано в Цюрих, Швейцария, специализирано подразделение на шведския индустриален гигант Hexagon.</p></li><li><a href="/pages/figure-ai.html">Figure AI</a><p>Figure AI е американска технологична компания, базирана в Силициевата долина, която разработва хуманоидни роботи с общо предназначение.</p></li><li><a href="/pages/bmw.html">BMW</a><p>BMW (Bayerische Motoren Werke AG) е един от водещите германски производители на луксозни автомобили и мотоциклети със седалище в Мюнхен.</p></li><li><a href="/pages/bbc.html">BBC</a><p>BBC (British Broadcasting Corporation) е британската обществена медийна корпорация, която е най-старият и един от най-големите телевизионни и радиораз...</p></li><li><a href="/pages/aeon.html">AEON</a><p>AEON е мобилен хуманоиден робот, разработен от Hexagon Robotics.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

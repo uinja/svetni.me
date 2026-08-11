@@ -15,4 +15,55 @@
 </ol>
 <h2>Резултатът</h2>
 <p>Това прави разработването на ИИ приложения много по-бързо и изисква много по-малко данни. Без трансферно обучение съвременният бум на специализирани ИИ инструменти (за дизайн, диагностика или кодиране) би бил невъзможен.</p>
-</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/zhipu.html">Zhipu AI</a></li><li><a href="/pages/kpmg.html">KPMG</a></li><li><a href="/pages/andy-jassy.html">Анди Джаси (Andy Jassy)</a></li><li><a href="/pages/bob-diachenko.html">Боб Дяченко (Bob Diachenko)</a></li><li><a href="/pages/azure-ai-foundry.html">Azure AI Foundry</a></li><li><a href="/pages/context-overload.html">Претоварване с контекст (Context Overload)</a></li><li><a href="/pages/csv.html">CSV</a></li><li><a href="/pages/backstage.html">Backstage</a></li><li><a href="/pages/black-box-ai.html">Black Box AI (Черна кутия)</a></li><li><a href="/pages/artifactory.html">JFrog Artifactory</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/zapier.html">Zapier</a></li><li><a href="/pages/nvidia-vera-rubin.html">NVIDIA Vera Rubin</a></li><li><a href="/pages/openssf.html">Open Source Security Foundation (OpenSSF)</a></li><li><a href="/pages/optimus.html">Optimus</a></li><li><a href="/pages/paleolithic.html">Палеолит</a></li><li><a href="/pages/libreoffice.html">LibreOffice</a></li><li><a href="/pages/samsung.html">Samsung</a></li><li><a href="/pages/stackit.html">STACKIT</a></li><li><a href="/pages/noam-schwartz.html">Ноам Шварц</a></li><li><a href="/pages/nanoclaw.html">NanoClaw</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

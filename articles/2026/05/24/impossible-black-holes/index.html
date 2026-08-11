@@ -23,4 +23,55 @@
 <p>[1]: <a href="https://www.wired.com/story/the-universe-is-full-of-impossible-black-holes-now-scientists-know-why/">The Universe Is Full of ‘Impossible’ Black Holes. Now Scientists Know Why - WIRED</a><br>[2]: <a href="https://doi.org/10.1038/s41550-026-02847-0">Gravitational-wave constraints on the pair-instability mass gap and nuclear burning in massive stars - Nature Astronomy</a><br>[3]: <a href="https://www.cardiff.ac.uk/news/view/2824357-black-holes-in-star-clusters-are-built-rather-than-born">Black holes in star clusters are &#39;built rather than born&#39; - Cardiff University</a><br>[4]: <a href="https://www.gw-openscience.org/eventapi/html/GWTC/">LIGO-Virgo-KAGRA Gravitational-Wave Transient Catalog (GWTC)</a></p>
 </div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wired.html">Wired</a><p>Wired е емблематично американско списание и онлайн издание, което изследва как технологиите влияят на културата, икономиката и политиката.</p></li><li><a href="/pages/nature-astronomy.html">Nature Astronomy</a><p>Nature Astronomy е водещо рецензирано научно списание, издавано ежемесечно от Nature Portfolio (Springer Nature).</p></li><li><a href="/pages/ligo-virgo-kagra.html">LIGO–Virgo–KAGRA</a><p>LIGO–Virgo–KAGRA (LVK) е международна мрежа от три големи интерферометрични обсерватории за гравитационни вълни:
 
-LIGO (Laser Interferometer Gravitati...</p></li><li><a href="/pages/isobel-romero-shaw.html">Isobel M. Romero-Shaw</a><p>Д-р Изобел М.</p></li><li><a href="/pages/gravitational-waves.html">Гравитационни вълни</a><p>Гравитационните вълни са колебания (вълнички) в самата тъкан на пространството-времето, които се разпространяват от техния източник със скоростта на с...</p></li><li><a href="/pages/cardiff-university.html">Cardiff University</a><p>Университетът в Кардиф (Cardiff University / Prifysgol Caerdydd) е престижен публичен изследователски университет, намиращ се в Кардиф, Уелс, Обединен...</p></li><li><a href="/pages/black-hole.html">Черна дупка</a><p>Черна дупка е област в пространството-времето, чието гравитационно привличане е толкова силно, че нищо — дори светлината или други електромагнитни въл...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+LIGO (Laser Interferometer Gravitati...</p></li><li><a href="/pages/isobel-romero-shaw.html">Isobel M. Romero-Shaw</a><p>Д-р Изобел М.</p></li><li><a href="/pages/gravitational-waves.html">Гравитационни вълни</a><p>Гравитационните вълни са колебания (вълнички) в самата тъкан на пространството-времето, които се разпространяват от техния източник със скоростта на с...</p></li><li><a href="/pages/cardiff-university.html">Cardiff University</a><p>Университетът в Кардиф (Cardiff University / Prifysgol Caerdydd) е престижен публичен изследователски университет, намиращ се в Кардиф, Уелс, Обединен...</p></li><li><a href="/pages/black-hole.html">Черна дупка</a><p>Черна дупка е област в пространството-времето, чието гравитационно привличане е толкова силно, че нищо — дори светлината или други електромагнитни въл...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

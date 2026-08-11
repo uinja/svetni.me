@@ -16,4 +16,55 @@
 <p>Решението на съда подчертава нарастващия натиск върху ИИ компаниите да се съобразят с изискванията на държавата за „военна готовност“ на софтуера им, поставяйки под въпрос бъдещето на независимите етични рамки в технологичния сектор.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.politico.com/news/2026/04/08/d-c-circuit-rejects-anthropic-plea-to-pause-supply-chain-risk-label-00864880">D.C. Circuit rejects Anthropic plea to pause supply chain risk label - Politico</a><br>[2]: <a href="https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html">Powell, Bessent discussed Anthropic’s Mythos AI cyber threat with major U.S. banks - CNBC</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/pete-hegseth.html">Пийт Хегсет (Pete Hegseth)</a><p>Пийт Хегсет е министър на отбраната на САЩ в администрацията на Доналд Тръмп.</p></li><li><a href="/pages/donald-trump.html">Доналд Тръмп (Donald Trump)</a><p>Доналд Тръмп е 47-ият президент на Съединените щати.</p></li><li><a href="/pages/dc-circuit.html">Апелативен съд на САЩ за окръг Колумбия (D.C. Circuit)</a><p>Апелативният съд на САЩ за окръг Колумбия (D.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/pete-hegseth.html">Пийт Хегсет (Pete Hegseth)</a><p>Пийт Хегсет е министър на отбраната на САЩ в администрацията на Доналд Тръмп.</p></li><li><a href="/pages/donald-trump.html">Доналд Тръмп (Donald Trump)</a><p>Доналд Тръмп е 47-ият президент на Съединените щати.</p></li><li><a href="/pages/dc-circuit.html">Апелативен съд на САЩ за окръг Колумбия (D.C. Circuit)</a><p>Апелативният съд на САЩ за окръг Колумбия (D.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

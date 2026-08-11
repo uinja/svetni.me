@@ -30,4 +30,55 @@
 <p>С този ход Alibaba се позиционира директно срещу водещите западни инициативи в роботиката, демонстрирайки, че бъдещето на хардуерната автоматизация зависи критично от наличието на мощни, мултимодални софтуерни ядра. Очаква се успехът на Qwen-Robot Suite да ускори комерсиализацията на хуманоидни роботи и интелигентни индустриални системи в световен мащаб през следващите години.</p>
 <p><img src="/articles/2026/06/17/qwen-robotsuite/qwen-robotsuite-architecture.svg" alt="Архитектура на Qwen-Robot Suite"><br><small>Схематично представяне на архитектурата на Qwen-Robot Suite и връзката между навигация, манипулация и симулация на света.</small></p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://qwen.ai/blog?id=qwen-robotsuite">Qwen-Robot Suite - Qwen Blog</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tongyi-lab.html">Tongyi Lab</a><p>Tongyi Lab (通义实验室) е специализираната лаборатория за изкуствен интелект и изследователска дейност на китайския технологичен конгломерат Alibaba Group ...</p></li><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/embodied-ai.html">Физически въплътен изкуствен интелект</a><p>Физически въплътеният изкуствен интелект (Embodied AI) е клон от развитието на изкуствения интелект, който се фокусира върху ИИ системи, притежаващи ф...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tongyi-lab.html">Tongyi Lab</a><p>Tongyi Lab (通义实验室) е специализираната лаборатория за изкуствен интелект и изследователска дейност на китайския технологичен конгломерат Alibaba Group ...</p></li><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/embodied-ai.html">Физически въплътен изкуствен интелект</a><p>Физически въплътеният изкуствен интелект (Embodied AI) е клон от развитието на изкуствения интелект, който се фокусира върху ИИ системи, притежаващи ф...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

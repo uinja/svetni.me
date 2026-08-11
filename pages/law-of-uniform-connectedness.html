@@ -6,4 +6,55 @@
 
               gtag('config', 'G-4KYQTJ12NS');
             </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Елементите, които са визуално свързани, се възприемат като по-тясно свързани помежду си, отколкото елементите без връзка."><title>Закон за еднаквата свързаност (Law of Uniform Connectedness) - Светни.ме</title><meta property="og:title" content="Закон за еднаквата свързаност (Law of Uniform Connectedness) - Светни.ме"><meta property="og:description" content="Елементите, които са визуално свързани, се възприемат като по-тясно свързани помежду си, отколкото елементите без връзка."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/law-of-uniform-connectedness.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Закон за еднаквата свързаност (Law of Uniform Connectedness)</h1><section class="content"><p>Елементите, които са визуално свързани, се възприемат като по-тясно свързани помежду си, отколкото елементите без връзка.</p>
-</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/vigloo.html">Vigloo</a></li><li><a href="/pages/asymbl.html">Asymbl</a></li><li><a href="/pages/doherty-threshold.html">Праг на Дохърти (Doherty Threshold)</a></li><li><a href="/pages/eirgrid.html">EirGrid</a></li><li><a href="/pages/exaflops.html">Екзафлоп (Exaflop)</a></li><li><a href="/pages/devin.html">Devin и ИИ софтуерните инженери</a></li><li><a href="/pages/bnd.html">BND (Bundesnachrichtendienst)</a></li><li><a href="/pages/glass-box-ai.html">Glass Box AI (Прозрачна кутия)</a></li><li><a href="/pages/kyle-harris.html">Кайл Харис (Kyle Harris)</a></li><li><a href="/pages/colossus-1.html">Colossus 1</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/vb-transform.html">VB Transform</a></li><li><a href="/pages/ehr.html">EHR</a></li><li><a href="/pages/know-your-agent.html">Know Your Agent (KYA)</a></li><li><a href="/pages/jvm.html">JVM (Java Virtual Machine)</a></li><li><a href="/pages/federal-reserve.html">Federal Reserve (Федерален резерв)</a></li><li><a href="/pages/inference-amortization.html">Амортизация на инференцията</a></li><li><a href="/pages/kimi-k3.html">Kimi K3</a></li><li><a href="/pages/google-docs.html">Google Docs</a></li><li><a href="/pages/gpt-oss.html">GPT-OSS</a></li><li><a href="/pages/enterprise-ai.html">Enterprise AI</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -22,4 +22,55 @@
 <p>Този подход гарантира, че системата остава широкоспектърна и адаптивна, без да жертва прецизността, необходима за критични задачи. Изводът за индустрията е ясен: в света на ИИ повече „настройване“ невинаги означава по-добри резултати.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://venturebeat.com/data/rag-precision-tuning-can-quietly-cut-retrieval-accuracy-by-40-putting-agentic-pipelines-at-risk">RAG precision tuning can quietly cut retrieval accuracy by 40%, putting agentic pipelines at risk - VentureBeat</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/venturebeat.html">VentureBeat</a><p>VentureBeat е водещо американско онлайн издание за технологични новини, фокусирано върху иновациите, изкуствения интелект и трансформиращите технологи...</p></li><li><a href="/pages/redis.html">Redis</a><p>Redis е платформа за данни в реално време, известна със своята база данни в паметта (in-memory database).</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/precision-tuning.html">Фино настройване за точност (Precision Tuning)</a><p>Финото настройване за точност (Precision Tuning) в контекста на езиковите модели е процес на оптимизиране на модела за разпознаване на фини структурни...</p></li><li><a href="/pages/fine-tuning.html">Фино настройване (Fine-Tuning)</a><p>Финото настройване е процес на вземане на вече обучен модел (Pre-trained model) и допълнителното му обучение върху специфичен, по-малък набор от данни...</p></li><li><a href="/pages/embedding-models.html">Модели за вграждане (Embedding Models)</a><p>Моделите за вграждане са тип алгоритми за машинно обучение, които превръщат текст, изображения или аудио в цифрови вектори (масиви от числа).</p></li><li><a href="/pages/ai-agent.html">ИИ Агент (AI Agent)</a><p>ИИ Агентът е система, която използва голям езиков модел като свой „мозък“, за да изпълнява автономно задачи в няколко стъпки.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/venturebeat.html">VentureBeat</a><p>VentureBeat е водещо американско онлайн издание за технологични новини, фокусирано върху иновациите, изкуствения интелект и трансформиращите технологи...</p></li><li><a href="/pages/redis.html">Redis</a><p>Redis е платформа за данни в реално време, известна със своята база данни в паметта (in-memory database).</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/precision-tuning.html">Фино настройване за точност (Precision Tuning)</a><p>Финото настройване за точност (Precision Tuning) в контекста на езиковите модели е процес на оптимизиране на модела за разпознаване на фини структурни...</p></li><li><a href="/pages/fine-tuning.html">Фино настройване (Fine-Tuning)</a><p>Финото настройване е процес на вземане на вече обучен модел (Pre-trained model) и допълнителното му обучение върху специфичен, по-малък набор от данни...</p></li><li><a href="/pages/embedding-models.html">Модели за вграждане (Embedding Models)</a><p>Моделите за вграждане са тип алгоритми за машинно обучение, които превръщат текст, изображения или аудио в цифрови вектори (масиви от числа).</p></li><li><a href="/pages/ai-agent.html">ИИ Агент (AI Agent)</a><p>ИИ Агентът е система, която използва голям езиков модел като свой „мозък“, за да изпълнява автономно задачи в няколко стъпки.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -14,4 +14,55 @@
 <p>Докладът обръща специално внимание на реалните причини за събитията на пазара на труда през последните години, включително съкращенията и ниските нива на напускане на работа. Според икономистите от Yale Budget Lab, макроикономически фактори като високите лихвени проценти на Федералния резерв носят основната отговорност за замразяването на бюджетите за наемане и оптимизацията на персонала, а не масовото внедряване на ИИ инструменти [1].</p>
 <p>Допълнителна бариера пред масовата подмяна на служители са нарастващите разходи за самите ИИ технологии. Повишаването на цените на корпоративните планове от страна на разработчици като OpenAI и Anthropic прави внедряването на enterprise ниво значително по-скъпо от очакваното. В комбинация с все още скромните показатели за обща продуктивност в предприятията, бизнесът подхожда предпазливо, като се фокусира върху оптимизиране на работните процеси с помощта на ИИ, а не върху пълна подмяна на човешкия състав [1].</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://www.businessinsider.com/ai-impact-jobs-workplace-tech-pc-internet-yale-budget-lab-2026-6">One chart shows AI&#39;s jobs impact — and how it compares to other tech advances - Business Insider</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/yale-budget-lab.html">Yale Budget Lab</a><p>Yale Budget Lab е независима изследователска и политическа лаборатория към Йейлския университет (Yale University).</p></li><li><a href="/pages/occupational-churn.html">Професионално текучество (Occupational Churn)</a><p>Професионалното текучество (Occupational Churn) е икономически показател, който измерва темпа на движение и промяна на работните места в рамките на па...</p></li><li><a href="/pages/machine-brief.html">Machine Brief</a><p>Machine Brief е специализирана дигитална медийна платформа и бюлетин за новини, анализи и синтез в областта на изкуствения интелект (ИИ), машинното об...</p></li><li><a href="/pages/business-insider.html">Business Insider</a><p>Business Insider е водеща американска финансова и бизнес медия, основана през 2007 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/yale-budget-lab.html">Yale Budget Lab</a><p>Yale Budget Lab е независима изследователска и политическа лаборатория към Йейлския университет (Yale University).</p></li><li><a href="/pages/occupational-churn.html">Професионално текучество (Occupational Churn)</a><p>Професионалното текучество (Occupational Churn) е икономически показател, който измерва темпа на движение и промяна на работните места в рамките на па...</p></li><li><a href="/pages/machine-brief.html">Machine Brief</a><p>Machine Brief е специализирана дигитална медийна платформа и бюлетин за новини, анализи и синтез в областта на изкуствения интелект (ИИ), машинното об...</p></li><li><a href="/pages/business-insider.html">Business Insider</a><p>Business Insider е водеща американска финансова и бизнес медия, основана през 2007 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

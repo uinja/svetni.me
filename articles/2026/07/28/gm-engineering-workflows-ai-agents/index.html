@@ -18,4 +18,55 @@
 <ol>
 <li><a href="https://venturebeat.com/orchestration/gm-redesigned-its-engineering-workflows-around-ai-agents-and-tripled-its-merged-pull-requests">GM redesigned its engineering workflows around AI agents — and tripled its merged pull requests - VentureBeat</a></li>
 </ol>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rashed-haq.html">Rashed Haq</a><p>Rashed Haq е вицепрезидент по автономни превозни средства в General Motors.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li><li><a href="/pages/general-motors.html">General Motors</a><p>General Motors (GM) е водеща американска мултинационална автомобилна корпорация, която произвежда и продава превозни средства по целия свят.</p></li><li><a href="/pages/agentic-engineering.html">Агентно инженерство (Agentic Engineering)</a><p>Агентното инженерство (Agentic Engineering) е термин, популяризиран от Саймън Уилсън, който описва професионалната и отговорна употреба на AI агенти з...</p></li><li><a href="/pages/agent-control-plane.html">Agent Control Plane</a><p>Agent Control Plane (Контролна равнина за агенти) е архитектурен слой в системите с изкуствен интелект, който отговаря за управлението, управлението (...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rashed-haq.html">Rashed Haq</a><p>Rashed Haq е вицепрезидент по автономни превозни средства в General Motors.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li><li><a href="/pages/general-motors.html">General Motors</a><p>General Motors (GM) е водеща американска мултинационална автомобилна корпорация, която произвежда и продава превозни средства по целия свят.</p></li><li><a href="/pages/agentic-engineering.html">Агентно инженерство (Agentic Engineering)</a><p>Агентното инженерство (Agentic Engineering) е термин, популяризиран от Саймън Уилсън, който описва професионалната и отговорна употреба на AI агенти з...</p></li><li><a href="/pages/agent-control-plane.html">Agent Control Plane</a><p>Agent Control Plane (Контролна равнина за агенти) е архитектурен слой в системите с изкуствен интелект, който отговаря за управлението, управлението (...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

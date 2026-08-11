@@ -10,4 +10,55 @@
 <ul>
 <li><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li>
 </ul>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/dod.html">Министерство на отбраната на САЩ (DOD)</a></li><li><a href="/pages/the-information.html">The Information</a></li><li><a href="/pages/firebase.html">Firebase</a></li><li><a href="/pages/electron.html">Electron</a></li><li><a href="/pages/daqiri.html">DAQIRI</a></li><li><a href="/pages/haneda-airport.html">Летище Ханеда</a></li><li><a href="/pages/amazon-bedrock.html">Amazon Bedrock</a></li><li><a href="/pages/be-4.html">BE-4</a></li><li><a href="/pages/hotpotqa.html">HotpotQA</a></li><li><a href="/pages/josh-bleecher-snyder.html">Джош Блийчър Снайдър (Josh Bleecher Snyder)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/ox-security.html">OX Security</a></li><li><a href="/pages/mustafa-suleyman.html">Мустафа Сюлейман (Mustafa Suleyman)</a></li><li><a href="/pages/meow-stack.html">MEOW Stack</a></li><li><a href="/pages/marc-benioff.html">Марк Бениоф</a></li><li><a href="/pages/mike-loukides.html">Майк Лукидес</a></li><li><a href="/pages/nuclear-fusion.html">Ядрен синтез</a></li><li><a href="/pages/open-weights.html">Отворени тегла (Open Weights)</a></li><li><a href="/pages/mike-dehaan.html">Mike DeHaan</a></li><li><a href="/pages/mental-model.html">Ментален модел (Mental Model)</a></li><li><a href="/pages/oauth.html">OAuth</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

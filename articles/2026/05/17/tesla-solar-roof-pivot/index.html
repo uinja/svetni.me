@@ -21,4 +21,55 @@
 <p>Въпреки че Solar Roof остава достъпен като опция, той вече се възприема като луксозен нишов продукт. Междувременно Powerwall остава централен елемент в екосистемата на Tesla Energy, като компанията се фокусира върху интеграцията му с по-ефективните и евтини традиционни панели [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://electrek.co/2026/05/14/tesla-solar-roof-promise-vs-reality-pivot-panels/">Tesla Solar Roof is on life support as it pivot to panels - Electrek</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tesla.html">Tesla</a><p>Tesla, Inc.</p></li><li><a href="/pages/solar-roof.html">Solar Roof</a><p>Solar Roof е иновативна покривна система на компанията Tesla, която интегрира слънчеви клетки директно в покривните керемиди.</p></li><li><a href="/pages/powerwall.html">Powerwall</a><p>Powerwall е домашна акумулаторна батерия, произвеждана от Tesla, предназначена за съхранение на енергия от възобновяеми източници (като слънчеви панел...</p></li><li><a href="/pages/gigafactory-new-york.html">Gigafactory New York</a><p>Gigafactory New York (известна още като Giga New York или Gigafactory 2) е производствена база на Tesla, разположена в Бъфало, щата Ню Йорк.</p></li><li><a href="/pages/elon-musk.html">Elon Musk</a><p>Илон Мъск (Elon Musk) е предприемач, инвеститор и бизнес магнат, известен със своята водеща роля в компании като Tesla, SpaceX, Neuralink и xAI.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tesla.html">Tesla</a><p>Tesla, Inc.</p></li><li><a href="/pages/solar-roof.html">Solar Roof</a><p>Solar Roof е иновативна покривна система на компанията Tesla, която интегрира слънчеви клетки директно в покривните керемиди.</p></li><li><a href="/pages/powerwall.html">Powerwall</a><p>Powerwall е домашна акумулаторна батерия, произвеждана от Tesla, предназначена за съхранение на енергия от възобновяеми източници (като слънчеви панел...</p></li><li><a href="/pages/gigafactory-new-york.html">Gigafactory New York</a><p>Gigafactory New York (известна още като Giga New York или Gigafactory 2) е производствена база на Tesla, разположена в Бъфало, щата Ню Йорк.</p></li><li><a href="/pages/elon-musk.html">Elon Musk</a><p>Илон Мъск (Elon Musk) е предприемач, инвеститор и бизнес магнат, известен със своята водеща роля в компании като Tesla, SpaceX, Neuralink и xAI.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

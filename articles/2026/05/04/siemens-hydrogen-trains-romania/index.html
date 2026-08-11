@@ -23,4 +23,55 @@
 <p>Чрез замяната на дизеловия подвижен състав, новите водородни влакове ще допринесат за значително намаляване на емисиите и шума в регионалния транспорт, подкрепяйки дългосрочните цели на Румъния за <a href="/pages/green-mobility.html">зелена мобилност</a> и опазване на климата.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://press.siemens.com/global/en/pressrelease/siemens-deliver-romanias-first-hydrogen-powered-train-fleet">Siemens to deliver Romania&#39;s First Hydrogen-Powered Train Fleet - Siemens Mobility</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/siemens.html">Siemens</a><p>Siemens AG е германски мултинационален технологичен конгломерат и най-голямата индустриална производствена компания в Европа.</p></li><li><a href="/pages/romania.html">Румъния</a><p>Румъния е държава в Югоизточна Европа, член на Европейския съюз.</p></li><li><a href="/pages/mireo-plus-h.html">Mireo Plus H</a><p>Mireo Plus H е платформа за водородни влакове, разработена от Siemens Mobility.</p></li><li><a href="/pages/hydrogen-trains.html">Водородни влакове</a><p>Водородните влакове са вид железопътен подвижен състав, който използва водород като основен източник на енергия.</p></li><li><a href="/pages/green-mobility.html">Зелена мобилност</a><p>Зелената мобилност (или устойчива мобилност) се отнася до транспортни системи и практики, които имат минимално отрицателно въздействие върху околната ...</p></li><li><a href="/pages/arf.html">ARF</a><p>Органът за железопътна реформа (Autoritatea pentru Reformă Feroviară - ARF) е румънска държавна институция под шапката на Министерството на транспорта...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/siemens.html">Siemens</a><p>Siemens AG е германски мултинационален технологичен конгломерат и най-голямата индустриална производствена компания в Европа.</p></li><li><a href="/pages/romania.html">Румъния</a><p>Румъния е държава в Югоизточна Европа, член на Европейския съюз.</p></li><li><a href="/pages/mireo-plus-h.html">Mireo Plus H</a><p>Mireo Plus H е платформа за водородни влакове, разработена от Siemens Mobility.</p></li><li><a href="/pages/hydrogen-trains.html">Водородни влакове</a><p>Водородните влакове са вид железопътен подвижен състав, който използва водород като основен източник на енергия.</p></li><li><a href="/pages/green-mobility.html">Зелена мобилност</a><p>Зелената мобилност (или устойчива мобилност) се отнася до транспортни системи и практики, които имат минимално отрицателно въздействие върху околната ...</p></li><li><a href="/pages/arf.html">ARF</a><p>Органът за железопътна реформа (Autoritatea pentru Reformă Feroviară - ARF) е румънска държавна институция под шапката на Министерството на транспорта...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

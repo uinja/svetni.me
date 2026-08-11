@@ -15,4 +15,55 @@
 <li><strong>Намаляване на цимента:</strong> По-високата здравина позволява на производителите да редуцират количеството на използвания Портланд цимент в бетоновата смес с 3% до 5%, без да се влошават техническите характеристики на материала. Тъй като производството на цимент е изключително въглеродно интензивно, това спестяване значително намалява индиректния въглероден отпечатък на строителството.</li>
 <li><strong>Екологичен принос:</strong> Всеки кубичен метър бетон, произведен с CarbonCure, спестява средно около 15 кг CO₂ емисии.</li>
 </ul>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/11/carbon-dioxide-cement-setting/">Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/javascript.html">JavaScript</a></li><li><a href="/pages/proprietary-obscurity.html">Проприетарна неяснота (Proprietary Obscurity)</a></li><li><a href="/pages/chatgpt-work.html">ChatGPT Work</a></li><li><a href="/pages/cirrascale-cloud-services.html">Cirrascale Cloud Services</a></li><li><a href="/pages/christy-hoffman.html">Кристи Хофман</a></li><li><a href="/pages/brian-armstrong.html">Brian Armstrong</a></li><li><a href="/pages/help-me-decide.html">Help me decide</a></li><li><a href="/pages/john-hardy.html">Джон Харди</a></li><li><a href="/pages/agentskillos.html">AgentSkillOS</a></li><li><a href="/pages/codestral.html">Codestral</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/11/carbon-dioxide-cement-setting/">Химически обрат: Как въглеродният диоксид пренарежда втвърдяването на цимента</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/sdlc.html">Жизнен цикъл на софтуера (SDLC)</a></li><li><a href="/pages/ray-fernando.html">Рей Фернандо</a></li><li><a href="/pages/replit.html">Replit</a></li><li><a href="/pages/rob-williams.html">Роб Уилямс</a></li><li><a href="/pages/risaa-2024.html">RISAA 2024</a></li><li><a href="/pages/rufus.html">Rufus</a></li><li><a href="/pages/stanford-hai.html">Stanford HAI (Станфордски институт за ориентиран към човека изкуствен интелект)</a></li><li><a href="/pages/slsa.html">SLSA (Supply-chain Levels for Software Artifacts)</a></li><li><a href="/pages/yelp.html">Yelp</a></li><li><a href="/pages/tim-oreilly.html">Тим О&#x27;Райли</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

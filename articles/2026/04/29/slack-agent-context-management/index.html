@@ -15,4 +15,55 @@
 <p><img src="/articles/2026/04/29/slack-agent-context-management/context-channels.png" alt="Диаграма на каналите за контекст в Slack"><br><small>Изображение: Slack Engineering чрез InfoQ</small></p>
 <p>Този модел на „координатор и диспечер“ позволява на всеки агент (като <a href="/pages/pydantic-ai.html">Pydantic AI</a> и други в техните <a href="/pages/multi-agent-systems.html">мултиагентни системи</a>) да има специфична роля и изглед към състоянието на разследването, оптимизиран за неговата задача. Чрез използването на дестилирана информация вместо пълни логове, Slack (част от <a href="/pages/salesforce.html">Salesforce</a>) успява да поддържа висока точност дори при сесии, обхващащи стотици заявки и мегабайти изходни данни.</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://www.infoq.com/news/2026/04/slack-agent-context-management/">How Slack Manages Context in Long-Running Multi-agent Systems - InfoQ</a><br>[2]: <a href="https://slack.engineering/managing-context-in-long-run-agentic-applications/">Managing context in long-run agentic applications - Slack Engineering</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/salesforce.html">Salesforce</a><p>Salesforce е световен лидер в софтуера за управление на взаимоотношенията с клиенти (CRM) и облачните изчисления.</p></li><li><a href="/pages/pydantic-ai.html">Pydantic AI</a><p>Pydantic AI е модерна библиотека за Python, предназначена за изграждане на приложения с изкуствен интелект (AI Agents), която използва популярната биб...</p></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a><p>Мултиагентните системи (Multi-Agent Systems - MAS) са архитектури в изкуствения интелект, при които множество специализирани AI агенти си взаимодейств...</p></li><li><a href="/pages/infoq.html">InfoQ</a><p>InfoQ е водеща независима онлайн общност и издателска платформа за професионалисти в областта на софтуерната разработка.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/salesforce.html">Salesforce</a><p>Salesforce е световен лидер в софтуера за управление на взаимоотношенията с клиенти (CRM) и облачните изчисления.</p></li><li><a href="/pages/pydantic-ai.html">Pydantic AI</a><p>Pydantic AI е модерна библиотека за Python, предназначена за изграждане на приложения с изкуствен интелект (AI Agents), която използва популярната биб...</p></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a><p>Мултиагентните системи (Multi-Agent Systems - MAS) са архитектури в изкуствения интелект, при които множество специализирани AI агенти си взаимодейств...</p></li><li><a href="/pages/infoq.html">InfoQ</a><p>InfoQ е водеща независима онлайн общност и издателска платформа за професионалисти в областта на софтуерната разработка.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

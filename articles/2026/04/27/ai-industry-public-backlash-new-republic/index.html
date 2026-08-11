@@ -22,4 +22,55 @@
 <p>За ИИ елита диагнозата е ясна: индустрията се провали в комуникацията си с обществото. Вместо да адресират реалните нужди на хората, лидерите предлагат утопични сценарии, които звучат като научна фантастика за човек, борещ се с растящите цени на храната и жилищата. Без радикална прозрачност и споделяне на ползите, „Разривът“ само ще продължи да расте, превръщайки най-мощната технология на нашето време в най-големия източник на обществено разделение.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://newrepublic.com/article/209163/ai-industry-discovering-public-backlash">The AI Industry Is Discovering That the Public Hates It - The New Republic</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sam-altman.html">Сам Алтман (Sam Altman)</a><p>Сам Алтман е американски предприемач, инвеститор и програмист, най-известен като главен изпълнителен директор (CEO) на OpenAI.</p></li><li><a href="/pages/public-backlash.html">Обществен отпор (Public Backlash)</a><p>Общественият отпор срещу ИИ обхваща широк спектър от протестни действия и негативни нагласи – от правни битки за авторски права до физически атаки сре...</p></li><li><a href="/pages/new-republic.html">The New Republic</a><p>The New Republic (TNR) е американско списание за либерална политика и изкуства, основано през 1914 г.</p></li><li><a href="/pages/it-spending.html">ИТ разходи (IT Spending)</a><p>ИТ разходите обхващат общите инвестиции на организациите в хардуер, софтуер, услуги и персонал за управление на технологиите.</p></li><li><a href="/pages/ai-populism.html">ИИ Популизъм (AI Populism)</a><p>ИИ популизмът е термин, описващ нарастващото обществено недоволство и политическа съпротива срещу изкуствения интелект, възприеман като проект на тесн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sam-altman.html">Сам Алтман (Sam Altman)</a><p>Сам Алтман е американски предприемач, инвеститор и програмист, най-известен като главен изпълнителен директор (CEO) на OpenAI.</p></li><li><a href="/pages/public-backlash.html">Обществен отпор (Public Backlash)</a><p>Общественият отпор срещу ИИ обхваща широк спектър от протестни действия и негативни нагласи – от правни битки за авторски права до физически атаки сре...</p></li><li><a href="/pages/new-republic.html">The New Republic</a><p>The New Republic (TNR) е американско списание за либерална политика и изкуства, основано през 1914 г.</p></li><li><a href="/pages/it-spending.html">ИТ разходи (IT Spending)</a><p>ИТ разходите обхващат общите инвестиции на организациите в хардуер, софтуер, услуги и персонал за управление на технологиите.</p></li><li><a href="/pages/ai-populism.html">ИИ Популизъм (AI Populism)</a><p>ИИ популизмът е термин, описващ нарастващото обществено недоволство и политическа съпротива срещу изкуствения интелект, възприеман като проект на тесн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

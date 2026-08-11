@@ -13,4 +13,55 @@
 <p>На фона на тези предизвикателства, Microsoft вече инвестира в мащабни проекти за <strong><a href="/pages/natural-gas.html">природен газ</a></strong>. Компанията работи съвместно с Chevron по изграждането на 5GW газова централа в Тексас, която да осигури стабилно захранване за нейните ИИ клъстери [1]. Този ход рязко контрастира с публичния имидж на компанията като лидер в декарбонизацията.</p>
 <p>Разходите за центрове за данни се очаква да достигнат 190 милиарда долара до края на 2026 г., което принуждава компанията да преразгледа приоритетите си. Макар Microsoft да твърди, че остава ангажирана с дългосрочните си цели [3], натискът за технологично надмощие в областта на ИИ изглежда има предимство пред краткосрочните екологични ангажименти.</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://techcrunch.com/2026/05/06/microsofts-ai-data-center-push-is-colliding-with-its-clean-power-goals/">Microsoft’s AI data center push is colliding with its clean power goals - TechCrunch</a><br>[2]: <a href="https://mashable.com/article/microsoft-abandons-clean-energy-goal">Microsoft, looking to build data centers, considers dumping climate goal, report states - Mashable</a><br>[3]: <a href="https://blogs.microsoft.com/blog/2026/02/18/a-milestone-achievement-in-our-journey-to-carbon-negative/">A milestone achievement in our journey to carbon negative - Microsoft Blog</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/data-center.html">Център за данни</a><p>Център за данни (Data Center) е специализирана сграда или съоръжение, в което се помещават компютърни системи и свързани с тях компоненти, като телеко...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/data-center.html">Център за данни</a><p>Център за данни (Data Center) е специализирана сграда или съоръжение, в което се помещават компютърни системи и свързани с тях компоненти, като телеко...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -48,4 +48,55 @@
 <p>Втори екип от Meta, работещ по автономно отстраняване на неизправности, е сравнил независимо този хибриден подход с традиционни изцяло LLM-базирани решения. Резултатите потвърждават, че моделът с детерминистичен първи слой осигурява значително по-ниска латентност, по-малко разходи и пълна одитна проследимост, доказвайки стабилността на архитектурния модел в реална среда [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/">Privacy-Aware Infrastructure in the AI-Native Era: An Asset Classification Case Study - Engineering at Meta</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/privacy.html">Поверителност (Privacy)</a><p>Поверителността (privacy) е фундаменталното право на индивида да контролира достъпа до своята лична информация и да бъде защитен от неоправдано наблюд...</p></li><li><a href="/pages/pai.html">Инфраструктура, съобразяваща се с поверителността (PAI)</a><p>Инфраструктура, съобразяваща се с поверителността (на английски: Privacy-Aware Infrastructure или PAI) е корпоративна архитектура за управление на дан...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/governance.html">Управление и контрол (Governance)</a><p>Управление и контрол (Governance) в контекста на информационните технологии и изкуствения интелект се отнася до набора от политики, процеси и стандарт...</p></li><li><a href="/pages/distillation.html">Дистилация (Distillation)</a><p>Дистилацията на знание (Knowledge Distillation) е процес в машинното обучение, при който по-малък, по-ефективен модел (наричан „ученик“) се обучава да...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/privacy.html">Поверителност (Privacy)</a><p>Поверителността (privacy) е фундаменталното право на индивида да контролира достъпа до своята лична информация и да бъде защитен от неоправдано наблюд...</p></li><li><a href="/pages/pai.html">Инфраструктура, съобразяваща се с поверителността (PAI)</a><p>Инфраструктура, съобразяваща се с поверителността (на английски: Privacy-Aware Infrastructure или PAI) е корпоративна архитектура за управление на дан...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/governance.html">Управление и контрол (Governance)</a><p>Управление и контрол (Governance) в контекста на информационните технологии и изкуствения интелект се отнася до набора от политики, процеси и стандарт...</p></li><li><a href="/pages/distillation.html">Дистилация (Distillation)</a><p>Дистилацията на знание (Knowledge Distillation) е процес в машинното обучение, при който по-малък, по-ефективен модел (наричан „ученик“) се обучава да...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

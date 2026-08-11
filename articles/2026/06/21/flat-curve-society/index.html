@@ -15,4 +15,55 @@
 <p>За разработчиците и стартиращите компании това стабилизиране носи огромно облекчение [1]. То премахва „тревожността за технологичния стек“ – постоянния страх, че новите модели ще направят техния труд безполезен след броени седмици. Вместо да прекарват времето си в постоянно пренаписване на софтуера за всяко следващо поколение LLM, компаниите могат да се концентрират върху изграждането на дългосрочни ИИ агенти и устойчиви <a href="/pages/saas.html">SaaS</a> платформи върху една предвидима и стабилна основа.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://steve-yegge.medium.com/the-flat-curve-society-36c8b01eb33b">The Flat Curve Society - Steve Yegge on Medium</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/steve-yegge.html">Стив Йеги (Steve Yegge)</a><p>Стив Йеги е легендарен софтуерен инженер, известен със своята работа в Amazon и Google.</p></li><li><a href="/pages/saas.html">SaaS (Софтуер като услуга)</a><p>SaaS (Software as a Service / Софтуер като услуга) е модел за разпространение на софтуер, при който приложенията се хостват от доставчик на облачни ус...</p></li><li><a href="/pages/double-horizons.html">Двойни хоризонти (Double Horizons)</a><p>Концепцията за Двойните хоризонти (Double Horizons) е теоретичен модел, дефиниран от Стив Йеги през 2026 г.</p></li><li><a href="/pages/curl.html">cURL</a><p>cURL (Client URL) е софтуерен инструмент с команден ред и библиотека за прехвърляне на данни с URL синтаксис.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/steve-yegge.html">Стив Йеги (Steve Yegge)</a><p>Стив Йеги е легендарен софтуерен инженер, известен със своята работа в Amazon и Google.</p></li><li><a href="/pages/saas.html">SaaS (Софтуер като услуга)</a><p>SaaS (Software as a Service / Софтуер като услуга) е модел за разпространение на софтуер, при който приложенията се хостват от доставчик на облачни ус...</p></li><li><a href="/pages/double-horizons.html">Двойни хоризонти (Double Horizons)</a><p>Концепцията за Двойните хоризонти (Double Horizons) е теоретичен модел, дефиниран от Стив Йеги през 2026 г.</p></li><li><a href="/pages/curl.html">cURL</a><p>cURL (Client URL) е софтуерен инструмент с команден ред и библиотека за прехвърляне на данни с URL синтаксис.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

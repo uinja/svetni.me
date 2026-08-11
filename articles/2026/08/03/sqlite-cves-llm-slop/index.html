@@ -82,4 +82,55 @@ pPrior-&gt;pOrderBy = <span class="hljs-number">0</span>;   <span class="hljs-co
 <p>Изследователите от <a href="/pages/jfrog.html">JFrog</a> вече са докладвали своите разкрития на NVD, Red Hat и GitHub Security Advisories (GHSA) за изчистване на регистрите [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/">JFrog Security Research Blog: SQLite Critical CVEs or LLM Slop?</a><br>[2]: <a href="https://nvd.nist.gov/general/news/nvd-program-transition-announcement">NVD Program Transition Announcement - NIST NVD</a><br>[3]: <a href="https://sqlite.org/cves.html">SQLite Official CVEs Page</a><br>[4]: <a href="https://github.com/programmervuln/cveadvisory-">GitHub Repository: programmervuln/cveadvisory-</a><br>[5]: <a href="https://app.gptzero.me/">GPTZero AI Detector</a><br>[6]: <a href="https://github.com/sqlite/sqlite/commit/e24f20a">SQLite Commit e24f20a - GitHub</a><br>[7]: <a href="https://github.com/sqlite/sqlite/commit/280559b">SQLite Commit 280559b - GitHub</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sqlite.html">SQLite</a><p>SQLite е популярна, лека релационна система за управление на бази данни (СУБД) с отворен код.</p></li><li><a href="/pages/jfrog.html">JFrog</a><p>JFrog е водеща технологична компания, специализирана в управлението на софтуерни вериги за доставки и дистрибуцията на софтуерни артефакти.</p></li><li><a href="/pages/gptzero.html">GPTZero</a><p>GPTZero е технологична платформа и компания, разработваща инструменти за класификация и откриване на съдържание, генерирано от изкуствен интелект (AI ...</p></li><li><a href="/pages/cve.html">CVE (Common Vulnerabilities and Exposures)</a><p>CVE (Common Vulnerabilities and Exposures) е международна система за индексиране и споделяне на информация за публично известни уязвимости в киберсигу...</p></li><li><a href="/pages/ai-slop.html">AI Slop (ИИ спам)</a><p>AI slop (често описвано като „нискокачествено ИИ съдържание“ или „ИИ спам“) е термин, използван за описание на нискокачествено, нежелано или подразбир...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sqlite.html">SQLite</a><p>SQLite е популярна, лека релационна система за управление на бази данни (СУБД) с отворен код.</p></li><li><a href="/pages/jfrog.html">JFrog</a><p>JFrog е водеща технологична компания, специализирана в управлението на софтуерни вериги за доставки и дистрибуцията на софтуерни артефакти.</p></li><li><a href="/pages/gptzero.html">GPTZero</a><p>GPTZero е технологична платформа и компания, разработваща инструменти за класификация и откриване на съдържание, генерирано от изкуствен интелект (AI ...</p></li><li><a href="/pages/cve.html">CVE (Common Vulnerabilities and Exposures)</a><p>CVE (Common Vulnerabilities and Exposures) е международна система за индексиране и споделяне на информация за публично известни уязвимости в киберсигу...</p></li><li><a href="/pages/ai-slop.html">AI Slop (ИИ спам)</a><p>AI slop (често описвано като „нискокачествено ИИ съдържание“ или „ИИ спам“) е термин, използван за описание на нискокачествено, нежелано или подразбир...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

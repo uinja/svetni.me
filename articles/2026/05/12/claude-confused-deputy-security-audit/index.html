@@ -21,4 +21,55 @@
 <p>За компаниите, използващи AI инструменти, изводът е ясен: доверието в AI агентите трябва да бъде сегментирано, а достъпът им до критични мрежи и конфигурационни файлове – строго одитиран и ограничаван.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://venturebeat.com/security/claude-confused-deputy-audit-matrix-security-blind-spots/">Running Claude Code or Claude in Chrome? Here&#39;s the audit matrix for every blind spot your security stack misses - VentureBeat</a><br>[2]: <a href="https://www.dragos.com/blog/ai-assisted-ics-attack-water-utility">AI-Assisted ICS Attack on a Water Utility - Dragos</a><br>[3]: <a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">MCP Token Theft in Claude Code: A Man-in-the-Middle Attack Chain via ~/.claude.json - Mitiga</a><br>[4]: <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The confused deputy problem - AWS Documentation</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/scada.html">SCADA</a><p>SCADA (Supervisory Control and Data Acquisition) е архитектура на системи за управление, която използва компютри, мрежови комуникации и графични потре...</p></li><li><a href="/pages/oauth.html">OAuth</a><p>OAuth (Open Authorization) е отворен стандарт за делегирана оторизация, който позволява на потребителите да предоставят на уебсайтове или приложения д...</p></li><li><a href="/pages/mitiga.html">Mitiga</a><p>Mitiga е компания за облачна сигурност и реагиране при инциденти, която се фокусира върху откриването и неутрализирането на заплахи в модерни облачни ...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/confused-deputy.html">Confused Deputy (Объркан заместник)</a><p>Confused Deputy (Объркан заместник) е класически проблем в компютърната сигурност, при който компютърна програма е подведена да използва своите легити...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/scada.html">SCADA</a><p>SCADA (Supervisory Control and Data Acquisition) е архитектура на системи за управление, която използва компютри, мрежови комуникации и графични потре...</p></li><li><a href="/pages/oauth.html">OAuth</a><p>OAuth (Open Authorization) е отворен стандарт за делегирана оторизация, който позволява на потребителите да предоставят на уебсайтове или приложения д...</p></li><li><a href="/pages/mitiga.html">Mitiga</a><p>Mitiga е компания за облачна сигурност и реагиране при инциденти, която се фокусира върху откриването и неутрализирането на заплахи в модерни облачни ...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/confused-deputy.html">Confused Deputy (Объркан заместник)</a><p>Confused Deputy (Объркан заместник) е класически проблем в компютърната сигурност, при който компютърна програма е подведена да използва своите легити...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -18,4 +18,55 @@
 <p>Държавната информационна агенция Синхуа отбелязва, че месечното производство на микро-драми се е стабилизирало на около 3000 заглавия, като снимачните цикли често продължават едва между 5 и 10 дни [2]. Мащабът и скоростта на тази индустрия, подкрепена от <a href="/pages/bytedance.html">ByteDance</a> и други технологични лидери, поставят под въпрос традиционните модели на Холивуд, където създаването на подобно съдържание може да отнеме години [3].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.scmp.com/economy/china-economy/article/3352019/how-china-using-ai-and-state-funding-transform-micro-drama-industry">How China is using AI – and state funding – to transform the micro drama industry - South China Morning Post</a><br>[2]: <a href="https://www.scmp.com/economy/china-economy/article/3342809/chinas-micro-drama-industry-emerges-jobs-lifeline-tough-graduate-labour-market">China’s ‘micro drama’ industry emerges as jobs lifeline in tough graduate labour market - South China Morning Post</a><br>[3]: <a href="https://www.scmp.com/lifestyle/entertainment/article/3332575/how-vertical-dramas-born-china-are-disrupting-hollywood-one-minute-time">How vertical dramas, born in China, are disrupting Hollywood, one minute at a time - South China Morning Post</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vigloo.html">Vigloo</a><p>Vigloo е южнокорейска компания за производство на съдържание, специализирана в сегмента на микро-драмите (вертикални видео сериали).</p></li><li><a href="/pages/tiktok.html">TikTok</a><p>TikTok (известен в Китай като Douyin) е водеща платформа за кратки видеоклипове, собственост на китайската технологична компания ByteDance.</p></li><li><a href="/pages/peking-university.html">Пекински университет</a><p>Пекинският университет (Peking University) е един от най-престижните изследователски университети в Китай.</p></li><li><a href="/pages/micro-drama.html">Микро-драма</a><p>Микро-драмите (също известни като вертикални драми) са нов формат за забавление, оптимизиран за смартфони.</p></li><li><a href="/pages/mainland-china.html">Континентален Китай</a><p>Континентален Китай е термин, описващ територията под управлението на Китайската народна република (без Хонконг и Макао).</p></li><li><a href="/pages/bytedance.html">ByteDance</a><p>ByteDance е глобална технологична компания, известна като създател на TikTok и Douyin.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vigloo.html">Vigloo</a><p>Vigloo е южнокорейска компания за производство на съдържание, специализирана в сегмента на микро-драмите (вертикални видео сериали).</p></li><li><a href="/pages/tiktok.html">TikTok</a><p>TikTok (известен в Китай като Douyin) е водеща платформа за кратки видеоклипове, собственост на китайската технологична компания ByteDance.</p></li><li><a href="/pages/peking-university.html">Пекински университет</a><p>Пекинският университет (Peking University) е един от най-престижните изследователски университети в Китай.</p></li><li><a href="/pages/micro-drama.html">Микро-драма</a><p>Микро-драмите (също известни като вертикални драми) са нов формат за забавление, оптимизиран за смартфони.</p></li><li><a href="/pages/mainland-china.html">Континентален Китай</a><p>Континентален Китай е термин, описващ територията под управлението на Китайската народна република (без Хонконг и Макао).</p></li><li><a href="/pages/bytedance.html">ByteDance</a><p>ByteDance е глобална технологична компания, известна като създател на TikTok и Douyin.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

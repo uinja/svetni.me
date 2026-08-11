@@ -10,4 +10,55 @@
 <p>Според изследователите, това представлява „дълбока промяна“ в начина, по който ще се практикува <a href="/pages/emergency-medicine.html">спешна медицина</a> в бъдеще. Д-р Адам Родман, водещ автор на проучването, подчертава, че целта не е ИИ да замени лекарите, а да се създаде нов „триадичен модел на грижа“, при който човекът и машината си сътрудничат за постигане на най-добър резултат за пациента [1].</p>
 <p>Проучването е едно от най-мащабните по рода си и използва реални клинични случаи, за да тества способностите на съвременните големи езикови модели (LLM) в критични ситуации, където времето и точността са от решаващо значение.</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://www.theguardian.com/technology/2026/apr/30/ai-outperforms-doctors-in-harvard-trial-of-emergency-triage-diagnoses">AI outperforms doctors in Harvard trial of emergency triage diagnoses - The Guardian</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/triage.html">Триаж</a><p>Триажът е процес на определяне на приоритета на лечението на пациентите въз основа на тежестта на тяхното състояние.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/harvard-medical-school.html">Harvard Medical School</a><p>Harvard Medical School (HMS) е медицинският факултет на Харвардския университет и една от най-престижните институции за медицинско образование и изсле...</p></li><li><a href="/pages/emergency-medicine.html">Спешна медицина</a><p>Спешната медицина е медицинска специалност, фокусирана върху диагностиката и лечението на остри заболявания или наранявания, които изискват незабавна ...</p></li><li><a href="/pages/beth-israel-deaconess.html">Beth Israel Deaconess Medical Center</a><p>Beth Israel Deaconess Medical Center (BIDMC) е водеща академична болница, разположена в Бостън, Масачузетс.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/triage.html">Триаж</a><p>Триажът е процес на определяне на приоритета на лечението на пациентите въз основа на тежестта на тяхното състояние.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/harvard-medical-school.html">Harvard Medical School</a><p>Harvard Medical School (HMS) е медицинският факултет на Харвардския университет и една от най-престижните институции за медицинско образование и изсле...</p></li><li><a href="/pages/emergency-medicine.html">Спешна медицина</a><p>Спешната медицина е медицинска специалност, фокусирана върху диагностиката и лечението на остри заболявания или наранявания, които изискват незабавна ...</p></li><li><a href="/pages/beth-israel-deaconess.html">Beth Israel Deaconess Medical Center</a><p>Beth Israel Deaconess Medical Center (BIDMC) е водеща академична болница, разположена в Бостън, Масачузетс.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

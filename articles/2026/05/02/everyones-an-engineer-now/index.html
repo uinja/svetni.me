@@ -22,4 +22,55 @@
 <p>В това ново бъдеще „инженер“ е всеки, който има визията да дефинира проблем и вкуса да избере най-доброто решение, докато ИИ се грижи за „черната работа“ по кодирането.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.oreilly.com/radar/everyones-an-engineer-now/">Everyone’s an Engineer Now - O&#39;Reilly Radar</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tim-oreilly.html">Тим О&#x27;Райли</a><p>Тим О&amp;#39;Райли (Tim O&amp;#39;Reilly) е ирландско-американски визионер, издател и основател на O&amp;#39;Reilly Media.</p></li><li><a href="/pages/steve-yegge.html">Стив Йеги (Steve Yegge)</a><p>Стив Йеги е легендарен софтуерен инженер, известен със своята работа в Amazon и Google.</p></li><li><a href="/pages/oreilly-media.html">O&#x27;Reilly Media</a><p>O&amp;#39;Reilly Media е водеща американска компания за обучение и издателска дейност в областта на технологиите.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/cat-wu.html">Кет Ву</a><p>Кет Ву (Cat Wu) е технологичен лидер, който в момента отговаря за продуктовото развитие на инструментите Claude Code и Cowork в Anthropic.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/addy-osmani.html">Ади Османи</a><p>Ади Османи (Addy Osmani) е известен софтуерен инженер, автор и лектор, който в момента работи в Google (Chrome екипа).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tim-oreilly.html">Тим О&#x27;Райли</a><p>Тим О&amp;#39;Райли (Tim O&amp;#39;Reilly) е ирландско-американски визионер, издател и основател на O&amp;#39;Reilly Media.</p></li><li><a href="/pages/steve-yegge.html">Стив Йеги (Steve Yegge)</a><p>Стив Йеги е легендарен софтуерен инженер, известен със своята работа в Amazon и Google.</p></li><li><a href="/pages/oreilly-media.html">O&#x27;Reilly Media</a><p>O&amp;#39;Reilly Media е водеща американска компания за обучение и издателска дейност в областта на технологиите.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/cat-wu.html">Кет Ву</a><p>Кет Ву (Cat Wu) е технологичен лидер, който в момента отговаря за продуктовото развитие на инструментите Claude Code и Cowork в Anthropic.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/addy-osmani.html">Ади Османи</a><p>Ади Османи (Addy Osmani) е известен софтуерен инженер, автор и лектор, който в момента работи в Google (Chrome екипа).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

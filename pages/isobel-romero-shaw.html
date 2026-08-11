@@ -13,4 +13,55 @@
 <h3>Научна кариера и приноси</h3>
 <p>Д-р Ромеро-Шоу е носител на престижната изследователска стипендия „Ърнест Ръдърфорд“ (Ernest Rutherford Fellow) от Science and Technology Facilities Council (STFC) и работи съвместно с Института за изследване на гравитацията в Cardiff University и Физическата лаборатория H. H. Wills в University of Bristol.</p>
 <p>Изследванията ѝ са фокусирани върху статистическия анализ на данни от гравитационни вълни, по-специално върху моделирането на параметрите на двойни системи от черни дупки, ексцентричност на орбитите, спин на компактните обекти и произхода на черните дупки в междинния масов диапазон в гъсти звездни купове.</p>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/24/impossible-black-holes/">„Невъзможните“ черни дупки във Вселената се оказват продукт на йерархични сливания</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/nous-research.html">Nous Research</a></li><li><a href="/pages/slicervm.html">SlicerVM</a></li><li><a href="/pages/maven-central.html">Maven Central</a></li><li><a href="/pages/mulesoft.html">MuleSoft</a></li><li><a href="/pages/my-ai.html">My AI</a></li><li><a href="/pages/amazon-bedrock-agentcore.html">Amazon Bedrock AgentCore</a></li><li><a href="/pages/flutter.html">Flutter</a></li><li><a href="/pages/japan-airlines.html">Japan Airlines (JAL)</a></li><li><a href="/pages/h100.html">Nvidia H100</a></li><li><a href="/pages/meta-ai.html">Meta AI</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/24/impossible-black-holes/">„Невъзможните“ черни дупки във Вселената се оказват продукт на йерархични сливания</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/git-worktree.html">Git Worktree</a></li><li><a href="/pages/russia.html">Русия</a></li><li><a href="/pages/anssi.html">ANSSI</a></li><li><a href="/pages/hiro.html">Hiro</a></li><li><a href="/pages/codemender.html">CodeMender</a></li><li><a href="/pages/jetbrains-central.html">JetBrains Central</a></li><li><a href="/pages/deterministic-guardrails.html">Детерминистични предпазни рамки</a></li><li><a href="/pages/hades-implant.html">Hades (имплант)</a></li><li><a href="/pages/earendil.html">Earendil</a></li><li><a href="/pages/campfire-model.html">Модел „Огън на открито“ (Campfire Model)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

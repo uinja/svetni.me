@@ -37,4 +37,55 @@
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://mashable.com/tech/apple-sends-legal-letters-to-dozens-of-former-employees-now-at-openai">Apple sends legal letters to dozens of former employees now at OpenAI - Mashable</a></p>
 <p>[2]: <a href="https://mashable.com/life/apple-openai-lawsuit-allegations">Apple v. OpenAI lawsuit: 8 key allegations explained - Mashable</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tang-yew-tan.html">Tang Yew Tan</a><p>Танг Ю Тан (Tang Yew Tan) е дизайнер на потребителски хардуер, който е заемал ключова роля като вицепрезидент по продуктов дизайн (Vice President of P...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/jony-ive.html">Jony Ive</a><p>Сър Джонатан Айв (Jony Ive) е британски индустриален дизайнер, придобил световна известност като главен дизайнер (Chief Design Officer) на Apple.</p></li><li><a href="/pages/io-products.html">io Products</a><p>io Products е хардуерна компания стартъп, създадена от бившия главен дизайнер на Apple Джони Айв, бившия вицепрезидент по продуктов дизайн на Apple Та...</p></li><li><a href="/pages/chang-liu.html">Chang Liu</a><p>Чанг Лиу (Chang Liu) е електроинженер, специализиран в системно проектиране на потребителски хардуер.</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tang-yew-tan.html">Tang Yew Tan</a><p>Танг Ю Тан (Tang Yew Tan) е дизайнер на потребителски хардуер, който е заемал ключова роля като вицепрезидент по продуктов дизайн (Vice President of P...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/jony-ive.html">Jony Ive</a><p>Сър Джонатан Айв (Jony Ive) е британски индустриален дизайнер, придобил световна известност като главен дизайнер (Chief Design Officer) на Apple.</p></li><li><a href="/pages/io-products.html">io Products</a><p>io Products е хардуерна компания стартъп, създадена от бившия главен дизайнер на Apple Джони Айв, бившия вицепрезидент по продуктов дизайн на Apple Та...</p></li><li><a href="/pages/chang-liu.html">Chang Liu</a><p>Чанг Лиу (Chang Liu) е електроинженер, специализиран в системно проектиране на потребителски хардуер.</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

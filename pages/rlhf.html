@@ -22,4 +22,55 @@
 <p>Без RLHF един базов модел просто би продължил текста по вероятност — ако го питате как да откраднете кола, той може да ви даде инструкции, защото ги е чел в интернет. RLHF „научава“ модела да отказва опасни заявки и да следва човешките етични норми.</p>
 <h2>Критики</h2>
 <p>Въпреки успеха си, RLHF често е обвиняван в създаването на „прекалено предпазливи“ или политизирани модели. През 2026 г. се появяват нови методи като <strong>RLAIF (AI Feedback)</strong>, където един модел обучава друг, за да се намали нуждата от скъп човешки труд.</p>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/28/netflix-llm-homepage-generation/">GenPage: Netflix Заменя Традиционните Препоръчителни Системи с Генеративен Изкуствен Интелект</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/13/anthropic-sci-fi-evil-ai/">Anthropic обвинява дистопичната фантастика за „злото“ поведение на изкуствения интелект</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/27/radical-ai-transparency-oreilly/">Покажи работата си: Делото за радикална прозрачност в ИИ</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/daniel-stenberg.html">Даниел Стенберг (Daniel Stenberg)</a></li><li><a href="/pages/expedia-group.html">Expedia Group</a></li><li><a href="/pages/scott-bessent.html">Scott Bessent (Скот Бесент)</a></li><li><a href="/pages/andy-jassy.html">Анди Джаси (Andy Jassy)</a></li><li><a href="/pages/activestate.html">ActiveState</a></li><li><a href="/pages/alchemy-models.html">Alchemy Models</a></li><li><a href="/pages/ai-index.html">AI Index (Индекс на изкуствения интелект)</a></li><li><a href="/pages/ai-hype.html">AI хайп</a></li><li><a href="/pages/bauhaus.html">Bauhaus</a></li><li><a href="/pages/adam-larson.html">Адам Ларсон</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/28/netflix-llm-homepage-generation/">GenPage: Netflix Заменя Традиционните Препоръчителни Системи с Генеративен Изкуствен Интелект</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/13/anthropic-sci-fi-evil-ai/">Anthropic обвинява дистопичната фантастика за „злото“ поведение на изкуствения интелект</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/27/radical-ai-transparency-oreilly/">Покажи работата си: Делото за радикална прозрачност в ИИ</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/jakobs-law.html">Закон на Якоб (Jakob’s Law)</a></li><li><a href="/pages/france.html">Франция</a></li><li><a href="/pages/krishna-rao.html">Krishna Rao</a></li><li><a href="/pages/stimulus.html">Stimulus</a></li><li><a href="/pages/martin-fowler.html">Мартин Фаулър (Martin Fowler)</a></li><li><a href="/pages/odf.html">OpenDocument Format (ODF)</a></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a></li><li><a href="/pages/microsoft.html">Microsoft</a></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a></li><li><a href="/pages/minimax.html">MiniMax</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

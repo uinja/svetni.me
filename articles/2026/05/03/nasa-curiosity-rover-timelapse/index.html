@@ -16,4 +16,55 @@
 <p>Въпреки щетите по шасито, софтуерни подобрения и алтернативни техники за шофиране (като придвижване на заден ход) позволяват на ветерана Curiosity да продължи своята научна програма и до днес.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://mashable.com/article/nasa-mars-curiosity-rover-timelapse-video">NASA video shows how much ground a Mars rover has covered, literally - Mashable</a><br>[2]: <a href="https://science.nasa.gov/photojournal/six-years-of-curiositys-wheels-on-the-move/">Six Years of Curiosity’s Wheels on the Move - NASA Science</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nasa.html">NASA</a><p>Националното управление по въздухоплаване и изследване на космическото пространство (NASA) е независима агенция на федералното правителство на САЩ, от...</p></li><li><a href="/pages/mount-sharp.html">Планината Шарп</a><p>Планината Шарп, официално известна като Aeolis Mons, е масивна планина в центъра на кратера Гейл на Марс.</p></li><li><a href="/pages/mars.html">Марс</a><p>Марс е четвъртата планета от Слънчевата система и втората най-малка след Меркурий.</p></li><li><a href="/pages/jpl.html">Jet Propulsion Laboratory (JPL)</a><p>Jet Propulsion Laboratory (JPL) е федерално финансиран център за изследвания и развитие и лаборатория на NASA, управлявана от Калифорнийския технологи...</p></li><li><a href="/pages/gale-crater.html">Кратерът Гейл</a><p>Кратерът Гейл е ударен кратер на Марс с диаметър около 154 км.</p></li><li><a href="/pages/curiosity.html">Curiosity (марсоход)</a><p>Curiosity е марсоход с размерите на автомобил, част от мисията на NASA &amp;quot;Mars Science Laboratory&amp;quot; (MSL).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nasa.html">NASA</a><p>Националното управление по въздухоплаване и изследване на космическото пространство (NASA) е независима агенция на федералното правителство на САЩ, от...</p></li><li><a href="/pages/mount-sharp.html">Планината Шарп</a><p>Планината Шарп, официално известна като Aeolis Mons, е масивна планина в центъра на кратера Гейл на Марс.</p></li><li><a href="/pages/mars.html">Марс</a><p>Марс е четвъртата планета от Слънчевата система и втората най-малка след Меркурий.</p></li><li><a href="/pages/jpl.html">Jet Propulsion Laboratory (JPL)</a><p>Jet Propulsion Laboratory (JPL) е федерално финансиран център за изследвания и развитие и лаборатория на NASA, управлявана от Калифорнийския технологи...</p></li><li><a href="/pages/gale-crater.html">Кратерът Гейл</a><p>Кратерът Гейл е ударен кратер на Марс с диаметър около 154 км.</p></li><li><a href="/pages/curiosity.html">Curiosity (марсоход)</a><p>Curiosity е марсоход с размерите на автомобил, част от мисията на NASA &amp;quot;Mars Science Laboratory&amp;quot; (MSL).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

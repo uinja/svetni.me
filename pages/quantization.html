@@ -21,4 +21,55 @@
 </ol>
 <h2>Компромис с точността</h2>
 <p>Преобразуването на теглата в по-груб формат може да доведе до лека загуба на точност и влошаване на качеството на генерираните отговори. Поради това се използват напреднали алгоритми (като AWQ, GPTQ или SmoothQuant), които минимизират тази загуба.</p>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/24/hetzner-inference-first-look/">Hetzner навлиза в AI Inference пазара: Първи поглед към техния нов API</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/15/cloudflare-ensemble-ai/">Оптимизация на ИИ в периферията: Cloudflare привлича екипа на Ensemble AI</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/02/local-ai/">Локалният ИИ вече не е само за ентусиасти: Как отворените модели променят играта</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/bigreat-technology.html">Bigreat Technology</a></li><li><a href="/pages/rock-zero.html">Rock Zero</a></li><li><a href="/pages/concordia-university.html">Concordia University</a></li><li><a href="/pages/codex.html">Codex</a></li><li><a href="/pages/jarvis-challenge.html">Предизвикателството JARVIS (JARVIS Challenge)</a></li><li><a href="/pages/dan-shapiro.html">Дан Шапиро (Dan Shapiro)</a></li><li><a href="/pages/cosmos.html">NVIDIA Cosmos</a></li><li><a href="/pages/iam.html">IAM</a></li><li><a href="/pages/flaky-tests.html">Нестабилни тестове</a></li><li><a href="/pages/google-distributed-cloud.html">Google Distributed Cloud</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/24/hetzner-inference-first-look/">Hetzner навлиза в AI Inference пазара: Първи поглед към техния нов API</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/15/cloudflare-ensemble-ai/">Оптимизация на ИИ в периферията: Cloudflare привлича екипа на Ensemble AI</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/02/local-ai/">Локалният ИИ вече не е само за ентусиасти: Как отворените модели променят играта</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/alta-ares.html">Alta Ares</a></li><li><a href="/pages/krea.html">Krea AI</a></li><li><a href="/pages/jetbrains-marketplace.html">JetBrains Marketplace</a></li><li><a href="/pages/hiro.html">Hiro</a></li><li><a href="/pages/freedoom.html">Freedoom</a></li><li><a href="/pages/groq.html">Groq</a></li><li><a href="/pages/ai-alignment.html">Подравняване на ИИ (AI Alignment)</a></li><li><a href="/pages/gpt-5.html">GPT-5</a></li><li><a href="/pages/ai-journalism.html">ИИ Журналистика (AI Journalism)</a></li><li><a href="/pages/anybotics.html">ANYbotics</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -16,4 +16,55 @@
 </ol>
 <p>Интересен акцент в презентацията е идеята за „платформата като продукт“. Това изисква екипите по платформено инженерство да имат продуктови мениджъри и редовно да събират обратна връзка от своите „клиенти“ – вътрешните разработчици. Целта е да се създаде среда, в която технологията подпомага, а не ограничава човешкия потенциал.</p>
 <p><strong>Източници:</strong><br>[1]: <a href="https://www.infoq.com/news/2026/04/measure-platform-engineering/">Measure Strategic Impact of Platform Engineering - InfoQ</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/socio-technical-systems.html">Социотехнически системи</a><p>Социотехническите системи са концепция, която разглежда взаимодействието между хората (социален аспект) и технологиите (технически аспект) в рамките н...</p></li><li><a href="/pages/platform-engineering.html">Платформено инженерство (Platform Engineering)</a><p>Платформеното инженерство е дисциплина, фокусирана върху изграждането и управлението на вътрешни платформи за разработчици (Internal Developer Platfor...</p></li><li><a href="/pages/devops.html">DevOps</a><p>DevOps е методология и култура, която обединява разработката на софтуер (Dev) и ИТ операциите (Ops).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/socio-technical-systems.html">Социотехнически системи</a><p>Социотехническите системи са концепция, която разглежда взаимодействието между хората (социален аспект) и технологиите (технически аспект) в рамките н...</p></li><li><a href="/pages/platform-engineering.html">Платформено инженерство (Platform Engineering)</a><p>Платформеното инженерство е дисциплина, фокусирана върху изграждането и управлението на вътрешни платформи за разработчици (Internal Developer Platfor...</p></li><li><a href="/pages/devops.html">DevOps</a><p>DevOps е методология и култура, която обединява разработката на софтуер (Dev) и ИТ операциите (Ops).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

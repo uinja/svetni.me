@@ -47,4 +47,55 @@
 <h2>Източници</h2>
 <p>[1] <a href="https://openai.com/index/ten-advances-in-mathematics/">Ten advances in mathematics and theoretical computer science</a></p>
 <p>[2] <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/">OpenAI teases Astra, its next major AI model, after it solves 10 long-standing math problems</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/openai-astra.html">OpenAI Astra</a><p>Astra (да не се бърка с мултимодалния проект Project Astra на Google DeepMind) е следващото голямо поколение изкуствен интелект на американската компа...</p></li><li><a href="/pages/lean.html">Lean</a><p>Lean е функционален език за програмиране и интерактивен доказател на теореми (proof assistant), разработен първоначално от Леонардо де Моура в Microso...</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/google-deepmind.html">Google DeepMind</a><p>Google DeepMind е подразделението за изкуствен интелект на Google (Alphabet), създадено след сливането на лондонската лаборатория DeepMind и Google Br...</p></li><li><a href="/pages/erdos-problems.html">Задачи на Ердьош</a><p>Задачите на Ердьош (Erdős problems) са колекция от математически хипотези и нерешени проблеми, формулирани от легендарния унгарски математик Пал Ердьо...</p></li><li><a href="/pages/discrete-geometry.html">Дискретна геометрия</a><p>Дискретната геометрия е клон на геометрията, който изучава комбинаторните свойства и взаимното разположение на дискретни обекти, като точки, линии, ок...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/openai-astra.html">OpenAI Astra</a><p>Astra (да не се бърка с мултимодалния проект Project Astra на Google DeepMind) е следващото голямо поколение изкуствен интелект на американската компа...</p></li><li><a href="/pages/lean.html">Lean</a><p>Lean е функционален език за програмиране и интерактивен доказател на теореми (proof assistant), разработен първоначално от Леонардо де Моура в Microso...</p></li><li><a href="/pages/kibersigurnost.html">Киберсигурност</a><p>Киберсигурността е практиката на защита на системи, мрежи и програми от дигитални атаки.</p></li><li><a href="/pages/google-deepmind.html">Google DeepMind</a><p>Google DeepMind е подразделението за изкуствен интелект на Google (Alphabet), създадено след сливането на лондонската лаборатория DeepMind и Google Br...</p></li><li><a href="/pages/erdos-problems.html">Задачи на Ердьош</a><p>Задачите на Ердьош (Erdős problems) са колекция от математически хипотези и нерешени проблеми, формулирани от легендарния унгарски математик Пал Ердьо...</p></li><li><a href="/pages/discrete-geometry.html">Дискретна геометрия</a><p>Дискретната геометрия е клон на геометрията, който изучава комбинаторните свойства и взаимното разположение на дискретни обекти, като точки, линии, ок...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

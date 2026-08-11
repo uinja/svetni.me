@@ -13,4 +13,55 @@
 <li><strong>Итеративно подобрение:</strong> Агентът за оптимизация анализира защо моделът е сгрешил и автоматично коригира и допълва системния промпт с по-ясни дефиниции или примери (few-shot learning).</li>
 <li><strong>Бързо внедряване:</strong> Този процес отнема минути вместо дни, като повишава прецизността на генерираното съдържание и елиминира необходимостта от скъпоструващо дообучаване на невронни мрежи на ранен етап.</li>
 </ul>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/04/doordash-food-metadata-llm-juries/">Как DoorDash изгражда метаданни за храни чрез журита от езикови модели (LLM Juries) и мултимодален ИИ</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/blue-moon.html">Blue Moon</a></li><li><a href="/pages/serial-position-effect.html">Ефект на серийното положение (Serial Position Effect)</a></li><li><a href="/pages/nuclear-fusion.html">Ядрен синтез</a></li><li><a href="/pages/project-vend.html">Project Vend</a></li><li><a href="/pages/ukraine.html">Украйна</a></li><li><a href="/pages/nanoco-ai.html">NanoCo AI</a></li><li><a href="/pages/stripe.html">Stripe</a></li><li><a href="/pages/looksmaxxing.html">Looksmaxxing</a></li><li><a href="/pages/thailand-mof.html">Министерство на финансите на Тайланд (MOF)</a></li><li><a href="/pages/law-of-pragnanz.html">Закон на Прегнанц (Law of Prägnanz)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/07/04/doordash-food-metadata-llm-juries/">Как DoorDash изгражда метаданни за храни чрез журита от езикови модели (LLM Juries) и мултимодален ИИ</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/internet-of-things.html">Интернет на нещата</a></li><li><a href="/pages/anssi.html">ANSSI</a></li><li><a href="/pages/eslint.html">ESLint</a></li><li><a href="/pages/bob-diachenko.html">Боб Дяченко (Bob Diachenko)</a></li><li><a href="/pages/francesco-siddi.html">Франческо Сиди (Francesco Siddi)</a></li><li><a href="/pages/agentic-engineering.html">Агентно инженерство (Agentic Engineering)</a></li><li><a href="/pages/mimo-code.html">MiMo Code</a></li><li><a href="/pages/ms-dos.html">MS-DOS</a></li><li><a href="/pages/mit-license.html">MIT Лиценз</a></li><li><a href="/pages/mvsqlite.html">mvSQLite</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

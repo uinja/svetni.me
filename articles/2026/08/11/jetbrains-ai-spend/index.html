@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В официалния си блог софтуерната компания JetBrains публикува подробен анализ, изготвен от Виктор Киселев и Михаил Филипов, относно управлението и..."><title>Как JetBrains овладя десетократния ръст в разходите си за изкуствен интелект - Светни.ме</title><meta property="og:title" content="Как JetBrains овладя десетократния ръст в разходите си за изкуствен интелект - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В официалния си блог софтуерната компания JetBrains публикува подробен анализ, изготвен от Виктор Киселев и Михаил Филипов, относно управлението и..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/11/jetbrains-ai-spend/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/11/jetbrains-ai-spend/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как JetBrains овладя десетократния ръст в разходите си за изкуствен интелект</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 август 2026 г.</p><div><p><img src="/articles/2026/08/11/jetbrains-ai-spend/hero.png" alt="JetBrains AI spend hero"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В официалния си блог софтуерната компания <a href="/pages/jetbrains.html">JetBrains</a> публикува подробен анализ, изготвен от Виктор Киселев и Михаил Филипов, относно управлението и оптимизирането на разходите за разработка, базирана на изкуствен интелект (ИИ) [1]. В рамките на първите шест месеца от 2026 г. разходите на компанията за ИИ инструменти са се увеличили приблизително десет пъти. Този рязък скок е принудил екипа да признае липсата на система за контрол и да търси нови решения.</p>
+<p>Вместо да наложи строги ограничения върху това кои инструменти могат да се използват, компанията предприема по-гъвкав подход. Тя създава централизиран слой за достъп и отчетност, който запазва свободата на избор, но осигурява пълен контрол върху потреблението. Този подход се различава значително от практиките на други големи корпорации, които често налагат лимити чрез ограничаване на достъпните платформи.</p>
+<h2>Фактори зад експлозивния растеж на разходите</h2>
+<p>Рязкото покачване на разходите започва през януари 2026 г., което съвпада с пускането на пазара на по-способните модели <a href="/pages/claude.html">Claude</a> Opus 4.5 и 4.6 [1]. Тези модели предлагат по-висока производителност на агентите, което мотивира разработчиците в JetBrains да ги интегрират в ежедневните си работни процеси. Инженерите в компанията не разчитат само на едно решение, а сами избират най-подходящите инструменти за своите задачи.</p>
+<p>Повечето разработчици в JetBrains използват между три и пет различни ИИ инструмента всеки месец в допълнение към средите за разработка [1]. Те внедряват решения като <a href="/pages/claude-code.html">Claude Code</a> CLI, чат функции в средите за разработка (IDEs), специализирания агент <a href="/pages/junie.html">Junie</a>, Codex, Cursor и GitHub Copilot. Тази динамика включва използването на множество CLI агенти и среди за паралелно изпълнение на няколко ИИ агента едновременно.</p>
+<p>Масовото използване бързо извежда компанията извън стандартните рамки за потребление. JetBrains бързо преминава границата от 150 платени места за Claude Code, което налага преминаването към корпоративен план (Enterprise) с таксуване на база реално API потребление [1]. Именно тогава разходите започват да нарастват експоненциално, удвоявайки се почти всеки месец.</p>
+<h2>Tooling Zoo и отхвърлянето на ограниченията</h2>
+<p>За справяне с раздутите бюджети много компании избират да ограничат екипите си до един или два одобрени софтуера с цел намаляване на административната тежест. Ръководството на JetBrains обаче отхвърля тази идея, тъй като пазарът на ИИ се развива прекалено динамично. Ограничаването на избора би попречило на инженерите да използват най-добрата налична технология в конкретен момент [1].</p>
+<p>Например, в рамките на няколко седмици най-ефективната конфигурация може да се промени от Claude Code с Opus модели към Codex, а след това към комбинация от Claude Code с други модели като GLM. Компанията решава да поддържа баланс между свободата на софтуерните инженери и управлението на това разнообразие от инструменти. Основните цели са да се запази ефективността, като същевременно се контролират разходите, сигурността и съвместимостта.</p>
+<h2>Еволюцията на контрола: от електронни таблици до реално управление</h2>
+<p>Първоначалните опити за овладяване на ситуацията са изцяло ръчни и се оказват неустойчиви във времето. Администраторите прекарват по четири дни в ръчно сваляне на данни от конзолите на доставчиците и групирането им по отдели в електронни таблици [1]. Този метод дава единствено моментна снимка, но не и възможност за дългосрочно планиране или предотвратяване на преразходи.</p>
+<p>Впоследствие JetBrains изгражда вътрешни табла за визуализация, които автоматично събират данни чрез API от доставчиците на ИИ модели [1]. Тези табла предоставят на мениджърите добра видимост за текущите и прогнозираните разходи на база организационна структура. Те обаче са в режим „само за четене“ и не позволяват директно налагане на лимити или контрол върху самия трафик към моделите.</p>
+<p>Проблемът с бързо растящите бюджети за ИИ не е изолиран само в JetBrains. Дисциплината <a href="/pages/finops.html">FinOps</a> (Financial Operations) все по-често включва генеративния ИИ в своя обхват на действие [2]. Организациите съветват екипите си за разумно ползване на ресурсите, а някои компании като Uber дори въвеждат месечни лимити, последица от изчерпване на годишния си ИИ бюджет за по-малко от четири месеца [2].</p>
+<h2>Раждането на JetBrains Central CLI</h2>
+<p>Решението на проблема идва от неочаквано място – вътрешен инструмент, създаден от разработчик за собствена употреба. Първоначално това е прост интерфейс за команден ред, предназначен за локално тестване, автентификация и дебъгване на външни агенти. През април 2026 г. екипът решава да превърне този прототип в продукт за цялата компания – <a href="/pages/jetbrains-central.html">JetBrains Central</a> CLI [1].</p>
+<p>Инструментът автоматизира процеса по автентификация и откриване на инсталираните ИИ агенти на машината на разработчика. Най-важното е, че той пренасочва всички заявки към вътрешната платформа за маршрутизиране на трафика (JetBrains AI Platform) [1]. Това позволява на компанията да приложи система от ИИ кредити за външни инструменти по същия начин, по който управлява разходите за собствените си продукти.</p>
+<p>Платформата JetBrains AI Platform се използва за обслужване на клиенти от 2023 г. и е преминала успешно през над един милиард заявки към големи езикови модели [1]. Тя събира метрики и ги обработва асинхронно чрез ETL процеси към защитено и еластично хранилище, покривайки всички изисквания за сигурност.</p>
+<h2>Инфографика: Пътят на ИИ заявките и разпределението на кредитите</h2>
+<p>По-долу е представена схемата на работа на изградената инфраструктура:</p>
+<p><img src="/articles/2026/08/11/jetbrains-ai-spend/infographic.png" alt="JetBrains AI credit flow infographic"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<p>Следните подобрения са достъпни за различните роли в компанията благодарение на новата инфраструктура:</p>
+<ul>
+<li><p>Разработчиците могат да стартират терминални агенти с избрани от тях модели без административно забавяне или чакане на одобрение [1].</p>
+</li>
+<li><p>Мениджърите могат да генерират подробни отчети за потреблението и прогнозните разходи по отдели, както и да налагат гранулирани лимити [1].</p>
+</li>
+<li><p>Администраторите спестяват време от обработката на фактури и договори от множество външни доставчици [1].</p>
+</li>
+</ul>
+<h2>Резултати, предизвикателства и бъдещо развитие</h2>
+<p>Въвеждането на новата инфраструктура е изключително бързо – проектът отнема само два месеца [1]. Над 1000 инженери преминават към новия интерфейс за команден ред в рамките на няколко седмици. Този масов преход обаче разкрива редица специфични софтуерни конфигурации, като нестандартни терминали под Windows и отдаечени сървъри, което налага допълнителни корекции по входа в системата.</p>
+<p>Въпреки успеха, системата все още има някои празноти. Понастоящем инструментът поддържа три от най-популярните терминални агенти, а други четири са във фаза на вътрешно бета-тестване [1]. Персоналните абонаменти и специфичните бутикови конфигурации на разработчиците остават извън обхвата на новия софтуер. В ход е и разработката на по-детайлна система за управление на правата, която да позволи на преките мениджъри да преразпределят токени според нуждите на проектите им.</p>
+<h2>Достъпност и изводи за индустрията</h2>
+<p>На 8 юли 2026 г. JetBrains отвори ранен достъп до Central CLI за външни организации и индивидуални клиенти, разполагащи с ИИ кредити [1]. Решението е ориентирано главно към екипи с голям трафик към API интерфейси на външни модели. За по-малки организации с ниско потребление на ИИ инструменти икономическите ползи от внедряването на подобна система биха били минимални.</p>
+<p>Опитът на компанията показва, че ключът към успешната оптимизация не е в ограничаването на иновациите, а в интелигентното управление на инфраструктурата. Чрез автоматизиране на процеса JetBrains успява да намали административното натоварване, осигурявайки същевременно финансова предвидимост.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://blog.jetbrains.com/ai/2026/08/our-first-moves-to-get-ai-spend-under-control/">Our First Moves to Get AI Spend Under Control - The JetBrains Blog</a><br>[2]: <a href="https://www.infoq.com/news/2026/08/jetbrains-ai-spend/">JetBrains Details Its First Steps to Bring Rapidly Growing AI Spend Under Control - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/junie.html">Junie</a><p>Junie е интелигентен агент за разработка на софтуер, създаден от JetBrains, който помага на разработчиците в кодирането, анализа на проекти и отстраня...</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/jetbrains-central.html">JetBrains Central</a><p>JetBrains Central е централизирана платформа за управление, сигурност и контрол на разходите за изкуствен интелект (ИИ) в рамките на организации.</p></li><li><a href="/pages/finops.html">FinOps</a><p>FinOps (Financial Operations) е управленска дисциплина и културна практика, съчетаваща финансово управление, технологии и бизнес операции за оптимизир...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

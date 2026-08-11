@@ -18,4 +18,55 @@
 <p>Подкрепена от фонда за рисков капитал <a href="/pages/dfj-growth.html">DFJ Growth</a>, компанията се стреми да достигне гигаватов капацитет до края на десетилетието [1]. „Нашите системи са напълно мащабируеми и могат да се свързват към мрежата или да се инсталират директно зад електромера на клиента“, посочва президентът Сара Спенджълоу [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://techcrunch.com/2026/06/10/why-two-spacex-alumni-are-betting-on-solar-and-batteries-to-power-the-ai-craze/">Why 2 SpaceX alumni are betting on solar and batteries to power the AI craze - TechCrunch</a><br>[2]: <a href="http://www.ambrosia.energy">Continuous Renewable Power from Solar + Battery - Ambrosia Energy</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/swarm-technologies.html">Swarm Technologies</a><p>Swarm Technologies е американска сателитна компания, основана от Сара Спенджълоу и Бен Лонгмиър през 2016 г.</p></li><li><a href="/pages/starlink.html">Starlink</a><p>Starlink е сателитна констелация, разработвана и оперирана от аерокосмическата компания SpaceX, която предоставя широколентов достъп до интернет с нис...</p></li><li><a href="/pages/spacex.html">SpaceX</a><p>SpaceX (Space Exploration Technologies Corp.</p></li><li><a href="/pages/sara-spangelo.html">Sara Spangelo</a><p>Сара Спенджълоу (Sara Spangelo) е канадски инженер и предприемач, президент и съосновател на Ambrosia Energy.</p></li><li><a href="/pages/dfj-growth.html">DFJ Growth</a><p>DFJ Growth е американска компания за рисков капитал, специализирана в инвестиции в технологични компании на ранен етап на растеж.</p></li><li><a href="/pages/ben-longmier.html">Ben Longmier</a><p>Бен Лонгмиър (Ben Longmier) е американски предприемач и аерокосмически инженер, главен изпълнителен директор и съосновател на Ambrosia Energy.</p></li><li><a href="/pages/ambrosia-energy.html">Ambrosia Energy</a><p>Ambrosia Energy е американска енергийна компания, съвместно основана в края на 2025 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/swarm-technologies.html">Swarm Technologies</a><p>Swarm Technologies е американска сателитна компания, основана от Сара Спенджълоу и Бен Лонгмиър през 2016 г.</p></li><li><a href="/pages/starlink.html">Starlink</a><p>Starlink е сателитна констелация, разработвана и оперирана от аерокосмическата компания SpaceX, която предоставя широколентов достъп до интернет с нис...</p></li><li><a href="/pages/spacex.html">SpaceX</a><p>SpaceX (Space Exploration Technologies Corp.</p></li><li><a href="/pages/sara-spangelo.html">Sara Spangelo</a><p>Сара Спенджълоу (Sara Spangelo) е канадски инженер и предприемач, президент и съосновател на Ambrosia Energy.</p></li><li><a href="/pages/dfj-growth.html">DFJ Growth</a><p>DFJ Growth е американска компания за рисков капитал, специализирана в инвестиции в технологични компании на ранен етап на растеж.</p></li><li><a href="/pages/ben-longmier.html">Ben Longmier</a><p>Бен Лонгмиър (Ben Longmier) е американски предприемач и аерокосмически инженер, главен изпълнителен директор и съосновател на Ambrosia Energy.</p></li><li><a href="/pages/ambrosia-energy.html">Ambrosia Energy</a><p>Ambrosia Energy е американска енергийна компания, съвместно основана в края на 2025 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

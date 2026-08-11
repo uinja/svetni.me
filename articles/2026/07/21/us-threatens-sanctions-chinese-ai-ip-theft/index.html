@@ -23,4 +23,55 @@
 <p>Паралелно с това правният натиск върху сектора се засилва. Наскоро Anthropic бе одобрена за споразумение на стойност 1.5 милиарда долара във връзка с използване на авторски книги за обучение, което показва растящата правна сложност около данните за ИИ.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/">US threatens sanctions against Chinese AI models over IP theft - TechCrunch</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/techcrunch.html">TechCrunch</a><p>TechCrunch е водеща американска онлайн медия, фокусирана върху високотехнологичната индустрия и стартъп екосистемата.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/moonshot-ai.html">Moonshot AI</a><p>Moonshot AI е водеща китайска компания за изкуствен интелект, основана от Ян Жилин, бивш изследовател в Google и Meta.</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/distillation.html">Дистилация (Distillation)</a><p>Дистилацията на знание (Knowledge Distillation) е процес в машинното обучение, при който по-малък, по-ефективен модел (наричан „ученик“) се обучава да...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/techcrunch.html">TechCrunch</a><p>TechCrunch е водеща американска онлайн медия, фокусирана върху високотехнологичната индустрия и стартъп екосистемата.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/moonshot-ai.html">Moonshot AI</a><p>Moonshot AI е водеща китайска компания за изкуствен интелект, основана от Ян Жилин, бивш изследовател в Google и Meta.</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/distillation.html">Дистилация (Distillation)</a><p>Дистилацията на знание (Knowledge Distillation) е процес в машинното обучение, при който по-малък, по-ефективен модел (наричан „ученик“) се обучава да...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

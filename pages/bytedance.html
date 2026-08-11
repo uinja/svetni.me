@@ -10,4 +10,55 @@
 <ul>
 <li><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li>
 </ul>
-</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/08/07/bytedance-10-trillion-parameter-model/">ByteDance разработва ИИ модел с 10 трилиона параметъра</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/16/china-ai-price-war/">Ценовата война при моделите с изкуствен интелект в Китай се изостря</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/01/china-ai-micro-dramas/">Китай преобразява индустрията на микро-драмите с изкуствен интелект и държавна помощ</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/oauth.html">OAuth</a></li><li><a href="/pages/south-korea.html">Южна Корея</a></li><li><a href="/pages/dfj-growth.html">DFJ Growth</a></li><li><a href="/pages/joule.html">Joule (списание)</a></li><li><a href="/pages/loom-aws.html">Loom for AWS</a></li><li><a href="/pages/dylan-castillo.html">Дилън Кастило (Dylan Castillo)</a></li><li><a href="/pages/mark-lechner.html">Марк Лехнер (Mark Lechner)</a></li><li><a href="/pages/micro-drama.html">Микро-драма</a></li><li><a href="/pages/mozilla.html">Mozilla</a></li><li><a href="/pages/jarvis-challenge.html">Предизвикателството JARVIS (JARVIS Challenge)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/08/07/bytedance-10-trillion-parameter-model/">ByteDance разработва ИИ модел с 10 трилиона параметъра</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/06/16/china-ai-price-war/">Ценовата война при моделите с изкуствен интелект в Китай се изостря</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/05/01/china-ai-micro-dramas/">Китай преобразява индустрията на микро-драмите с изкуствен интелект и държавна помощ</a></li><li style="margin-bottom:0.5rem"><a href="/articles/2026/04/25/china-ai-token-drive-inland-economy/">„Токен икономика“: Как Китай използва ИИ за възраждане на вътрешните си провинции</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/wired.html">Wired</a></li><li><a href="/pages/archion.html">Archion</a></li><li><a href="/pages/goldman-sachs.html">Goldman Sachs</a></li><li><a href="/pages/claude-projects.html">Claude Projects</a></li><li><a href="/pages/cotality.html">Cotality</a></li><li><a href="/pages/bleepingcomputer.html">BleepingComputer</a></li><li><a href="/pages/democracy.html">Демокрация</a></li><li><a href="/pages/bridge.html">Bridge</a></li><li><a href="/pages/data-center-watch.html">Data Center Watch</a></li><li><a href="/pages/daqiri.html">DAQIRI</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

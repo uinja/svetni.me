@@ -17,4 +17,55 @@
 <p>Най-ценното умение за разработчиците вече не е просто познаването на езици за програмиране, а способността да оркестрират „армия от агенти“ и да валидират техния изход. Преходът от „писане на код“ към „архитектурно проектиране и верификация“ е реалността, която разделя успешните екипи от тези, които рискуват да затънат в технически дълг, създаден със скоростта на светлината.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://softwareengineeringdaily.com/2026/04/23/hype-and-reality-of-the-ai-coding-shift/">Hype and Reality of the AI Coding Shift - Software Engineering Daily</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/sonarqube.html">SonarQube</a><p>SonarQube е платформа с отворен код за непрекъсната инспекция на качеството на кода.</p></li><li><a href="/pages/greenfield-development.html">Greenfield Разработка (Greenfield Development)</a><p>Greenfield разработка се отнася до проекти, които започват „на чисто“, без ограничения от наследен (legacy) код или съществуваща инфраструктура.</p></li><li><a href="/pages/deterministic-verification.html">Детерминистична верификация (Deterministic Verification)</a><p>Детерминистичната верификация се отнася до процеси на проверка, които винаги произвеждат един и същ резултат при еднакви входни данни.</p></li><li><a href="/pages/brownfield-development.html">Brownfield Разработка (Brownfield Development)</a><p>Brownfield разработка се отнася до работа по съществуващи софтуерни системи, често с наследен код, сложни зависимости и липса на документация.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/sonarqube.html">SonarQube</a><p>SonarQube е платформа с отворен код за непрекъсната инспекция на качеството на кода.</p></li><li><a href="/pages/greenfield-development.html">Greenfield Разработка (Greenfield Development)</a><p>Greenfield разработка се отнася до проекти, които започват „на чисто“, без ограничения от наследен (legacy) код или съществуваща инфраструктура.</p></li><li><a href="/pages/deterministic-verification.html">Детерминистична верификация (Deterministic Verification)</a><p>Детерминистичната верификация се отнася до процеси на проверка, които винаги произвеждат един и същ резултат при еднакви входни данни.</p></li><li><a href="/pages/brownfield-development.html">Brownfield Разработка (Brownfield Development)</a><p>Brownfield разработка се отнася до работа по съществуващи софтуерни системи, често с наследен код, сложни зависимости и липса на документация.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

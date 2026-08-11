@@ -19,4 +19,55 @@
 <p><img src="/articles/2026/07/17/moonshot-kimi-k3-open-source/kimi-k3-comparison.svg" alt="Moonshot AI Kimi K3"><br><small>Изображение: Svetni.me / Авторско изображение</small></p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.bbc.com/news/articles/cy9w4q8pgp0o">China&#39;s Moonshot AI claims Kimi K3 can rival OpenAI and Anthropic - BBC News</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zhipu.html">Zhipu AI</a><p>Zhipu AI (официално Beijing Zhipu Huazhang Technology Co.</p></li><li><a href="/pages/tencent.html">Tencent</a><p>Tencent е водещ интернет и технологичен гигант, базиран в Шенжен, Китай.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/mythos.html">Mythos</a><p>Mythos е клас от изключително мощни модели за изкуствен интелект, разработени от компанията Anthropic през 2026 г.</p></li><li><a href="/pages/moonshot-ai.html">Moonshot AI</a><p>Moonshot AI е водеща китайска компания за изкуствен интелект, основана от Ян Жилин, бивш изследовател в Google и Meta.</p></li><li><a href="/pages/minimax.html">MiniMax</a><p>MiniMax (официално MiniMax AI) е китайска компания за изкуствен интелект, основана през 2021 г.</p></li><li><a href="/pages/fable.html">Fable</a><p>Fable (или Claude Fable) е серия от усъвършенствани модели с изкуствен интелект от клас „Mythos“, разработени от компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zhipu.html">Zhipu AI</a><p>Zhipu AI (официално Beijing Zhipu Huazhang Technology Co.</p></li><li><a href="/pages/tencent.html">Tencent</a><p>Tencent е водещ интернет и технологичен гигант, базиран в Шенжен, Китай.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/mythos.html">Mythos</a><p>Mythos е клас от изключително мощни модели за изкуствен интелект, разработени от компанията Anthropic през 2026 г.</p></li><li><a href="/pages/moonshot-ai.html">Moonshot AI</a><p>Moonshot AI е водеща китайска компания за изкуствен интелект, основана от Ян Жилин, бивш изследовател в Google и Meta.</p></li><li><a href="/pages/minimax.html">MiniMax</a><p>MiniMax (официално MiniMax AI) е китайска компания за изкуствен интелект, основана през 2021 г.</p></li><li><a href="/pages/fable.html">Fable</a><p>Fable (или Claude Fable) е серия от усъвършенствани модели с изкуствен интелект от клас „Mythos“, разработени от компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

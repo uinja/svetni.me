@@ -29,4 +29,55 @@
 <p>Сега, когато химическият път е напълно разкрит, учените планират да изследват директно механичните свойства на новополучените C-S-H фази в наномащаб, за да оптимизират допълнително бетоновите смеси на бъдещето.</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://news.mit.edu/2026/carbon-dioxide-rewires-how-cement-sets-0611">A shot of carbon dioxide rewires how cement sets - MIT News</a><br>[2]: <a href="https://ceramics.onlinelibrary.wiley.com/doi/pdf/10.1111/jace.70825">In Situ Raman Spectroscopy of a Silica Gel-Templated Hydration Pathway in CO2-Activated Cement - Journal of the American Ceramic Society</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-emission-cement.html">Цимент с нулева емисия</a><p>Циментът с нулева емисия (Zero-emission cement) се отнася до нови технологии за производство на основния строителен материал, които елиминират или ула...</p></li><li><a href="/pages/raman-spectroscopy.html">Раманова спектроскопия</a><p>Рамановата спектроскопия (Raman spectroscopy) е недеструктивен метод за химически анализ, базиран на явлението нееластично разсейване на светлината, и...</p></li><li><a href="/pages/portland-cement.html">Портланд цимент</a><p>Портланд циментът е най-широко използваният тип цимент в света, който служи като основна съставка на бетона, хоросана и мазилките.</p></li><li><a href="/pages/mit.html">Масачузетски технологичен институт (MIT)</a><p>Масачузетският технологичен институт (Massachusetts Institute of Technology - MIT) е един от най-престижните частни изследователски университети в све...</p></li><li><a href="/pages/carboncure.html">CarbonCure</a><p>CarbonCure Technologies е канадска компания, пионер в разработването на технологии за улавяне и съхранение на въглероден диоксид (CCS) в строителния с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-emission-cement.html">Цимент с нулева емисия</a><p>Циментът с нулева емисия (Zero-emission cement) се отнася до нови технологии за производство на основния строителен материал, които елиминират или ула...</p></li><li><a href="/pages/raman-spectroscopy.html">Раманова спектроскопия</a><p>Рамановата спектроскопия (Raman spectroscopy) е недеструктивен метод за химически анализ, базиран на явлението нееластично разсейване на светлината, и...</p></li><li><a href="/pages/portland-cement.html">Портланд цимент</a><p>Портланд циментът е най-широко използваният тип цимент в света, който служи като основна съставка на бетона, хоросана и мазилките.</p></li><li><a href="/pages/mit.html">Масачузетски технологичен институт (MIT)</a><p>Масачузетският технологичен институт (Massachusetts Institute of Technology - MIT) е един от най-престижните частни изследователски университети в све...</p></li><li><a href="/pages/carboncure.html">CarbonCure</a><p>CarbonCure Technologies е канадска компания, пионер в разработването на технологии за улавяне и съхранение на въглероден диоксид (CCS) в строителния с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

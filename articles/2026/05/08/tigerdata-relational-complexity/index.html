@@ -39,4 +39,55 @@
 <p>Въпреки че <a href="/pages/denormalization.html">денормализацията</a> въвежда излишък (например при преименуване на сграда старата информация остава в историческите записи), при телеметрията и индустриалния интернет на нещата (IIoT) метаданните обикновено са статични. Огромната печалба в скоростта почти винаги надхвърля цената на рядкото обновяване на исторически данни [2].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.tigerdata.com/blog/how-relational-complexity-crushes-real-time-dashboards">How Relational Complexity Crushes Real-Time Dashboards - TigerData</a><br>[2]: <a href="https://www.tigerdata.com/learn/real-time-analytics-in-postgres">PostgreSQL as a Real-Time Analytics Database - TigerData</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/real-time-analytics.html">Анализ в реално време</a><p>Анализ в реално време (Real-time analytics) е процесът на подготовка и измерване на данни веднага щом те постъпят в базата данни.</p></li><li><a href="/pages/postgresql.html">PostgreSQL</a><p>PostgreSQL (често наричана просто Postgres) е мощна система за управление на релационни бази данни (RDBMS) с отворен код.</p></li><li><a href="/pages/denormalization.html">Денормализация</a><p>Денормализация (Denormalization) е стратегия за оптимизация на бази данни, при която се добавя излишна информация или се групират данни с цел подобряв...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/real-time-analytics.html">Анализ в реално време</a><p>Анализ в реално време (Real-time analytics) е процесът на подготовка и измерване на данни веднага щом те постъпят в базата данни.</p></li><li><a href="/pages/postgresql.html">PostgreSQL</a><p>PostgreSQL (често наричана просто Postgres) е мощна система за управление на релационни бази данни (RDBMS) с отворен код.</p></li><li><a href="/pages/denormalization.html">Денормализация</a><p>Денормализация (Denormalization) е стратегия за оптимизация на бази данни, при която се добавя излишна информация или се групират данни с цел подобряв...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

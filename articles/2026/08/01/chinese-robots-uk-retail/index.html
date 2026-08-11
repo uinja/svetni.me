@@ -18,4 +18,55 @@
 <p>Впреки това пазарната приложимост на хуманоидните роботи остава по-неясна в сравнение с колесните складови машини. Докато инженери в компании като <a href="/pages/agibot.html">AgiBot</a> тестват нови прототипи, експертите посочват, че технологията все още не притежава необходимата сръчност за редица фини задачи и хуманоидите ще имат по-скоро допълваща роля в близко бъдеще [1].</p>
 <p><strong>Източници:</strong></p>
 <p>[1]: <a href="https://www.bbc.co.uk/news/articles/c0jl8v23qwgo">The Chinese robot army transforming the UK&#39;s retail industry - BBC News</a></p>
-</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/xpeng.html">XPeng</a><p>XPeng (Xiaopeng Motors) е водещ китайски производител на интелигентни електрически превозни средства (EV).</p></li><li><a href="/pages/tuc.html">TUC</a><p>Trades Union Congress (TUC) е национален синдикален съюз в Обединеното кралство, който представлява по-голямата част от организираните работници в стр...</p></li><li><a href="/pages/oecd.html">OECD</a><p>Организацията за икономическо сътрудничество и развитие (ОИСР / OECD) е международна икономическа организация на развитите страни, основана през 1961 ...</p></li><li><a href="/pages/geek-plus.html">Geek+</a><p>Geek+ е китайска технологична компания и най-големият доставчик в света на автономни мобилни роботи (AMR) за складова логистика.</p></li><li><a href="/pages/agibot.html">AgiBot</a><p>AgiBot е водеща китайска технологична компания, специализирана в разработката и производството на хуманоидни роботи и интелигентни системи за автомати...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer></body></html>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/xpeng.html">XPeng</a><p>XPeng (Xiaopeng Motors) е водещ китайски производител на интелигентни електрически превозни средства (EV).</p></li><li><a href="/pages/tuc.html">TUC</a><p>Trades Union Congress (TUC) е национален синдикален съюз в Обединеното кралство, който представлява по-голямата част от организираните работници в стр...</p></li><li><a href="/pages/oecd.html">OECD</a><p>Организацията за икономическо сътрудничество и развитие (ОИСР / OECD) е международна икономическа организация на развитите страни, основана през 1961 ...</p></li><li><a href="/pages/geek-plus.html">Geek+</a><p>Geek+ е китайска технологична компания и най-големият доставчик в света на автономни мобилни роботи (AMR) за складова логистика.</p></li><li><a href="/pages/agibot.html">AgiBot</a><p>AgiBot е водеща китайска технологична компания, специализирана в разработката и производството на хуманоидни роботи и интелигентни системи за автомати...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic.png"]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
