@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background Card -->
+  <rect width="800" height="500" fill="#fdfbf7" rx="0"/>
+  
+  <!-- Subtle Header Border -->
+  <line x1="50" y1="95" x2="750" y2="95" stroke="#e5dec9" stroke-width="1"/>
+
+  <!-- Infographic Title -->
+  <text x="400" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="800" text-anchor="middle" fill="#1a30ae">
+    MICROSOFT COPILOT CONSOLIDATION
+  </text>
+  
+  <text x="400" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#6b7280">
+    Unified Workspace Interface &amp; Feature Retirement Timeline
+  </text>
+
+  <!-- LEFT COLUMN: The Unified Experience -->
+  <g id="unified-experience-group">
+    <!-- Card Container -->
+    <rect x="50" y="120" width="330" height="330" rx="16" fill="#ffffff" stroke="#e5dec9" stroke-width="1.5"/>
+    <path d="M 50,120 L 380,120 A 16,16 0 0,1 380,136 L 380,170 L 50,170 Z" fill="#eff6ff"/>
+    
+    <text x="215" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" text-anchor="middle" fill="#1e40af">
+      THE UNIFIED EXPERIENCE
+    </text>
+
+    <!-- Point 1 -->
+    <g transform="translate(70, 200)">
+      <circle cx="12" cy="12" r="10" fill="#3b82f6" fill-opacity="0.1"/>
+      <path d="M 8,12 L 11,15 L 16,9" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Unified App Interface
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Personal &amp; work accounts side-by-side.
+      </text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(70, 260)">
+      <circle cx="12" cy="12" r="10" fill="#3b82f6" fill-opacity="0.1"/>
+      <path d="M 8,12 L 11,15 L 16,9" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Microsoft 365 Integration
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Word, Excel, Outlook &amp; OneDrive access.
+      </text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(70, 320)">
+      <circle cx="12" cy="12" r="10" fill="#3b82f6" fill-opacity="0.1"/>
+      <path d="M 8,12 L 11,15 L 16,9" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Commercial Data Boundaries
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Data remains isolated by tenant policies.
+      </text>
+    </g>
+
+    <!-- Point 4 -->
+    <g transform="translate(70, 380)">
+      <circle cx="12" cy="12" r="10" fill="#3b82f6" fill-opacity="0.1"/>
+      <path d="M 8,12 L 11,15 L 16,9" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        OneDrive File Storage
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Standalone Copilot files stored in OneDrive.
+      </text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Retired Features -->
+  <g id="retired-features-group">
+    <!-- Card Container -->
+    <rect x="420" y="120" width="330" height="330" rx="16" fill="#fdf8f2" stroke="#ebdccb" stroke-width="1.5"/>
+    <path d="M 420,120 L 750,120 A 16,16 0 0,1 750,136 L 750,170 L 420,170 Z" fill="#fef2f2"/>
+    
+    <text x="585" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" text-anchor="middle" fill="#991b1b">
+      RETIRED ON AUGUST 18, 2026
+    </text>
+
+    <!-- Point 1 -->
+    <g transform="translate(440, 200)">
+      <circle cx="12" cy="12" r="10" fill="#ef4444" fill-opacity="0.1"/>
+      <path d="M 8,8 L 16,16 M 16,8 L 8,16" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Group Chat
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Multi-user chats deleted. Save data manually.
+      </text>
+    </g>
+
+    <!-- Point 2 -->
+    <g transform="translate(440, 260)">
+      <circle cx="12" cy="12" r="10" fill="#ef4444" fill-opacity="0.1"/>
+      <path d="M 8,8 L 16,16 M 16,8 L 8,16" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        AI Podcasts
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Audio digests removed. Download beforehand.
+      </text>
+    </g>
+
+    <!-- Point 3 -->
+    <g transform="translate(440, 320)">
+      <circle cx="12" cy="12" r="10" fill="#ef4444" fill-opacity="0.1"/>
+      <path d="M 8,8 L 16,16 M 16,8 L 8,16" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Deep Research (Consumer)
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Retired for consumers. Pro plans keep Researcher.
+      </text>
+    </g>
+
+    <!-- Point 4 -->
+    <g transform="translate(440, 380)">
+      <circle cx="12" cy="12" r="10" fill="#ef4444" fill-opacity="0.1"/>
+      <path d="M 8,8 L 16,16 M 16,8 L 8,16" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1f2937" dominant-baseline="central">
+        Mico Avatar &amp; Copilot Labs
+      </text>
+      <text x="32" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4b5563">
+        Mico moves to Learn. Labs replaced by Frontier.
+      </text>
+    </g>
+  </g>
+</svg>

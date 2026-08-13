@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Definition of arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1b31ae" />
+    </marker>
+  </defs>
+
+  <!-- Background: Warm Cream -->
+  <rect width="1000" height="625" fill="#faf8f5" />
+
+  <!-- Infographic Header -->
+  <text x="500" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">HECIA: HABITAT DESIGN &amp; BEHAVIORAL HEALTH</text>
+  <text x="500" y="95" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#605c56" text-anchor="middle" dominant-baseline="central">Mapping environmental design inputs to crew psychological outcomes (MIT Lab)</text>
+
+  <!-- ================= COLUMN 1: DESIGN INPUTS ================= -->
+  <!-- Header for Column 1 -->
+  <rect x="50" y="140" width="260" height="40" rx="8" fill="#e2ded4" opacity="0.6" />
+  <text x="180" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1b31ae" text-anchor="middle" dominant-baseline="middle">1. DESIGN INPUTS</text>
+
+  <!-- Card 1A: Lighting -->
+  <rect x="50" y="200" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="180" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Adjustable Lighting</text>
+  <text x="180" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Dynamic spectrum and intensity</text>
+  <text x="180" y="268" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">control matching circadian</text>
+  <text x="180" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">rhythms of Earth.</text>
+
+  <!-- Card 1B: Spatial Layout -->
+  <rect x="50" y="330" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="180" y="355" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Spatial Layout</text>
+  <text x="180" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Intentional paths, private quarters,</text>
+  <text x="180" y="398" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">and communal areas connecting</text>
+  <text x="180" y="416" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">to stimulate positive mingling.</text>
+
+  <!-- Card 1C: Reconfigurability -->
+  <rect x="50" y="460" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="180" y="485" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Reconfigurable Spaces</text>
+  <text x="180" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Modular furniture and movable</text>
+  <text x="180" y="528" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">partitions that adapt to tasks</text>
+  <text x="180" y="546" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">and individual preference.</text>
+
+  <!-- ================= COLUMN 2: INTERVENTIONS ================= -->
+  <!-- Header for Column 2 -->
+  <rect x="370" y="140" width="260" height="40" rx="8" fill="#e2ded4" opacity="0.6" />
+  <text x="500" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1b31ae" text-anchor="middle" dominant-baseline="middle">2. INTERMEDIARY PROCESS</text>
+
+  <!-- Card 2A: Circadian Rhythms -->
+  <rect x="370" y="200" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="500" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Circadian Alignment</text>
+  <text x="500" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Resets sleep cycles, prevents</text>
+  <text x="500" y="268" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">insomnia, and matches metabolic</text>
+  <text x="500" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">schedules to local mission time.</text>
+
+  <!-- Card 2B: Privacy vs Social balance -->
+  <rect x="370" y="330" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="500" y="355" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Privacy &amp; Social Control</text>
+  <text x="500" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Enables retreat to private zones</text>
+  <text x="500" y="398" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">to decompress, combined with</text>
+  <text x="500" y="416" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">communal visual links to bond.</text>
+
+  <!-- Card 2C: Place Attachment -->
+  <rect x="370" y="460" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="500" y="485" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Place Attachment</text>
+  <text x="500" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Fosters emotional security and</text>
+  <text x="500" y="528" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">personalization, making a cold</text>
+  <text x="500" y="546" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">space habitat feel like "home".</text>
+
+  <!-- ================= COLUMN 3: OUTCOMES ================= -->
+  <!-- Header for Column 3 -->
+  <rect x="690" y="140" width="260" height="40" rx="8" fill="#e2ded4" opacity="0.6" />
+  <text x="820" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1b31ae" text-anchor="middle" dominant-baseline="middle">3. BEHAVIORAL OUTCOMES</text>
+
+  <!-- Card 3A: Reduced Fatigue -->
+  <rect x="690" y="200" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="820" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2e7d32" text-anchor="middle" dominant-baseline="middle">Reduced Fatigue &amp; Stress</text>
+  <text x="820" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">High sleep quality leads to better</text>
+  <text x="820" y="268" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">cognitive function, lower errors,</text>
+  <text x="820" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">and sustained long-term focus.</text>
+
+  <!-- Card 3B: Team Cohesion -->
+  <rect x="690" y="330" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="820" y="355" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2e7d32" text-anchor="middle" dominant-baseline="middle">Social &amp; Team Cohesion</text>
+  <text x="820" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Mitigates isolation, fosters trust</text>
+  <text x="820" y="398" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">and kinship with crewmates,</text>
+  <text x="820" y="416" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">minimizing interpersonal conflict.</text>
+
+  <!-- Card 3C: Minimized Homesickness -->
+  <rect x="690" y="460" width="260" height="110" rx="10" fill="#ffffff" stroke="#e2ded4" stroke-width="1.5" />
+  <text x="820" y="485" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2e7d32" text-anchor="middle" dominant-baseline="middle">Minimized Homesickness</text>
+  <text x="820" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">Reduces nostalgia and stress</text>
+  <text x="820" y="528" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">linked to distance from Earth,</text>
+  <text x="820" y="546" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="middle">improving focus on the mission.</text>
+
+  <!-- ================= CONNECTIVE ARROWS ================= -->
+  <g stroke="#1b31ae" stroke-width="2" fill="none">
+    <!-- Lighting to Circadian -->
+    <path d="M 310 255 L 360 255" marker-end="url(#arrow)" />
+    <!-- Spatial Layout to Privacy/Social -->
+    <path d="M 310 385 L 360 385" marker-end="url(#arrow)" />
+    <!-- Reconfigurability to Place Attachment -->
+    <path d="M 310 515 L 360 515" marker-end="url(#arrow)" />
+
+    <!-- Circadian to Fatigue -->
+    <path d="M 630 255 L 680 255" stroke="#2e7d32" marker-end="url(#arrow)" />
+    <!-- Privacy/Social to Cohesion -->
+    <path d="M 630 385 L 680 385" stroke="#2e7d32" marker-end="url(#arrow)" />
+    <!-- Place Attachment to Homesickness -->
+    <path d="M 630 515 L 680 515" stroke="#2e7d32" marker-end="url(#arrow)" />
+  </g>
+</svg>

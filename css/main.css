@@ -821,18 +821,18 @@ pre code {
 }
 
 /* Interactive Infographics */
-.article img[src*="infographic.png"] {
+.article img[src*="infographic."] {
   cursor: zoom-in;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
 }
 
-.article img[src*="infographic.png"]:hover {
+.article img[src*="infographic."]:hover {
   transform: translateY(-2px) scale(1.015);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
 }
 
-.article img[src*="infographic.png"]:focus {
+.article img[src*="infographic."]:focus {
   outline: 3px solid var(--blue);
   outline-offset: 6px;
   transform: translateY(-2px) scale(1.015);

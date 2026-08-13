@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="var(--color-surface)" />
+
+  <!-- Abstract Collagen Network Grid (Background Tech Element) -->
+  <g opacity="0.3" stroke="var(--color-primary)" stroke-width="2">
+    <line x1="100" y1="100" x2="250" y2="150" />
+    <line x1="250" y1="150" x2="200" y2="300" />
+    <line x1="250" y1="150" x2="400" y2="120" />
+    <line x1="400" y1="120" x2="500" y2="220" />
+    <line x1="500" y1="220" x2="380" y2="350" />
+    <line x1="380" y1="350" x2="200" y2="300" />
+    <line x1="500" y1="220" x2="700" y2="180" />
+    <line x1="700" y1="180" x2="750" y2="320" />
+  </g>
+  
+  <!-- Calcium Ion Nodes (Background Tech Element) -->
+  <g opacity="0.5" fill="var(--color-tertiary)">
+    <circle cx="100" cy="100" r="10" />
+    <circle cx="250" cy="150" r="14" />
+    <circle cx="200" cy="300" r="12" />
+    <circle cx="400" cy="120" r="16" />
+    <circle cx="500" cy="220" r="15" />
+    <circle cx="380" cy="350" r="12" />
+    <circle cx="700" cy="180" r="14" />
+    <circle cx="750" cy="320" r="10" />
+  </g>
+
+  <!-- Stylized Snail Body -->
+  <path d="M 120 400 
+           C 150 400, 180 395, 230 380 
+           C 280 365, 450 365, 520 380 
+           C 550 385, 580 390, 620 400 
+           C 650 405, 680 405, 700 390 
+           C 710 380, 710 365, 690 360 
+           C 660 350, 600 350, 560 350 
+           C 550 350, 540 330, 550 280 
+           C 555 260, 570 230, 560 210
+           C 550 200, 530 210, 520 230
+           C 510 250, 500 310, 480 340
+           C 440 355, 300 355, 260 355
+           C 220 355, 170 370, 140 385 
+           Z" 
+        fill="var(--color-primary)" 
+        opacity="0.85" />
+        
+  <!-- Snail Eyestalks -->
+  <path d="M 545 220 L 530 140" stroke="var(--color-primary)" stroke-width="6" stroke-linecap="round" />
+  <path d="M 555 220 L 580 145" stroke="var(--color-primary)" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Eyes -->
+  <circle cx="530" cy="140" r="8" fill="var(--color-tertiary)" />
+  <circle cx="580" cy="145" r="8" fill="var(--color-tertiary)" />
+
+  <!-- Snail Shell (Beautiful Abstract Spiral) -->
+  <g transform="translate(360, 270)">
+    <!-- Outer shell layer -->
+    <path d="M 0 0 M -160 0 A 160 160 0 1 1 160 0 A 160 140 0 0 1 -120 70 A 110 110 0 0 1 0 -110" 
+          fill="none" stroke="var(--color-primary)" stroke-width="42" stroke-linecap="round" />
+    <!-- Middle shell layer -->
+    <path d="M -110 10 A 110 110 0 1 1 110 -10 A 110 95 0 0 1 -80 50 A 70 70 0 0 1 0 -70" 
+          fill="none" stroke="var(--color-secondary)" stroke-width="32" stroke-linecap="round" />
+    <!-- Inner shell layer -->
+    <path d="M -70 5 A 70 70 0 1 1 70 -5 A 70 60 0 0 1 -50 30 A 40 40 0 0 1 0 -40" 
+          fill="none" stroke="var(--color-tertiary)" stroke-width="22" stroke-linecap="round" />
+    <!-- Core center -->
+    <circle cx="0" cy="0" r="20" fill="var(--color-primary)" />
+  </g>
+
+  <!-- Floor ground/slime trail -->
+  <path d="M 50 400 Q 400 410 750 400" stroke="var(--color-tertiary)" stroke-width="8" stroke-linecap="round" opacity="0.6" />
+</svg>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Авторско изображение
+Нова офанзива при AI агентите
+Според официални анонси на компанията [1], [2] и медиен репортаж на VentureBeat [3], китайската лаборатория DeepSeek разширява присъствието си отв..."><title>DeepSeek Harness и V4-Pro: Отворен код срещу Claude Code и нов модел на таксуване - Светни.ме</title><meta property="og:title" content="DeepSeek Harness и V4-Pro: Отворен код срещу Claude Code и нов модел на таксуване - Светни.ме"><meta property="og:description" content="Авторско изображение
+Нова офанзива при AI агентите
+Според официални анонси на компанията [1], [2] и медиен репортаж на VentureBeat [3], китайската лаборатория DeepSeek разширява присъствието си отв..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/13/deepseek-harness-v4-pro/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/13/deepseek-harness-v4-pro/./hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek Harness и V4-Pro: Отворен код срещу Claude Code и нов модел на таксуване</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 август 2026 г.</p><div><p><img src="/articles/2026/08/13/deepseek-harness-v4-pro/hero.png" alt="Абстрактно изображение на AI агенти и модулен код"><br><small>Авторско изображение</small></p>
+<h2>Нова офанзива при AI агентите</h2>
+<p>Според официални анонси на компанията [1], [2] и медиен репортаж на VentureBeat [3], китайската лаборатория <a href="/pages/deepseek.html">DeepSeek</a> разширява присъствието си отвъд разработката на модели и навлиза в софтуерния слой за управление на автономни системи. На 13 август 2026 г. компанията обяви пускането в обща достъпност (GA) на новия си флагмански модел <a href="/pages/deepseek-v4.html">DeepSeek-V4-Pro</a> и представи софтуерната рамка с отворен код <a href="/pages/deepseek-harness.html">DeepSeek Harness</a> (dsh). </p>
+<p>Тази двойна премиера представлява директен отговор на нарастващата популярност на интегрираните среди за програмиране с изкуствен интелект, като разработения от Anthropic инструмент <a href="/pages/claude-code.html">Claude Code</a>. Докато досега <a href="/pages/deepseek.html">DeepSeek</a> се конкурираше предимно на ниво интелигентност и ниска цена на токените, новите продукти показват амбиция за контрол над слоя, който определя как моделите взаимодействат с инструменти, операционни среди и файлови системи.</p>
+<p>Едновременно с пускането на новите инструменти обаче, <a href="/pages/deepseek.html">DeepSeek</a> обяви и мащабна реформа в ценовата си политика за API услугите, преминавайки от фиксирано таксуване към гъвкави дневни тарифи с пикови и извънпикови часове. Тази стъпка води до осезаемо увеличение на разходите за разработчиците, като в определени категории цените скачат с над 1100% спрямо досегашните нива [3].</p>
+<p><img src="/articles/2026/08/13/deepseek-harness-v4-pro/infographic.png" alt="Диаграма на архитектурата на DeepSeek Harness"><br><small>Авторско изображение</small></p>
+<h2>Какво представлява DeepSeek Harness?</h2>
+<p><a href="/pages/deepseek-harness.html">DeepSeek Harness</a>, известен още като dsh, е софтуерна рамка с отворен код за изграждане и управление на автономни AI агенти, разпространявана под гъвкавия <a href="/pages/mit-license.html">MIT лиценз</a> [1]. Тя е изградена върху основата на <a href="/pages/cordis.html">Cordis</a> – специализирана архитектурна платформа, проектирана за създаване на високо съвместими и разширяеми системи чрез модулни плъгини [1].</p>
+<p>Основният принцип на проектиране на Harness е, че практически всеки компонент от жизнения цикъл на агента е заменим плъгин. Разработчиците могат свободно да модифицират или напълно да подменят следните ключови модули в рамката:</p>
+<ul>
+<li><p>Използваните AI модели за вземане на решения;</p>
+</li>
+<li><p>Системните инструменти за достъп до данни;</p>
+</li>
+<li><p>Файловите системи и пясъчниците (sandboxes) за сигурност;</p>
+</li>
+<li><p>Потребителските интерфейси и сесиите за изпълнение.</p>
+</li>
+</ul>
+<p>Проектът в момента се намира в статус „developer preview“ на ранен етап от разработката. От компанията предупреждават, че предстоят чести промени, които могат да нарушат съвместимостта с предходни версии на кода [1].</p>
+<h2>Функционални възможности в реална среда</h2>
+<p>Въпреки ранния си етап, <a href="/pages/deepseek-harness.html">DeepSeek Harness</a> вече притежава всички фундаментални функции, необходими за изпълнение на сложни софтуерни задачи. Инструментът поддържа пълноценен агентски цикъл в режим „Standard mode“, позволяващ му да работи директно с програмни хранилища и да управлява дълги работни процеси [3].</p>
+<p>Рамката може автономно да извършва широк набор от действия под потребителски контрол [1], [3]:</p>
+<ul>
+<li><p>Инспектиране на програмни хранилища и интелигентно търсене в тях;</p>
+</li>
+<li><p>Четене и извършване на ревю на код, както и директно редактиране на файлове;</p>
+</li>
+<li><p>Изпълнение на системни команди в изолирани среди;</p>
+</li>
+<li><p>Търсене на информация в уеб пространството;</p>
+</li>
+<li><p>Планиране, разделяне на задачите и делегиране на работата към под-агенти.</p>
+</li>
+</ul>
+<p>За разлика от Claude Code, който е плътно обвързан с моделите на Anthropic, <a href="/pages/deepseek-harness.html">DeepSeek Harness</a> е проектиран да бъде независим от модела (model-agnostic). Това означава, че разработчиците могат да използват инструменти на DeepSeek, Anthropic, OpenAI или дори собствени локални хоствани модели през съвместими API точки.</p>
+<h2>Официален старт на DeepSeek-V4-Pro</h2>
+<p>Премиерата на Harness съвпада с официалното излизане на пълната GA версия на модела <a href="/pages/deepseek-v4.html">DeepSeek-V4-Pro</a> (конкретно компилация 0813) [3]. Първоначално семейството V4 беше представено в тестов режим през април 2026 г., като V4-Pro се отличава с общ размер от 1,6 трилиона параметри, от които 49 милиарда се активират при обработката на всеки токен. Моделът поддържа контекстов прозорец от до 1 милион токена и е оптимизиран за сложни логически задачи.</p>
+<p>Официалната версия се фокусира изключително върху повишаване на производителността при работа с AI агенти. В своите вътрешни тестове компанията отчита високи резултати в специализираните бенчмаркове за агенти, като моделът постига 87.9 точки на Terminal Bench 2.1 и 74.1 точки на Toolathlon-Verified [3].</p>
+<p>За по-добро управление на ресурсите разработчиците вече имат директен контрол над нивото на разсъждение (reasoning effort) чрез три режима:</p>
+<ul>
+<li><p><strong>Non-think:</strong> За бързи, рутинни и нискобюджетни задачи;</p>
+</li>
+<li><p><strong>Think High:</strong> За средно сложни проблеми и планиране;</p>
+</li>
+<li><p><strong>Think Max:</strong> За най-тежките софтуерни проблеми и детайлно логическо проучване.</p>
+</li>
+</ul>
+<p>Тези режими позволяват на агентските системи да пестят време и финансови средства, като използват високото ниво на разсъждения само тогава, когато се сблъскат с комплексен бъг или промяна в кода.</p>
+<h2>Радикална промяна в ценообразуването</h2>
+<p>Голямата изненада за екосистемата на <a href="/pages/deepseek.html">DeepSeek</a> е въвеждането на гъвкави тарифи с пикови и извънпикови часове, което влиза в сила от 16:00 UTC на 16 август 2026 г. [3]. Досега компанията следваше политика на изключително ниски, фиксирани цени за токени. С новата схема часовете между 01:00–04:00 UTC и 06:00–10:00 UTC се дефинират като пикови, а през останалата част от денонощието се прилагат извънпикови тарифи, които са наполовина по-евтини от пиковите.</p>
+<p>Новите тарифи променят сериозно финансовото уравнение за разработчиците, като цените за милион токена се повишават значително спрямо предишните нива [3]:</p>
+<ul>
+<li><p><strong>DeepSeek-V4-Pro (извънпикова):</strong> Цената за некеширан вход се увеличава на $0.66, а за изход на $1.98;</p>
+</li>
+<li><p><strong>DeepSeek-V4-Pro (пикова):</strong> Некешираният вход достига $1.32, а изходът скача на $3.96;</p>
+</li>
+<li><p><strong>Кеширан вход (Pro):</strong> Досегашната цена от едва $0.003625 се увеличава до $0.022 (извън пик) и $0.044 (в пик).</p>
+</li>
+</ul>
+<p>Тази промяна означава, че дори в най-евтините извънпикови часове разработчиците ще плащат приблизително двойно повече за обработка на токени, а по време на пиковите натоварвания разходите се увеличават над четири пъти. При кешираните заявки за V4-Pro процентното увеличение в пиковите часове надхвърля 1100%, което коренно променя икономиката на дългите контексти.</p>
+<h2>Стратегически изводи за разработчиците</h2>
+<p>Въпреки поскъпването, API услугите на <a href="/pages/deepseek.html">DeepSeek</a> остават конкурентни на фона на водещите западни лаборатории. Въпреки това, въвеждането на часови зони за таксуване изисква от компаниите да преструктурират своите работни процеси, като планират тежките автономни задачи за извънпиковите часове.</p>
+<p>Най-значимият дългосрочен актив от премиерата остава <a href="/pages/deepseek-harness.html">DeepSeek Harness</a>. Тъй като моделите стават все по-лесно заменими зад стандартизирани интерфейси, контролът над агентския софтуерен слой се превръща в най-важната част от разработването на изкуствен интелект. С отварянето на Harness под MIT лиценз, <a href="/pages/deepseek.html">DeepSeek</a> предлага на софтуерната общност свободата да изгражда независими от конкретен доставчик интелигентни системи.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek Harness - GitHub</a></p>
+<p>[2]: <a href="https://api.deepseek.com">DeepSeek API Pricing - DeepSeek</a></p>
+<p>[3]: <a href="https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices">DeepSeek Harness Launches as Open-Source Rival to Claude Code - VentureBeat</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mit-license.html">MIT Лиценз</a><p>MIT лицензът е един от най-популярните и разрешителни лицензи за софтуер с отворен код.</p></li><li><a href="/pages/deepseek-harness.html">DeepSeek Harness</a><p>DeepSeek Harness (dsh) е софтуерна рамка с отворен код (open-source harness) за изграждане, пускане и управление на автономни изкуствени интелектуални...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/deepseek-v4.html">DeepSeek-V4</a><p>DeepSeek-V4 е четвъртото поколение голям езиков модел на DeepSeek, представено през април 2026 г.</p></li><li><a href="/pages/deepseek-ai.html">DeepSeek</a><p>DeepSeek е китайска лаборатория за изследвания в областта на изкуствения интелект, известна със своите високоефективни модели с отворени тегла (open-w...</p></li><li><a href="/pages/cordis.html">Cordis</a><p>Cordis е софтуерна рамка и архитектурна платформа, проектирана за изграждане на модулни приложения с висока степен на разширяемост чрез използването н...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

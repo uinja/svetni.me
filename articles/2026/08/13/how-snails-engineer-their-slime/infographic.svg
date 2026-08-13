@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Definition of arrows and styles -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1a30ae" />
+    </marker>
+  </defs>
+
+  <!-- Background: Warm Cream -->
+  <rect width="1000" height="625" fill="#faf8f5" />
+
+  <!-- Infographic Header -->
+  <text x="500" y="55" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">HOW SNAILS ENGINEER THEIR SLIME</text>
+  <text x="500" y="95" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#605c56" text-anchor="middle" dominant-baseline="central">The grove snail (Cepaea nemoralis) tunes 5 distinct mucus types using similar components</text>
+
+  <!-- COLLAGEN IV BASE SCAFFOLD -->
+  <rect x="60" y="130" width="880" height="40" rx="8" fill="#e0dcd3" opacity="0.4" />
+  <text x="500" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1a30ae" text-anchor="middle" dominant-baseline="middle">UNIVERSAL SCAFFOLD: COLLAGEN IV PROTEIN MATRIX (Present in all 5 types)</text>
+
+  <!-- CARD 1: LOCOMOTION -->
+  <rect x="60" y="195" width="160" height="260" rx="10" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <text x="140" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">LOCOMOTION</text>
+  <text x="140" y="240" font-family="system-ui, sans-serif" font-size="12" font-style="italic" fill="#757068" text-anchor="middle" dominant-baseline="middle">Lubricant</text>
+  <!-- Description -->
+  <text x="140" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">Highly hydrated</text>
+  <text x="140" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">fluid that reduces</text>
+  <text x="140" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">friction for sliding.</text>
+  <!-- Tuning values -->
+  <text x="140" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Protein: Medium</text>
+  <text x="140" y="380" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ACC Calcium: Low</text>
+  <!-- Visual representation of viscosity -->
+  <rect x="85" y="410" width="110" height="18" rx="4" fill="#e2f0d9" />
+  <text x="140" y="419" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#385723" text-anchor="middle" dominant-baseline="middle">VISCOUS LIQUID</text>
+
+  <!-- CARD 2: ADHESION -->
+  <rect x="240" y="195" width="160" height="260" rx="10" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <text x="320" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ADHESION</text>
+  <text x="320" y="240" font-family="system-ui, sans-serif" font-size="12" font-style="italic" fill="#757068" text-anchor="middle" dominant-baseline="middle">Glue Slime</text>
+  <!-- Description -->
+  <text x="320" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">Sticky adhesive</text>
+  <text x="320" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">used to attach to</text>
+  <text x="320" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">walls &amp; ceilings.</text>
+  <!-- Tuning values -->
+  <text x="320" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Protein: High</text>
+  <text x="320" y="380" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ACC Calcium: Medium</text>
+  <!-- Visual representation -->
+  <rect x="265" y="410" width="110" height="18" rx="4" fill="#fff2cc" />
+  <text x="320" y="419" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7f6000" text-anchor="middle" dominant-baseline="middle">STICKY GLUE</text>
+
+  <!-- CARD 3: EPIPHRAGM -->
+  <rect x="420" y="195" width="160" height="260" rx="10" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <text x="500" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">EPIPHRAGM</text>
+  <text x="500" y="240" font-family="system-ui, sans-serif" font-size="12" font-style="italic" fill="#757068" text-anchor="middle" dominant-baseline="middle">Winter Barrier</text>
+  <!-- Description -->
+  <text x="500" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">Hard shell seal</text>
+  <text x="500" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">enriched with</text>
+  <text x="500" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">calcite crystals.</text>
+  <!-- Tuning values -->
+  <text x="500" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Protein: High</text>
+  <text x="500" y="380" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ACC Calcium: Max (Calcite)</text>
+  <!-- Visual representation -->
+  <rect x="445" y="410" width="110" height="18" rx="4" fill="#fce4d6" />
+  <text x="500" y="419" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#c65911" text-anchor="middle" dominant-baseline="middle">SOLID SHIELD</text>
+
+  <!-- CARD 4: STICKY DEFENSE -->
+  <rect x="600" y="195" width="160" height="260" rx="10" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <text x="680" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">STICKY DEFENSE</text>
+  <text x="680" y="240" font-family="system-ui, sans-serif" font-size="12" font-style="italic" fill="#757068" text-anchor="middle" dominant-baseline="middle">Yellow Shield</text>
+  <!-- Description -->
+  <text x="680" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">Highly cohesive</text>
+  <text x="680" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">yellow gel that is</text>
+  <text x="680" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">tear-resistant.</text>
+  <!-- Tuning values -->
+  <text x="680" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Protein: Max</text>
+  <text x="680" y="380" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ACC Calcium: High</text>
+  <!-- Visual representation -->
+  <rect x="625" y="410" width="110" height="18" rx="4" fill="#fff2cc" stroke="#ffd966" stroke-width="1" />
+  <text x="680" y="419" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7f6000" text-anchor="middle" dominant-baseline="middle">TOUGH ELASTIC GEL</text>
+
+  <!-- CARD 5: BUBBLY DEFENSE -->
+  <rect x="780" y="195" width="160" height="260" rx="10" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <text x="860" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">BUBBLY DEFENSE</text>
+  <text x="860" y="240" font-family="system-ui, sans-serif" font-size="12" font-style="italic" fill="#757068" text-anchor="middle" dominant-baseline="middle">Foam Mucus</text>
+  <!-- Description -->
+  <text x="860" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">Frothy foam to</text>
+  <text x="860" y="295" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">smother or wash out</text>
+  <text x="860" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#4d4a45" text-anchor="middle" dominant-baseline="middle">small predators.</text>
+  <!-- Tuning values -->
+  <text x="860" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">Protein: High</text>
+  <text x="860" y="380" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#2b2927" text-anchor="middle" dominant-baseline="middle">ACC Calcium: Medium</text>
+  <!-- Visual representation -->
+  <rect x="805" y="410" width="110" height="18" rx="4" fill="#e1f5fe" />
+  <text x="860" y="419" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#0288d1" text-anchor="middle" dominant-baseline="middle">ACTIVE FOAM</text>
+
+  <!-- REGULATION BY CALCIUM / ACC SECTION -->
+  <rect x="60" y="475" width="880" height="105" rx="8" fill="#ffffff" stroke="#e0dcd3" stroke-width="1" />
+  
+  <text x="100" y="505" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1a30ae" text-anchor="start" dominant-baseline="middle">THE CALCIUM TUNER (Amorphous Calcium Carbonate - ACC)</text>
+  <text x="100" y="530" font-family="system-ui, sans-serif" font-size="12" fill="#2b2927" text-anchor="start" dominant-baseline="middle">• In Wet Mucus: Calcium acts as an ionic cross-linking agent, adjusting network density and viscosity.</text>
+  <text x="100" y="555" font-family="system-ui, sans-serif" font-size="12" fill="#2b2927" text-anchor="start" dominant-baseline="middle">• In Dry Mucus: Calcium functions as a mineral reinforcing agent, transforming soft gels into rigid structures.</text>
+
+  <!-- Connective Arrows illustrating calcium tuning -->
+  <path d="M 500 455 L 500 475" stroke="#1a30ae" stroke-width="2" marker-end="url(#arrow)" />
+</svg>

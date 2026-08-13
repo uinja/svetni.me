@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background: Light warm grey/cream -->
+  <rect width="800" height="500" fill="#fcfaf7" />
+
+  <!-- Wall Panel Grid Lines (Futuristic Modular Architecture) -->
+  <g stroke="#e2ded4" stroke-width="2">
+    <line x1="50" y1="0" x2="50" y2="500" />
+    <line x1="280" y1="0" x2="280" y2="500" stroke-width="3" />
+    <line x1="0" y1="120" x2="280" y2="120" />
+    <line x1="0" y1="360" x2="800" y2="360" stroke-width="3" />
+    <!-- Diagonal floor panels -->
+    <line x1="50" y1="360" x2="0" y2="500" />
+    <line x1="280" y1="360" x2="180" y2="500" />
+    <line x1="450" y1="360" x2="400" y2="500" />
+    <line x1="680" y1="360" x2="680" y2="500" />
+  </g>
+
+  <!-- Ceiling Light Panel (Circadian Lighting) -->
+  <polygon points="80,0 250,0 230,50 100,50" fill="#fff9db" opacity="0.8" />
+  <polygon points="80,0 250,0 230,50 100,50" fill="none" stroke="#fcc419" stroke-width="2" />
+  <!-- Light rays -->
+  <polygon points="100,50 230,50 260,360 40,360" fill="url(#light-glow)" opacity="0.15" />
+
+  <!-- Window Frame (Circular Observatory View) -->
+  <circle cx="540" cy="180" r="140" fill="#0d1b2a" stroke="#d2c9b9" stroke-width="12" />
+  <circle cx="540" cy="180" r="140" fill="none" stroke="#8a7e6e" stroke-width="3" />
+
+  <!-- Outer Space View inside window -->
+  <!-- Stars -->
+  <circle cx="450" cy="120" r="1.5" fill="#ffffff" opacity="0.8" />
+  <circle cx="480" cy="240" r="1" fill="#ffffff" opacity="0.6" />
+  <circle cx="620" cy="100" r="2" fill="#ffffff" opacity="0.9" />
+  <circle cx="650" cy="220" r="1.5" fill="#ffffff" opacity="0.5" />
+  <circle cx="560" cy="90" r="1" fill="#ffffff" opacity="0.7" />
+  <!-- Planet Earth -->
+  <circle cx="580" cy="210" r="60" fill="#1b4965" />
+  <!-- Earth continents (abstract curves) -->
+  <path d="M 540 180 Q 560 170 580 180 T 620 220 Q 600 250 560 250 Z" fill="#62b6cb" opacity="0.8" />
+  <path d="M 570 160 Q 590 150 610 165 T 630 190 Z" fill="#62b6cb" opacity="0.7" />
+  <path d="M 530 210 Q 545 225 550 240 Z" fill="#62b6cb" opacity="0.6" />
+  <!-- Atmosphere glow -->
+  <circle cx="580" cy="210" r="62" fill="none" stroke="#bee9e8" stroke-width="3" opacity="0.4" />
+
+  <!-- Cozy Reconfigurable Lounge Chair (Left Foreground) -->
+  <g transform="translate(110, 270)">
+    <!-- Base -->
+    <rect x="-10" y="70" width="120" height="20" rx="6" fill="#8a7e6e" />
+    <line x1="20" y1="90" x2="20" y2="110" stroke="#8a7e6e" stroke-width="8" stroke-linecap="round" />
+    <line x1="80" y1="90" x2="80" y2="110" stroke="#8a7e6e" stroke-width="8" stroke-linecap="round" />
+    <rect x="0" y="105" width="100" height="8" rx="2" fill="#5c544a" />
+    <!-- Cushions (Warm Terracotta color representing comfort/grounding) -->
+    <path d="M 0 60 C -15 60, -20 40, -10 20 C 0 0, 40 -10, 80 0 C 110 5, 120 25, 110 50 C 100 65, 80 70, 50 70 Z" fill="#d07a3c" />
+    <path d="M -10 20 C -25 20, -30 5, -20 -10 C -10 -25, 20 -30, 40 -10 C 50 0, 40 15, 20 20 Z" fill="#e89c68" />
+  </g>
+
+  <!-- Biophilic Greenery Planter (Middle Foreground, connects crew with nature) -->
+  <g transform="translate(320, 310)">
+    <!-- Planter box -->
+    <rect x="0" y="50" width="140" height="60" rx="8" fill="#e2ded4" stroke="#d2c9b9" stroke-width="2" />
+    <!-- Planter soil -->
+    <ellipse cx="70" cy="50" rx="68" ry="10" fill="#5c544a" />
+    <!-- Foliage / Leaves -->
+    <!-- Leaf 1 -->
+    <path d="M 30 50 Q -10 20, 10 -20 Q 40 10, 30 50 Z" fill="#38b000" />
+    <path d="M 30 50 Q -10 20, 10 -20" stroke="#007200" stroke-width="1.5" fill="none" />
+    <!-- Leaf 2 -->
+    <path d="M 70 50 Q 50 0, 70 -40 Q 90 0, 70 50 Z" fill="#008000" />
+    <path d="M 70 50 Q 50 0, 70 -40" stroke="#004b23" stroke-width="2" fill="none" />
+    <!-- Leaf 3 -->
+    <path d="M 110 50 Q 150 20, 130 -15 Q 100 10, 110 50 Z" fill="#38b000" />
+    <path d="M 110 50 Q 150 20, 130 -15" stroke="#007200" stroke-width="1.5" fill="none" />
+    <!-- Hanging vines -->
+    <path d="M 40 55 Q 20 80, 35 110" stroke="#70e000" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 100 55 Q 120 75, 105 105" stroke="#70e000" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Control/Interface Screen (Displaying HECIA Atlas concept abstractly) -->
+  <g transform="translate(480, 380)">
+    <!-- Device stand -->
+    <path d="M 40 30 L 40 70 M 20 70 L 60 70" stroke="#8a7e6e" stroke-width="4" stroke-linecap="round" />
+    <!-- Screen -->
+    <rect x="-10" y="-30" width="100" height="60" rx="5" fill="#2b2d42" stroke="#d2c9b9" stroke-width="2" />
+    <!-- Graph nodes/lines on screen -->
+    <circle cx="15" cy="-10" r="4" fill="#4ea8de" />
+    <circle cx="45" cy="10" r="4" fill="#4ea8de" />
+    <circle cx="75" cy="-5" r="4" fill="#4ea8de" />
+    <line x1="15" y1="-10" x2="45" y2="10" stroke="#4ea8de" stroke-width="2" />
+    <line x1="45" y1="10" x2="75" y2="-5" stroke="#4ea8de" stroke-width="2" />
+    <!-- Screen glow -->
+    <rect x="-8" y="-28" width="96" height="56" rx="4" fill="#4ea8de" opacity="0.1" />
+  </g>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="light-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9db" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fff9db" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+</svg>
