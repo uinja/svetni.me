@@ -9,9 +9,18 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Thu, 13 Aug 2026 21:08:44 +0000</pubDate>
+    <pubDate>Fri, 14 Aug 2026 07:50:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Бъдещето е за всички: Марк Зукърбърг с манифест за отворения изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/08/14/zuckerberg-future-is-for-everyone/</link>
+      <pubDate>Fri, 14 Aug 2026 07:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/14/zuckerberg-future-is-for-everyone/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>Консолидация на Microsoft Copilot: Премахване на функции и единно приложение</title>
@@ -410,21 +419,21 @@
     </item>
 
     <item>
-      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
-      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
       <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
       <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
+      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
+      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
     </item>
 
     <item>
@@ -452,15 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/25/stranded-in-the-slow-zone/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Джийн Ким приготвя вечеря на грил за семейството си на 12 юни 2026 г., когато телефонът му получава съобщение: моделът Fable 5 вече не е достъпен. Ден по-рано той е научил от Стив Йеги, че моделът ще бъде спрян след десет дни. Ким вече е започнал да подготвя план за миграция, разчитайки на богатия си опит в областта на DevOps и изграждането на устойчиви системи.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Отворени тегла и американското лидерство в ИИ: Какво казва манифестът на индустрията</title>
-      <link>https://svetni.me/articles/2026/07/24/open-weights-american-ai-leadership/</link>
-      <pubDate>Fri, 24 Jul 2026 20:06:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/24/open-weights-american-ai-leadership/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Коалиция от водещи технологични компании, сред които Nvidia, Meta, Microsoft, Mistral и Y Combinator, публикува манифест, озаглавен „Open Weights and American AI Leadership“. Документът призовава за изграждането на прозрачна и отворена екосистема за изкуствен интелект (ИИ) в САЩ, като подчертава, че бъдещето на американското технологично превъзходство зависи от децентрализацията и свободния достъп до модели с отворени тегла [1].</p>]]></description>
     </item>
   </channel>
 </rss>
