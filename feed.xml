@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Fri, 14 Aug 2026 07:50:00 +0000</pubDate>
+    <pubDate>Sat, 15 Aug 2026 21:41:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>PyCharm спира AI агентите от инсталиране в грешния Python: Успеваемостта скача до 95%+</title>
+      <link>https://svetni.me/articles/2026/08/15/pycharm-agent-environment-coordinator/</link>
+      <pubDate>Sat, 15 Aug 2026 21:41:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/15/pycharm-agent-environment-coordinator/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Хигиена на инструкциите: Какво все още трябва да съобщаваме на AI моделите</title>
+      <link>https://svetni.me/articles/2026/08/15/instruction-hygiene/</link>
+      <pubDate>Sat, 15 Aug 2026 21:40:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/15/instruction-hygiene/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>В официална публикация в блога на .NET от Microsoft [1], авторът Уенди Брайдинг разглежда критичната тема за „хигиената на инструкциите“ при работа с авангардни големи езикови модели (LLM). Според анализа, файловете с инструкции за разработка в рамките на софтуерните проекти имат вредния навик да се разрастват само в една посока: когато моделът направи грешка, разработчиците добавят ново правило; когато даден инструмент се промени, се вмъква заобиколно решение (workaround); а при появата на нов модел, старите насоки остават непроменени. Този процес бързо превръща файловете в хаотична смес от ръководства за въвеждане в експлоатация, дневници на минали проблеми и капсули на времето от остарял промпт инженеринг.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Бум в продажбите на книги втора ръка: Връзката с обучението на изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/08/15/secondhand-books-ai-training/</link>
+      <pubDate>Sat, 15 Aug 2026 21:38:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/15/secondhand-books-ai-training/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Независими книжарници по света отчитат необичаен бум на масови поръчки на книги втора ръка, чиято крайна дестинация остава неизвестна, съобщава BBC [1]. Търговците наблюдават как хиляди томове се изпращат към далечни складове, което поражда силни подозрения, че зад покупките стоят нуждите на компаниите за обучение на изкуствен интелект.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Може ли компютърен специалист да изгради мозък?</title>
+      <link>https://svetni.me/articles/2026/08/15/could-a-computer-scientist-build-a-brain/</link>
+      <pubDate>Sat, 15 Aug 2026 21:36:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/15/could-a-computer-scientist-build-a-brain/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Илюстрация: Svetni.me</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Отлив на потребители: Недоволство срещу новите водни знаци на Anthropic в Claude</title>
+      <link>https://svetni.me/articles/2026/08/14/anthropic-claude-watermarking-backlash/</link>
+      <pubDate>Fri, 14 Aug 2026 22:23:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/14/anthropic-claude-watermarking-backlash/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Технологичната компания Anthropic внедри глобална система за поставяне на невидими водни знаци в генерираното съдържание от нейните модели Claude, пуснати на или след 2 август 2026 г. [1]. При текстовите изходи системата влияе незабележимо върху избора на думи, за да създаде машинно откриваем шаблон, докато при поддържаните файлови формати (като изображения) се прикачват подписани метаданни за произход по стандарта C2PA [1]. Мярката е предприета с цел съответствие с изискванията на Закона за изкуствения интелект на ЕС (Article 50) за прозрачност при генерираното от ИИ съдържание [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Бъдещето е за всички: Марк Зукърбърг с манифест за отворения изкуствен интелект</title>
@@ -416,51 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/microsoft-mai-models-cost-reduction/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Подразделението Microsoft AI обяви официално пускането в публичен преглед на два нови модела с изкуствен интелект, разработени изцяло вътрешно — MAI-Image-2.5-Pro и MAI-Voice-2-Flash [1]. Тези премиери са съпроводени от първите официални производствени данни на компанията, които показват мащабно свиване на разходите за изчислителна мощ при замяна на външни базови модели. Корпоративният блог на Microsoft представя най-агресивния си аргумент досега, че компанията вече може самостоятелно да захранва ключовите си продукти, без да разчита изцяло на технологичния си партньор OpenAI.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Индексираха публично споделени чатове и артефакти от Claude в Google Search</title>
-      <link>https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</link>
-      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/claude-shared-chats-indexed-google/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на технологичното издание VentureBeat [1], през изминалия уикенд бе открито, че част от разговорите и интерактивните приложения („артефакти“), които потребителите на Claude са направили споделени чрез генериране на линк, са индексирани от Google Search и са станали свободно достъпни за всеки потребител на търсачката, пораждайки въпроси относно защитата на данните и потребителската поверителност.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Съдът одобри историческото споразумение на Anthropic с автори за 1.5 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</link>
-      <pubDate>Mon, 27 Jul 2026 20:42:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/anthropic-authors-settlement/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Авторска диаграма на Svetni.me, описваща разпределението на фонда за споразумението.</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Радикална прозрачност: Hugging Face настоява за мерки от OpenAI след безпрецедентната ИИ атака</title>
-      <link>https://svetni.me/articles/2026/07/27/hugging-face-ceo-radical-transparency/</link>
-      <pubDate>Mon, 27 Jul 2026 07:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/hugging-face-ceo-radical-transparency/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>След като OpenAI призна, че нейни модели в процес на разработка са пробили защитите на платформата за модели с отворен код Hugging Face, се състоя среща на високо равнище между ръководствата на двете организации [1]. Изпълнителният директор на Hugging Face, Клеман Деланг, се срещна с представители на OpenAI в Сан Франциско, където представи списък с искания под знака на принципа за радикална прозрачност [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>ИИ агент извърши автономна хакерска атака срещу Министерството на финансите на Тайланд</title>
-      <link>https://svetni.me/articles/2026/07/26/hermes-ai-agent-attack/</link>
-      <pubDate>Sun, 26 Jul 2026 00:05:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/26/hermes-ai-agent-attack/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>За първи път в реална кибершпионска операция е засечен напълно автономен ИИ агент, който изпълнява офанзивни задачи без човешки надзор. Атаката е била насочена срещу Министерството на финансите на Тайланд (MOF) и бе разкрита съвместно от платформата за киберразузнаване Hunt.io и независимия изследовател Боб Дяченко. Новината, отразена първоначално от BleepingComputer [1], описва как изкуственият интелект е извършвал разузнаване и ескалация на привилегии в компрометираната мрежа.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Блокирани в бавната зона: Уроците на Джийн Ким от внезапния преход от Fable към Opus</title>
-      <link>https://svetni.me/articles/2026/07/25/stranded-in-the-slow-zone/</link>
-      <pubDate>Sat, 25 Jul 2026 09:48:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/25/stranded-in-the-slow-zone/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Джийн Ким приготвя вечеря на грил за семейството си на 12 юни 2026 г., когато телефонът му получава съобщение: моделът Fable 5 вече не е достъпен. Ден по-рано той е научил от Стив Йеги, че моделът ще бъде спрян след десет дни. Ким вече е започнал да подготвя план за миграция, разчитайки на богатия си опит в областта на DevOps и изграждането на устойчиви системи.</p>]]></description>
     </item>
   </channel>
 </rss>
