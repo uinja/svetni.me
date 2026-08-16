@@ -9,9 +9,45 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sat, 15 Aug 2026 21:41:00 +0000</pubDate>
+    <pubDate>Sun, 16 Aug 2026 22:05:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Всеки пети служител в САЩ възлага задачи на ИИ вместо на колеги</title>
+      <link>https://svetni.me/articles/2026/08/16/one-in-five-workers-delegate-work-to-ai/</link>
+      <pubDate>Sun, 16 Aug 2026 22:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/16/one-in-five-workers-delegate-work-to-ai/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Какво да правим, когато свършат токените</title>
+      <link>https://svetni.me/articles/2026/08/16/what-to-do-when-tokens-run-out/</link>
+      <pubDate>Sun, 16 Aug 2026 22:02:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/16/what-to-do-when-tokens-run-out/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>С поглед към физиката: ИИ моделът GeoPT ускорява симулациите в реалния свят</title>
+      <link>https://svetni.me/articles/2026/08/16/geopt-physics-simulation/</link>
+      <pubDate>Sun, 16 Aug 2026 21:37:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/16/geopt-physics-simulation/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Изкуственият интелект в недвижимите имоти: Архитектурата на RealAI и икономическите предизвикателства</title>
+      <link>https://svetni.me/articles/2026/08/16/ai-real-estate-ben-miller/</link>
+      <pubDate>Sun, 16 Aug 2026 21:37:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/16/ai-real-estate-ben-miller/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
 
     <item>
       <title>PyCharm спира AI агентите от инсталиране в грешния Python: Успеваемостта скача до 95%+</title>
@@ -425,42 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/gm-engineering-workflows-ai-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p>Отделът за автономни превозни средства на General Motors отчита впечатляващ ръст в продуктивността след преструктуриране на инженерните си работни процеси. Компанията е постигнала трикратно увеличение на успешно интегрираните промени в кода (merged pull requests), благодарение на мащабното внедряване на AI агенти [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>Сатя Надела: Компаниите, които разчитат на един AI за всичко, може да не оцелеят</title>
-      <link>https://svetni.me/articles/2026/07/28/nadella-one-ai-warning/</link>
-      <pubDate>Tue, 28 Jul 2026 21:51:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/nadella-one-ai-warning/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Изпълнителният директор на Microsoft Сатя Надела отправи остро предупреждение към бизнеса по отношение на интеграцията на технологии с изкуствен интелект. В интервю за предаването „Fareed Zakaria GPS“ по CNN [1], отразено от TechCrunch [2], той заяви, че компаниите, които разчитат изцяло на външни комерсиални лаборатории за своите ИИ нужди, в крайна сметка няма да оцелеят. Според него липсата на контрол върху тази инфраструктура е равносилна на аутсорсване на самото мислене на организацията.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Позицията на Anthropic за моделите с отворени тегла и заплахата от Китай</title>
-      <link>https://svetni.me/articles/2026/07/28/anthropic-open-weights-position/</link>
-      <pubDate>Tue, 28 Jul 2026 21:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/28/anthropic-open-weights-position/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официално изявление, публикувано в блога на компанията, съоснователят и изпълнителен директор на Anthropic Дарио Амодей категорично отрече обвиненията, че неговата фирма лобира за забрана на модели с отворени тегла [1]. Изявлението идва в момент на разгорещени дискусии в технологичната индустрия относно потенциалните заплахи за националната сигурност на САЩ от страна на авангардни изкуствени интелекти, разработени или придобити от Китай. Амодей подчертава, че Anthropic никога не е настоявала за подобни ограничителни мерки, които според него не само че не решават реалните проблеми, но и засягат технологии с характер на обществено благо.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Могат ли Китай и Русия да унищожат Starlink? Само с ефекта на бумеранга</title>
-      <link>https://svetni.me/articles/2026/07/27/starlink-boomerang-defense/</link>
-      <pubDate>Mon, 27 Jul 2026 20:44:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/starlink-boomerang-defense/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според аналитичен репортаж на технологичното издание Ars Technica [1], базиран на мащабно съвместно разследване на The Insider [2], Der Spiegel и Le Monde, Китай и Русия развиват дълбоко военно сътрудничество в космоса. Основен фокус на техните съвместни планове е разработването на стратегии за противодействие и евентуално унищожаване на спътниковата мрежа Starlink на американската компания SpaceX, основана от милиардера Илон Мъск.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Microsoft намалява разходите за ИИ с до 89% чрез собствените си модели MAI</title>
-      <link>https://svetni.me/articles/2026/07/27/microsoft-mai-models-cost-reduction/</link>
-      <pubDate>Mon, 27 Jul 2026 20:43:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/27/microsoft-mai-models-cost-reduction/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Подразделението Microsoft AI обяви официално пускането в публичен преглед на два нови модела с изкуствен интелект, разработени изцяло вътрешно — MAI-Image-2.5-Pro и MAI-Voice-2-Flash [1]. Тези премиери са съпроводени от първите официални производствени данни на компанията, които показват мащабно свиване на разходите за изчислителна мощ при замяна на външни базови модели. Корпоративният блог на Microsoft представя най-агресивния си аргумент досега, че компанията вече може самостоятелно да захранва ключовите си продукти, без да разчита изцяло на технологичния си партньор OpenAI.</p>]]></description>
     </item>
   </channel>
 </rss>
