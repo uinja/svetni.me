@@ -9,9 +9,36 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Mon, 17 Aug 2026 22:45:00 +0000</pubDate>
+    <pubDate>Tue, 18 Aug 2026 22:13:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>CoSnitch: Как нерегламентиран параметър позволи кражба на данни чрез Microsoft Copilot</title>
+      <link>https://svetni.me/articles/2026/08/18/cosnitch-copilot-vulnerability/</link>
+      <pubDate>Tue, 18 Aug 2026 22:13:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/18/cosnitch-copilot-vulnerability/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Скритият почерк на Claude: Дебатът за текстовите водни знаци</title>
+      <link>https://svetni.me/articles/2026/08/18/claude-text-watermarking/</link>
+      <pubDate>Tue, 18 Aug 2026 22:09:05 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/18/claude-text-watermarking/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>85% от компаниите, засегнати от грешки на ИИ, съкращават специалистите по контрол</title>
+      <link>https://svetni.me/articles/2026/08/18/companies-cut-human-evals-after-ai-mistakes/</link>
+      <pubDate>Tue, 18 Aug 2026 22:07:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/18/companies-cut-human-evals-after-ai-mistakes/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Парадоксална тенденция се наблюдава в корпоративния сектор при управлението на риска, свързан с внедряването на технологии с изкуствен интелект. Според проучване на изследователската дивизия VB Pulse на медията VentureBeat, голяма част от бизнесите реагират на грешките на ИИ с намаляване на човешкия контрол. Общо 85% от предприятията, които са претърпели публични или финансово значими загуби в резултат на грешки на техните системи в производство, избират да намалят зависимостта си от човешки експерти, вместо да увеличат надзора [1].</p>]]></description>
+    </item>
 
     <item>
       <title>Младите американци масово нямат доверие на лидерите в сферата на AI</title>
@@ -434,33 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/chinese-military-distilled-us-llms/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>LinkedIn добавя бутон за докладване на съдържание, което изглежда като „ИИ спам“</title>
-      <link>https://svetni.me/articles/2026/07/30/linkedin-ai-slop-button/</link>
-      <pubDate>Thu, 30 Jul 2026 22:44:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/linkedin-ai-slop-button/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>ИИ революция в Chrome: Google отстрани повече уязвимости за месец, отколкото за две години</title>
-      <link>https://svetni.me/articles/2026/07/30/chrome-security-bugs-fixed-by-ai/</link>
-      <pubDate>Thu, 30 Jul 2026 22:07:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/chrome-security-bugs-fixed-by-ai/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Microsoft засилва конкуренцията с OpenAI и Anthropic чрез собствени модели и чипове</title>
-      <link>https://svetni.me/articles/2026/07/30/microsoft-competing-openai-anthropic/</link>
-      <pubDate>Thu, 30 Jul 2026 22:06:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/07/30/microsoft-competing-openai-anthropic/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официални изявления по повод тримесечния си отчет [1], технологичният гигант Microsoft демонстрира сериозна промяна в стратегията си за изкуствен интелект. Компанията обяви рекордни финансови резултати, като за последното тримесечие приходите достигат 90 милиарда долара, а нетната печалба е 35,8 милиарда долара [1]. За цялата фискална година, приключила на 30 юни 2026 г., приходите на Microsoft възлизат на 331,8 милиарда долара, а чистата печалба е 133,7 милиарда долара [1]. Този финансов успех съвпада с по-широка кампания на компанията да предлага собствени алтернативи на услугите на водещите лаборатории за изкуствен интелект.</p>]]></description>
     </item>
   </channel>
 </rss>
