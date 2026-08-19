@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Definition of arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--color-primary)" />
+    </marker>
+  </defs>
+
+  <!-- Background: Warm Cream -->
+  <rect width="800" height="500" fill="#faf8f5" />
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="45" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--color-on-surface)" text-anchor="middle" dominant-baseline="central">AMAZON PRIME AIR DELIVERY PROCESS</text>
+  <text x="400" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#605c56" text-anchor="middle" dominant-baseline="central">How ultrafast drone deliveries operate safely and efficiently from site to yard</text>
+
+  <!-- STEP 1: SAME-DAY INTEGRATION -->
+  <rect x="50" y="140" width="160" height="240" rx="8" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <rect x="62" y="152" width="136" height="32" rx="4" fill="var(--color-primary)" opacity="0.1" />
+  <text x="130" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">1. INTEGRATION</text>
+  
+  <text x="130" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">Same-Day Sites</text>
+  <text x="130" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">Drones are integrated</text>
+  <text x="130" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">directly into existing</text>
+  <text x="130" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">fulfillment networks</text>
+  <text x="130" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">for smooth operations.</text>
+  
+  <!-- STEP 2: COVERAGE -->
+  <rect x="230" y="140" width="160" height="240" rx="8" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <rect x="242" y="152" width="136" height="32" rx="4" fill="var(--color-primary)" opacity="0.1" />
+  <text x="310" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">2. RANGE</text>
+  
+  <text x="310" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">175 Sq Mile Area</text>
+  <text x="310" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">Each location serves</text>
+  <text x="310" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">an expansive radius</text>
+  <text x="310" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">covering tens of</text>
+  <text x="310" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">thousands of homes.</text>
+
+  <!-- STEP 3: DETECT & AVOID -->
+  <rect x="410" y="140" width="160" height="240" rx="8" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <rect x="422" y="152" width="136" height="32" rx="4" fill="var(--color-primary)" opacity="0.1" />
+  <text x="490" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">3. NAVIGATION</text>
+  
+  <text x="490" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">Detect &amp; Avoid</text>
+  <text x="490" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">Onboard sensors and</text>
+  <text x="490" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">cameras scan airspace</text>
+  <text x="490" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">autonomously to make</text>
+  <text x="490" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">real-time safety choices.</text>
+
+  <!-- STEP 4: DELIVERY -->
+  <rect x="590" y="140" width="160" height="240" rx="8" fill="#ffffff" stroke="#e0dcd3" stroke-width="1.5" />
+  <rect x="602" y="152" width="136" height="32" rx="4" fill="var(--color-primary)" opacity="0.1" />
+  <text x="670" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--color-primary)" text-anchor="middle" dominant-baseline="central">4. DROP-OFF</text>
+  
+  <text x="670" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#2b2927" text-anchor="middle" dominant-baseline="central">Under 30 Minutes</text>
+  <text x="670" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">Drones safely drop the</text>
+  <text x="670" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">package only when the</text>
+  <text x="670" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">landing area is clear of</text>
+  <text x="670" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#605c56" text-anchor="middle" dominant-baseline="central">people, pets, &amp; obstacles.</text>
+
+  <!-- Connective Arrows -->
+  <path d="M 210 260 L 224 260" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 390 260 L 404 260" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 570 260 L 584 260" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Footnote -->
+  <rect x="50" y="405" width="700" height="60" rx="6" fill="#ffffff" stroke="#e0dcd3" stroke-width="1" />
+  <text x="70" y="435" font-family="system-ui, sans-serif" font-size="12" fill="#2b2927" text-anchor="start" dominant-baseline="middle">Key Advantage: FAA Part 135 certification guarantees commercial-grade safety standards,</text>
+  <text x="70" y="455" font-family="system-ui, sans-serif" font-size="12" fill="#2b2927" text-anchor="start" dominant-baseline="middle">allowing autonomous operation in weather like light rain and wide temperature ranges.</text>
+</svg>

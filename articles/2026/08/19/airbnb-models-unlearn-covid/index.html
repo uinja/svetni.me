@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация на официалния инженерен блог на Airbnb [1] Харисън Кац, ръководител на отдела за финансови данни и стратегии, споделя как екипът по п..."><title>Как моделът на Airbnb се научи да „забравя“ пандемията - Светни.ме</title><meta property="og:title" content="Как моделът на Airbnb се научи да „забравя“ пандемията - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация на официалния инженерен блог на Airbnb [1] Харисън Кац, ръководител на отдела за финансови данни и стратегии, споделя как екипът по п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/19/airbnb-models-unlearn-covid/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/19/airbnb-models-unlearn-covid/hero.svg"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как моделът на Airbnb се научи да „забравя“ пандемията</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 август 2026 г.</p><div><p><img src="/articles/2026/08/19/airbnb-models-unlearn-covid/hero.svg" alt="Как моделите на Airbnb се адаптират към пандемични шокове"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В публикация на официалния инженерен блог на <a href="/pages/airbnb.html">Airbnb</a> [1] Харисън Кац, ръководител на отдела за финансови данни и стратегии, споделя как екипът по прогнозиране управлява моделите си след сериозните сътресения от пандемията. Прогнозите за търсене, резервации и анулирания в хиляди пазари са основополагащи за бизнес планирането на компанията. Всяко малко отклонение в предсказанията се натрупва и води до сериозни грешки надолу по веригата, тъй като редица други системи се базират на тези данни. </p>
+<p>Когато прогнозите започнат да се отклоняват от реалността, стандартният рефлекс в сферата на <a href="/pages/machine-learning.html">машинното обучение</a> е моделът просто да се обучи отново с нови данни. Този процес обаче крие рискове, особено когато данните отразяват необичайни пазарни условия. Затова в Airbnb разделят реакцията при <a href="/pages/model-drift.html">дрейф на моделите</a> на три различни действия: пренапасване (refitting), предефиниране (respecifying) и задържане (holding) [1].</p>
+<p><img src="/articles/2026/08/19/airbnb-models-unlearn-covid/infographic.svg" alt="Инфографика за решението за пренастройване, предефиниране или задържане на прогнозни модели"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Трите опции пред инженерите</h2>
+<p>Екипът на Airbnb дефинира трите възможни действия по следния начин:</p>
+<ul>
+<li><p><strong>Пренапасване (Refitting):</strong> Това е най-евтиният и често прилаган вариант, при който моделът запазва същата структура и функции, но се калибрира отново с най-новите данни. Той е подходящ за обичаен дрейф в стабилни условия, но крие риск от влошаване на модела, ако скорошните данни са твърде специфични или шумни.</p>
+</li>
+<li><p><strong>Предефиниране (Respecifying):</strong> Промяна на самата структура на модела – добавяне или премахване на променливи, промяна на математическите зависимости или априорните разпределения. Това е по-скъп и рисков процес, но е единственият начин да се коригира модел, чиято математическа логика вече не описва реалния свят.</p>
+</li>
+<li><p><strong>Задържане (Holding):</strong> Решението да не се предприемат действия въпреки наличието на отклонения. Това е най-трудният избор от психологическа гледна точка, тъй като изглежда като бездействие пред очевиден проблем, но често е математически най-правилният ход, когато отклонението се дължи на временен външен шум [1].</p>
+</li>
+</ul>
+<h2>Трите капана при управление на моделите</h2>
+<p>При липса на ясна методология, екипите често допускат три класически грешки, свързани с реакцията им спрямо пазарните аномалии:</p>
+<ol>
+<li><p><strong>Преследване на шум (Chasing Noise):</strong> Извършване на извънредно пренапасване след краткосрочен шок. Например, привличането на необичайно голям брой резервации заради еднократно голямо събитие в даден пазар може да накара модела да приеме този пик за ново нормално състояние. Това води до преоценяване на следващите прогнози, докато събитието не излезе от тренировъчния прозорец.</p>
+</li>
+<li><p><strong>Носене на призраци (Carrying Ghosts):</strong> Запазване на временни структурни допускания от време на криза дълго след като тя е отминала. По време на <a href="/pages/covid-19.html">COVID-19</a> поведението при анулиране на резервации в Airbnb се промени драстично. След нормализиране на пазара обаче, остарялата логика остана вградена в модела, тъй като редовните пренапасвания изглеждаха чисти, без да коригират самата структура.</p>
+</li>
+<li><p><strong>Паническо предефиниране (Respec-as-Panic):</strong> Пълно преработване на модела под натиска на кратки срокове в отговор на временни пазарни промени (като колебания в обменните курсове), което обикновено води до създаване на по-нестабилни и крехки системи [1].</p>
+</li>
+</ol>
+<h2>Казусът с асиметричното възстановяване</h2>
+<p>Преди 2020 г. прогнозите на Airbnb за по-малките пазари разчитаха на йерархично „заемане на стабилност“ от по-големите, исторически предвидими дестинации. Пандемията обаче прекъсна тази обща динамика, тъй като възстановяването не се случи едновременно или с еднакви темпове навсякъде. Опитът на екипа просто да пренапасне съществуващите модели с новите данни доведе до нестабилност и грешки, които бяха три пъти по-високи от базовите нива преди шока.</p>
+<p>Проблемът се оказа структурен, а не параметричен. Решението беше пълно предефиниране на модела: вместо твърда йерархия, се въведе гъвкаво заемане на данни въз основа на географско съседство и сходна текуща динамика на възстановяване. Този подход намали прогнозните грешки с над 50% в сравнение с обикновеното пренапасване и върна точността на моделите близо до нивата отпреди кризата [1].</p>
+<h2>Изкуството да забравяш</h2>
+<p>Основният извод за инженерите от Airbnb е, че доброто управление на моделите изисква способност за навременно отстраняване на излишната сложност. Едно извънредно събитие налага вграждането на нови защитни структури и променливи, но тяхното запазване след преминаването на кризата тихомълком влошава точността на предсказанията. </p>
+<p>По-формална научна обосновка на тази методология и цената на пренастройването на моделите е представена от екипа в две отделни научни публикации [2][3]. Авторите подчертават, че обновяването на алгоритмите не е безплатно и дългосрочният успех зависи от намирането на баланс между цената на адаптацията и риска от бездействие [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://medium.com/airbnb-engineering/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn-c606b9bdb0ab?source=rss----53c7c27702d5---4">How we knew COVID was over (and what our models had to unlearn) - Airbnb Engineering</a></p>
+<p>[2]: <a href="https://arxiv.org/abs/2604.06438">Cost-sensitive retraining via posterior learning debt - arXiv</a></p>
+<p>[3]: <a href="https://arxiv.org/abs/2606.06670">When Should Forecasting Models Be Re-Specified? A Cost-Sensitive Trigger for Adaptive Model-Form Updating - arXiv</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/model-drift.html">Дрейф на моделите (Model Drift)</a><p>Дрейфът на моделите (Model Drift) описва влошаването на производителността на един ИИ модел във времето или промяната в неговото поведение.</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/covid-19.html">COVID-19</a><p>COVID-19 (коронавирусна болест 2019) е глобална пандемия, причинена от вируса SARS-CoV-2, която започна в края на 2019 г.</p></li><li><a href="/pages/airbnb.html">Airbnb</a><p>Airbnb е глобална онлайн платформа за отдаване под наем на жилища и преживявания.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
