@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Модернизирането на активна онлайн игра с милиони потребители изисква управлението на съществуващото съдържание и навиците на играчите като преки с..."><title>Как да модернизираме онлайн игра, която милиони все още играят - Светни.ме</title><meta property="og:title" content="Как да модернизираме онлайн игра, която милиони все още играят - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Модернизирането на активна онлайн игра с милиони потребители изисква управлението на съществуващото съдържание и навиците на играчите като преки с..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/19/how-to-modernize-live-game/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/19/how-to-modernize-live-game/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как да модернизираме онлайн игра, която милиони все още играят</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 август 2026 г.</p><div><p><img src="/articles/2026/08/19/how-to-modernize-live-game/hero.png" alt="Модернизация на онлайн игра"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>Модернизирането на активна онлайн игра с милиони потребители изисква управлението на съществуващото съдържание и навиците на играчите като преки системни зависимости, а не просто като софтуерен код. Според анализ на архитекта на системи за геймплей Александър Жорау, публикуван в Software Engineering Daily, всяка пусната функция оставя след себе си дълбоки зависимости [1]. Дизайнерите изграждат съдържание около стари инструменти, инженерите свързват нови системи към остарели интерфейси, а потребителите научават специфични поведения в играта, които първоначалният екип може никога да не е планирал. След десетилетие работа дори най-малката техническа промяна може да засегне стотици активи и милиони играчи, поради което студиата се нуждаят от ясен план за миграция преди изграждането на нова архитектура [1].</p>
+<p><img src="/articles/2026/08/19/how-to-modernize-live-game/infographic.png" alt="Ключови въпроси при миграция"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>Анализ на зависимостите и контролирано съвместно съществуване</h3>
+<p>Успешният план за миграция на софтуерните компоненти в една онлайн игра изисква отговор на пет ключови въпроса преди началото на внедряването. Те включват идентифициране на зависимостите, възможността за паралелно функциониране на старата и новата система, разпределянето на отговорността за миграция на съдържанието, откриването на регресии и условията за окончателно премахване на старата система [1]. </p>
+<p>В по-големите проекти за разработка на игри се разглеждат различни технологични двигатели като <a href="/pages/unreal-engine.html">Unreal Engine</a> и <a href="/pages/unity.html">Unity</a>, както и собствени (proprietary) архитектурни платформи [1]. При прехода към нова система се налага поддържане на контролирано съвместно съществуване на старата и новата имплементация, за да не се наруши работата на екипите по съдържанието. В тези екосистеми се използват и <a href="/pages/distributed-systems.html">разпределени системи</a> за обработка на мрежовите заявки и управление на състоянията на играчите на живо.</p>
+<h3>Навиците на играчите и системните граници</h3>
+<p>Особен аспект при поддръжката на дългогодишни заглавия са „поведенческите договори“ с потребителите [1]. В практиката си Александър Жорау дава пример за дефект, при който мерникът в игра се е показвал наполовина по-малък от планираното, но играчите са свикнали с него и корекцията му би променила изживяването им. Поради това екипите трябва да изследват как потребителите използват дадена функция, преди да я модифицират.</p>
+<p>За откриване на поверенически и производителни проблеми при миграцията се препоръчва използването на функционални, интеграционни и end-to-end тестове, които покриват взаимодействията отвъд границите на отделните компоненти [1]. Мониторингът на производителността в реално време (базово време за кадър, памет, мрежова латентност) остава задължителен за улавяне на проблеми, които тестовете пропускат.</p>
+<h3>Институционализиране на решенията и ролята на наследствения код</h3>
+<p>В големи технологични организации, включително и такива с мащабите на <a href="/pages/meta.html">Meta</a>, техническите решения трябва да бъдат кодирани в самата система чрез стабилни интерфейси, валидиращи правила и автоматизирани тестове, вместо да се разчита на устно предавана история [1]. Това улеснява новите инженери и предотвратява случаи, при които премахването на привидно излишен код води до регресия.</p>
+<p>Наследственият (legacy) код не трябва да се разглежда автоматично като лош код. Подмяната му е оправдана само при ясни ползи за производителността или скоростта на производство на съдържание [1]. Някои системи изискват изолация чрез ясни граници, докато други трябва да останат непокътнати, докато бизнес нуждите не наложат промяна. Жорау, който има опит в компании като <a href="/pages/wargaming.html">Wargaming</a> и <a href="/pages/splash-damage.html">Splash Damage</a>, подчертава, че целта на модернизацията не е да се изтрие историята на софтуера, а да се предотврати блокирането на следващото издание [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://softwareengineeringdaily.com/articles/how-to-modernise-a-live-game-without-breaking-its-history/">How to Modernize an Online Game That Millions Still Play - Software Engineering Daily</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wargaming.html">Wargaming</a><p>Wargaming е международна компания за разработка и издаване на компютърни игри, най-известна със своята безплатна военна ММО игра World of Tanks.</p></li><li><a href="/pages/unreal-engine.html">Unreal Engine</a><p>Unreal Engine е популярен 3D софтуерен двигател за разработка на игри (game engine), разработен от Epic Games.</p></li><li><a href="/pages/unity.html">Unity</a><p>Unity е кросплатформен двигател за игри (game engine), разработен от Unity Technologies.</p></li><li><a href="/pages/splash-damage.html">Splash Damage</a><p>Splash Damage е британско студио за разработка на видеоигри, специализирано в мултиплейър шутъри от първо лице.</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

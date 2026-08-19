@@ -9,9 +9,54 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 18 Aug 2026 22:13:00 +0000</pubDate>
+    <pubDate>Wed, 19 Aug 2026 21:30:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Claude вече може да изпраща имейли в Gmail без потвърждение</title>
+      <link>https://svetni.me/articles/2026/08/19/claude-gmail-integration-auto-send/</link>
+      <pubDate>Wed, 19 Aug 2026 21:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/19/claude-gmail-integration-auto-send/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Как да модернизираме онлайн игра, която милиони все още играят</title>
+      <link>https://svetni.me/articles/2026/08/19/how-to-modernize-live-game/</link>
+      <pubDate>Wed, 19 Aug 2026 21:22:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/19/how-to-modernize-live-game/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Интеграцията на Gemini в Chrome за Android вече е факт: AI агентът Auto-Browse е тук</title>
+      <link>https://svetni.me/articles/2026/08/19/gemini-auto-browse-chrome-android/</link>
+      <pubDate>Wed, 19 Aug 2026 21:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/19/gemini-auto-browse-chrome-android/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Според информация от специализираните технологични медии Android Central [1] и 9to5Google [2], Google е приключил разпространението на интеграцията на изкуствения интелект Gemini в мобилния браузър Chrome за Android за потребители в САЩ. Това дългоочаквано обновление пренася мощни възможности за автоматизация директно в уеб браузъра, превръщайки го от обикновен инструмент за сърфиране в активен личен асистент.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Когато купувачът ви е ИИ агент</title>
+      <link>https://svetni.me/articles/2026/08/19/when-your-buyer-is-an-ai-agent/</link>
+      <pubDate>Wed, 19 Aug 2026 21:21:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/19/when-your-buyer-is-an-ai-agent/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>През 2021 г. датският логистичен гигант Maersk внедри специализирани ИИ агенти от стартъпа Pactum с цел автоматизиране на преговорите по договори с превозвачи за товарни превози. Вместо просто да подпомага човешкия състав при снабдяването, софтуерът пое изцяло управлението на процеса: от първоначалното свързване с доставчиците и провеждането на няколко кръга от обсъждания на цените и графиците до финализиране на условията. Този подход доведе до 96% успеваемост при сключването на споразумения, без да се изисква каквато и да е човешка намеса при отделните трансакции.</p>]]></description>
+    </item>
+
+    <item>
+      <title>Скрининг за клинични проучвания с AI агенти чрез Amazon Bedrock AgentCore</title>
+      <link>https://svetni.me/articles/2026/08/19/ai-agents-clinical-trial-screening/</link>
+      <pubDate>Wed, 19 Aug 2026 21:15:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/08/19/ai-agents-clinical-trial-screening/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p>Ускоряването на клиничните проучвания остава едно от най-сериозните организационни и финансови предизвикателства пред съвременната биофармацевтична индустрия. Статистическите данни на Tufts Center for the Study of Drug Development показват, че близо 80 процента от клиничните изпитания не успяват да спасят първоначално планираните срокове за набиране на пациенти, като всеки ден забавяне струва на инициаторите приблизително 500 000 щатски долара [1]. Основната причина за това се крие в изключително трудоемкия и фрагментиран процес на скрининг, при който медицинските екипи анализират ръчно хиляди страници неструктурирани данни от електронни здравни досиета, лабораторни резултати, образни изследвания и хронологии на лечението. В отговор на тази неефективност, AWS предлага референтна архитектура за автоматизиран скрининг и оценка на безопасността на пациенти, захранвана от автономни AI агенти.</p>]]></description>
+    </item>
 
     <item>
       <title>CoSnitch: Как нерегламентиран параметър позволи кражба на данни чрез Microsoft Copilot</title>
@@ -414,51 +459,6 @@
       <link>https://svetni.me/articles/2026/08/03/sqlite-cves-llm-slop/</link>
       <pubDate>Mon, 3 Aug 2026 21:40:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/sqlite-cves-llm-slop/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>OpenAI загатна за Astra: Следващото голямо AI поколение решава 10 дългогодишни математически задачи</title>
-      <link>https://svetni.me/articles/2026/08/03/openai-astra-math-advances/</link>
-      <pubDate>Mon, 3 Aug 2026 21:39:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/08/03/openai-astra-math-advances/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В официална научна публикация, озаглавена „Ten advances in mathematics and theoretical computer science“ [1], компанията OpenAI обяви забележителен научен пробив, загатвайки за следващото си голямо поколение изкуствен интелект под кодовото име Astra. Съобщението веднага привлече медийния отзвук и вниманието на технологичната общност [2]. Според разкритите данни, вътрешна версия на новия модел успешно е решила или е постигнала безпрецедентен напредък по 10 дългогодишни отворени математически и компютърни проблеми.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Бивш инженер от Perplexity стартира Polar — AI браузър за автоматизация на интелектуалния труд</title>
-      <link>https://svetni.me/articles/2026/08/02/polar-ai-browser-knowledge-work/</link>
-      <pubDate>Sun, 2 Aug 2026 21:32:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/08/02/polar-ai-browser-knowledge-work/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Китайските роботи: Трансформацията на британската търговия на дребно</title>
-      <link>https://svetni.me/articles/2026/08/01/chinese-robots-uk-retail/</link>
-      <pubDate>Sat, 1 Aug 2026 22:12:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/chinese-robots-uk-retail/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>Според репортаж на BBC [1], автономните мобилни роботи (AMR) на китайската компания Geek+ ускоряват обработката на онлайн поръчки в Обединеното кралство. Водещи британски търговци на дребно, сред които Tesco, Asda и Next, вече използват технологията за автоматизиране на складовите си операции [1]. Вместо традиционните фиксирани конвейерни системи, тези роботи се ориентират чрез QR кодове по пода и пренасят цели рафтове със стоки директно до служителите [1].</p>]]></description>
-    </item>
-
-    <item>
-      <title>GPT 5.6 Slopus? Инженерите няма да си отидат, а уволняват за използване на AI?</title>
-      <link>https://svetni.me/articles/2026/08/01/gpt-5-6-slopus-rate-limited-ep20/</link>
-      <pubDate>Sat, 1 Aug 2026 12:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/gpt-5-6-slopus-rate-limited-ep20/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p>В новия 20-и епизод на технологичния подкаст Rate Limited водещите Рей Фернандо и Адам Ларсон (познат като GosuCoder), съвместно с гост-водещия Нейтън Снел, обсъждат дългосрочното бъдеще на софтуерните инженери, новите модели с изкуствен интелект и крайните мерки срещу автоматизираното генериране на код [1]. Участниците изразяват категорично мнение, че въпреки бурното развитие на технологията, програмистите ще запазят ключовата си роля през следващите 20 години. Разликата в системното мислене и способността за проектиране на сложни архитектури остава непреодолима преграда за нетехническите потребители.</p>]]></description>
-    </item>
-
-    <item>
-      <title>Китайската армия дестилира GPT-3.5 и Claude за военен изкуствен интелект</title>
-      <link>https://svetni.me/articles/2026/08/01/chinese-military-distilled-us-llms/</link>
-      <pubDate>Sat, 1 Aug 2026 12:26:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/08/01/chinese-military-distilled-us-llms/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
     </item>
