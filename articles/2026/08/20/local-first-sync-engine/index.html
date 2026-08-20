@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В съвременната уеб разработка стремежът към по-висока производителност и по-бърз интерфейс е движеща сила за еволюцията на платформите. В своята п..."><title>Защо да извличаме данни, когато можем да ги синхронизираме? Локално-ориентирана архитектура с ElectricSQL и TanStack DB - Светни.ме</title><meta property="og:title" content="Защо да извличаме данни, когато можем да ги синхронизираме? Локално-ориентирана архитектура с ElectricSQL и TanStack DB - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В съвременната уеб разработка стремежът към по-висока производителност и по-бърз интерфейс е движеща сила за еволюцията на платформите. В своята п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/20/local-first-sync-engine/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/20/local-first-sync-engine/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Защо да извличаме данни, когато можем да ги синхронизираме? Локално-ориентирана архитектура с ElectricSQL и TanStack DB</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 август 2026 г.</p><div><p><img src="/articles/2026/08/20/local-first-sync-engine/hero.png" alt="Why Fetch When You Can Sync?"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В съвременната уеб разработка стремежът към по-висока производителност и по-бърз интерфейс е движеща сила за еволюцията на платформите. В своята презентация на конференцията QCon San Francisco [1], <a href="/pages/james-arthur.html">James Arthur</a> – съосновател на <a href="/pages/electricsql.html">ElectricSQL</a> [2] – разглежда критичните ограничения на традиционния модел за извличане на данни (data fetching). Той твърди, че след години на оптимизиране на реактивността в рамките на клиента (чрез сигнали, редуктори и компоненти), следващата голяма стъпка е разширяването на тази реактивност до самия сървър [1].</p>
+<p>Вместо разработчиците ръчно да пишат код за изпращане на заявки по мрежата и да се справят с междинни състояния на зареждане, архитектурата трябва да премине изцяло към синхронизация. Това е основата на т.нар. локално-ориентирани (local-first) приложения, при които данните са достъпни локално и се управляват декларативно.</p>
+<h3>Реактивният модел на синхронизация</h3>
+<p>Традиционните уеб приложения разчитат на императивни мрежови заявки за зареждане и промяна на състоянието, което неизбежно въвежда латентност от десетки или стотици милисекунди. За разлика от тях, синхронизиращата архитектура (sync engine architecture) разделя интерфейса от директното извикване на мрежови API. Тя разчита на два реактивни цикъла: вътрешен (за локалния клиент) и външен (между клиента и сървъра) [1].</p>
+<p>При извършване на запис от потребителя, промяната веднага се отразява в локалното хранилище като оптимистично състояние. Това незабавно задейства прерисуване на интерфейса и потребителят вижда промяната без забавяне. Вторият цикъл работи във фонов режим, изпращайки записите към сървъра и следейки за нови промени в централната база данни. Когато промените от други потребители или процеси пристигнат в базата данни, те се синхронизират обратно към клиента, като оптимистичното състояние се заменя с потвърдените данни [1].</p>
+<p><img src="/articles/2026/08/20/local-first-sync-engine/infographic.png" alt="Архитектура на синхронизация на данни"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>Инфраструктурни предизвикателства: HTTP срещу WebSockets</h3>
+<p>В миналото изграждането на синхронизиращи механизми изискваше значителни инженерни ресурси и беше запазена територия за компании с големи екипи като Meta, Notion или Figma. Основното предизвикателство се корени в избора на мрежов протокол за пренос на данни в реално време. Докато HTTP заявките са без състояние (stateless), лесни за наблюдение и кеширане, то WebSockets връзките изискват поддържане на състояние на сървъра и са трудни за мащабиране [1].</p>
+<p>За да реши този проблем, екипът на ElectricSQL проектира протокол, базиран на HTTP дълго съгласуване (long polling). Този подход позволява преносът на промени да се разпределя през стандартна CDN инфраструктура (като Cloudflare или Fastly). Чрез използването на заявки с фиксирани URL адреси се постига обединяване на заявките (request coalescing) на ниво CDN. Когато множество клиенти в една и съща сесия се абонират за едни и същи данни, към централния сървър се изпраща само една заявка, което спестява значителен ресурс на базата данни [1].</p>
+<p>За сценарии, които изискват изключително ниска латентност и високочестотен обмен (като присъствие в реално време или стрийминг), ElectricSQL предлага и режим за сървърно изпратени събития (SSE - Server-Sent Events). Това позволява непрекъснат поток от данни с ниски системни изисквания в сравнение със стандартните WebSockets [1].</p>
+<h3>Интеграция с компоненти: ElectricSQL и TanStack DB</h3>
+<p>За да улесни разработчиците при внедряването на този модел в съществуващи стекове, ElectricSQL си партнира с общността TanStack, управлявана от <a href="/pages/tanner-linsley.html">Tanner Linsley</a> [3]. Резултатът е <a href="/pages/tanstack-db.html">TanStack DB</a> – изключително лека (около 20 килобайта) реактивна клиентска база данни. Тя не изисква зареждане на тежки WebAssembly модули и позволява поетапна миграция на съществуващи приложения [1].</p>
+<p>TanStack DB въвежда абстракцията на т.нар. колекции (collections) и позволява на разработчиците да пишат декларативни заявки директно към тях. Колекциите могат да бъдат захранени от обикновени API заявки или от ElectricSQL синхронизиращ механизъм (чрез <code>ElectricCollection</code>). Под капака системата използва TypeScript имплементация на диференциален поток от данни (differential dataflow). Това гарантира, че промените се пропагират на ниво делта-разлики за части от милисекундата, без да се налага преизчисляване на цялата заявка при всяка промяна в базата данни [1].</p>
+<p>За гарантиране на референциалната цялост на клиента, проектът се интегрира и с <a href="/pages/pglite.html">PGlite</a> – олекотена версия на PostgreSQL, работеща изцяло в браузъра [1], [4]. Това дава възможност за локално изпълнение на релационни заявки и трансакции с пълната функционалност на Postgres.</p>
+<h3>Зареждане при поискване и Query-Driven Sync</h3>
+<p>Едно от най-важните нововъведения в TanStack DB е поддръжката на синхронизация, задвижвана от заявки (Query-Driven Sync) [1]. При големи бази данни е невъзможно и непрактично да се синхронизира цялата информация на клиента. Чрез активиране на режима <code>syncMode: &#39;on-demand&#39;</code>, клиентът изпраща филтриращи предикати (например специфично ID на проект) към синхронизиращия механизъм [1].</p>
+<p>Външната граница на данните, които даден потребител е оторизиран да вижда, се дефинира като &quot;форма&quot; (shape) [1]. На базата на потребителските действия в интерфейса (например навигация или скролиране), TanStack DB динамично изисква и добавя съответните подмножества от данни. По този начин се реализират функции като безкрайно скролиране и пагинация, без това да натоварва мрежата или паметта на устройството. Този подход получава висока оценка от утвърдени разработчици в индустрията като <a href="/pages/joe-savona.html">Joe Savona</a> от Meta [1].</p>
+<p>В демо версията &quot;LinearLarge&quot;, съдържаща над 500 000 реда в базата данни, приложението зарежда интерфейса моментално [1]. Това е възможно, тъй като първоначално се изтегля само малка част от данните, а останалите се дозареждат динамично при скролиране, запазвайки пълната реактивност и консистентност на локалния клиент.</p>
+<h3>Управление на конфликти и автономни системи</h3>
+<p>Когато разработваме синхронизиращи архитектури, въпросът с паралелните промени от различни потребители е неизбежен. ElectricSQL съзнателно разделя процеса на синхронизация при четене от този при запис [1]. По този начин разработчиците могат сами да определят бизнес логиката за запис обратно в сървъра. Базовото решение разчита на трансакции с потвърждение от сървъра и автоматично връщане на състоянието (rollback) при грешка [1].</p>
+<p>За по-сложни случаи на съвместна работа в реално време, архитектурата позволява интеграция с конфликтно-свободни репликирани типове данни (CRDTs) и библиотеки като Yjs или Automerge [1]. Според Артур, по-голямата част от приложенията нямат нужда от сложни CRDT структури и стандартният сървърно-авторитарен модел с трансакционно отхвърляне на промените е напълно достатъчен за постигане на надеждност [1].</p>
+<p>Този модел става критичен в контекста на новата ера на изкуствен интелект и ИИ агенти. Тъй като агентите извършват множество паралелни фонови операции на сървъра, традиционното периодично извличане на данни (polling) е неефективно. Синхронизиращият механизъм се явява единственият разумен начин за поддържане на консистентност и реално време на интерфейса, обединявайки действията на хората и автономните агенти в единна реактивна среда [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.infoq.com/presentations/local-first-sync-engine/">Why Fetch When You Can Sync? Building Local-First Apps on a Sync Engine Architecture - InfoQ</a></p>
+<p>[2]: <a href="https://electric-sql.com/">ElectricSQL Official Website</a></p>
+<p>[3]: <a href="https://tanstack.com/db">TanStack DB Documentation</a></p>
+<p>[4]: <a href="https://pglite.dev/">PGlite - Postgres in the Browser</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tanstack-db.html">TanStack DB</a><p>TanStack DB е олекотена, реактивна и независима от бекенда клиентска база данни с отворен код.</p></li><li><a href="/pages/tanner-linsley.html">Tanner Linsley</a><p>Tanner Linsley е влиятелен софтуерен разработчик с отворен код, създател на популярни библиотеки като React Query (сега TanStack Query), TanStack Tabl...</p></li><li><a href="/pages/pglite.html">PGlite</a><p>PGlite е олекотена версия на PostgreSQL, компилирана до WebAssembly (WASM), която може да работи изцяло в браузъра или в среди като Node.</p></li><li><a href="/pages/joe-savona.html">Joe Savona</a><p>Joe Savona е софтуерен инженер в Meta, известен със своята работа по React, React Compiler и Relay.</p></li><li><a href="/pages/james-arthur.html">James Arthur</a><p>James Arthur е технологичен предприемач и съосновател на ElectricSQL – компания, разработваща инструменти за синхронизация и локално-ориентирана (loca...</p></li><li><a href="/pages/electricsql.html">ElectricSQL</a><p>ElectricSQL е технологична платформа с отворен код, която предоставя синхронизиращ механизъм (sync engine) за PostgreSQL бази данни.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

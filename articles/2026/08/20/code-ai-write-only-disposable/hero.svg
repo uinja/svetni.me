@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <style>
+    .bg { fill: #1c1b1f; }
+    .line { stroke: var(--color-primary); stroke-width: 2; fill: none; opacity: 0.4; }
+    .line-active { stroke: var(--color-secondary); stroke-width: 3; fill: none; stroke-dasharray: 4, 4; }
+    .node { fill: var(--color-secondary); }
+    .node-glow { fill: var(--color-primary); opacity: 0.3; }
+    .trash-bin { fill: none; stroke: var(--color-tertiary); stroke-width: 4; stroke-linejoin: round; }
+    .code-block { fill: var(--color-primary); opacity: 0.8; }
+    .code-disposable { fill: var(--color-secondary); opacity: 0.5; }
+  </style>
+  <rect class="bg" width="800" height="500" rx="8" />
+  
+  <!-- Abstract Grid Network -->
+  <path class="line" d="M 100 250 L 250 150 L 400 250 L 550 150 L 700 250" />
+  <path class="line" d="M 250 150 L 250 350 L 400 250 M 550 150 L 550 350" />
+  <path class="line" d="M 100 250 L 250 350 L 550 350 L 700 250" />
+  
+  <!-- Flow lines representing logic -->
+  <path class="line-active" d="M 250 150 L 400 250 L 400 380" />
+  
+  <!-- Glowing central node representing AI brain -->
+  <circle class="node-glow" cx="400" cy="250" r="48" />
+  <circle class="node" cx="400" cy="250" r="24" />
+  
+  <!-- Peripheral nodes -->
+  <circle class="node" cx="250" cy="150" r="12" />
+  <circle class="node" cx="550" cy="150" r="12" />
+  <circle class="node" cx="250" cy="350" r="12" />
+  <circle class="node" cx="550" cy="350" r="12" />
+  
+  <!-- Disposable code segments flowing down -->
+  <rect class="code-block" x="388" y="296" width="24" height="8" rx="2" />
+  <rect class="code-disposable" x="380" y="316" width="40" height="8" rx="2" />
+  <rect class="code-block" x="392" y="336" width="16" height="8" rx="2" />
+  <rect class="code-disposable" x="384" y="356" width="32" height="8" rx="2" />
+  
+  <!-- Recycling bin (disposable code container) -->
+  <path class="trash-bin" d="M 360 400 L 370 460 L 430 460 L 440 400 Z" />
+  <line class="trash-bin" x1="350" y1="400" x2="450" y2="400" />
+  <path class="trash-bin" d="M 390 400 L 390 390 L 410 390 L 410 400" />
+  <line class="trash-bin" x1="385" y1="420" x2="385" y2="445" />
+  <line class="trash-bin" x1="400" y1="420" x2="400" y2="445" />
+  <line class="trash-bin" x1="415" y1="420" x2="415" y2="445" />
+</svg>
