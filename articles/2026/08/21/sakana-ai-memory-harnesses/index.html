@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+По време на конференцията AI Engineer World&amp;#39;s Fair 2026 в Сан Франциско, Стефания Друга, водещ изследовател в японската лаборатория Sakana AI,..."><title>Рамки с памет при ИИ агенти с дълъг живот: Опитът на Sakana AI при локални модели - Светни.ме</title><meta property="og:title" content="Рамки с памет при ИИ агенти с дълъг живот: Опитът на Sakana AI при локални модели - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+По време на конференцията AI Engineer World&amp;#39;s Fair 2026 в Сан Франциско, Стефания Друга, водещ изследовател в японската лаборатория Sakana AI,..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/21/sakana-ai-memory-harnesses/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/21/sakana-ai-memory-harnesses/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Рамки с памет при ИИ агенти с дълъг живот: Опитът на Sakana AI при локални модели</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 август 2026 г.</p><div><p><img src="/articles/2026/08/21/sakana-ai-memory-harnesses/hero.png" alt="Рамки с памет при ИИ агенти с дълъг живот"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>По време на конференцията AI Engineer World&#39;s Fair 2026 в Сан Франциско, Стефания Друга, водещ изследовател в японската лаборатория Sakana AI, представи нов подход за справяне с деградацията на контекста (context rot) при автономните ИИ системи [1]. В своята презентация тя демонстрира как използването на т.нар. „рамки с памет“ (memory harnesses) позволява на изследователски ИИ агенти с дълъг живот да изпълняват задачи с широк времеви хоризонт изцяло върху локален хардуер, оптимизирайки едновременно точността и разходите за изчислителни ресурси.</p>
+<p><img src="/articles/2026/08/21/sakana-ai-memory-harnesses/infographic.png" alt="Архитектура на рамката с памет (memory harness)"><br><small>Изображение: Svetni.me / ИИ генерана инфографика</small></p>
+<h3>Възходът на локалните модели и икономическият натиск</h3>
+<p>Друга започна презентацията си, свързвайки изследването си с по-широк индустриален тренд. Тя цитира скорошно изявление на изпълнителния директор на Coinbase, който сподели как компанията е успяла драстично да съкрати разходите си за изкуствен интелект, докато в същото време е увеличила потреблението му. Ключът към този успех е преходът към локално хоствани модели и прилагането на добри инженерни практики – по-добро рутиране, ефективно кеширане, поддържане на чист контекст и по-висока видимост на задачите.</p>
+<p>Локалните модели вече пресичат критичната граница на полезност за сложни агентни задачи и използване на инструменти (tool use). Модели като <a href="/pages/deepseek-v4.html">DeepSeek V4</a> Flash или Qwen вериги се преврэщат в жизнеспособна алтернатива на облачните API, осигурявайки суверенитет на данните и предвидими разходи. Тези модели обаче се нуждаят от външна системна подкрепа, за да работят ефективно при сложни сценарии.</p>
+<h3>Проблемът с „гниенето на контекста“</h3>
+<p>При задачи с дълъг времеви хоризонт (long-horizon tasks), които продължават часове или дни, автономните ИИ агенти неизменно се сблъскват с т.нар. „гниене на контекста“. С натрупването на история в рамките на сесията, моделите започват да си противоречат, да повтарят вече свършени задачи или просто да се отклоняват от първоначалните цели. Те буквално забравят инструкциите си под натиска на твърде много информация в контекстния прозорец.</p>
+<p>Този проблем става все по-сериозен поради две тенденции: от една страна, бизнесът изисква решаването на задачи с все по-дълъг хоризонт; от друга страна, темпото на пускане на фундаментално нови модели започва да се забавя. Решението не може да бъде просто увеличаване на контекстния прозорец, тъй като това води до огромно натоварване на оперативната памет и забавяне на работата.</p>
+<h3>Дизайн на рамката с памет (Memory Harness)</h3>
+<p>Вместо да разглежда паметта просто като пасивно хранилище (векторна база данни), Друга предлага тя да се третира като структуриран управляващ контур (write-manage-read loop), който обгръща езиковия модел:</p>
+<ul>
+<li><p><strong>Запис (Write):</strong> Систематично логване на действията, стъпките и мисловните процеси на агента.</p>
+</li>
+<li><p><strong>Управление (Manage):</strong> Филтриране, приоритизиране и архивиране на събраните данни в рамките на текущата и между различните работни сесии.</p>
+</li>
+<li><p><strong>Четене (Read):</strong> Извличане на най-подходящите спомени и връщането им обратно в текущия контекст на модела.</p>
+</li>
+</ul>
+<p>Самият ИИ агент в тази архитектура е „лек“ и не разполага с дълготрайна вградена памет – цялата интелигентност по съхранението и извличането е делегирана на външната рамка (<a href="/pages/agentic-memory.html">Agentic Memory</a>).</p>
+<h3>Експерименти и резултати от реални бенчмаркове</h3>
+<p>Експериментите на <a href="/pages/sakana-ai.html">Sakana AI</a> са проведени на компютър Mac Studio с чип M3 Ultra (96 GB споделена памет и 28-ядрен процесор). Като модели са използвани <a href="/pages/qwen3.html">Qwen3</a> (квантизиран до 4-бита) и DeepSeek V4 Flash. Заради хардуерните ограничения на локалните модели – например липсата на поддръжка за паралелни пакетни заявки (batch queries) при DeepSeek – оценките са отнели дни непрекъсната работа, изисквайки допълнително външно охлаждане на хардуера.</p>
+<p>Резултатите показват ясно разграничение в зависимост от естеството на задачите:</p>
+<ol>
+<li><p><strong>Задачи в рамките на контекста:</strong> При тестване с литературен обзор (където всички статии и контекст се побират в стандартния прозорец на модела), рамката с памет (memory harness) не добавя стойност. Тя постига същата производителност като базовия модел, но увеличава токените и разходите.</p>
+</li>
+<li><p><strong>Задачи извън контекста (X-Bench и Spider V2):</strong> При бенчмаркове за дълъг хоризонт, където правилната информация е извън текущия контекстен прозорец (например на стъпка 124 при текуща стъпка 500), рамката с памет се оказва критична.</p>
+</li>
+</ol>
+<p>При сравнението на различни стратегии за извличане – стандартен векторен <a href="/pages/rag.html">RAG</a>, „регистър на решенията“ (decisions ledger) и теоретичен „оракул“ (oracle, подаващ перфектния спомен) – най-добри резултати показва структурираният регистър на решенията с класиране по важност. Този метод се представя по-добре и от стратегиите за условно пропускане (gating), при които моделът сам трябва да прецени дали има нужда от достъп до паметта.</p>
+<h3>Парадоксът на оракула и суверенитетът на данните</h3>
+<p>Един от най-интересните изводи от презентацията е т.нар. „парадокс на оракула“. Дори когато рамката с памет (memory harness) подава перфектната информация (ground truth) на модела, точността не достига 100%. Моделът понякога избира да игнорира подадения спомен или се обърква от него. Това подчертава, че управлението на паметта е сложен поведенчески проблем, който изисква развитието на ново направление – „инженерство на рамките“ (harness engineering).</p>
+<p>Проучването на Sakana AI показва, че правилната архитектура на паметта може да спести огромен обем токени, намалявайки драстично цената за работа на агентите. Това открива пътя към пълна автономност и цифров суверенитет, позволявайки на компаниите да изпълняват сложни изследователски задачи локално, без да изпращат чувствителна информация към външни облачни доставчици.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.youtube.com/watch?v=R3-anFK1YM8">Memory Harnesses for Long-Running Research Agents on Device - Stefania Druga (Sakana AI) at AI Engineer World&#39;s Fair 2026</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/stefania-druga.html">Стефания Друга</a><p>Стефания Друга (Stefania Druga) е водещ изследовател (Staff Research Scientist) в японската ИИ лаборатория Sakana AI в Токио.</p></li><li><a href="/pages/sakana-ai.html">Sakana AI</a><p>Sakana AI е базирана в Токио лаборатория за изкуствен интелект, основана от бивши изследователи от Google и OpenAI (включително Лион Джоунс, съавтор н...</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/deepseek-v4.html">DeepSeek-V4</a><p>DeepSeek-V4 е четвъртото поколение голям езиков модел на DeepSeek, представено през април 2026 г.</p></li><li><a href="/pages/agentic-memory.html">Агентна памет (Agentic Memory)</a><p>Агентната памет е концепция в изкуствения интелект, описваща външна, персистентна и управляема система за съхранение на информация, използвана от авто...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
