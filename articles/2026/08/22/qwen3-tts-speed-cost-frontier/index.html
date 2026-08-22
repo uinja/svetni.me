@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация на корпоративния си блог [1], Nari Labs споделя детайли за своите инфраструктурни оптимизации при обслужването на модела Qwen3-TTS (к..."><title>Подобряване на скоростта и цената при Qwen3-TTS: Оптимизациите на Nari Labs - Светни.ме</title><meta property="og:title" content="Подобряване на скоростта и цената при Qwen3-TTS: Оптимизациите на Nari Labs - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация на корпоративния си блог [1], Nari Labs споделя детайли за своите инфраструктурни оптимизации при обслужването на модела Qwen3-TTS (к..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/22/qwen3-tts-speed-cost-frontier/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/22/qwen3-tts-speed-cost-frontier/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Подобряване на скоростта и цената при Qwen3-TTS: Оптимизациите на Nari Labs</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 август 2026 г.</p><div><p><img src="/articles/2026/08/22/qwen3-tts-speed-cost-frontier/hero.png" alt="Подобряване на скоростта и цената при Qwen3-TTS"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В публикация на корпоративния си блог [1], <a href="/pages/nari-labs.html">Nari Labs</a> споделя детайли за своите инфраструктурни оптимизации при обслужването на модела <a href="/pages/qwen3-tts.html">Qwen3-TTS</a> (конкретно версията 1.7B CustomVoice, базирана на <a href="/pages/qwen3.html">Qwen3</a>). Постигнатите резултати демонстрират 10 заявки в секунда (RPS) с 95-ти персентил (p95) време до първото звучене (TTFA) под 50 милисекунди на един единствен <a href="/pages/nvidia.html">NVIDIA</a> <a href="/pages/h100.html">H100</a> SXM графичен ускорител, като същевременно се запазва непрекъснатостта на аудио потока в реално време [1]. </p>
+<p>Системата постига производителност от приблизително 630 символа в секунда при 10 RPS. Това се равнява на около $2 за 1 милион символа при пълно натоварване, използвайки инстанция с H100 (при цена от $4.29 на час). </p>
+<p><img src="/articles/2026/08/22/qwen3-tts-speed-cost-frontier/infographic.png" alt="Инфографика на оптимизациите при Qwen3-TTS"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Бенчмаркинг и съществуващи решения</h2>
+<p>Екипът на Nari Labs сравнява своето решение с четири други популярни енджина за обслужване на модели: <a href="/pages/vllm.html">vLLM</a>-Omni, <a href="/pages/sglang.html">SGLang</a>-Omni, <a href="/pages/voxserve.html">VoxServe</a> и <a href="/pages/mstar.html">M*</a>. Тестовете са проведени в продължение на пет минути с Poisson разпределение на заявките, симулирайки реално натоварване. Оценката на генерираното аудио се извършва с помощта на Speech-to-Text системата на <a href="/pages/deepgram.html">Deepgram</a>.</p>
+<p>Резултатите показват, че стандартните конфигурации на повечето енджини имат значително поле за подобрение. Например, vLLM-Omni и VoxServe показват първоначален p95 TTFA съответно 277.883 ms и 315.064 ms при 1 RPS. Дори след допълнителни настройки на размера на блоковете от аудио рамки (frame accumulation tuning), само VoxServe и решението на Nari Labs успяват да паднат под 50 ms при 1 RPS. При натоварване от 6 RPS обаче, всички конкурентни решения надвишават 100 ms p95 TTFA, докато Nari Labs запазва стабилност и ниска латентност [1].</p>
+<h2>Архитектурни оптимизации</h2>
+<p>Архитектурата на Qwen3-TTS е съставена от три основни модула за йерархично генериране на кодбук токени:</p>
+<ol>
+<li><strong>Talker:</strong> Предвижда първия токен за всеки аудио кадър.</li>
+<li><strong>Code Predictor:</strong> Генерира останалите 15 токена за кодбука.</li>
+<li><strong>Codec (Кодек):</strong> Преобразува токените във вълнови форми (waveform samples).</li>
+</ol>
+<p>Вместо да оптимизира всеки модул поотделно, Nari Labs променя фундаментално начина на тяхното координиране.</p>
+<h3>1. Премахване на водещата тишина (Leading Silence Trimming)</h3>
+<p>Първоначално генерираният PCM поток често съдържа десетки милисекунди тишина преди същинската реч. Добавено е динамично изрязване, което анализира кратки RMS времеви прозорци за засичане на началото на речта. Тази стъпка сама по себе си подобрява TTFA с около 80 ms, макар да не ускорява самата инференция на модела [1].</p>
+<h3>2. Унифициран планировчик (Unified Scheduler)</h3>
+<p>Повечето съществуващи имплементации обединяват Talker и Code Predictor в една неделима задача, докато Кодекът се изпълнява отделно. Инженерите от Nari Labs разделят всички три модула в независими задачи и ги поставят под контрола на един унифициран планировчик (unified scheduler), концепция, вдъхновена от енджина M*. </p>
+<p>Тази декомпозиция позволява на планировчика гъвкаво да пренарежда задачите според тяхната спешност. Използва се приоритетна политика: заявките, които все още не са започнали възпроизвеждане на аудио, получават висок приоритет (за минимизиране на TTFA). Вече започналите потоци стават спешни само когато наближат крайния срок за възпроизвеждане на следващия фрагмент (deadline), предотвратявайки прекъсвания (underruns).</p>
+<h3>3. Предварително заделяне в CUDA Graph</h3>
+<p>Code Predictor-ът е авторегресивен трансформър, който изпълнява фиксиран брой стъпки (15) за всеки кадър. Тази регулярна структура е използвана за предварително заделяне на KV кеша и обхващане на целия цикъл на генериране като единен <a href="/pages/cuda.html">CUDA</a> Graph. В допълнение е имплементирано специализирано <a href="/pages/triton.html">Triton</a> ядро за внимание (attention kernel), оптимизирано за краткия, ограничен контекст на модула.</p>
+<h3>4. Инкрементално декодиране с кеширане на състоянието</h3>
+<p>Кодекът на Qwen3-TTS е базиран на Transformers и CNN (конволюционни невронни мрежи). Наивният подход изисква повторна обработка на цялата история на кадрите при всяко обновяване, което е неефективно. Nari Labs внедрява Кодек, базиран на кеш на състоянието. Всяка заявка запазва контекста на трансформъра и конволюционното състояние. Инкременталното декодиране използва повторно този кеш и обработва само новопристигналите кадри, избягвайки повторното възпроизвеждане на пълната история.</p>
+<p>За да се запази нисък първоначалният TTFA, първият аудио фрагмент се генерира чрез пълно декодиране, след което системата превключва към кеширано инкрементално декодиране. Размерът на фрагментите (chunk size) се увеличава динамично по време на сесията, за да се подобри ефикасността на групирането (batching) и натоварването на графичния процесор.</p>
+<h3>5. Избягване на CPU-GPU синхронизации</h3>
+<p>Управлението на партиди е допълнително оптимизирано чрез кеширани CUDA графики за предефинирани размери. Също така се избягва ненужната синхронизация между централния (CPU) и графичния (GPU) процесор. Например, проверката за край на генерацията (EOS token) се отлага до момента, в който модулът реално позволява приключване, освобождавайки CPU-то да подготвя следващи задачи без изчакване. Решението поддържа и поточен вход (input streaming) за по-ранно стартиране на синтеза.</p>
+<p>С тези промени, Nari Labs демонстрира значителен напредък в мащабирането и ефективността на TTS системите от следващо поколение.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/">Pushing the Speed-Cost Frontier for Qwen3-TTS - Nari Labs</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/voxserve.html">VoxServe</a><p>VoxServe е система за обслужване на модели за синтез на реч, която предлага възможности за стриминг в реално време.</p></li><li><a href="/pages/vllm.html">vLLM</a><p>vLLM е популярна библиотека с отворен код за високопроизводително и икономично обслужване (serving) на големи езикови модели (LLMs).</p></li><li><a href="/pages/triton.html">Triton Inference Server</a><p>Triton Inference Server (по-рано TensorRT Inference Server) е софтуер с отворен код от NVIDIA за оптимизиране и обслужване на модели за машинно обучен...</p></li><li><a href="/pages/sglang.html">SGLang</a><p>SGLang е изследователски фреймуърк и среда за изпълнение с отворен код за структурирано програмиране и високоскоростно обслужване на големи езикови мо...</p></li><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/qwen3-tts.html">Qwen3-TTS</a><p>Qwen3-TTS е усъвършенствана система за синтез на реч (TTS), базирана на архитектурата Qwen3.</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/nari-labs.html">Nari Labs</a><p>Nari Labs е стартъп компания, финансирана от Y Combinator, специализирана в мултимодални изследвания в сферата на изкуствения интелект и инфраструктур...</p></li><li><a href="/pages/mstar.html">M*</a><p>M* е енджин или архитектурна концепция за обслужване на генеративни модели, който вдъхновява подходи с унифицирани планировчици (unified schedulers) з...</p></li><li><a href="/pages/h100.html">Nvidia H100</a><p>Nvidia H100 (архитектура Hopper) е един от най-мощните и търсени графични процесори, проектиран специално за центрове за данни и мащабни ИИ изчисления...</p></li><li><a href="/pages/deepgram.html">Deepgram</a><p>Deepgram е специализирана платформа за разпознаване на реч (ASR), базирана на дълбоко обучение (Deep Learning).</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
