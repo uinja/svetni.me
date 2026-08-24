@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0b0f19" />
+  
+  <!-- Glowing background shapes / clusters -->
+  <circle cx="400" cy="250" r="180" fill="none" stroke="#1f6feb" stroke-width="1.5" stroke-dasharray="10 15" opacity="0.3" />
+  <circle cx="400" cy="250" r="280" fill="none" stroke="#58a6ff" stroke-width="1" stroke-dasharray="5 10" opacity="0.15" />
+  
+  <!-- Grid background -->
+  <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400 M 0,450 L 800,450" stroke="#161b22" stroke-width="1" />
+  <path d="M 100,0 L 100,500 M 200,0 L 200,500 M 300,0 L 300,500 M 400,0 L 400,500 M 500,0 L 500,500 M 600,0 L 600,500 M 700,0 L 700,500" stroke="#161b22" stroke-width="1" />
+
+  <!-- Connecting Nodes / Network Lines -->
+  <path d="M 180,180 L 400,250 M 620,180 L 400,250 M 180,320 L 400,250 M 620,320 L 400,250 M 400,100 L 400,250 M 400,400 L 400,250" stroke="#388bfd" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+
+  <!-- Node 1: Kubernetes Cluster (Top Left) -->
+  <rect x="120" y="130" width="120" height="80" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <rect x="130" y="145" width="40" height="8" rx="2" fill="#21262d" />
+  <rect x="130" y="160" width="60" height="8" rx="2" fill="#21262d" />
+  <circle cx="215" cy="155" r="5" fill="#2ea043" />
+  <circle cx="215" cy="175" r="5" fill="#2ea043" />
+  <rect x="130" y="185" width="80" height="15" rx="3" fill="#1f6feb" opacity="0.3" />
+
+  <!-- Node 2: Database / Cloud Region (Top Right) -->
+  <rect x="560" y="130" width="120" height="80" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <rect x="570" y="145" width="50" height="8" rx="2" fill="#21262d" />
+  <rect x="570" y="160" width="40" height="8" rx="2" fill="#21262d" />
+  <circle cx="655" cy="155" r="5" fill="#f85149" />
+  <path d="M 645,175 L 665,175" stroke="#f85149" stroke-width="2" stroke-linecap="round" />
+  <rect x="570" y="185" width="80" height="15" rx="3" fill="#f85149" opacity="0.2" />
+
+  <!-- Node 3: Microservice (Bottom Left) -->
+  <rect x="120" y="280" width="120" height="80" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <rect x="130" y="295" width="60" height="8" rx="2" fill="#21262d" />
+  <rect x="130" y="310" width="50" height="8" rx="2" fill="#21262d" />
+  <circle cx="215" cy="305" r="5" fill="#2ea043" />
+  <circle cx="215" cy="325" r="5" fill="#2ea043" />
+  <rect x="130" y="335" width="80" height="15" rx="3" fill="#1f6feb" opacity="0.3" />
+
+  <!-- Node 4: Microservice (Bottom Right) -->
+  <rect x="560" y="280" width="120" height="80" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <rect x="570" y="295" width="40" height="8" rx="2" fill="#21262d" />
+  <rect x="570" y="310" width="60" height="8" rx="2" fill="#21262d" />
+  <circle cx="655" cy="305" r="5" fill="#2ea043" />
+  <circle cx="655" cy="325" r="5" fill="#2ea043" />
+  <rect x="570" y="335" width="80" height="15" rx="3" fill="#1f6feb" opacity="0.3" />
+
+  <!-- Incident Signal / Alert Source (Top Middle - Root Cause) -->
+  <rect x="340" y="50" width="120" height="70" rx="6" fill="#161b22" stroke="#f85149" stroke-width="2" />
+  <path d="M 400,70 L 390,90 L 410,90 Z" fill="#f85149" />
+  <circle cx="400" cy="85" r="1.5" fill="#0b0f19" />
+  <line x1="400" y1="76" x2="400" y2="82" stroke="#0b0f19" stroke-width="2" stroke-linecap="round" />
+  <circle cx="360" cy="100" r="3" fill="#f85149" />
+  <circle cx="440" cy="100" r="3" fill="#f85149" />
+
+  <!-- AI SRE Core Agent (Center - Analysing and Shielding) -->
+  <circle cx="400" cy="250" r="60" fill="#0d1117" stroke="#58a6ff" stroke-width="3" />
+  <circle cx="400" cy="250" r="50" fill="none" stroke="#1f6feb" stroke-width="1.5" stroke-dasharray="6 4" />
+  
+  <!-- Stylized AI brain/core symbol in center -->
+  <path d="M 380,240 C 380,225 390,220 400,220 C 410,220 420,225 420,240 C 420,250 410,255 405,260 L 405,270 L 395,270 L 395,260 C 390,255 380,250 380,240 Z" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" />
+  <line x1="395" y1="275" x2="405" y2="275" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" />
+  <line x1="397" y1="280" x2="403" y2="280" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" />
+  <circle cx="400" cy="240" r="4" fill="#58a6ff" />
+  
+  <!-- Outer glowing rings/nodes connected to center AI -->
+  <circle cx="340" cy="250" r="5" fill="#58a6ff" />
+  <line x1="345" y1="250" x2="350" y2="250" stroke="#58a6ff" stroke-width="1.5" />
+  
+  <circle cx="460" cy="250" r="5" fill="#58a6ff" />
+  <line x1="450" y1="250" x2="455" y2="250" stroke="#58a6ff" stroke-width="1.5" />
+
+  <circle cx="400" cy="190" r="5" fill="#58a6ff" />
+  <line x1="400" y1="195" x2="400" y2="200" stroke="#58a6ff" stroke-width="1.5" />
+
+  <circle cx="400" cy="310" r="5" fill="#58a6ff" />
+  <line x1="400" y1="300" x2="400" y2="305" stroke="#58a6ff" stroke-width="1.5" />
+
+  <!-- Diagnostic Scan Line (Horizontal Sweeping Line) -->
+  <line x1="260" y1="250" x2="540" y2="250" stroke="#58a6ff" stroke-width="1" opacity="0.5" />
+  <path d="M 280,240 L 300,250 L 280,260" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 520,240 L 500,250 L 520,260" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Metric Graph / Analysis Details (Bottom Middle) -->
+  <rect x="330" y="380" width="140" height="70" rx="6" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <path d="M 345,430 L 365,420 L 385,425 L 405,400 L 425,430 L 445,410" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Spike marker -->
+  <circle cx="405" cy="400" r="3" fill="#f85149" />
+  <line x1="405" y1="400" x2="405" y2="435" stroke="#f85149" stroke-width="1" stroke-dasharray="2 2" />
+</svg>

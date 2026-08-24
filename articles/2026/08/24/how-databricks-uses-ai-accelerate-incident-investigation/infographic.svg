@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="800" height="500" rx="8" fill="#faf6ee" stroke="#e0dbc8" stroke-width="2" />
+
+  <!-- Title Section -->
+  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1a1a1a" text-anchor="middle">AI SRE: AUTOMATED TRIAGE WORKFLOW</text>
+  <text x="400" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="400" fill="#555555" text-anchor="middle">How the AI Debugging Agent Orchestrates Signal Correlation at 2 AM</text>
+
+  <!-- Track 1: Platform Health Checks -->
+  <rect x="35" y="110" width="220" height="240" rx="6" fill="#e6f0fa" stroke="#1f6feb" stroke-width="2" />
+  <text x="145" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" text-anchor="middle">Platform Health</text>
+  <line x1="55" y1="155" x2="235" y2="155" stroke="#1f6feb" stroke-width="1.5" />
+  
+  <!-- Bullets for Platform Health -->
+  <circle cx="55" cy="185" r="3" fill="#1f6feb" />
+  <text x="70" y="189" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Infrastructure Environment</text>
+  
+  <circle cx="55" cy="220" r="3" fill="#1f6feb" />
+  <text x="70" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">K8s Clusters &amp; Clouds</text>
+  
+  <circle cx="55" cy="255" r="3" fill="#1f6feb" />
+  <text x="70" y="259" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">70+ Regions Monitored</text>
+  
+  <circle cx="55" cy="290" r="3" fill="#1f6feb" />
+  <text x="70" y="294" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Filters out Red Herrings</text>
+
+  <!-- Track 2: Service-Level Analysis -->
+  <rect x="290" y="110" width="220" height="240" rx="6" fill="#e8f5e9" stroke="#2ea043" stroke-width="2" />
+  <text x="400" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" text-anchor="middle">Service-Level Analysis</text>
+  <line x1="310" y1="155" x2="490" y2="155" stroke="#2ea043" stroke-width="1.5" />
+  
+  <!-- Bullets for Service-Level Analysis -->
+  <circle cx="310" cy="185" r="3" fill="#2ea043" />
+  <text x="325" y="189" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Logs, Metrics &amp; Traces</text>
+  
+  <circle cx="310" cy="220" r="3" fill="#2ea043" />
+  <text x="325" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Deployment Diff Audits</text>
+  
+  <circle cx="310" cy="255" r="3" fill="#2ea043" />
+  <text x="325" y="259" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Baseline Anomaly Check</text>
+  
+  <circle cx="310" cy="290" r="3" fill="#2ea043" />
+  <text x="325" y="294" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Dependency Topology</text>
+
+  <!-- Track 3: Runbook Execution -->
+  <rect x="545" y="110" width="220" height="240" rx="6" fill="#fff3e0" stroke="#d29922" stroke-width="2" />
+  <text x="655" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" text-anchor="middle">Runbook Execution</text>
+  <line x1="565" y1="155" x2="745" y2="155" stroke="#d29922" stroke-width="1.5" />
+  
+  <!-- Bullets for Runbook Execution -->
+  <circle cx="565" cy="185" r="3" fill="#d29922" />
+  <text x="580" y="189" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Team-Specific Personas</text>
+  
+  <circle cx="565" cy="220" r="3" fill="#d29922" />
+  <text x="580" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Executable Agent Skills</text>
+  
+  <circle cx="565" cy="255" r="3" fill="#d29922" />
+  <text x="580" y="259" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Context-Aware Checks</text>
+  
+  <circle cx="565" cy="290" r="3" fill="#d29922" />
+  <text x="580" y="294" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1a1a1a">Automated Mitigation</text>
+
+  <!-- Flow Arrows using Path and Markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 7 5 L 0 8.5 z" fill="#333333" />
+    </marker>
+  </defs>
+
+  <line x1="145" y1="350" x2="145" y2="390" stroke="#333333" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="400" y1="350" x2="400" y2="390" stroke="#333333" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="655" y1="350" x2="655" y2="390" stroke="#333333" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Bottom Panel: Synthesized Audit Trail & SRE UI -->
+  <rect x="35" y="400" width="730" height="75" rx="6" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" />
+  <text x="400" y="428" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">SYNTHESIZED DIAGNOSTIC SUMMARY &amp; INTERACTIVE UI</text>
+  <text x="400" y="452" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#4a148c" text-anchor="middle">Deterministic Checks &amp; Traceable Evidence links to raw metrics/logs • Interactive natural language Q&amp;A</text>
+</svg>
