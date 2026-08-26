@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Въвеждането на инструменти с изкуствен интелект за подпомагане на разработката значително ускори процеса на създаване на потребителски интерфейси (UI). Разработчиците вече могат да получат работещ ..."><title>Дизайн системите като контролен панел за генерираните потребителски интерфейси - Светни.ме</title><meta property="og:title" content="Дизайн системите като контролен панел за генерираните потребителски интерфейси - Светни.ме"><meta property="og:description" content="Въвеждането на инструменти с изкуствен интелект за подпомагане на разработката значително ускори процеса на създаване на потребителски интерфейси (UI). Разработчиците вече могат да получат работещ ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/26/design-system-control-plane-ai-ui/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/26/design-system-control-plane-ai-ui/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Дизайн системите като контролен панел за генерираните потребителски интерфейси</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 август 2026 г.</p><div><p>Въвеждането на инструменти с изкуствен интелект за подпомагане на разработката значително ускори процеса на създаване на потребителски интерфейси (UI). Разработчиците вече могат да получат работещ първи вариант на сложна форма, интерактивно табло или навигация в рамките на няколко секунди [1]. Тази скорост обаче крие сериозен риск от бърза фрагментация и несъответствие в продуктите. Когато всеки генериран от машина модул въвежда свои собствени компоненти, стилове, интеракции и правила за достъпност, интерфейсът се разпада на десетки несъвместими вариации, които впоследствие стават изключително скъпи за поддръжка [1].</p>
+<p>В своя статия за технологичната платформа <a href="/pages/oreilly.html">O&#39;Reilly</a> експертът <a href="/pages/niharika-pujari.html">Нихарика Пуджари</a> предлага нова парадигма: <a href="/pages/design-system.html">дизайн системите</a> трябва да се превърнат в „контролен панел“ (control plane) за <a href="/pages/ai-agents.html">AI агентите</a> и инструментите за кодиране [1].</p>
+<p><img src="/articles/2026/08/26/design-system-control-plane-ai-ui/hero.png" alt="Дизайн системата като контролен панел за интерфейси, генерирани от ИИ"><br><small>Изображение: Svetni.me AI / Niharika Pujari</small></p>
+<p>Концепцията за контролен панел изисква дизайн системата да надхвърли ролята на обикновена библиотека от визуални компоненти. Тя трябва да кодира не просто цветове и разстояния, а реални поведения, състояния, правила за достъпност и семантични ограничения [1]. Без тази регулаторна рамка моделите разполагат с твърде голяма свобода и често измислят локални решения, които изглеждат визуално правилно, но нарушават общите продуктови стандарти за <a href="/pages/ux-design.html">UX дизайн</a> и интеракция [1].</p>
+<p><img src="/articles/2026/08/26/design-system-control-plane-ai-ui/infographic.png" alt="The 4 Functions of the Control Plane: Enforcement, Orchestration, Validation, Safe Defaults"><br><small>Изображение: Svetni.me / Функции на дизайн системата като контролен панел</small></p>
+<p>За да се избегне натоварването на всяка отделна текстова подкана (prompt) с повтарящи се правила, Пуджари препоръчва изискванията на дизайн системата да се заложат в перманентния контекст на проекта за агентите (например чрез файлове от типа <code>CLAUDE.md</code> или специфични конфигурационни файлове) [1]. Това дава на ИИ готови, безопасни по подразбиране шаблони (safe defaults), като намалява риска от допускане на грешки при управлението на фокуса при модални прозорци или свързването на етикети при форми [1].</p>
+<p>Тази промяна трансформира и процеса на преглед на кода (code review). Вместо разработчиците да проверяват дали изкуственият интелект е генерирал правилно базовото поведение на даден елемент от нулата, техният фокус се премества върху въпроса дали моделът е композирал правилните, вече съществуващи компоненти по правилния начин [1]. Опитните фронтенд инженери поемат ролята на архитекти, които не пишат всеки ред код ръчно, а проектират и поддържат контекстуалната среда, правилата за достъпност и компонентните API-та, за да осигурят качествена автоматизация [1].</p>
+<p><strong>Източник:</strong></p>
+<p>[1]: <a href="https://www.oreilly.com/radar/the-design-system-as-the-control-plane-for-ai-generated-ui/">The Design System as the Control Plane for AI-Generated UI - O&#39;Reilly Radar</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/ux-design.html">UX Дизайн (User Experience)</a><p>UX (User Experience) дизайнът е процесът на създаване на продукти, които осигуряват смислени и подходящи преживявания за потребителите.</p></li><li><a href="/pages/oreilly.html">O&#x27;Reilly Media</a><p>O&amp;#39;Reilly Media е американска компания за технологично обучение и издателска дейност, основана от Тим О&amp;#39;Райли.</p></li><li><a href="/pages/niharika-pujari.html">Нихарика Пуджари</a><p>Нихарика П.</p></li><li><a href="/pages/design-system.html">Дизайн системи</a><p>Дизайн системата е цялостна библиотека от споделени стандарти, компоненти, насоки за дизайн и кодови фрагменти, която гарантира визуална и функционалн...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
