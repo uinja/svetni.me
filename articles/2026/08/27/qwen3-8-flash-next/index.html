@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+На 26 август 2026 г. китайският технологичен гигант Alibaba представи Qwen3.8-Flash-Next – експериментален модел с отворени тегла (open-weight), к..."><title>Qwen3.8-Flash-Next: Преглед на архитектурата Qwen4 с фокус върху ценовата ефективност - Светни.ме</title><meta property="og:title" content="Qwen3.8-Flash-Next: Преглед на архитектурата Qwen4 с фокус върху ценовата ефективност - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+На 26 август 2026 г. китайският технологичен гигант Alibaba представи Qwen3.8-Flash-Next – експериментален модел с отворени тегла (open-weight), к..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/27/qwen3-8-flash-next/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/27/qwen3-8-flash-next/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Qwen3.8-Flash-Next: Преглед на архитектурата Qwen4 с фокус върху ценовата ефективност</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 август 2026 г.</p><div><p><img src="/articles/2026/08/27/qwen3-8-flash-next/hero.png" alt="Qwen3.8-Flash-Next Architecture"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>На 26 август 2026 г. китайският технологичен гигант <a href="/pages/alibaba.html">Alibaba</a> представи Qwen3.8-Flash-Next – експериментален модел с отворени тегла (open-weight), който демонстрира ключови иновации от следващото поколение архитектура <a href="/pages/qwen.html">Qwen</a>4. Този модел е създаден с цел постигане на максимална изчислителна и ценова ефективност, като същевременно се стреми да достигне или надмине производителността на значително по-големи и скъпи модели. В официалната публикация на разработчиците [1] и в придружаващия аналитичен доклад [2] се подчертава, че моделът променя правилата на играта по отношение на изчислителната икономия. [1], [2]</p>
+<h3>Архитектурна революция: Смес от експерти и иновативно управление на паметта</h3>
+<p>Qwen3.8-Flash-Next е базиран на архитектурата <a href="/pages/mixture-of-experts.html">смес от експерти (Mixture of Experts - MoE)</a>. Моделът разполага със 125 милиарда (125B) общи параметри (без да се включва слоят за N-gram влагане), но за обработката на всеки отделен токен се активират само 6 милиарда (6B) от тях. Този подход осигурява огромна производителност при изключително ниска консумация на изчислителни ресурси в сравнение с монолитните модели.</p>
+<p>Най-съществената технологична иновация в модела е неговият 51B N-gram Embedding слой. Този слой функционира като гигантска локална таблица за търсене (lookup table) или „речник на фрази“, който съхранява често срещани текстови групи и фрази. Вместо да се съхранява в скъпата и ограничена графична памет (GPU VRAM), този слой е оптимизиран да се зарежда и изпълнява директно от системната RAM или SSD дисковете на сървъра. Това разтоварване на GPU паметта драстично намалява изискванията към хардуера за поддръжка на модела, като спестява ценна памет без значително забавяне на изчислителния процес. [1]</p>
+<p><img src="/articles/2026/08/27/qwen3-8-flash-next/infographic.png" alt="Qwen3.8-Flash-Next Architecture Specifications"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>Хибридно внимание и безкраен контекст</h3>
+<p>Другата голяма новост в Qwen3.8-Flash-Next е неговият уникален хибриден механизъм за внимание (Hybrid Attention). Вместо да използва стандартния механизъм на внимание върху всички слоеве, моделът разпределя задачите по два начина:</p>
+<ol>
+<li><strong>Gated DeltaNet (GDN)</strong> върху 3/4 (75%) от слоевете. Тази технология компресира миналата история на разговора, което напълно елиминира растежа на т.нар. KV cache (Key-Value Cache) – един от най-големите проблеми при обработката на дълги текстове.</li>
+<li><strong>Qwen Sparse Attention (QSA)</strong> върху останалите 1/4 (25%) от слоевете. QSA работи на ниво микро-блокове, като оптимизира времето за обработка на заявки и намалява закъснението (latency) при работа с изключително дълги контексти.</li>
+</ol>
+<p>Благодарение на тази комбинация, моделът поддържа нативен контекстен прозорец от 262,144 токена, който лесно може да бъде разширен до 1,000,000 (1M) токена чрез алгоритъма YaRN. Това го прави идеален за анализ на цели книги, огромни бази от код или сложни технически документи. [1], [2]</p>
+<h3>Управление на потока и ефективност на обучението</h3>
+<p>За да се координира правилното протичане на информацията в разширените му слоеве, Qwen3.8-Flash-Next използва технологията Gated Residual (GR). Този метод за контрол и модулация управлява информационния поток през разширените резидуални потоци (residual streams), като по този начин балансира стабилността и качеството на обучението. </p>
+<p>Ефектът от всички тези иновации върху производствените разходи е поразителен. Обучението на Qwen3.8-Flash-Next струва едва 1/9 от цената на обучението за предходния модел Qwen3.7-Plus. За сравнение, Qwen3.7-Plus има 397 милиарда общи параметри и активира цели 17 милиарда параметри на токен – почти три пъти повече от активираните параметри на Flash-Next. Тази огромна разлика показва как оптимизирането на архитектурата може да генерира много по-голяма мощност с малка част от разходите. [1]</p>
+<h3>Превъзходство в бенчмарковете срещу водещите западни модели</h3>
+<p>Въпреки експерименталния си характер и фокуса си върху ниската цена, Qwen3.8-Flash-Next показва изключително добри резултати в сравнителните тестове. Alibaba публикува данни, които сравняват модела директно с Claude-4.6-Opus на Anthropic и <a href="/pages/deepseek.html">DeepSeek</a>-V4-Flash на конкурентната китайска фирма. </p>
+<p>Резултатите показват, че Qwen3.8-Flash-Next превъзхожда Claude-4.6-Opus в критични области:</p>
+<ul>
+<li><strong>SWE-bench Pro:</strong> +9.1 точки разлика в полза на Qwen3.8-Flash-Next (62.5 спрямо 53.4 точки). Този бенчмарк оценява способността на моделите автономно да откриват и поправят грешки в реални софтуерни проекти.</li>
+<li><strong>JobBench:</strong> +20 точки разлика спрямо Claude (55.7 спрямо 35.7 точки). Тестът измерва ефективността при изпълнение на задачи от професионални работни процеси.</li>
+<li><strong>AndroidWorld:</strong> +22.5 точки преднина за Qwen, което показва отлична способност за навигация и работа с операционни системи.</li>
+<li><strong>MathVision:</strong> +25.1 точки предимство, потвърждаващо високия му капацитет за визуално-математическо мислене.</li>
+</ul>
+<p>Моделът се представя изключително силно и в тестовете за програмиране като LiveCodeBench v6 (91.9 точки) и научно мислене като GPQA Diamond (91.7 точки), където се конкурира наравно или побеждава по-големи модели. Единствено при тестове, изискващи изключително сложни интердисциплинарни проблеми (като Humanity&#39;s Last Exam), по-старият, но мащабен модел Claude Opus 4.6 запазва леко превъзходство. Налице са също така версии с отворени тегла, достъпни в платформата на <a href="/pages/hugging-face.html">Hugging Face</a>, което позволява на изследователската общност да тества решенията му локално. [1], [2]</p>
+<h3>Облачно внедряване, ценообразуване и влияние върху пазара</h3>
+<p>Официалната производствена версия на модела вече е внедрена в Qwen Cloud под името Qwen3.8-Flash. Тя предлага поддръжка на 1M контекстен прозорец по подразбиране и разполага с вградени инструменти за търсене и разработка. </p>
+<p>Ценообразуването на този модел е изключително агресивно и оказва силен натиск върху водещите световни доставчици на ИИ услуги:</p>
+<ul>
+<li><strong>Входящи токени (Input):</strong> 0.16 USD за милион токена.</li>
+<li><strong>Изходящи токени (Output):</strong> 0.47 USD за милион токена.</li>
+</ul>
+<p>За сравнение, тази цена е приблизително 12 пъти по-ниска от цената за ползване на водещия модел от същата фамилия – <a href="/pages/qwen3.html">Qwen3</a>.8-Max (който струва 2.00 USD за вход и 6.00 USD за изход на милион токена). Тази разлика прави модела на Alibaba един от най-достъпните в своя клас, поставяйки в изключително трудна позиция западни компании като OpenAI и Anthropic. Конкуренцията в областта на &quot;токен икономиката&quot; принуждава компаниите непрекъснато да намаляват цените на своите модели (както се вижда от последните отстъпки на OpenAI за гамата GPT-5.6), което е от полза за крайните разработчици, но наманява маржовете на печалба за ИИ лабораториите. [2]</p>
+<h3>Бъдещето на изчислителната ефективност</h3>
+<p>Qwen3.8-Flash-Next доказва, че бъдещето на изкуствения интелект не се състои просто в безкрайното увеличаване на размера на моделите. Чрез иновативни архитектурни решения, като разтоварване на тежките параметри в системната памет и комбинация от различни видове внимание (GDN и QSA), Alibaba демонстрира, че е възможно да се създадат модели, които са едновременно мощни и икономически изгодни за поддръжка. Спецификациите, представени в този преглед на Qwen4, вероятно ще очертаят посоката за развитие на цялата индустрия през следващите години. [1]</p>
+<h3>Източници</h3>
+<ol>
+<li><a href="https://qwen.ai/blog?id=qwen3.8-flash-next">Qwen Blog: Qwen3.8-Flash-Next Architecture Preview</a></li>
+<li><a href="https://the-decoder.com/alibaba-releases-qwen3-8-flash-next-targeting-ultimate-cost-efficiency/">The Decoder: Alibaba releases Qwen3.8-Flash-Next, targeting &quot;ultimate cost efficiency&quot;</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
