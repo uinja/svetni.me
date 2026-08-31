@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Изследване на двама независими изследователи в областта на изкуствения интелект разкрива, че съвременните AI асистенти за програмиране нямат реалн..."><title>AI агентите нямат представа за времето и не го осъзнават - Светни.ме</title><meta property="og:title" content="AI агентите нямат представа за времето и не го осъзнават - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Изследване на двама независими изследователи в областта на изкуствения интелект разкрива, че съвременните AI асистенти за програмиране нямат реалн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/08/30/ai-agents-no-sense-of-time/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/08/30/ai-agents-no-sense-of-time/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>AI агентите нямат представа за времето и не го осъзнават</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 август 2026 г.</p><div><p><img src="/articles/2026/08/30/ai-agents-no-sense-of-time/hero.png" alt="AI агентите нямат усещане за време"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>Изследване на двама независими изследователи в областта на изкуствения интелект разкрива, че съвременните AI асистенти за програмиране нямат реална представа за времето и не могат надеждно да проследят изминалото време [1]. Проучването, проведено като част от изследователската програма <a href="/pages/mats-program.html">MATS program</a> от авторите Михаил Офенгенден (Michael Ofengenden) и Максим Андрюшченко (Maksym Andriushchenko), тества времевите способности на два от най-използваните инструмента за кодиране — <a href="/pages/claude-code.html">Claude Code</a> на <a href="/pages/anthropic.html">Anthropic</a> и <a href="/pages/codex.html">Codex</a> на <a href="/pages/openai.html">OpenAI</a> [2]. Тези открития подчертават сериозен проблем при управлението и надзора на автономни AI агенти, изпълняващи дългосрочни задачи.</p>
+<h3>Проблемът с времевите прогнози</h3>
+<p>По време на експериментите изследователите поставят пред AI агентите общо 200 задачи от тестовия пакет ProgramBench, допълнени от 18 собствени бенчмарка [2]. Преди започване на работа всеки модел трябва да направи оценка за необходимото време, а след приключване — да докладва колко време е изминало [2]. Резултатите показват систематично надценяване на времетраенето, особено при кратки задачи [2]. На тестовете с ProgramBench и двата модела прогнозират около 90 минути за почти всяка задача, независимо от реалната й трудност, като при по-детайлните тестове Claude греши средно три пъти, а Codex — между 6 и 10 пъти [2].</p>
+<p><img src="/articles/2026/08/30/ai-agents-no-sense-of-time/infographic.png" alt="Инфографика на изследването за липсата на усещане за време при AI агентите"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>Влиянието на софтуерната рамка</h3>
+<p>Разликите в софтуерната архитектура (т.нар. harness), в която работят моделите, оказват силно влияние върху тяхното поведение при изпълнение [2]. Анализът показва, че Claude Code продължава работата си, докато сам не реши, че задачата е завършена, което отнема средно около 90 минути [2]. За разлика от него, Codex прекратява изпълнението след около половин час, независимо от спецификата на поставената цел [2]. В резултат на това един и същ езиков модел извършва средно 2,5 пъти повече стъпки под управлението на Claude Code в сравнение с Codex [2]. Това доказва, че общото време за работа зависи не толкова от самия модел, колкото от софтуерната рамка около него.</p>
+<h3>Неточна самооценка и контрол</h3>
+<p>AI агентите демонстрират сходна неточност и при оценката на качеството на собствената си работа [2]. По-старите модели като Opus 4.8 и GPT-5.5 надценяват успеваемостта си средно с 20 процентни пункта, като си дават високи оценки дори за напълно провалени задачи [2]. В един от случаите и двата модела определят успеха си на около 70 процента, докато реалните резултати възлизат на едва 7 процента за единия и 14,5 процента за другия [2].</p>
+<p>За да могат автономните агенти да работят надеждно с времеви бюджети и крайни срокове, те се нуждаят от по-добро ориентиране във времето [2]. Когато изследователите осигуряват на агентите достъп до специализиран инструмент, показващ изминалото реално време, моделите успяват да направят точни прогнози в почти всеки опит [2].</p>
+<p><strong>Източници:</strong><br>[1]: <a href="https://the-decoder.com/ai-agents-have-no-sense-of-time-and-are-not-aware-of-it/">AI agents have no sense of time and are not aware of it - The Decoder</a><br>[2]: <a href="https://www.lesswrong.com/posts/eAbuPXbjakop5rSJx/your-agents-are-not-time-aware">Your Agents Are Not Time-Aware - LessWrong</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/mats-program.html">MATS program</a><p>MATS (Machine Alignment Theory Scholars) е изследователска програма в областта на безопасността и съгласуването на изкуствения интелект (AI alignment)...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/codex.html">Codex</a><p>Codex е модел на изкуствен интелект, разработен от OpenAI, специализиран в генерирането и анализа на програмен код.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
