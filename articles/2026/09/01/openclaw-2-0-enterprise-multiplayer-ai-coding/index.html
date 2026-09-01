@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Фондацията OpenClaw Foundation официално обяви пускането на OpenClaw 2.0 (носещ системното означение v2026.8.1) – най-мащабното технологично обнов..."><title>OpenClaw 2.0 въвежда ерата на съвместното програмиране с автономни ИИ агенти - Светни.ме</title><meta property="og:title" content="OpenClaw 2.0 въвежда ерата на съвместното програмиране с автономни ИИ агенти - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Фондацията OpenClaw Foundation официално обяви пускането на OpenClaw 2.0 (носещ системното означение v2026.8.1) – най-мащабното технологично обнов..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/01/openclaw-2-0-enterprise-multiplayer-ai-coding/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/01/openclaw-2-0-enterprise-multiplayer-ai-coding/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenClaw 2.0 въвежда ерата на съвместното програмиране с автономни ИИ агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 септември 2026 г.</p><div><p><img src="/articles/2026/09/01/openclaw-2-0-enterprise-multiplayer-ai-coding/hero.png" alt="Архитектура на OpenClaw 2.0 за съвместна екипна работа с автономни ИИ агенти"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>Фондацията <a href="/pages/openclaw-foundation.html">OpenClaw Foundation</a> официално обяви пускането на <a href="/pages/openclaw.html">OpenClaw</a> 2.0 (носещ системното означение v2026.8.1) – най-мащабното технологично обновление в историята на софтуерната рамка с отворен код [1]. След период от 106 последователни издания в рамките на 230 дни, екипът премина през седемседмичен цикъл на цялостно пренаписване на архитектурата. Финалната версия обединява над 16 000 приети заявки за сливане (pull requests), създадени с участието на 933 разработчици от цял свят [1].</p>
+<p>Основният фокус на новата версия е фундаменталната трансформация на OpenClaw от индивидуален локален инструмент за автоматизация в споделена облачна работна среда за инженерни екипи [1, 3]. Чрез преработен браузърен интерфейс, съвместни облачни сесии, разширена контейнерна изолация и ново ядро за съхранение, платформата поставя основите на т.нар. „мултиплейър“ разработка с автономни модели [1, 2].</p>
+<p><img src="/articles/2026/09/01/openclaw-2-0-enterprise-multiplayer-ai-coding/infographic.png" alt="Инфографика за архитектурата и корпоративните възможности на OpenClaw 2.0"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>От личен инструмент към споделена „мултиплейър“ среда</h3>
+<p>Досегашният доминиращ модел при асистентите за програмиране с изкуствен интелект беше изолиран и ориентиран към единичния потребител: разработчикът стартираше локален процес в терминал или IDE, предоставяше достъп до локално хранилище и наблюдаваше изпълнението самостоятелно [3]. С OpenClaw 2.0 работните сесии се превръщат в персистентни работни пространства, които съществуват независимо от конкретния терминал или компютър [1, 3].</p>
+<p>Създателят на проекта <a href="/pages/peter-steinberger.html">Петер Щайнбергер</a> сподели, че преходът е реализиран чрез вътрешната инициатива за „изграждане на OpenClaw чрез самия OpenClaw“ [3]. В продължение на два месеца екипът на проекта е мигрирал работните си процеси към облачната платформа team.openclaw.ai, където агентите поддържат постоянен контекст за текущите задачи на различните членове на екипа [3].</p>
+<p>Чрез споделените облачни сесии (Shared Cloud Sessions) инженерите могат да се присъединяват към активна сесия на агент, без да се губи натрупаният контекст от предишни итерации [1, 3]. Вграденият шлюз (Multi-user Gateway) проследява създателя на разговора, разпределя правата за четене, редакция и чернови, и визуализира индикатори за присъствие и въвеждане в реално време. Практическият ефект от това е демонстриран от технологични компании като Solvely, където самата работна сесия на агента заменя традиционните документи за прехвърляне на задачи между програмисти [3].</p>
+<h3>Преработен браузърен контролен интерфейс (Control UI)</h3>
+<p>Централен компонент в новата версия е цялостно преработеният браузърен потребителски панел Control UI, който поставя разговорите в центъра на потребителското изживяване [1, 2]. Интерфейсът заимства познатите ергономични принципи на популярни чат системи като ChatGPT и Claude, като организира нишките в странична лента, а активното работно пространство показва контекста на текущата задача [2, 3].</p>
+<p>За разлика от стандартните чат приложения обаче, OpenClaw запазва пълна техническа прозрачност върху изпълнението на ниско ниво [3]:</p>
+<ul>
+<li><p>Вграденият редактор позволява директен преглед и редакция на файлове, като спира изпълнението при възникване на конфликти при едновременна промяна от агента [2].</p>
+</li>
+<li><p>Панелът за промени визуализира комити, разлики в кода (diffs) и състоянието на заявките за сливане в GitHub [2].</p>
+</li>
+<li><p>Механизмът за одобрение (Approval Queue) интегрира интерактивни заявки за критични операции директно в нишката и поддържа 30-дневен хронологичен одит [2, 3].</p>
+</li>
+<li><p>Командата /btw позволява стартиране на паралелен диалог за странични въпроси, без да се замърсява основният контекст на дългосрочната задача [2].</p>
+</li>
+</ul>
+<p>Оптимизациите в зареждането са намалили броя на първоначалните JavaScript заявки от 140 на 45, а времето за стартиране е съкратено от 1,6 секунди на 575 милисекунди [2].</p>
+<h3>Контейнерна изолация и модел за корпоративна сигурност</h3>
+<p>С превръщането на агентите в споделена инфраструктура въпросът за сигурността и контрола на достъпа придобива критично значение [3]. OpenClaw 2.0 въвежда разширен модел за изолация, който отговаря на архитектурните предизвикателства, поставени от специализирани системи като <a href="/pages/nanoclaw.html">NanoClaw</a> [3].</p>
+<p>Платформата вече поддържа автоматично изолиране на сесии и агенти чрез контейнери в <a href="/pages/docker.html">Docker</a> и <a href="/pages/podman.html">Podman</a>, както и делегиране на задачи към изолирани облачни изпълнители (cloud workers) [2, 3]. Администраторите могат да дефинират роли на оператори със задължително изолирано изпълнение, които не могат да бъдат заобикаляни чрез локални системни привилегии [2, 3].</p>
+<p>За управление на чувствителни данни е разработен модулът Secret Store, който отделя защитените удостоверения от стандартните променливи на средата [3]. При изпращане на мрежови заявки шлюзът замества тайните ключове на ниво HTTPS транспорт, без да разкрива суровите стойности пред езиковия модел [3].</p>
+<p>Въпреки тези подобрения, създателите на проекта подчертават важна архитектурна особеност: за разлика от NanoClaw, където изолацията е строго заложена по подразбиране, в OpenClaw базовите настройки предполагат доверен оператор, а контейнерните пясъчници трябва да бъдат конфигурирани изрично от администраторите [3]. Освен това един инстанс на Gateway представлява единна зона на доверие (single trust domain), поради което пълна изолация между взаимно недоверени отдели изисква отделни инстанси [3].</p>
+<h3>Инфраструктурна архитектура и трансформация на съхранението</h3>
+<p>На системно ниво версия 2026.8.1 въвежда фундаментална промяна в начина, по който OpenClaw управлява състоянието и историята на разговорите, преминавайки от файлово базирано съхранение към релационната база данни <a href="/pages/sqlite.html">SQLite</a> [2]. Тази миграция осигурява трансакционна надеждност, позволява бързо търсене в транскриптите и поддържа разклоняване (forking) и връщане назад в хронологията на диалозите [2].</p>
+<p>Значително разширение получава и омниканалната свързаност на платформата. OpenClaw 2.0 добавя поддръжка за интерактивни карти и нативни контроли за одобрение в приложения като <a href="/pages/slack.html">Slack</a>, Telegram, Discord Activities и Microsoft Teams [2]. Това позволява на инженерните мениджъри и водещите разработчици да одобряват изпълнението на скриптове или инсталирането на добавки директно от мобилните си устройства [2, 3].</p>
+<p>В допълнение, платформата реализира поддръжка за протокола за комуникация между агенти A2A v1.0 и разширява интеграцията с външни сървъри чрез <a href="/pages/mcp.html">Model Context Protocol (MCP)</a>, което позволява стандартизирано споделяне на инструменти и ресурси между независими агентни мрежи [2].</p>
+<h3>Независимо управление под шапката на OpenClaw Foundation</h3>
+<p>Издаването на версия 2.0 маркира и важен етап в институционалното развитие на проекта. Въпреки че основателят Петер Щайнбергер се присъедини към екипа на <a href="/pages/openai.html">OpenAI</a> в началото на 2026 г., OpenClaw продължава своето съществуване като напълно независим проект с отворен код [3].</p>
+<p>Управлението на платформата е поверено на независимата организация с нестопанска цел OpenClaw Foundation (501(c)(3)) [3]. OpenAI фигурира сред основните партньори и поддръжници на фондацията, редом с компании като Microsoft, GitHub, NVIDIA, Atlassian и Tencent [3]. Това гарантира, че платформата ще запази своята отворена съвместимост с различни доставчици на модели и инфраструктура, предоставяйки на бизнеса прозрачна и разширяема основа за автономна софтуерна разработка [1, 3].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://openclaw.ai/blog/openclaw-2-accidentally">OpenClaw 2.0, Accidentally - OpenClaw Blog</a></p>
+<p>[2]: <a href="https://docs.openclaw.ai/releases/2026.8.1">Release Notes v2026.8.1 (AKA OpenClaw 2.0) - OpenClaw Documentation</a></p>
+<p>[3]: <a href="https://venturebeat.com/technology/openclaw-2-0-is-here-what-it-means-for-enterprises">OpenClaw 2.0 is here, ushering in the era of &#39;multiplayer&#39; AI coding: What it means for enterprises - VentureBeat</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sqlite.html">SQLite</a><p>SQLite е популярна, лека релационна система за управление на бази данни (СУБД) с отворен код.</p></li><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/podman.html">Podman</a><p>Podman (Pod Manager) е инструмент и среда с отворен код за управление и изпълнение на OCI контейнери и контейнерни групи в Linux и Unix операционни си...</p></li><li><a href="/pages/peter-steinberger.html">Peter Steinberger</a><p>Петер Щайнбергер (Peter Steinberger) е софтуерен инженер и предприемач, известен като основател на PSPDFKit и създател на проекта OpenClaw.</p></li><li><a href="/pages/openclaw.html">Openclaw</a><p>Openclaw е усъвършенстван агентен асистент с изкуствен интелект (agentic AI assistant), който придоби популярност в началото на 2026 г.</p></li><li><a href="/pages/openclaw-foundation.html">OpenClaw Foundation</a><p>OpenClaw Foundation е организация с нестопанска цел, създадена да ръководи развитието и управлението на проекта OpenClaw.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/nanoclaw.html">NanoClaw</a><p>NanoClaw е софтуерна рамка (framework) с отворен код, създадена от компанията NanoCo, която предоставя инфраструктурен слой за сигурност и „контролира...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li><li><a href="/pages/docker.html">Docker</a><p>Docker е водеща платформа за контейнеризация с отворен код, която позволява на разработчиците да пакетират, доставят и стартират приложения в изолиран...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
