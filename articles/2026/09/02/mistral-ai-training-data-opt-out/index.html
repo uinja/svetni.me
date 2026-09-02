@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В официално ръководство в помощния си център френският пионер в сферата на изкуствения интелект Mistral AI публикува подробни инструкции и условия..."><title>Mistral AI изясни правилата за обучение с потребителски данни: Как да се откажете във Vibe и API - Светни.ме</title><meta property="og:title" content="Mistral AI изясни правилата за обучение с потребителски данни: Как да се откажете във Vibe и API - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В официално ръководство в помощния си център френският пионер в сферата на изкуствения интелект Mistral AI публикува подробни инструкции и условия..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/02/mistral-ai-training-data-opt-out/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/02/mistral-ai-training-data-opt-out/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Mistral AI изясни правилата за обучение с потребителски данни: Как да се откажете във Vibe и API</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 септември 2026 г.</p><div><p><img src="/articles/2026/09/02/mistral-ai-training-data-opt-out/hero.png" alt="Стилизирана илюстрация на цифров щит за защита на личните данни и невронни пътища на Mistral AI"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В официално ръководство в помощния си център френският пионер в сферата на изкуствения интелект <a href="/pages/mistral-ai.html">Mistral AI</a> публикува подробни инструкции и условия за обработка на потребителски <a href="/pages/training-data.html">данни за обучение</a> на своите бъдещи модели [1]. Документацията изяснява механизмите за отказ (opt-out), като очертава отчетливо разделение между потребителските профили в наскоро ребрандираната работна среда <a href="/pages/vibe.html">Vibe</a> (досега известна като Le Chat) и платените корпоративни абонаменти [1], [4].</p>
+<p>Според публикуваните правила, входните и изходните данни на стандартните потребители – включително текстови диалози, системни инструкции и прикачени документи – се използват по подразбиране за подобряване на алгоритмите, освен ако потребителят изрично не деактивира съответната настройка [1], [2]. Публикацията предоставя ключов поглед върху практиките на водещия европейски разработчик в момент, в който въпросът за корпоративния <a href="/pages/data-sovereignty.html">суверенитет на данните</a> заема централно място в технологичния сектор.</p>
+<p><img src="/articles/2026/09/02/mistral-ai-training-data-opt-out/infographic.png" alt="Инфографика за управлението на данните за обучение в Mistral AI"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>По подразбиране: Потребителският трафик като ресурс за моделите</h2>
+<p>Основният извод от документацията на Mistral AI е асиметрията в базовите настройки за поверителност при различните категории клиенти [1]. При стандартната версия на Vibe потребителите не са изключени от програмите за обучение по подразбиране. Всеки въведен промпт, получен отговор и анализиран контекст може да бъде насочен към вътрешните цикли за предварително обучение и финна настройка на следващото поколение модели [1], [2].</p>
+<p>В контраст с това, клиентите на корпоративния план Vibe Enterprise са защитени по подразбиране. При тях опцията за споделяне на взаимодействията е фабрично изключена, като евентуалното ѝ активиране изисква изрична намеса от страна на администратора на организацията [1]. Тази диференциация следва установения модел в индустрията, при който безплатните или потребителските планове служат за агрегиране на данни, докато защитата на интелектуалната собственост остава запазена за платените бизнес договори.</p>
+<h2>Прикачените файлове: Скритият периметър на входящите данни</h2>
+<p>Особено важно предупреждение в новата документация засяга обработката на външни файлове в работната среда на Vibe [1]. С трансформацията на Le Chat в мултифункционален агент с работни режими Vibe Work и Vibe Code, милиони потребители ежедневно качват корпоративни отчети, финансови таблици, договори и програмни хранилища за автоматизиран анализ [4].</p>
+<p>Mistral изрично подчертава, че всички прикачени или качени файлове във Vibe се третират стриктно като „входящи данни“ (input data) [1]. Това означава, че ако потребителят не е активирал процедурата по отказ, съдържанието на тези документи подлежи на индексиране и асимилиране в тренировъчните бази. За инженери и анализатори, работещи с поверителна информация, това създава директен риск от изтичане на вътрешнофирмено ноу-хау в случай на неинформирано използване на стандартни профили.</p>
+<h2>Процедури за отказ в уеб панела и мобилните приложения</h2>
+<p>Компанията описва точните оперативни стъпки за прекратяване на използването на данните в зависимост от използваната клиентска среда [1].</p>
+<p>В уеб базирания административен панел (Admin panel) процедурата изисква следното:</p>
+<ul>
+<li><p>Навигация до раздел Manage в лявото меню и избор на Vibe [1].</p>
+</li>
+<li><p>В подсекция Privacy деактивиране на превключвателя с надпис Allow your interactions to be used to train our models [1].</p>
+</li>
+</ul>
+<p>За потребителите на мобилните приложения под iOS и Android алгоритъмът преминава през профилните настройки:</p>
+<ul>
+<li><p>Отваряне на меню Settings на мобилния клиент [1].</p>
+</li>
+<li><p>Избор на категорията Data &amp; Account Controls в секция Account [1].</p>
+</li>
+<li><p>Премахване на отметката от полето Enable data sharing [1].</p>
+</li>
+</ul>
+<p>От компанията потвърждават, че веднага след като отказът бъде потвърден от системата, Mistral спира да използва новите входящи и изходящи взаимодействия за целите на моделното обучение [1].</p>
+<h2>Разделение на контролите: Защо Vibe и API изискват отделна настройка</h2>
+<p>Един от най-критичните технически детайли в документацията е пълната независимост между настройките за Vibe и конзолата за разработчици <a href="/pages/mistral-studio.html">Mistral Studio</a> [1]. Деактивирането на обучението в чат интерфейса не защитава автоматично заявките, изпращани през програмните интерфейси, и обратното [1].</p>
+<p>Разработчиците, използващи платформата за достъп до модели и API интеграции, трябва да конфигурират отделен превключвател:</p>
+<ul>
+<li><p>Вход в административния панел и отваряне на секция Privacy [1].</p>
+</li>
+<li><p>В подраздел Anonymous improvement data деактивиране на опцията за изпращане на анонимизирани данни за подобряване на услугите [1].</p>
+</li>
+</ul>
+<p>Това структурно разделение подчертава необходимостта техническите екипи да извършват одит на двете нива, особено когато комбинират клиентски Vibe профили с бекенд микроуслуги, консумиращи API на Mistral [1].</p>
+<h2>Изключението с обратната връзка: Кога отказът не действа</h2>
+<p>В правилата на Mistral AI е заложено важно изключение, което остава в сила независимо от тарифния план или активираните настройки за поверителност [2]. То засяга интерактивните бутони за обратна връзка (thumbs up и thumbs down), разположени до всеки генериран отговор.</p>
+<p>Ако потребител оцени отговор и добави писмен коментар или корекция, системата автоматично третира това действие като изрично съгласие [2]. Според общите условия на платформата, подаването на обратна връзка упълномощава Mistral да използва дадената оценка, първоначалния въпрос и получения отговор за подобряване на поведението на моделите, независимо дали става дума за безплатен акаунт или за защитен Vibe Enterprise план [2]. За организации със строги вътрешни протоколи за сигурност единствената гаранция остава пълното въздържание от използване на тези бутони.</p>
+<h2>Zero Data Retention срещу отказ от обучение</h2>
+<p>Документацията поставя ясна граница между отказа от обучение (training opt-out) и концепцията за нулево задържане на данни (<a href="/pages/zero-data-retention.html">Zero Data Retention</a> / ZDR) [3]. Докато отказът от обучение единствено гарантира, че информацията няма да участва в бъдещи тегла, той не предотвратява временното съхранение на разговорите на сървърите на компанията за целите на мониторинга, историята на чатовете и законовото съответствие [3].</p>
+<p>Истинско нулево задържане се предлага единствено като специализирана функционалност с индивидуално одобрение:</p>
+<ul>
+<li><p>Режимът ZDR е достъпен единствено при платен абонамент с разплащане според потреблението (pay-as-you-go) за заявки без запазване на състоянието (stateless API), като чат комплишъни (/v1/chat/completions), ембединги (/v1/embeddings) и OCR [3].</p>
+</li>
+<li><p>Продуктите със запазване на състоянието (stateful) – включително разговорите във Vibe, библиотеките и файловото хранилище (/v1/files) – са фундаментално несъвместими със ZDR, тъй като тяхната архитектура изисква персистентен запис [3].</p>
+</li>
+<li><p>Задействането на ZDR налага подаване на официална обосновка пред екипа по поддръжка, който преценява легитимността на искането по свое усмотрение [3].</p>
+</li>
+</ul>
+<h2>Европейският баланс между регулации и конкуренция</h2>
+<p>Като флагман на европейската технологична сцена със седалище в Париж, Mistral AI балансира между спазването на <a href="/pages/gdpr.html">GDPR</a> и европейското законодателство за изкуствения интелект от една страна, и необходимостта от гигантски масиви за обучение от друга. Предоставянето на ясни механизми за отказ е задължителна стъпка за правна съвместимост на континента [1].</p>
+<p>В същото време прилагането на модел с автоматично съгласие по подразбиране (opt-in) при масовите потребители показва, че дори най-откритите европейски лаборатории са принудени да използват агресивни методи за събиране на висококачествени данни, за да поддържат темпото на американските лидери. За крайните потребители и бизнесите остава отговорността да познават архитектурата на своите инструменти и своевременно да управляват нивата си на експозиция.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training">Can I opt out of my input or output data being used for training? - Mistral Help Center</a></p>
+<p>[2]: <a href="https://help.mistral.ai/en/articles/347617-do-you-use-my-user-data-to-train-your-artificial-intelligence-models">Do you use my user data to train your Artificial Intelligence models? - Mistral Help Center</a></p>
+<p>[3]: <a href="https://help.mistral.ai/en/articles/347612-can-i-activate-zero-data-retention-zdr">Can I activate Zero Data Retention (ZDR)? - Mistral Help Center</a></p>
+<p>[4]: <a href="https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe">Le Chat is now Vibe - Mistral Help Center</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-data-retention.html">Zero Data Retention (ZDR)</a><p>Zero Data Retention (ZDR) е строга политика за поверителност и сигурност при облачните API услуги, при която входните потребителски данни (промптове) ...</p></li><li><a href="/pages/vibe.html">Vibe (Mistral AI)</a><p>Vibe (познат в миналото като Le Chat) е чат асистент и цялостна платформа за автономни ИИ агенти, разработена от френския ИИ пионер Mistral AI.</p></li><li><a href="/pages/training-data.html">Данни за обучение</a><p>Данните за обучение (Training data) са масиви от информация, използвани за „научаване“ на модели с изкуствен интелект и машинно обучение да разпознава...</p></li><li><a href="/pages/mistral-studio.html">Mistral Studio</a><p>Mistral Studio е официалната конзола за разработчици и облачна платформа на Mistral AI, предоставяща достъп до семейството модели на компанията чрез п...</p></li><li><a href="/pages/mistral-ai.html">Mistral AI</a><p>Mistral AI е френска компания за изкуствен интелект, основана през 2023 г.</p></li><li><a href="/pages/gdpr.html">GDPR (Общ регламент относно защитата на данните)</a><p>GDPR (General Data Protection Regulation) или Общият регламент относно защитата на данните (Регламент (ЕС) 2016/679) е водещата правна рамка на Европе...</p></li><li><a href="/pages/data-sovereignty.html">Суверенитет на данните</a><p>Суверенитетът на данните (Data Sovereignty) е концепцията, че дигиталните данни са предмет на законите и регулациите на държавата или организацията, в...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

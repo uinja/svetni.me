@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В изследователски доклад, публикуван в архива за научни препринти arXiv [1], екип от Google Research и Virginia Tech представи WikiSkill – нова ар..."><title>Google Research представи WikiSkill: Постоянна база от знания за еволюция на уменията при ИИ агенти - Светни.ме</title><meta property="og:title" content="Google Research представи WikiSkill: Постоянна база от знания за еволюция на уменията при ИИ агенти - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В изследователски доклад, публикуван в архива за научни препринти arXiv [1], екип от Google Research и Virginia Tech представи WikiSkill – нова ар..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/02/google-wikiskill-agent-memory/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/02/google-wikiskill-agent-memory/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google Research представи WikiSkill: Постоянна база от знания за еволюция на уменията при ИИ агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 септември 2026 г.</p><div><p><img src="/articles/2026/09/02/google-wikiskill-agent-memory/hero.png" alt="Стилизирана 2D векторна илюстрация на устойчива памет и модулни агентни умения в системата WikiSkill"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В изследователски доклад, публикуван в архива за научни препринти arXiv [1], екип от <a href="/pages/google-research.html">Google Research</a> и Virginia Tech представи <a href="/pages/wikiskill.html">WikiSkill</a> – нова архитектурна рамка за автоматично самоусъвършенстване на автономни софтуерни системи. Разработката адресира един от най-упоритите фундаментални проблеми при съвременните автономни агенти: фактът, че след всяко изпълнение на поставена задача натрупаният оперативен опит се губи, а системата започва следващата мисия без памет за допуснатите грешки или откритите успешни стратегии [1], [2].</p>
+<p>Вместо да разчита на непрекъснато дообучаване на невронните тегла, WikiSkill заимства идеи от концепцията на <a href="/pages/andrej-karpathy.html">Андрей Карпати</a> за „LLM Wiki“ [3], пренасяйки я към модулните <a href="/pages/agent-skills.html">агентни умения</a>. Системата компилира натрупаните следи от изпълнение в персистентна база от знания от уики тип, от която синтезира конкретни процедурни инструкции във файловата система. По този начин автономните системи усъвършенстват своето поведение и надграждат оперативната си <a href="/pages/agentic-memory.html">агентна памет</a> през отделните итерации без деградация на основните моделни параметри [1].</p>
+<p><img src="/articles/2026/09/02/google-wikiskill-agent-memory/infographic.png" alt="Инфографика на работния цикъл на WikiSkill за еволюция на агентни умения"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Трислойна архитектура: Разделение между опит, знание и изпълнение</h2>
+<p>В основата на WikiSkill стои строго структурирана трислойна организация на работното пространство, която изолира суровите данни от действащите процедури [1]:</p>
+<ul>
+<li><p><strong>Суров слой (Raw Layer):</strong> Директория <code>raw/</code>, която функционира като неизменим (immutable) регистър. В нея се съхраняват пълните траектории от всяко изпълнение – включително последователността от генерирани разсъждения, системни повиквания на инструменти, конзолни резултати и възникнали грешки от средата [1].</p>
+</li>
+<li><p><strong>Уики слой (Wiki Layer):</strong> Персистентно хранилище <code>wiki/</code>, в което суровите данни се дестилират в структурирани концепции. Този слой категоризира повтарящите се модели на провал, специфични за домейните капани и надеждни алгоритмични последователности. За разлика от останалите елементи, уики слоят никога не се рестартира и нараства монотонно [1].</p>
+</li>
+<li><p><strong>Слой с умения (Skills Layer):</strong> Каталог <code>skills/</code>, съдържащ активните изпълними модули под формата на файлове <code>SKILL.md</code>. Тези файлове описват конкретни процедурни стъпки и условия за задействане на съответния инструмент. Ако нова версия на дадено умение доведе до спад в точността, тя може да бъде върната към предходно състояние, докато натрупаният запис в уикито остава запазен [1].</p>
+</li>
+</ul>
+<p>Това структурно разделение позволява на еволюционния процес да се поучи от провалите, без отхвърлените опити да замърсяват преките работни инструкции на модела [1].</p>
+<h2>Четиристепенният цикъл на еволюция</h2>
+<p>Процесът на развитие в рамките на WikiSkill протича през затворен автономен контур, разпределен между четири специализирани компонента [1]:</p>
+<ol>
+<li><p><strong>Агент за инференция (Inference Agent):</strong> Изпълнява текущите тестови задачи, ръководейки се единствено от активните умения в каталога, и генерира нови подробни траектории в <code>raw/</code> [1].</p>
+</li>
+<li><p><strong>Поддръжник на уикито (Wiki Maintainer):</strong> Анализира новите следи от изпълнението, изолира повтарящите се грешки и успешните ходове и ги консолидира в съответните тематични страници на базата от знания [1].</p>
+</li>
+<li><p><strong>Предложител на умения (Skill Proposer):</strong> Преглежда обогатената уики документация и предлага целеви редакции или нови файлове в каталога с умения, формулирайки конкретни евристики за избягване на вече идентифицираните слабости [1].</p>
+</li>
+<li><p><strong>Механизъм за валидация и откат (Gating and Rollback):</strong> Тества предложените модификации върху независима контролна извадка. Ако новата инструкция повишава общата точност, тя се запазва в базата с умения; ако обаче причини регресия или нови грешки, промяната се отменя мигновено. Опитът от неуспешния опит въпреки това остава записан в уикито [1].</p>
+</li>
+</ol>
+<p>Благодарение на тази конфигурация всяка неуспешна хипотеза на инженера-агент служи като директна база за следващите предложения, предотвратявайки циклични грешки [1], [2].</p>
+<h2>Резултати от тестовете: Скокове в точността при комплексни задачи</h2>
+<p>Ефективността на WikiSkill е оценена в детайли върху пет различни бенчмарка: решаване на състезателна математика (LiveMathematicanBench), уеб търсене и синтез (SealQA), таблични манипулации (SpreadSheetBench), въпроси върху дълги корпоративни документи (OfficeQA) и интерактивно планиране във виртуална среда (ALFWorld) [1].</p>
+<p>Тестовете обхващат водещи съвременни модели от семействата <a href="/pages/qwen.html">Qwen</a> (с размери 4B, 9B и 27B), <a href="/pages/gemma-4.html">Gemma 4</a> (31B) и <a href="/pages/gemini-3-5-flash.html">Gemini 3.5 Flash</a>. Във всички категории WikiSkill постига категорично превъзходство както над базовата конфигурация без умения, така и над досегашните методи за синтез като EvoSkill, SkillOpt и Trace2Skill [1].</p>
+<p>При Gemini 3.5 Flash средната точност по всички бенчмаркове скача от 49.5% на 68.1% [1]. При отделните специализирани задачи подобренията са още по-изразени:</p>
+<ul>
+<li><p>В математическия бенчмарк LiveMath резултатът на Gemini 3.5 Flash се удвоява – от 33.0% до 72.6% [1].</p>
+</li>
+<li><p>При SpreadSheetBench моделът повишава успеваемостта си от 50.5% до 76.6% [1].</p>
+</li>
+<li><p>В състезанието при отворените модели Qwen-3.6-27B регистрира общ напредък от 39.4% до 63.3%, като в табличния анализ достига внушителните 81.7% [1].</p>
+</li>
+</ul>
+<p>Най-умерени са подобренията при задачи, изискващи продължително търсене в обемисти документи (OfficeQA). Авторите отбелязват, че при компактни модели като Qwen-3.5-4B изпълнението на многоетапни комплексни процедури върху дълъг контекст остава ограничено от изчислителния капацитет на архитектурата [1].</p>
+<h2>Синергия с мащаба и трансфер на умения</h2>
+<p>Едно от най-значимите теоретични открития в доклада е, че еволюцията на уменията допълва директно мащабирането на моделите (model scaling) [1].</p>
+<p>При фамилията Qwen ръстът на точността нараства правопропорционално с обема на параметрите: моделът с 4 милиарда параметри печели 12.3% средно подобрение, версията с 9 милиарда параметри добавя 17.5%, а вариантът с 27 милиарда параметри бележи скок от цели 23.9% [1]. По-големите модели разполагат с по-добра способност да интернализират абстрактните уики концепции и стриктно да изпълняват сложни процедурни стъпки [1].</p>
+<p>В същото време наличието на оптимизирани умения позволява на по-малките системи да компенсират изоставането си в хардуерните мащаби. Моделът Qwen-3.5-9B, оборудван с WikiSkill, достига обща точност от 47.4%, надминавайки базовия трикратно по-голям Qwen-3.6-27B без умения (39.4%) [1].</p>
+<p>Изследването разкрива и феномен на ефективен крос-моделен трансфер. Умения, еволюирали при по-способни модели, могат да се прехвърлят директно върху по-малки архитектури и често работят по-добре от инструкциите, които малкият модел би генерирал сам [1]. В симулатора ALFWorld моделът Qwen-3.5-9B постига 63.4% със свои собствени умения, но повишава успеваемостта си до 70.2%, когато му бъдат предоставени уменията, генерирани от Qwen-3.6-27B [1].</p>
+<h2>Защо прякото четене на уикито влошава резултатите</h2>
+<p>Изследователите провеждат серия от аблационни тестове (ablation studies), за да изолират ролята на отделните системни модули. Резултатите потвърждават, че премахването на персистентното уики води до бърз спад в ефективността на предложенията, тъй като моделът започва да повтаря отхвърлени вариации [1].</p>
+<p>Особено показателен е експериментът, при който на агента за инференция (Inference Agent) се дава директен достъп до пълното съдържание на уикито по време на решаване на задачата. Противно на интуитивните очаквания, това действие води до рязко влошаване на крайната успеваемост [1].</p>
+<p>Причината се крие в пренасищането на контекстния прозорец. Затрупването на модела със стотици редове обобщени исторически грешки, анализи и странични бележки създава информационен шум и разсейва механизма на внимание (attention), карайки агента да се отклонява от основната цел [1]. Това откритие категорично валидира архитектурния избор на WikiSkill: знанието трябва да се трупа централизирано и систематично в постоянна база, но към изпълнителя трябва да се подават единствено стегнати, модулни и директно приложими процедурни указания [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://arxiv.org/abs/2608.27454">WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution - arXiv</a></p>
+<p>[2]: <a href="https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes/">Google&#39;s WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance - The Decoder</a></p>
+<p>[3]: <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">LLM Wiki perspective - Andrej Karpathy (GitHub Gist)</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wikiskill.html">WikiSkill</a><p>WikiSkill е архитектурна рамка за непрекъснато самоусъвършенстване и еволюция на умения при автономни ИИ агенти, представена от Google Research през а...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/google-research.html">Google Research</a><p>Google Research е научноизследователското подразделение на Google, насочено към фундаментални и приложни иновации в областта на компютърните науки, из...</p></li><li><a href="/pages/gemma-4.html">Gemma 4</a><p>Gemma 4 е семейство от олекотени големи езикови модели с отворени тегла (open-weight models), разработени от Google DeepMind и представени през 2026 г...</p></li><li><a href="/pages/gemini-3-5-flash.html">Gemini 3.5 Flash</a><p>Gemini 3.</p></li><li><a href="/pages/andrej-karpathy.html">Andrej Karpathy</a><p>Андрей Карпати (Andrej Karpathy) е изтъкнат изследовател в областта на изкуствения интелект и компютърното зрение.</p></li><li><a href="/pages/agentic-memory.html">Агентна памет (Agentic Memory)</a><p>Агентната памет е концепция в изкуствения интелект, описваща външна, персистентна и управляема система за съхранение на информация, използвана от авто...</p></li><li><a href="/pages/agent-skills.html">Агентни умения (Agent Skills)</a><p>Агентните умения (Agent Skills) са отворен структурен формат и стандарт за капсулиране на специализирани знания, работни потоци, скриптове и контекстн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

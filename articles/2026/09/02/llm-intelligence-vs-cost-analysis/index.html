@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация в инженерния блог на компанията за технологии с отворен код OpenTeams щатният софтуерен инженер и ключов поддържащ разработката на Da..."><title>Интелигентност срещу цена при LLM: Анализ на границата на Парето и скритите разходи - Светни.ме</title><meta property="og:title" content="Интелигентност срещу цена при LLM: Анализ на границата на Парето и скритите разходи - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+В публикация в инженерния блог на компанията за технологии с отворен код OpenTeams щатният софтуерен инженер и ключов поддържащ разработката на Da..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/02/llm-intelligence-vs-cost-analysis/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/02/llm-intelligence-vs-cost-analysis/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Интелигентност срещу цена при LLM: Анализ на границата на Парето и скритите разходи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 септември 2026 г.</p><div><p><img src="/articles/2026/09/02/llm-intelligence-vs-cost-analysis/hero.png" alt="Стилизирана илюстрация на експоненциална крива на изчислителни разходи и невронна мрежа"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>В публикация в инженерния блог на компанията за технологии с отворен код <a href="/pages/openteams.html">OpenTeams</a> щатният софтуерен инженер и ключов поддържащ разработката на <a href="/pages/dask.html">Dask</a> <a href="/pages/guido-imperiale.html">Гуидо Империале</a> публикува задълбочен критичен анализ на популярните сравнителни графики за ефективност на големите езикови модели [1]. Изследването е фокусирано върху показателя „Интелигентност срещу цена“ (Intelligence vs. cost), поддържан от бенчмарк платформата <a href="/pages/artificial-analysis.html">Artificial Analysis</a>, която извежда т.нар. граница на Парето (Pareto frontier) за най-изгодните изчислителни решения на пазара [2].</p>
+<p>Според Империале масовите графики създават фундаментално подвеждаща представа за реалните разходи при внедряване на изкуствен интелект. Чрез замяна на логаритмичната скала с линейна, интегриране на реалните пазарни цени от <a href="/pages/openrouter.html">OpenRouter</a> и калкулиране на електроенергията за локално изпълнение, анализът разкрива драстичното разминаване между премиум моделите от затворен тип и икономически изгодните алтернативи с отворени тегла [1].</p>
+<p><img src="/articles/2026/09/02/llm-intelligence-vs-cost-analysis/infographic.png" alt="Инфографика за границата на Парето и съпоставката на разходите при LLM"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Защо логаритмичната скала на разходите изкривява пазара</h2>
+<p>Основният методически дефект на стандартните графики на Artificial Analysis се корени в използването на логаритмична скала по оста на разходите [1]. Макар логаритмичното представяне да е математически удобно за едновременно визуализиране на модели, струващи 0.015 долара за задача, и флагмани, изискващи 3.69 долара (разлика от близо 250 пъти), то напълно заличава мащаба на финансовата пропаст.</p>
+<p>За крайния потребител или корпоративния бюджет парите не са логаритмична величина. Разликата от части от цента между свръхевтините модели изглежда огромна на логаритмична графика, докато в действителност тя е пренебрежима за счетоводството. В същото време астрономическата разлика между бюджетен модел и топ модел като Fable 5.1 бива визуално компресирана, създавайки илюзията за плавен и достъпен скок [1].</p>
+<p>Преминаването към линейна скала по оста X веднага очертава стръмна стена от разходи, която се активира в момента, в който потребителят потърси най-високите нива на интелигентност [1].</p>
+<h2>Официални API каталози срещу динамичния свободен пазар</h2>
+<p>Вторият проблем, идентифициран в анализа, засяга източника на ценовите данни. Artificial Analysis по подразбиране използва официалните ценови листи от самите създатели на моделите. При модели с отворени тегла обаче директната каталожна цена често е многократно по-висока от стойността, на която същите тегла могат да бъдат наети от външни доставчици на инфраструктура.</p>
+<p>Платформи като <a href="/pages/openrouter.html">OpenRouter</a> позволяват динамично превключване между десетки хостинг доставчици в реално време, осигурявайки най-ниската цена на пазара. В новите графики на OpenTeams цените на модели като Kimi K3, <a href="/pages/qwen.html">Qwen</a> 3.8 Max, DeepSeek V4 Flash 0731, GLM-5.3 и Hy3 са коригирани според реалните оферти в OpenRouter [1].</p>
+<p>За да се гарантира практическа приложимост в бизнес среда, от ценовото сравнение са изключени ненадеждни доставчици с висока латентност или липса на строги политики за нулево задържане на потребителски данни (Zero Data Retention) [1].</p>
+<p><img src="/articles/2026/09/02/llm-intelligence-vs-cost-analysis/high-intelligence-plot.png" alt="Графика на линейните разходи за модели от висок клас"><br><small>Изображение: Guido Imperiale чрез OpenTeams</small></p>
+<h2>Икономика на локалните модели: цената на тока срещу центровете за данни</h2>
+<p>Третият сериозен пропуск на класическите бенчмаркове е оценяването на компактни модели с потребителски клас хардуер по тарифите на големите облачни центрове за данни. За модели под 35 милиарда параметъра, които могат свободно да се изпълняват локално, облачният наем е ненужен разход, който не отразява практиката на инженерите [1].</p>
+<p>В новия модел цената на задача за локалните модели е изчислена директно на база изразходваното електричество при следната методология:</p>
+<ul>
+<li><p>Броят изходящи токени за всяка стандартизирана задача се взима от данните на Artificial Analysis.</p>
+</li>
+<li><p>Скоростта на декодиране (токени в секунда) се засича на потребителска графична карта NVIDIA GeForce RTX 3090 (модел от 2020 г., наличен на вторичния пазар за около 1400 долара) или на работна станция AMD Strix Halo с 64 GB споделена памет.</p>
+</li>
+<li><p>Измерва се точната разлика в консумацията на енергия (delta) между състояние на покой (idle) и пиково натоварване на системата.</p>
+</li>
+<li><p>Електроенергията се таксува по среднопретеглената цена за домакинствата в САЩ към май 2026 г. в размер на 0.2049 долара за киловатчас (kWh).</p>
+</li>
+<li><p>Добавят се 15 процента резерв за некеширани входящи токени и изчакване на извиквания към външни инструменти (tool calls).</p>
+</li>
+</ul>
+<p>При тази формула цената на самия хардуер се приема за нула, тъй като персонален компютър с RTX 3090 или 64 GB Strix Halo представлява стандартна работна или игрална машина, която потребителят вече притежава. Интересно наблюдение е, че разходите за ток остават почти идентични между различните платформи: макар Strix Halo да консумира по-малко ватове, по-ниската му скорост на декодиране изисква по-дълго време за завършване на задачата [1].</p>
+<p><img src="/articles/2026/09/02/llm-intelligence-vs-cost-analysis/low-cost-plot.png" alt="Графика на нискобюджетните и локални езикови модели"><br><small>Изображение: Guido Imperiale чрез OpenTeams</small></p>
+<h2>Прагът на паметта: кога амортизацията на желязото става бариера</h2>
+<p>Презумпцията за „безплатен“ хардуер престава да бъде защитима в момента, в който моделът изисква повече от 64 GB RAM памет. Потребителските конфигурации рядко разполагат с такива обеми за ежедневни задачи, поради което изпълнението на междинни и тежки отворени архитектури налага огромни първоначални капиталови разходи [1].</p>
+<p>В анализа се дефинира подробна градация на хардуерните прагове за локално хостване:</p>
+<ul>
+<li><p><strong>128 GB RAM:</strong> Необходими като абсолютен минимум за Qwen3.8-Flash, както и за съкратени квантувания на <a href="/pages/glm-5-3-flash.html">GLM-5.3-Flash</a> и DeepSeek-V4-Flash. Докато базов 64 GB Strix Halo струва 2000 долара, конфигурацията със 128 GB скача до 3600 долара. Алтернативите включват DGX Spark (4300 долара), Mac Studio M5 Max (5100 долара) или лаптоп MacBook Pro M5 Max (7150 долара).</p>
+</li>
+<li><p><strong>256 GB RAM:</strong> Две работни станции DGX Spark (8700 долара) или Mac Studio M5 Ultra (11 300 долара), даващи възможност за пълноценно зареждане на GLM-5.3-Flash и <a href="/pages/deepseek.html">DeepSeek</a>-V4-Flash без деградация на способностите.</p>
+</li>
+<li><p><strong>512 GB RAM:</strong> Две системи Mac Studio M5 Ultra на стойност 22 600 долара, осигуряващи изпълнение на пълния модел GLM-5.3.</p>
+</li>
+<li><p><strong>2 TB RAM:</strong> Две специализирани изчислителни системи <a href="/pages/tenstorrent.html">Tenstorrent</a> Galaxy Blackhole на обща стойност 320 000 долара, необходими за локалното пускане на свръхтежкия модел <a href="/pages/kimi-k3.html">Kimi K3</a> [1].</p>
+</li>
+</ul>
+<p>Тази калкулация доказва, че макар моделите с отворени тегла да са номинално безплатни за изтегляне, локалната им автономност при високи параметри остава привилегия за корпоративни центрове и научни институти.</p>
+<p><img src="/articles/2026/09/02/llm-intelligence-vs-cost-analysis/all-models-pareto.png" alt="Пълна съпоставка на всички езикови модели по границата на Парето"><br><small>Изображение: Guido Imperiale чрез OpenTeams</small></p>
+<h2>Намаляваща възвръщаемост и корпоративната криза на токените</h2>
+<p>Обединяването на данните върху обща графика илюстрира строгото действие на икономическия закон за намаляващата възвръщаемост при съвременния изкуствен интелект. Моделите от най-висок клас на <a href="/pages/anthropic.html">Anthropic</a> и <a href="/pages/openai.html">OpenAI</a> постигат изключителни резултати, но на цена, която става трудно защитима дори за технологични конгломерати.</p>
+<p>На върха на класацията флагманът Fable 5.1 регистрира индекс на интелигентност от 66 пункта при цена от 3.69 долара за задача. За сравнение, китайският модел GLM-5.3 достига индекс 60 при цена от 0.49 долара – 7.5 пъти по-евтино. Качествената разлика от 6 пункта може да бъде оценена единствено от висококвалифицирани софтуерни архитекти или учени, докато за стандартния бизнес остава незабележима [1].</p>
+<p>Още по-надолу по кривата оптимизираният <a href="/pages/glm-5-3-flash.html">GLM-5.3-Flash</a> при високо ниво на разсъждение (reasoning effort) постига индекс 55 на цена от едва 0.023 долара за задача – 160 пъти по-евтино от лидера. Според Империале този модел отстъпва единствено при най-сложните автономни сценарии (като самостоятелно програмиране на цял проект от нулата), но е напълно достатъчен за 90 процента от реалните ежедневни нужди на индустрията [1], [4].</p>
+<p>Този извод съвпада с наблюдаваната през втората половина на 2026 г. корпоративна криза с разходите за токени. Разпространението на автономни агентни системи (agentic AI), изискващи до хиляда пъти повече токени спрямо обикновените чат заявки, вече предизвика съкращения в бюджетите и преориентиране към по-евтини модели в гиганти като Microsoft, Meta и Amazon [3]. В тази нова реалност способността за бързо локализиране на границата на Парето се превръща в критично предимство за софтуерното инженерство.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://openteams.com/intelligence-vs-cost/">LLMs: Intelligence vs. cost - OpenTeams</a></p>
+<p>[2]: <a href="https://artificialanalysis.ai/#intelligence-comparison-tabs">Intelligence vs. cost plot - Artificial Analysis</a></p>
+<p>[3]: <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-cost-crisis-hits-tech-giants-as-employee-tokenmaxxing-backfires-agentic-ai-eats-up-to-1000x-more-tokens-than-standard-ai-sparks-corporate-pullback-at-microsoft-meta-and-amazon">AI cost crisis hits tech giants as employee tokenmaxxing backfires - Tom&#39;s Hardware</a></p>
+<p>[4]: <a href="https://z.ai/blog/glm-5.3-flash">GLM-5.3-Flash Coding Benchmarks - Z.ai Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tenstorrent.html">Tenstorrent</a><p>Tenstorrent е канадски стартъп за хардуер и софтуер за изкуствен интелект.</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/openteams.html">OpenTeams</a><p>OpenTeams е компания за технологични услуги и консултации, специализирана в отворени софтуерни технологии, изкуствен интелект и разпределени изчислите...</p></li><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/kimi-k3.html">Kimi K3</a><p>Kimi K3 е модел с изкуствен интелект, разработен от китайската компания Moonshot AI.</p></li><li><a href="/pages/guido-imperiale.html">Guido Imperiale</a><p>Guido Imperiale е софтуерен инженер и специалист по разпределени изчисления, щатен инженер в OpenTeams и ключов поддържащ разработката на библиотеката...</p></li><li><a href="/pages/glm-5-3-flash.html">GLM-5.3-Flash</a><p>GLM-5.</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/dask.html">Dask</a><p>Dask е гъвкава библиотека с отворен код за паралелни и разпределени изчисления на Python.</p></li><li><a href="/pages/artificial-analysis.html">Artificial Analysis</a><p>Artificial Analysis е независима аналитична платформа за сравнителен анализ (бенчмаркинг) на производителността, качеството, латентността и разходите ...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
