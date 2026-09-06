@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <style>
+      .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; }
+      .text-regular { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; }
+      .text-medium { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; }
+      .text-bold { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#fbf8f3" />
+
+  <!-- Header Section -->
+  <rect x="290" y="16" width="220" height="22" rx="11" fill="#f1ebd8" stroke="#e2d9be" stroke-width="1" />
+  <text x="400" y="31" class="text-bold" font-size="10" fill="#854d0e" text-anchor="middle" letter-spacing="1">WORKPLACE AI GOVERNANCE</text>
+
+  <text x="400" y="60" class="title" font-size="20" fill="#0f172a" text-anchor="middle">The Corporate Crackdown on Internal AI Slop</text>
+  <text x="400" y="80" class="text-medium" font-size="11" fill="#475569" text-anchor="middle">How companies enforce clarity and personal accountability against bloated generative text</text>
+
+  <!-- Column 1: The Slop Influx -->
+  <g transform="translate(24, 98)">
+    <rect width="176" height="352" rx="14" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5" />
+    <!-- Icon Circle -->
+    <circle cx="88" cy="30" r="16" fill="#ef4444" />
+    <path d="M88 21 L88 28 M88 33 L88 35" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Titles -->
+    <text x="88" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">The Slop Influx</text>
+    <text x="88" y="76" class="text-bold" font-size="9" fill="#991b1b" text-anchor="middle" letter-spacing="0.5">STANFORD &amp; BETTERUP</text>
+    <line x1="16" y1="86" x2="160" y2="86" stroke="#fca5a5" stroke-width="1" />
+    <!-- Body Text -->
+    <text x="14" y="106" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="14" dy="0" font-weight="700" fill="#0f172a">40% of desk workers</tspan>
+      <tspan x="14" dy="14">receive unvetted AI slop</tspan>
+      <tspan x="14" dy="14">from coworkers monthly.</tspan>
+      <tspan x="14" dy="18">Sorting through bloated</tspan>
+      <tspan x="14" dy="14">proposals and updates</tspan>
+      <tspan x="14" dy="14">takes nearly <tspan font-weight="700" fill="#991b1b">2 hours</tspan></tspan>
+      <tspan x="14" dy="14">per incident, generating</tspan>
+      <tspan x="14" dy="14">widespread fatigue.</tspan>
+    </text>
+    <!-- Quote Card -->
+    <rect x="12" y="244" width="152" height="96" rx="8" fill="#ffffff" fill-opacity="0.8" stroke="#fca5a5" stroke-width="1" />
+    <text x="20" y="264" class="text-medium" font-size="9" font-style="italic" fill="#1e293b">
+      <tspan x="20" dy="0">&quot;Techies coin culprits</tspan>
+      <tspan x="20" dy="13">&#39;meat proxies&#39; — staff</tspan>
+      <tspan x="20" dy="13">who blindly forward</tspan>
+      <tspan x="20" dy="13">unvetted AI drafts</tspan>
+      <tspan x="20" dy="13">without editing.&quot;</tspan>
+    </text>
+  </g>
+
+  <!-- Column 2: Clarity Over Volume -->
+  <g transform="translate(216, 98)">
+    <rect width="176" height="352" rx="14" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5" />
+    <!-- Icon Circle -->
+    <circle cx="88" cy="30" r="16" fill="#d97706" />
+    <path d="M88 20 A6 6 0 0 0 82 26 C82 29 85 31 85 33 L91 33 C91 31 94 29 94 26 A6 6 0 0 0 88 20 Z M86 36 L90 36" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <!-- Titles -->
+    <text x="88" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">Clarity Over Volume</text>
+    <text x="88" y="76" class="text-bold" font-size="9" fill="#92400e" text-anchor="middle" letter-spacing="0.5">LEAPSOME DIRECTIVE</text>
+    <line x1="16" y1="86" x2="160" y2="86" stroke="#fcd34d" stroke-width="1" />
+    <!-- Body Text -->
+    <text x="14" y="106" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="14" dy="0">Workers mistakenly</tspan>
+      <tspan x="14" dy="14">confuse text volume</tspan>
+      <tspan x="14" dy="14">with actual productivity.</tspan>
+      <tspan x="14" dy="18">If a short prompt</tspan>
+      <tspan x="14" dy="14">made a long document,</tspan>
+      <tspan x="14" dy="14">it is not worth reading</tspan>
+      <tspan x="14" dy="14">if it was not worth</tspan>
+      <tspan x="14" dy="14">writing thoughtfully.</tspan>
+    </text>
+    <!-- Quote Card -->
+    <rect x="12" y="244" width="152" height="96" rx="8" fill="#ffffff" fill-opacity="0.8" stroke="#fcd34d" stroke-width="1" />
+    <text x="20" y="264" class="text-medium" font-size="9" font-style="italic" fill="#1e293b">
+      <tspan x="20" dy="0">&quot;&#39;AI wrote it&#39; is never</tspan>
+      <tspan x="20" dy="13">an acceptable excuse.</tspan>
+      <tspan x="20" dy="13">Every single word</tspan>
+      <tspan x="20" dy="13">must be something</tspan>
+      <tspan x="20" dy="13">you back personally.&quot;</tspan>
+    </text>
+  </g>
+
+  <!-- Column 3: Multiplicative Cost -->
+  <g transform="translate(408, 98)">
+    <rect width="176" height="352" rx="14" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5" />
+    <!-- Icon Circle -->
+    <circle cx="88" cy="30" r="16" fill="#0284c7" />
+    <path d="M80 34 L88 20 L96 34 Z M83 31 L93 31" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linejoin="round" />
+    <!-- Titles -->
+    <text x="88" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">Multiplicative Cost</text>
+    <text x="88" y="76" class="text-bold" font-size="9" fill="#075985" text-anchor="middle" letter-spacing="0.5">CLAY ENGINEERING</text>
+    <line x1="16" y1="86" x2="160" y2="86" stroke="#7dd3fc" stroke-width="1" />
+    <!-- Body Text -->
+    <text x="14" y="106" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="14" dy="0">Bloated documents</tspan>
+      <tspan x="14" dy="14">impose a <tspan font-weight="700" fill="#075985">multiplicative</tspan></tspan>
+      <tspan x="14" dy="14"><tspan font-weight="700" fill="#075985">cost</tspan> on coworkers.</tspan>
+      <tspan x="14" dy="18">Spending extra time</tspan>
+      <tspan x="14" dy="14">to make drafts concise</tspan>
+      <tspan x="14" dy="14">is a <tspan font-weight="700" fill="#0f172a">one-time cost</tspan></tspan>
+      <tspan x="14" dy="14">that saves company</tspan>
+      <tspan x="14" dy="14">time across all readers.</tspan>
+    </text>
+    <!-- Quote Card -->
+    <rect x="12" y="244" width="152" height="96" rx="8" fill="#ffffff" fill-opacity="0.8" stroke="#7dd3fc" stroke-width="1" />
+    <text x="20" y="264" class="text-medium" font-size="9" font-style="italic" fill="#1e293b">
+      <tspan x="20" dy="0">&quot;Create psychological</tspan>
+      <tspan x="20" dy="13">safety for workers to</tspan>
+      <tspan x="20" dy="13">push back on slop</tspan>
+      <tspan x="20" dy="13">without it feeling</tspan>
+      <tspan x="20" dy="13">like personal insult.&quot;</tspan>
+    </text>
+  </g>
+
+  <!-- Column 4: Ownership & Voice -->
+  <g transform="translate(600, 98)">
+    <rect width="176" height="352" rx="14" fill="#dcfce7" stroke="#86efac" stroke-width="1.5" />
+    <!-- Icon Circle -->
+    <circle cx="88" cy="30" r="16" fill="#16a34a" />
+    <path d="M80 30 L85 35 L96 23" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Titles -->
+    <text x="88" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">Ownership &amp; Voice</text>
+    <text x="88" y="76" class="text-bold" font-size="9" fill="#166534" text-anchor="middle" letter-spacing="0.5">POLARSTEPS POLICY</text>
+    <line x1="16" y1="86" x2="160" y2="86" stroke="#86efac" stroke-width="1" />
+    <!-- Body Text -->
+    <text x="14" y="106" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="14" dy="0">AI is permitted for</tspan>
+      <tspan x="14" dy="14">brainstorming and drafts,</tspan>
+      <tspan x="14" dy="14">but usage must be</tspan>
+      <tspan x="14" dy="18">explicitly disclosed.</tspan>
+      <tspan x="14" dy="14">The final narrative must</tspan>
+      <tspan x="14" dy="14">reflect genuine human</tspan>
+      <tspan x="14" dy="14">reasoning, editing,</tspan>
+      <tspan x="14" dy="14">and authentic voice.</tspan>
+    </text>
+    <!-- Quote Card -->
+    <rect x="12" y="244" width="152" height="96" rx="8" fill="#ffffff" fill-opacity="0.8" stroke="#86efac" stroke-width="1" />
+    <text x="20" y="264" class="text-medium" font-size="9" font-style="italic" fill="#1e293b">
+      <tspan x="20" dy="0">&quot;A shared standard</tspan>
+      <tspan x="20" dy="13">prevents repeated</tspan>
+      <tspan x="20" dy="13">friction and brings</tspan>
+      <tspan x="20" dy="13">back authentic human</tspan>
+      <tspan x="20" dy="13">focus in teamwork.&quot;</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="24" y1="466" x2="776" y2="466" stroke="#e7dfd1" stroke-width="1" />
+  <text x="24" y="484" class="text-medium" font-size="9" fill="#64748b">Sources: Business Insider (Sarah E. Needleman), Stanford Social Media Lab, Polarsteps, Leapsome, Clay</text>
+  <text x="776" y="484" class="text-bold" font-size="9" fill="#64748b" text-anchor="end">Svetni.me Synthesis</text>
+</svg>

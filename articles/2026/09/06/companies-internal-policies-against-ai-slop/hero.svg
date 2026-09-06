@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="filter-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="blur-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="180" cy="250" r="140" fill="#ef4444" opacity="0.08" filter="url(#blur-filter)" />
+  <circle cx="400" cy="230" r="130" fill="#3b82f6" opacity="0.12" filter="url(#blur-filter)" />
+  <circle cx="640" cy="250" r="140" fill="#10b981" opacity="0.1" filter="url(#blur-filter)" />
+
+  <!-- Grid Blueprint Lines -->
+  <g opacity="0.06" stroke="#94a3b8" stroke-width="1">
+    <line x1="80" y1="0" x2="80" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="320" y1="0" x2="320" y2="500" />
+    <line x1="480" y1="0" x2="480" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="720" y1="0" x2="720" y2="500" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+  </g>
+
+  <!-- Left: Chaotic Bloated AI Slop Stream -->
+  <g transform="translate(100, 110)">
+    <!-- Skewed messy sheets behind -->
+    <rect x="-16" y="30" width="150" height="200" rx="8" fill="#1e293b" opacity="0.4" stroke="#475569" stroke-width="1.2" transform="rotate(-12 60 130)" />
+    <rect x="20" y="-8" width="150" height="200" rx="8" fill="#1e293b" opacity="0.6" stroke="#475569" stroke-width="1.2" transform="rotate(8 95 90)" />
+    <!-- Front sheet -->
+    <rect x="0" y="10" width="150" height="210" rx="8" fill="#182234" stroke="#64748b" stroke-width="1.5" />
+    
+    <!-- Dense chaotic horizontal lines -->
+    <rect x="16" y="28" width="118" height="6" rx="3" fill="#ef4444" opacity="0.8" />
+    <rect x="16" y="44" width="105" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="56" width="118" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="68" width="98" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="80" width="118" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="92" width="110" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="104" width="114" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="116" width="118" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="128" width="90" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="140" width="112" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="152" width="106" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="164" width="118" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="176" width="96" height="4" rx="2" fill="#64748b" opacity="0.7" />
+    <rect x="16" y="188" width="76" height="4" rx="2" fill="#ef4444" opacity="0.6" />
+
+    <!-- Alert / Bloat emblem -->
+    <circle cx="134" cy="22" r="12" fill="#ef4444" />
+    <path d="M134 16 L134 22 M134 26 L134 28" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Flow line from left into filter -->
+  <path d="M260 230 L320 230" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4 4" />
+  <polygon points="320,226 328,230 320,234" fill="#ef4444" />
+
+  <!-- Center: Governance Prism / Policy Funnel -->
+  <g transform="translate(340, 95)">
+    <!-- Policy hexagonal container -->
+    <polygon points="60,20 120,60 120,220 60,260 0,220 0,60" fill="url(#filter-grad)" stroke="#3b82f6" stroke-width="2" />
+    
+    <!-- Central inspection core -->
+    <rect x="25" y="90" width="70" height="96" rx="12" fill="#0f172a" stroke="#06b6d4" stroke-width="1.8" />
+    
+    <!-- Stylized balance scales / filter symbol -->
+    <circle cx="60" cy="122" r="14" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <line x1="60" y1="108" x2="60" y2="136" stroke="#38bdf8" stroke-width="2" />
+    <line x1="46" y1="122" x2="74" y2="122" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="60" cy="122" r="4" fill="#f59e0b" />
+
+    <!-- Validation checkmark inside core -->
+    <path d="M44 160 L54 172 L76 150" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Flow line from filter to right -->
+  <path d="M470 230 L530 230" stroke="#10b981" stroke-width="3" />
+  <polygon points="530,225 540,230 530,235" fill="#10b981" />
+
+  <!-- Right: Concise, Structured Output with Ownership & Clarity -->
+  <g transform="translate(550, 110)">
+    <!-- Front card with high clarity -->
+    <rect x="0" y="0" width="160" height="220" rx="12" fill="#0b1324" stroke="#10b981" stroke-width="2" />
+    
+    <!-- Clean header pills -->
+    <rect x="18" y="24" width="68" height="8" rx="4" fill="#10b981" />
+    <rect x="106" y="24" width="36" height="8" rx="4" fill="#38bdf8" opacity="0.7" />
+    
+    <rect x="18" y="46" width="124" height="5" rx="2.5" fill="#94a3b8" opacity="0.85" />
+    <rect x="18" y="58" width="96" height="5" rx="2.5" fill="#94a3b8" opacity="0.85" />
+    
+    <!-- Concise structured bullet rows -->
+    <circle cx="26" cy="90" r="5" fill="#10b981" />
+    <rect x="40" y="87" width="102" height="6" rx="3" fill="#f1f5f9" />
+
+    <circle cx="26" cy="116" r="5" fill="#10b981" />
+    <rect x="40" y="113" width="90" height="6" rx="3" fill="#f1f5f9" />
+
+    <circle cx="26" cy="142" r="5" fill="#10b981" />
+    <rect x="40" y="139" width="96" height="6" rx="3" fill="#f1f5f9" />
+
+    <!-- Stamp of ownership / verification seal -->
+    <circle cx="80" cy="184" r="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="1.8" />
+    <path d="M73 184 L78 189 L88 179" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Bottom decorative status line -->
+  <g transform="translate(150, 440)">
+    <line x1="0" y1="0" x2="500" y2="0" stroke="#334155" stroke-width="1.5" />
+    <circle cx="60" cy="0" r="6" fill="#ef4444" stroke="#090d16" stroke-width="2" />
+    <circle cx="250" cy="0" r="7" fill="#38bdf8" stroke="#090d16" stroke-width="2" />
+    <circle cx="440" cy="0" r="6" fill="#10b981" stroke="#090d16" stroke-width="2" />
+  </g>
+</svg>
