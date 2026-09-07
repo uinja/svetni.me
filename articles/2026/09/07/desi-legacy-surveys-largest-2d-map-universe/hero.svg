@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="55%" stop-color="#0b1329" />
+      <stop offset="85%" stop-color="#111c3d" />
+      <stop offset="100%" stop-color="#16203d" />
+    </linearGradient>
+
+    <radialGradient id="nebula-cyan" cx="45%" cy="38%" r="45%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nebula-indigo" cx="70%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="galaxy-core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="dome-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="wide-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Night Sky -->
+  <rect width="1600" height="1000" fill="url(#sky-grad)" />
+
+  <!-- Cosmic Nebulae / Galaxy Dust Clouds -->
+  <rect width="1600" height="1000" fill="url(#nebula-cyan)" />
+  <rect width="1600" height="1000" fill="url(#nebula-indigo)" />
+
+  <!-- Celestial Grid: Sky Coordinates & Survey Footprint Arcs -->
+  <g stroke="#38bdf8" stroke-width="1.2" opacity="0.22" fill="none">
+    <!-- Concentric Celestial Declination Arcs -->
+    <ellipse cx="800" cy="400" rx="720" ry="340" stroke-dasharray="8 6" />
+    <ellipse cx="800" cy="400" rx="580" ry="270" />
+    <ellipse cx="800" cy="400" rx="440" ry="200" stroke-dasharray="6 6" />
+    <ellipse cx="800" cy="400" rx="280" ry="130" />
+    <ellipse cx="800" cy="400" rx="140" ry="65" stroke-dasharray="4 4" />
+
+    <!-- Right Ascension Hour Meridians -->
+    <line x1="80" y1="400" x2="1520" y2="400" stroke-dasharray="10 8" />
+    <line x1="800" y1="60" x2="800" y2="740" stroke-dasharray="10 8" />
+    <path d="M220 180 Q800 320 1380 180" />
+    <path d="M220 620 Q800 480 1380 620" />
+    <path d="M380 100 Q800 240 1220 100" stroke-dasharray="6 6" />
+    <path d="M380 700 Q800 560 1220 700" stroke-dasharray="6 6" />
+  </g>
+
+  <!-- Cosmic Web: Filaments & Galaxy Connections -->
+  <g stroke="#60a5fa" stroke-width="0.8" opacity="0.38" fill="none">
+    <!-- Northern Survey Web -->
+    <path d="M320 220 L410 180 L520 230 L640 190 L760 210 L880 170 L980 230 L1120 190 L1260 240" />
+    <path d="M410 180 L490 120 L610 140 L710 110 L840 130 L940 100 L1080 130 L1190 110 L1260 240" />
+    <path d="M320 220 L370 310 L480 340 L590 300 L710 330 L830 290 L960 320 L1090 280 L1220 330 L1310 270" />
+    <path d="M520 230 L590 300 M640 190 L710 330 M760 210 L830 290 M880 170 L960 320 M980 230 L1090 280" />
+    
+    <!-- Central Dense Extragalactic Clusters -->
+    <path d="M480 340 L530 430 L670 410 L790 460 L920 420 L1040 450 L1160 390 L1220 330" />
+    <path d="M370 310 L420 450 L530 430 M530 430 L620 510 L740 490 L850 530 L970 490 L1090 520 L1160 390" />
+    <path d="M670 410 L740 490 M790 460 L850 530 M920 420 L970 490 M1040 450 L1090 520" />
+
+    <!-- Southern DECaLS Survey Region -->
+    <path d="M260 480 L350 540 L460 520 L580 570 L690 540 L810 590 L940 560 L1070 600 L1200 550 L1340 520" />
+    <path d="M420 450 L350 540 M620 510 L580 570 M740 490 L690 540 M850 530 L810 590 M970 490 L940 560 M1090 520 L1070 600" />
+    <path d="M350 540 L410 640 L540 630 L660 670 L780 640 L910 680 L1030 650 L1150 670 L1250 620 L1340 520" />
+    <path d="M460 520 L540 630 M580 570 L660 670 M690 540 L780 640 M810 590 L910 680 M940 560 L1030 650 M1070 600 L1150 670" />
+  </g>
+
+  <!-- Deep Field Galaxy Nodes & Quasars -->
+  <!-- Major Superclusters (Large Glowing Nodes) -->
+  <circle cx="800" cy="400" r="14" fill="#ffffff" filter="url(#wide-glow)" opacity="0.9" />
+  <circle cx="800" cy="400" r="7" fill="#38bdf8" />
+  <circle cx="800" cy="400" r="3.5" fill="#ffffff" />
+
+  <circle cx="530" cy="430" r="11" fill="#38bdf8" filter="url(#soft-glow)" opacity="0.85" />
+  <circle cx="530" cy="430" r="5" fill="#e0f2fe" />
+  <circle cx="530" cy="430" r="2.5" fill="#ffffff" />
+
+  <circle cx="1040" cy="450" r="11" fill="#67e8f9" filter="url(#soft-glow)" opacity="0.85" />
+  <circle cx="1040" cy="450" r="5" fill="#e0f2fe" />
+  <circle cx="1040" cy="450" r="2.5" fill="#ffffff" />
+
+  <circle cx="710" cy="210" r="9" fill="#818cf8" filter="url(#soft-glow)" opacity="0.8" />
+  <circle cx="710" cy="210" r="4" fill="#ffffff" />
+
+  <circle cx="920" cy="280" r="9" fill="#38bdf8" filter="url(#soft-glow)" opacity="0.8" />
+  <circle cx="920" cy="280" r="4" fill="#ffffff" />
+
+  <circle cx="690" cy="540" r="10" fill="#22d3ee" filter="url(#soft-glow)" opacity="0.85" />
+  <circle cx="690" cy="540" r="4.5" fill="#ffffff" />
+
+  <circle cx="940" cy="560" r="10" fill="#38bdf8" filter="url(#soft-glow)" opacity="0.85" />
+  <circle cx="940" cy="560" r="4.5" fill="#ffffff" />
+
+  <!-- Intermediate Galaxy Nodes -->
+  <g fill="#bae6fd" opacity="0.85">
+    <circle cx="410" cy="180" r="3.5" />
+    <circle cx="520" cy="230" r="4.2" />
+    <circle cx="640" cy="190" r="3.8" />
+    <circle cx="880" cy="170" r="4" />
+    <circle cx="980" cy="230" r="4.5" />
+    <circle cx="1120" cy="190" r="3.8" />
+    <circle cx="370" cy="310" r="4" />
+    <circle cx="480" cy="340" r="4.8" />
+    <circle cx="590" cy="300" r="4" />
+    <circle cx="830" cy="290" r="4.5" />
+    <circle cx="960" cy="320" r="4.2" />
+    <circle cx="1090" cy="280" r="4" />
+    <circle cx="1220" cy="330" r="3.6" />
+    <circle cx="420" cy="450" r="4.5" />
+    <circle cx="670" cy="410" r="4.8" />
+    <circle cx="790" cy="460" r="5" />
+    <circle cx="920" cy="420" r="4.8" />
+    <circle cx="1160" cy="390" r="4" />
+    <circle cx="350" cy="540" r="4" />
+    <circle cx="460" cy="520" r="4.2" />
+    <circle cx="580" cy="570" r="4.6" />
+    <circle cx="810" cy="590" r="4.8" />
+    <circle cx="1070" cy="600" r="4.4" />
+    <circle cx="1200" cy="550" r="3.8" />
+    <circle cx="540" cy="630" r="3.8" />
+    <circle cx="660" cy="670" r="4.2" />
+    <circle cx="780" cy="640" r="4.5" />
+    <circle cx="910" cy="680" r="4" />
+    <circle cx="1030" cy="650" r="3.8" />
+    <circle cx="1150" cy="670" r="3.5" />
+  </g>
+
+  <!-- Distant Background Field Stars / Minor Galaxies (Faint Dots) -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="180" cy="140" r="1.5" />
+    <circle cx="290" cy="90" r="1.8" />
+    <circle cx="440" cy="80" r="1.2" />
+    <circle cx="560" cy="110" r="2" />
+    <circle cx="690" cy="70" r="1.5" />
+    <circle cx="850" cy="60" r="2.2" />
+    <circle cx="1010" cy="75" r="1.6" />
+    <circle cx="1170" cy="95" r="2" />
+    <circle cx="1320" cy="130" r="1.4" />
+    <circle cx="1450" cy="190" r="1.8" />
+    <circle cx="150" cy="280" r="1.2" />
+    <circle cx="230" cy="380" r="1.6" />
+    <circle cx="170" cy="510" r="1.4" />
+    <circle cx="210" cy="640" r="2" />
+    <circle cx="1390" cy="350" r="1.5" />
+    <circle cx="1440" cy="480" r="2.2" />
+    <circle cx="1380" cy="600" r="1.6" />
+    <circle cx="1470" cy="690" r="1.4" />
+  </g>
+
+  <!-- Ground Observatory Mountain Ridge Silhouettes -->
+  <!-- Distant Andean & Sonoran Mountain Ridge (Back Layer) -->
+  <path d="M0 860 L140 840 L290 855 L450 825 L610 845 L780 815 L950 835 L1130 810 L1310 830 L1470 805 L1600 820 L1600 1000 L0 1000 Z" fill="#090d1f" opacity="0.75" />
+
+  <!-- Mid Mountain Ridge Layer -->
+  <path d="M0 900 L180 875 L360 890 L520 860 L690 880 L880 850 L1060 870 L1250 840 L1430 865 L1600 845 L1600 1000 L0 1000 Z" fill="#070a18" opacity="0.9" />
+
+  <!-- Foreground Mountain Summit with Telescopes (Front Layer) -->
+  <path d="M0 940 L160 920 L310 890 L420 890 L510 930 L720 910 L890 940 L1100 885 L1240 885 L1350 920 L1500 905 L1600 925 L1600 1000 L0 1000 Z" fill="#04060d" />
+
+  <!-- Telescope Silhouettes -->
+
+  <!-- Left: Víctor M. Blanco 4-meter Telescope (CTIO, Chile) - Horseshoe Dome -->
+  <g transform="translate(320, 770)" fill="#04060d">
+    <!-- Observatory Base Structure -->
+    <rect x="20" y="70" width="70" height="50" rx="3" />
+    <rect x="15" y="115" width="80" height="15" rx="2" fill="#060914" />
+    <!-- Classic Hemispherical Dome -->
+    <path d="M20 70 C20 30 90 30 90 70 Z" />
+    <!-- Open Shutter / Slit with Subtle Warm Glow -->
+    <path d="M48 33 L62 33 L62 70 L48 70 Z" fill="#0a0f24" />
+    <rect x="52" y="42" width="6" height="24" fill="url(#dome-glow)" opacity="0.85" filter="url(#soft-glow)" />
+    <!-- Catwalk Balcony -->
+    <line x1="10" y1="70" x2="100" y2="70" stroke="#1e293b" stroke-width="3" />
+    
+    <!-- Optical Laser Guide Star Beam pointing up to Galaxy Map -->
+    <line x1="55" y1="35" x2="210" y2="-340" stroke="#00f0ff" stroke-width="2.5" opacity="0.65" filter="url(#soft-glow)" />
+    <line x1="55" y1="35" x2="210" y2="-340" stroke="#ffffff" stroke-width="0.8" opacity="0.9" />
+  </g>
+
+  <!-- Right: Nicholas U. Mayall 4-meter Telescope (KPNO, Kitt Peak, Arizona) - Iconic Tall Tower Dome -->
+  <g transform="translate(1120, 730)" fill="#04060d">
+    <!-- Tall Cylindrical Support Tower -->
+    <rect x="25" y="80" width="65" height="85" rx="2" />
+    <rect x="15" y="155" width="85" height="20" rx="2" fill="#060914" />
+    <!-- Truncated/Faceted Outer Dome Shell -->
+    <path d="M20 80 C20 25 95 25 95 80 Z" />
+    <!-- Open Observation Slit -->
+    <path d="M50 30 L65 30 L65 80 L50 80 Z" fill="#0a0f24" />
+    <rect x="54" y="38" width="7" height="36" fill="url(#dome-glow)" opacity="0.85" filter="url(#soft-glow)" />
+    <!-- Circular Observation Ring -->
+    <line x1="12" y1="80" x2="103" y2="80" stroke="#1e293b" stroke-width="3" />
+
+    <!-- Optical Laser Guide Star Beam pointing into Northern Survey Map -->
+    <line x1="58" y1="32" x2="-80" y2="-300" stroke="#38bdf8" stroke-width="2.5" opacity="0.65" filter="url(#soft-glow)" />
+    <line x1="58" y1="32" x2="-80" y2="-300" stroke="#ffffff" stroke-width="0.8" opacity="0.9" />
+  </g>
+
+  <!-- Background Smaller Dome (UA Bok 2.3m Telescope at KPNO) -->
+  <g transform="translate(1250, 810)" fill="#060917">
+    <rect x="15" y="45" width="40" height="35" rx="2" />
+    <path d="M15 45 C15 20 55 20 55 45 Z" />
+    <line x1="10" y1="45" x2="60" y2="45" stroke="#1e293b" stroke-width="2" />
+  </g>
+</svg>

@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <style>
+      .font-title { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Nunito", sans-serif; font-weight: 800; }
+      .font-bold { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Nunito", sans-serif; font-weight: 700; }
+      .font-semibold { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Nunito", sans-serif; font-weight: 600; }
+      .font-regular { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Nunito", sans-serif; font-weight: 400; }
+    </style>
+  </defs>
+
+  <!-- Background: Flat Light Warm Cream -->
+  <rect width="1600" height="900" fill="#fcfaf6" />
+
+  <!-- Top Category Pill Badge -->
+  <rect x="660" y="24" width="280" height="28" rx="14" fill="#f3eee3" stroke="#e4d7c0" stroke-width="1.5" />
+  <text x="800" y="43" class="font-bold" font-size="11" fill="#854d0e" text-anchor="middle" letter-spacing="1.5">NSF NOIRLAB &amp; BERKELEY LAB</text>
+
+  <!-- Infographic Header -->
+  <text x="800" y="86" class="font-title" font-size="30" fill="#0f172a" text-anchor="middle">DESI Legacy Imaging Surveys: Universe Map at a Glance</text>
+  <text x="800" y="116" class="font-semibold" font-size="15" fill="#475569" text-anchor="middle">The Largest 2D Extragalactic Sky Catalog Covering 75% of the Entire Celestial Sphere</text>
+
+  <!-- ==================== COLUMN 1: THREE TELESCOPES & SURVEYS ==================== -->
+  <g transform="translate(50, 145)">
+    <!-- Outer Card -->
+    <rect width="350" height="695" rx="18" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2" />
+    
+    <!-- Top Icon Badge -->
+    <circle cx="175" cy="48" r="22" fill="#0284c7" />
+    <path d="M164 48 L170 42 L186 54 L180 60 Z M186 54 L190 58 M164 48 L160 44" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M172 52 L166 66 M176 54 L182 66" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Column Headers -->
+    <text x="175" y="92" class="font-bold" font-size="11" fill="#0284c7" text-anchor="middle" letter-spacing="1.2">OBSERVATIONAL ARSENAL</text>
+    <text x="175" y="118" class="font-title" font-size="19" fill="#0f172a" text-anchor="middle">Three Telescopes &amp; Surveys</text>
+
+    <!-- Sub-block 1: DECaLS -->
+    <rect x="18" y="142" width="314" height="162" rx="12" fill="#ffffff" stroke="#e0f2fe" stroke-width="1.5" />
+    <text x="32" y="170" class="font-bold" font-size="15" fill="#0369a1">DECaLS (Chile)</text>
+    <text x="32" y="192" class="font-bold" font-size="12" fill="#0f172a">570-Megapixel DECam Camera</text>
+    <text x="32" y="214" class="font-regular" font-size="12" fill="#334155">Víctor M. Blanco 4m Telescope</text>
+    <text x="32" y="234" class="font-regular" font-size="12" fill="#334155">Cerro Tololo Inter-American Obs. (CTIO)</text>
+    <text x="32" y="258" class="font-semibold" font-size="11" fill="#0284c7">Covers southern extragalactic footprint</text>
+    <text x="32" y="278" class="font-regular" font-size="11" fill="#64748b">Optical g, r, z multi-band imaging</text>
+
+    <!-- Sub-block 2: MzLS -->
+    <rect x="18" y="318" width="314" height="162" rx="12" fill="#ffffff" stroke="#e0f2fe" stroke-width="1.5" />
+    <text x="32" y="346" class="font-bold" font-size="15" fill="#0369a1">MzLS (Arizona)</text>
+    <text x="32" y="368" class="font-bold" font-size="12" fill="#0f172a">Mayall z-band Legacy Survey</text>
+    <text x="32" y="390" class="font-regular" font-size="12" fill="#334155">Nicholas U. Mayall 4m Telescope</text>
+    <text x="32" y="410" class="font-regular" font-size="12" fill="#334155">Kitt Peak National Observatory (KPNO)</text>
+    <text x="32" y="434" class="font-semibold" font-size="11" fill="#0284c7">Deep near-infrared z-band data</text>
+    <text x="32" y="454" class="font-regular" font-size="11" fill="#64748b">Direct platform for DESI spectrograph</text>
+
+    <!-- Sub-block 3: BASS & WISE -->
+    <rect x="18" y="494" width="314" height="175" rx="12" fill="#ffffff" stroke="#e0f2fe" stroke-width="1.5" />
+    <text x="32" y="522" class="font-bold" font-size="15" fill="#0369a1">BASS &amp; Space Missions</text>
+    <text x="32" y="544" class="font-bold" font-size="12" fill="#0f172a">Beijing-Arizona Sky Survey</text>
+    <text x="32" y="566" class="font-regular" font-size="12" fill="#334155">UA Bok 2.3-meter Telescope (KPNO)</text>
+    <text x="32" y="586" class="font-regular" font-size="12" fill="#334155">Enhanced by NASA WISE satellite</text>
+    <text x="32" y="612" class="font-semibold" font-size="11" fill="#0284c7">Northern sky optical g, r bands</text>
+    <text x="32" y="632" class="font-regular" font-size="11" fill="#64748b">Combined optical &amp; mid-infrared survey</text>
+  </g>
+
+  <!-- ==================== COLUMN 2: UNPRECEDENTED SCALE ==================== -->
+  <g transform="translate(433, 145)">
+    <!-- Outer Card -->
+    <rect width="350" height="695" rx="18" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2" />
+
+    <!-- Top Icon Badge -->
+    <circle cx="175" cy="48" r="22" fill="#059669" />
+    <path d="M165 48 H185 M175 38 V58 M167 40 L183 56 M167 56 L183 40" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Column Headers -->
+    <text x="175" y="92" class="font-bold" font-size="11" fill="#059669" text-anchor="middle" letter-spacing="1.2">COSMIC PROPORTIONS</text>
+    <text x="175" y="118" class="font-title" font-size="19" fill="#0f172a" text-anchor="middle">Unprecedented Scale</text>
+
+    <!-- Sub-block 1: 5.6 Trillion Pixels -->
+    <rect x="18" y="142" width="314" height="162" rx="12" fill="#ffffff" stroke="#dcfce7" stroke-width="1.5" />
+    <text x="32" y="174" class="font-title" font-size="24" fill="#047857">5.6 Trillion</text>
+    <text x="32" y="196" class="font-bold" font-size="14" fill="#0f172a">Digital Map Pixels</text>
+    <text x="32" y="222" class="font-regular" font-size="12" fill="#334155">The largest 2D seamless color mosaic</text>
+    <text x="32" y="242" class="font-regular" font-size="12" fill="#334155">ever assembled for astronomical science.</text>
+    <text x="32" y="268" class="font-semibold" font-size="11" fill="#059669">Public interactive pan &amp; zoom viewing</text>
+    <text x="32" y="286" class="font-regular" font-size="11" fill="#64748b">Accessible via Legacy Survey Sky Viewer</text>
+
+    <!-- Sub-block 2: ~4 Billion Objects -->
+    <rect x="18" y="318" width="314" height="162" rx="12" fill="#ffffff" stroke="#dcfce7" stroke-width="1.5" />
+    <text x="32" y="350" class="font-title" font-size="24" fill="#047857">~4 Billion</text>
+    <text x="32" y="372" class="font-bold" font-size="14" fill="#0f172a">Cataloged Celestial Objects</text>
+    <text x="32" y="398" class="font-regular" font-size="12" fill="#334155">Stars, distant galaxies, quasars, and</text>
+    <text x="32" y="418" class="font-regular" font-size="12" fill="#334155">exotic gravitational lens systems.</text>
+    <text x="32" y="444" class="font-semibold" font-size="11" fill="#059669">Searchable Astro Data Lab database</text>
+    <text x="32" y="462" class="font-regular" font-size="11" fill="#64748b">Open to researchers and citizen scientists</text>
+
+    <!-- Sub-block 3: 75% Coverage -->
+    <rect x="18" y="494" width="314" height="175" rx="12" fill="#ffffff" stroke="#dcfce7" stroke-width="1.5" />
+    <text x="32" y="526" class="font-title" font-size="24" fill="#047857">75% of the Sky</text>
+    <text x="32" y="548" class="font-bold" font-size="14" fill="#0f172a">Celestial Sphere Coverage</text>
+    <text x="32" y="574" class="font-regular" font-size="12" fill="#334155">Spans three-quarters of the entire sky,</text>
+    <text x="32" y="594" class="font-regular" font-size="12" fill="#334155">avoiding galactic dust obscuration.</text>
+    <text x="32" y="620" class="font-semibold" font-size="11" fill="#059669">Clear extragalactic universe window</text>
+    <text x="32" y="638" class="font-regular" font-size="11" fill="#64748b">Benchmark reference for decades to come</text>
+  </g>
+
+  <!-- ==================== COLUMN 3: 13 YEARS OF DATA ==================== -->
+  <g transform="translate(817, 145)">
+    <!-- Outer Card -->
+    <rect width="350" height="695" rx="18" fill="#fefce8" stroke="#fef08a" stroke-width="2" />
+
+    <!-- Top Icon Badge -->
+    <circle cx="175" cy="48" r="22" fill="#d97706" />
+    <rect x="165" y="38" width="20" height="20" rx="3" stroke="#ffffff" stroke-width="2" fill="none" />
+    <line x1="165" y1="44" x2="185" y2="44" stroke="#ffffff" stroke-width="2" />
+    <line x1="170" y1="35" x2="170" y2="39" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+    <line x1="180" y1="35" x2="180" y2="39" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Column Headers -->
+    <text x="175" y="92" class="font-bold" font-size="11" fill="#d97706" text-anchor="middle" letter-spacing="1.2">DECADE OF DISCOVERY</text>
+    <text x="175" y="118" class="font-title" font-size="19" fill="#0f172a" text-anchor="middle">13 Years of Data</text>
+
+    <!-- Sub-block 1: Exposures -->
+    <rect x="18" y="142" width="314" height="162" rx="12" fill="#ffffff" stroke="#fef9c3" stroke-width="1.5" />
+    <text x="32" y="174" class="font-title" font-size="24" fill="#b45309">263,407</text>
+    <text x="32" y="196" class="font-bold" font-size="14" fill="#0f172a">Telescope Exposures</text>
+    <text x="32" y="222" class="font-regular" font-size="12" fill="#334155">Combined photometric observations from</text>
+    <text x="32" y="242" class="font-regular" font-size="12" fill="#334155">three major ground-based observatories.</text>
+    <text x="32" y="268" class="font-semibold" font-size="11" fill="#b45309">Multi-wavelength calibrated data</text>
+    <text x="32" y="286" class="font-regular" font-size="11" fill="#64748b">Optical and near-infrared harmonization</text>
+
+    <!-- Sub-block 2: Scientists -->
+    <rect x="18" y="318" width="314" height="162" rx="12" fill="#ffffff" stroke="#fef9c3" stroke-width="1.5" />
+    <text x="32" y="350" class="font-title" font-size="24" fill="#b45309">160+ Scientists</text>
+    <text x="32" y="372" class="font-bold" font-size="14" fill="#0f172a">Global Research Team</text>
+    <text x="32" y="398" class="font-regular" font-size="12" fill="#334155">International collaboration over 13 years,</text>
+    <text x="32" y="418" class="font-regular" font-size="12" fill="#334155">with core team of 20 delivering final release.</text>
+    <text x="32" y="444" class="font-semibold" font-size="11" fill="#b45309">Led by Arjun Dey &amp; David Schlegel</text>
+    <text x="32" y="462" class="font-regular" font-size="11" fill="#64748b">NOIRLab and Berkeley Lab partnership</text>
+
+    <!-- Sub-block 3: Research Papers -->
+    <rect x="18" y="494" width="314" height="175" rx="12" fill="#ffffff" stroke="#fef9c3" stroke-width="1.5" />
+    <text x="32" y="526" class="font-title" font-size="24" fill="#b45309">1,800+ Papers</text>
+    <text x="32" y="548" class="font-bold" font-size="14" fill="#0f172a">Peer-Reviewed Publications</text>
+    <text x="32" y="574" class="font-regular" font-size="12" fill="#334155">Published science studies actively</text>
+    <text x="32" y="594" class="font-regular" font-size="12" fill="#334155">referencing Legacy Surveys survey data.</text>
+    <text x="32" y="620" class="font-semibold" font-size="11" fill="#b45309">Standard fabric of astronomy today</text>
+    <text x="32" y="638" class="font-regular" font-size="11" fill="#64748b">Integral tool for observational astrophysics</text>
+  </g>
+
+  <!-- ==================== COLUMN 4: COSMIC MISSION ==================== -->
+  <g transform="translate(1200, 145)">
+    <!-- Outer Card -->
+    <rect width="350" height="695" rx="18" fill="#faf5ff" stroke="#e9d5ff" stroke-width="2" />
+
+    <!-- Top Icon Badge -->
+    <circle cx="175" cy="48" r="22" fill="#7c3aed" />
+    <circle cx="175" cy="48" r="6" fill="#ffffff" />
+    <ellipse cx="175" cy="48" rx="15" ry="6" stroke="#ffffff" stroke-width="2" fill="none" transform="rotate(-25 175 48)" />
+
+    <!-- Column Headers -->
+    <text x="175" y="92" class="font-bold" font-size="11" fill="#7c3aed" text-anchor="middle" letter-spacing="1.2">COSMOLOGICAL IMPACT</text>
+    <text x="175" y="118" class="font-title" font-size="19" fill="#0f172a" text-anchor="middle">Cosmic Mission</text>
+
+    <!-- Sub-block 1: DESI 3D Blueprint -->
+    <rect x="18" y="142" width="314" height="162" rx="12" fill="#ffffff" stroke="#f3e8ff" stroke-width="1.5" />
+    <text x="32" y="170" class="font-bold" font-size="15" fill="#6d28d9">DESI 3D Blueprint</text>
+    <text x="32" y="192" class="font-bold" font-size="12" fill="#0f172a">Target Selection Engine</text>
+    <text x="32" y="214" class="font-regular" font-size="12" fill="#334155">Direct foundation for DESI spectrograph</text>
+    <text x="32" y="234" class="font-regular" font-size="12" fill="#334155">measuring redshifts of 40M+ galaxies.</text>
+    <text x="32" y="258" class="font-semibold" font-size="11" fill="#7c3aed">Survey finished early in April 2026</text>
+    <text x="32" y="278" class="font-regular" font-size="11" fill="#64748b">Observations extended through 2028</text>
+
+    <!-- Sub-block 2: Dark Energy Evolution -->
+    <rect x="18" y="318" width="314" height="162" rx="12" fill="#ffffff" stroke="#f3e8ff" stroke-width="1.5" />
+    <text x="32" y="346" class="font-bold" font-size="15" fill="#6d28d9">Dark Energy Probing</text>
+    <text x="32" y="368" class="font-bold" font-size="12" fill="#0f172a">Cosmic Expansion Dynamics</text>
+    <text x="32" y="390" class="font-regular" font-size="12" fill="#334155">Investigating whether dark energy weakens</text>
+    <text x="32" y="410" class="font-regular" font-size="12" fill="#334155">over time versus a constant vacuum state.</text>
+    <text x="32" y="434" class="font-semibold" font-size="11" fill="#7c3aed">Potential cosmological paradigm shift</text>
+    <text x="32" y="454" class="font-regular" font-size="11" fill="#64748b">New results scheduled for 2027</text>
+
+    <!-- Sub-block 3: Future Observatories & AI -->
+    <rect x="18" y="494" width="314" height="175" rx="12" fill="#ffffff" stroke="#f3e8ff" stroke-width="1.5" />
+    <text x="32" y="522" class="font-bold" font-size="15" fill="#6d28d9">Next-Gen Baseline &amp; AI</text>
+    <text x="32" y="544" class="font-bold" font-size="12" fill="#0f172a">Vera C. Rubin &amp; Roman</text>
+    <text x="32" y="566" class="font-regular" font-size="12" fill="#334155">Essential reference for Rubin Observatory LSST</text>
+    <text x="32" y="586" class="font-regular" font-size="12" fill="#334155">and NASA Nancy Grace Roman Telescope.</text>
+    <text x="32" y="612" class="font-semibold" font-size="11" fill="#7c3aed">DOE Genesis Mission AI training</text>
+    <text x="32" y="632" class="font-regular" font-size="11" fill="#64748b">American Science Cloud pilot integration</text>
+  </g>
+
+  <!-- Footer Information Bar -->
+  <text x="800" y="874" class="font-semibold" font-size="12" fill="#64748b" text-anchor="middle">Data publicly accessible via Legacy Survey Sky Viewer (viewer.legacysurvey.org) and Astro Data Lab at NSF NOIRLab CSDC</text>
+</svg>

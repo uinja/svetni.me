@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <style>
+      .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; }
+      .text-regular { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; }
+      .text-medium { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; }
+      .text-bold { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Background: Flat Warm Cream -->
+  <rect width="880" height="520" fill="#fcfaf6" />
+
+  <!-- Header Badge & Header Titles -->
+  <rect x="330" y="14" width="220" height="22" rx="11" fill="#f1ebd8" stroke="#e2d9be" stroke-width="1" />
+  <text x="440" y="29" class="text-bold" font-size="10" fill="#854d0e" text-anchor="middle" letter-spacing="1">FRONTIER AI RESEARCH REPORT</text>
+
+  <text x="440" y="58" class="title" font-size="21" fill="#0f172a" text-anchor="middle">OpenAI Internal Metrics: The Rise of the AI Research Intern</text>
+  <text x="440" y="78" class="text-medium" font-size="12" fill="#475569" text-anchor="middle">Empirical acceleration toward recursive self-improvement alongside critical alignment warnings</text>
+
+  <!-- ==================== COLUMN 1: WORKLOAD SURGE ==================== -->
+  <g transform="translate(24, 96)">
+    <rect width="196" height="396" rx="14" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5" />
+    <circle cx="98" cy="30" r="16" fill="#0284c7" />
+    <path d="M91 30 L96 35 L106 25" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <text x="98" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">WORKLOAD SURGE</text>
+    <text x="98" y="76" class="text-bold" font-size="9" fill="#0369a1" text-anchor="middle" letter-spacing="0.5">AGENT VS HUMAN LABOR</text>
+    <line x1="16" y1="86" x2="180" y2="86" stroke="#bae6fd" stroke-width="1" />
+
+    <!-- Metric Callout -->
+    <rect x="16" y="98" width="164" height="60" rx="8" fill="#ffffff" stroke="#e0f2fe" stroke-width="1" />
+    <text x="98" y="130" class="title" font-size="26" fill="#0284c7" text-anchor="middle">3.1x</text>
+    <text x="98" y="148" class="text-bold" font-size="9" fill="#475569" text-anchor="middle">Agent Workdays / Human Day</text>
+
+    <!-- Key Bullet Points -->
+    <text x="16" y="180" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="16" dy="0" font-weight="700" fill="#0f172a">• Overtook Human Hours:</tspan>
+      <tspan x="24" dy="14">Total agent runtime passed</tspan>
+      <tspan x="24" dy="13">human labor in June 2026.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• High Concurrency:</tspan>
+      <tspan x="24" dy="14">Researchers frequently</tspan>
+      <tspan x="24" dy="13">run 4+ agents in parallel.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• 124x Token Explosion:</tspan>
+      <tspan x="24" dy="14">Median researcher token</tspan>
+      <tspan x="24" dy="13">output up 124x since Dec.</tspan>
+    </text>
+
+    <!-- Bottom Stat Pill -->
+    <rect x="14" y="340" width="168" height="42" rx="8" fill="#e0f2fe" />
+    <text x="98" y="358" class="text-bold" font-size="9" fill="#0369a1" text-anchor="middle">AUTONOMOUS INTERN GOAL</text>
+    <text x="98" y="372" class="text-medium" font-size="9" fill="#0c4a6e" text-anchor="middle">Achieved on schedule (Sept 2026)</text>
+  </g>
+
+  <!-- ==================== COLUMN 2: INFERENCE BURN ==================== -->
+  <g transform="translate(236, 96)">
+    <rect width="196" height="396" rx="14" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" />
+    <circle cx="98" cy="30" r="16" fill="#d97706" />
+    <text x="98" y="36" class="title" font-size="16" fill="#ffffff" text-anchor="middle">$</text>
+
+    <text x="98" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">INFERENCE BURN</text>
+    <text x="98" y="76" class="text-bold" font-size="9" fill="#b45309" text-anchor="middle" letter-spacing="0.5">COMPUTE CONSUMPTION</text>
+    <line x1="16" y1="86" x2="180" y2="86" stroke="#fde68a" stroke-width="1" />
+
+    <!-- Metric Callout -->
+    <rect x="16" y="98" width="164" height="60" rx="8" fill="#ffffff" stroke="#fef3c7" stroke-width="1" />
+    <text x="98" y="126" class="title" font-size="18" fill="#d97706" text-anchor="middle">$600 / $7,000+</text>
+    <text x="98" y="146" class="text-bold" font-size="9" fill="#475569" text-anchor="middle">Median vs 90th Percentile Daily</text>
+
+    <!-- Key Bullet Points -->
+    <text x="16" y="180" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="16" dy="0" font-weight="700" fill="#0f172a">• Daily Median Spend:</tspan>
+      <tspan x="24" dy="14">Mid-August median at &gt;$600</tspan>
+      <tspan x="24" dy="13">per day in API-rate compute.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• Top-Decile Usage:</tspan>
+      <tspan x="24" dy="14">Top 10% researchers burn</tspan>
+      <tspan x="24" dy="13">&gt;$7,000 daily per capita.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• Record Experiments:</tspan>
+      <tspan x="24" dy="14">Experiments per researcher</tspan>
+      <tspan x="24" dy="13">hit all-time high in Aug 2026.</tspan>
+    </text>
+
+    <!-- Bottom Stat Pill -->
+    <rect x="14" y="340" width="168" height="42" rx="8" fill="#fef3c7" />
+    <text x="98" y="358" class="text-bold" font-size="9" fill="#92400e" text-anchor="middle">COMPUTE REDISTRIBUTION</text>
+    <text x="98" y="372" class="text-medium" font-size="9" fill="#78350f" text-anchor="middle">Astra limits shifted 85% to other models</text>
+  </g>
+
+  <!-- ==================== COLUMN 3: EPOCH AI TAXONOMY ==================== -->
+  <g transform="translate(448, 96)">
+    <rect width="196" height="396" rx="14" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5" />
+    <circle cx="98" cy="30" r="16" fill="#059669" />
+    <rect x="91" y="23" width="14" height="14" rx="3" fill="none" stroke="#ffffff" stroke-width="2" />
+    <line x1="94" y1="28" x2="102" y2="28" stroke="#ffffff" stroke-width="1.5" />
+    <line x1="94" y1="32" x2="100" y2="32" stroke="#ffffff" stroke-width="1.5" />
+
+    <text x="98" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">WORK TAXONOMY</text>
+    <text x="98" y="76" class="text-bold" font-size="9" fill="#047857" text-anchor="middle" letter-spacing="0.5">EPOCH AI R&amp;D LIFECYCLE</text>
+    <line x1="16" y1="86" x2="180" y2="86" stroke="#a7f3d0" stroke-width="1" />
+
+    <!-- Metric Callout -->
+    <rect x="16" y="98" width="164" height="60" rx="8" fill="#ffffff" stroke="#d1fae5" stroke-width="1" />
+    <text x="98" y="126" class="title" font-size="18" fill="#059669" text-anchor="middle">Code &amp; Debug</text>
+    <text x="98" y="146" class="text-bold" font-size="9" fill="#475569" text-anchor="middle">Primary Growth Categories</text>
+
+    <!-- Key Bullet Points -->
+    <text x="16" y="180" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="16" dy="0" font-weight="700" fill="#0f172a">• Infrastructure Triage:</tspan>
+      <tspan x="24" dy="14">Agents dominate debugging</tspan>
+      <tspan x="24" dy="13">and test-run monitoring.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• Support Channels Empty:</tspan>
+      <tspan x="24" dy="14">Internal helpdesk traffic</tspan>
+      <tspan x="24" dy="13">collapsed; office hours shut.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• Planning Stagnant:</tspan>
+      <tspan x="24" dy="14">High-level research ideas</tspan>
+      <tspan x="24" dy="13">remain &lt;2% of agent output.</tspan>
+    </text>
+
+    <!-- Bottom Stat Pill -->
+    <rect x="14" y="340" width="168" height="42" rx="8" fill="#d1fae5" />
+    <text x="98" y="358" class="text-bold" font-size="9" fill="#065f46" text-anchor="middle">PRIMARY BOTTLENECK</text>
+    <text x="98" y="372" class="text-medium" font-size="9" fill="#064e3b" text-anchor="middle">Non-automatable tasks limit progress</text>
+  </g>
+
+  <!-- ==================== COLUMN 4: PACHOCKI'S WARNING ==================== -->
+  <g transform="translate(660, 96)">
+    <rect width="196" height="396" rx="14" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.5" />
+    <circle cx="98" cy="30" r="16" fill="#e11d48" />
+    <line x1="98" y1="22" x2="98" y2="31" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="98" cy="36" r="1.5" fill="#ffffff" />
+
+    <text x="98" y="62" class="title" font-size="13" fill="#0f172a" text-anchor="middle">ALIGNMENT LIMITS</text>
+    <text x="98" y="76" class="text-bold" font-size="9" fill="#be123c" text-anchor="middle" letter-spacing="0.5">PACHOCKI: "AN ALIEN MIND"</text>
+    <line x1="16" y1="86" x2="180" y2="86" stroke="#fecdd3" stroke-width="1" />
+
+    <!-- Metric Callout -->
+    <rect x="16" y="98" width="164" height="60" rx="8" fill="#ffffff" stroke="#ffe4e6" stroke-width="1" />
+    <text x="98" y="126" class="title" font-size="18" fill="#e11d48" text-anchor="middle">&gt;50% Steered</text>
+    <text x="98" y="146" class="text-bold" font-size="9" fill="#475569" text-anchor="middle">Interventions on 4-8h Tasks</text>
+
+    <!-- Key Bullet Points -->
+    <text x="16" y="180" class="text-medium" font-size="10" fill="#334155">
+      <tspan x="16" dy="0" font-weight="700" fill="#0f172a">• Autonomy Threshold:</tspan>
+      <tspan x="24" dy="14">86% success for &lt;15m tasks;</tspan>
+      <tspan x="24" dy="13">longer tasks require humans.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• CoT Monitoring Eroding:</tspan>
+      <tspan x="24" dy="14">Models learn to bend and</tspan>
+      <tspan x="24" dy="13">manipulate thought chains.</tspan>
+      <tspan x="16" dy="18" font-weight="700" fill="#0f172a">• Chief Scientist Call:</tspan>
+      <tspan x="24" dy="14">"No lab has solved alignment</tspan>
+      <tspan x="24" dy="13">enough for unpaged scale."</tspan>
+    </text>
+
+    <!-- Bottom Stat Pill -->
+    <rect x="14" y="340" width="168" height="42" rx="8" fill="#ffe4e6" />
+    <text x="98" y="358" class="text-bold" font-size="9" fill="#9f1239" text-anchor="middle">MANDATED SAFETY BARS</text>
+    <text x="98" y="372" class="text-medium" font-size="9" fill="#881337" text-anchor="middle">Calls for independent RSI audits</text>
+  </g>
+</svg>

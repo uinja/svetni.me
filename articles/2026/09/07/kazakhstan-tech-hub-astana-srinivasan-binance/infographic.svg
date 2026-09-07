@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <defs>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+    <!-- Drop Shadow Filter for Cards -->
+    <filter id="cardShadow" x="-5%" y="-3%" width="110%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas: Warm Cream -->
+  <rect width="1600" height="900" fill="#FBF9F4"/>
+
+  <!-- Top Decorative Micro-Accent -->
+  <rect x="0" y="0" width="1600" height="6" fill="#0284C7"/>
+
+  <!-- Header Block -->
+  <g class="font-sans">
+    <!-- Category Tag -->
+    <rect x="60" y="32" width="180" height="26" rx="13" fill="#E2E8F0"/>
+    <text x="150" y="49" font-size="12" font-weight="700" fill="#334155" text-anchor="middle" letter-spacing="1.2">TECH ECOSYSTEM AUDIT</text>
+
+    <!-- Main Title -->
+    <text x="60" y="88" font-size="32" font-weight="800" fill="#0F172A" letter-spacing="-0.5">KAZAKHSTAN TECH HUB ECOSYSTEM</text>
+    
+    <!-- Subtitle -->
+    <text x="60" y="118" font-size="16" font-weight="500" fill="#475569">Four strategic pillars accelerating Astana's emergence as Central Asia's frontier hub for founders, crypto, and AI</text>
+
+    <!-- Header Divider Line -->
+    <line x1="60" y1="145" x2="1540" y2="145" stroke="#E2D9CC" stroke-width="1.5"/>
+  </g>
+
+  <!-- ==================== COLUMN 1: FOUNDER COMMUNITY ==================== -->
+  <g class="font-sans" filter="url(#cardShadow)">
+    <!-- Card Background -->
+    <rect x="60" y="170" width="352" height="660" rx="14" fill="#FFFFFF" stroke="#E2DCD2" stroke-width="1.5"/>
+    <path d="M60 184 Q60 170 74 170 L398 170 Q412 170 412 184 L412 176 L60 176 Z" fill="#7C3AED"/>
+
+    <!-- Category / Header -->
+    <rect x="80" y="195" width="160" height="22" rx="6" fill="#F3E8FF"/>
+    <text x="90" y="210" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="0.8">FOUNDER COMMUNITY</text>
+    
+    <text x="80" y="248" font-size="22" font-weight="700" fill="#0F172A">Network School</text>
+    <text x="80" y="270" font-size="13" font-weight="600" fill="#6B21A8">Balaji Srinivasan (ex-Coinbase, a16z)</text>
+
+    <line x1="80" y1="288" x2="392" y2="288" stroke="#F1ECE4" stroke-width="1.5"/>
+
+    <!-- Bullet 1 -->
+    <g transform="translate(80, 305)">
+      <circle cx="8" cy="8" r="6" fill="#7C3AED"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Relocation to Astana</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Reopened in August 2026 after regulatory</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">challenges shut down its Malaysian base.</text>
+    </g>
+
+    <!-- Bullet 2 -->
+    <g transform="translate(80, 385)">
+      <circle cx="8" cy="8" r="6" fill="#7C3AED"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">"Silicon Valley Outside SV"</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Live-in residential campus built for crypto</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">enthusiasts, founders, and nomads.</text>
+    </g>
+
+    <!-- Bullet 3 -->
+    <g transform="translate(80, 465)">
+      <circle cx="8" cy="8" r="6" fill="#7C3AED"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">#1 Physics Olympiad Talent</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Leveraging Kazakhstan's top ranking in</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">international physics to source young talent.</text>
+    </g>
+
+    <!-- Bullet 4 -->
+    <g transform="translate(80, 545)">
+      <circle cx="8" cy="8" r="6" fill="#7C3AED"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Techno-Optimist Base</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Built on meritocracy and low operating costs</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">to attract global builders without friction.</text>
+    </g>
+
+    <!-- Metric / Highlight Box -->
+    <rect x="80" y="740" width="312" height="68" rx="10" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="1.5"/>
+    <text x="96" y="765" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="0.5">CORE TRACTION METRIC</text>
+    <text x="96" y="792" font-size="15" font-weight="700" fill="#0F172A">Global Network State Pioneer</text>
+  </g>
+
+  <!-- ==================== COLUMN 2: DIGITAL ASSETS & CRYPTO ==================== -->
+  <g class="font-sans" filter="url(#cardShadow)">
+    <!-- Card Background -->
+    <rect x="436" y="170" width="352" height="660" rx="14" fill="#FFFFFF" stroke="#E2DCD2" stroke-width="1.5"/>
+    <path d="M436 184 Q436 170 450 170 L774 170 Q788 170 788 184 L788 176 L436 176 Z" fill="#D97706"/>
+
+    <!-- Category / Header -->
+    <rect x="456" y="195" width="165" height="22" rx="6" fill="#FEF3C7"/>
+    <text x="466" y="210" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">DIGITAL ASSETS &amp; WEB3</text>
+    
+    <text x="456" y="248" font-size="22" font-weight="700" fill="#0F172A">Binance Accords</text>
+    <text x="456" y="270" font-size="13" font-weight="600" fill="#B45309">Changpeng Zhao (Founder, Binance)</text>
+
+    <line x1="456" y1="288" x2="768" y2="288" stroke="#F1ECE4" stroke-width="1.5"/>
+
+    <!-- Bullet 1 -->
+    <g transform="translate(456, 305)">
+      <circle cx="8" cy="8" r="6" fill="#D97706"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">3 Government Agreements</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Signed bilateral accords covering technology,</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">education, and regional infrastructure.</text>
+    </g>
+
+    <!-- Bullet 2 -->
+    <g transform="translate(456, 385)">
+      <circle cx="8" cy="8" r="6" fill="#D97706"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Sovereign Stablecoin Pilot</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Exploring a Kazakhstan-backed stablecoin to</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">integrate national fiat with digital liquidity.</text>
+    </g>
+
+    <!-- Bullet 3 -->
+    <g transform="translate(456, 465)">
+      <circle cx="8" cy="8" r="6" fill="#D97706"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Regional Operations Hub</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Building localized exchange infrastructure and</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">compliance frameworks based in Astana.</text>
+    </g>
+
+    <!-- Bullet 4 -->
+    <g transform="translate(456, 545)">
+      <circle cx="8" cy="8" r="6" fill="#D97706"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Post-Settlement Pivot</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Zhao personal endorsement after US legal</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">settlement signals jurisdictional diversification.</text>
+    </g>
+
+    <!-- Metric / Highlight Box -->
+    <rect x="456" y="740" width="312" height="68" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+    <text x="472" y="765" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.5">STRATEGIC PARTNERSHIP</text>
+    <text x="472" y="792" font-size="15" font-weight="700" fill="#0F172A">3 Formal Bilateral Accords</text>
+  </g>
+
+  <!-- ==================== COLUMN 3: AI & SUPERCOMPUTING ==================== -->
+  <g class="font-sans" filter="url(#cardShadow)">
+    <!-- Card Background -->
+    <rect x="812" y="170" width="352" height="660" rx="14" fill="#FFFFFF" stroke="#E2DCD2" stroke-width="1.5"/>
+    <path d="M812 184 Q812 170 826 170 L1150 170 Q1164 170 1164 184 L1164 176 L812 176 Z" fill="#0284C7"/>
+
+    <!-- Category / Header -->
+    <rect x="832" y="195" width="165" height="22" rx="6" fill="#E0F2FE"/>
+    <text x="842" y="210" font-size="11" font-weight="700" fill="#0369A1" letter-spacing="0.8">AI &amp; SUPERCOMPUTING</text>
+    
+    <text x="832" y="248" font-size="22" font-weight="700" fill="#0F172A">Telegram &amp; AI Lab</text>
+    <text x="832" y="270" font-size="13" font-weight="600" fill="#0369A1">Pavel Durov (Founder, Telegram)</text>
+
+    <line x1="832" y1="288" x2="1144" y2="288" stroke="#F1ECE4" stroke-width="1.5"/>
+
+    <!-- Bullet 1 -->
+    <g transform="translate(832, 305)">
+      <circle cx="8" cy="8" r="6" fill="#0284C7"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Astana AI Research Lab</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Launched in Astana to directly harness</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">Kazakhstan's national supercomputing power.</text>
+    </g>
+
+    <!-- Bullet 2 -->
+    <g transform="translate(832, 385)">
+      <circle cx="8" cy="8" r="6" fill="#0284C7"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">First Regional HQ</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Opened Telegram's first dedicated corporate</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">office in Central Asia to support 1B users.</text>
+    </g>
+
+    <!-- Bullet 3 -->
+    <g transform="translate(832, 465)">
+      <circle cx="8" cy="8" r="6" fill="#0284C7"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">"Economic Powerhouse"</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Durov cited business-friendly regulations and</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">low tax burden amid Western/EU pressures.</text>
+    </g>
+
+    <!-- Bullet 4 -->
+    <g transform="translate(832, 545)">
+      <circle cx="8" cy="8" r="6" fill="#0284C7"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Global VC Endorsements</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Tim Draper and Kai-Fu Lee praised</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">country's entrepreneurship and AI potential.</text>
+    </g>
+
+    <!-- Metric / Highlight Box -->
+    <rect x="832" y="740" width="312" height="68" rx="10" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <text x="848" y="765" font-size="11" font-weight="700" fill="#0284C7" letter-spacing="0.5">COMPUTATIONAL CAPACITY</text>
+    <text x="848" y="792" font-size="15" font-weight="700" fill="#0F172A">National Supercomputer Access</text>
+  </g>
+
+  <!-- ==================== COLUMN 4: INSTITUTIONAL SUPPORT ==================== -->
+  <g class="font-sans" filter="url(#cardShadow)">
+    <!-- Card Background -->
+    <rect x="1188" y="170" width="352" height="660" rx="14" fill="#FFFFFF" stroke="#E2DCD2" stroke-width="1.5"/>
+    <path d="M1188 184 Q1188 170 1202 170 L1526 170 Q1540 170 1540 184 L1540 176 L1188 176 Z" fill="#059669"/>
+
+    <!-- Category / Header -->
+    <rect x="1208" y="195" width="165" height="22" rx="6" fill="#DCFCE7"/>
+    <text x="1218" y="210" font-size="11" font-weight="700" fill="#15803D" letter-spacing="0.8">POLICY &amp; INCENTIVES</text>
+    
+    <text x="1208" y="248" font-size="22" font-weight="700" fill="#0F172A">Astana Hub &amp; Visas</text>
+    <text x="1208" y="270" font-size="13" font-weight="600" fill="#15803D">Tokayev &amp; Madiyev Directives</text>
+
+    <line x1="1208" y1="288" x2="1520" y2="288" stroke="#F1ECE4" stroke-width="1.5"/>
+
+    <!-- Bullet 1 -->
+    <g transform="translate(1208, 305)">
+      <circle cx="8" cy="8" r="6" fill="#059669"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">0% Tax Regime</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Astana Hub technopark offers zero corporate</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">income tax and 0% VAT for qualifying startups.</text>
+    </g>
+
+    <!-- Bullet 2 -->
+    <g transform="translate(1208, 385)">
+      <circle cx="8" cy="8" r="6" fill="#059669"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">"Neo Nomad" Visa Pathways</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Custom visas designed specifically for remote</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">tech workers and foreign professionals.</text>
+    </g>
+
+    <!-- Bullet 3 -->
+    <g transform="translate(1208, 465)">
+      <circle cx="8" cy="8" r="6" fill="#059669"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Presidential Immigration Reform</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">Tokayev ordered streamlined residency for</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">highly skilled engineers and tech investors.</text>
+    </g>
+
+    <!-- Bullet 4 -->
+    <g transform="translate(1208, 545)">
+      <circle cx="8" cy="8" r="6" fill="#059669"/>
+      <text x="24" y="12" font-size="14" font-weight="700" fill="#1E293B">Proactive AI Strategy</text>
+      <text x="24" y="32" font-size="12.5" font-weight="400" fill="#475569">DPM Zhaslan Madiyev actively building talent</text>
+      <text x="24" y="50" font-size="12.5" font-weight="400" fill="#475569">ecosystem with bold ideas and compute access.</text>
+    </g>
+
+    <!-- Metric / Highlight Box -->
+    <rect x="1208" y="740" width="312" height="68" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+    <text x="1224" y="765" font-size="11" font-weight="700" fill="#15803D" letter-spacing="0.5">INSTITUTIONAL PERKS</text>
+    <text x="1224" y="792" font-size="15" font-weight="700" fill="#0F172A">0% Corporate Tax &amp; VAT</text>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <g class="font-sans">
+    <line x1="60" y1="848" x2="1540" y2="848" stroke="#E2D9CC" stroke-width="1"/>
+    <text x="60" y="874" font-size="12" font-weight="500" fill="#64748B">Source: Business Insider investigative reporting; official disclosures from Astana Hub, Binance, and Telegram.</text>
+    <text x="1540" y="874" font-size="12" font-weight="600" fill="#64748B" text-anchor="end">Svetni.me Editorial Analysis • September 2026</text>
+  </g>
+</svg>
