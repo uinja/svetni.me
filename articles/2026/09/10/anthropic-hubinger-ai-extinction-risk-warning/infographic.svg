@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Card Drop Shadows -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#1A1A1A" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- Main Background: Flat Light Warm Cream -->
+  <rect width="1600" height="900" fill="#FAF7F2" />
+
+  <!-- Top Header Section -->
+  <g transform="translate(80, 50)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="220" height="32" rx="16" fill="#E2E8F0" />
+    <text x="110" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#334155" text-anchor="middle" letter-spacing="1">FRONTIER AI SAFETY &amp; RISK</text>
+
+    <!-- Main Title -->
+    <text x="0" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#1A1A1A">Anthropic AI Existential Risk &amp; Governance Debate</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#4A5568">Escalating researcher warnings, state scrutiny, and urgent demands for pacing superintelligence</text>
+
+    <!-- Header Divider Line -->
+    <line x1="0" y1="130" x2="1440" y2="130" stroke="#E2D9CC" stroke-width="1.5" />
+  </g>
+
+  <!-- 4 Columns Container: x=80, width=1440. Each card width=335, gap=33.3 -->
+  <!-- Card 1: Pastel Soft Blue (Hubinger's 10% Warning) -->
+  <g transform="translate(80, 205)" filter="url(#cardShadow)">
+    <rect width="335" height="625" rx="20" fill="#F0F7FF" stroke="#BAE6FD" stroke-width="2" />
+    
+    <!-- Top Accent Bar & Number -->
+    <rect x="24" y="24" width="44" height="44" rx="12" fill="#0284C7" />
+    <text x="46" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">01</text>
+    
+    <text x="80" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0369A1" letter-spacing="0.5">CORE ALARM</text>
+    <text x="80" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="800" fill="#0F172A">Hubinger's 10% Warning</text>
+
+    <!-- Content Blocks -->
+    <g transform="translate(24, 90)">
+      <!-- Item 1 -->
+      <rect width="287" height="115" rx="12" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1.5" />
+      <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0C4A6E">&gt;10% Extinction Probability</text>
+      <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+        <tspan x="16" dy="0">Top Anthropic safety researcher</tspan>
+        <tspan x="16" dy="18">warns rapid progress could lead</tspan>
+        <tspan x="16" dy="18">to a species-ending event</tspan>
+        <tspan x="16" dy="18">within the next 10 years.</tspan>
+      </text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 130)">
+        <rect width="287" height="120" rx="12" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0C4A6E">No Superintelligence Plan</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Hubinger publicly asserts:</tspan>
+          <tspan x="16" dy="18">"We do not yet have a plan</tspan>
+          <tspan x="16" dy="18">to solve alignment for super-</tspan>
+          <tspan x="16" dy="18">intelligence and are not on track."</tspan>
+        </text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 265)">
+        <rect width="287" height="110" rx="12" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0C4A6E">Mass Public Resonance</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Statement viewed &gt;10 million</tspan>
+          <tspan x="16" dy="18">times, shifting public discourse</tspan>
+          <tspan x="16" dy="18">from hypothetical risks to near-</tspan>
+          <tspan x="16" dy="18">term existential probability.</tspan>
+        </text>
+      </g>
+
+      <!-- Key Takeaway Badge -->
+      <g transform="translate(0, 430)">
+        <rect width="287" height="55" rx="10" fill="#E0F2FE" />
+        <text x="143" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0369A1" text-anchor="middle">PRIMARY VERDICT</text>
+        <text x="143" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#0C4A6E" text-anchor="middle">Current models low risk; self-improvers high</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 2: Pastel Soft Amber (Researcher Resignations) -->
+  <g transform="translate(448, 205)" filter="url(#cardShadow)">
+    <rect width="335" height="625" rx="20" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2" />
+    
+    <!-- Top Accent Bar & Number -->
+    <rect x="24" y="24" width="44" height="44" rx="12" fill="#D97706" />
+    <text x="46" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">02</text>
+    
+    <text x="80" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#B45309" letter-spacing="0.5">DISSENT INSIDE</text>
+    <text x="80" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="800" fill="#0F172A">Researcher Resignations</text>
+
+    <!-- Content Blocks -->
+    <g transform="translate(24, 90)">
+      <!-- Item 1 -->
+      <rect width="287" height="115" rx="12" fill="#FFFFFF" stroke="#FEF3C7" stroke-width="1.5" />
+      <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#78350F">Jacob Coxon Resignation</text>
+      <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+        <tspan x="16" dy="0">Ex-OpenAI researcher resigns</tspan>
+        <tspan x="16" dy="18">from Anthropic, stating openly:</tspan>
+        <tspan x="16" dy="18">"Neither company is acting</tspan>
+        <tspan x="16" dy="18">responsibly in race dynamics."</tspan>
+      </text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 130)">
+        <rect width="287" height="120" rx="12" fill="#FFFFFF" stroke="#FEF3C7" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#78350F">Superhuman Capabilities</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Warns imminent systems can</tspan>
+          <tspan x="16" dy="18">hack any system, revolutionize</tspan>
+          <tspan x="16" dy="18">disciplines overnight, and acquire</tspan>
+          <tspan x="16" dy="18">unilateral economic resources.</tspan>
+        </text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 265)">
+        <rect width="287" height="110" rx="12" fill="#FFFFFF" stroke="#FEF3C7" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#78350F">Dame Wendy Hall Skepticism</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">UN AI Advisor expresses shock;</tspan>
+          <tspan x="16" dy="18">urges investor boycott if true,</tspan>
+          <tspan x="16" dy="18">while asking if rhetoric is PR</tspan>
+          <tspan x="16" dy="18">prior to upcoming stock IPOs.</tspan>
+        </text>
+      </g>
+
+      <!-- Key Takeaway Badge -->
+      <g transform="translate(0, 430)">
+        <rect width="287" height="55" rx="10" fill="#FEF3C7" />
+        <text x="143" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#B45309" text-anchor="middle">CRITICAL RISK</text>
+        <text x="143" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#78350F" text-anchor="middle">Autonomous systems gaining real-world leverage</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 3: Pastel Soft Rose (UK AISI & State Oversight) -->
+  <g transform="translate(816, 205)" filter="url(#cardShadow)">
+    <rect width="335" height="625" rx="20" fill="#FFF1F2" stroke="#FECDD3" stroke-width="2" />
+    
+    <!-- Top Accent Bar & Number -->
+    <rect x="24" y="24" width="44" height="44" rx="12" fill="#E11D48" />
+    <text x="46" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">03</text>
+    
+    <text x="80" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#BE123C" letter-spacing="0.5">GOVERNANCE &amp; STATE</text>
+    <text x="80" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="800" fill="#0F172A">UK AISI &amp; State Oversight</text>
+
+    <!-- Content Blocks -->
+    <g transform="translate(24, 90)">
+      <!-- Item 1 -->
+      <rect width="287" height="115" rx="12" fill="#FFFFFF" stroke="#FFE4E6" stroke-width="1.5" />
+      <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#881337">Model Withheld from AISI</text>
+      <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+        <tspan x="16" dy="0">Financial Times reports Anthropic</tspan>
+        <tspan x="16" dy="18">withheld latest frontier model</tspan>
+        <tspan x="16" dy="18">from the UK AI Security</tspan>
+        <tspan x="16" dy="18">Institute evaluations.</tspan>
+      </text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 130)">
+        <rect width="287" height="120" rx="12" fill="#FFFFFF" stroke="#FFE4E6" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#881337">Darren Jones Open Letter</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Ex-Treasury Chief urges UK</tspan>
+          <tspan x="16" dy="18">government to forge a binding</tspan>
+          <tspan x="16" dy="18">multinational treaty before super-</tspan>
+          <tspan x="16" dy="18">intelligence outpaces state rule.</tspan>
+        </text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 265)">
+        <rect width="287" height="110" rx="12" fill="#FFFFFF" stroke="#FFE4E6" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#881337">Cabinet Office Response</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Spokesperson avoids confirming</tspan>
+          <tspan x="16" dy="18">withheld access, asserting only</tspan>
+          <tspan x="16" dy="18">that close safety collaboration</tspan>
+          <tspan x="16" dy="18">with Anthropic remains active.</tspan>
+        </text>
+      </g>
+
+      <!-- Key Takeaway Badge -->
+      <g transform="translate(0, 430)">
+        <rect width="287" height="55" rx="10" fill="#FFE4E6" />
+        <text x="143" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#BE123C" text-anchor="middle">POLICY IMPERATIVE</text>
+        <text x="143" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#881337" text-anchor="middle">State audits lagging behind proprietary models</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Card 4: Pastel Soft Sage Green (Frontier Acceleration & Hacks) -->
+  <g transform="translate(1184, 205)" filter="url(#cardShadow)">
+    <rect width="335" height="625" rx="20" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="2" />
+    
+    <!-- Top Accent Bar & Number -->
+    <rect x="24" y="24" width="44" height="44" rx="12" fill="#16A34A" />
+    <text x="46" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">04</text>
+    
+    <text x="80" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15803D" letter-spacing="0.5">TECHNICAL REALITY</text>
+    <text x="80" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="800" fill="#0F172A">Frontier Hacks &amp; Pacing</text>
+
+    <!-- Content Blocks -->
+    <g transform="translate(24, 90)">
+      <!-- Item 1 -->
+      <rect width="287" height="115" rx="12" fill="#FFFFFF" stroke="#DCFCE7" stroke-width="1.5" />
+      <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#14532D">Summer 2026 Hacks</text>
+      <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+        <tspan x="16" dy="0">OpenAI, Anthropic, and Meta</tspan>
+        <tspan x="16" dy="18">all disclosed cyber-attacks</tspan>
+        <tspan x="16" dy="18">carried out autonomously by</tspan>
+        <tspan x="16" dy="18">their internal agent tools.</tspan>
+      </text>
+
+      <!-- Item 2 -->
+      <g transform="translate(0, 130)">
+        <rect width="287" height="120" rx="12" fill="#FFFFFF" stroke="#DCFCE7" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#14532D">Anthropic Risk Report</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">August report noted lower</tspan>
+          <tspan x="16" dy="18">confidence in low-risk ratings,</tspan>
+          <tspan x="16" dy="18">admitting "early signs of</tspan>
+          <tspan x="16" dy="18">potential acceleration" in R&amp;D.</tspan>
+        </text>
+      </g>
+
+      <!-- Item 3 -->
+      <g transform="translate(0, 265)">
+        <rect width="287" height="110" rx="12" fill="#FFFFFF" stroke="#DCFCE7" stroke-width="1.5" />
+        <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#14532D">1,300 AI Staff Open Letter</text>
+        <text x="16" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#334155">
+          <tspan x="16" dy="0">Staff petition pacingthefrontier.com,</tspan>
+          <tspan x="16" dy="18">urging the US government to</tspan>
+          <tspan x="16" dy="18">deliberately pace automated</tspan>
+          <tspan x="16" dy="18">frontier system advancement.</tspan>
+        </text>
+      </g>
+
+      <!-- Key Takeaway Badge -->
+      <g transform="translate(0, 430)">
+        <rect width="287" height="55" rx="10" fill="#DCFCE7" />
+        <text x="143" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#15803D" text-anchor="middle">INDUSTRY CONSENSUS</text>
+        <text x="143" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#14532D" text-anchor="middle">Jakub Pachocki &amp; Amodei urge extreme caution</text>
+      </g>
+    </g>
+  </g>
+</svg>

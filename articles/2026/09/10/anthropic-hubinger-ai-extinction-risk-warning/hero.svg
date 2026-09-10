@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E14" />
+      <stop offset="50%" stop-color="#121824" />
+      <stop offset="100%" stop-color="#1A121E" />
+    </linearGradient>
+
+    <!-- Anthropic Terracotta Gradient -->
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E07A5F" />
+      <stop offset="100%" stop-color="#C85A32" />
+    </linearGradient>
+
+    <!-- Danger/Divergence Crimson Gradient -->
+    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#BE123C" />
+    </linearGradient>
+
+    <!-- Safe/Aligned Cyan Gradient -->
+    <linearGradient id="safeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Amber Alert Gradient -->
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowTerracotta" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowSafe" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowDanger" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bgGrad)" />
+
+  <!-- Subtle Geometric Grid / Circuit Grid Pattern -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="900" />
+    <line x1="300" y1="0" x2="300" y2="900" />
+    <line x1="500" y1="0" x2="500" y2="900" />
+    <line x1="700" y1="0" x2="700" y2="900" />
+    <line x1="900" y1="0" x2="900" y2="900" />
+    <line x1="1100" y1="0" x2="1100" y2="900" />
+    <line x1="1300" y1="0" x2="1300" y2="900" />
+    <line x1="1500" y1="0" x2="1500" y2="900" />
+    <line x1="0" y1="150" x2="1600" y2="150" />
+    <line x1="0" y1="300" x2="1600" y2="300" />
+    <line x1="0" y1="450" x2="1600" y2="450" />
+    <line x1="0" y1="600" x2="1600" y2="600" />
+    <line x1="0" y1="750" x2="1600" y2="750" />
+  </g>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="280" cy="450" r="260" fill="#E07A5F" opacity="0.12" filter="url(#glowTerracotta)" />
+  <circle cx="800" cy="450" r="320" fill="#38BDF8" opacity="0.08" filter="url(#glowSafe)" />
+  <circle cx="1320" cy="300" r="280" fill="#F43F5E" opacity="0.14" filter="url(#glowDanger)" />
+
+  <!-- Central Network Flow & Divergence -->
+  <!-- 1. Incoming Aligned Path (Left -> Center) -->
+  <g stroke-linecap="round">
+    <!-- Base Bundled Neural Trunk -->
+    <path d="M 80 450 C 260 450, 360 450, 520 450" stroke="url(#terracottaGrad)" stroke-width="8" fill="none" filter="url(#glowTerracotta)" />
+    <path d="M 80 430 C 260 430, 340 440, 520 450" stroke="#E07A5F" stroke-width="3" opacity="0.7" fill="none" />
+    <path d="M 80 470 C 260 470, 340 460, 520 450" stroke="#E07A5F" stroke-width="3" opacity="0.7" fill="none" />
+    <path d="M 120 380 C 280 400, 400 440, 520 450" stroke="#38BDF8" stroke-width="3.5" opacity="0.6" fill="none" />
+    <path d="M 120 520 C 280 500, 400 460, 520 450" stroke="#38BDF8" stroke-width="3.5" opacity="0.6" fill="none" />
+
+    <!-- Core Nexus / Bifurcation Point at (700, 450) -->
+    <path d="M 520 450 C 600 450, 640 450, 720 450" stroke="#FFFFFF" stroke-width="6" fill="none" filter="url(#glowSafe)" />
+    
+    <!-- Aligned Controlled Future Corridor (Branching Forward-Lower) -->
+    <path d="M 720 450 C 860 450, 980 560, 1180 580 C 1340 600, 1460 600, 1540 600" stroke="url(#safeGrad)" stroke-width="5" fill="none" filter="url(#glowSafe)" />
+    <path d="M 720 450 C 880 470, 1020 620, 1220 640 C 1380 650, 1480 650, 1540 650" stroke="#0284C7" stroke-width="2.5" opacity="0.6" fill="none" />
+    <path d="M 1180 580 C 1300 550, 1420 540, 1540 540" stroke="#38BDF8" stroke-width="2" opacity="0.5" fill="none" />
+
+    <!-- Unaligned / Superintelligence Divergence Corridor (Branching Wildly Upwards & Fracturing) -->
+    <path d="M 720 450 C 820 420, 900 280, 1060 240 C 1220 200, 1360 180, 1540 180" stroke="url(#dangerGrad)" stroke-width="7" fill="none" filter="url(#glowDanger)" />
+    <path d="M 1060 240 C 1160 160, 1320 120, 1540 110" stroke="#F43F5E" stroke-width="4" fill="none" opacity="0.85" />
+    <path d="M 1060 240 C 1200 290, 1360 280, 1540 280" stroke="#FB7185" stroke-width="3" fill="none" opacity="0.75" />
+    <path d="M 1240 190 C 1360 230, 1440 250, 1540 240" stroke="#E11D48" stroke-width="2" fill="none" opacity="0.6" />
+    
+    <!-- Intermediate Uncertainty / Escalation Paths -->
+    <path d="M 720 450 C 880 430, 1040 400, 1260 410 C 1400 420, 1480 420, 1540 420" stroke="url(#amberGrad)" stroke-width="3" stroke-dasharray="8 6" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- Network Nodes & Constellation Points -->
+  <!-- Input Tier Nodes -->
+  <g>
+    <circle cx="180" cy="450" r="14" fill="#E07A5F" stroke="#FFFFFF" stroke-width="3" filter="url(#glowTerracotta)" />
+    <circle cx="320" cy="450" r="18" fill="#D97706" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="240" cy="390" r="9" fill="#38BDF8" opacity="0.8" />
+    <circle cx="240" cy="510" r="9" fill="#38BDF8" opacity="0.8" />
+    <circle cx="420" cy="450" r="22" fill="#E07A5F" stroke="#FFFFFF" stroke-width="4" filter="url(#glowTerracotta)" />
+  </g>
+
+  <!-- Primary Nexus Ring & Nodes at Critical Bifurcation -->
+  <g>
+    <circle cx="720" cy="450" r="50" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-dasharray="6 6" />
+    <circle cx="720" cy="450" r="32" fill="#14171F" stroke="#E07A5F" stroke-width="6" filter="url(#glowTerracotta)" />
+    <circle cx="720" cy="450" r="14" fill="#FFFFFF" />
+  </g>
+
+  <!-- Lower Aligned Branch Nodes (Constrained, Stable Geometric Flow) -->
+  <g>
+    <circle cx="980" cy="560" r="16" fill="#0284C7" stroke="#38BDF8" stroke-width="3" />
+    <circle cx="1180" cy="580" r="20" fill="#0369A1" stroke="#E0F2FE" stroke-width="4" filter="url(#glowSafe)" />
+    <circle cx="1380" cy="595" r="15" fill="#38BDF8" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="1500" cy="600" r="12" fill="#0284C7" />
+    <circle cx="1220" cy="640" r="10" fill="#38BDF8" opacity="0.7" />
+    <circle cx="1420" cy="645" r="9" fill="#38BDF8" opacity="0.7" />
+  </g>
+
+  <!-- Upper Divergent Superintelligence Branch Nodes (Wild, Exponential Fractal Expansion) -->
+  <g>
+    <circle cx="900" cy="330" r="16" fill="#E11D48" stroke="#FEE2E2" stroke-width="3" filter="url(#glowDanger)" />
+    <circle cx="1060" cy="240" r="28" fill="#BE123C" stroke="#FFFFFF" stroke-width="5" filter="url(#glowDanger)" />
+    <circle cx="1060" cy="240" r="10" fill="#FFFFFF" />
+    
+    <!-- High Energy Critical Cluster -->
+    <circle cx="1220" cy="180" r="22" fill="#F43F5E" stroke="#FFE4E6" stroke-width="4" filter="url(#glowDanger)" />
+    <circle cx="1320" cy="120" r="18" fill="#E11D48" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="1460" cy="110" r="14" fill="#F43F5E" />
+    <circle cx="1360" cy="270" r="16" fill="#FB7185" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="1490" cy="260" r="12" fill="#BE123C" />
+  </g>
+
+  <!-- Floating Vector Particle Constellations -->
+  <g fill="#FFFFFF" opacity="0.5">
+    <circle cx="620" cy="320" r="3" />
+    <circle cx="680" cy="260" r="2" />
+    <circle cx="840" cy="200" r="3.5" />
+    <circle cx="950" cy="160" r="2.5" />
+    <circle cx="1120" cy="110" r="4" opacity="0.8" />
+    <circle cx="1380" cy="70" r="3" />
+    <circle cx="1520" cy="80" r="2" />
+    <circle cx="820" cy="620" r="2.5" />
+    <circle cx="920" cy="690" r="3" />
+    <circle cx="1100" cy="720" r="2" />
+    <circle cx="1320" cy="750" r="3" />
+    <circle cx="1480" cy="720" r="2.5" />
+  </g>
+
+  <!-- Anthropic Style Horizon Bars / Minimalist Accent Frame -->
+  <rect x="0" y="0" width="1600" height="6" fill="url(#terracottaGrad)" />
+  <rect x="0" y="894" width="1600" height="6" fill="url(#terracottaGrad)" />
+</svg>

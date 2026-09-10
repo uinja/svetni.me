@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="#FAF8F5" rx="16" />
+
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <!-- Header Badge -->
+    <rect x="460" y="30" width="280" height="26" rx="6" fill="#E2ECF8" />
+    <text x="600" y="43" font-size="11" font-weight="700" fill="#2B4C7E" text-anchor="middle" dominant-baseline="central" letter-spacing="1.2">AI ADOPTION &amp; INTERFACE DESIGN</text>
+    
+    <!-- Main Title & Subtitle -->
+    <text x="600" y="80" font-size="28" font-weight="800" fill="#1A1E1C" text-anchor="middle" dominant-baseline="central" letter-spacing="-0.5">The Discovery Problem in AI</text>
+    <text x="600" y="112" font-size="15" fill="#5A645F" text-anchor="middle" dominant-baseline="central">Why the biggest bottleneck to AI diffusion isn't intelligence, but showing users what is possible</text>
+
+    <!-- CARD 1: THE BLANK BOX -->
+    <g transform="translate(48, 150)">
+      <rect width="255" height="530" fill="#FCEDE6" rx="14" stroke="#F6D6C8" stroke-width="2" />
+      <rect width="255" height="68" fill="#F8DFD4" rx="14" />
+      <rect width="255" height="20" y="48" fill="#F8DFD4" />
+      
+      <!-- Icon Circle -->
+      <circle cx="42" cy="34" r="20" fill="#FFFFFF" />
+      <rect x="31" y="24" width="22" height="20" rx="3" fill="none" stroke="#B84A28" stroke-width="2" />
+      <line x1="36" y1="34" x2="48" y2="34" stroke="#B84A28" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Title -->
+      <text x="74" y="34" font-size="16" font-weight="700" fill="#421C11" dominant-baseline="central">The Blank Box</text>
+
+      <!-- Section 1 -->
+      <text x="20" y="96" font-size="11" font-weight="700" fill="#B84A28" letter-spacing="0.8">INTERFACE BARRIER</text>
+      <text x="20" y="118" font-size="13" fill="#3D2922">Capabilities stay locked</text>
+      <text x="20" y="136" font-size="13" fill="#3D2922">behind an empty text box.</text>
+      <text x="20" y="154" font-size="13" fill="#3D2922">Users face an empty prompt.</text>
+
+      <!-- Section 2 -->
+      <text x="20" y="196" font-size="11" font-weight="700" fill="#B84A28" letter-spacing="0.8">UNKNOWN UNKNOWNS</text>
+      <text x="20" y="218" font-size="13" fill="#3D2922">You don't know what you</text>
+      <text x="20" y="236" font-size="13" fill="#3D2922">don't know. A prompt only</text>
+      <text x="20" y="254" font-size="13" fill="#3D2922">reveals itself once run.</text>
+
+      <!-- Section 3 -->
+      <text x="20" y="296" font-size="11" font-weight="700" fill="#B84A28" letter-spacing="0.8">INVISIBLE HORIZON</text>
+      <text x="20" y="318" font-size="13" fill="#3D2922">Massive latent machine</text>
+      <text x="20" y="336" font-size="13" fill="#3D2922">intelligence remains totally</text>
+      <text x="20" y="354" font-size="13" fill="#3D2922">unseen to non-specialists.</text>
+
+      <!-- Badge / Summary -->
+      <rect x="20" y="440" width="215" height="65" rx="8" fill="#FFFFFF" stroke="#F6D6C8" stroke-width="1.5" />
+      <text x="32" y="464" font-size="10" font-weight="700" fill="#B84A28" letter-spacing="0.8">PRIMARY OBSTACLE</text>
+      <text x="32" y="484" font-size="12" font-weight="600" fill="#421C11">Capabilities remain invisible</text>
+    </g>
+
+    <!-- CARD 2: THE CANYON METAPHOR -->
+    <g transform="translate(327, 150)">
+      <rect width="255" height="530" fill="#EBF2FA" rx="14" stroke="#D3E2F4" stroke-width="2" />
+      <rect width="255" height="68" fill="#DCE8F5" rx="14" />
+      <rect width="255" height="20" y="48" fill="#DCE8F5" />
+      
+      <!-- Icon Circle -->
+      <circle cx="42" cy="34" r="20" fill="#FFFFFF" />
+      <path d="M31 42 L42 22 L53 42 Z" fill="none" stroke="#2B4C7E" stroke-width="2" />
+      <circle cx="42" cy="30" r="3" fill="#2B4C7E" />
+
+      <!-- Title -->
+      <text x="74" y="34" font-size="16" font-weight="700" fill="#1C2E4A" dominant-baseline="central">Alan Kay's Ant</text>
+
+      <!-- Section 1 -->
+      <text x="20" y="96" font-size="11" font-weight="700" fill="#2B4C7E" letter-spacing="0.8">THE CANYON FLOOR</text>
+      <text x="20" y="118" font-size="13" fill="#2A332E">An ant at the canyon base</text>
+      <text x="20" y="136" font-size="13" fill="#2A332E">perceives the sky only as</text>
+      <text x="20" y="154" font-size="13" fill="#2A332E">a thin sliver of blue.</text>
+
+      <!-- Section 2 -->
+      <text x="20" y="196" font-size="11" font-weight="700" fill="#2B4C7E" letter-spacing="0.8">THE RIM VANTAGE</text>
+      <text x="20" y="218" font-size="13" fill="#2A332E">An observer on the rim</text>
+      <text x="20" y="236" font-size="13" fill="#2A332E">sees the vast blue plane.</text>
+      <text x="20" y="254" font-size="13" fill="#2A332E">Same sky, different world.</text>
+
+      <!-- Section 3 -->
+      <text x="20" y="296" font-size="11" font-weight="700" fill="#2B4C7E" letter-spacing="0.8">POSSIBILITY AXES</text>
+      <text x="20" y="318" font-size="13" fill="#2A332E">The ant isn't less capable;</text>
+      <text x="20" y="336" font-size="13" fill="#2A332E">its vantage point simply</text>
+      <text x="20" y="354" font-size="13" fill="#2A332E">obscures what exists.</text>
+
+      <!-- Badge / Summary -->
+      <rect x="20" y="440" width="215" height="65" rx="8" fill="#FFFFFF" stroke="#D3E2F4" stroke-width="1.5" />
+      <text x="32" y="464" font-size="10" font-weight="700" fill="#2B4C7E" letter-spacing="0.8">CORE ANALOGY</text>
+      <text x="32" y="484" font-size="12" font-weight="600" fill="#1C2E4A">Position shapes perception</text>
+    </g>
+
+    <!-- CARD 3: THE ASYMMETRY -->
+    <g transform="translate(606, 150)">
+      <rect width="255" height="530" fill="#FEF6E6" rx="14" stroke="#FCE2B8" stroke-width="2" />
+      <rect width="255" height="68" fill="#FCEAC7" rx="14" />
+      <rect width="255" height="20" y="48" fill="#FCEAC7" />
+      
+      <!-- Icon Circle -->
+      <circle cx="42" cy="34" r="20" fill="#FFFFFF" />
+      <line x1="32" y1="38" x2="52" y2="30" stroke="#B45309" stroke-width="2" stroke-linecap="round" />
+      <circle cx="35" cy="37" r="4" fill="#B45309" />
+      <circle cx="49" cy="31" r="4" fill="#B45309" />
+
+      <!-- Title -->
+      <text x="74" y="34" font-size="16" font-weight="700" fill="#451A03" dominant-baseline="central">User Asymmetry</text>
+
+      <!-- Section 1 -->
+      <text x="20" y="96" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">AGENT FLUENCY GAP</text>
+      <text x="20" y="118" font-size="13" fill="#3D2922">An AI power-user watching</text>
+      <text x="20" y="136" font-size="13" fill="#3D2922">a marketer for an hour sees</text>
+      <text x="20" y="154" font-size="13" fill="#3D2922">dozens of automations.</text>
+
+      <!-- Section 2 -->
+      <text x="20" y="196" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">THE NOVICE STANDSTILL</text>
+      <text x="20" y="218" font-size="13" fill="#3D2922">The marketer staring at</text>
+      <text x="20" y="236" font-size="13" fill="#3D2922">the blank prompt has no</text>
+      <text x="20" y="254" font-size="13" fill="#3D2922">idea what to formulate.</text>
+
+      <!-- Section 3 -->
+      <text x="20" y="296" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">PARTIAL REMEDIES</text>
+      <text x="20" y="318" font-size="13" fill="#3D2922">Templates lack relevance;</text>
+      <text x="20" y="336" font-size="13" fill="#3D2922">context helps suggest, but</text>
+      <text x="20" y="354" font-size="13" fill="#3D2922">neither solves the chasm.</text>
+
+      <!-- Badge / Summary -->
+      <rect x="20" y="440" width="215" height="65" rx="8" fill="#FFFFFF" stroke="#FCE2B8" stroke-width="1.5" />
+      <text x="32" y="464" font-size="10" font-weight="700" fill="#B45309" letter-spacing="0.8">DIVIDE IN FLUENCY</text>
+      <text x="32" y="484" font-size="12" font-weight="600" fill="#451A03">Experts see what others cannot</text>
+    </g>
+
+    <!-- CARD 4: PROACTIVE DISCOVERY -->
+    <g transform="translate(885, 150)">
+      <rect width="255" height="530" fill="#EDF7F1" rx="14" stroke="#D1EDE0" stroke-width="2" />
+      <rect width="255" height="68" fill="#D8F2E4" rx="14" />
+      <rect width="255" height="20" y="48" fill="#D8F2E4" />
+      
+      <!-- Icon Circle -->
+      <circle cx="42" cy="34" r="20" fill="#FFFFFF" />
+      <path d="M42 24 L45 32 L53 34 L46 39 L48 47 L42 42 L36 47 L38 39 L31 34 L39 32 Z" fill="#1B6D46" />
+
+      <!-- Title -->
+      <text x="74" y="34" font-size="16" font-weight="700" fill="#0C3B24" dominant-baseline="central">Proactive UI</text>
+
+      <!-- Section 1 -->
+      <text x="20" y="96" font-size="11" font-weight="700" fill="#1B6D46" letter-spacing="0.8">SHIFTING THE BURDEN</text>
+      <text x="20" y="118" font-size="13" fill="#1B3326">Discovery work must fall</text>
+      <text x="20" y="136" font-size="13" fill="#1B3326">on the system, not on the</text>
+      <text x="20" y="154" font-size="13" fill="#1B3326">unassisted human user.</text>
+
+      <!-- Section 2 -->
+      <text x="20" y="196" font-size="11" font-weight="700" fill="#1B6D46" letter-spacing="0.8">CONTEXTUAL REVELATION</text>
+      <text x="20" y="218" font-size="13" fill="#1B3326">Advanced systems must</text>
+      <text x="20" y="236" font-size="13" fill="#1B3326">reveal capabilities gradually</text>
+      <text x="20" y="254" font-size="13" fill="#1B3326">within actual workflows.</text>
+
+      <!-- Section 3 -->
+      <text x="20" y="296" font-size="11" font-weight="700" fill="#1B6D46" letter-spacing="0.8">SHOWING THE SKY</text>
+      <text x="20" y="318" font-size="13" fill="#1B3326">Interactive affordances that</text>
+      <text x="20" y="336" font-size="13" fill="#1B3326">provoke curiosity and make</text>
+      <text x="20" y="354" font-size="13" fill="#1B3326">the unseen plane visible.</text>
+
+      <!-- Badge / Summary -->
+      <rect x="20" y="440" width="215" height="65" rx="8" fill="#FFFFFF" stroke="#D1EDE0" stroke-width="1.5" />
+      <text x="32" y="464" font-size="10" font-weight="700" fill="#1B6D46" letter-spacing="0.8">FUTURE HORIZON</text>
+      <text x="32" y="484" font-size="12" font-weight="600" fill="#0C3B24">Interfaces must show the sky</text>
+    </g>
+  </g>
+</svg>
