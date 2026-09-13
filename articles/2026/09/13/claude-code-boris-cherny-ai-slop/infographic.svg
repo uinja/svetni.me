@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Warm cream background -->
+  <rect width="100%" height="100%" fill="#faf6eb" />
+
+  <!-- Top Header -->
+  <text x="600" y="65" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#0f172a">THE AI CODING DILEMMA: SLOP VS. PRODUCTION</text>
+  <text x="600" y="98" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#475569">Anthropic Claude Code creator Boris Cherny on balancing rapid AI generation with code quality</text>
+
+  <!-- Column 1: The Dilemma (Soft Blue) -->
+  <g transform="translate(50, 135)">
+    <rect width="255" height="490" rx="28" fill="#e0f2fe" stroke="#bae6fd" stroke-width="2.5" />
+    <circle cx="127" cy="65" r="36" fill="#bae6fd" />
+    <!-- Dilemma / Split Arrows Icon -->
+    <path d="M127 82 L127 48 M115 58 L127 46 L139 58" fill="none" stroke="#0369a1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="127" cy="84" r="4" fill="#0369a1" />
+
+    <text x="127" y="132" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#0369a1">THE DILEMMA</text>
+    <text x="127" y="156" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f172a">Developer Friction</text>
+
+    <g transform="translate(20, 180)">
+      <circle cx="6" cy="10" r="4" fill="#0369a1" />
+      <text x="18" y="14" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">E-mail: &quot;What about slop?&quot;</text>
+      <text x="18" y="32" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Engineers face severe friction over</text>
+      <text x="18" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">AI-generated unvetted pull requests.</text>
+
+      <circle cx="6" cy="85" r="4" fill="#0369a1" />
+      <text x="18" y="89" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Job Description Shift</text>
+      <text x="18" y="107" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Engineers are turned from creators</text>
+      <text x="18" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">into full-time, weary reviewers.</text>
+
+      <circle cx="6" cy="160" r="4" fill="#0369a1" />
+      <text x="18" y="164" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Forced AI Adoption</text>
+      <text x="18" y="182" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Fear of layoffs forces many to</text>
+      <text x="18" y="198" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">force code output without review.</text>
+    </g>
+  </g>
+
+  <!-- Column 2: Vibe Coding (Soft Orange) -->
+  <g transform="translate(330, 135)">
+    <rect width="255" height="490" rx="28" fill="#ffedd5" stroke="#fed7aa" stroke-width="2.5" />
+    <circle cx="127" cy="65" r="36" fill="#fed7aa" />
+    <!-- Black Box Icon -->
+    <rect x="110" y="48" width="34" height="34" rx="6" fill="#c2410c" />
+    <path d="M117 65 L137 65 M127 55 L127 75" stroke="#fed7aa" stroke-width="2.5" stroke-linecap="round" />
+
+    <text x="127" y="132" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#c2410c">VIBE CODING</text>
+    <text x="127" y="156" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f172a">Prototypes &amp; Spikes</text>
+
+    <g transform="translate(20, 180)">
+      <circle cx="6" cy="10" r="4" fill="#c2410c" />
+      <text x="18" y="14" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Black Box Mindset</text>
+      <text x="18" y="32" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Do not inspect every line; verify</text>
+      <text x="18" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">only whether runtime output matches.</text>
+
+      <circle cx="6" cy="85" r="4" fill="#c2410c" />
+      <text x="18" y="89" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Throwaway Code</text>
+      <text x="18" y="107" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Ideal for experiments, hackathons,</text>
+      <text x="18" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">and code destined for quick deletion.</text>
+
+      <circle cx="6" cy="160" r="4" fill="#c2410c" />
+      <text x="18" y="164" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Low Blast Radius</text>
+      <text x="18" y="182" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Failure has minimal impact,</text>
+      <text x="18" y="198" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">so velocity outweighs perfection.</text>
+    </g>
+  </g>
+
+  <!-- Column 3: Guardrails (Soft Green) -->
+  <g transform="translate(610, 135)">
+    <rect width="255" height="490" rx="28" fill="#dcfce7" stroke="#bbf7d0" stroke-width="2.5" />
+    <circle cx="127" cy="65" r="36" fill="#bbf7d0" />
+    <!-- Shield / Check Icon -->
+    <path d="M127 48 L145 56 L145 70 C145 81 137 89 127 92 C117 89 109 81 109 70 L109 56 Z" fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round" />
+    <path d="M120 70 L125 75 L135 65" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round" />
+
+    <text x="127" y="132" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#15803d">GUARDRAILS</text>
+    <text x="127" y="156" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f172a">Production Standards</text>
+
+    <g transform="translate(20, 180)">
+      <circle cx="6" cy="10" r="4" fill="#15803d" />
+      <text x="18" y="14" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Higher Bar Than Humans</text>
+      <text x="18" y="32" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">AI code in production must pass</text>
+      <text x="18" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">stricter checks than manual code.</text>
+
+      <circle cx="6" cy="85" r="4" fill="#15803d" />
+      <text x="18" y="89" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Anthropic Safeguards</text>
+      <text x="18" y="107" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Dense linting rules, Claude-driven</text>
+      <text x="18" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">E2E tests, and daily AI fuzzers.</text>
+
+      <circle cx="6" cy="160" r="4" fill="#15803d" />
+      <text x="18" y="164" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Continuous Cleanup</text>
+      <text x="18" y="182" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Automated refactoring routines</text>
+      <text x="18" y="198" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">and Claude Code Review prevent mess.</text>
+    </g>
+  </g>
+
+  <!-- Column 4: The Developer (Soft Purple) -->
+  <g transform="translate(890, 135)">
+    <rect width="255" height="490" rx="28" fill="#f3e8ff" stroke="#e9d5ff" stroke-width="2.5" />
+    <circle cx="127" cy="65" r="36" fill="#e9d5ff" />
+    <!-- Star / Leadership Icon -->
+    <path d="M127 50 L131 61 L142 62 L134 70 L136 81 L127 75 L118 81 L120 70 L112 62 L123 61 Z" fill="#7e22ce" stroke="#7e22ce" stroke-width="1.5" stroke-linejoin="round" />
+
+    <text x="127" y="132" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#7e22ce">THE &quot;MINI CEO&quot;</text>
+    <text x="127" y="156" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0f172a">The Developer&#39;s Role</text>
+
+    <g transform="translate(20, 180)">
+      <circle cx="6" cy="10" r="4" fill="#7e22ce" />
+      <text x="18" y="14" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Hold The Quality Bar</text>
+      <text x="18" y="32" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Act like an executive manager,</text>
+      <text x="18" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">stopping bad code in its tracks.</text>
+
+      <circle cx="6" cy="85" r="4" fill="#7e22ce" />
+      <text x="18" y="89" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Explainability Mandate</text>
+      <text x="18" y="107" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Whoever submits code must be able</text>
+      <text x="18" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">to explain and maintain it.</text>
+
+      <circle cx="6" cy="160" r="4" fill="#7e22ce" />
+      <text x="18" y="164" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Remediation Options</text>
+      <text x="18" y="182" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">Direct Claude to rewrite modules</text>
+      <text x="18" y="198" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#334155">or await next model generations.</text>
+    </g>
+  </g>
+</svg>
