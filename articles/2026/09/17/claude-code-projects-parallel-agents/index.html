@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Компанията Anthropic обяви мащабно архитектурно преустройство на функцията Claude Projects, интегрирана в терминалната среда за разработка Claude ..."><title>Claude Projects се трансформира в активна мултиагентна среда за паралелно програмиране - Светни.ме</title><meta property="og:title" content="Claude Projects се трансформира в активна мултиагентна среда за паралелно програмиране - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / ИИ генерирано изображение
+Компанията Anthropic обяви мащабно архитектурно преустройство на функцията Claude Projects, интегрирана в терминалната среда за разработка Claude ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/17/claude-code-projects-parallel-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/17/claude-code-projects-parallel-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Claude Projects се трансформира в активна мултиагентна среда за паралелно програмиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 септември 2026 г.</p><div><p><img src="/articles/2026/09/17/claude-code-projects-parallel-agents/hero.png" alt="Илюстрация на паралелната мултиагентна архитектура в Claude Projects"><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>
+<p>Компанията <a href="/pages/anthropic.html">Anthropic</a> обяви мащабно архитектурно преустройство на функцията <a href="/pages/claude-projects.html">Claude Projects</a>, интегрирана в терминалната среда за разработка <a href="/pages/claude-code.html">Claude Code</a> [1]. Досега проектите функционираха предимно като пасивни цифрови папки за съхранение на контекстни файлове и системни инструкции. С новата актуализация те се трансформират в активна среда за автономна координация и диалог, в която <a href="/pages/claude.html">Claude</a> поема ролята на централен диспечер, организиращ сложни софтуерни задачи.</p>
+<p>Вместо разработчиците да фрагментират работните процеси ръчно, да прехвърлят междинни контексти между отделни чат сесии и да сглобяват резултатите парче по парче, новата система позволява задаването на цялостна цел на високо ниво. От този момент нататък моделът самостоятелно анализира обхвата на задачата, декомпозира я на логически модули и делегира изпълнението им на паралелни работни нишки, които работят автономно в изолирани среди [1].</p>
+<p><img src="/articles/2026/09/17/claude-code-projects-parallel-agents/infographic.png" alt="Инфографика за архитектурата и работните процеси в новия Claude Projects"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h3>От статични папки към динамична координация</h3>
+<p>Концептуалният преход в Claude Projects отразява фундаменталната еволюция на съвременните <a href="/pages/multi-agent-systems.html">мултиагентни системи</a>. В първоначалния си вид проектите предлагаха удобен начин за споделяне на фирмена документация или код между множество индивидуални диалози, но инициативата за всяко действие оставаше изцяло в ръцете на човека. Потребителят трябваше сам да определи как да раздели мащабен проект на стъпки, да следи напредъка на всяка сесия и да синхронизира направените промени.</p>
+<p>В преработената платформа водеща роля заема централният координатор (coordinator). При стартиране на проект програмистът посочва крайната инженерна цел и свързва необходимите програмни хранилища. Координаторът незабавно анализира контекста и предлага списък със задачи, които може да поеме веднага. Взаимодействието с основния проект силно наподобява работата с началник на щаб (chief of staff): потребителят задава стратегическите насоки, а координаторът разпределя оперативните задължения към съществуващи или новосъздадени изпълнителски сесии [1].</p>
+<h3>Архитектура на паралелните облачни нишки</h3>
+<p>В основата на техническата реализация стои пълното разделение на изпълнението чрез специализирани работни нишки (threads). Всяка нишка представлява напълно самостоятелна облачна сесия на Claude Code, която разполага със своя собствена изолирана виртуална среда, отделен клон в Git хранилището и самостоятелно копие на кодовата база. </p>
+<p>Тази архитектура осигурява надеждна <a href="/pages/agent-orchestration.html">оркестрация</a> при сложни сценарии. Например, ако екипът си постави за цел да оптимизира латентността на касовия модул (checkout p75 latency) в своето уеб приложение, Claude Projects може едновременно да стартира отделни нишки за профилиране на всеки критичен API краен интерфейс, да проведе изолирани тестове за производителност и да валидира независими оптимизации. При комплексни задачи всяка работна нишка има възможност да разбие получената задача на още по-фини подзадачи, използвайки рекурсивни подагенти, работни цикли и специализирани работни потоци [1].</p>
+<h3>Автономно тестване и валидация чрез Pull Request</h3>
+<p>Един от най-съществените моменти в новия работен процес е спазването на утвърдените стандарти за софтуерно инженерство. Когато работните нишки на Claude Code направят промени в свързаните хранилища, те не записват резултатите директно в основния клон. Вместо това всяка нишка стартира локалния тестов пакет, проверява регресиите и автоматично отваря официален <a href="/pages/pull-request.html">Pull Request</a> (PR).</p>
+<p>Подобен подход елиминира риска от непредвидени конфликти при съвместна работа. Ако две или повече успоредни нишки модифицират едни и същи редове код, застъпването не води до логически срив в паметта на модела, а се третира прозрачно като стандартен конфликт при сливане (git merge conflict). Системата информира потребителя за зависимостта между отворените заявки и ясно посочва кой PR трябва да бъде прегледан и слят първи. Това позволява на инженерния екип да приложи стандартните процедури за ревю на код, запазвайки пълния контрол върху стабилността на кодовата база [1].</p>
+<h3>Споделена агентна памет и проектна библиотека</h3>
+<p>Дългосрочната ефективност на Claude Projects се осигурява от въвеждането на постоянна <a href="/pages/agentic-memory.html">агентна памет</a>, която се споделя между всички успоредни нишки. При продължителна работа проектите натрупват структурирано знание за контекста на организацията, с което драстично се намалява необходимостта от повтарящо се подсказване (prompt engineering).</p>
+<p>Споделената памет запазва критични архитектурни решения, мотиви за премахване на конкретни функции, промени в крайните срокове и дори контактите на хората в екипа, които трябва да бъдат консултирани преди модифицирането на чувствителни компоненти (например платежния модул). Освен това Claude се адаптира към индивидуалния комуникационен стил на потребителя — може да регулира честотата на междинните проверки, интензивността на откриване на нови нишки и детайлността на отчетите. Наред с паметта, новата проектна библиотека централизира всички качени контекстни документи, хранилища и генерирани артефакти, гарантирайки, че бъдещите задачи надграждат постигнатото [1].</p>
+<h3>Човешки надзор, мобилен контрол и ресурсни лимити</h3>
+<p>Въпреки високата степен на автономност, контролът остава в ръцете на човека. Потребителите могат да следят глобалния напредък през централния чат на проекта или да влязат директно в конкретна нишка, за да проверят детайлите и да направят корекции в реално време. Тъй като сесиите се изпълняват в облака на Anthropic, обработката на задачите продължава непрекъснато, дори когато потребителят затвори своя компютър. Напредъкът може да бъде наблюдаван и управляван безпроблемно от мобилен телефон или друго устройство [1].</p>
+<p>Тази висока производителност обаче поставя въпроси относно консумацията на изчислителни ресурси. Тъй като всяка паралелна нишка представлява пълноценна Claude Code сесия, паралелното изпълнение изчерпва лимитите за използване значително по-бързо [2]. За да осигури гъвкавост, Anthropic предоставя подробни контроли в настройките на проекта. Програмистите могат да избират различни модели и нива на усилие (effort levels) поотделно за координатора и за работните нишки, оптимизирайки баланса между скорост, качество и разход на токени [1].</p>
+<h3>Разпространение и перспективи пред локалното изпълнение</h3>
+<p>Новото изживяване за Claude Projects вече е достъпно в бета версия за избрани абонати на плановете Claude Pro и Max, които използват облачни сесии в Claude Code и нямат предишни съществуващи проекти. През следващите дни достъпът ще бъде поетапно разширен за повече потребители от тези абонаментни нива, като е осигурен и списък на чакащите. След това функционалността ще бъде предоставена за плановете Team и Enterprise, както и в стандартния уеб чат и работния инструмент Cowork.</p>
+<p>За организациите с повишени изисквания към сигурността ключовата новина е бъдещата поддръжка на локално изпълнение. Anthropic потвърди, че съвсем скоро нишките ще могат да се изпълняват директно върху локалните работни станции на разработчиците, работейки зад корпоративни защитни стени и използвайки локални инструменти и хранилища. Този ход бележи важна крачка в трансформацията на ИИ асистентите от обикновени генератори на код в мащабируеми софтуерни инженерни екипи, способни на реална оперативна автономност [1], [2].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://claude.com/blog/projects-redesigned">Projects redesigned: from folder to conversation - Claude Blog</a><br>[2]: <a href="https://the-decoder.com/anthropic-keeps-pushing-claude-code-toward-autonomous-coding-with-new-parallel-agent-workflows/">Anthropic keeps pushing Claude Code toward autonomous coding with new parallel agent workflows - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/pull-request.html">Pull Request (PR)</a><p>Pull Request (PR), наричан в някои платформи и Merge Request (MR), е основополагащ механизъм в съвременните разпределени системи за контрол на версиит...</p></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a><p>Мултиагентните системи (Multi-Agent Systems - MAS) са архитектури в изкуствения интелект, при които множество специализирани AI агенти си взаимодейств...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/claude-projects.html">Claude Projects</a><p>Claude Projects е софтуерна функция в платформата Claude на компанията Anthropic, която позволява на потребителите да създават затворени работни прост...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/agentic-memory.html">Агентна памет (Agentic Memory)</a><p>Агентната памет е концепция в изкуствения интелект, описваща външна, персистентна и управляема система за съхранение на информация, използвана от авто...</p></li><li><a href="/pages/agent-orchestration.html">Оркестрация на ИИ агенти</a><p>Оркестрацията на ИИ агенти (agent orchestration) се отнася до процесите, архитектурите и софтуерните платформи, които координират работата на множеств...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
