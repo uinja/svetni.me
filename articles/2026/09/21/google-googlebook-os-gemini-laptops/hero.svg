@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="1200" height="750" fill="#0f141c"/>
+  <circle cx="600" cy="375" r="320" fill="#1b2438" opacity="0.6"/>
+  
+  <!-- Subtle tech grid -->
+  <line x1="200" y1="375" x2="1000" y2="375" stroke="#25334d" stroke-width="2" stroke-dasharray="8 8"/>
+  <line x1="600" y1="100" x2="600" y2="650" stroke="#25334d" stroke-width="2" stroke-dasharray="8 8"/>
+  
+  <!-- Glowing orbit rings for Gemini -->
+  <ellipse cx="600" cy="350" rx="260" ry="90" fill="none" stroke="#4285f4" stroke-width="3" opacity="0.7"/>
+  <ellipse cx="600" cy="350" rx="220" ry="140" fill="none" stroke="#ea4335" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="600" cy="350" rx="270" ry="180" fill="none" stroke="#fbbc05" stroke-width="2" opacity="0.4"/>
+  <ellipse cx="600" cy="350" rx="300" ry="110" fill="none" stroke="#34a853" stroke-width="3" opacity="0.6"/>
+
+  <!-- Laptop silhouette -->
+  <!-- Screen lid -->
+  <rect x="380" y="200" width="440" height="260" rx="16" fill="#161e2e" stroke="#5a739e" stroke-width="3"/>
+  <rect x="396" y="216" width="408" height="228" rx="8" fill="#1e293b"/>
+  <!-- Display ambient glow -->
+  <circle cx="600" cy="330" r="60" fill="#4285f4" opacity="0.25"/>
+  <polygon points="600,290 612,320 642,330 612,340 600,370 588,340 558,330 588,320" fill="#8ab4f8"/>
+  
+  <!-- Magic Pointer cursor -->
+  <path d="M680 340 L705 400 L685 405 L670 425 L655 355 Z" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+  <circle cx="650" cy="350" r="14" fill="#8ab4f8" opacity="0.6"/>
+
+  <!-- Laptop base -->
+  <polygon points="330,465 870,465 830,515 370,515" fill="#243047" stroke="#5a739e" stroke-width="2"/>
+  <!-- Trackpad -->
+  <rect x="540" y="475" width="120" height="30" rx="6" fill="#161e2e" stroke="#3d4f6e" stroke-width="1.5"/>
+  <!-- Front notch -->
+  <rect x="580" y="465" width="40" height="6" rx="3" fill="#0f141c"/>
+</svg>

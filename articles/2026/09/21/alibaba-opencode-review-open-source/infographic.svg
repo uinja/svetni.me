@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="50" y="30" width="700" height="50" rx="8" fill="#1a30ae"/>
+  <text x="400" y="62" fill="#ffffff" font-size="18" font-family="sans-serif" font-weight="bold" text-anchor="middle">OpenCodeReview Multi-Stage Pipeline</text>
+
+  <rect x="70" y="120" width="190" height="320" rx="6" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="165" y="155" fill="#1a30ae" font-size="15" font-family="sans-serif" font-weight="bold" text-anchor="middle">1. Static Filter</text>
+  <text x="85" y="200" fill="#202124" font-size="12" font-family="sans-serif">Parses AST &amp; syntax</text>
+  <text x="85" y="225" fill="#202124" font-size="12" font-family="sans-serif">Extracts diff changes</text>
+  <text x="85" y="250" fill="#202124" font-size="12" font-family="sans-serif">Removes noise rules</text>
+
+  <rect x="305" y="120" width="190" height="320" rx="6" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="400" y="155" fill="#1a30ae" font-size="15" font-family="sans-serif" font-weight="bold" text-anchor="middle">2. LLM Inspection</text>
+  <text x="320" y="200" fill="#202124" font-size="12" font-family="sans-serif">Evaluates logic flow</text>
+  <text x="320" y="225" fill="#202124" font-size="12" font-family="sans-serif">Checks edge cases</text>
+  <text x="320" y="250" fill="#202124" font-size="12" font-family="sans-serif">Detects security bugs</text>
+
+  <rect x="540" y="120" width="190" height="320" rx="6" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="635" y="155" fill="#1a30ae" font-size="15" font-family="sans-serif" font-weight="bold" text-anchor="middle">3. PR Feedback</text>
+  <text x="555" y="200" fill="#202124" font-size="12" font-family="sans-serif">Actionable comments</text>
+  <text x="555" y="225" fill="#202124" font-size="12" font-family="sans-serif">Patch suggestions</text>
+  <text x="555" y="250" fill="#202124" font-size="12" font-family="sans-serif">Zero hallucinated lints</text>
+</svg>\n

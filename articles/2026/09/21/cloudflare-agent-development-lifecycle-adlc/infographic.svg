@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#fffbf2"/>
+  
+  <!-- Header -->
+  <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#111827">Cloudflare Agent Development Lifecycle (ADLC)</text>
+  <text x="600" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="18" text-anchor="middle" fill="#4b5563">The Architecture of Autonomous Software Factories</text>
+  
+  <!-- Column 1: Orchestration Primitives -->
+  <rect x="60" y="140" width="250" height="540" rx="16" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <circle cx="185" cy="205" r="32" fill="#f97316"/>
+  <polygon points="175,190 195,205 175,220" fill="#ffffff"/>
+  <text x="185" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#9a3412">Orchestration</text>
+  <text x="185" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#ea580c">Cloudflare Workflows</text>
+  
+  <rect x="80" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Dynamic Spawning</text>
+  <text x="185" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Runs sandboxed containers and</text>
+  <text x="185" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">headless browser automation</text>
+  
+  <rect x="80" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Subagent Dispatch</text>
+  <text x="185" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Coordinates specialized review</text>
+  <text x="185" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">and test agents concurrently</text>
+  
+  <rect x="80" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Event-Driven Scale</text>
+  <text x="185" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Replaces static human CI loops</text>
+  <text x="185" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">with horizontal execution</text>
+
+  <!-- Column 2: Agent CI/CD -->
+  <rect x="335" y="140" width="250" height="540" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="460" cy="205" r="32" fill="#2563eb"/>
+  <rect x="445" y="195" width="30" height="20" rx="3" fill="#ffffff"/>
+  <text x="460" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1e3a8a">Agent CI/CD</text>
+  <text x="460" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#1d4ed8">@cloudflare/ci</text>
+  
+  <rect x="355" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Preview Deployments</text>
+  <text x="460" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Every agent tests against live</text>
+  <text x="460" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">production-like environments</text>
+  
+  <rect x="355" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Dependency Caching</text>
+  <text x="460" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Fast credential-backed</text>
+  <text x="460" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">execution step chaining</text>
+  
+  <rect x="355" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Autonomous Triage</text>
+  <text x="460" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Agents identify failure causes</text>
+  <text x="460" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">and patch bugs independently</text>
+
+  <!-- Column 3: Observability -->
+  <rect x="615" y="140" width="250" height="540" rx="16" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="2"/>
+  <circle cx="740" cy="205" r="32" fill="#7c3aed"/>
+  <circle cx="740" cy="205" r="14" fill="#ffffff"/>
+  <text x="740" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#5b21b6">Observability</text>
+  <text x="740" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#6d28d9">OpenTelemetry</text>
+  
+  <rect x="635" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Reasoning Traces</text>
+  <text x="740" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Captures exact model reasoning</text>
+  <text x="740" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">behind every automated action</text>
+  
+  <rect x="635" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Session Replay</text>
+  <text x="740" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Inspects subagent handoffs and</text>
+  <text x="740" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">malformed argument calls</text>
+  
+  <rect x="635" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Native Frameworks</text>
+  <text x="740" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Out-of-the-box integration with</text>
+  <text x="740" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Flue, Think, and AI SDK</text>
+
+  <!-- Column 4: Security Architecture -->
+  <rect x="890" y="140" width="250" height="540" rx="16" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+  <circle cx="1015" cy="205" r="32" fill="#15803d"/>
+  <rect x="1005" y="195" width="20" height="20" rx="3" fill="#ffffff"/>
+  <text x="1015" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#14532d">Security Model</text>
+  <text x="1015" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#166534">Agent Access Model</text>
+  
+  <rect x="910" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">No Prompt Boundaries</text>
+  <text x="1015" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Enforces hard network and</text>
+  <text x="1015" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">harness layer constraints</text>
+  
+  <rect x="910" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Trust Ratchet</text>
+  <text x="1015" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Dynamically reduces privilege</text>
+  <text x="1015" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">after accessing sensitive data</text>
+  
+  <rect x="910" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Least Privilege</text>
+  <text x="1015" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Short-lived, task-bound tokens</text>
+  <text x="1015" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">prevent lateral movement</text>
+</svg>

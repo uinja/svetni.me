@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="40" y="30" width="720" height="55" rx="8" fill="#1a30ae"/>
+  <text x="400" y="65" fill="#ffffff" font-size="20" font-family="sans-serif" font-weight="bold" text-anchor="middle">Voice Agent Interaction Flow Comparison</text>
+  
+  <rect x="50" y="110" width="330" height="350" rx="8" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="215" y="145" fill="#d93025" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Traditional Sequential Agents</text>
+  <rect x="80" y="180" width="270" height="50" rx="6" fill="#ffffff" stroke="#e8eaed" stroke-width="2"/>
+  <text x="215" y="210" fill="#202124" font-size="13" font-family="sans-serif" text-anchor="middle">User gives voice instruction</text>
+  <rect x="80" y="260" width="270" height="50" rx="6" fill="#fce8e6" stroke="#ea4335" stroke-width="1"/>
+  <text x="215" y="290" fill="#c5221f" font-size="13" font-family="sans-serif" text-anchor="middle">Agent freezes audio &amp; computes</text>
+  <rect x="80" y="340" width="270" height="50" rx="6" fill="#ffffff" stroke="#e8eaed" stroke-width="2"/>
+  <text x="215" y="370" fill="#202124" font-size="13" font-family="sans-serif" text-anchor="middle">Response returned after delay</text>
+
+  <rect x="420" y="110" width="330" height="350" rx="8" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="585" y="145" fill="#1e8e3e" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Tencent Gander Parallel Flow</text>
+  <rect x="450" y="180" width="270" height="50" rx="6" fill="#ffffff" stroke="#e8eaed" stroke-width="2"/>
+  <text x="585" y="210" fill="#202124" font-size="13" font-family="sans-serif" text-anchor="middle">User gives task request</text>
+  <rect x="450" y="260" width="270" height="50" rx="6" fill="#e6f4ea" stroke="#34a853" stroke-width="1"/>
+  <text x="585" y="290" fill="#137333" font-size="13" font-family="sans-serif" text-anchor="middle">Continuous conversation stream</text>
+  <rect x="450" y="340" width="270" height="50" rx="6" fill="#e8f0fe" stroke="#1a30ae" stroke-width="1"/>
+  <text x="585" y="370" fill="#1a30ae" font-size="13" font-family="sans-serif" text-anchor="middle">Background worker finishes asynchronously</text>
+</svg>\n

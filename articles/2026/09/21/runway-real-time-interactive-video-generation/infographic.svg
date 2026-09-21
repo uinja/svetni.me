@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="50" y="30" width="700" height="50" rx="8" fill="#1a30ae"/>
+  <text x="400" y="62" fill="#ffffff" font-size="18" font-family="sans-serif" font-weight="bold" text-anchor="middle">Runway Video Architecture Evolution</text>
+
+  <rect x="70" y="110" width="310" height="340" rx="8" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <text x="225" y="145" fill="#5f6368" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Traditional Batch Video AI</text>
+  <text x="90" y="190" fill="#202124" font-size="13" font-family="sans-serif">• Submit text prompt</text>
+  <text x="90" y="225" fill="#202124" font-size="13" font-family="sans-serif">• Wait 2-5 minutes per clip</text>
+  <text x="90" y="260" fill="#202124" font-size="13" font-family="sans-serif">• Fixed non-interactive output</text>
+  <text x="90" y="295" fill="#202124" font-size="13" font-family="sans-serif">• High computing overhead</text>
+
+  <rect x="420" y="110" width="310" height="340" rx="8" fill="#f8f9fa" stroke="#1a30ae" stroke-width="2"/>
+  <text x="575" y="145" fill="#1a30ae" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Runway Live Stream Paradigm</text>
+  <text x="440" y="190" fill="#202124" font-size="13" font-family="sans-serif">• Continuous low-latency stream</text>
+  <text x="440" y="225" fill="#202124" font-size="13" font-family="sans-serif">• Real-time prompt changes</text>
+  <text x="440" y="260" fill="#202124" font-size="13" font-family="sans-serif">• Interactive camera control</text>
+  <text x="440" y="295" fill="#202124" font-size="13" font-family="sans-serif">• World-model foundations</text>
+</svg>\n

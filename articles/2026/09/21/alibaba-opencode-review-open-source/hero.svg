@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <rect x="220" y="140" width="360" height="220" rx="10" fill="#ffffff" stroke="#1a30ae" stroke-width="2"/>
+  <line x1="260" y1="180" x2="380" y2="180" stroke="#1a30ae" stroke-width="4"/>
+  <line x1="260" y1="210" x2="480" y2="210" stroke="#bdc1c6" stroke-width="3"/>
+  <line x1="260" y1="240" x2="440" y2="240" stroke="#bdc1c6" stroke-width="3"/>
+  <line x1="260" y1="270" x2="400" y2="270" stroke="#bdc1c6" stroke-width="3"/>
+  <circle cx="510" cy="290" r="30" fill="#e6f4ea" stroke="#137333" stroke-width="2"/>
+  <polyline points="498,290 507,298 522,282" fill="none" stroke="#137333" stroke-width="3"/>
+</svg>\n

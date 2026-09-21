@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#fffbf2"/>
+  
+  <!-- Header -->
+  <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#111827">Googlebook Ecosystem Architecture</text>
+  <text x="600" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="18" text-anchor="middle" fill="#4b5563">The Next Generation of AI-Native Computing</text>
+  
+  <!-- Column 1: Operating System -->
+  <rect x="60" y="140" width="250" height="540" rx="16" fill="#e8f0fe" stroke="#bfdbfe" stroke-width="2"/>
+  <circle cx="185" cy="205" r="32" fill="#3b82f6"/>
+  <path d="M175 195 L195 205 L175 215 Z" fill="#ffffff"/>
+  <text x="185" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1e3a8a">Googlebook OS</text>
+  <text x="185" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#2563eb">Android + Desktop</text>
+  
+  <rect x="80" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Unified Kernel</text>
+  <text x="185" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Blends Android agility with</text>
+  <text x="185" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">full desktop multitasking</text>
+  
+  <rect x="80" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">10-Year Support</text>
+  <text x="185" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Guaranteed OS updates</text>
+  <text x="185" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">and firmware security</text>
+  
+  <rect x="80" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Google AI Pro</text>
+  <text x="185" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">1-year bundled tier with</text>
+  <text x="185" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">premium Gemini access</text>
+
+  <!-- Column 2: Gemini Interaction -->
+  <rect x="335" y="140" width="250" height="540" rx="16" fill="#fef3c7" stroke="#fde68a" stroke-width="2"/>
+  <circle cx="460" cy="205" r="32" fill="#d97706"/>
+  <circle cx="460" cy="205" r="16" fill="#ffffff"/>
+  <text x="460" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#92400e">Gemini Native</text>
+  <text x="460" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#b45309">Contextual Interface</text>
+  
+  <rect x="355" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Magic Pointer</text>
+  <text x="460" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Cursor shake triggers on-screen</text>
+  <text x="460" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">understanding and actions</text>
+  
+  <rect x="355" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Create My Widget</text>
+  <text x="460" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Generates custom desktop tools</text>
+  <text x="460" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">from natural language prompts</text>
+  
+  <rect x="355" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Rambler Dictation</text>
+  <text x="460" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Cleans filler words ("ums/ahs")</text>
+  <text x="460" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">with real-time punctuation</text>
+
+  <!-- Column 3: Cross-Device Continuity -->
+  <rect x="615" y="140" width="250" height="540" rx="16" fill="#dcfce7" stroke="#bbf7d0" stroke-width="2"/>
+  <circle cx="740" cy="205" r="32" fill="#16a34a"/>
+  <rect x="730" y="195" width="20" height="20" rx="3" fill="#ffffff"/>
+  <text x="740" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#166534">Cross-Device</text>
+  <text x="740" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#15803d">Phone &amp; Cloud Bridge</text>
+  
+  <rect x="635" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Cast Your Apps</text>
+  <text x="740" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Stream and run mobile Android</text>
+  <text x="740" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">apps directly on laptop</text>
+  
+  <rect x="635" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Universal File Search</text>
+  <text x="740" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Single query finds local and</text>
+  <text x="740" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">paired smartphone files</text>
+  
+  <rect x="635" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Two-Way Sync</text>
+  <text x="740" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Edits on mobile reflect on</text>
+  <text x="740" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">desktop instantaneously</text>
+
+  <!-- Column 4: Premium Hardware -->
+  <rect x="890" y="140" width="250" height="540" rx="16" fill="#fce7f3" stroke="#fbcfe8" stroke-width="2"/>
+  <circle cx="1015" cy="205" r="32" fill="#db2777"/>
+  <polygon points="1015,190 1025,215 1005,215" fill="#ffffff"/>
+  <text x="1015" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#9d174d">Hardware Tier</text>
+  <text x="1015" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#be185d">MacBook Competitor</text>
+  
+  <rect x="910" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">16GB RAM Baseline</text>
+  <text x="1015" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Premium spec standard across</text>
+  <text x="1015" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">all 5 OEM launch devices</text>
+  
+  <rect x="910" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Panther Lake &amp; X Elite</text>
+  <text x="1015" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Next-gen Intel Core Ultra 3 and</text>
+  <text x="1015" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Qualcomm Snapdragon chips</text>
+  
+  <rect x="910" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">2.8K OLED Displays</text>
+  <text x="1015" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">High-brightness panels and</text>
+  <text x="1015" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">all-metal machined builds</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#fffbf2"/>
+  
+  <!-- Header -->
+  <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#111827">Autonomous Agents vs. E-Commerce Platforms</text>
+  <text x="600" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="18" text-anchor="middle" fill="#4b5563">The Battle over Machine-to-Consumer (M2C) Transactions</text>
+  
+  <!-- Column 1: The Trigger Event -->
+  <rect x="60" y="140" width="250" height="540" rx="16" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+  <circle cx="185" cy="205" r="32" fill="#ef4444"/>
+  <path d="M175 195 L195 215 M195 195 L175 215" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <text x="185" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#991b1b">Amazon's Block</text>
+  <text x="185" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#b91c1c">Bot Detection Active</text>
+  
+  <rect x="80" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Access Warning</text>
+  <text x="185" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Users receive "unauthorized</text>
+  <text x="185" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">AI agent access" warnings</text>
+  
+  <rect x="80" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">TOS Violation</text>
+  <text x="185" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Enforced under general rules</text>
+  <text x="185" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">against scraping and robots</text>
+  
+  <rect x="80" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="185" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Removal Demand</text>
+  <text x="185" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Amazon asks Meta to delist</text>
+  <text x="185" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">marketplace from Muse tasks</text>
+
+  <!-- Column 2: Amazon's Arguments -->
+  <rect x="335" y="140" width="250" height="540" rx="16" fill="#fff7ed" stroke="#ffedd5" stroke-width="2"/>
+  <circle cx="460" cy="205" r="32" fill="#ea580c"/>
+  <rect x="445" y="195" width="30" height="20" rx="4" fill="#ffffff"/>
+  <text x="460" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#9a3412">Security &amp; Consent</text>
+  <text x="460" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#c2410c">Platform Objections</text>
+  
+  <rect x="355" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Identity Transparency</text>
+  <text x="460" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Muse allegedly fails to declare</text>
+  <text x="460" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">its agent identity in headers</text>
+  
+  <rect x="355" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Credential Handling</text>
+  <text x="460" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Concerns over scraping and</text>
+  <text x="460" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">storing customer credentials</text>
+  
+  <rect x="355" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="460" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">UX Bypassing</text>
+  <text x="460" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Agents bypass personalized</text>
+  <text x="460" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">recommendations and ads</text>
+
+  <!-- Column 3: Meta Muse Capabilities -->
+  <rect x="615" y="140" width="250" height="540" rx="16" fill="#eef2ff" stroke="#e0e7ff" stroke-width="2"/>
+  <circle cx="740" cy="205" r="32" fill="#4f46e5"/>
+  <circle cx="740" cy="205" r="14" fill="#ffffff"/>
+  <text x="740" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#3730a3">Meta Muse</text>
+  <text x="740" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#4338ca">Consumer Agent</text>
+  
+  <rect x="635" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Autonomous Actions</text>
+  <text x="740" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Executes multi-step tasks</text>
+  <text x="740" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">across shopping and dining</text>
+  
+  <rect x="635" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Credential Isolation</text>
+  <text x="740" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Meta maintains agent cannot</text>
+  <text x="740" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">view plain passwords or cards</text>
+  
+  <rect x="635" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="740" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Rapid Adoption</text>
+  <text x="740" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Top iOS free app within</text>
+  <text x="740" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">one week of launch</text>
+
+  <!-- Column 4: Precedents & Future -->
+  <rect x="890" y="140" width="250" height="540" rx="16" fill="#f0fdf4" stroke="#dcfce7" stroke-width="2"/>
+  <circle cx="1015" cy="205" r="32" fill="#16a34a"/>
+  <path d="M1005 205 L1015 215 L1030 195" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="1015" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#166534">Industry Trend</text>
+  <text x="1015" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#15803d">Ecosystem Boundaries</text>
+  
+  <rect x="910" y="330" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Perplexity Lawsuit</text>
+  <text x="1015" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Amazon previously sued</text>
+  <text x="1015" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Perplexity over Comet browser</text>
+  
+  <rect x="910" y="435" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">OpenAI &amp; Google</text>
+  <text x="1015" y="485" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Parallel restrictions placed</text>
+  <text x="1015" y="505" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">on other commercial agents</text>
+  
+  <rect x="910" y="540" width="210" height="85" rx="10" fill="#ffffff"/>
+  <text x="1015" y="565" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1f2937">Commercial Stakes</text>
+  <text x="1015" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">Risk of losing transactions</text>
+  <text x="1015" y="610" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#4b5563">vs. preserving ad revenue</text>
+</svg>

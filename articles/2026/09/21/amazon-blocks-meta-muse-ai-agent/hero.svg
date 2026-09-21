@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <style id="dynamic-palette">
+    :root {
+      --color-primary: #1a30ae;
+      --color-secondary: #1b31ae;
+      --color-tertiary: #1e33af;
+      --color-background: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-on-primary: #ffffff;
+      --color-on-surface: #202124;
+    }
+  </style>
+  <rect width="1200" height="750" fill="#0f172a"/>
+  
+  <!-- Background radial glow -->
+  <circle cx="600" cy="375" r="300" fill="#1e293b" opacity="0.8"/>
+  
+  <!-- Grid accents -->
+  <line x1="200" y1="375" x2="1000" y2="375" stroke="#334155" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="600" y1="120" x2="600" y2="630" stroke="#334155" stroke-width="2" stroke-dasharray="6 6"/>
+  
+  <!-- Left Side: Agent Symbol (Meta Muse representation) -->
+  <circle cx="380" cy="375" r="90" fill="#1e1b4b" stroke="#6366f1" stroke-width="4"/>
+  <circle cx="380" cy="375" r="45" fill="#312e81"/>
+  <!-- Glowing agent pulse -->
+  <circle cx="380" cy="375" r="120" fill="none" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 8" opacity="0.6"/>
+  <!-- Connection beam attempting to connect -->
+  <line x1="470" y1="375" x2="550" y2="375" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Center: Security Barrier / Shield -->
+  <polygon points="600,240 680,280 680,430 600,510 520,430 520,280" fill="#450a0a" stroke="#ef4444" stroke-width="4"/>
+  <circle cx="600" cy="360" r="36" fill="#7f1d1d"/>
+  <!-- Slash / Access Denied Icon -->
+  <line x1="580" y1="340" x2="620" y2="380" stroke="#fca5a5" stroke-width="5" stroke-linecap="round"/>
+  <line x1="620" y1="340" x2="580" y2="380" stroke="#fca5a5" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Right Side: Shopping Cart / Storefront (E-commerce representation) -->
+  <rect x="740" y="275" width="200" height="200" rx="20" fill="#172554" stroke="#ff9900" stroke-width="4"/>
+  <!-- Cart body -->
+  <path d="M780 340 L810 340 L835 410 L890 410 L910 360 L825 360" fill="none" stroke="#ff9900" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="845" cy="435" r="10" fill="#ff9900"/>
+  <circle cx="885" cy="435" r="10" fill="#ff9900"/>
+  
+  <!-- Particle barriers -->
+  <circle cx="560" cy="270" r="4" fill="#ef4444"/>
+  <circle cx="640" cy="270" r="4" fill="#ef4444"/>
+  <circle cx="540" cy="450" r="4" fill="#ef4444"/>
+  <circle cx="660" cy="450" r="4" fill="#ef4444"/>
+</svg>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / Авторско изображение
+Китайският гигант Alibaba представи отворен инструмент с кодово име OpenCodeReview, предназначен за цялостен автоматизиран преглед на програмен код в с..."><title>Alibaba пусна с отворен код OpenCodeReview за автоматизиран преглед на програмен код - Светни.ме</title><meta property="og:title" content="Alibaba пусна с отворен код OpenCodeReview за автоматизиран преглед на програмен код - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / Авторско изображение
+Китайският гигант Alibaba представи отворен инструмент с кодово име OpenCodeReview, предназначен за цялостен автоматизиран преглед на програмен код в с..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/21/alibaba-opencode-review-open-source/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/21/alibaba-opencode-review-open-source/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Alibaba пусна с отворен код OpenCodeReview за автоматизиран преглед на програмен код</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 септември 2026 г.</p><div><p><img src="/articles/2026/09/21/alibaba-opencode-review-open-source/hero.png" alt="Схематично представяне на алгоритмичния преглед на код"><br><small>Изображение: Svetni.me / Авторско изображение</small></p>
+<p>Китайският гигант <a href="/pages/alibaba.html">Alibaba</a> представи отворен инструмент с кодово име OpenCodeReview, предназначен за цялостен автоматизиран преглед на програмен код в софтуерни екипи, предава <a href="/pages/infoq.html">InfoQ</a> [1].</p>
+<p>Проектът с <a href="/pages/open-source.html">отворен код</a> цели да преодолее слабостите на универсалните езикови модели при инспектиране на изходен код, където честите халюцинации и липсата на контекст за целия проект затрудняват използването им в реалното <a href="/pages/software-engineering.html">софтуерно инженерство</a> [1].</p>
+<p><img src="/articles/2026/09/21/alibaba-opencode-review-open-source/infographic.png" alt="Работен процес на OpenCodeReview: филтриране, анализ и генериране на препоръки"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Интеграция на невронни мрежи и статичен анализ</h2>
+<p>OpenCodeReview съчетава специализиран езиков модел с традиционни инструменти за <a href="/pages/static-analysis.html">статичен анализ</a>. Този хибриден подход осигурява двустепенна верификация на всяка предложена промяна в хранилището.</p>
+<p>Системата анализира абстрактното синтактично дърво (AST) и проследява зависимостите между модулите преди да предаде контекста на ИИ модела [1]:</p>
+<ul>
+<li><p><strong>Филтриране на шума:</strong> Елиминиране на фалшивите сигнали чрез проверка срещу установените компилаторни правила.</p>
+</li>
+<li><p><strong>Семантична оценка на архитектурата:</strong> Моделът анализира не само конкретния ред, но и съвместимостта на промяната с архитектурния модел на целия проект.</p>
+</li>
+</ul>
+<h2>Отвореност и лесна интеграция в CI/CD</h2>
+<p>Alibaba публикува както софтуерния код на рамката, така и теглата на оптимизирания модел за преглед на код.</p>
+<p>Инструментът е проектиран за лесна интеграция в работни потоци на GitHub и GitLab, предоставяйки готови предложения за корекция директно в интерфейса за преглед на заявки за сливане (pull requests).</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.infoq.com/news/2026/09/alibaba-opencodereview/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Alibaba Open Sources OpenCodeReview for AI-Assisted Code Review - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/infoq.html">InfoQ</a><p>InfoQ е водеща независима онлайн общност и издателска платформа за професионалисти в областта на софтуерната разработка.</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
