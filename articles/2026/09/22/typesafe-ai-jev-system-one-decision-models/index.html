@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Изображение: Svetni.me / Авторско изображение
+Изкуственият интелект постигна свръхчовешки възможности в разговорните интерфейси, но дълбоката програмна автоматизация в реалния софтуер все още изост..."><title>TypeSafe AI представи Jev: първият модел за решения от класа System One - Светни.ме</title><meta property="og:title" content="TypeSafe AI представи Jev: първият модел за решения от класа System One - Светни.ме"><meta property="og:description" content="Изображение: Svetni.me / Авторско изображение
+Изкуственият интелект постигна свръхчовешки възможности в разговорните интерфейси, но дълбоката програмна автоматизация в реалния софтуер все още изост..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/22/typesafe-ai-jev-system-one-decision-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/22/typesafe-ai-jev-system-one-decision-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>TypeSafe AI представи Jev: първият модел за решения от класа System One</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 септември 2026 г.</p><div><p><img src="/articles/2026/09/22/typesafe-ai-jev-system-one-decision-models/hero.png" alt="Парадигмата на System One моделите: машинно-ориентирани типизирани решения вместо авторегресивни текстови низове"><br><small>Изображение: Svetni.me / Авторско изображение</small></p>
+<p>Изкуственият интелект постигна свръхчовешки възможности в разговорните интерфейси, но дълбоката програмна автоматизация в реалния софтуер все още изостава. Този парадокс мотивира създаването на <a href="/pages/typesafe-ai.html">TypeSafe AI</a> — изследователска лаборатория, основана от бившия изследовател от <a href="/pages/openai.html">OpenAI</a> <a href="/pages/diogo-almeida.html">Диого Алмейда</a> [1]. Като един от инженерите зад методите за следване на инструкции в <a href="/pages/chatgpt.html">ChatGPT</a> и <a href="/pages/rlhf.html">RLHF</a>, Алмейда излиза от двегодишен период на разработка с нов клас архитектури: „System One модели“.</p>
+<p>Първият публичен модел от това направление е <a href="/pages/jev.html">Jev</a>, проектиран като машинно-ориентирана интелигентна функция: неструктурирано програмно състояние на входа и типизирани вероятностни решения на изхода. Водещият разработчик <a href="/pages/simon-willison.html">Саймън Уилисън</a> подкрепя дефиницията на <a href="/pages/maggie-appleton.html">Маги Апълтън</a>, наричайки технологията <a href="/pages/decision-models.html">модели за решения (decision models)</a> [2]. Jev напълно изоставя авторегресивното генериране на свободен текст в полза на числа с плаваща запетая, категории и калибрирани вероятности, премахвайки риска от синтактични грешки при структурирането на данни.</p>
+<p><img src="/articles/2026/09/22/typesafe-ai-jev-system-one-decision-models/infographic.png" alt="Сравнение между традиционните езикови модели и System One модела Jev"><br><small>Изображение: Svetni.me / ИИ генерирана инфографика</small></p>
+<h2>Архитектура и RLCD: Паралелни вероятности вместо авторегресивни низове</h2>
+<p>Традиционните <a href="/pages/llm.html">големи езикови модели (LLM)</a> генерират текст последователно, токен по токен, като всеки нов символ зависи от предходните. Този механизъм е идеален за диалог, но създава сериозно забавяне при интеграция в софтуер: отговорите на водещите разсъждаващи модели отнемат от 3 до над 300 секунди. Jev преодолява това ограничение чрез специализиран паралелен семплер (hardware-aware parallel sampler), който изчислява всички изходи и вероятности едновременно в рамките на един проход. Времето за реакция пада до 70–500 милисекунди — от 40 до 200 пъти по-бързо от конвенционалните езикови системи.</p>
+<p>Парадигмата променя и тренировъчния процес. Вместо класическото обучение чрез човешка обратна връзка (RLHF) или проверими възнаграждения (RLVR), TypeSafe AI въвежда алгоритъма RLCD (Reinforcement Learning for Calibrated Decisions). Той оптимизира епистемичната надеждност на модела: високата увереност корелира пряко с висока обективна точност. </p>
+<p>За софтуерните инженери това елиминира структурните халюцинации. Възможните изходи се дефинират предварително чрез типизирана схема, гарантирайки 0% грешки в типовете данни и синтаксиса на отговорите [1].</p>
+<h2>Структура на API: Трите категории въпроси в Jev</h2>
+<p>Взаимодействието с Jev наподобява извикване на детерминистична софтуерна функция. Подава се обект на състоянието (state) — текстов низ, масив или двойки ключ-стойност (например клиентски профил, трансакция или лог). Към това състояние се прикачват неограничен брой въпроси, които се оценяват паралелно в рамките на контекстния прозорец без допълнително забавяне.</p>
+<p>API поддържа три специфични формата на запитване:</p>
+<ol>
+<li><strong>Noul (Bernoulli) въпроси:</strong> Бинарни проверки от тип Да/Не, кръстени на разпределението на Бернули (потвърдено от Алмейда). Моделът връща число с плаваща запетая между 0 и 1, изразяващо вероятността твърдението да е вярно.</li>
+<li><strong>Choice въпроси:</strong> Избор измежду предварително дефиниран списък от категории (до 255 опции). Системата връща както най-вероятната опция, така и пълното вероятностно разпределение с оценка за увереност.</li>
+<li><strong>Score въпроси:</strong> Оценка по числова скала с текстови описания на нивата, връщаща точно число по протежение на интервала.</li>
+</ol>
+<p>Тази структура превръща модела в естествен градивен елемент за „умни условни конструкции“ (smart if-statements), класификация и маршрутизиране на процеси [1].</p>
+<h2>Радикалната икономика на парадокса на Джевънс</h2>
+<p>Името на модела препраща към британския икономист Уилям Стенли Джевънс и неговия парадокс: повишената ефективност на парните двигатели през XIX век не намалява търсенето на въглища, а го увеличава многократно поради по-ниската цена на енергията.</p>
+<p>Ценовата политика на TypeSafe AI прилага този принцип към машинния интелект. Докато класическите LLM таксуват изходящите токени пет пъти по-скъпо от входящите, Jev таксува единствено входа на цена от едва $0.042 за милион токена ($42 за милиард токена), а изходящите структурирани решения са напълно безплатни. За сравнение, олекотеният GPT-5 Nano на OpenAI струва $0.05 на милион входни токена, а водещите модели варират между $0.20 и $10 за вход.</p>
+<p>Ниската латентност и цена разкриват напълно нови сценарии за автоматизация. В демонстрация екипът на TypeSafe показва бот за играта Doom, вземащ по 10 интелигентни решения в секунда върху състоянието на играта при разход от едва ~$7 на час. При обработка на масиви от данни (MapReduce) и пренареждане на търсения (reranking) моделът позволява паралелно оценяване на стотици кандидати за части от секундата [1].</p>
+<h2>Завръщането на черната кутия и рисковете от скрити пристрастия</h2>
+<p>Въпреки инженерните предимства, Саймън Уилисън посочва сериозен компромис: Jev бележи завръщане към непрозрачните системи от тип „черна кутия“ [2].</p>
+<p>При езиковите модели потребителят може да изиска верига от логически стъпки (Chain of Thought), макар и не винаги напълно достоверна. При Jev на изхода стои единствено число с плаваща запетая. Ако алгоритъмът класифицира съобщение като спам или оцени клиент като ненадежден, разработчиците нямат начин да разберат кои текстови маркери са повлияли на резултата.</p>
+<p>Тази липса на обяснимост крие рискове от скрити алгоритмични пристрастия (bias). Уилисън предупреждава срещу използването на подобни модели за автоматизиран подбор на персонал или скоринг на кандидати. В експеримент той пита Jev дали населени места в района на Сан Франциско са „добър град“: моделът класира богатия Купертино на първо място по увереност, а исторически по-бедния Източен Пало Алто — на последно. Поради това внедряването на модели за решения изисква строги системи за автоматизирана оценка (evals) и статистически контрол [2].</p>
+<h2>Реакция на екосистемата: От експерименти до отворени тегла</h2>
+<p>Пускането на Jev предизвика бърза реакция в технологичната общност. Програмистът Кайл Пена създаде проекта <code>jevchat</code>, генериращ текст символ по символ чрез паралелни запитвания към Jev — остроумно оприличен в Hacker News на анимационния герой Морти, предвиждащ бъдещето чрез кристала на смъртта. Фатих Кадир Акън реализира <code>jev-leftpad</code> за добавяне на интервали към текст чрез ИИ, а Анди Гейтън използва модела за играта 2048 (<code>jev-2048</code>).</p>
+<p>Паралелно се появиха и сериозни инициативи с отворени тегла. Инженерът Джаред Палмър представи проекта <code>Kev</code> — репликация на концепцията на Jev върху базовия модел <a href="/pages/qwen.html">Qwen</a> 3.5 с версии от 0.8B, 4B и 9B параметри. В общността вече стартира и бенчмаркът <code>JevBench</code> за сравнителен анализ на точността на този нов клас модели [2].</p>
+<h2>Новата роля на ИИ в софтуерната архитектура</h2>
+<p>Появата на Jev и парадигмата System One очертава ново разграничение в ИИ индустрията. От една страна остават мултимодалните диалогови модели за сложни, многоетапни разсъждения и взаимодействие с хора. От друга страна се оформя чисто машинен слой: интелигентни компоненти, които действат бързо, евтино и предвидимо.</p>
+<p>Вместо да симулира разговор, моделът за решения предлага надежден строителен блок за вземане на преценки в реално време. Дали тези „умни условни конструкции“ ще отключат масова индустриална автоматизация зависи от способността на инженерните екипи да управляват липсата на обяснимост и да изолират скритите пристрастия.</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Introducing System One Models &amp; Jev - TypeSafe AI Blog</a><br>[2]: <a href="https://simonwillison.net/2026/Sep/21/jev/">Jev introduces a new shape of LLM—System One, aka Decision Models - Simon Willison’s Weblog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/typesafe-ai.html">TypeSafe AI</a><p>TypeSafe AI е технологична лаборатория за изкуствен интелект, основана от бившия изследовател от OpenAI Диого Алмейда.</p></li><li><a href="/pages/simon-willison.html">Саймън Уилисън (Simon Willison)</a><p>Саймън Уилисън е влиятелен британски софтуерен инженер, блогър и създател на проекти с отворен код.</p></li><li><a href="/pages/rlhf.html">Reinforcement Learning from Human Feedback (RLHF)</a><p>RLHF е методът, който направи съвременните ИИ модели „възпитани“ и полезни.</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/maggie-appleton.html">Маги Апълтън (Maggie Appleton)</a><p>Маги Апълтън е изследовател, дизайнер на потребителски интерфейси и антрополог, известна със своите анализи и визуални есета за пресечната точка между...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/jev.html">Jev</a><p>Jev е специализиран модел с изкуствен интелект от нов клас, създаден от TypeSafe AI през септември 2026 г.</p></li><li><a href="/pages/diogo-almeida.html">Диого Алмейда (Diogo Almeida)</a><p>Диого Алмейда е софтуерен инженер и изследовател в областта на изкуствения интелект, основател и главен изпълнителен директор на лабораторията TypeSaf...</p></li><li><a href="/pages/decision-models.html">Модели за решения (Decision Models)</a><p>Моделите за решения (известни още като „System One модели“) са нов клас архитектури за изкуствен интелект, проектирани за директно вграждане в програм...</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
