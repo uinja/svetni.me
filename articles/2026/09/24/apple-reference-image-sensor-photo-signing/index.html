@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Daniel Lu
+Apple публикува официалната архитектура на новата си технология Apple Reference Image — специализиран режим на камерата за iPhone 18 Pro, който подписва крипто..."><title>Apple Reference Image подписва снимките директно в сензора, пренаписвайки доверието в C2PA - Светни.ме</title><meta property="og:title" content="Apple Reference Image подписва снимките директно в сензора, пренаписвайки доверието в C2PA - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Daniel Lu
+Apple публикува официалната архитектура на новата си технология Apple Reference Image — специализиран режим на камерата за iPhone 18 Pro, който подписва крипто..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/24/apple-reference-image-sensor-photo-signing/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/24/apple-reference-image-sensor-photo-signing/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Apple Reference Image подписва снимките директно в сензора, пренаписвайки доверието в C2PA</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 септември 2026 г.</p><div><p><img src="/articles/2026/09/24/apple-reference-image-sensor-photo-signing/hero.png" alt="Въздушна снимка на кампуса Apple Park"><br><small>Снимка: Wikimedia Commons / Daniel Lu</small></p>
+<p><a href="/pages/apple.html">Apple</a> публикува официалната архитектура на новата си технология Apple Reference Image — специализиран режим на камерата за iPhone 18 Pro, който подписва криптографски данните за пикселите директно в оптичния сензор. Иновацията премества модела на доверие за автентичност на изображенията от софтуерните редакторски вериги на индустриалния стандарт <a href="/pages/c2pa.html">C2PA</a> директно към силициевия хардуер и облачната система <a href="/pages/private-cloud-compute.html">Private Cloud Compute</a>.</p>
+<p>Според техническата документация на Apple основният недостатък на традиционните стандарти като C2PA е, че те прикачват метаданни за произход едва след като изображението е напуснало сензора и е преминало през операционната система. В режим Reference Image матрицата на камерата преминава в изолирано състояние (secure-boot) и генерира подпис на суровите пиксели в момента на експозиция, докато модулът Secure Enclave удостоверява фокусното разстояние и параметрите на снимане. Времето се валидира двустранно чрез криптографски защитени RFC 3161 времеви марки, пренасочвани през протокола Oblivious HTTP.</p>
+<p>Обработката на необработения DNG негатив се извършва в защитената облачна среда <a href="/pages/private-cloud-compute.html">Private Cloud Compute</a>. Сървърите верифицират фабричните сертификати на хардуера, прилагат демозаикиране и компресия и поставят композитен квантовоустойчив цифров подпис (ML-DSA-87 и RSA-3072). За защита на поверителността финалният файл не съдържа сериен номер на телефона или самоличност на фотографа, а само верифициращ сертификат от Apple.</p>
+<p><img src="/articles/2026/09/24/apple-reference-image-sensor-photo-signing/infographic.png" alt="Анализ на хардуерната верификация на Apple Reference Image"><br><small>Инфографика: Светни.ме</small></p>
+<p>За да предотврати презаснемане на изображения от екрани с висока резолюция или генерирани от AI фалшификати, облачната система изчислява индекс на автентичност чрез невронна мрежа, сканираща за микроскопични муаре ефекти и специфичен сензорен шум. Инженерите на компанията следят динамичен рейтинг за всеки сензор, позволяващ анулиране на сертификатите при опити за манипулация на чипа.</p>
+<p>Архитектурата предизвика поляризирани реакции сред разработчиците и криптографите. Докато специалистите по киберсигурност приветстват защитата на пикселите на силициево ниво, критиците предупреждават срещу прекомерната зависимост от затворените облачни сървъри на Apple. Поради регулаторни съображения функцията няма да бъде налична при дебюта си в Европейския съюз и Китай.</p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/united-states.html">САЩ (Съединени американски щати)</a><p>Съединените американски щати (САЩ) са световен лидер в разработването на софтуер, облачни изчисления и изкуствен интелект.</p></li><li><a href="/pages/private-cloud-compute.html">Private Cloud Compute</a><p>Private Cloud Compute (PCC) е сигурна сървърна изчислителна платформа, разработена от Apple за изпълнение на сложни задачи с изкуствен интелект извън ...</p></li><li><a href="/pages/c2pa.html">C2PA</a><p>Coalition for Content Provenance and Authenticity (C2PA) е отворен международен технически стандарт за удостоверяване на автентичността и произхода на...</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

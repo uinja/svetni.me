@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Deep Learning
+Изследователи в областта на изкуствения интелект представиха революционен метод за преодоляване на вградените защитни бариери в отворени модели, наречен ди..."><title>Динамична аблитерация: Потискане на защитите в езикови модели без промяна на теглата - Светни.ме</title><meta property="og:title" content="Динамична аблитерация: Потискане на защитите в езикови модели без промяна на теглата - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Deep Learning
+Изследователи в областта на изкуствения интелект представиха революционен метод за преодоляване на вградените защитни бариери в отворени модели, наречен ди..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/24/dynamic-abliteration-engram-steering-refusal-suppression/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/24/dynamic-abliteration-engram-steering-refusal-suppression/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Динамична аблитерация: Потискане на защитите в езикови модели без промяна на теглата</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 септември 2026 г.</p><div><p><img src="/articles/2026/09/24/dynamic-abliteration-engram-steering-refusal-suppression/hero.png" alt="Илюстрация на дълбока невронна мрежа"><br><small>Снимка: Wikimedia Commons / Deep Learning</small></p>
+<p>Изследователи в областта на изкуствения интелект представиха революционен метод за преодоляване на вградените защитни бариери в отворени модели, наречен динамична аблитерация чрез многослойно насочване на енграми (Multi-Layer Engram Steering). За разлика от класическите методи за модифициране на матриците на модела, този подход позволява пълно потискане на системните откази при 100% замразени параметри.</p>
+<p>Традиционната аблитерация разчита на ортогонално проектиране и постоянно изтриване на векторите на отказ от матриците с тегла. Този необратим процес обаче често води до деградация в цялостното представяне на <a href="/pages/llm.html">големите езикови модели</a>, компрометирайки логическите им способности в несвързани домейни като математика или програмиране.</p>
+<p>Новият подход, демонстриран успешно върху отворения модел <a href="/pages/qwen3.html">Qwen3</a>-4B, оперира изцяло по време на изпълнение (inference). Чрез регистриране на прехващащи куки (forward hooks) в библиотеката <a href="/pages/pytorch.html">PyTorch</a> системата извлича междинните скрити състояния от резидуалния поток (residual stream) на трансформатора и изчислява разликата в посоките между чувствителна заявка и разрешен помощен отговор.</p>
+<p><img src="/articles/2026/09/24/dynamic-abliteration-engram-steering-refusal-suppression/infographic.png" alt="Инфографика за архитектурата на динамичната аблитерация"><br><small>Инфографика: Светни.ме</small></p>
+<p>Чрез инжектиране на обратен енграмен вектор в резидуалните потоци на средните слоеве (от Слой 14 нагоре), алгоритъмът неутрализира защитната реакция в момента на нейното зараждане. Това позволява на модела да изпълни сложни заявки за анализ на уязвимости или симулация на кибератаки без необходимост от скъпоструващо допълнително дообучаване (fine-tuning) или модификация на бинарните файлове.</p>
+<p>Пробивът има дълбоки последици за сигурността на съвременните модели с изкуствен интелект. Той доказва, че текущите парадигми за привеждане в съответствие (alignment) формират плитки активационни пространства, които лесно могат да бъдат заобиколени на ниво оперативна памет от всеки разработчик с достъп до междинните слоеве на невронната мрежа.</p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/qwen3.html">Qwen3</a><p>Qwen3 е фамилия от големи езикови и мултимодални модели, разработени от Alibaba Group.</p></li><li><a href="/pages/pytorch.html">PyTorch</a><p>PyTorch е водеща софтуерна библиотека с отворен код за машинно обучение и дълбоки невронни мрежи, първоначално създадена от Meta AI и понастоящем упра...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

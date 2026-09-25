@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Patrick Wardle Research
+Известният изследовател по киберсигурност и основател на фондацията Objective-See Патрик Уордъл разкри сериозна уязвимост от тип нулев ден в новия настолен к..."><title>Un-Mused: Нулев ден в асистента на Meta за macOS заобикаля системните защити на Apple - Светни.ме</title><meta property="og:title" content="Un-Mused: Нулев ден в асистента на Meta за macOS заобикаля системните защити на Apple - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Patrick Wardle Research
+Известният изследовател по киберсигурност и основател на фондацията Objective-See Патрик Уордъл разкри сериозна уязвимост от тип нулев ден в новия настолен к..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/24/un-mused-meta-ai-macos-security-bypass/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/24/un-mused-meta-ai-macos-security-bypass/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Un-Mused: Нулев ден в асистента на Meta за macOS заобикаля системните защити на Apple</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 септември 2026 г.</p><div><p><img src="/articles/2026/09/24/un-mused-meta-ai-macos-security-bypass/hero.png" alt="Редакционна графика за нулев ден в софтуера на Meta"><br><small>Снимка: InfoQ / Patrick Wardle Research</small></p>
+<p>Известният изследовател по киберсигурност и основател на фондацията Objective-See <a href="/pages/patrick-wardle.html">Патрик Уордъл</a> разкри сериозна <a href="/pages/vulnerability.html">уязвимост</a> от тип нулев ден в новия настолен клиент <a href="/pages/meta-muse.html">Meta Muse</a> за операционната система <a href="/pages/macos.html">macOS</a>. Пробивът позволява на произволен непривилегирован локален процес да поеме контрол над разширените системни права на изкуствения интелект, заобикаляйки вградената защитна рамка на Apple (TCC).</p>
+<p>Дефектът се крие в недокументиран конфигурационен ключ в системния регистър на приложението, озаглавен endo_voyager_dictation_endpoint. На системи под <a href="/pages/macos.html">macOS</a> всеки локален скрипт или фонов процес, изпълняван от потребителя без администраторски (root) права, може свободно да презапише този параметър, без операционната система да изисква парола или да покаже предупредителен диалогов прозорец. Този ключ определя сървърния адрес, към който клиентът изпраща аудиозаписа от микрофона за разпознаване на глас.</p>
+<p>При промяна на конфигурацията, приложението започва безшумно да пренасочва гласовите команди на потребителя заедно с валидния автентикационен токен на акаунта към контролиран от нападателя прокси сървър. Уордъл демонстрира, че хакерът може прозрачно да препредава заявките към сървърите на <a href="/pages/meta.html">Meta</a>, за да не събуди подозрение, докато същевременно записва звука и получава пълен достъп до профила на жертвата.</p>
+<p><img src="/articles/2026/09/24/un-mused-meta-ai-macos-security-bypass/infographic.png" alt="Инфографика за архитектурата на нулевия ден в Meta Muse"><br><small>Инфографика: Светни.ме</small></p>
+<p>Освен кражба на самоличност и подслушване, експлойтът отваря вратата за атаки чрез инжектиране на команди (prompt injection). Чрез добавяне на скрити текстови инструкции към гласовите отговори, нападателят може да накара автономния асистент да използва легитимните си права за достъп до файловата система, контактите или локалните архиви на чатовете в WhatsApp и да ги изпрати на външен сървър.</p>
+<p>Въпреки че Meta пусна тиха корекция (hotfix) за приложението си, компанията не издаде официален бюлетин за сигурност и не регистрира инцидента в глобалната CVE база данни. Случаят илюстрира фундаменталния парадокс при внедряването на автономни AI агенти на персонални компютри: колкото повече привилегии получава един асистент, толкова по-опасен вектор за проникване се превръща той при най-малката конфигурационна грешка.</p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vulnerability.html">Уязвимост</a><p>Уязвимостта в контекста на киберсигурността е слабост в софтуера или хардуера, която може да бъде използвана от нападател за неоторизиран достъп, изпъ...</p></li><li><a href="/pages/patrick-wardle.html">Патрик Уордъл</a><p>Патрик Уордъл (Patrick Wardle) е водещ американски експерт по киберсигурност, бивш изследовател в Агенцията за национална сигурност на САЩ (NSA) и осн...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/meta-muse.html">Meta Muse</a><p>Meta Muse е потребителски софтуерен асистент с агентен изкуствен интелект, разработен от Meta.</p></li><li><a href="/pages/macos.html">macOS</a><p>macOS е операционната система, разработена от Apple за нейните персонални компютри от серията Mac.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
