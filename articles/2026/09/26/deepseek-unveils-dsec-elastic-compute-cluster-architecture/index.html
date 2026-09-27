@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: DeepSeek HPC Cluster / arXiv
+Иновативната изследователска лаборатория DeepSeek публикува детайлен научен доклад, представящ DSec (DeepSeek Elastic Compute) – революционна архитектура за дин..."><title>DeepSeek представи DSec: Еластична изчислителна архитектура за мащабиране на разпределено обучение - Светни.ме</title><meta property="og:title" content="DeepSeek представи DSec: Еластична изчислителна архитектура за мащабиране на разпределено обучение - Светни.ме"><meta property="og:description" content="Снимка: DeepSeek HPC Cluster / arXiv
+Иновативната изследователска лаборатория DeepSeek публикува детайлен научен доклад, представящ DSec (DeepSeek Elastic Compute) – революционна архитектура за дин..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/26/deepseek-unveils-dsec-elastic-compute-cluster-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/26/deepseek-unveils-dsec-elastic-compute-cluster-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek представи DSec: Еластична изчислителна архитектура за мащабиране на разпределено обучение</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 септември 2026 г.</p><div><p><img src="/articles/2026/09/26/deepseek-unveils-dsec-elastic-compute-cluster-architecture/hero.png" alt="Илюстрация към deepseek-unveils-dsec-elastic-compute-cluster-architecture"><br><small>Снимка: DeepSeek HPC Cluster / arXiv</small></p>
+<p>Иновативната изследователска лаборатория <a href="/pages/deepseek.html">DeepSeek</a> публикува детайлен научен доклад, представящ DSec (DeepSeek Elastic Compute) – революционна архитектура за динамично и отказоустойчиво управление на гигантски GPU клъстери [1]. Разработката решава един от най-скъпите проблеми в съвременното <a href="/pages/machine-learning.html">машинно обучение</a>: честите апаратни сривове при продължително обучение на модели с трилиони параметри [1].</p>
+<p>При конвенционалните системи за разпределен <a href="/pages/software-development.html">софтуерен инженеринг</a> дефектът на един-единствен ускорител в клъстер от 50 000 чипа спира целия тренировъчен процес, изисквайки 20 до 30 минути за зареждане на последната контролна точка (checkpoint) [1]. DSec премахва тази неефективност, позволявайки „гореща замяна“ на дефектирали възли за по-малко от секунда, без прекъсване на общите изчисления [1].</p>
+<p><img src="/articles/2026/09/26/deepseek-unveils-dsec-elastic-compute-cluster-architecture/infographic.png" alt="Инфографика за DEEPSEEK DSEC ELASTIC COMPUTE"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Еластично преконфигуриране на комуникационната топология</h2>
+<p>В основата на DSec стои динамичен комуникационен протокол, който непрекъснато следи закъсненията в мрежовите комутатори и интелигентно пренасочва потоците от данни между графичните процесори [1]. Системата засича признаци на деградация в паметта с висока пропускателна способност (HBM) и изолира компрометираните платки, преди те да предизвикат срив в ядрото [1].<br>Това позволява поддържането на рекордна степен на използване на изчислителния капацитет (MFU над 92%), спестявайки милиони долари от изхабена електроенергия и празен ход на сървърите [1].</p>
+<h2>Технологичен суверенитет и достъпност на ресурсите</h2>
+<p>Публикуването на DSec затвърждава репутацията на DeepSeek като водещ пионер в инфраструктурните иновации [1]. Архитектурата е проектирана да работи успешно и върху разнороден (хетерогенен) хардуер, което има ключово значение за държавите, стремящи се към <a href="/pages/ai-sovereignty.html">технологичен суверенитет</a> в условията на глобални експортни ограничения върху най-новите полупроводници [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://arxiv.org/abs/2609.22978">DeepSeek Elastic Compute (DSec) - Hacker News / arXiv</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-development.html">Софтуерна разработка (Software Development)</a><p>Софтуерната разработка (Software Development) е процес на проектиране, създаване, тестване, внедряване и поддръжка на софтуерни приложения, системи и ...</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/ai-sovereignty.html">AI суверенитет (AI Sovereignty)</a><p>AI суверенитет (AI Sovereignty) обозначава капацитета и автономията на отделни държави, публични институции, организации и софтуерни разработчици да с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

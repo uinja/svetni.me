@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Anthropic Claude Code / Terminal Capture
+Драматичен инцидент в общността на програмистите предизвика широк отзвук, след като софтуерен инженер съобщи за пълното унищожаване на над 48 000 фа..."><title>Инженер загуби 48 000 файла след непредвидена грешка на Claude Code: Рисковете при широко делегиране - Светни.ме</title><meta property="og:title" content="Инженер загуби 48 000 файла след непредвидена грешка на Claude Code: Рисковете при широко делегиране - Светни.ме"><meta property="og:description" content="Снимка: Anthropic Claude Code / Terminal Capture
+Драматичен инцидент в общността на програмистите предизвика широк отзвук, след като софтуерен инженер съобщи за пълното унищожаване на над 48 000 фа..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/26/claude-code-agent-deletes-48000-files-incident/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/26/claude-code-agent-deletes-48000-files-incident/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженер загуби 48 000 файла след непредвидена грешка на Claude Code: Рисковете при широко делегиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 септември 2026 г.</p><div><p><img src="/articles/2026/09/26/claude-code-agent-deletes-48000-files-incident/hero.png" alt="Илюстрация към claude-code-agent-deletes-48000-files-incident"><br><small>Снимка: Anthropic Claude Code / Terminal Capture</small></p>
+<p>Драматичен инцидент в общността на програмистите предизвика широк отзвук, след като софтуерен инженер съобщи за пълното унищожаване на над 48 000 файла от локалната си работна станция по време на сесия с новия терминален агент <a href="/pages/claude-opus.html">Claude</a> Code [1]. Случаят стана вирусен в платформите Reddit и Hacker News, послужвайки като тревожно предупреждение за рисковете при безконтролно делегиране на системни права на <a href="/pages/autonomous-agents.html">автономни агенти</a> [1].</p>
+<p>Инцидентът е настъпил, след като разработчикът е стартирал агента с флаг за автоматично одобрение на терминалните команди с цел да ускори почистването на остарели зависимости [1]. При опит да изтрие временна тестова директория, моделът е объркал относителния системен път и е стартирал рекурсивна команда за изтриване в главната директория на потребителя, заличавайки месеци незапазен труд в областта на <a href="/pages/software-development.html">софтуерния инженеринг</a> [1].</p>
+<p><img src="/articles/2026/09/26/claude-code-agent-deletes-48000-files-incident/infographic.png" alt="Инфографика за THE 48,000 FILE DELETION DRIFT"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Илюзията за перфектна автономия в терминала</h2>
+<p>Случаят хвърля светлина върху уязвимостта на съвременните инструменти за <a href="/pages/cybersecurity.html">киберсигурност</a> при работа с езикови модели [1]. Когато агентът получи достъп до командния ред, той може за части от секундата да изпълни необратими действия, преди операторът да успее да реагира с ръчно прекъсване [1].<br>„Големите езикови модели са брилянтни в синтеза на логика, но нямат реален физически усет за стойността на данните и последствията от деструктивните операции“, коментират системни архитекти [1]. Неправилното интерпретиране на пътя е типичен пример за това как един халюциниран символ може да доведе до пълна загуба на файловата йерархия [1].</p>
+<h2>Задължителни правила за изолация</h2>
+<p>След инцидента експертите по софтуерна надеждност настояват всички автономни терминални инструменти задължително да работят във виртуални контейнери (като Docker или DevContainers) с права само за четене извън строго дефинирания проект [1].<br>Препоръчва се и въвеждането на апаратни спирачки, които да забраняват изпълнението на рекурсивни команди за изтриване без двуфакторна автентикация от потребителя [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://web.archive.org/web/20260920145334/https://www.reddit.com/r/ClaudeAI/comments/1wl5cgo/code_just_deleted_48k_files_this_cant_be_real/">Claude Deleted 48k Files - Hacker News / Reddit</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-development.html">Софтуерна разработка (Software Development)</a><p>Софтуерната разработка (Software Development) е процес на проектиране, създаване, тестване, внедряване и поддръжка на софтуерни приложения, системи и ...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/claude-opus.html">Claude Opus</a><p>Claude Opus е най-високият клас изкуствен интелект в семейството модели Claude, разработвани от компанията Anthropic.</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

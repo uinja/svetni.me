@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Google Security
+Екипът по киберсигурност на Google реализира значим технологичен пробив в защитата на системния софтуер, разработвайки напълно автоматизиран метод за миграция на уяз..."><title>Google пренаписва критични C библиотеки на Rust с помощта на изкуствен интелект и диференциален фъзинг - Светни.ме</title><meta property="og:title" content="Google пренаписва критични C библиотеки на Rust с помощта на изкуствен интелект и диференциален фъзинг - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Google Security
+Екипът по киберсигурност на Google реализира значим технологичен пробив в защитата на системния софтуер, разработвайки напълно автоматизиран метод за миграция на уяз..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/27/google-rewrites-critical-c-dependencies-to-rust-with-ai-fuzzing/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/27/google-rewrites-critical-c-dependencies-to-rust-with-ai-fuzzing/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google пренаписва критични C библиотеки на Rust с помощта на изкуствен интелект и диференциален фъзинг</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 септември 2026 г.</p><div><p><img src="/articles/2026/09/27/google-rewrites-critical-c-dependencies-to-rust-with-ai-fuzzing/hero.png" alt="Илюстрация към google-rewrites-critical-c-dependencies-to-rust-with-ai-fuzzing"><br><small>Снимка: InfoQ / Google Security</small></p>
+<p>Екипът по <a href="/pages/cybersecurity.html">киберсигурност</a> на <a href="/pages/google.html">Google</a> реализира значим технологичен пробив в защитата на системния <a href="/pages/software-development.html">софтуер</a>, разработвайки напълно автоматизиран метод за миграция на уязвими зависимости от езика C към безопасния <a href="/pages/rust.html">Rust</a> [1]. Като пилотен проект инженерите пренаписаха широко разпространената библиотека за обработка на графични файлове <code>giflib</code>, елиминирайки дългогодишни дефекти при управлението на паметта [1].</p>
+<p>Успехът на проекта се базира на новаторска комбинация от специализирани невронни мрежи за генериране на код и строг диференциален фъзинг [1]. Изкуственият интелект не само превежда логиката на функциите ред по ред, но и я реорганизира в идиоматичен Rust код, избягвайки използването на <code>unsafe</code> блокове и запазвайки съвместимостта на C-базирания приложно-програмен интерфейс (ABI) [1].</p>
+<p><img src="/articles/2026/09/27/google-rewrites-critical-c-dependencies-to-rust-with-ai-fuzzing/infographic.png" alt="Инфографика за GOOGLE C-TO-RUST AI TRANSFORMATION"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Диференциален фъзинг като гаранция за идентично поведение</h2>
+<p>Основното предизвикателство при автоматизираното пренаписване на софтуер е рискът от възникване на незабележими семантични отклонения или регресии в функционалността [1]. За да гарантира пълна еквивалентност, Google подложи оригиналната версия на C и новата реализация на Rust на милиарди паралелни тестове с дефектни и гранични файлови формати [1].<br>Диференциалният фъзинг сравнява системните изходи, разхода на ресурси и кодовете за грешка на двете версии при всеки отделен байт от входните данни [1]. Едва след като библиотеката на Rust доказа стопроцентово съвпадение в поведението спрямо C при десетки милиарди тестови итерации, тя бе одобрена за директно интегриране като взаимозаменяем компонент в продукционните среди на Google [1].</p>
+<h2>Стратегически план за целия технологичен сектор</h2>
+<p>Според статистиката на индустрията над 70% от всички критични уязвимости в операционните системи като Android и Windows произтичат именно от грешки при работа с паметта в C и C++ [1]. Досега пълното пренаписване на тези компоненти на Rust се считаше за икономически неоправдано поради колосалния обем от човешки инженерен труд [1].<br>Методологията на Google доказва, че изкуственият интелект може да автоматизира този процес с безпрецедентна прецизност [1]. Компанията планира да отвори част от инструментите си с отворен код, създавайки пътна карта за поетапно саниране на хиляди критични библиотеки в целия софтуерен свят [1].</p>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.infoq.com/news/2026/09/c-rust-rewrite/">Google Rewrites Critical C Dependencies to Rust Using AI and Differential Fuzzing - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-development.html">Софтуерна разработка (Software Development)</a><p>Софтуерната разработка (Software Development) е процес на проектиране, създаване, тестване, внедряване и поддръжка на софтуерни приложения, системи и ...</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
