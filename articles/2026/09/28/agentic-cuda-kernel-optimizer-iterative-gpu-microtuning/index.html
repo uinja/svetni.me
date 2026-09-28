@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="GitHub Open Source / Agentic CUDA Project
+Оптимизацията на паралелен код за графични процесори (GPU) традиционно се смяташе за една от най-сложните инженерни дисциплини, достъпна за шепа високоплат..."><title>Агентен оптимизатор за CUDA кернели: Как автономни модели автоматично настройват паралелния GPU код - Светни.ме</title><meta property="og:title" content="Агентен оптимизатор за CUDA кернели: Как автономни модели автоматично настройват паралелния GPU код - Светни.ме"><meta property="og:description" content="GitHub Open Source / Agentic CUDA Project
+Оптимизацията на паралелен код за графични процесори (GPU) традиционно се смяташе за една от най-сложните инженерни дисциплини, достъпна за шепа високоплат..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Агентен оптимизатор за CUDA кернели: Как автономни модели автоматично настройват паралелния GPU код</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 септември 2026 г.</p><div><p><img src="/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/hero.png" alt="Илюстрация към agentic-cuda-kernel-optimizer-iterative-gpu-microtuning"><br><small>GitHub Open Source / Agentic CUDA Project</small></p>
+<p>Оптимизацията на паралелен код за графични процесори (<a href="/pages/gpu.html">GPU</a>) традиционно се смяташе за една от най-сложните инженерни дисциплини, достъпна за шепа високоплатени експерти [1]. Нов инструмент с отворен код обаче доказва, че автономните езикови модели могат успешно да поемат тази роля: <strong>Agentic CUDA Optimizer</strong> автоматизира микронастройката на ядра в средата на <a href="/pages/cuda.html">CUDA</a> [1].</p>
+<p>Системата използва затворен цикъл на обратна връзка: агентът генерира вариант на паралелния алгоритъм, извиква <a href="/pages/compiler.html">компилатора</a> <code>nvcc</code>, стартира изпълнението върху реален графичен процесор и анализира профилиращите данни от Nvidia Nsight Compute [1].</p>
+<h2>Отвъд евристиките на стандартните компилатори</h2>
+<p>Въпреки десетилетията развитие, съвременните компилатори все още разчитат на общи евристики, които често водят до неефективно използване на регистрите или излишно изчакване на паметта (warp stalls) при нестандартни размери на тензорите [1].</p>
+<p>Агентният оптимизатор разглежда десетки възможни вариации на паралелната архитектура – променя размера на блоковете от нишки, преструктурира достъпа до споделената памет (shared memory tiling) и тества векторизирани инструкции за зареждане на данни [1]. След всяка итерация моделът анализира постигнатата пропускателна способност и формулира нова хипотеза за подобрение [1].</p>
+<h2>Практически резултати в реални модели</h2>
+<p>При тестове с персонализирани механизми за внимание (Attention kernels) и матрични умножения, системата постига между 15% и 35% ускорение спрямо стандартния базов код, напълно автоматично и за по-малко от един час изчислително време [1]. Проектът очертава бъдеще, в което софтуерната компилация ще бъде не статичен процес, а динамично агентно търсене на оптимална хардуерна производителност [1].</p>
+<h2>Автономният рефакторинг като новото бойно поле в системното програмиране</h2>
+<p>Успехът на Agentic CUDA Optimizer ознаменува навлизането на автономните алгоритми в най-сложната и консервативна област на софтуерното инженерство: нискостековата оптимизация на код за <a href="/pages/gpu.html">графични процесори</a> [1]. Доскоро се приемаше, че съвременните <a href="/pages/compiler.html">компилатори</a> и математическите евристики са достигнали лимита на възможните подобрения без намесата на високоспециализирани инженери [1].</p>
+<p>Чрез прилагането на итеративни агентни цикли с реални бенчмаркове върху физически хардуер, системата доказва, че автономните модели могат да идентифицират неочевидни пространствени подравнявания в споделената памет и да конфигурират регистрите по начини, които убягват на стандартните компилаторни оптимизации [1]. Това предвещава появата на изцяло самоадаптиращ се системен софтуер, чиито изчислителни ядра се самопренаписват и оптимизират автоматично спрямо конкретния силициев кристал, върху който се изпълняват [1].</p>
+<p><img src="/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/infographic.png" alt="Инфографика за AGENTIC CUDA OPTIMIZER ARCHITECTURE"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/bertaye/agentic-cuda-optimizer">Show HN: Agentic CUDA Kernel Optimizer - GitHub / Hacker News</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/gpu.html">GPU</a><p>GPU (Graphics Processing Unit – графичен процесор) е специализирана електронна верига, проектирана за бързо манипулиране и промяна на паметта, за да с...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li><li><a href="/pages/compiler.html">Компилатор (Compiler)</a><p>Компилаторът е специализирана компютърна програма, която транслира софтуерен код, написан на език от високо ниво, в машинен код, байткод или междинно ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

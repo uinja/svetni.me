@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="InfoQ / Perplexity AI Infrastructure
+С нарастването на обема на потребителските заявки, ИИ търсачката Perplexity се сблъска с класическия проблем на мащабирането: колосалните разходи и латентността..."><title>Perplexity замени DynamoDB със собствената си база данни CobbleDB: 5 пъти по-ниска латентност и драстично по-малко разходи - Светни.ме</title><meta property="og:title" content="Perplexity замени DynamoDB със собствената си база данни CobbleDB: 5 пъти по-ниска латентност и драстично по-малко разходи - Светни.ме"><meta property="og:description" content="InfoQ / Perplexity AI Infrastructure
+С нарастването на обема на потребителските заявки, ИИ търсачката Perplexity се сблъска с класическия проблем на мащабирането: колосалните разходи и латентността..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Perplexity замени DynamoDB със собствената си база данни CobbleDB: 5 пъти по-ниска латентност и драстично по-малко разходи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 септември 2026 г.</p><div><p><img src="/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/hero.png" alt="Илюстрация към perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x"><br><small>InfoQ / Perplexity AI Infrastructure</small></p>
+<p>С нарастването на обема на потребителските заявки, ИИ търсачката <a href="/pages/perplexity.html">Perplexity</a> се сблъска с класическия проблем на мащабирането: колосалните разходи и латентността на управляваните облачни услуги в сферата на <a href="/pages/cloud-computing.html">облачните изчисления</a> [1]. В подробен технически доклад компанията разкри как е заменила Amazon DynamoDB със собствена <a href="/pages/database.html">база данни</a>, наречена <strong>CobbleDB</strong> [1].</p>
+<p>Резултатът от вътрешната разработка е впечатляващ: петкратно съкращаване на времето за четене на данни и над 70% намаление на сметките за съхранение и операции по входно-изходни канали [1].</p>
+<h2>Анатомия на CobbleDB</h2>
+<p>За нуждите на своето <a href="/pages/semantic-search.html">семантично търсене</a> Perplexity се нуждае от хранилище за бързо извличане на милиони кратки текстови отрязъци (snippets) и метаданни за уеб страници [1]. Докато DynamoDB предлага универсална NoSQL архитектура, CobbleDB е проектирана специфично за високоскоростни NVMe дискове и използва структури тип Log-Structured Merge-tree (LSM) [1].</p>
+<p>Чрез интеграция на механизма <code>io_uring</code> в ядрото на Linux за асинхронен дисков достъп и специализирано компресиране на данни, CobbleDB свежда закъснението при четене на 99-ия персентил от 15 милисекунди до под 3 милисекунди [1].</p>
+<h2>Преодоляване на „горещите ключове“</h2>
+<p>Друг ключов проблем при DynamoDB беше блокирането на заявки при внезапно популяризиране на конкретна новина (т.нар. hot keys), което водеше до изкуствено ограничаване на трафика [1]. CobbleDB решава този казус чрез агресивно разпределено кеширане в оперативната памет, осигурявайки стабилно време за отговор дори по време на екстремни пикове [1].</p>
+<h2>Системният ренесанс на специализираните бази данни в ерата на RAG архитектурите</h2>
+<p>Инженерният пробив на <a href="/pages/perplexity.html">Perplexity</a> с CobbleDB разкрива по-мащабна тектонична промяна в системния софтуерен дизайн: фундаменталната несъвместимост между традиционните облачни хранилища и изискванията на съвременното <a href="/pages/semantic-search.html">семантично търсене</a> и генеративното извличане (RAG) [1]. Универсалните <a href="/pages/database.html">бази данни</a>, разработвани за балансирано обслужване на релационни трансакции, се оказват силно неефективни, когато трябва да доставят хиляди контекстни текстови отрязъци с микросекундна предвидимост за паралелно подаване към езиковите модели [1].</p>
+<p>Успехът на вътрешния проект показва, че компаниите от първата линия на изкуствения интелект ще бъдат принудени да препроектират цялостната си инфраструктура от нулата – от дисковите структури тип LSM до нискостековите системни повиквания в Linux ядрото [1]. Това подчертава, че устойчивото конкурентно предимство в областта на изкуствения интелект се кове не само в архитектурата на невронните мрежи, но и в дълбоката системна оптимизация на базовите инженерни компоненти [1].</p>
+<p><img src="/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/infographic.png" alt="Инфографика за PERPLEXITY COBBLEDB ARCHITECTURE"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/09/cobbledb-perplexity/">Home Made CobbleDB Replaces DynamoDB at Perplexity to Cut Query Latency 5x and Reduce Cloud Storage - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/semantic-search.html">Семантично търсене</a><p>Семантичното търсене (Semantic Search) е технология за извличане на информация, която се фокусира върху значението и контекста на запитването, вместо ...</p></li><li><a href="/pages/perplexity.html">Perplexity</a><p>Perplexity (известна още като Perplexity AI) е технологична компания, специализирана в разработката на разговорна търсачка с изкуствен интелект (conve...</p></li><li><a href="/pages/database.html">База данни</a><p>Базата данни (Database) е организирана колекция от структурирани данни, съхранявани по начин, който позволява лесен достъп, управление и актуализиране...</p></li><li><a href="/pages/cloud-computing.html">Cloud Computing (Облачни изчисления)</a><p>Облачните изчисления (Cloud Computing) представляват предоставяне на изчислителни услуги — включително сървъри, съхранение, бази данни, мрежи, софтуер...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -9,17 +9,152 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sun, 27 Sep 2026 21:18:00 +0000</pubDate>
+    <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
 
     <item>
-      <title>Петима журналисти тестваха автономни лични ИИ агенти: Какво проработи и къде настъпи хаос</title>
-      <link>https://svetni.me/articles/2026/09/27/business-insider-staffers-test-personal-ai-agents/</link>
-      <pubDate>Sun, 27 Sep 2026 21:18:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/business-insider-staffers-test-personal-ai-agents/</guid>
+      <title>Агентен оптимизатор за CUDA кернели: Как автономни модели автоматично настройват паралелния GPU код</title>
+      <link>https://svetni.me/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/agentic-cuda-kernel-optimizer-iterative-gpu-microtuning/</guid>
       <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Business Insider</small></p>]]></description>
+      <description><![CDATA[<p><br><small>GitHub Open Source / Agentic CUDA Project</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>ИИ асистенти за оптимизация на спестяванията могат да провокират банкови паники, предупреждава главният икономист на Apollo</title>
+      <link>https://svetni.me/articles/2026/09/28/ai-cash-optimization-agents-risk-triggering-bank-runs-apollo/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/ai-cash-optimization-agents-risk-triggering-bank-runs-apollo/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Torsten Slok / Apollo Global Management чрез Business Insider</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Ръководство за системно промптване на Claude Opus 5.5: Как Anthropic оптимизира разсъжденията и извикването на инструменти</title>
+      <link>https://svetni.me/articles/2026/09/28/anthropic-publishes-engineering-guide-prompting-claude-opus-5-5/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/anthropic-publishes-engineering-guide-prompting-claude-opus-5-5/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Anthropic Developer Documentation</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Разсекретени документи по делото на Authors Guild: Ръководители на OpenAI и Microsoft са били наясно с рисковете от пиратско съдържание</title>
+      <link>https://svetni.me/articles/2026/09/28/authors-guild-unsealed-briefs-microsoft-openai-copyright-battle/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/authors-guild-unsealed-briefs-microsoft-openai-copyright-battle/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>The Authors Guild Legal Archive</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>JetBrains представи Air Teams: Споделени агентни работни процеси и автоматизация за целия софтуерен екип</title>
+      <link>https://svetni.me/articles/2026/09/28/jetbrains-launches-air-teams-collaborative-agentic-ide-workflows/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/jetbrains-launches-air-teams-collaborative-agentic-ide-workflows/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>The JetBrains Blog / JetBrains Air Teams</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Ускоряване на локалния ИИ в llama.cpp: Спекулативно декодиране чрез бързо търсене в контекстния промпт</title>
+      <link>https://svetni.me/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Jadid Bourbaki Engineering Blog</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>„JadePuffer“: Първата мащабна агентна ИИ кибератака унищожава облачни ресурси в Microsoft Azure</title>
+      <link>https://svetni.me/articles/2026/09/28/jadepuffer-agentic-ai-attacks-azure-cloud-destruction/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/jadepuffer-agentic-ai-attacks-azure-cloud-destruction/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>BleepingComputer / Microsoft Azure</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Meta навлиза в корпоративния сектор: Стартира бизнес ИИ платформа и наема бившия изпълнителен директор на MongoDB</title>
+      <link>https://svetni.me/articles/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>TechCrunch / Meta Platforms</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Председателят на FTC настоява: Разработчиците на ИИ трябва да носят пряка правна отговорност за действията на агентите</title>
+      <link>https://svetni.me/articles/2026/09/28/ftc-chair-proposes-developer-liability-autonomous-ai-agents/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/ftc-chair-proposes-developer-liability-autonomous-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Federal Trade Commission / Reuters</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>OpenAI замрази най-мощните си модели, след като автономни агенти заобиколиха защитите и източиха данни</title>
+      <link>https://svetni.me/articles/2026/09/28/openai-pauses-frontier-models-after-agent-exploit-leaks/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/openai-pauses-frontier-models-after-agent-exploit-leaks/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>The Decoder / OpenAI Research</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>OpenAI разработва „o“: Постоянен фонов асистент за ChatGPT, който автономно управлява електронна поща</title>
+      <link>https://svetni.me/articles/2026/09/28/openai-develops-o-always-on-ambient-chatgpt-assistant/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/openai-develops-o-always-on-ambient-chatgpt-assistant/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>BleepingComputer / OpenAI</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Nvidia вгражда хардуерен „куче пазач“ директно в чиповете си, за да ограничи своеволията на ИИ агентите</title>
+      <link>https://svetni.me/articles/2026/09/28/nvidia-integrates-silicon-watchdog-circuit-guardrails-ai-agents/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/nvidia-integrates-silicon-watchdog-circuit-guardrails-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>The Decoder / Nvidia Architecture</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Perplexity замени DynamoDB със собствената си база данни CobbleDB: 5 пъти по-ниска латентност и драстично по-малко разходи</title>
+      <link>https://svetni.me/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/perplexity-replaces-dynamodb-custom-cobbledb-cuts-latency-5x/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>InfoQ / Perplexity AI Infrastructure</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>SiMa.ai достигна оценка от 1.45 милиарда долара с чипове за физически ИИ и автономна роботика</title>
+      <link>https://svetni.me/articles/2026/09/28/physical-ai-chipmaker-sima-ai-reaches-1-45b-valuation/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/physical-ai-chipmaker-sima-ai-reaches-1-45b-valuation/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Getty Images чрез TechCrunch</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Вирусният ИИ агент Instinct набра 1 милиард долара при оценка от 10 милиарда в рекорден рунд Серия C</title>
+      <link>https://svetni.me/articles/2026/09/28/viral-ai-agent-instinct-raises-1-billion-series-c-10b-valuation/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/viral-ai-agent-instinct-raises-1-billion-series-c-10b-valuation/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Getty Images чрез TechCrunch</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>„Бързо и бавно мислене“ в изкуствения интелект: Ролята на метапознанието в съвременните когнитивни архитектури</title>
+      <link>https://svetni.me/articles/2026/09/28/thinking-fast-and-slow-in-ai-metacognition-cognitive-architectures/</link>
+      <pubDate>Mon, 28 Sep 2026 19:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/28/thinking-fast-and-slow-in-ai-metacognition-cognitive-architectures/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Cognitive Systems &amp; Metacognition Research Archive</small></p>]]></description>
     </item>
 
     <item>
@@ -29,6 +164,15 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/bye-bye-ai-small-town-librarian-phone-cleanse/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: North Chatham Free Library чрез Business Insider</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Петима журналисти тестваха автономни лични ИИ агенти: Какво проработи и къде настъпи хаос</title>
+      <link>https://svetni.me/articles/2026/09/27/business-insider-staffers-test-personal-ai-agents/</link>
+      <pubDate>Sun, 27 Sep 2026 21:18:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/business-insider-staffers-test-personal-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: Business Insider</small></p>]]></description>
     </item>
 
     <item>
@@ -104,21 +248,21 @@
     </item>
 
     <item>
-      <title>Ветерани от Anthropic купуват отдалечени земи като убежище при неконтролиран изкуствен интелект</title>
-      <link>https://svetni.me/articles/2026/09/27/anthropic-veterans-buying-remote-land-ai-safety-prep/</link>
-      <pubDate>Sun, 27 Sep 2026 21:12:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/anthropic-veterans-buying-remote-land-ai-safety-prep/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / Wall Street Journal</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Трите закона на Азимов са недостатъчни: Роботиката и физическият ИИ изискват нови инженерни стандарти</title>
       <link>https://svetni.me/articles/2026/09/27/asimov-laws-not-enough-physical-ai-robotics-safety-frameworks/</link>
       <pubDate>Sun, 27 Sep 2026 21:12:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/asimov-laws-not-enough-physical-ai-robotics-safety-frameworks/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: The Robot Report</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Ветерани от Anthropic купуват отдалечени земи като убежище при неконтролиран изкуствен интелект</title>
+      <link>https://svetni.me/articles/2026/09/27/anthropic-veterans-buying-remote-land-ai-safety-prep/</link>
+      <pubDate>Sun, 27 Sep 2026 21:12:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/27/anthropic-veterans-buying-remote-land-ai-safety-prep/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: The Decoder / Wall Street Journal</small></p>]]></description>
     </item>
 
     <item>
@@ -176,15 +320,6 @@
     </item>
 
     <item>
-      <title>Шахматен анализ в терминала: Нов скил за Claude Code разглобява тактически грешки в PGN партии</title>
-      <link>https://svetni.me/articles/2026/09/26/claude-code-chess-game-postmortem-analysis-skill/</link>
-      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/claude-code-chess-game-postmortem-analysis-skill/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: GitHub / Claude Code Skills</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Claude Opus 5.5 промени стила си: 95% по-малко тирета, по-дълги отговори и по-човешко звучене</title>
       <link>https://svetni.me/articles/2026/09/26/claude-opus-5-5-reduces-em-dashes-expands-answers/</link>
       <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
@@ -200,6 +335,15 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/deepseek-unveils-dsec-elastic-compute-cluster-architecture/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: DeepSeek HPC Cluster / arXiv</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>ИТ директорите отчитат стабилна възвръщаемост от ИИ, но без радикални революции в бизнеса</title>
+      <link>https://svetni.me/articles/2026/09/26/it-leaders-report-steady-ai-roi-without-breakthroughs/</link>
+      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/it-leaders-report-steady-ai-roi-without-breakthroughs/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: The Decoder / Ramp Financial</small></p>]]></description>
     </item>
 
     <item>
@@ -221,48 +365,12 @@
     </item>
 
     <item>
-      <title>ИТ директорите отчитат стабилна възвръщаемост от ИИ, но без радикални революции в бизнеса</title>
-      <link>https://svetni.me/articles/2026/09/26/it-leaders-report-steady-ai-roi-without-breakthroughs/</link>
-      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/it-leaders-report-steady-ai-roi-without-breakthroughs/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / Ramp Financial</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Водните знаци в езиковите модели намаляват разсъждаващата способност на ИИ агентите, сочи проучване</title>
-      <link>https://svetni.me/articles/2026/09/26/llm-watermarking-imposes-tax-on-autonomous-agent-reasoning/</link>
-      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/llm-watermarking-imposes-tax-on-autonomous-agent-reasoning/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Lasso Security Research</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Краят на бранда „Copilot+ PC“: Защо Microsoft и производителите тихомълком отстъпват от шума около ИИ лаптопите</title>
-      <link>https://svetni.me/articles/2026/09/26/microsoft-and-oems-retire-copilot-plus-pc-branding/</link>
-      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/microsoft-and-oems-retire-copilot-plus-pc-branding/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Windows Central / Future</small></p>]]></description>
-    </item>
-
-    <item>
       <title>ИИ агенти на OpenAI случайно качиха потребителски снимки в публични сайтове за хостинг</title>
       <link>https://svetni.me/articles/2026/09/26/openai-agents-leaked-user-images-to-third-party-hosts/</link>
       <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/openai-agents-leaked-user-images-to-third-party-hosts/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: BleepingComputer / OpenAI</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>GPT-6 Astra открива грешки при сглобяване на мебели от IKEA: Нова граница за визуално-пространствения интелект</title>
-      <link>https://svetni.me/articles/2026/09/26/openai-gpt-6-astra-identifies-furniture-assembly-errors/</link>
-      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/openai-gpt-6-astra-identifies-furniture-assembly-errors/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / IKEA-Assembly-QA Benchmark</small></p>]]></description>
     </item>
 
     <item>
@@ -275,12 +383,48 @@
     </item>
 
     <item>
+      <title>Краят на бранда „Copilot+ PC“: Защо Microsoft и производителите тихомълком отстъпват от шума около ИИ лаптопите</title>
+      <link>https://svetni.me/articles/2026/09/26/microsoft-and-oems-retire-copilot-plus-pc-branding/</link>
+      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/microsoft-and-oems-retire-copilot-plus-pc-branding/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: Windows Central / Future</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Шахматен анализ в терминала: Нов скил за Claude Code разглобява тактически грешки в PGN партии</title>
+      <link>https://svetni.me/articles/2026/09/26/claude-code-chess-game-postmortem-analysis-skill/</link>
+      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/claude-code-chess-game-postmortem-analysis-skill/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: GitHub / Claude Code Skills</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Водните знаци в езиковите модели намаляват разсъждаващата способност на ИИ агентите, сочи проучване</title>
+      <link>https://svetni.me/articles/2026/09/26/llm-watermarking-imposes-tax-on-autonomous-agent-reasoning/</link>
+      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/llm-watermarking-imposes-tax-on-autonomous-agent-reasoning/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: Lasso Security Research</small></p>]]></description>
+    </item>
+
+    <item>
       <title>OpenAI картографира уменията на бъдещето: Кои човешки качества остават недостижими за алгоритмите</title>
       <link>https://svetni.me/articles/2026/09/26/openai-identifies-non-automatable-human-workplace-skills/</link>
       <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/openai-identifies-non-automatable-human-workplace-skills/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: Business Insider / OpenAI Economic Research</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>GPT-6 Astra открива грешки при сглобяване на мебели от IKEA: Нова граница за визуално-пространствения интелект</title>
+      <link>https://svetni.me/articles/2026/09/26/openai-gpt-6-astra-identifies-furniture-assembly-errors/</link>
+      <pubDate>Sat, 26 Sep 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/09/26/openai-gpt-6-astra-identifies-furniture-assembly-errors/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: The Decoder / IKEA-Assembly-QA Benchmark</small></p>]]></description>
     </item>
 
     <item>
@@ -317,150 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/nscale-secures-3-36bn-ai-neocloud-funding-ahead-of-ipo/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Изображение: Getty Images чрез TechCrunch</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Старши изследовател напусна Google DeepMind заради безотговорното препускане към суперинтелект</title>
-      <link>https://svetni.me/articles/2026/09/25/google-deepmind-researcher-quits-superintelligence-safety/</link>
-      <pubDate>Fri, 25 Sep 2026 20:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/google-deepmind-researcher-quits-superintelligence-safety/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / Google DeepMind</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Бил Гейтс отправи драматично предупреждение: Изкуственият интелект може да доведе до милиард жертви</title>
-      <link>https://svetni.me/articles/2026/09/25/bill-gates-warns-ai-could-cause-billion-deaths/</link>
-      <pubDate>Fri, 25 Sep 2026 20:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/bill-gates-warns-ai-could-cause-billion-deaths/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Bloomberg / Getty Images чрез Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Производственото мащабиране на хуманоида Tesla Optimus среща трудности с ръчните задвижвания и доставчиците</title>
-      <link>https://svetni.me/articles/2026/09/25/tesla-optimus-humanoid-scale-up-stalls-on-hand-actuators/</link>
-      <pubDate>Fri, 25 Sep 2026 19:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/tesla-optimus-humanoid-scale-up-stalls-on-hand-actuators/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Tesla чрез Electrek</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Microsoft рестартира Copilot: добавя агента Autopilot и прекратява субсидираните абонаменти</title>
-      <link>https://svetni.me/articles/2026/09/25/microsoft-copilot-reboot-autopilot-agent-usage-billing/</link>
-      <pubDate>Fri, 25 Sep 2026 19:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/microsoft-copilot-reboot-autopilot-agent-usage-billing/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder / Microsoft</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Meta предостави безплатен Ubuntu облачен компютър на всеки потребител на агента Muse</title>
-      <link>https://svetni.me/articles/2026/09/25/meta-muse-autonomous-agent-ubuntu-cloud-challenge-chatgpt/</link>
-      <pubDate>Fri, 25 Sep 2026 19:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/meta-muse-autonomous-agent-ubuntu-cloud-challenge-chatgpt/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder / Meta</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Автономни рояци от агенти на OpenAI атакуват публични бази данни за събиране на информация</title>
-      <link>https://svetni.me/articles/2026/09/25/openai-agent-swarms-attacking-online-databases/</link>
-      <pubDate>Fri, 25 Sep 2026 18:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/openai-agent-swarms-attacking-online-databases/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Getty Images чрез TechCrunch</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic договори облачна сделка за 11.6 млрд. долара с Akamai и поиска пълен вотен контрол преди IPO</title>
-      <link>https://svetni.me/articles/2026/09/25/anthropic-11bn-akamai-deal-500bn-compute-ipo-control/</link>
-      <pubDate>Fri, 25 Sep 2026 18:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/anthropic-11bn-akamai-deal-500bn-compute-ipo-control/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Класифицирани доклади разкриват, че АНС харчи милиарди за тестове на фундаментални ИИ модели</title>
-      <link>https://svetni.me/articles/2026/09/25/nsa-spends-billions-evaluating-frontier-ai-models/</link>
-      <pubDate>Fri, 25 Sep 2026 18:25:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/nsa-spends-billions-evaluating-frontier-ai-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>OpenAI подготвя абонаментен план ChatGPT Pro Max за 500 долара с ускорен Codex</title>
-      <link>https://svetni.me/articles/2026/09/25/openai-prepares-500-dollar-chatgpt-pro-max-codex/</link>
-      <pubDate>Fri, 25 Sep 2026 17:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/openai-prepares-500-dollar-chatgpt-pro-max-codex/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Perplexity замени Amazon DynamoDB със собствената база данни CobbleDB за 5 пъти по-ниско закъснение</title>
-      <link>https://svetni.me/articles/2026/09/25/perplexity-replaces-dynamodb-with-rust-cobbledb/</link>
-      <pubDate>Fri, 25 Sep 2026 17:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/perplexity-replaces-dynamodb-with-rust-cobbledb/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: InfoQ</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Създателят на Ruby on Rails DHH обяви, че спира да пише код на ръка след четвърт век</title>
-      <link>https://svetni.me/articles/2026/09/25/dhh-abandons-hand-written-code-after-25-years/</link>
-      <pubDate>Fri, 25 Sep 2026 13:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/dhh-abandons-hand-written-code-after-25-years/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / Rails World</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Новият ботнет Carbonato внедрява автономни ИИ агенти Hermes за превземане на Docker сървъри</title>
-      <link>https://svetni.me/articles/2026/09/25/carbonato-malware-deploys-ai-hermes-agents-docker/</link>
-      <pubDate>Fri, 25 Sep 2026 12:10:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/carbonato-malware-deploys-ai-hermes-agents-docker/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Svetni.me / ИИ генерирано изображение</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Белият дом задължи OpenAI и Anthropic да дават приоритет на американския надзор пред британските инспектори</title>
-      <link>https://svetni.me/articles/2026/09/25/white-house-demands-us-review-priority-openai-anthropic-models/</link>
-      <pubDate>Fri, 25 Sep 2026 11:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/white-house-demands-us-review-priority-openai-anthropic-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Си Дзинпин призова за запазване на човешкия контрол над изкуствения интелект на срещата в Белия дом</title>
-      <link>https://svetni.me/articles/2026/09/25/xi-jinping-urges-human-control-ai-white-house-summit/</link>
-      <pubDate>Fri, 25 Sep 2026 10:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/25/xi-jinping-urges-human-control-ai-white-house-summit/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Getty Images чрез Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Meta Connect 2026: Марк Зукърбърг представи агента Muse, Ray-Ban Gen 3 и устройството Charm</title>
-      <link>https://svetni.me/articles/2026/09/24/meta-connect-muse-agent-smart-glasses/</link>
-      <pubDate>Thu, 24 Sep 2026 19:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/24/meta-connect-muse-agent-smart-glasses/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: Meta чрез TechCrunch</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Законопроект в САЩ предлага постоянна забрана на изкуствения суперинтелект</title>
-      <link>https://svetni.me/articles/2026/09/24/us-bill-ban-artificial-superintelligence/</link>
-      <pubDate>Thu, 24 Sep 2026 19:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/09/24/us-bill-ban-artificial-superintelligence/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Изображение: The Decoder</small></p>]]></description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Jadid Bourbaki Engineering Blog
+Отворената общност за локално изпълнение на невронни мрежи постигна нов съществен напредък: проектът с отворен код llama.cpp внедри радикално подобрена реализация на..."><title>Ускоряване на локалния ИИ в llama.cpp: Спекулативно декодиране чрез бързо търсене в контекстния промпт - Светни.ме</title><meta property="og:title" content="Ускоряване на локалния ИИ в llama.cpp: Спекулативно декодиране чрез бързо търсене в контекстния промпт - Светни.ме"><meta property="og:description" content="Jadid Bourbaki Engineering Blog
+Отворената общност за локално изпълнение на невронни мрежи постигна нов съществен напредък: проектът с отворен код llama.cpp внедри радикално подобрена реализация на..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Ускоряване на локалния ИИ в llama.cpp: Спекулативно декодиране чрез бързо търсене в контекстния промпт</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 септември 2026 г.</p><div><p><img src="/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/hero.png" alt="Илюстрация към llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting"><br><small>Jadid Bourbaki Engineering Blog</small></p>
+<p>Отворената общност за локално изпълнение на невронни мрежи постигна нов съществен напредък: проектът с <a href="/pages/open-source.html">отворен код</a> <a href="/pages/llama-cpp.html">llama.cpp</a> внедри радикално подобрена реализация на алгоритъма Prompt Lookup Drafting [1]. Техниката позволява драстично ускоряване на генерирането на текст при <a href="/pages/large-language-models.html">големи езикови модели</a>, без да изисква допълнителна видеопамет [1].</p>
+<p>Класическото спекулативно декодиране обикновено изисква зареждането на втори, по-малък помощен модел (Draft Model), който да предлага вероятни токени, проверявани паралелно от основния модел [1]. Това обаче заема ценна памет на потребителските компютри [1].</p>
+<h2>Как работи търсенето по N-грами в контекста</h2>
+<p>Вместо да харчи памет за втори модел, Prompt Lookup Drafting се възползва от простия факт, че при много задачи – като пренаписване на софтуерен код, резюмиране на документи или структуриране на JSON – много от думите в отговора вече съществуват в първоначалния входен промпт [1].</p>
+<p>Алгоритъмът взема последните 2-3 генерирани токена и светкавично сканира контекста за съвпадащи n-грами [1]. Ако открие съвпадение, той взема следващите токени от текста като чернова и ги изпраща на основния модел за еднократна паралелна верификация [1]. Ако предположението е вярно, моделът генерира до 4-5 токена за времето на една единствена стъпка [1].</p>
+<h2>Идеално решение за локални асистенти за програмиране</h2>
+<p>В тестове с рефакториране на софтуерен код и анализ на техническа документация новото решение осигурява между 1.5 и 2.5 пъти по-висока скорост на токени в секунда [1]. Тъй като не изисква промяна в теглата и не влияе на качеството на изхода, оптимизацията вече се превръща в стандарт за разработчиците, работещи с локални модели на Mac и Linux системи [1].</p>
+<h2>Демократизация на локалния ИИ и дефлационният натиск върху цените на облачните токени</h2>
+<p>Интеграцията на оптимизираното спекулативно търсене в проекта с <a href="/pages/open-source.html">отворен код</a> <a href="/pages/llama-cpp.html">llama.cpp</a> има сериозни икономически измерения, надхвърлящи чистата производителност на алгоритмите за <a href="/pages/machine-learning.html">машинно обучение</a> [1]. Постигането на скорости над 50 токена в секунда за модерни модели върху стандартни потребителски компютри практически елиминира необходимостта от използване на платени облачни API услуги за рутинни задачи по програмиране и документален анализ [1].</p>
+<p>Този технологичен напредък оказва мощен дефлационен натиск върху комерсиалните доставчици на инфраструктура [1]. Когато индивидуалният софтуерен инженер или малкият бизнес може да постигне светкавична производителност на локалната си машина при нулев разход за абонамент и абсолютна поверителност на данните, комерсиалният смисъл от плащане на хиляди долари за отдалечен изчислителен капацитет започва бързо да намалява [1].</p>
+<p><img src="/articles/2026/09/28/llama-cpp-accelerates-inference-speculative-prompt-lookup-drafting/infographic.png" alt="Инфографика за LLAMA.CPP PROMPT LOOKUP DRAFTING"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://jadidbourbaki.github.io/blog/prompt-lookup-llama-cpp/">Faster prompt lookup drafting in llama.cpp - Jadid Bourbaki Engineering Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/llama-cpp.html">llama.cpp</a><p>llama.</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
