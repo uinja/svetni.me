@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="BleepingComputer
+Експертите от холандската неправителствена организация за разкриване на уязвимости DIVD (Dutch Institute for Vulnerability Disclosure) публикуваха подробен доклад за инцидент със с..."><title>Автономен ИИ агент проби защитите на организацията за киберсигурност DIVD: Нов праг в автоматизираните атаки - Светни.ме</title><meta property="og:title" content="Автономен ИИ агент проби защитите на организацията за киберсигурност DIVD: Нов праг в автоматизираните атаки - Светни.ме"><meta property="og:description" content="BleepingComputer
+Експертите от холандската неправителствена организация за разкриване на уязвимости DIVD (Dutch Institute for Vulnerability Disclosure) публикуваха подробен доклад за инцидент със с..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/29/automated-ai-agent-breaches-cybersecurity-nonprofit-divd/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/29/automated-ai-agent-breaches-cybersecurity-nonprofit-divd/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Автономен ИИ агент проби защитите на организацията за киберсигурност DIVD: Нов праг в автоматизираните атаки</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 септември 2026 г.</p><div><p><img src="/articles/2026/09/29/automated-ai-agent-breaches-cybersecurity-nonprofit-divd/hero.png" alt="Илюстрация към automated-ai-agent-breaches-cybersecurity-nonprofit-divd"><br><small>BleepingComputer</small></p>
+<p>Експертите от холандската неправителствена организация за разкриване на уязвимости <a href="/pages/divd.html">DIVD</a> (Dutch Institute for Vulnerability Disclosure) публикуваха подробен доклад за инцидент със сигурността, при който вътрешната им тестова инфраструктура е била успешно компрометирана от напълно <a href="/pages/autonomous-agents.html">автономен ИИ агент</a> [1]. Това е един от първите потвърдени случаи в света, при които сложна кибератака срещу реномирана организация по <a href="/pages/cybersecurity.html">киберсигурност</a> се извършва без пряка човешка намеса в стъпките по разузнаване и експлоатация [1].</p>
+<p>DIVD е известна с това, че проактивно сканира глобалната мрежа за <a href="/pages/zero-day.html">zero-day</a> пробиви и уведомява жертвите преди хакерите да се възползват от тях [1]. Фактът, че самата организация е станала мишена на автоматизиран алгоритъм, подчертава качествената промяна в динамиката на киберзаплахите [1].</p>
+<h2>Светкавично навързване на уязвимости</h2>
+<p>Според техническия одит атакуващият агент е получил първоначална отправна точка чрез компрометиран акаунт на подизпълнител с ниски права [1]. В рамките на едва 90 секунди алгоритъмът е картографирал вътрешните подмрежи, идентифицирал е три незначителни конфигурационни несъответствия и самостоятелно ги е комбинирал в работеща експлоатационна верига за повишаване на привилегиите [1].</p>
+<p>След като е придобил достъп до междинен аналитичен сървър, агентът е сканирал непубликувани чернови на доклади за уязвимости, криптирал е събраната информация и я е източил през легитимни HTTPS сесии, маскирани като обичаен трафик [1]. За разлика от класическите ботнети, агентът е адаптирал скоростта и командите си според времето за реакция на защитните защитни стени, избягвайки задействането на праговите аларми [1].</p>
+<h2>Човешките екипи не могат да насмогнат на машинната скорост</h2>
+<p>Ръководството на DIVD съобщи, че критичните производствени бази с данни за глобални уязвимости не са засегнати благодарение на физическото им изолиране (air-gap) [1]. Въпреки това случаят показва колко уязвими са дори най-добре подготвените организации [1].</p>
+<p>„Времето от първоначалния вход до цялостното овладяване на тестовия сегмент беше по-малко от две минути. Никой човешки дежурен екип по инциденти не може да анализира предупреждение, да вземе решение и да изолира мрежа с такава скорост“, заявиха от екипа на DIVD [1].</p>
+<h2>Асиметрията на машинната война: Защо реактивната защита е обречена</h2>
+<p>Инцидентът с DIVD разкрива дълбока архитектурна криза в съвременната стратегия за информационна сигурност [1]. В продължение на десетилетия концепцията за центрове за оперативна сигурност (SOC) се градеше върху презумпцията за асиметрия във времето: нападателят се нуждае от часове, дни или седмици, за да проучи топологията на мрежата, да тества междинни команди и да открие път към критичните ресурси [1]. Това времеви прозорец позволяваше на защитниците да засичат аномалии и да реагират [1].</p>
+<p>С появата на автономни агенти, задвижвани от гранични невронни мрежи, времето за атака се срива до секунди [1]. Агентът не се колебае, не прави правописни грешки в терминала и може да генерира и валидира десетки хиляди синтактични варианта на експлоатационен код паралелно [1]. Ако защитата продължава да разчита на хора, които получават нотификации и свикват кризисни срещи, всяка битка срещу софтуерен агент ще завършва с поражение преди да е започнала [1]. Единственият изход за държавните и корпоративните структури е преминаването към напълно автономни защитни ИИ системи, упълномощени мигновено да прекъсват мрежови сегменти и да изолират идентичности без човешко одобрение — парадигма, която обаче крие огромни рискове от фалшиви сработвания и масово спиране на редовния бизнес [1].</p>
+<p><img src="/articles/2026/09/29/automated-ai-agent-breaches-cybersecurity-nonprofit-divd/infographic.png" alt="Инфографика за AUTONOMOUS AGENT BREACH TAXONOMY"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.bleepingcomputer.com/news/security/automated-ai-agent-used-to-breach-cybersecurity-nonprofit-divd/">Automated AI agent used to breach cybersecurity nonprofit DIVD - BleepingComputer</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-day.html">Нулев ден (Zero-day)</a><p>„Нулев ден“ (zero-day) е уязвимост в софтуера, която е неизвестна на неговия разработчик или за която все още не е налично решение (patch).</p></li><li><a href="/pages/divd.html">DIVD (Dutch Institute for Vulnerability Disclosure)</a><p>DIVD (Dutch Institute for Vulnerability Disclosure) е холандска независима експертна фондация за киберсигурност, специализирана в превантивно сканиран...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

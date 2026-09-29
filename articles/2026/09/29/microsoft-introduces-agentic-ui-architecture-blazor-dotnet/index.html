@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Microsoft .NET Blog
+Инженерният екип на платформената екосистема .NET в Microsoft обяви официалното пускане на нова библиотека от специализирани компоненти за Blazor, въвеждащи концепцията за агент..."><title>Microsoft представи Agentic UI архитектура в Blazor: Компоненти за двупосочно сътрудничество между потребител и ИИ агенти - Светни.ме</title><meta property="og:title" content="Microsoft представи Agentic UI архитектура в Blazor: Компоненти за двупосочно сътрудничество между потребител и ИИ агенти - Светни.ме"><meta property="og:description" content="Microsoft .NET Blog
+Инженерният екип на платформената екосистема .NET в Microsoft обяви официалното пускане на нова библиотека от специализирани компоненти за Blazor, въвеждащи концепцията за агент..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/29/microsoft-introduces-agentic-ui-architecture-blazor-dotnet/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/29/microsoft-introduces-agentic-ui-architecture-blazor-dotnet/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Microsoft представи Agentic UI архитектура в Blazor: Компоненти за двупосочно сътрудничество между потребител и ИИ агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 септември 2026 г.</p><div><p><img src="/articles/2026/09/29/microsoft-introduces-agentic-ui-architecture-blazor-dotnet/hero.png" alt="Илюстрация към microsoft-introduces-agentic-ui-architecture-blazor-dotnet"><br><small>Microsoft .NET Blog</small></p>
+<p>Инженерният екип на платформената екосистема <a href="/pages/dotnet.html">.NET</a> в <a href="/pages/microsoft.html">Microsoft</a> обяви официалното пускане на нова библиотека от специализирани компоненти за <a href="/pages/blazor.html">Blazor</a>, въвеждащи концепцията за агентен потребителски интерфейс (<a href="/pages/agentic-ui.html">Agentic UI</a>) [1]. Инициативата има за цел да изведе разработката на корпоративен софтуер отвъд примитивните странични чат прозорци, създавайки среда за истинско двупосочно сътрудничество между хората и автономните алгоритми [1].</p>
+<p>Библиотеката включва готови контроли като <code>AgenticChat</code>, <code>AgentPlanVisualizer</code> и споделени работни платна (Shared Canvas), чрез които агентите могат динамично да предлагат промени в бизнес документи, диаграми и формуляри, показвайки ясни визуални разлики (diffs) за човешко одобрение преди запис [1].</p>
+<h2>Двупосочно управление на състоянието</h2>
+<p>Най-голямото техническо предизвикателство при агентните интерфейси е синхронизацията на състоянието (state management), когато потребителят и агентът се опитват да редактират един и същи артефакт едновременно [1]. Blazor AI решава този проблем чрез модел на неизменимо състояние и детерминистичен одит на промените [1].</p>
+<p>Всяко действие на агента се пакетира като структурирано предложение, предавано в реално време през протокола SignalR [1]. Потребителят може да инспектира стъпките в разсъжденията на модела, да приема частични корекции или да връща състоянието назад с едно щракване [1]. Архитектурата е напълно интегрирана с Microsoft Semantic Kernel, осигурявайки типизирани C# дефиниции на наличните инструменти [1].</p>
+<h2>Универсално изпълнение в браузъра и на десктопа</h2>
+<p>Благодарение на гъвкавостта на Blazor, новите агентни компоненти могат да работят както на сървъра (Blazor Server), така и локално на клиентското устройство чрез WebAssembly или в хибридни десктоп приложения чрез .NET MAUI [1].</p>
+<p>Това позволява на корпоративните разработчици в областта на <a href="/pages/software-engineering.html">софтуерното инженерство</a> да изграждат интелигентни работни пространства с гарантирана защита на данните, при които обработката на състоянието и локалните инструменти не изискват постоянна връзка с облачни услуги на трети страни [1].</p>
+<h2>Смъртта на чатбокса: Раждането на съвместното цифрово работно пространство</h2>
+<p>Представянето на Agentic UI компонентите в Blazor бележи края на първата, примитивна фаза в потребителския дизайн на генеративния изкуствен интелект [1]. В продължение на четири години индустрията се опитваше да натика колосалната мощ на невронните мрежи в тясната кутия на чат прозореца — модел, заимстван от класическите системи за съобщения от края на 90-те години [1]. В реалната професионална среда обаче хората не работят чрез размяна на реплики, а чрез директно манипулиране на артефакти: код, финансови отчети, чертежи и таблици [1].</p>
+<p>Концепцията за споделено интерактивно платно, в което агентът действа като равноправен дигитален колега с курсор и визуални предложения, представлява истинската революция в продуктивността [1]. Когато софтуерната рамка осигурява криптографска проследимост на промените и гарантира, че нито един ред код или число не може да бъде пренаписано без човешка санкция, бариерата на недоверието към ИИ пада [1]. Microsoft за пореден път демонстрира способността си да превръща експериментални концепции в здрави корпоративни стандарти, превръщайки екосистемата .NET в основен двигател на следващото поколение интелигентен бизнес софтуер [1].</p>
+<p><img src="/articles/2026/09/29/microsoft-introduces-agentic-ui-architecture-blazor-dotnet/infographic.png" alt="Инфографика за BLAZOR AGENTIC UI ARCHITECTURE"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://devblogs.microsoft.com/dotnet/build-agentic-ui-blazor/">Build Agentic UI with the new Blazor AI components - .NET Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/dotnet.html">.NET</a><p>.</p></li><li><a href="/pages/blazor.html">Blazor</a><p>Blazor е уеб рамка от Microsoft като част от платформената екосистема.</p></li><li><a href="/pages/agentic-ui.html">Агентен потребителски интерфейс (Agentic UI)</a><p>Агентният потребителски интерфейс (Agentic UI) е нов клас дизайн и архитектура на интерфейси, при които ИИ агенти не просто отговарят на въпроси в чат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
