@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / CodeScene Research
+Компанията за анализ на софтуерни кодови бази CodeScene публикува детайлно емпирично изследване, при което автономни софтуерни агенти са рефакторирали над 300 000..."><title>ИИ агенти рефакторираха 300 000 реда C код за три седмици: Емпирично изследване на CodeScene - Светни.ме</title><meta property="og:title" content="ИИ агенти рефакторираха 300 000 реда C код за три седмици: Емпирично изследване на CodeScene - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / CodeScene Research
+Компанията за анализ на софтуерни кодови бази CodeScene публикува детайлно емпирично изследване, при което автономни софтуерни агенти са рефакторирали над 300 000..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/30/empirical-study-agents-refactor-300k-lines-code-practitioner-limits/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/30/empirical-study-agents-refactor-300k-lines-code-practitioner-limits/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>ИИ агенти рефакторираха 300 000 реда C код за три седмици: Емпирично изследване на CodeScene</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 септември 2026 г.</p><div><p><img src="/articles/2026/09/30/empirical-study-agents-refactor-300k-lines-code-practitioner-limits/hero.png" alt="ИИ агенти рефакторираха 300 000 реда C код за три седмици: Емпирично изследване на CodeScene"><br><small>Снимка: InfoQ / CodeScene Research</small></p>
+<p>Компанията за анализ на софтуерни кодови бази <a href="/pages/codescene.html">CodeScene</a> публикува детайлно емпирично изследване, при което автономни софтуерни агенти са рефакторирали над 300 000 реда наследен C код за период от три седмици [1]. Експериментът е струвал приблизително 4 000 долара в изразходвани <a href="/pages/tokens.html">токени</a> и е използвал специализирана тестова система за възпроизвеждане кадър по кадър (frame-by-frame replay harness) за валидация на резултатите [1].</p>
+<p><img src="/articles/2026/09/30/empirical-study-agents-refactor-300k-lines-code-practitioner-limits/infographic.png" alt="Инфографика: ИИ агенти рефакторираха 300 000 реда C код за три седмици: Емпирично изследване на CodeScene"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Методология на експеримента и технически резултати</h2>
+<p>В рамките на проекта автономните агенти първоначално са изградили специализирано локално ръководство (playbook) с архитектурни правила, извлечени от кодовата база, след което са пристъпили към поетапно <a href="/pages/refactoring.html">рефакториране</a> на отделни модули [1]. Всяка промяна е преминавала през строг набор от регресионни тестове преди да бъде интегрирана, а при откриване на несъответствие системата автоматично е връщала промените назад [1].<br>Анализът на CodeScene показва категорично подобрение в класическите метрики за качество на кода: цикломатичната сложност на най-тежките функции е намаляла значително, премахнати са хиляди редове неизползван код и са унифицирани стиловете за обработка на системни грешки [1].<br>Въпреки инженерния успех обаче, изследването предизвика разгорещени дискусии сред софтуерните инженери [1]. Практикуващите програмисти отбелязват, че проверката на стотици генерирани pull requests е предизвикала силно когнитивно изтощение у хората одитори, а в някои гранични случаи са наблюдавани фини семантични отклонения, които са останали незабелязани от автоматизираните тестове [1].</p>
+<h2>Когнитивният данък на автоматизираното инженерство: Между високата производителност и загубата на архитектурен контрол</h2>
+<p>Резултатите от опита на CodeScene илюстрират фундаменталния парадокс на съвременното ИИ програмиране. Способността за пренаписване на стотици хиляди редове код срещу нищожна финансова сума създава илюзия за безкрайна продуктивност, но в действителност измества тесното място от писането на код към неговата верификация и разбиране.<br>Когато човек софтуерен инженер прекарва седмици в рефакториране на система, той изгражда подробен ментален модел за нейните зависимости, скрити компромиси и поведение при гранични натоварвания. Когато същата задача бъде делегирана на агенти, този когнитивен контекст се губи. Екипът остава с код, който формално покрива съществуващите тестове, но чиято вътрешна логика вече не е интуитивно позната на нито един жив член на организацията.<br>Това явление, определяно като „когнитивен данък“, заплашва да увеличи дългосрочния архитектурен дълг на компаниите. Ако никой не разбира цялостната система в детайли, всяка бъдеща промяна или отстраняване на критичен бъг ще изисква повторно наемане на агенти за анализ, създавайки пълна институционална зависимост от изкуствения интелект.</p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://www.infoq.com/news/2026/09/agentic-refactoring-case-study/">Agents Refactor 300K Lines in Three Weeks, and Practitioners Ask What It Proves – InfoQ</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tokens.html">Токени (Tokens)</a><p>При обработката на естествен език, токенът е основната единица текст, която моделът на ИИ чете и пише.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/refactoring.html">Рефакториране</a><p>Рефакторирането (Refactoring) е процес на контролирано преструктуриране на съществуващия софтуерен код, без да се променя неговото външно поведение.</p></li><li><a href="/pages/codescene.html">CodeScene</a><p>CodeScene
+CodeScene е усъвършенствана платформа за поведенчески анализ на софтуерни кодови бази, която комбинира визуализация на архитектурния техниче...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

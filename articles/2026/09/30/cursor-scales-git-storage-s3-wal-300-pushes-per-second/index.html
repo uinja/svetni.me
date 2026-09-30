@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Cursor Continuity Architecture
+Популярната среда за разработка с изкуствен интелект Cursor представи новата си архитектура за съхранение на версии Continuity [1]. Системата използва..."><title>Cursor внедри архитектурата Continuity: Мащабиране на Git хранилището през S3 WAL до над 300 пуша в секунда - Светни.ме</title><meta property="og:title" content="Cursor внедри архитектурата Continuity: Мащабиране на Git хранилището през S3 WAL до над 300 пуша в секунда - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Cursor Continuity Architecture
+Популярната среда за разработка с изкуствен интелект Cursor представи новата си архитектура за съхранение на версии Continuity [1]. Системата използва..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/30/cursor-scales-git-storage-s3-wal-300-pushes-per-second/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/30/cursor-scales-git-storage-s3-wal-300-pushes-per-second/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cursor внедри архитектурата Continuity: Мащабиране на Git хранилището през S3 WAL до над 300 пуша в секунда</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 септември 2026 г.</p><div><p><img src="/articles/2026/09/30/cursor-scales-git-storage-s3-wal-300-pushes-per-second/hero.png" alt="Cursor внедри архитектурата Continuity: Мащабиране на Git хранилището през S3 WAL до над 300 пуша в секунда"><br><small>Снимка: InfoQ / Cursor Continuity Architecture</small></p>
+<p>Популярната среда за разработка с изкуствен интелект <a href="/pages/cursor.html">Cursor</a> представи новата си архитектура за съхранение на версии Continuity [1]. Системата използва журнал с предварително записване <a href="/pages/wal.html">(WAL)</a>, базиран върху обектно хранилище <a href="/pages/s3.html">Amazon S3</a>, като единствен авторитетен източник на истина, което позволява мащабиране на обработката на <a href="/pages/git.html">Git</a> операциите до над 300 пуша в секунда [1].</p>
+<p><img src="/articles/2026/09/30/cursor-scales-git-storage-s3-wal-300-pushes-per-second/infographic.png" alt="Инфографика: Cursor внедри архитектурата Continuity: Мащабиране на Git хранилището през S3 WAL до над 300 пуша в секунда"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектурен дизайн на Continuity и локално кеширане</h2>
+<p>Традиционната архитектура на Git сървърите разчита на локални файлови системи и файлови заключвания (locks), които бързо блокират при паралелна работа на десетки автономни агенти, генериращи непрекъснати комити [1]. За да преодолеят това гърло на бутилката, инженерите на Cursor са трансформирали локалните NVMe дискове на сървърите в обикновени временни кешове [1].<br>Всяка операция по запис първо се добавя като неизменяем сегмент в S3-базирания журнал Continuity [1]. Координацията на репликите е напълно отделена от физическото изпълнение на Git командите, което елиминира блокирането на записите и предотвратява изчерпването на системните дескриптори (inodes) на сървърите [1]. В случай на срив на някой от работните възли, нов възел може мигновено да възстанови актуалното състояние на хранилището директно от S3 без загуба на транзакции [1].<br>Новата архитектура гарантира субмилисекундна резолюция на конфликти при екстремни натоварвания [1].</p>
+<h2>Системно инженерство на разпределения контрол на версиите: Защо ерата на ИИ изисква предефиниране на Git</h2>
+<p>Появата на автономни агенти за програмиране променя коренно профила на натоварване в софтуерната индустрия. Докато хората разработчици правят по няколко десетки комита на ден с интервали от часове между тях, рояците от агенти генерират постоянен поток от микро-промени, тестване на хипотези и паралелни модификации. Класическият Git, създаден преди повече от две десетилетия за координация на човешки екипи, не е проектиран за такъв мащаб на паралелни транзакции.<br>Архитектурата Continuity на Cursor демонстрира как съвременните облачни примитиви могат да вдъхнат нов живот на утвърдени стандарти. Чрез преместване на авторитетното състояние към S3 и използване на разпределен WAL журнал, Cursor постига свойства, характерни за модерните разпределени бази данни: линейна мащабируемост, пълна изолация на четенията от записите и висока устойчивост на откази.<br>Този инженерен пробив проправя пътя към бъдеще, в което хиляди агенти ще могат да работят едновременно върху един и същ софтуерен монолит, без да се налага разделяне на репозитория или използване на бавни външни опашки за синхронизация.</p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://www.infoq.com/news/2026/09/cursor-continuity-git-storage/">Cursor Uses S3 WAL to Scale Git Storage to More than 300 Pushes per Second – InfoQ</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wal.html">Write-Ahead Logging (WAL)</a><p>Write-Ahead Logging (WAL)
+Write-Ahead Logging (WAL) е класически фундаментален архитектурен шаблон в разпределените системи и базите данни, при който ...</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/s3.html">Amazon S3 (Simple Storage Service)</a><p>Amazon S3 (Simple Storage Service)
+Amazon S3 е мащабируема облачна услуга за обектно съхранение на данни, разработена от Amazon Web Services (AWS), ос...</p></li><li><a href="/pages/git.html">Git</a><p>Git
+Git е стандартната в софтуерната индустрия разпределена система за контрол на версиите (DVCS), създадена първоначално от Линус Торвалдс за разрабо...</p></li><li><a href="/pages/cursor.html">Cursor</a><p>Cursor е ИИ базирана среда за разработка (IDE), изградена върху VS Code.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

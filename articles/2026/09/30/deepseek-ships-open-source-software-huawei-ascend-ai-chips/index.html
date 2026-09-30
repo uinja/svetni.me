@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / DeepSeek
+Китайската изследователска лаборатория DeepSeek и телекомуникационният гигант Huawei обявиха пускането на софтуерния стек с отворен код TileLang, специално оптимизира..."><title>DeepSeek и Huawei пуснаха софтуерен стек с отворен код за чиповете Ascend - Светни.ме</title><meta property="og:title" content="DeepSeek и Huawei пуснаха софтуерен стек с отворен код за чиповете Ascend - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / DeepSeek
+Китайската изследователска лаборатория DeepSeek и телекомуникационният гигант Huawei обявиха пускането на софтуерния стек с отворен код TileLang, специално оптимизира..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/30/deepseek-ships-open-source-software-huawei-ascend-ai-chips/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/30/deepseek-ships-open-source-software-huawei-ascend-ai-chips/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek и Huawei пуснаха софтуерен стек с отворен код за чиповете Ascend</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 септември 2026 г.</p><div><p><img src="/articles/2026/09/30/deepseek-ships-open-source-software-huawei-ascend-ai-chips/hero.png" alt="DeepSeek и Huawei пуснаха софтуерен стек с отворен код за чиповете Ascend"><br><small>Снимка: The Decoder / DeepSeek</small></p>
+<p>Китайската изследователска лаборатория <a href="/pages/deepseek.html">DeepSeek</a> и телекомуникационният гигант <a href="/pages/huawei.html">Huawei</a> обявиха пускането на софтуерния стек с отворен код <a href="/pages/tilelang.html">TileLang</a>, специално оптимизиран за изчислителните процесори от серията <a href="/pages/huawei-ascend.html">Huawei Ascend</a> [1]. Инициативата обединява усилията на водещите китайски разработчици в създаването на цялостна алтернатива на доминиращата софтуерна екосистема <a href="/pages/cuda.html">CUDA</a> на Nvidia [1].</p>
+<p><img src="/articles/2026/09/30/deepseek-ships-open-source-software-huawei-ascend-ai-chips/infographic.png" alt="Инфографика: DeepSeek и Huawei пуснаха софтуерен стек с отворен код за чиповете Ascend"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Технологични иновации в TileLang и хардуерна съвместимост</h2>
+<p>В основата на разработката стои домейн-специфичен език (DSL), базиран на абстракции за блоково изчисление (tiles) [1]. За разлика от нискостепенния C++ код за хардуерната архитектура CANN на Huawei, TileLang предоставя високостепенен, ергономичен синтаксис, близък до Python, като същевременно позволява детерминистичен контрол върху разпределението на данните между бързата локална памет (SRAM) и глобалната HBM памет на чипа [1].<br>Бенчмарковете, публикувани от DeepSeek, показват, че изчислителните ядра, компилирани през TileLang върху чипове Ascend 910B и 910C, достигат почти пълна производителност при алгоритми за внимание (FlashAttention) и динамично рутиране на експерти (Mixture-of-Experts) в сравнение с еквивалентни CUDA ядра на Nvidia H100 [1]. Системата постига над 85% от теоретичния пиков изчислителен капацитет на NPU ядрата DaVinci [1].<br>Софтуерът е публикуван под отворен лиценз в GitHub, което позволява на всички китайски академични институти и технологични стартъпи незабавно да мигрират своите кодови бази от американски към местни ускорители [1].</p>
+<h2>Архитектурна деконструкция на TileLang: Преодоляване на монопола на CUDA чрез отворени компилаторни абстракции</h2>
+<p>Най-голямото препятствие пред навлизането на алтернативни чипове за изкуствен интелект никога не е било самото силициево ядро, а зрелостта на софтуерния стек. В продължение на близо две десетилетия Nvidia изгради практически непревземаема защитна стена около CUDA чрез дълбоко оптимизирани библиотеки, автоматични оптимизатори и масова поддръжка в PyTorch. Всеки опит за преминаване към конкурентен хардуер се сблъскваше с месеци ръчно пренаписване на асемблерни ядра.<br>TileLang атакува този монопол директно на компилаторно ниво. Чрез автоматизиране на сложните графици за трансфер на памет и паралелизъм между матричните изчислителни блокове (Cube Units) и векторните ядра (Vector Units), езикът премахва необходимостта програмистите да познават специфичните хардуерни особености на Ascend.<br>В геополитически план това сътрудничество бележи ускорената консолидация на китайската ИИ индустрия в отговор на американските експортни ограничения. Чрез обединяването на математическия гений на алгоритмичните инженери от DeepSeek с мащабната хардуерна база на Huawei, Китай прави решителна крачка към пълен технологичен суверенитет в областта на изкуствения интелект.</p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/">China&#39;s AI industry closes ranks as Deepseek ships open-source software for Huawei&#39;s Ascend chips – The Decoder</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tilelang.html">TileLang</a><p>TileLang
+TileLang е отворен домейн-специфичен програмен език (DSL) и компилаторен стек, създаден съвместно от DeepSeek и Huawei, оптимизиран за програ...</p></li><li><a href="/pages/huawei.html">Huawei</a><p>Huawei е глобален технологичен лидер в телекомуникационната инфраструктура и потребителската електроника.</p></li><li><a href="/pages/huawei-ascend.html">Huawei Ascend</a><p>Huawei Ascend
+Huawei Ascend е серия от специализирани процесори за невронни мрежи (NPU) и изчислителни ускорители за изкуствен интелект, разработени о...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

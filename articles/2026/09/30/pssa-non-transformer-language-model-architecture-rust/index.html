@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: GitHub / Sparticle62ops
+В платформата GitHub и технологичната общност Hacker News бе представен проектът PSSA (Progressive State Space Architecture) – експериментален езиков модел, написан ..."><title>PSSA: Експериментален не-трансформърен езиков модел, написан от нулата на Rust - Светни.ме</title><meta property="og:title" content="PSSA: Експериментален не-трансформърен езиков модел, написан от нулата на Rust - Светни.ме"><meta property="og:description" content="Снимка: GitHub / Sparticle62ops
+В платформата GitHub и технологичната общност Hacker News бе представен проектът PSSA (Progressive State Space Architecture) – експериментален езиков модел, написан ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/09/30/pssa-non-transformer-language-model-architecture-rust/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/09/30/pssa-non-transformer-language-model-architecture-rust/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>PSSA: Експериментален не-трансформърен езиков модел, написан от нулата на Rust</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 септември 2026 г.</p><div><p><img src="/articles/2026/09/30/pssa-non-transformer-language-model-architecture-rust/hero.png" alt="PSSA: Експериментален не-трансформърен езиков модел, написан от нулата на Rust"><br><small>Снимка: GitHub / Sparticle62ops</small></p>
+<p>В платформата GitHub и технологичната общност Hacker News бе представен проектът <a href="/pages/pssa.html">PSSA</a> (Progressive State Space Architecture) – експериментален езиков модел, написан изцяло от нулата на програмния език <a href="/pages/rust.html">Rust</a> без използването на Python или съществуващи библиотеки за дълбоко обучение [1]. Проектът демонстрира нарастващия интерес към не-трансформърни невронни архитектури със субквадратична изчислителна сложност [1].</p>
+<p><img src="/articles/2026/09/30/pssa-non-transformer-language-model-architecture-rust/infographic.png" alt="Инфографика: PSSA: Експериментален не-трансформърен езиков модел, написан от нулата на Rust"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектура на PSSA и предимства на чистия Rust код</h2>
+<p>Класическата архитектура <a href="/pages/transformer.html">Transformer</a> страда от фундаментално ограничение: механизмът за внимание изисква квадратична изчислителна мощност и памет спрямо дължината на контекста [1]. PSSA преодолява този проблем чрез използването на прогресивни пространства на състоянията (State Space Models), при които вътрешното състояние се обновява в линейно време с постоянна памет на токен [1].<br>Имплементацията на чист Rust елиминира изцяло нуждата от тежкия софтуерен стек на Python и PyTorch [1]. Програмата се компилира до компактен самостоятелен бинарен файл с минимален отпечатък в оперативната памет, което я прави идеална за изпълнение върху вградени системи, микроконтролери и периферни устройства [1].<br>Липсата на механизъм за автоматично събиране на боклука (garbage collection) в Rust гарантира детерминистично време за реакция без паузи, което е от решаващо значение при системи за реално време и роботика [1].</p>
+<h2>Математически и софтуерен анализ на не-трансформърните архитектури: Пространства на състоянията и детерминизъм в Rust</h2>
+<p>Успехът на проекта PSSA разкрива важна тенденция в съвременните изследвания: търсенето на алтернативи на трансформърния монопол. Въпреки че модели като GPT и Claude доминират на върха благодарение на мащабни клъстери, тяхната енергийна и паметова неефективност ги прави трудни за внедряване в автономни периферни устройства.<br>Пространствата на състоянията предлагат елегантно математическо решение чрез формулиране на последователностите като непрекъснати линейни системи. Това позволява извеждане на токени с постоянна скорост, независимо дали обработваният текст съдържа десет или десет хиляди думи, без да се налага поддържането на огромен KV кеш.<br>От системна гледна точка използването на Rust за разработка на дълбоко обучение от нулата подчертава зрелостта на езика за научни и високопроизводителни изчисления. Възможността за директно използване на SIMD векторни инструкции и прецизен контрол върху подравняването на данните в паметта доказва, че малки, оптимизирани модели могат да постигнат забележителни резултати без гигаватови центрове за данни.</p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://github.com/Sparticle62ops/pssa">PSSA: A non-transformer language model written from scratch in Rust – Hacker News / GitHub</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/transformer.html">Архитектурата Transformer</a><p>Трансформаторът (Transformer) е архитектура на невронни мрежи, представена за първи път от изследователи на Google през 2017 г.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/pssa.html">PSSA (Progressive State Space Architecture)</a><p>PSSA (Progressive State Space Architecture)
+PSSA е експериментална не-трансформърна невронна архитектура за езиково моделиране, имплементирана от нула...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
