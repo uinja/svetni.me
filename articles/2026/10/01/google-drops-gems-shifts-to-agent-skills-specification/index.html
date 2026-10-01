@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Google
+Корпорацията Google обяви фундаментална промяна в начина, по който персонализираните асистенти оперират в нейната платформа Gemini, като официално се отказва от патенто..."><title>Google изоставя Gems и преминава към отворения стандарт Skills за агентите на Gemini - Светни.ме</title><meta property="og:title" content="Google изоставя Gems и преминава към отворения стандарт Skills за агентите на Gemini - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Google
+Корпорацията Google обяви фундаментална промяна в начина, по който персонализираните асистенти оперират в нейната платформа Gemini, като официално се отказва от патенто..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/01/google-drops-gems-shifts-to-agent-skills-specification/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/01/google-drops-gems-shifts-to-agent-skills-specification/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google изоставя Gems и преминава към отворения стандарт Skills за агентите на Gemini</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 октомври 2026 г.</p><div><p><img src="/articles/2026/10/01/google-drops-gems-shifts-to-agent-skills-specification/hero.png" alt="Илюстрация към google-drops-gems-shifts-to-agent-skills-specification"><br><small>Снимка: The Decoder / Google</small></p>
+<p>Корпорацията <a href="/pages/google.html">Google</a> обяви фундаментална промяна в начина, по който персонализираните асистенти оперират в нейната платформа <a href="/pages/gemini.html">Gemini</a>, като официално се отказва от патентования формат Gems и преминава към отворения стандарт <a href="/pages/agent-skills.html">Агентни умения (Agent Skills)</a> [1]. Този ход хармонизира промпт инженерството (<a href="/pages/prompt-engineering.html">Prompt Engineering</a>) с практиките на <a href="/pages/anthropic.html">Anthropic</a> и OpenAI, проправяйки път към пълна оперативна съвместимост между конкурентните екосистеми [2].</p>
+<h2>Сбогом на Gems: Преход към файлово-базирани умения</h2>
+<p>Представените през 2024 г. Gems бяха изолирани чат интерфейси с предварително зададени системни инструкции, затворени вътре в потребителския акаунт на Google [1]. За разлика от тях, новите умения се дефинират като структурирани папки във файловата система, съдържащи файл <code>SKILL.md</code> с YAML метаданни и процедурни инструкции.</p>
+<p>Потребителите ще могат да извикват конкретни умения чрез наклонена черта (напр. <code>/code-review</code>), а моделът ще може да зарежда съдържанието им прогресивно, спестявайки ценно място в контекстния си прозорец [2].</p>
+<h2>Универсална преносимост на агентния контекст</h2>
+<p>Най-голямото предимство за корпоративните разработчици е краят на зависимостта от един доставчик (vendor lock-in) [1]. Едно умение, написано и тествано за Claude, вече може да бъде прехвърлено директно в Gemini или агент на OpenAI без необходимост от пренаписване на системните промптове.</p>
+<p>Google обяви, че всички съществуващи Gems ще бъдат автоматично мигрирани към новия формат до ноември 2026 г., като компанията ще отвори и публичен регистър за споделяне на умения в отворен код [2].</p>
+<h2>Стандартизация на агентния слой: Аналогът на POSIX за света на изкуствения интелект</h2>
+<p>Решението на Google да приеме отворения стандарт за агентни умения е повратен момент за софтуерната индустрия. В ранните дни на операционните системи всяка компания разработваше свои собствени несъвместими системни извиквания, докато стандарти като POSIX не унифицираха взаимодействията с ядрото. Днес виждаме същия процес на съзряване в сферата на невронните мрежи.</p>
+<p>Чрез превръщането на инструкциите за агенти в стандартизирани текстови файлове, индустрията създава нов слой на абстракция. Базовите модели се превръщат в заменими изчислителни ядра, докато истинската бизнес логика и конкурентно предимство на компаниите остават закодирани в техните специализирани умения (skills).</p>
+<p>За крайните потребители и разработчиците това означава рязък скок в продуктивността. Вместо да управляват фрагментирани списъци с персонализирани чатботове в различни уеб сайтове, инженерите могат да поддържат централизирано git хранилище с умения, които се изпълняват безпроблемно от всеки наличен фронтиерен модел.</p>
+<p><img src="/articles/2026/10/01/google-drops-gems-shifts-to-agent-skills-specification/infographic.png" alt="Инфографика за Gemini Skills Harmonization"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://the-decoder.com/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-ready-prompt-formats/">Google drops Gems for Skills, joining OpenAI and Anthropic in the shift to agent-ready prompt formats – The Decoder</a></li>
+<li>[2]: <a href="https://developers.googleblog.com/2026/09/gemini-skills-open-format.html">Standardizing AI Agent Capabilities: Google Adopts Open Skills Format – Google Developers Blog</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/prompt-engineering.html">Промпт инженеринг (Prompt Engineering)</a><p>Промпт инженерингът е изкуството и науката за структуриране на входните данни (подкани), така че да се извлече максимално качествен и точен резултат о...</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/gemini.html">Серията Gemini</a><p>Gemini е най-мощната фамилия модели на Google DeepMind, създадена да бъде „мултимодална по рождение“ (natively multimodal).</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/agent-skills.html">Агентни умения (Agent Skills)</a><p>Агентните умения (Agent Skills) са отворен структурен формат и стандарт за капсулиране на специализирани знания, работни потоци, скриптове и контекстн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

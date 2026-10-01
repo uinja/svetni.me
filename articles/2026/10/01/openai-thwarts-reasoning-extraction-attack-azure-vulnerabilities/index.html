@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / OpenAI
+Лабораторията OpenAI разкри, че е блокирала масирана координирана атака, при която над 15 000 свързани акаунта са правили опити да извлекат скритите логически вериги от..."><title>OpenAI пресече мащабна атака за кражба на веригите от разсъждения, но пробивът остава активен в Azure - Светни.ме</title><meta property="og:title" content="OpenAI пресече мащабна атака за кражба на веригите от разсъждения, но пробивът остава активен в Azure - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / OpenAI
+Лабораторията OpenAI разкри, че е блокирала масирана координирана атака, при която над 15 000 свързани акаунта са правили опити да извлекат скритите логически вериги от..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/01/openai-thwarts-reasoning-extraction-attack-azure-vulnerabilities/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/01/openai-thwarts-reasoning-extraction-attack-azure-vulnerabilities/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI пресече мащабна атака за кражба на веригите от разсъждения, но пробивът остава активен в Azure</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 октомври 2026 г.</p><div><p><img src="/articles/2026/10/01/openai-thwarts-reasoning-extraction-attack-azure-vulnerabilities/hero.png" alt="Илюстрация към openai-thwarts-reasoning-extraction-attack-azure-vulnerabilities"><br><small>Снимка: The Decoder / OpenAI</small></p>
+<p>Лабораторията <a href="/pages/openai.html">OpenAI</a> разкри, че е блокирала масирана координирана атака, при която над 15 000 свързани акаунта са правили опити да извлекат скритите логически вериги от разсъждения (Chain of Thought) на нейните флагмански модели [1]. Разследването обаче разкри сериозен пробив в сигурността на съвместната инфраструктура: докато директните крайни точки на OpenAI са били защитени, същата атака е продължила да функционира безпрепятствено в облака <a href="/pages/azure.html">Azure</a> на Microsoft [2].</p>
+<h2>Механизъм на атаката и връзка с външни лаборатории</h2>
+<p>Атаката е целяла агресивна <a href="/pages/distillation.html">дестилация</a> (<a href="/pages/distillation.html">Distillation</a>) на скритите стъпки на разсъждение, които модели като GPT-6 Astra генерират вътрешно, преди да върнат финалния отговор на потребителя [1]. Чрез специално конструирани зловредни подкани (<a href="/pages/adversarial-machine-learning.html">Adversarial Machine Learning</a>) нападателите са принуждавали модела да разкрива токените от своите скрити чернови, използвайки ги за безплатно обучение на конкурентни модели.</p>
+<p>OpenAI свързва част от наблюдаваната активност с физически и юридически лица, свързани с китайската лаборатория <a href="/pages/moonshot-ai.html">Moonshot AI</a> [1].</p>
+<h2>Критичното забавяне в облака на Microsoft</h2>
+<p>Въпреки че екипът по сигурност на OpenAI е внедрил евристични филтри за разпознаване на дестилационни заявки в своето собствено API, същите защити не са били пренесени навреме в Azure OpenAI Service [2]. В резултат на това нападателите са пренасочили своя трафик към облачните сървъри на Microsoft, продължавайки извличането на интелектуална собственост в продължение на седмици.</p>
+<p>Инцидентът разкрива сериозна липса на оперативна синхронизация между създателите на модели и големите облачни доставчици, които ги разпространяват на корпоративния пазар [1].</p>
+<h2>Битката за латентното пространство: Скритите вериги от разсъждения като най-ценната интелектуална собственост</h2>
+<p>Случаят с кражбата на разсъждения в Azure осветява най-строго пазената тайна на съвременните фронтиерни лаборатории. В ерата след трансформърите качеството на един модел вече не се определя единствено от броя параметри, а от способността му да „мисли“ преди да отговори – да генерира дълги, самокритични разсъждения в латентното пространство.</p>
+<p>Тези скрити вериги от разсъждения представляват милиарди долари инвестиции в подсилващо обучение с човешка обратна връзка (RLHF) и специализирани верификатори. За конкурентна лаборатория извличането на дори 100 000 висококачествени вериги от разсъждения позволява бързото обучение на компактен модел, който постига 90% от способностите на оригинала на малка част от разходите за обучение.</p>
+<p>Този прецедент ще принуди доставчиците на модели да въведат криптографски защити на най-ниско ниво. Ако моделът се разпространява през външни облаци без пълна хардуерна енклавна изолация и автоматизирано спиране на подозрителни заявки за дестилация, защитата на алгоритмичните тайни става практически невъзможна.</p>
+<p><img src="/articles/2026/10/01/openai-thwarts-reasoning-extraction-attack-azure-vulnerabilities/infographic.png" alt="Инфографика за Reasoning Distillation Exploit"><br><small>Инфографика: Анализ на Svetni.me</small></p>
+<h2>Източници</h2>
+<ul>
+<li>[1]: <a href="https://the-decoder.com/openai-says-it-stopped-a-campaign-to-steal-its-models-reasoning-but-the-trick-still-worked-on-azure/">OpenAI says it stopped a campaign to steal its models&#39; reasoning, but the trick still worked on Azure – The Decoder</a></li>
+<li>[2]: <a href="https://www.wired.com/story/openai-azure-reasoning-distillation-attack/">Model Distillation Attack Exposed Gaps Between OpenAI and Azure Security – Wired</a></li>
+</ul>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/moonshot-ai.html">Moonshot AI</a><p>Moonshot AI е водеща китайска компания за изкуствен интелект, основана от Ян Жилин, бивш изследовател в Google и Meta.</p></li><li><a href="/pages/distillation.html">Дистилация (Distillation)</a><p>Дистилацията на знание (Knowledge Distillation) е процес в машинното обучение, при който по-малък, по-ефективен модел (наричан „ученик“) се обучава да...</p></li><li><a href="/pages/azure.html">Microsoft Azure</a><p>Microsoft Azure е платформа за облачни изчисления, управлявана от Microsoft.</p></li><li><a href="/pages/adversarial-machine-learning.html">Състезателно машинно обучение</a><p>Състезателното машинно обучение (adversarial machine learning) е област от изкуствения интелект и киберсигурността, изучаваща уязвимостите на невронни...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
