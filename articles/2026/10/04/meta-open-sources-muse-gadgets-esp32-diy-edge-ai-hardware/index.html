@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Meta Research
+Изследователското подразделение на технологичния гигант /pages/meta.html направи изненадващ и щедър подарък на глобалната общност от инженери и ентусиасти, обявя..."><title>Meta пусна Muse Gadgets: хардуерна платформа с отворен код за самостоятелно изграждане на крайни AI устройства - Светни.ме</title><meta property="og:title" content="Meta пусна Muse Gadgets: хардуерна платформа с отворен код за самостоятелно изграждане на крайни AI устройства - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Meta Research
+Изследователското подразделение на технологичния гигант /pages/meta.html направи изненадващ и щедър подарък на глобалната общност от инженери и ентусиасти, обявя..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/04/meta-open-sources-muse-gadgets-esp32-diy-edge-ai-hardware/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/04/meta-open-sources-muse-gadgets-esp32-diy-edge-ai-hardware/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Meta пусна Muse Gadgets: хардуерна платформа с отворен код за самостоятелно изграждане на крайни AI устройства</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->4 октомври 2026 г.</p><div><p><img src="/articles/2026/10/04/meta-open-sources-muse-gadgets-esp32-diy-edge-ai-hardware/hero.png" alt="Логото и компонентите на проекта Muse Gadgets от Meta"><br><small>Снимка: The Decoder / Meta Research</small></p>
+<p>Изследователското подразделение на технологичния гигант <a href="/pages/meta.html">/pages/meta.html</a> направи изненадващ и щедър подарък на глобалната общност от инженери и ентусиасти, обявявайки старта на <strong>Muse Gadgets</strong> — отворена хардуерна инициатива за самостоятелно изграждане на евтини крайни устройства за изкуствен интелект [1]. Проектът предоставя напълно безплатно триизмерни CAD модели за печат, схеми на печатни платки и оптимизиран фърмуер за изключително популярните и достъпни микроконтролери <a href="/pages/esp32.html">/pages/esp32.html</a>.</p>
+<p>С помощта на <a href="/pages/muse-gadgets.html">/pages/muse-gadgets.html</a> всеки любител или хардуерен стартъп може да сглоби функционално интелигентно устройство (като гласов медальон, умен бутон за бюро или аудио значка) срещу бюджет под 20 долара за компоненти.</p>
+<h2>Архитектура на периферния стрийминг и ниска консумация</h2>
+<p>Основното предизвикателство при създаването на носими AI устройства винаги е било намирането на баланс между живота на батерията и тежките изчисления. Вместо да се опитва да изпълнява пълноразмерни езикови модели върху слаб процесор, архитектурата на Muse Gadgets разделя задачите на два функционални слоя в духа на модерния <a href="/pages/edge-ai.html">/pages/edge-ai.html</a>:</p>
+<ol>
+<li><strong>Локален периферен контролер (ESP32):</strong> Микроконтролерът изпълнява миниатюрна невронна мрежа в своята SRAM памет за засичане на ключова дума за активиране (wake-word) и управлява I2S аудио семплирането от вградения микрофон. Консумацията в режим на готовност е под 15 микроампера.</li>
+<li><strong>Агентен гейтуей (Gateway):</strong> При активиране микроконтролерът предава компресирания аудио поток през Wi-Fi или BLE към локален домашен сървър с отворен модел Llama или директно към защитен облачен API интерфейс.</li>
+</ol>
+<p>Този дизайн осигурява пълен контрол на потребителя върху данните, без да го заключва в платени абонаменти или затворени екосистеми в света на интернет на нещата (<a href="/pages/iot.html">/pages/iot.html</a>).</p>
+<h2>Контрапункт на комерсиалните провали на Humane и Rabbit</h2>
+<p>Ходът на Meta е директен отговор на разочарованието на потребителите от скъпите комерсиални джаджи като Humane AI Pin и Rabbit r1, които струваха стотици долари и изискваха задължителни месечни абонаменти за ненадеждни сървъри.</p>
+<p>Предоставяйки отворени хардуерни спецификации, Meta стимулира децентрализираните иновации, позволявайки на хиляди създатели да експериментират с нови форм-фактори без финансов риск.</p>
+<h2>Дългосрочни системни и макроикономически последици</h2>
+<p>Пускането на Muse Gadgets бележи нов етап в дългосрочната стратегия на Meta за заграждане на индустрията чрез комодитизация на базовите слоеве. По същия начин, по който компанията разруши монопола върху езиковите модели чрез отварянето на семейството Llama, сега тя прави същото с хардуерните интерфейси за физическо взаимодействие. Когато потребителите могат сами да сглобят устройство за 15 долара и да го свържат към безплатни модели, пазарната обосновка за скъпи хардуерни аксесоари със затворен код рязко се срива.</p>
+<p>В по-широк план този подход подпомага демократизацията на периферния изкуствен интелект в развиващите се пазари и образователните институции. Училища, университети и независими лаборатории получават готов производствен шаблон, с който да обучават новото поколение инженери по мехатроника и вградени системи, стимулирайки появата на местни персонализирани решения за земеделие, здравеопазване и градска мобилност, независими от корпоративния диктат на големите технологични платформи.</p>
+<p><img src="/articles/2026/10/04/meta-open-sources-muse-gadgets-esp32-diy-edge-ai-hardware/infographic.png" alt="Инфографика: Архитектура на отворената платформа Muse Gadgets на Meta"><br><small>Инфографика: Схема на хардуерните модули, фърмуера за ESP32 и комуникацията с AI моделите.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/">The Decoder: &quot;Muse Gadgets&quot; turns AI hardware into an open-source DIY project</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/muse-gadgets.html">Muse Gadgets (Meta)</a><p>Muse Gadgets е инициатива за отворен хардуер, стартирана от Meta, която предоставя схеми, 3D модели за печат и софтуерен фърмуер за създаване на персо...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/iot.html">Интернет на нещата (Internet of Things - IoT)</a><p>Интернет на нещата (Internet of Things - IoT) е мрежа от физически обекти, снабдени със сензори, софтуер и комуникационни интерфейси за обмен на телем...</p></li><li><a href="/pages/esp32.html">ESP32</a><p>ESP32 е нискобюджетен, високоефективен микроконтролер с вградени Wi-Fi и Bluetooth модули, произведен от Espressif Systems.</p></li><li><a href="/pages/edge-ai.html">Периферен изкуствен интелект (Edge AI)</a><p>Периферният изкуствен интелект (Edge AI) обхваща внедряването и изпълнението на невронни мрежи директно върху вградени физически микросхеми, сензори и...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

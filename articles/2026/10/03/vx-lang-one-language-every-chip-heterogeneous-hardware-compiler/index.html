@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Vx Foundation / Hacker News Archive
+Фондацията за отворени изчислителни стандарти представи официалната първа стабилна версия на Vx Language (Vx) – революционен език за системно програмиран..."><title>Vx Language: Единен системен език и компилатор за хетерогенни чипове без адаптация на кода - Светни.ме</title><meta property="og:title" content="Vx Language: Единен системен език и компилатор за хетерогенни чипове без адаптация на кода - Светни.ме"><meta property="og:description" content="Снимка: Vx Foundation / Hacker News Archive
+Фондацията за отворени изчислителни стандарти представи официалната първа стабилна версия на Vx Language (Vx) – революционен език за системно програмиран..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/03/vx-lang-one-language-every-chip-heterogeneous-hardware-compiler/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/03/vx-lang-one-language-every-chip-heterogeneous-hardware-compiler/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Vx Language: Единен системен език и компилатор за хетерогенни чипове без адаптация на кода</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 октомври 2026 г.</p><div><p><img src="/articles/2026/10/03/vx-lang-one-language-every-chip-heterogeneous-hardware-compiler/hero.png" alt="Vx Language: Единен системен език за хетерогенни чипове"><br><small>Снимка: Vx Foundation / Hacker News Archive</small></p>
+<p>Фондацията за отворени изчислителни стандарти представи официалната първа стабилна версия на <a href="/pages/vx-lang.html">Vx Language (Vx)</a> – революционен език за <a href="/pages/systems-programming.html">системно програмиране</a> и мултиплатформен компилатор, проектиран да изпълнява един и същ код с максимална производителност върху всякакъв клас силиций [1]. </p>
+<p>Проектът атакува най-големия структурен проблем в съвременните <a href="/pages/heterogeneous-computing.html">хетерогенни изчисления</a>: дълбоката фрагментация между платформите за <a href="/pages/hardware-acceleration.html">хардуерно ускорение</a> (като Nvidia CUDA, AMD ROCm, Apple Metal и Intel OneAPI), която принуждаваше разработчиците да пренаписват изчислителните си ядки за всяка отделна марка чипове.</p>
+<h2>Краят на монопола на платформените API-та</h2>
+<p>Досега пренасянето на високопроизводителен софтуер от Nvidia GPU към AMD или персонализирани NPU чипове изискваше месеци на сложен ръчен инженеринг. Различните асемблерни инструкции, размери на споделената памет (SRAM) и модели на паралелизъм правеха истинската преносимост невъзможна:</p>
+<ul>
+<li><strong>Унифицирано междинно представяне (VxIR):</strong> Компилаторът трансформира математическите операции в специален граф, запазващ размерността на тензорите, и го понижава динамично до най-оптималните машинни инструкции за целевия чип (PTX за Nvidia, GCN за AMD, SPIR-V за Vulkan или Metal за Mac).</li>
+<li><strong>Автоматично картографиране на паметта:</strong> Vx анализира наличностите на локална кеш памет в чипа и сам изчислява оптималните размери на блоковете (tiling) и разпределението на регистрите.</li>
+<li><strong>Производителност в рамките на 2% от ръчен CUDA код:</strong> Бенчмарковете на матрично умножение и внимание показват, че генерираният код работи със скорост, съпоставима с най-добрите човешки оптимизации.</li>
+</ul>
+<p>„Ние не искаме да пишем различен код за всяка нова платка, която излезе на пазара. Vx прави хардуера прозрачен: вие пишете чистата математика, а компилаторът се грижи за силиция,“ обяви водещият архитект на проекта [1].</p>
+<h2>Синтаксис и сигурност в съвременните компилатори</h2>
+<p>Езикът Vx черпи вдъхновение от най-добрите практики в съвременните <a href="/pages/compilers.html">компилатори</a>:</p>
+<ol>
+<li><strong>Безопасност на паметта без Garbage Collector:</strong> Подобно на Rust, Vx използва модел на собственост и проверки по време на компилация, гарантирайки липса на състезания за памет (data races) при паралелни нишки.</li>
+<li><strong>Директен контрол на регистрите:</strong> За напреднали инженери езикът позволява вграждане на явни векторни директиви и асинхронни бариери за синхронизация.</li>
+<li><strong>Нулево копиране при интеграция:</strong> Пълна съвместимост с Python и C през C-FFI интерфейс, позволяваща на библиотеки като PyTorch и JAX да извикват Vx модули без забавяне.</li>
+</ol>
+<h2>Дълбок системен анализ</h2>
+<p>Появата на езика Vx представлява директна заплаха за прословутия защитен ров (moat) на Nvidia. В продължение на почти две десетилетия доминацията на компанията се дължеше не само на превъзходния хардуер, но най-вече на дълбоката зависимост на софтуерните инженери от CUDA екосистемата.</p>
+<p>Ако общността възприеме унифицирания компилатор Vx, компаниите ще могат да сменят доставчиците на графични ускорители за броени минути в зависимост от цената и наличността. Това ще отвори пазара за масово навлизане на европейски и азиатски алтернативни чипове, ускорявайки иновациите и сваляйки цената на изкуствения интелект в глобален мащаб.</p>
+<p><img src="/articles/2026/10/03/vx-lang-one-language-every-chip-heterogeneous-hardware-compiler/infographic.png" alt="Инфографика: Архитектура на езика Vx Language"><br><small>Инфографика: Механизъм на междинното представяне VxIR, съвместимост с чипове и сравнителни тестове на производителността</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://vxlang.org/spec/v1.0/">Vx Language Foundation - Vx: One Language, Every Chip Architectural Specification (2026-10-03)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=45459102">Hacker News Discussion - Vx: Unifying Heterogeneous Silicon under a Single Systems Compiler</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vx-lang.html">Vx Language (Vx)</a><p>Vx Language (Vx) е новаторски език за системно програмиране с единен синтаксис, способен да се компилира към разнороден хардуер (CPU, GPU, TPU, FPGA) ...</p></li><li><a href="/pages/systems-programming.html">Системно програмиране (Systems Programming)</a><p>Системното програмиране (Systems Programming) е разработката на базов софтуер – операционни системи, драйвери, мрежови стекове и бази данни, изискваща...</p></li><li><a href="/pages/heterogeneous-computing.html">Хетерогенни изчисления (Heterogeneous Computing)</a><p>Хетерогенните изчисления (Heterogeneous Computing) използват различни видове изчислителни процесори (централни, графични, невронни и програмируеми чип...</p></li><li><a href="/pages/hardware-acceleration.html">Хардуерно ускорение (Hardware Acceleration)</a><p>Хардуерното ускорение (Hardware Acceleration) е използването на специализиран силиций (GPU, TPU, NPU, FPGA) за изпълнение на конкретни изчислителни за...</p></li><li><a href="/pages/compilers.html">Компилатори (Compilers)</a><p>Компилаторите (Compilers) са софтуерни програми, превеждащи изходен програмен код, написан на език от високо ниво, в машинен код или асемблерни инстру...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

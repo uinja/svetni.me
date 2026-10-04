@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Thoreau BASIC Project / Hacker News
+В свят, претоварен от хипер-сложни софтуерни рамки, гигабайтови зависимости и безкрайни компилационни цикли, проектът Thoreau BASIC предизвика истинска б..."><title>Thoreau BASIC: Модерен поглед към класическия език с типова безопасност и съвременен AST интерпретатор - Светни.ме</title><meta property="og:title" content="Thoreau BASIC: Модерен поглед към класическия език с типова безопасност и съвременен AST интерпретатор - Светни.ме"><meta property="og:description" content="Снимка: Thoreau BASIC Project / Hacker News
+В свят, претоварен от хипер-сложни софтуерни рамки, гигабайтови зависимости и безкрайни компилационни цикли, проектът Thoreau BASIC предизвика истинска б..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/03/thoreau-basic-retro-language-modern-ast-interpreter-renaissance/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/03/thoreau-basic-retro-language-modern-ast-interpreter-renaissance/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Thoreau BASIC: Модерен поглед към класическия език с типова безопасност и съвременен AST интерпретатор</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 октомври 2026 г.</p><div><p><img src="/articles/2026/10/03/thoreau-basic-retro-language-modern-ast-interpreter-renaissance/hero.png" alt="Thoreau BASIC: Модерен поглед към класическия език"><br><small>Снимка: Thoreau BASIC Project / Hacker News</small></p>
+<p>В свят, претоварен от хипер-сложни софтуерни рамки, гигабайтови зависимости и безкрайни компилационни цикли, проектът <a href="/pages/thoreau-basic.html">Thoreau BASIC</a> предизвика истинска буря от носталгия и възторг в глобалната инженерна общност [1]. </p>
+<p>Кръстен на философа Хенри Дейвид Торо и неговия призив за „Простота, простота, простота!“, проектът преосмисля легендарния език BASIC за XXI век, съчетавайки неговата класическа четимост с модерни постижения в <a href="/pages/interpreter-design.html">дизайна на интерпретатори (Interpreter Design)</a>, типова проверка и асинхронни корутини.</p>
+<h2>Защо класическият език се завръща?</h2>
+<p>В зората на домашните компютри през 80-те години милиони деца и любители се научиха да програмират именно на BASIC (на машини като Apple II, Commodore 64 и Правец 8). Програмирането бе мигновено: включваш компютъра, виждаш мигащ курсор, пишеш три реда код и екранът оживява.</p>
+<p>Днес обаче навлизането в <a href="/pages/programming-languages.html">езиците за програмиране (Programming Languages)</a> изисква инсталиране на Node.js, Docker, пакети за десетки гигабайти и конфигурационни файлове, които убиват първоначалния творчески импулс:</p>
+<ul>
+<li><strong>Минимализъм без баласт:</strong> Thoreau BASIC се разпространява като един-единствен независим изпълним файл с размер едва 1.2 MB. Няма инсталатори, няма настройки на пътища, няма npm пакети.</li>
+<li><strong>Модерно <a href="/pages/ast.html">абстрактно синтактично дърво (AST)</a>:</strong> За разлика от старите примитивни интерпретатори, които четяха реда по време на изпълнение, Thoreau BASIC анализира синтаксиса, изгражда оптимирано AST дърво и извършва съкращаване на константи (constant folding) за броени микросекунди.</li>
+<li><strong>Асинхронни възможности в ретро синтаксис:</strong> Езикът въвежда съвременни корутини чрез познати думи: команди като <code>SPAWN</code> и <code>WAIT</code> позволяват кооперативно многозадачно управление на сензори и мрежови сокети.</li>
+</ul>
+<p>„Ние не създадохме Thoreau BASIC, за да заменим Rust или C++. Създадохме го, за да върнем на хората радостта от директния контакт с компютъра – усещането, че ти управляваш машината, а не тя теб,“ обяснява създателят на проекта [1].</p>
+<h2>Културният феномен на <a href="/pages/retrocomputing.html">ретрокомпютрите (Retrocomputing)</a></h2>
+<p>Успехът на проекта отразява нарастващата съпротива срещу пресищането в съвременната разработка:</p>
+<ol>
+<li><strong>Образователен инструмент без бариери:</strong> Училища и кръжоци по роботика преоткриват езика като перфектен първи инструмент за преподаване на алгоритмично мислене без фрустрация от сложни синтактични запетайки.</li>
+<li><strong>Идеална среда за микроконтролери:</strong> Проектът стартира безпроблемно върху малки чипове за няколко долара, превръщайки ги в моментални програмируеми компютри с видео изход.</li>
+<li><strong>Хакерска етика на простотата:</strong> Езикът припомня изгубената култура на занаятчийското програмиране, където всеки байт и всеки такт имат значение.</li>
+</ol>
+<h2>Дълбок системен анализ</h2>
+<p>Thoreau BASIC е повече от софтуерен куриоз: той е философски манифест срещу деградацията на софтуерната архитектура. В епоха, когато дори калкулаторът в телефона изисква гигабайти памет заради тежки уеб обвивки, съществуването на пълен, мощен и красив език в един мегабайт е доказателство, че истинският прогрес не се измерва в обем код, а в яснота на мисълта.</p>
+<p>Той напомня на всеки инженер защо се е влюбил в технологиите – за да създава красота и ред от хаоса със силата на собствения си ум.</p>
+<p><img src="/articles/2026/10/03/thoreau-basic-retro-language-modern-ast-interpreter-renaissance/infographic.png" alt="Инфографика: Архитектура на Thoreau BASIC"><br><small>Инфографика: Синтактичен AST анализ, поддръжка на корутини и сравнение на ресурсния отпечатък на Thoreau BASIC</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://thoreaubasic.com/">Thoreau BASIC Project - Thoreau BASIC: What if BASIC Hadn&#39;t Gone out of Fashion? (2026-10-03)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=45460114">Hacker News Discussion - Show HN: Thoreau BASIC – Simplicity and Structured Concurrency</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/thoreau-basic.html">Thoreau BASIC</a><p>Thoreau BASIC е модерен отворен интерпретатор на класическия език BASIC, обогатен с оптимизации на абстрактното синтактично дърво (AST), типова провер...</p></li><li><a href="/pages/retrocomputing.html">Ретрокомпютри (Retrocomputing)</a><p>Ретрокомпютрите (Retrocomputing) е движение за съхраняване, реставрация и активно използване на исторически компютърен хардуер и класически софтуерни ...</p></li><li><a href="/pages/programming-languages.html">Езици за програмиране (Programming Languages)</a><p>Езиците за програмиране (Programming Languages) са формални знакови системи, предназначени за формулиране на инструкции и алгоритми за изпълнение от к...</p></li><li><a href="/pages/interpreter-design.html">Дизайн на интерпретатори (Interpreter Design)</a><p>Дизайнът на интерпретатори (Interpreter Design) е инженерната дисциплина по създаване на програми, изпълняващи директно изходен код без предварителна ...</p></li><li><a href="/pages/ast.html">Абстрактно синтактично дърво (AST)</a><p>Абстрактното синтактично дърво (Abstract Syntax Tree - AST) е йерархично дървовидно представяне на граматичната структура на софтуерния код, генериран...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

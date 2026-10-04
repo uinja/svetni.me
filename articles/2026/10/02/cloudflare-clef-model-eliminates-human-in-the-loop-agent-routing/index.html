@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Cloudflare Systems Architecture
+Мрежовият гигант Cloudflare представи революционния си отворен модел CLEF (Contextual Low-latency Edge Forwarder), предназначен да реши най-голямото инфрастр..."><title>Cloudflare пусна CLEF: Маршрутизиращ модел без нужда от човешка намеса за edge агенти - Светни.ме</title><meta property="og:title" content="Cloudflare пусна CLEF: Маршрутизиращ модел без нужда от човешка намеса за edge агенти - Светни.ме"><meta property="og:description" content="Снимка: Cloudflare Systems Architecture
+Мрежовият гигант Cloudflare представи революционния си отворен модел CLEF (Contextual Low-latency Edge Forwarder), предназначен да реши най-голямото инфрастр..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/cloudflare-clef-model-eliminates-human-in-the-loop-agent-routing/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/cloudflare-clef-model-eliminates-human-in-the-loop-agent-routing/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare пусна CLEF: Маршрутизиращ модел без нужда от човешка намеса за edge агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/cloudflare-clef-model-eliminates-human-in-the-loop-agent-routing/hero.png" alt="Cloudflare пусна CLEF: Маршрутизиращ модел без нужда от човешка намеса"><br><small>Снимка: Cloudflare Systems Architecture</small></p>
+<p>Мрежовият гигант <a href="/pages/cloudflare.html">Cloudflare</a> представи революционния си отворен модел <a href="/pages/clef.html">CLEF</a> (Contextual Low-latency Edge Forwarder), предназначен да реши най-голямото инфраструктурно предизвикателство в съвременната <a href="/pages/agent-architecture.html">архитектура на агенти</a>: интелигентното и светкавично маршрутизиране на заявки [1]. </p>
+<p>С размер от едва 120 милиона параметъра, CLEF е проектиран да се изпълнява директно в над 330 точки на присъствие на компанията по света, вземайки автономни решения за пренасочване на задачи с латентност под 5 милисекунди.</p>
+<h2>Краят на твърдо кодираните правила и скъпите грешки</h2>
+<p>Досега оркестрацията на сложни работни потоци от <a href="/pages/autonomous-agents.html">автономни агенти</a> страдаше от два основни недостатъка: или инженерите използваха примитивни regex правила и твърдо кодирани if-else условия за избор на модел, или всяка заявка се изпращаше към скъпи и бавни водещи модели (като Claude Opus или GPT-4), дори за тривиални операции по форматиране на текст.</p>
+<p>CLEF елиминира тази дилема благодарение на дълбоко оптимизирана парадигма за <a href="/pages/edge-computing.html">периферни изчисления</a>:</p>
+<ul>
+<li><strong>Семантична класификация в реално време:</strong> Оценява сложността на потребителския промпт, очакваната дължина на контекста, необходимостта от външни инструменти и изискванията за латентност.</li>
+<li><strong>Автономно тристепенно разпределение:</strong> <ol>
+<li><em>Ниво 1 (Edge):</em> Прости заявки се обслужват директно от квантувани модели на самия сървър на Cloudflare за броени милисекунди.</li>
+<li><em>Ниво 2 (Fast Inference):</em> Стандартни задачи за кодиране се изпращат към среден клас модели (Llama-3-70B, Claude Haiku).</li>
+<li><em>Ниво 3 (Deep Frontier):</em> Единствено критични разсъждения и сложни логически доказателства се пренасочват към тежките флагмански клъстери.</li>
+</ol>
+</li>
+<li><strong>Zero-copy WebAssembly изпълнение:</strong> Моделът е компилиран за WebAssembly, което позволява стартиране в рамките на микросекунди без overhead от тежки контейнери.</li>
+</ul>
+<p>„Не можете да изградите автономна икономика от милиони агенти, ако плащате по 5 цента и чакате 3 секунди само за да разберете кой точно модел трябва да отговори на даден въпрос. CLEF прави маршрутизацията почти невидима като време и разход,“ заяви вицепрезидентът по AI архитектури на Cloudflare [1].</p>
+<h2>Икономически показатели и отворен код</h2>
+<p>Първите тестове в реални производствени среди показват впечатляващи резултати:</p>
+<ul>
+<li><strong>Спад на разходите за изчисления със 70%:</strong> Компаниите, внедрили CLEF, драстично намаляват зависимостта си от скъпи API квоти, насочвайки над 65% от междинните стъпки към локални edge модели.</li>
+<li><strong>Отворен лиценз Apache 2.0:</strong> Теглата на модела и референтният Rust двигател са публикувани свободно, позволявайки внедряване и в частни корпоративни мрежи без зависимост от облака на Cloudflare.</li>
+<li><strong>Гаранция за поверителност:</strong> Междинният рутер не съхранява логове на промптовете, гарантирайки пълно съответствие с GDPR и строги стандарти за сигурност.</li>
+</ul>
+<h2>Дълбок системен анализ</h2>
+<p>Пускането на CLEF отбелязва съзряването на инфраструктурния слой за изкуствен интелект. Подобно на начина, по който BGP (Border Gateway Protocol) и DNS направиха възможно съществуването на глобалния интернет чрез децентрализирано маршрутизиране на пакети, CLEF и неговите наследници полагат основите на „семантичния интернет“.</p>
+<p>В тази нова мрежа пакетите не са просто байтове, а намерения и логически задачи, които се обработват динамично на най-близкото и икономически изгодно място в глобалната топология. Това превръща периферната мрежа в първия истински суперкомпютър за автономни агенти.</p>
+<p><img src="/articles/2026/10/02/cloudflare-clef-model-eliminates-human-in-the-loop-agent-routing/infographic.png" alt="Инфографика: Архитектура на Cloudflare CLEF"><br><small>Инфографика: Механизъм за класификация и динамично разпределение на заявки в реално време на Cloudflare CLEF</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.cloudflare.com/introducing-clef-edge-agent-router/">Cloudflare Blog - Introducing CLEF: The Open-Weight Edge Router for Intelligent Agents (2026-10-02)</a></li>
+<li><a href="https://huggingface.co/cloudflare/clef-120m">Hugging Face Repository - Cloudflare CLEF-120M Weights and Inference Harness</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/clef.html">Cloudflare Clef</a><p>Cloudflare Clef е специализирана детерминирана архитектура от модели за периферно валидиране и маршрутизация на агентни действия, позволяваща безопасн...</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li><li><a href="/pages/agent-architecture.html">Архитектура на AI агенти (AI Agent Architecture)</a><p>Архитектурата на AI агенти (AI Agent Architecture) дефинира структурните компоненти на автономните интелигентни системи — включително модулите за план...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

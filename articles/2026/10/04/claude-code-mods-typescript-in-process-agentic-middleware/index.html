@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Anthropic
+/pages/anthropic.html обяви фундаментална архитектурна еволюция за своя терминален инструмент за програмиране /pages/claude-code.html, въвеждайки официална система з..."><title>Claude Code представи системата Mods: разработчиците вече пренаписват AI инструмента отвътре - Светни.ме</title><meta property="og:title" content="Claude Code представи системата Mods: разработчиците вече пренаписват AI инструмента отвътре - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Anthropic
+/pages/anthropic.html обяви фундаментална архитектурна еволюция за своя терминален инструмент за програмиране /pages/claude-code.html, въвеждайки официална система з..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/04/claude-code-mods-typescript-in-process-agentic-middleware/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/04/claude-code-mods-typescript-in-process-agentic-middleware/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Claude Code представи системата Mods: разработчиците вече пренаписват AI инструмента отвътре</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->4 октомври 2026 г.</p><div><p><img src="/articles/2026/10/04/claude-code-mods-typescript-in-process-agentic-middleware/hero.png" alt="Интерфейсът на Claude Code и системна архитектура"><br><small>Снимка: The Decoder / Anthropic</small></p>
+<p><a href="/pages/anthropic.html">/pages/anthropic.html</a> обяви фундаментална архитектурна еволюция за своя терминален инструмент за програмиране <a href="/pages/claude-code.html">/pages/claude-code.html</a>, въвеждайки официална система за разширения, наречена <strong>Mods</strong> [1]. Новата система представлява високопроизводителен междинен слой (<a href="/pages/middleware.html">/pages/middleware.html</a>), изпълняван директно в рамките на основния процес, който позволява на програмистите да използват стандартен <a href="/pages/typescript.html">/pages/typescript.html</a>, за да модифицират из основи поведението, инструментите и интерфейса на агента.</p>
+<p>Досега Claude Code функционираше като монолитно терминално приложение с фиксиран набор от възможности (четене на файлове, извикване на shell команди, редактиране). Със системата Mods инструментът се превръща в напълно адаптивна платформа за софтуерни асистенти от следващо поколение.</p>
+<h2>Архитектура на жизнения цикъл и куки за прехващане</h2>
+<p>Системата Mods работи чрез регистриране на куки за прехващане (interception hooks) по протежение на целия жизнен цикъл на агента. Програмистите могат да дефинират правила на три критични нива в рамките на съвременния <a href="/pages/agent-tooling.html">/pages/agent-tooling.html</a>:</p>
+<ul>
+<li><strong>Преди изпълнение на инструмент (Pre-Tool Execution):</strong> Модът може да инспектира планираната от модела bash команда, да провери синтактичното дърво (AST), да инжектира липсващи параметри или да блокира изпълнението, ако командата засяга защитени файлове.</li>
+<li><strong>След изпълнение (Post-Execution Transformation):</strong> Резултатите от изпълнените скриптове могат автоматично да бъдат филтрирани, компресирани или обогатявани с метаданни, преди да бъдат върнати в контекстния прозорец на Claude, предотвратявайки ненужно задръстване с токени.</li>
+<li><strong>Динамична модификация на контекста (Context Rewriting):</strong> Модовете могат автоматично да пренаписват системните инструкции в зависимост от текущия клон в Git или типа проект, адаптирайки ролята на агента без намеса на потребителя.</li>
+</ul>
+<p>Тъй като модовете се изпълняват в същата V8 виртуална машина без междупроцесна комуникация (IPC), забавянето при изпълнение е под 1 милисекунда.</p>
+<h2>Сигурност и изолация в корпоративна среда</h2>
+<p>Възможността за изпълнение на външен код в сърцето на агентен инструмент неизбежно поражда рискове за сигурността. За да защити разработчиците от зловредни пакети, Anthropic въвежда стриктно капсулиране през V8 изолати (Isolates).</p>
+<p>Корпоративните клиенти ще могат да налагат задължително криптографско подписване на разрешените модове, гарантирайки, че служителите използват единствено валидирани вътрешни разширения, отговарящи на фирмените стандарти за сигурност.</p>
+<h2>Дългосрочни системни и архитектурни последици</h2>
+<p>Появата на системата Mods в Claude Code бележи същия еволюционен преход, който превърна браузърите от прости четци на HTML в операционни системи за уеб приложения чрез въвеждането на JavaScript и разширенията в началото на XXI век. Един AI агент не може да предвиди спецификите на всяка частна кодова база, сложна вътрешна CI/CD система или уникална фирмена архитектура; опитът за създаване на универсален &quot;one-size-fits-all&quot; софтуерен инженер е обречен на провал.</p>
+<p>Чрез отварянето на вътрешния си цикъл на разсъждения за програмен контрол чрез TypeScript, Anthropic създава основа за изграждане на дълбоко специализирани индустриални агенти. Модовете позволяват на големите технологични компании да трансформират общия модел Claude в персонализиран архитект, запознат с хиляди вътрешни правила, без да се налага скъпоструващо преобучение на моделните тегла. Това циментира позицията на Claude Code като модулна операционна среда за автономно програмиране, поставяйки висок стандарт за конкурентните платформи.</p>
+<p><img src="/articles/2026/10/04/claude-code-mods-typescript-in-process-agentic-middleware/infographic.png" alt="Инфографика: Вътрешна архитектура на системата Mods в Claude Code"><br><small>Инфографика: Жизнен цикъл на прехващане на събития и изпълнение на TypeScript модове в Claude Code.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/">The Decoder: Claude Code&#39;s new Mods system lets developers rewrite the AI coding tool from the inside</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/typescript.html">TypeScript</a><p>TypeScript е строго типизиран език за програмиране, създаден от Microsoft, който надгражда JavaScript чрез добавяне на статични типове и интерфейси.</p></li><li><a href="/pages/middleware.html">Middleware</a><p>Middleware е технологична компания, която разработва платформа за наблюдаемост (observability), базирана на изкуствен интелект.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/agent-tooling.html">Инструментариум за AI агенти (Agent Tooling)</a><p>Инструментариумът за AI агенти (Agent Tooling) обхваща програмните библиотеки, протоколите за размяна на съобщения и средите за изпълнение, които позв...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Kapa.ai Engineering
+Водещата платформа за техническа поддръжка и документационни асистенти Kapa.ai представи „Company Knowledge Bench“ (CKB) – първия стандартизиран независим бенчмарк за ст..."><title>Kapa.ai представи Company Knowledge Bench: Стандарт за оценка на корпоративни RAG системи - Светни.ме</title><meta property="og:title" content="Kapa.ai представи Company Knowledge Bench: Стандарт за оценка на корпоративни RAG системи - Светни.ме"><meta property="og:description" content="Снимка: Kapa.ai Engineering
+Водещата платформа за техническа поддръжка и документационни асистенти Kapa.ai представи „Company Knowledge Bench“ (CKB) – първия стандартизиран независим бенчмарк за ст..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/kapa-ai-company-knowledge-bench-retrieval-benchmark-rag/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/kapa-ai-company-knowledge-bench-retrieval-benchmark-rag/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Kapa.ai представи Company Knowledge Bench: Стандарт за оценка на корпоративни RAG системи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/kapa-ai-company-knowledge-bench-retrieval-benchmark-rag/hero.png" alt="Kapa.ai представи Company Knowledge Bench"><br><small>Снимка: Kapa.ai Engineering</small></p>
+<p>Водещата платформа за техническа поддръжка и документационни асистенти <a href="/pages/kapa-ai.html">Kapa.ai</a> представи „Company Knowledge Bench“ (CKB) – първия стандартизиран независим бенчмарк за стриктна оценка на системи за търсене с обогатено извличане (<a href="/pages/rag.html">RAG</a>) в реална корпоративна среда [1]. </p>
+<p>Инициативата адресира най-болезнения проблем на съвременните корпоративни чатботове: склонността на <a href="/pages/vector-databases.html">векторните бази данни</a> да извличат остаряла информация и уверено да цитират отпаднали софтуерни версии и противоречиви инструкции от фирмената <a href="/pages/documentation.html">документация</a>.</p>
+<h2>Анатомия на корпоративното объркване: Къде се проваля класическият RAG</h2>
+<p>Повечето съществуващи стандарти за оценка (<a href="/pages/benchmarking.html">benchmarking</a>) тестват RAG системи върху статични енциклопедични текстове (като Wikipedia), където фактите рядко се променят драматично от ден на ден. В реалния софтуерен бизнес обаче документите непрекъснато еволюират:</p>
+<ul>
+<li><strong>Времева деградация (Temporal Decay):</strong> Когато една компания пусне версия 3.0 на своето API, старата документация за версия 1.0 продължава да съществува в хранилищата. Обикновеното семантично търсене често извлича старата инструкция само защото тя съвпада по ключови думи с въпроса на потребителя.</li>
+<li><strong>Противоречиви източници на истина:</strong> Разминавания между официалните ръководства, разговорите в Slack и бележките по поддръжката често объркват езиковите модели.</li>
+<li><strong>Многостъпково извличане (Multi-hop Reasoning):</strong> За да отговори правилно на сложен клиентски казус, системата често трябва да съпостави информация от три различни файла – архитектурна схема, ценова листа и споразумение за ниво на обслужване (SLA).</li>
+</ul>
+<p>„Досега всеки доставчик на векторни бази твърдеше, че неговият алгоритъм има 99% точност, защото тестваха върху елементарни въпроси. CKB е първият безмилостен тест, който симулира реалния хаос в корпоративната документация,“ заяви техническият директор на Kapa.ai [1].</p>
+<h2>Резултати от бенчмарка: Провал на чисто векторното търсене</h2>
+<p>Публикуваните първоначални резултати върху 50 000 реални инженерни казуса разкриват изненадващи изводи:</p>
+<ol>
+<li><strong>Чистото векторно търсене е недостатъчно:</strong> Традиционните алгоритми за косинусово сходство (dense embeddings) постигат едва 42% точност при въпроси, изискващи разграничаване на остарели API версии.</li>
+<li><strong>Триумф на хибридното търсене:</strong> Системите, комбиниращи класическо търсене по ключови думи (BM25) с плътни вектори и повторно класиране (re-ranking) с крос-енкодери, подобряват точността с над 34%.</li>
+<li><strong>Възходът на граф-базирания RAG:</strong> Най-високи резултати постигат архитектури, използващи графове на знанието (Knowledge Graphs), които експлицитно моделират връзките между софтуерните компоненти и техния жизнен цикъл.</li>
+</ol>
+<h2>Стратегически препоръки за бизнеса</h2>
+<p>Появата на CKB задава нова дефиниция за зрялост в корпоративния AI. Ерата на наивните POC (proof-of-concept) демонстрации приключи. Компаниите вече разполагат с количествен инструмент, чрез който да изискват гаранции от доставчиците на бази данни и да интегрират автоматизирани тестове за регресия в своите софтуерни конвейери.</p>
+<p>В свят, в който грешна инструкция в поддръжката може да причини милионни загуби на корпоративни клиенти, прецизното извличане на знание се превръща в критичен актив за сигурността и репутацията на технологичния бизнес.</p>
+<p><img src="/articles/2026/10/02/kapa-ai-company-knowledge-bench-retrieval-benchmark-rag/infographic.png" alt="Инфографика: Company Knowledge Bench на Kapa.ai"><br><small>Инфографика: Методология на тестване и сравнителни резултати при различните RAG архитектури според Kapa.ai CKB</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.kapa.ai/blog/company-knowledge-bench-rag-benchmark/">Kapa.ai Blog - Introducing Company Knowledge Bench: The Enterprise RAG Retrieval Standard (2026-10-02)</a></li>
+<li><a href="https://arxiv.org/abs/2610.02150">ArXiv Preprint - Benchmarking Retrieval Augmented Generation under Temporal Document Drift</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vector-databases.html">Векторни бази данни (Vector Databases)</a><p>Векторните бази данни (Vector Databases) са специализирани системи за съхранение и индексен анализ на високоразмерни векторни ембединги (embeddings), ...</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/kapa-ai.html">Kapa.ai</a><p>Kapa.</p></li><li><a href="/pages/documentation.html">Йерархична документация за агенти (Documentation for Agents)</a><p>Йерархичната документация за агенти (Documentation for Agents) представлява структурирани, машиночитаеми наръчници и архитектурни карти, форматирани в...</p></li><li><a href="/pages/benchmarking.html">Бенчмаркинг на изкуствен интелект (AI Benchmarking)</a><p>Бенчмаркингът на изкуствен интелект (AI Benchmarking) е стандартизиран процес за измерване, сравнение и количествена оценка на точността, скоростта и ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

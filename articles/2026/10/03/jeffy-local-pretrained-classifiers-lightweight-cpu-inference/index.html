@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: GitHub / Hacker News Archive
+В софтуерната общност избухна огромен интерес около отворения проект Jeffy – минималистичен енджин за семантична класификация на текст и документи, разработен д..."><title>Jeffy: Локален енджин за класификация на текст върху стари процесори без нужда от GPU - Светни.ме</title><meta property="og:title" content="Jeffy: Локален енджин за класификация на текст върху стари процесори без нужда от GPU - Светни.ме"><meta property="og:description" content="Снимка: GitHub / Hacker News Archive
+В софтуерната общност избухна огромен интерес около отворения проект Jeffy – минималистичен енджин за семантична класификация на текст и документи, разработен д..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/03/jeffy-local-pretrained-classifiers-lightweight-cpu-inference/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/03/jeffy-local-pretrained-classifiers-lightweight-cpu-inference/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Jeffy: Локален енджин за класификация на текст върху стари процесори без нужда от GPU</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 октомври 2026 г.</p><div><p><img src="/articles/2026/10/03/jeffy-local-pretrained-classifiers-lightweight-cpu-inference/hero.png" alt="Jeffy: Локален енджин за класификация на текст върху стари процесори"><br><small>Снимка: GitHub / Hacker News Archive</small></p>
+<p>В софтуерната общност избухна огромен интерес около отворения проект <a href="/pages/jeffy.html">Jeffy</a> – минималистичен енджин за семантична класификация на текст и документи, разработен да се изпълнява директно върху евтини централни процесори без никаква нужда от графични ускорители или тежки фреймуърци [1]. </p>
+<p>Проектът, разпространяван с <a href="/pages/open-source.html">отворен код (Open Source)</a>, представлява мощен шамар срещу съвременната мода да се използват гигантски езикови модели от 70 милиарда параметъра за тривиални задачи като сортиране на имейли, разпознаване на спам или категоризация на тикети за поддръжка.</p>
+<h2>Безумието на гигаватните чатботове за прости задачи</h2>
+<p>През последните две години корпоративната софтуерна индустрия попадна в капана на огромните модели: компании плащаха милиони за GPU облачен капацитет, само за да подават входящи текстове към скъпи API клъстери, питайки ги дали даден отзив е „позитивен“ или „негативен“.</p>
+<p>Jeffy доказва, че ефективната <a href="/pages/cpu-inference.html">инференция върху процесори (CPU Inference)</a> предлага в пъти по-добра скорост и икономичност:</p>
+<ul>
+<li><strong>Над 450 класификации в секунда на едно ядро:</strong> На обикновен стар лаптоп или малък виртуален сървър софтуерът обработва стотици документи за части от секундата, изпреварвайки облачните API връзки стотици пъти по латентност.</li>
+<li><strong>Потресаващо нисък разход на памет (под 16 MB):</strong> Благодарение на дълбоко компресирани векторни проекции моделът работи безпроблемно в скромната оперативна памет на индустриални рутери и стари едноплаткови компютри.</li>
+<li><strong>Стартиране за под 4 милисекунди:</strong> За разлика от тежките Python библиотеки (PyTorch, TensorFlow), които изискват секунди за зареждане, бинарният файл на Jeffy се стартира мигновено от командния ред.</li>
+</ul>
+<p>„Ние не се нуждаем от суперкомпютър, за да разберем дали един клиент иска възстановяване на сума или промяна на адрес. Използването на трилионни модели за базова класификация е екологично и икономическо безумие,“ написа авторът на проекта в Hacker News [1].</p>
+<h2>Приложение във <a href="/pages/embedded-systems.html">вградените системи (Embedded Systems)</a></h2>
+<p>Компактният дизайн прави софтуера изключително подходящ за <a href="/pages/local-inference.html">локална инференция</a> в защитени среди:</p>
+<ol>
+<li><strong>Пълна изолация без интернет (Air-gapped):</strong> Банки, болници и държавни агенции могат да филтрират и класифицират поверителни документи без нито един байт да напуска вътрешната мрежа.</li>
+<li><strong>Работа на микроконтролери:</strong> Проектът е компилиран успешно за чипове ESP32-S3 и архитектури ARM Cortex-M, консумирайки под половин ват енергия.</li>
+<li><strong>Еднокликова интеграция:</strong> Инструментът предоставя прост CLI интерфейс и C библиотека за вграждане в съществуващи софтуерни системи.</li>
+</ol>
+<h2>Инженерен коментар</h2>
+<p>Възходът на проекти като Jeffy отразява съзряването на технологичната общност. След първоначалната еуфория около генеративния AI инженерите си спомнят фундаменталните принципи на компютърната архитектура: най-добрият софтуерен инструмент е този, който решава конкретната задача с минимално възможното количество ресурси.</p>
+<p>Ерата на сляпото пилеене на мегавати за елементарна класификация отстъпва място на дисциплинирания, минималистичен инженеринг.</p>
+<p><img src="/articles/2026/10/03/jeffy-local-pretrained-classifiers-lightweight-cpu-inference/infographic.png" alt="Инфографика: Производителност на класификатора Jeffy"><br><small>Инфографика: Консумация на памет, скорост на класификация на CPU и архитектурни предимства на Jeffy</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.ycombinator.com/item?id=45461208">Hacker News - Show HN: Local Pretrained Classifiers, GPU Not Needed (2026-10-03)</a></li>
+<li><a href="https://github.com/nicobrenner/jeffy">GitHub - nicobrenner/jeffy: Ultra-lightweight CPU-native Semantic Classifier Engine</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/local-inference.html">Локални невронни изводи (Local Inference)</a><p>Локалните невронни изводи (Local Inference) представляват изпълнение на модели за изкуствен интелект директно върху крайното потребителско устройство ...</p></li><li><a href="/pages/jeffy.html">Jeffy</a><p>Jeffy е свръх-лек софтуерен енджин с отворен код за изпълнение на предварително обучени класификатори директно върху едноядрени процесори без нужда от...</p></li><li><a href="/pages/embedded-systems.html">Вградени системи (Embedded Systems)</a><p>Вградените системи (Embedded Systems) са специализирани микропроцесорни компютри, интегрирани в по-големи физически устройства (автомобили, роботи, до...</p></li><li><a href="/pages/cpu-inference.html">Инференция върху процесори (CPU Inference)</a><p>Инференцията върху процесори (CPU Inference) е изпълнението на невронни мрежи върху стандартни централни процесори с помощта на векторни инструкции (A...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

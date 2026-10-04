@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Salvatore Sanfilippo / GitHub Archive
+Легендарният италиански програмист и създател на базата данни Redis Салваторе Санфилипо (antirez) взриви софтуерната общност, като публикува своя нов п..."><title>Салваторе Санфилипо (antirez) представи Dwarfstar DS4: Минималистичен C runtime за локални невронни мрежи - Светни.ме</title><meta property="og:title" content="Салваторе Санфилипо (antirez) представи Dwarfstar DS4: Минималистичен C runtime за локални невронни мрежи - Светни.ме"><meta property="og:description" content="Снимка: Salvatore Sanfilippo / GitHub Archive
+Легендарният италиански програмист и създател на базата данни Redis Салваторе Санфилипо (antirez) взриви софтуерната общност, като публикува своя нов п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/antirez-dwarfstar-ds4-minimalist-c-runtime-local-llm/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/antirez-dwarfstar-ds4-minimalist-c-runtime-local-llm/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Салваторе Санфилипо (antirez) представи Dwarfstar DS4: Минималистичен C runtime за локални невронни мрежи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/antirez-dwarfstar-ds4-minimalist-c-runtime-local-llm/hero.png" alt="Салваторе Санфилипо (antirez) представи Dwarfstar DS4"><br><small>Снимка: Salvatore Sanfilippo / GitHub Archive</small></p>
+<p>Легендарният италиански програмист и създател на базата данни Redis <a href="/pages/antirez.html">Салваторе Санфилипо (antirez)</a> взриви софтуерната общност, като публикува своя нов проект <a href="/pages/dwarfstar.html">Dwarfstar DS4</a> – минималистичен енджин за изпълнение на невронни мрежи, написан изцяло на чист <a href="/pages/c-language.html">език C</a> [1]. </p>
+<p>В епоха, доминирана от хиляди мегабайти зависимости на Python, тежки компилатори и сложни build системи, Санфилипо доказва, че съвременната <a href="/pages/local-inference.html">локална инференция</a> може да бъде реализирана в един-единствен, кристално четим файл от едва 4500 реда код, компилиращ се за части от секундата.</p>
+<h2>Философия на радикален минимализъм</h2>
+<p>Проектът Dwarfstar DS4 въплъщава класическите принципи на хакерската култура, превърнали Redis в световен стандарт за производителност:</p>
+<ul>
+<li><strong>Нулеви външни зависимости:</strong> За компилация не се изискват CMake, BLAS библиотеки, CUDA драйвери или Python среда. Достатъчен е стандартен POSIX C компилатор (<code>gcc dwarfstar.c -O3 -o dwarfstar</code>).</li>
+<li><strong>Ръчно векторизирани ядки:</strong> Вместо да разчита на външни математически пакети, Санфилипо е написал собствени векторни инструкции за AVX-512 (Intel/AMD) и Neon (Apple Silicon / ARM64), поддържащи 4-битова и 8-битова квантизация.</li>
+<li><strong>Памет без разхищение (Zero-allocation):</strong> Моделните тегла се зареждат директно в паметта чрез системен призив <code>mmap()</code>, елиминирайки нуждата от динамично заделяне на буфери по време на генерация на токени в този <a href="/pages/llm-runtime.html">софтуерен runtime</a>.</li>
+</ul>
+<p>„Съвременният софтуер страда от болестта на безкрайните абстракции. За да стартирате обикновен модел, често ви трябват 20 гигабайта пакети и часове настройка на зависимости. Dwarfstar е демонстрация, че с ясна математика и директен C код компютрите днес са способни на невероятни чудеса без никакъв баласт,“ написа Санфилипо в своя блог [1].</p>
+<h2>Производителност и съвместимост</h2>
+<p>Въпреки изумително компактния си размер, Dwarfstar DS4 демонстрира производителност, съпоставима с най-напредналите проекти в индустрията като <code>llama.cpp</code>:</p>
+<ol>
+<li><strong>Скорост на генерация:</strong> На процесор Apple M3 Max моделът Llama-3-8B (квантизиран в 4 бита) постига над 48 токена в секунда при пълно насищане на пропускателната способност на паметта.</li>
+<li><strong>Вграждане навсякъде:</strong> Благодарение на минималистичния дизайн енджинът може да бъде вграден директно в индустриални контролери, терминали, операционни системи и дори стари архитектури.</li>
+<li><strong>Лиценз BSD 2-Clause:</strong> Кодът е предоставен под либерален лиценз, позволяващ безпрепятствено комерсиално и любителско използване.</li>
+</ol>
+<h2>Инженерен коментар и значение</h2>
+<p>Появата на Dwarfstar DS4 е мощен шамар срещу съвременната култура на софтуерно пресищане. В свят, където дори най-простият софтуерен инструмент идва с десетки гигабайти контейнери, работата на antirez припомня изгубеното изкуство на прецизното инженерство.</p>
+<p>В дългосрочен план подобни минималистични среди за инференция са от ключово значение за бъдещето на автономния софтуер. Когато изкуственият интелект трябва да работи в критична инфраструктура, медицински устройства или космически апарати, където всеки байт памет и всяка възможност за бъг в зависимост са фатални, простият, одитируем C код остава ненадминат златeн стандарт.</p>
+<p><img src="/articles/2026/10/02/antirez-dwarfstar-ds4-minimalist-c-runtime-local-llm/infographic.png" alt="Инфографика: Dwarfstar DS4 на antirez"><br><small>Инфографика: Архитектурни принципи и производителност на минималистичния C енджин Dwarfstar DS4</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="http://antirez.com/news/144">Antirez Weblog - Dwarfstar DS4: A Minimalist C Inference Engine for Modern LLMs (2026-10-02)</a></li>
+<li><a href="https://github.com/antirez/dwarfstar">GitHub - antirez/dwarfstar Repository and Benchmarks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/local-inference.html">Локални невронни изводи (Local Inference)</a><p>Локалните невронни изводи (Local Inference) представляват изпълнение на модели за изкуствен интелект директно върху крайното потребителско устройство ...</p></li><li><a href="/pages/llm-runtime.html">Среди за изпълнение на езикови модели (LLM Runtime)</a><p>Средите за изпълнение на езикови модели (LLM Runtime) са специализирани софтуерни системи, отговорни за управлението на теглата, матричните умножения ...</p></li><li><a href="/pages/dwarfstar.html">dwarfstar (ds4)</a><p>dwarfstar (ds4) е минималистичен, високопроизводителен софтуерен двигател за локално обслужване на големи езикови модели, написан на чист език C от Са...</p></li><li><a href="/pages/c-language.html">Езикът C (C Programming Language)</a><p>Езикът C (C Programming Language) е фундаментален структурен език за системно програмиране, създаден от Денис Ричи, осигуряващ директен контрол върху ...</p></li><li><a href="/pages/antirez.html">Салваторе Санфилипо - Antirez (Salvatore Sanfilippo)</a><p>Салваторе Санфилипо (Salvatore Sanfilippo), известен в инженерните среди като Antirez, е легендарен италиански софтуерен инженер, създател на свръхбър...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: LDraw Foundation / Open CAD Initiative
+Общността за отворен дизайн и софтуерни инженери представи проекта LDraw Nova – генеративна система за компютърно подпомагано проектиране (CAD), задви..."><title>LDraw Nova: Генеративен CAD модел с невронни графови мрежи за структурен инженеринг и физическо моделиране - Светни.ме</title><meta property="og:title" content="LDraw Nova: Генеративен CAD модел с невронни графови мрежи за структурен инженеринг и физическо моделиране - Светни.ме"><meta property="og:description" content="Снимка: LDraw Foundation / Open CAD Initiative
+Общността за отворен дизайн и софтуерни инженери представи проекта LDraw Nova – генеративна система за компютърно подпомагано проектиране (CAD), задви..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/ldraw-nova-open-source-generative-cad-lego-structural-engineering/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/ldraw-nova-open-source-generative-cad-lego-structural-engineering/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>LDraw Nova: Генеративен CAD модел с невронни графови мрежи за структурен инженеринг и физическо моделиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/ldraw-nova-open-source-generative-cad-lego-structural-engineering/hero.png" alt="LDraw Nova: Генеративен CAD модел за структурен инженеринг"><br><small>Снимка: LDraw Foundation / Open CAD Initiative</small></p>
+<p>Общността за отворен дизайн и софтуерни инженери представи проекта <a href="/pages/ldraw-nova.html">LDraw Nova</a> – генеративна система за компютърно подпомагано проектиране (<a href="/pages/cad.html">CAD</a>), задвижвана от усъвършенствани <a href="/pages/graph-neural-networks.html">невронни графови мрежи (GNN)</a> [1]. Разработката стъпва върху тридесетгодишното наследство на отворения формат LDraw за моделиране на LEGO елементи, превръщайки го в неочаквано мощна лаборатория за <a href="/pages/generative-design.html">генеративен дизайн</a> и реален структурен инженеринг.</p>
+<p>Чрез третиране на взаимно свързаните детайли като възли в топологичен граф, LDraw Nova успява да генерира функционални, физически стабилни конструкции от текстови описания, отчитайки центъра на тежестта, усукването и силата на сцепление между елементите.</p>
+<h2>Магията на графовете: Дискретна физика срещу безформени полигони</h2>
+<p>Повечето съвременни 3D генеративни модели (като Gaussian Splatting или триизмерни дифузионни мрежи) създават повърхностни обвивки от полигони, които изглеждат красиви, но нямат вътрешна структура и не могат да бъдат произведени или сглобени във физическия свят. LDraw Nova решава този проблем благодарение на фундаменталните предимства на <a href="/pages/open-source.html">отворения код</a> и графовия подход:</p>
+<ul>
+<li><strong>Моделиране на дискретни съединения:</strong> Всеки детайл притежава точно дефинирани точки на механично свързване (studs и anti-studs). Невронната графова мрежа предвижда не просто формата, а топологичната съвместимост между съседните възли.</li>
+<li><strong>Вграден анализ на напрежението (FEA):</strong> Докато моделът сглобява виртуалния обект, вграден физически двигател изчислява огъващите моменти и налягането върху всеки пластмасов пин. Ако даден мост или конзола е заплашена от пречупване под собствената си тежест, генеративният алгоритъм сам добавя допълнителни подпорни греди.</li>
+<li><strong>Естествен език към сложни механизми:</strong> Потребителят може да въведе заявка от типа: „Проектирай мостова конструкция с дължина 1 метър, способна да издържи товар от 5 килограма в средата при минимален брой части“, и системата извежда готова спецификация за сглобяване.</li>
+</ul>
+<p>„LEGO не е просто детска играчка. Това е най-чистата система за модулно инженерство в историята. Чрез прилагането на невронни графове към тази дискретна вселена, ние доказахме как генеративният AI може да създава обекти с гарантирана структурна цялост,“ обясни водещият разработчик на проекта [1].</p>
+<h2>Индустриално значение и оперативна съвместимост</h2>
+<p>Въпреки че проектът започва като хоби инициатива на феновете на конструкторите, неговите възможности привлякоха вниманието на индустриалните дизайнери:</p>
+<ol>
+<li><strong>Експорт към професионални CAD формати:</strong> Моделите могат да се експортират не само в LDraw <code>.dat</code> файлове, но и в индустриални формати като STEP и STL за 3D принтиране и CNC фрезоване.</li>
+<li><strong>Отворена алтернатива на скъпия корпоративен софтуер:</strong> Системата предоставя на малки работилници и образователни институции достъп до мощен генеративен структурен дизайн без абонаментни такси за десетки хиляди долари.</li>
+<li><strong>Уроци за индустриалната сглобяема архитектура:</strong> Принципите на дискретно свързване, валидирани в LDraw Nova, вече се адаптират за проектиране на модулни сгради и роботизирано строителство.</li>
+</ol>
+<h2>Заключение</h2>
+<p>LDraw Nova демонстрира как пресичането на игровата култура, графовите невронни мрежи и свободния софтуер може да роди революционни инженерни инструменти. Проектът връща радостта от конструирането в ерата на изкуствения интелект, доказвайки, че най-здравите структури на бъдещето започват от най-простите строителни блокчета.</p>
+<p><img src="/articles/2026/10/02/ldraw-nova-open-source-generative-cad-lego-structural-engineering/infographic.png" alt="Инфографика: Архитектура на LDraw Nova"><br><small>Инфографика: Графови невронни мрежи, анализ на напреженията и генеративен работен процес в LDraw Nova</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://ldraw.org/research/ldraw-nova-generative-cad/">Open CAD Initiative &amp; LDraw Foundation - LDraw Nova: Generative Structural Modeling via Geometric Graph Neural Networks (2026-10-02)</a></li>
+<li><a href="https://www.sciencedirect.com/journal/computer-aided-design/vol/2026/ldraw-graph-cad">Computer-Aided Design Journal - Discrete Mechanical Synthesis Using Topological Multigraph Representations</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/ldraw-nova.html">LDraw-Nova</a><p>LDraw-Nova е инструмент с отворен код за генеративно проектиране на Lego конструкции чрез невронни графи, съчетаващ езикови описания със строги физиче...</p></li><li><a href="/pages/graph-neural-networks.html">Графови невронни мрежи</a><p>Графовите невронни мрежи (Graph Neural Networks - GNNs) са клас модели за дълбоко обучение, проектирани за директна обработка и анализ на данни с граф...</p></li><li><a href="/pages/generative-design.html">Генеративен дизайн (Generative Design)</a><p>Генеративният дизайн (Generative Design) е инженерен процес, при който алгоритми генерират хиляди оптимизирани пространствени форми на база зададени о...</p></li><li><a href="/pages/cad.html">Компютърно подпомагано проектиране (CAD)</a><p>Компютърно подпомаганото проектиране (Computer-Aided Design - CAD) обхваща софтуерните инструменти за създаване, модификация, анализ и оптимизация на ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

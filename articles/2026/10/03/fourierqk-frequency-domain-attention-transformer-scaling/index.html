@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: ArXiv / Machine Brief Archive
+Изследователи в областта на дълбокото обучение публикуваха революционна научна разработка, представяща архитектурата „FourierQK“ – радикално преосмисляне на кл..."><title>FourierQK: Филтрирането в честотната област намалява KV кеша на трансформаторите с 80% - Светни.ме</title><meta property="og:title" content="FourierQK: Филтрирането в честотната област намалява KV кеша на трансформаторите с 80% - Светни.ме"><meta property="og:description" content="Снимка: ArXiv / Machine Brief Archive
+Изследователи в областта на дълбокото обучение публикуваха революционна научна разработка, представяща архитектурата „FourierQK“ – радикално преосмисляне на кл..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/03/fourierqk-frequency-domain-attention-transformer-scaling/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/03/fourierqk-frequency-domain-attention-transformer-scaling/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>FourierQK: Филтрирането в честотната област намалява KV кеша на трансформаторите с 80%</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 октомври 2026 г.</p><div><p><img src="/articles/2026/10/03/fourierqk-frequency-domain-attention-transformer-scaling/hero.png" alt="FourierQK: Филтрирането в честотната област намалява KV кеша"><br><small>Снимка: ArXiv / Machine Brief Archive</small></p>
+<p>Изследователи в областта на <a href="/pages/deep-learning.html">дълбокото обучение</a> публикуваха революционна научна разработка, представяща архитектурата „FourierQK“ – радикално преосмисляне на класическия <a href="/pages/attention-mechanism.html">механизъм за внимание (Attention Mechanism)</a> в невронните мрежи [1]. </p>
+<p>Чрез пренасяне на изчисленията за корелация между токените от пространствената област в честотната област чрез бързи преобразувания на Фурие (FFT), новата техника постига смайващо 80% свиване на размера на <a href="/pages/kv-cache.html">KV кеша (Key-Value Cache)</a>, без да влошава способността на модела да намира критични детайли в контекст от милиони токени.</p>
+<h2>Проклятието на квадратичната памет в съвременния <a href="/pages/transformer.html">Transformer</a></h2>
+<p>Класическото скаларно внимание (Softmax Dot-Product Attention), формулирано в епохалния труд „Attention Is All You Need“, страда от фундаментално физическо ограничение:</p>
+<ul>
+<li><strong>Квадратична сложност и глад за памет:</strong> За да разбере връзката между думите, моделът трябва да изчисли матрица от взаимодействия с размер $N 	imes N$. При прозорец от 1 милион токена размерът на KV кеша надхвърля десетки гигабайти, което прави невъзможно обслужването на заявки на потребителски хардуер.</li>
+<li><strong>Честотен излишък в естествения език:</strong> Повечето семантични връзки в един текст имат ниска вариация – граматическите структури и контекстните теми се повтарят периодично. Класическият трансформатор обаче преизчислява всяко едно взаимодействие наново в пространствената област.</li>
+</ul>
+<p><a href="/pages/fourierqk.html">FourierQK</a> решава този парадокс чрез теоремата за конволюцията: вместо матрично умножение в реално пространство, системата преобразува проекциите на запитванията и ключовете (Query и Key) в честотни спектри, извършва поелементно филтриране и връща резултата чрез обратна трансформация.</p>
+<h2>Математически пробив и емпирични резултати</h2>
+<p>Резултатите от новата архитектура показват качествено нови хоризонти за скалиране на моделите:</p>
+<ol>
+<li><strong>80% компресия на VRAM паметта:</strong> Чрез запазване само на доминиращите нискочестотни коефициенти и разредени високочестотни пикове, модел с прозорец от 1 милион токена се побира в едва 6.4 GB VRAM вместо досегашните 32 GB.</li>
+<li><strong>Точност „игла в купа сено“ над 99.4%:</strong> В стандартизираните тестове за извличане на специфичен факт, скрит в огромни книги или кодови хранилища, FourierQK напълно запазва прецизността на класическия трансформатор.</li>
+<li><strong>Линейно-логаритмична сложност $O(N \log N)$:</strong> Времето за обработка расте плавно с увеличаване на текста, премахвайки латентния шок при дълги диалози.</li>
+</ol>
+<h2>Дълбок инженерен анализ</h2>
+<p>Значението на FourierQK надхвърля чистата академична математика. През последните две години индустрията се опитваше да реши проблема с дългия контекст чрез изграждане на гигантски центрове за данни с колосално количество графична памет. Този подход обаче бе икономически неустойчив.</p>
+<p>FourierQK доказва, че истинският прогрес идва не от грубото наливане на още силиций, а от елегантната математика. Възможността пълни софтуерни хранилища и стотици книги да се обработват директно в паметта на обикновен лаптоп с 16GB RAM отваря пътя към истински персонализирани, локални и независими AI асистенти за всеки човек на планетата.</p>
+<p><img src="/articles/2026/10/03/fourierqk-frequency-domain-attention-transformer-scaling/infographic.png" alt="Инфографика: Архитектура на механизма FourierQK"><br><small>Инфографика: Математическо преобразуване на Фурие в механизма за внимание, компресия на KV кеша и разход на памет</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.machinebrief.com/news/fourierqk-filter-shape-admissibility-and-the-leakage-coverag-9uhl">Machine Brief - FourierQK: Filter Shape, Admissibility and the Leakage-Coverage Law (2026-10-03)</a></li>
+<li><a href="https://arxiv.org/abs/2610.03194">ArXiv Preprint - Frequency-Domain Attention: Compressing Key-Value Memory for Infinite-Context Transformers</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/transformer.html">Архитектурата Transformer</a><p>Трансформаторът (Transformer) е архитектура на невронни мрежи, представена за първи път от изследователи на Google през 2017 г.</p></li><li><a href="/pages/kv-cache.html">KV Cache</a><p>KV Cache (Key-Value Cache) е техника за оптимизация при големите езикови модели (LLM), която съхранява изчислените състояния на предходни токени по вр...</p></li><li><a href="/pages/fourierqk.html">FourierQK</a><p>FourierQK е оптимизиран механизъм за внимание в трансформаторните модели, който заменя класическото скаларно произведение с филтриране в честотната об...</p></li><li><a href="/pages/deep-learning.html">Дълбоко обучение (Deep Learning)</a><p>Дълбокото обучение е подмножество на машинното обучение, което използва многослойни изкуствени невронни мрежи за решаване на сложни проблеми.</p></li><li><a href="/pages/attention-mechanism.html">Механизъм за внимание (Attention Mechanism)</a><p>Механизмът за внимание (Attention Mechanism) е фундаментален математически компонент на невронните мрежи, позволяващ на модела динамично да приоритизи...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Parallel Systems Computing Lab
+Една от най-езотеричните и скъпоплатени софтуерни специалности в света – писането и ръчната микро-оптимизация на CUDA ядки за графични процесори – претърпява ..."><title>Автоматизиран дизайн на CUDA ядки: Как невронните компилатори задминават ръчната GPU оптимизация - Светни.ме</title><meta property="og:title" content="Автоматизиран дизайн на CUDA ядки: Как невронните компилатори задминават ръчната GPU оптимизация - Светни.ме"><meta property="og:description" content="Снимка: Parallel Systems Computing Lab
+Една от най-езотеричните и скъпоплатени софтуерни специалности в света – писането и ръчната микро-оптимизация на CUDA ядки за графични процесори – претърпява ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/ai-takes-over-cuda-kernel-engineering-gpu-micro-optimizations/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/ai-takes-over-cuda-kernel-engineering-gpu-micro-optimizations/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Автоматизиран дизайн на CUDA ядки: Как невронните компилатори задминават ръчната GPU оптимизация</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/ai-takes-over-cuda-kernel-engineering-gpu-micro-optimizations/hero.png" alt="Автоматизиран дизайн на CUDA ядки"><br><small>Снимка: Parallel Systems Computing Lab</small></p>
+<p>Една от най-езотеричните и скъпоплатени софтуерни специалности в света – писането и ръчната микро-оптимизация на <a href="/pages/cuda.html">CUDA</a> ядки за графични процесори – претърпява драматична революция [1]. Доклад на изследователския консорциум Parallel Systems Computing Lab разкрива, че нови невронни компилатори, обучени чрез дълбоко подкрепящо обучение директно върху асемблерния език на Nvidia (SASS), постигат до 28% по-висока пропускателна способност в сравнение с най-добрите ръчно оптимизирани <a href="/pages/triton.html">Triton</a> и C++ реализации.</p>
+<p>Постижението бележи повратна точка в <a href="/pages/kernel-optimization.html">оптимизацията на GPU ядки</a>, доказвайки, че човешкият мозък вече не може да съперничи на машинното обучение при управлението на десетки хиляди паралелни хардуерни нишки.</p>
+<h2>Къде се препъват човешките експерти: Архитектурата Blackwell</h2>
+<p>С всяко следващо поколение GPU силиций сложността на програмиране расте експоненциално. В най-новите архитектури Nvidia Blackwell и Hopper разработчиците трябва едновременно да балансират десетки променливи:</p>
+<ul>
+<li><strong>Конфликти в споделената памет (Bank Conflicts):</strong> Достъпът до ултра-бързата SRAM памет на чипа изисква сложни математически шаблони за разбъркване на адресите (swizzling). Дори минимална грешка в подравняването води до задръстване на конвейера.</li>
+<li><strong>Разпределение на регистрите:</strong> Твърде много променливи карат компилатора да прехвърля данни в бавната глобална памет (register spilling), което моментално убива производителността.</li>
+<li><strong>Асинхронно зареждане на данни (TMA):</strong> Координирането на хардуерните тензорни ускорители с асинхронни заявки за памет изисква перфектно темпово напасване на стотици инструкции.</li>
+</ul>
+<p>„Човешкият интуитивен модел за оптимизация се базира на симетрия и прости евристики. Невронният компилатор обаче откри напълно несиметрични, хаотични на вид последователности от инструкции, които обаче поддържат тензорните ядра натоварени на 94% от физическия им максимум,“ обяснява ръководителят на проекта [1].</p>
+<h2>Триумфът на невронните компилатори</h2>
+<p>Новата вълна от <a href="/pages/gpu-compilers.html">GPU компилатори</a> използва симулатори с точност до индивидуален тактов цикъл, за да тества милиони варианти на машинния код:</p>
+<ol>
+<li><strong>Директна генерация на SASS инструкции:</strong> Системата заобикаля стандартния компилатор <code>nvcc</code> и генерира директни асемблерни инструкции за архитектурата, премахвайки консервативните защити на стандартния софтуер.</li>
+<li><strong>Сливане на слоеве (Layer Fusion):</strong> Невронната мрежа успява да слее операциите за нормализация, матрично умножение и активация в една монолитна операция без междинни записи в DRAM.</li>
+<li><strong>Пряка полза за локалната инференция:</strong> Новите оптимизирани ядки позволяват на модели за <a href="/pages/local-inference.html">локална инференция</a> да работят с една трета по-малко енергия и чувствително по-висока скорост на генериране на токени.</li>
+</ol>
+<h2>Трансформация на професията</h2>
+<p>Успехът на автоматизирания дизайн на CUDA код не означава край на професията на GPU архитекта, но променя радикално нейния фокус. Вместо да прекарват месеци в броене на машинни цикли и рисуване на диаграми за подравняване на байтове, инженерите преминават към дефиниране на спецификации за коректност и насочване на оптимизационните агенти.</p>
+<p>Изкуственият интелект се превръща в най-добрия инструмент за оптимизиране на собствената си силициева инфраструктура.</p>
+<p><img src="/articles/2026/10/02/ai-takes-over-cuda-kernel-engineering-gpu-micro-optimizations/infographic.png" alt="Инфографика: Автоматизирана оптимизация на CUDA ядки"><br><small>Инфографика: Сравнителен анализ на производителността и механизми за оптимизация на SASS асемблер чрез AI</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://pscl-research.org/papers/autonomous-cuda-blackwell-2026/">Parallel Systems Computing Lab - Autonomous SASS Generation and Micro-Kernel Optimization for Blackwell (2026-10-02)</a></li>
+<li><a href="https://developer.nvidia.com/blog/neural-search-tensor-kernels/">Nvidia Developer Blog - Beyond Handcrafted Triton: Exploring Neural Search for Tensor Kernels</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/triton.html">Triton Inference Server</a><p>Triton Inference Server (по-рано TensorRT Inference Server) е софтуер с отворен код от NVIDIA за оптимизиране и обслужване на модели за машинно обучен...</p></li><li><a href="/pages/local-inference.html">Локални невронни изводи (Local Inference)</a><p>Локалните невронни изводи (Local Inference) представляват изпълнение на модели за изкуствен интелект директно върху крайното потребителско устройство ...</p></li><li><a href="/pages/kernel-optimization.html">Оптимизация на GPU ядра (GPU Kernel Optimization)</a><p>Оптимизацията на GPU ядра (GPU Kernel Optimization) е нискостепенна инженерна дисциплина за максимизиране на изчислителната плътност и пропускателната...</p></li><li><a href="/pages/gpu-compilers.html">GPU компилатори (GPU Compilers)</a><p>GPU компилаторите (GPU Compilers) са софтуерни системи (като NVCC, LLVM, Triton, Mojo), преобразуващи абстрактен програмен код в специализиран бинарен...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

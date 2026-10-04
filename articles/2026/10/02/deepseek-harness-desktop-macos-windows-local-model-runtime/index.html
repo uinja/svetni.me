@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: DeepSeek AI Engineering
+Китайският изследователски пионер в областта на отворените модели DeepSeek направи пореден решителен ход за демократизиране на изкуствения интелект, като публикува „..."><title>DeepSeek Harness Desktop: Локална среда за десктоп системи с пълно хардуерно ускорение - Светни.ме</title><meta property="og:title" content="DeepSeek Harness Desktop: Локална среда за десктоп системи с пълно хардуерно ускорение - Светни.ме"><meta property="og:description" content="Снимка: DeepSeek AI Engineering
+Китайският изследователски пионер в областта на отворените модели DeepSeek направи пореден решителен ход за демократизиране на изкуствения интелект, като публикува „..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/02/deepseek-harness-desktop-macos-windows-local-model-runtime/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/02/deepseek-harness-desktop-macos-windows-local-model-runtime/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek Harness Desktop: Локална среда за десктоп системи с пълно хардуерно ускорение</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 октомври 2026 г.</p><div><p><img src="/articles/2026/10/02/deepseek-harness-desktop-macos-windows-local-model-runtime/hero.png" alt="DeepSeek Harness Desktop: Локална среда с пълно хардуерно ускорение"><br><small>Снимка: DeepSeek AI Engineering</small></p>
+<p>Китайският изследователски пионер в областта на отворените модели <a href="/pages/deepseek.html">DeepSeek</a> направи пореден решителен ход за демократизиране на изкуствения интелект, като публикува „DeepSeek Harness Desktop“ – специализирано графично приложение и високоефективна среда за <a href="/pages/local-inference.html">локална инференция</a> [1]. Софтуерът позволява на всеки потребител с компютър под <a href="/pages/macos.html">macOS</a> или Windows да стартира най-напредналите модели от серията DeepSeek-V3 само с едно кликване.</p>
+<p>Проектът се разпространява с напълно <a href="/pages/open-source.html">отворен код</a> и предлага родна интеграция с графичните API-та Apple Metal и Microsoft DirectX 12, заобикаляйки сложните зависимости от компилатори и конзолни команди.</p>
+<h2>Преодоляване на бариерата за потребителите</h2>
+<p>Въпреки огромната популярност на отворените тегла, досега локалното изпълнение на сложни невронни мрежи изискваше дълбоки инженерни познания: инсталиране на Python виртуални среди, компилиране на C++ проекти, настройка на квантизационни флагове и ръчно управление на слоевете между RAM и VRAM.</p>
+<p><a href="/pages/harness-desktop.html">Harness Desktop</a> елиминира тази сложност:</p>
+<ul>
+<li><strong>Интелигентно хардуерно профилиране:</strong> При първо стартиране програмата автоматично сканира наличното оборудване (процесор, графична карта, споделена памет) и сваля най-оптималната квантизирана версия на модела.</li>
+<li><strong>Родно ускорение за Apple Silicon:</strong> На компютри Mac с чипове M2, M3 и M4 приложението използва максимално унифицираната архитектура на паметта, постигайки над 65 токена в секунда за модели от среден клас без никакво прегряване.</li>
+<li><strong>Пълна офлайн сигурност:</strong> Приложението не изпраща никаква телеметрия и може да функционира в напълно изолирана среда (air-gapped), което го прави идеално за лекари, юристи и финансови одитори, работещи с класифицирани данни.</li>
+</ul>
+<p>„Ние вярваме, че върховият интелект не трябва да бъде затворен зад скъпи абонаменти в облака. Вашият компютър притежава достатъчно мощ, за да бъде ваш личен, абсолютно суверенен интелектуален партньор,“ обявиха от инженерния екип на DeepSeek [1].</p>
+<h2>Локален OpenAI съвместим сървър</h2>
+<p>Една от най-силните функционалности за софтуерните разработчици е вграденият локален API сървър:</p>
+<ol>
+<li><strong>Съвместимост с индустриалните стандарти:</strong> Сървърът стартира на <code>localhost:11434</code> и поддържа пълния синтаксис на OpenAI API endpoints (<code>/v1/chat/completions</code>), позволявайки на популярни среди за програмиране (Cursor, VS Code, cline) да работят с локалния DeepSeek модел без промяна в кода.</li>
+<li><strong>Динамично зареждане на експерти (MoE Offloading):</strong> За флагманските модели с архитектура Mixture of Experts, енджинът динамично зарежда само активните експерти в графичната памет, позволявайки изпълнение на огромни невронни мрежи на достъпен потребителски хардуер.</li>
+<li><strong>Графичен интерфейс за чат и анализ на документи:</strong> Вграден интуитивен UI поддържа работа с локални PDF файлове и код без напускане на машината.</li>
+</ol>
+<h2>Стратегически анализ</h2>
+<p>Успехът на DeepSeek Harness Desktop бележи важен етап в еманципацията на софтуерната общност от технологичните монополи. Превръщането на десктоп компютрите в автономни изчислителни станции за интелигентност подкопава модела на постоянни облачни абонаменти и гарантира, че контролът върху дигиталния ум остава в ръцете на неговия собственик.</p>
+<p><img src="/articles/2026/10/02/deepseek-harness-desktop-macos-windows-local-model-runtime/infographic.png" alt="Инфографика: DeepSeek Harness Desktop"><br><small>Инфографика: Архитектура, поддържани операционни системи и производителност на DeepSeek Harness Desktop</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://deepseek.ai/blog/harness-desktop-local-runtime/">DeepSeek Open Source Hub - Announcing DeepSeek Harness Desktop for macOS and Windows (2026-10-02)</a></li>
+<li><a href="https://arstechnica.com/information-technology/2026/10/deepseek-harness-desktop-review/">Ars Technica - DeepSeek&#39;s New Desktop App Brings High-End Local LLMs to the Masses</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/macos.html">macOS</a><p>macOS е операционната система, разработена от Apple за нейните персонални компютри от серията Mac.</p></li><li><a href="/pages/local-inference.html">Локални невронни изводи (Local Inference)</a><p>Локалните невронни изводи (Local Inference) представляват изпълнение на модели за изкуствен интелект директно върху крайното потребителско устройство ...</p></li><li><a href="/pages/harness-desktop.html">DeepSeek Harness Desktop</a><p>DeepSeek Harness Desktop е кросплатформено десктоп приложение за локално изпълнение, тестване и оркестрация на автономни модели с отворени тегла в mac...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

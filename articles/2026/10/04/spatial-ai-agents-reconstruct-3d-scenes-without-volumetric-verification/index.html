@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Vision Research Lab
+Задълбочено научно изследване на общността по компютърно зрение (/pages/computer-vision.html) разкри фундаментален структурен дефект в съвременните модели ..."><title>Агентите за пространствен AI сглобяват 3D сцени от снимки без представа дали са точни - Светни.ме</title><meta property="og:title" content="Агентите за пространствен AI сглобяват 3D сцени от снимки без представа дали са точни - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Vision Research Lab
+Задълбочено научно изследване на общността по компютърно зрение (/pages/computer-vision.html) разкри фундаментален структурен дефект в съвременните модели ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/04/spatial-ai-agents-reconstruct-3d-scenes-without-volumetric-verification/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/04/spatial-ai-agents-reconstruct-3d-scenes-without-volumetric-verification/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Агентите за пространствен AI сглобяват 3D сцени от снимки без представа дали са точни</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->4 октомври 2026 г.</p><div><p><img src="/articles/2026/10/04/spatial-ai-agents-reconstruct-3d-scenes-without-volumetric-verification/hero.png" alt="Триизмерна абстрактна реконструкция на жилищно пространство"><br><small>Снимка: The Decoder / Vision Research Lab</small></p>
+<p>Задълбочено научно изследване на общността по компютърно зрение (<a href="/pages/computer-vision.html">/pages/computer-vision.html</a>) разкри фундаментален структурен дефект в съвременните модели за пространствен изкуствен интелект (<a href="/pages/spatial-ai.html">/pages/spatial-ai.html</a>): софтуерните агенти могат да изграждат зашеметяващо реалистични триизмерни сцени от единични или оскъдни фотографии, но нямат абсолютно никаква вътрешна представа дали скритата геометрична структура отговаря на физическата реалност [1].</p>
+<p>Изследването подлага на стрес-тест най-популярните съвременни архитектури за триизмерна реконструкция (<a href="/pages/3d-reconstruction.html">/pages/3d-reconstruction.html</a>), включително базираните на невронни радиационни полета (NeRF) и иновативното гаусово разпръскване (<a href="/pages/gaussian-splatting.html">/pages/gaussian-splatting.html</a>).</p>
+<h2>Фотореалистична илюзия срещу физическа топология</h2>
+<p>Проблемът се корени в начина, по който се обучават тези невронни мрежи. Тяхната функция за загуба (loss function) се изчислява чрез повторно прожектиране на 3D сцената обратно в 2D равнината и сравняване на получените пиксели с оригиналната снимка.</p>
+<p>Ако ъгълът на наблюдение съвпада с оригиналната гледна точка, изображението изглежда съвършено. Но щом виртуалната камера бъде завъртяна зад обект (в зона на окултиране или сянка), моделът започва да „халюцинира“ произволна геометрия. Той запълва скритите обеми с призрачни повърхности и измислени форми, които нямат нищо общо с действителността, само за да удовлетвори математическото изискване за оптична плътност.</p>
+<p>Още по-тревожно е, че съвременните софтуерни агенти не притежават механизъм за калибрация на несигурността: те подават измислената геометрия към двигателните модули на роботите с максимална статистическа увереност.</p>
+<h2>Фатални последици за хуманоидната роботика</h2>
+<p>Във виртуалните игри или визуалните ефекти за киното подобни халюцинации са безобидни. В областта на автономните хуманоидни роботи обаче грешната пространствена представа може да доведе до фатални инциденти.</p>
+<p>Ако робот се опита да стъпи върху въображаема опора или да хване предмет, чийто заден ръб е геометрична измислица на модела, машината губи баланс или разрушава манипулирания детайл.</p>
+<p>Експертите предупреждават, че чистият визуален пространствен AI не може да бъде използван за безопасно управление в индустриална среда без комбиниране с директни физически датчици (като LiDAR и ултразвук).</p>
+<h2>Дългосрочни системни и архитектурни последици</h2>
+<p>Разкритията за пространствените халюцинации бележат предел на чисто оптичните методи в изкуствения интелект. В продължение на години привържениците на чистия визуален подход (vision-only autonomy) твърдяха, че щом хората могат да се ориентират в пространството само с две очи, невронните мрежи също могат да реконструират физическия свят единствено по камери. Този аргумент обаче игнорира факта, че човешкото пространствено разбиране не е плод само на ретината, а на милиони години еволюция, вградила дълбоко проприоцептивно усещане, гравитационни инварианти и физическо пипане на предметите с ръце.</p>
+<p>Това налага преосмисляне на бенчмарковете в пространствения AI. Бъдещите архитектури трябва да се откажат от повърхностната фотореалистична оценка в полза на строги топологични тестове за обемна точност и несигурност (volumetric uncertainty calibration). Докато моделите не се научат честно да сигнализират: „Не знам какво има зад тази стена, защото не го виждам“, използването на генеративно 3D моделиране в автономни превозни средства и фабрични роботи ще остане източник на сериозен риск от производствени катастрофи.</p>
+<p><img src="/articles/2026/10/04/spatial-ai-agents-reconstruct-3d-scenes-without-volumetric-verification/infographic.png" alt="Инфографика: Халюцинации в скритата геометрия при 3D пространствена реконструкция"><br><small>Инфографика: Анализ на несъответствието между 2D пикселна фотореалистичност и реална 3D топология.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/">The Decoder: AI agents build 3D scenes from photos but have no idea if they got it right</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/spatial-ai.html">Пространствен изкуствен интелект (Spatial AI)</a><p>Пространственият изкуствен интелект (Spatial AI) е научна и инженерна парадигма, която надгражда конвенционалните генеративни модели, като обучава алг...</p></li><li><a href="/pages/gaussian-splatting.html">3D Gaussian Splatting</a><p>3D Gaussian Splatting е авангардна компютърна графична техника за рафинирано триизмерно пресъздаване на сцени от комплект двуизмерни снимки в реално в...</p></li><li><a href="/pages/computer-vision.html">Компютърно зрение</a><p>Компютърното зрение е подполе на изкуствения интелект и компютърните науки, което се занимава с това как компютрите могат да придобият високо ниво на ...</p></li><li><a href="/pages/3d-reconstruction.html">Триизмерна пространствена реконструкция (3D Reconstruction)</a><p>Триизмерната пространствена реконструкция (3D Reconstruction) е процес на извличане на триизмерната геометрия и текстура на физически обекти и простра...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

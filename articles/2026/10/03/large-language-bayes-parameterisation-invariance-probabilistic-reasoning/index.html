@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Mathematical Machine Learning Lab / Machine Brief
+В основополагащ теоретичен труд по математическо машинно обучение (Mathematical Machine Learning), изследователи разкриха фундаментален деф..."><title>Large Language Bayes: Езиковите модели се провалят при вероятностни разсъждения при смяна на параметризацията - Светни.ме</title><meta property="og:title" content="Large Language Bayes: Езиковите модели се провалят при вероятностни разсъждения при смяна на параметризацията - Светни.ме"><meta property="og:description" content="Снимка: Mathematical Machine Learning Lab / Machine Brief
+В основополагащ теоретичен труд по математическо машинно обучение (Mathematical Machine Learning), изследователи разкриха фундаментален деф..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/03/large-language-bayes-parameterisation-invariance-probabilistic-reasoning/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/03/large-language-bayes-parameterisation-invariance-probabilistic-reasoning/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Large Language Bayes: Езиковите модели се провалят при вероятностни разсъждения при смяна на параметризацията</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 октомври 2026 г.</p><div><p><img src="/articles/2026/10/03/large-language-bayes-parameterisation-invariance-probabilistic-reasoning/hero.png" alt="Large Language Bayes: Провал при вероятностни разсъждения"><br><small>Снимка: Mathematical Machine Learning Lab / Machine Brief</small></p>
+<p>В основополагащ теоретичен труд по <a href="/pages/mathematical-ml.html">математическо машинно обучение (Mathematical Machine Learning)</a>, изследователи разкриха фундаментален дефект в когнитивните способности на съвременните езикови модели: пълна липса на инвариантност при параметризация при решаване на задачи по <a href="/pages/probabilistic-reasoning.html">вероятностно разсъждение (Probabilistic Reasoning)</a> [1]. </p>
+<p>Статията, озаглавена „Large Language Bayes Is Not Reparameterisation-Invariant“, доказва математически, че когато една и съща класическа вероятностна задача бъде представена на водещи модели (като Claude, GPT-4 или Gemini) с тривиална промяна на математическите променливи (например изразяване на шансове чрез съотношения вместо проценти, или замяна на мерни единици), невронните мрежи дават диаметрално противоположни заключения.</p>
+<h2>Защо това е катастрофа за <a href="/pages/bayesian-ai.html">Байесовия AI (Bayesian AI)</a>?</h2>
+<p>В класическата теория на вероятностите и <a href="/pages/epistemic-logic.html">епистемичната логика</a>, един рационален агент трябва да спазва аксиомата за инвариантност: математическата истина не зависи от това на какъв език или в какви мерни единици формулирате променливите:</p>
+<ul>
+<li><strong>Илюзията за интелигентност:</strong> Когато моделът получи задача, написана по начина, по който е била формулирана в популярни учебници, той уверено цитира коректния отговор от своето тренировъчно пространство.</li>
+<li><strong>Разпад при смяна на фокуса:</strong> Ако същата задача бъде пренаписана с обратни променливи (например търсене на вероятността пациентът да НЕ е болен, вместо да е болен), изчислените от модела вероятности се разминават с до 45%, генерирайки математически абсурдни резултати.</li>
+<li><strong>Провал на <a href="/pages/uncertainty-estimation.html">оценката на несигурността (Uncertainty Estimation)</a>:</strong> Моделите показват изключително висока самоувереност в грешните си изчисления, маскирайки дефекта зад безупречно структурирани формули на естествен език.</li>
+</ul>
+<p>„Ние разкрихме, че езиковите модели не извършват истински Байесов извод. Те просто предсказват как би изглеждал един типичен математически текст. Това е огромна разлика между реторика и реално мислене,“ предупреждава водещият автор на изследването [1].</p>
+<h2>Рискове за медицината, финансите и съдебната експертиза</h2>
+<p>Откритието има критични практически последици за секторите с висок риск:</p>
+<ol>
+<li><strong>Медицинска диагностика:</strong> Автономни агенти, оценяващи лабораторни резултати, могат да дадат грешна диагноза само защото лекарят е въвел данните в милиграми вместо в молове.</li>
+<li><strong>Актюерски и финансов риск:</strong> Застрахователни и инвестиционни алгоритми, базирани на LLMs, показват опасна нестабилност при оценка на редки катастрофични събития.</li>
+<li><strong>Неприложимост на чистия Chain-of-Thought:</strong> Изследването доказва, че популярните методи за разсъждение („мисли стъпка по стъпка“) не помагат, защото грешката е заложена в самата вероятностна природа на авторегресивното предсказване на токени.</li>
+</ol>
+<h2>Дълбок фундаментален анализ</h2>
+<p>Трудът за не-инвариантността на езиковия Байес нанася съкрушителен удар върху претенциите, че увеличаването на параметрите само по себе си ще доведе до общ изкуствен интелект (AGI). Авторегресивният езиков модел по дефиниция е заложник на семантичния контекст на думите – той не притежава абсолютна вътрешна координатна система за математическа логика.</p>
+<p>Решението на проблема изисква задължително преминаване към хибридни архитектури: езиковият модел трябва да се използва единствено като интерфейс за превод на човешкото намерение в строг програмен код, а самото изчисление на вероятностите да се поверява на детерминистични символни двигатели (като Stan, Pyro или Wolfram). Науката се нуждае от математическа точност, а не от красноречиви статистически илюзии.</p>
+<p><img src="/articles/2026/10/03/large-language-bayes-parameterisation-invariance-probabilistic-reasoning/infographic.png" alt="Инфографика: Провалът на езиковите модели при Байесов извод"><br><small>Инфографика: Математически експеримент за не-инвариантност, семантично изкривяване и разлики при вероятностни разсъждения</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.machinebrief.com/news/large-language-bayes-is-not-reparameterisation-invariant-9xus">Machine Brief - Large Language Bayes Is Not Reparameterisation-Invariant (2026-10-03)</a></li>
+<li><a href="https://jmlr.org/papers/v27/26-1003-language-bayes-invariance.html">Journal of Machine Learning Research - On the Structural Limits of Autoregressive Transformers in Bayesian Epistemic Tasks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/uncertainty-estimation.html">Оценка на несигурността (Uncertainty Estimation)</a><p>Оценката на несигурността (Uncertainty Estimation) е метод за разграничаване между случаен шум в данните (алеаторна несигурност) и липса на знания в с...</p></li><li><a href="/pages/probabilistic-reasoning.html">Вероятностно разсъждение (Probabilistic Reasoning)</a><p>Вероятностното разсъждение (Probabilistic Reasoning) е логически процес, позволяващ правене на изводи при непълна, шумна или противоречива информация.</p></li><li><a href="/pages/mathematical-ml.html">Математическо машинно обучение (Mathematical Machine Learning)</a><p>Математическото машинно обучение (Mathematical Machine Learning) изследва фундаменталните теоретични основи на изкуствения интелект чрез математически...</p></li><li><a href="/pages/epistemic-logic.html">Епистемична логика (Epistemic Logic)</a><p>Епистемичната логика (Epistemic Logic) е дял от модалната логика, изследващ структурите на знанието, убежденията и вярата в рационални агенти („Аз зна...</p></li><li><a href="/pages/bayesian-ai.html">Байесов изкуствен интелект (Bayesian AI)</a><p>Байесовият изкуствен интелект (Bayesian AI) използва теорията на вероятностите и теоремата на Бейс за количествено моделиране на несигурността при взе...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
