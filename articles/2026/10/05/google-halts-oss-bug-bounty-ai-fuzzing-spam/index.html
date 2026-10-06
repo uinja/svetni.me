@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: BleepingComputer / Google
+Корпорацията Google предприе безпрецедентната стъпка да замрази временно своята Програма за възнаграждения при уязвимости в софтуер с отворен код (Open Source Soft..."><title>Google временно спря програмата за възнаграждения при уязвимости в отворен код заради спам от AI инструменти - Светни.ме</title><meta property="og:title" content="Google временно спря програмата за възнаграждения при уязвимости в отворен код заради спам от AI инструменти - Светни.ме"><meta property="og:description" content="Снимка: BleepingComputer / Google
+Корпорацията Google предприе безпрецедентната стъпка да замрази временно своята Програма за възнаграждения при уязвимости в софтуер с отворен код (Open Source Soft..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/05/google-halts-oss-bug-bounty-ai-fuzzing-spam/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/05/google-halts-oss-bug-bounty-ai-fuzzing-spam/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google временно спря програмата за възнаграждения при уязвимости в отворен код заради спам от AI инструменти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 октомври 2026 г.</p><div><p><img src="/articles/2026/10/05/google-halts-oss-bug-bounty-ai-fuzzing-spam/hero.png" alt="Централата на Google и проблеми с киберсигурността"><br><small>Снимка: BleepingComputer / Google</small></p>
+<p>Корпорацията <a href="/pages/google.html">Google</a> предприе безпрецедентната стъпка да замрази временно своята Програма за възнаграждения при уязвимости в софтуер с отворен код (Open Source Software Vulnerability Rewards Program - OSS VRP) [1]. Причината за спирането е колосална вълна от нискокачествени, фалшиво-положителни доклади за сигурност, генерирани масово от потребители с помощта на генеративни езикови модели и любителски инструменти за автоматизиран одит.</p>
+<p>Програмата, която в продължение на години осигуряваше милиони долари възнаграждения за откриване на критични дефекти в ключови проекти с <a href="/pages/open-source.html">отворен код</a> като Linux ядрото, Kubernetes и Chromium, се оказа напълно парализирана от автоматизирания спам.</p>
+<h2>Инвазията на халюцинираните експлойти и крахът на триажа</h2>
+<p>Според официално съобщение от екипа по сигурност на Google, през последните месеци обемът на подадените билети за уязвимости е нараснал главоломно, като над 96% от тях са се оказали напълно безполезни. Т.нар. „ловци на награди“ масово използват достъпни AI инструменти, за да сканират публични репозитории, подавайки генерираните резултати към формата за възнаграждения без никаква ръчна верификация.</p>
+<p>Езиковите модели редовно „халюцинират“ съществуването на критични уязвимости за препълване на буфера или изпълнение на отдалечен код, базирайки се единствено на теоретичен прочит на кода без реален тест. Докладите изглеждат професионално написани, съдържат сложна техническа терминология и убедителни графики, което принуждава инженерите на Google да отделят часове за ръчно тестване само за да установят, че описаната уязвимост е пълна фикция.</p>
+<p>Това претоварване на триаж екипите доведе до изтощение на специалистите и блокира обработката на легитимни доклади от сериозни изследователи по <a href="/pages/cybersecurity.html">киберсигурност</a>.</p>
+<h2>Криза в икономическия модел на Bug Bounty платформите</h2>
+<p>Инцидентът разкрива дълбока криза в традиционния модел на <a href="/pages/bug-bounty.html">програмите за награди при уязвимости</a>. Когато цената за откриване и описване на дефект падне до нула благодарение на <a href="/pages/ai-fuzzing.html">AI фазинга</a>, икономическият стимул се изкривява в полза на спама: нападателят не губи нищо, изпращайки хиляди автоматизирани доклада с надеждата поне един да бъде одобрен случайно.</p>
+<p>Google обяви, че използва паузата за цялостно препроектиране на входните бариери. Новите правила ще изискват задължително представяне на работещо, автоматично верифицируемо доказателство за концепция (Proof-of-Concept) в изолиран контейнер, както и въвеждане на репутационни санкции за изследователи, които системно изпращат халюцинирани доклади.</p>
+<h2>Дългосрочни системни и обществени трансформации</h2>
+<p>Замразяването на OSS VRP програмата на Google е показателен пример за феномена на „информационно замърсяване“ (information pollution), породен от безконтролната употреба на генеративен изкуствен интелект. Когато машините могат да произвеждат правдоподобно изглеждащ псевдо-експертен текст в неограничени количества, всички отворени човешки институции и процеси, базирани на добросъвестност и доверие, рискуват да рухнат под тежестта на синтетичния шум.</p>
+<p>В дългосрочен план софтуерната сигурност ще трябва да премахне неструктурираните текстови доклади. Взаимодействието между етичните хакери и компаниите ще се премести изцяло в автоматизирани математически среди, където уязвимостите се доказват машинно чрез криптографски следи и детерминистично възпроизвеждане. Докато този преход се осъществи обаче, отворената софтуерна екосистема остава уязвима, лишена от един от най-важните си защитни щитове.</p>
+<p><img src="/articles/2026/10/05/google-halts-oss-bug-bounty-ai-fuzzing-spam/infographic.png" alt="Инфографика: Замразяване на програмата за уязвимости на Google поради AI спам"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/">BleepingComputer: Google halts open-source bug bounty program amid AI spam surge</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/bug-bounty.html">Програми за награди при уязвимости (Bug Bounty)</a><p>Програмите за награди при уязвимости са организирани инициативи на технологични компании, които предлагат финансови възнаграждения на етични хакери и ...</p></li><li><a href="/pages/ai-fuzzing.html">Автоматизиран AI фазинг (AI Fuzzing)</a><p>AI фазингът е усъвършенствана техника за тестване на софтуерна сигурност, при която модели за машинно обучение генерират насочени невалидни, неочакван...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

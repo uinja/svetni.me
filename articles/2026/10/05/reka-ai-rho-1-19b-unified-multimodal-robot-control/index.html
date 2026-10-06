@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Reka AI
+Изследователската лаборатория Reka AI направи фундаментален архитектурен пробив с представянето на Rho-1 — 19-милиарден компактен омнимадел, способен да обработва и ге..."><title>Reka AI представи Rho-1: 19-милиарден мултимодален модел, обединяващ език, зрение и управление на роботи - Светни.ме</title><meta property="og:title" content="Reka AI представи Rho-1: 19-милиарден мултимодален модел, обединяващ език, зрение и управление на роботи - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Reka AI
+Изследователската лаборатория Reka AI направи фундаментален архитектурен пробив с представянето на Rho-1 — 19-милиарден компактен омнимадел, способен да обработва и ге..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/05/reka-ai-rho-1-19b-unified-multimodal-robot-control/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/05/reka-ai-rho-1-19b-unified-multimodal-robot-control/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Reka AI представи Rho-1: 19-милиарден мултимодален модел, обединяващ език, зрение и управление на роботи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 октомври 2026 г.</p><div><p><img src="/articles/2026/10/05/reka-ai-rho-1-19b-unified-multimodal-robot-control/hero.png" alt="Архитектурна схема на омнимадела Reka Rho-1"><br><small>Снимка: The Decoder / Reka AI</small></p>
+<p>Изследователската лаборатория <a href="/pages/reka-ai.html">Reka AI</a> направи фундаментален архитектурен пробив с представянето на <a href="/pages/rho-1.html">Rho-1</a> — 19-милиарден компактен омнимадел, способен да обработва и генерира текст, изображения, видео и директни команди за управление на роботи в рамките на единна невронна мрежа [1]. Разработката преодолява традиционното фрагментиране, при което визуалното възприятие и контролът на двигателните механизми се управляват от отделни специализирани модели.</p>
+<p>Вместо да превежда изображенията в междинен текст и след това да подава инструкции към роботизиран контролер, Rho-1 генерира непрекъснати кинематични траектории директно от визуално-пространствения вход, намалявайки латентността при вземане на физически решения до милисекунди.</p>
+<h2>Архитектурна интеграция на пространствени и кинематични токени</h2>
+<p>Сърцевината на Rho-1 е нова схема за съвместна токенизация, която третира 3D координатите, ъгловите скорости на ставите на робота и пикселите на видеокадрите като равнопоставени елементи в общо векторно пространство на <a href="/pages/multimodal-ai.html">мултимодалния изкуствен интелект</a>. Моделът използва оптимизиран енкодер, който компресира видеопотока с висока кадрова честота без загуба на пространствено-времева кохерентност.</p>
+<p>По време на обучението изследователите са комбинирали огромни корпуси от мултимодални уеб данни с десетки хиляди часове симулационни и реални телеоперационни записи на роботизирани манипулатори. Специализираният слой за действие (action head) предвижда директно 7-степенни вектори на свобода на движение (7-DoF), позволявайки на физическия робот да извършва фини манипулации — като сортиране на чупливи обекти или сглобяване на електронни компоненти — водено единствено от визуалното наблюдение.</p>
+<p>В бенчмарковете моделът изпреварва значително по-големи системи с 70 милиарда параметри в задачи за видео анализ и пространствено логическо мислене.</p>
+<h2>Преодоляване на фрагментацията във физическия изкуствен интелект</h2>
+<p>Досега индустрията на <a href="/pages/embodied-ai.html">въплътения изкуствен интелект</a> разчиташе на сложни йерархични архитектури: голям езиков модел планираше стъпките, зрителен модел откриваше обектите, а локален PID контролер движеше моторите. Тази модулност страдаше от сериозно забавяне и риск от каскадни грешки при погрешна интерпретация между слоевете.</p>
+<p>Rho-1 доказва, че унификацията в един компактен 19-милиарден модел осигурява много по-гладко и интуитивно поведение на машината. Тъй като моделът се побира на единична работна станция с потребителски клас графични карти, той е идеален за директно вграждане в автономни мобилни роботи и фабрични коботи без постоянна връзка с отдалечен облак.</p>
+<h2>Дългосрочни системни и инженерни трансформации</h2>
+<p>Успехът на Rho-1 сигнализира за настъпването на ерата на „енд-ту-енд“ физическите модели, които ще променят из основи индустрията на <a href="/pages/robotics.html">роботиката</a>. Когато сетивното възприятие и физическото действие се обучават съвместно в общ градиентен поток, роботът придобива интуитивно разбиране за законите на нютоновата физика — триене, маса, инерция и еластичност — по начин, непостижим чрез чисто текстово обучение.</p>
+<p>В дългосрочен план отпадането на сложните софтуерни междинни слоеве (middleware) ще демократизира роботизираната автоматизация. Вместо месеци скъпо програмиране на специфични траектории, инженерите ще могат да инструктират промишлените роботи с глас или видео демонстрация. Това ще ускори сливането между дигиталния софтуер и физическия свят, превръщайки автономните манипулатори в естествено продължение на генеративния интелект.</p>
+<p><img src="/articles/2026/10/05/reka-ai-rho-1-19b-unified-multimodal-robot-control/infographic.png" alt="Инфографика: Архитектура на модела Reka Rho-1"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/">The Decoder: Reka AI&#39;s omni-model Rho-1 handles text, images, video, and robot control in a single model</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/robotics.html">Роботика</a><p>Роботиката е интердисциплинарна област от науката и инженерството, фокусирана върху проектирането, изграждането и използването на роботи.</p></li><li><a href="/pages/rho-1.html">Rho-1</a><p>Rho-1 е 19-милиарден фундаментален мултимодален модел, разработен от Reka AI през есента на 2026 г.</p></li><li><a href="/pages/reka-ai.html">Reka AI</a><p>Reka AI е изследователска лаборатория за изкуствен интелект, основана от бивши водещи изследователи от Google DeepMind, Meta и Baidu.</p></li><li><a href="/pages/multimodal-ai.html">Мултимодален изкуствен интелект</a><p>Мултимодалният изкуствен интелект представлява категория невронни мрежи, проектирани да възприемат, разбират и генерират информация от различни типове...</p></li><li><a href="/pages/embodied-ai.html">Физически въплътен изкуствен интелект</a><p>Физически въплътеният изкуствен интелект (Embodied AI) е клон от развитието на изкуствения интелект, който се фокусира върху ИИ системи, притежаващи ф...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Elastic
+В рамките на специализирана техническа конференция Сюзън Чанг, водещ инженерен ръководител в софтуерната компания Elastic, представи цялостна архитектура за изграждане на пр..."><title>Elastic представи архитектура за преизползваеми рамки за оценка на агентни AI продукти - Светни.ме</title><meta property="og:title" content="Elastic представи архитектура за преизползваеми рамки за оценка на агентни AI продукти - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Elastic
+В рамките на специализирана техническа конференция Сюзън Чанг, водещ инженерен ръководител в софтуерната компания Elastic, представи цялостна архитектура за изграждане на пр..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/05/elastic-architecture-reusable-evaluations-agentic-ai/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/05/elastic-architecture-reusable-evaluations-agentic-ai/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Elastic представи архитектура за преизползваеми рамки за оценка на агентни AI продукти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 октомври 2026 г.</p><div><p><img src="/articles/2026/10/05/elastic-architecture-reusable-evaluations-agentic-ai/hero.png" alt="Архитектура за оценка на автономни агенти на Elastic"><br><small>Снимка: InfoQ / Elastic</small></p>
+<p>В рамките на специализирана техническа конференция Сюзън Чанг, водещ инженерен ръководител в софтуерната компания <a href="/pages/elastic.html">Elastic</a>, представи цялостна архитектура за изграждане на преизползваеми рамки за <a href="/pages/ai-evaluation.html">оценка на AI системи</a>, насочени специфично към автономни агентни продукти [1]. Презентацията разглежда проблема как корпоративните софтуерни екипи могат да преминат от статично тестване на единични текстови запитвания към цялостна верификация на многостъпкови работни процеси.</p>
+<p>С нарастването на автономността на софтуерните <a href="/pages/ai-agents.html">агенти</a>, традиционните академични тестове стават напълно неадекватни за измерване на надеждността, тъй като не могат да оценят страничните ефекти от извикването на API функции, модификацията на бази данни и управлението на паметта.</p>
+<h2>Трислоен модел за детерминистична оценка</h2>
+<p>Инженерният подход на Elastic разделя оценката на агентните системи на три независими слоя:</p>
+<ol>
+<li><strong>Планиране (Planning Layer):</strong> Оценява способността на езиковия модел да декомпозира сложна потребителска цел в логическа последователност от стъпки без излишна рекурсия.</li>
+<li><strong>Изпълнение на инструменти (Execution Layer):</strong> Измерва точността на генерираните параметри при извикване на външни функции (JSON схеми, SQL заявки, API сокети) и правилното боравене с върнати съобщения за грешка.</li>
+<li><strong>Краен синтез (Synthesis Layer):</strong> Верифицира дали върнатият краен резултат отговаря на очакванията на потребителя и дали не съдържа халюцинирани факти.</li>
+</ol>
+<p>Ключов елемент в архитектурата е използването на изолирани синтетични тестови среди (mock environments), които симулират реални корпоративни системи. Вместо да разчита само на субективни оценки от друг помощен езиков модел (LLM-as-a-judge), системата на Elastic прилага стриктни детерминистични проверки на състоянието (state diffs): например дали записът в тестовата база данни наистина е бил обновен с правилната стойност.</p>
+<h2>Интеграция с обсервабилност и LLMOps конвейери</h2>
+<p>Рамката на Elastic използва пълната сила на разпределеното трасиране (OpenTelemetry), интегрирано директно в стека на компанията. Всяка стъпка на агента генерира структурирани телеметрични спанове, записващи точната консумация на токени, латентността на модела и състоянието на вътрешния контекст.</p>
+<p>Това позволява оценката да стане част от стандартния <a href="/pages/llmops.html">LLMOps</a> конвейер за непрекъсната интеграция и доставка (CI/CD). При всяка промяна в системния промпт или версията на базовия модел се изпълняват стотици регресионни тестове. Ако агентът започне да халюцинира параметри или прояви склонност към безкрайни цикли, автоматичните защитни бариери незабавно блокират внедряването му в продукция.</p>
+<h2>Дългосрочни системни и корпоративни трансформации</h2>
+<p>Представената от Elastic архитектура бележи преломен момент в трансформацията на агентния AI от експериментална демо играчка в критична софтуерна инфраструктура. Без стриктна, автоматизирана и възпроизводима рамка за оценка бизнесът не може да гласува доверие на автономни системи за управление на реални парични потоци, клиентски данни и сървърна логика.</p>
+<p>В дългосрочен план появата на отворени стандарти за многостъпково <a href="/pages/benchmarking.html">бенчмарк тестване</a> ще създаде ново поколение софтуерни гаранции. Точно както автоматизираното тестване на модули (unit testing) преобрази разработката през последните две десетилетия, агентните рамки за оценка ще се превърнат в задължителния фундамент за безопасност и надеждност в ерата на автономния софтуер.</p>
+<p><img src="/articles/2026/10/05/elastic-architecture-reusable-evaluations-agentic-ai/infographic.png" alt="Инфографика: Архитектура на Elastic за оценка на автономни агенти"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/presentations/elastic-ai-agent-evaluations/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ: Presentation: Building Reusable Evaluation Frameworks for Agentic AI Products</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/llmops.html">LLMOps (Large Language Model Operations)</a><p>LLMOps е съвкупност от инженерни практики, инструменти и процеси за оперативно управление на целия жизнен цикъл на големите езикови модели — от фино д...</p></li><li><a href="/pages/elastic.html">Elastic</a><p>Elastic е водеща компания за софтуер за търсене, анализ на данни и обсервабилност, най-известна със създаването на търсачката Elasticsearch и стека EL...</p></li><li><a href="/pages/benchmarking.html">Бенчмаркинг на изкуствен интелект (AI Benchmarking)</a><p>Бенчмаркингът на изкуствен интелект (AI Benchmarking) е стандартизиран процес за измерване, сравнение и количествена оценка на точността, скоростта и ...</p></li><li><a href="/pages/ai-evaluation.html">Оценка и тестване на AI системи (AI Evaluation)</a><p>Оценката на AI системи включва методи, бенчмаркове и автоматизирани рамки за измерване на точността, безопасността, латентността и надеждността на ези...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

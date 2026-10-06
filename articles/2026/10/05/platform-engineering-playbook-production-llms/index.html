@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Platform Engineering
+В задълбочен технически анализ изданието InfoQ публикува цялостно ръководство за софтуерни архитекти, посветено на платформеното инженерство за продукционни сре..."><title>Наръчник по платформено инженерство за продукционни LLM системи: рутиране, кеширане и отказоустойчивост - Светни.ме</title><meta property="og:title" content="Наръчник по платформено инженерство за продукционни LLM системи: рутиране, кеширане и отказоустойчивост - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Platform Engineering
+В задълбочен технически анализ изданието InfoQ публикува цялостно ръководство за софтуерни архитекти, посветено на платформеното инженерство за продукционни сре..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/05/platform-engineering-playbook-production-llms/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/05/platform-engineering-playbook-production-llms/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Наръчник по платформено инженерство за продукционни LLM системи: рутиране, кеширане и отказоустойчивост</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 октомври 2026 г.</p><div><p><img src="/articles/2026/10/05/platform-engineering-playbook-production-llms/hero.png" alt="Архитектурна топология на корпоративна LLM платформа"><br><small>Снимка: InfoQ / Platform Engineering</small></p>
+<p>В задълбочен технически анализ изданието InfoQ публикува цялостно ръководство за софтуерни архитекти, посветено на <a href="/pages/platform-engineering.html">платформеното инженерство</a> за продукционни среди с големи езикови модели [1]. Наръчникът формулира най-добрите инженерни практики за преодоляване на „хаоса от преки API извиквания“, който възниква, когато десетки продуктови екипи в една компания интегрират директно външни модели без централизиран контрол.</p>
+<p>Според авторите, успешната експлоатация на генеративен изкуствен интелект в мащаб изисква изграждането на вътрешна платформа (Internal Developer Platform - IDP), която централизира рутирането на заявки, оптимизира разходите и осигурява защита от сривове при основните доставчици.</p>
+<h2>Сърцевината на архитектурата: AI Gateway и семантично кеширане</h2>
+<p>Фундаментът на съвременната корпоративна архитектура е т.нар. AI Gateway (входен шлюз за изкуствен интелект). Той служи като единна входна точка между вътрешните микроуслуги и външните доставчици (OpenAI, Anthropic, Google, локални клъстери).</p>
+<p>Шлюзът изпълнява динамично рутиране: кратки и тривиални въпроси автоматично се насочват към бързи и евтини малки модели или локални хоствани тегла, докато сложни задачи с комплексно разсъждение се препращат към водещи гранични модели.</p>
+<p>Друг критичен компонент за <a href="/pages/inference-optimization.html">оптимизация на инференса</a> е двустепенното <a href="/pages/semantic-caching.html">семантично кеширане</a>. За разлика от класическото уеб кеширане, което изисква буквално съвпадение на низа, семантичният кеш използва векторни ембединги, за да идентифицира сходни по смисъл въпроси. Ако служител попита „Каква е политиката за отпуск?“, а друг е попитал „Колко дни почивка ми се полагат?“, шлюзът връща кеширания отговор за под 10 милисекунди, спестявайки до 40% от разходите за токени.</p>
+<h2>Отказоустойчивост и преодоляване на сривове (Resiliency)</h2>
+<p>Един от най-големите рискове за продукционните системи е прекъсването на външните API услуги. Ръководството дефинира стандарти за осигуряване на висока <a href="/pages/resiliency.html">отказоустойчивост</a> чрез автоматични прекъсвачи на веригата (circuit breakers).</p>
+<p>Ако скоростта на отговор от даден доставчик падне под критичен праг или процентът на HTTP 5xx грешки надхвърли 2%, шлюзът моментално пренасочва трафика към алтернативен модел без прекъсване за крайния потребител. В допълнение, платформата следи за скрити аномалии и деградация на качеството чрез структурирано логване съгласно стандартите на <a href="/pages/llmops.html">LLMOps</a>.</p>
+<h2>Дългосрочни системни и организационни трансформации</h2>
+<p>Преходът към зряло платформено инженерство в AI сектора отразява същата еволюция, която облачните технологии преживяха преди десетилетие с навлизането на Kubernetes и Docker. Периодът на хаотични експерименти приключи. Бизнесът вече осъзнава, че суровият езиков модел е просто непредвидим статистически компонент, който изисква строга софтуерна обвивка за контрол на грешките, сигурността и латентността.</p>
+<p>В дългосрочен план компаниите, които изградят солидни вътрешни AI платформи, ще придобият огромно стратегическо предимство. Те ще могат да сменят доставчиците на модели за часове в зависимост от ценовата конюнктура, да гарантират непрекъсваемост на критичните си бизнес процеси и да защитят корпоративните си тайни зад надеждни локални защитни бариери.</p>
+<p><img src="/articles/2026/10/05/platform-engineering-playbook-production-llms/infographic.png" alt="Инфографика: Платформено инженерство за продукционни LLM системи"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/articles/platform-engineering-playbook-production-llms/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ: Article: The Platform Engineering Playbook for Production LLMs</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/semantic-caching.html">Семантично кеширане (Semantic Caching)</a><p>Семантичното кеширане е софтуерен механизъм, който съхранява отговорите на LLM запитвания на база сходство във векторното пространство, а не просто то...</p></li><li><a href="/pages/resiliency.html">Отказоустойчивост на AI архитектури (System Resiliency)</a><p>Отказоустойчивостта на AI архитектури описва способността на софтуерните системи да продължават нормалното си функциониране при сривове в основните AP...</p></li><li><a href="/pages/platform-engineering.html">Платформено инженерство (Platform Engineering)</a><p>Платформеното инженерство е дисциплина, фокусирана върху изграждането и управлението на вътрешни платформи за разработчици (Internal Developer Platfor...</p></li><li><a href="/pages/llmops.html">LLMOps (Large Language Model Operations)</a><p>LLMOps е съвкупност от инженерни практики, инструменти и процеси за оперативно управление на целия жизнен цикъл на големите езикови модели — от фино д...</p></li><li><a href="/pages/inference-optimization.html">Оптимизация на инференса (Inference Optimization)</a><p>Оптимизацията на инференса обхваща техники за намаляване на латентността, повишаване на пропускателната способност и свиване на разходите при изпълнен...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

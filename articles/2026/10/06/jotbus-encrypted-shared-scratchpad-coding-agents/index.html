@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Jotbus
+Платформата Jotbus представи криптографски защитен протокол за споделена работна памет, решаващ проблема с координацията и контекстното синхронизиране при агентно програмиране [1].
+И..."><title>Jotbus разработи криптиран протокол за споделена работна памет между автономни агенти за програмиране - Светни.ме</title><meta property="og:title" content="Jotbus разработи криптиран протокол за споделена работна памет между автономни агенти за програмиране - Светни.ме"><meta property="og:description" content="Снимка: Jotbus
+Платформата Jotbus представи криптографски защитен протокол за споделена работна памет, решаващ проблема с координацията и контекстното синхронизиране при агентно програмиране [1].
+И..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/06/jotbus-encrypted-shared-scratchpad-coding-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/06/jotbus-encrypted-shared-scratchpad-coding-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Jotbus разработи криптиран протокол за споделена работна памет между автономни агенти за програмиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 октомври 2026 г.</p><div><p><img src="/articles/2026/10/06/jotbus-encrypted-shared-scratchpad-coding-agents/hero.png" alt="Jotbus разработи криптиран протокол за споделена работна памет между автономни агенти за програмиране"><br><small>Снимка: Jotbus</small></p>
+<p>Платформата <a href="/pages/jotbus.html">Jotbus</a> представи криптографски защитен протокол за споделена работна памет, решаващ проблема с координацията и контекстното синхронизиране при <a href="/pages/agentic-coding.html">агентно програмиране</a> [1].</p>
+<p><img src="/articles/2026/10/06/jotbus-encrypted-shared-scratchpad-coding-agents/infographic.png" alt="Инфографика за Jotbus разработи криптиран протокол за споделена работна памет между автономни агенти за програмиране"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Криптирана комуникация с нулево знание за агенти</h2>
+<p>При работата на сложни мултиагентни системи няколко модела често оперират едновременно върху общ репозиторий. Без централизирана памет агентите рискуват да презапишат промените си или да изпаднат в безкрайни цикли на корекции. Jotbus осигурява споделен буфер с пълно клиентско <a href="/pages/encryption.html">криптиране</a> (Zero-Knowledge) [1].</p>
+<p>Централният сървър служи единствено като бърз ретранслатор на съобщения и няма достъп до изходния код или токените, предпазвайки интелектуалната собственост на корпоративните екипи.</p>
+<h2>Атомарно синхронизиране и неутралност към доставчиците</h2>
+<p>Протоколът за <a href="/pages/agent-communication.html">комуникация между агенти</a> използва Conflict-Free Replicated Data Types (CRDT), гарантирайки детерминистично сливане на контекста дори при мрежови прекъсвания.</p>
+<p>Jotbus поддържа универсален WebSocket интерфейс, позволяващ на агенти от различни доставчици (като Claude Code, Cursor и персонализирани вътрешни инструменти) да си сътрудничат безпроблемно по общ софтуерен проект в реално време.</p>
+<h2>Архитектурен анализ: Защо споделената памет е липсващото звено на мултиагентните рояци</h2>
+<p>Досегашните опити за координиране на множество кодиращи агенти страдаха от архитектурна фрагментация. Всеки доставчик изграждаше собствен изолиран контекстен прозорец, принуждавайки потребителите да прехвърлят резултати чрез тромави git commit истории или файлови междинни записи. Това създаваше латентност и загуба на ключови междинни разсъждения.</p>
+<p>Въвеждането на криптографски защитена споделена работна памет трансформира агентите от изолирани изпълнители в координиран инженерен рояк. Чрез осигуряване на атомарна истина и нулев достъп до знание за хоста, Jotbus полага основите на индустриална среда, където десетки специализирани модели си взаимодействат безопасно върху критични кодови бази.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://jotbus.com/">Show HN: Jotbus – a shared encrypted scratchpad for coding agents - Hacker News / Jotbus</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/jotbus.html">Jotbus</a><p>Jotbus е протокол и защитена облачна платформа за споделена криптирана работна памет (scratchpad) между автономни кодиращи агенти и софтуерни инструме...</p></li><li><a href="/pages/encryption.html">Криптиране (Encryption)</a><p>Криптирането е процес на преобразуване на информация в код за предотвратяване на неоторизиран достъп.</p></li><li><a href="/pages/agentic-coding.html">Агентно програмиране (Agentic Coding)</a><p>Агентното програмиране (Agentic Coding) е дисциплина за разработка на софтуер, при която автономни асистенти пишат, компилират, тестват и рефакторират...</p></li><li><a href="/pages/agent-communication.html">Комуникация между агенти (Agent-to-Agent Communication / A2A)</a><p>Комуникацията между агенти (Agent-to-Agent Communication) включва мрежови протоколи, формати за обмен на съобщения и механизми за синхронизация, позво...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

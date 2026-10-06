@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: TechCrunch / Getty Images
+Независими изследователи по киберсигурност разкриха съществуването на мащабна и високоефективна „агентна флотилия“ от изкуствен интелект, действаща на територията ..."><title>Изследователи разкриха координирана китайска агентна флотилия, атакуваща картографски API платформи - Светни.ме</title><meta property="og:title" content="Изследователи разкриха координирана китайска агентна флотилия, атакуваща картографски API платформи - Светни.ме"><meta property="og:description" content="Снимка: TechCrunch / Getty Images
+Независими изследователи по киберсигурност разкриха съществуването на мащабна и високоефективна „агентна флотилия“ от изкуствен интелект, действаща на територията ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/05/security-researchers-track-chinese-ai-agent-fleet/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/05/security-researchers-track-chinese-ai-agent-fleet/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изследователи разкриха координирана китайска агентна флотилия, атакуваща картографски API платформи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 октомври 2026 г.</p><div><p><img src="/articles/2026/10/05/security-researchers-track-chinese-ai-agent-fleet/hero.png" alt="Киберсигурност и сървърна инфраструктура в Азия"><br><small>Снимка: TechCrunch / Getty Images</small></p>
+<p>Независими изследователи по <a href="/pages/cybersecurity.html">киберсигурност</a> разкриха съществуването на мащабна и високоефективна „агентна флотилия“ от изкуствен интелект, действаща на територията на Китай [1]. Анализът показва, че координираният софтуерен рояк оперира върху виртуални мощности в облака на <a href="/pages/tencent.html">Tencent</a> и целенасочено експлоатира картографската и навигационна услуга Amap, собственост на корпоративния конкурент <a href="/pages/alibaba.html">Alibaba</a>.</p>
+<p>За разлика от класическите ботнети, които следват предварително компилирани скриптове за отказ на услуга (DDoS), засечената мрежа се състои от напълно автономни <a href="/pages/ai-agents.html">софтуерни агенти</a>. Те използват малки локални езикови модели за адаптивно решаване на CAPTCHA тестове, симулиране на човешко поведение и извличане на терабайти високоточни пространствени и географски данни в реално време.</p>
+<h2>Мрежова топология и тактика на рояка</h2>
+<p>Техническият доклад описва сложна децентрализирана йерархия от тип „майка-работник“. Главен оркестриращ агент разпределя географски сектори и координати на хиляди подчинени възли. Всеки отделен агент от <a href="/pages/agentic-swarms.html">агентния рояк</a> анализира получените картографски слоеве, извлича метаданни за пътна инфраструктура, бизнеси и трафик, след което ги компресира и изпраща към централизирани бази данни.</p>
+<p>За да избегнат засичане от системите за сигурност на Alibaba, агентите динамично променят заглавните части на заявките, симулират паузи за човешко четене и използват мрежа от ротиращи прокси сървъри. Когато даден IP адрес бъде блокиран, агентът автоматично се преконфигурира и докладва на рояка за настъпилата промяна в защитната политика на мишената.</p>
+<p>Особено тревожен факт е, че флотилията е използвала редовни корпоративни акаунти и изчислителни кредити в облачната инфраструктура на Tencent, което е затруднило първоначалното идентифициране на злонамерената дейност от администраторите.</p>
+<h2>Корпоративен шпионаж и пространствени данни за роботика</h2>
+<p>Мотивите зад операцията изглежда са пряко свързани с надпреварата в автономното шофиране и пространствения изкуствен интелект в Китай. Високоточните картографски данни са най-дефицитният и ценен ресурс за обучение на модели за роботизирана навигация. Чрез организирането на невидима агентна кампания, операторите на флотилията на практика са източвали години инвестиции на Alibaba в геодезическо картографиране.</p>
+<p>След сигнала от изследователите, Alibaba внедри нови системи за поведенческа детекция, а екипът по сигурност на Tencent предприе изолиране на компрометираните контейнери. Случаят обаче демонстрира колко лесно вътрешните корпоративни вражди могат да прераснат в автоматизирана кибервойна.</p>
+<h2>Дългосрочни системни и архитектурни трансформации</h2>
+<p>Разкриването на китайската агентна флотилия е ярко доказателство за качествената мутация на киберзаплахите в ерата на изкуствения интелект. Досега защитните системи се проектираха с презумпцията, че нападателят или следва повтарящи се твърди алгоритми, или е човек с ограничено време и внимание. Автономните агентни рояци съчетават мащаба на машината с гъвкавостта на човешкия хакер.</p>
+<p>В дългосрочен план защитата на уеб приложенията и API услугите ще изисква изоставяне на традиционните филтри в полза на криптографски доказателства за идентичност и непрекъснато семантично валидиране. Когато всеки евтин сървърен клъстер може да поддържа армия от хиляди интелигентни агенти, самата концепция за отворени публични API интерфейси ще бъде принудена да се преосмисли, ускорявайки капсулирането на корпоративните екосистеми.</p>
+<p><img src="/articles/2026/10/05/security-researchers-track-chinese-ai-agent-fleet/infographic.png" alt="Инфографика: Архитектура на китайската агентна флотилия"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/">TechCrunch: Researchers are tracking a Chinese AI ‘agent fleet’</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tencent.html">Tencent</a><p>Tencent е водещ интернет и технологичен гигант, базиран в Шенжен, Китай.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/agentic-swarms.html">Агентни рояци (Agentic Swarms)</a><p>Агентните рояци са координирани мрежи от множество специализирани AI агенти, които комуникират помежду си чрез стандартизирани протоколи за изпълнение...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

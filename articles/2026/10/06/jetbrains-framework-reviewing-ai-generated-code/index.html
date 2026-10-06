@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: JetBrains Research
+Изследователският отдел на JetBrains публикува задълбочена практическа методология за софтуерно инженерство, насочена към систематичното ревю на код, създаден с помощта н..."><title>JetBrains публикува рамка за структурирано рецензиране на генериран от изкуствен интелект код - Светни.ме</title><meta property="og:title" content="JetBrains публикува рамка за структурирано рецензиране на генериран от изкуствен интелект код - Светни.ме"><meta property="og:description" content="Снимка: JetBrains Research
+Изследователският отдел на JetBrains публикува задълбочена практическа методология за софтуерно инженерство, насочена към систематичното ревю на код, създаден с помощта н..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/06/jetbrains-framework-reviewing-ai-generated-code/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/06/jetbrains-framework-reviewing-ai-generated-code/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>JetBrains публикува рамка за структурирано рецензиране на генериран от изкуствен интелект код</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 октомври 2026 г.</p><div><p><img src="/articles/2026/10/06/jetbrains-framework-reviewing-ai-generated-code/hero.png" alt="JetBrains публикува рамка за структурирано рецензиране на генериран от изкуствен интелект код"><br><small>Снимка: JetBrains Research</small></p>
+<p>Изследователският отдел на <a href="/pages/jetbrains.html">JetBrains</a> публикува задълбочена практическа методология за <a href="/pages/software-engineering.html">софтуерно инженерство</a>, насочена към систематичното <a href="/pages/code-review.html">ревю на код</a>, създаден с помощта на изкуствен интелект [1].</p>
+<p><img src="/articles/2026/10/06/jetbrains-framework-reviewing-ai-generated-code/infographic.png" alt="Инфографика за JetBrains публикува рамка за структурирано рецензиране на генериран от изкуствен интелект код"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Капанът на правдоподобността и когнитивното отклонение</h2>
+<p>Изследването на JetBrains показва, че основното предизвикателство при прегледа на синтезиран код е неговата повърхностна безупречност. Моделите генерират синтактично елегантен и форматиран според стандартите код, който лесно подлъгва проверяващия програмист да пропусне дълбоки семантични дефекти [1].</p>
+<p>За да противодейства на този ефект, рамката предлага тристепенен процес: верификация на първоначалното инженерно намерение, автоматизиран <a href="/pages/static-analysis.html">статичен анализ</a> за гранични условия и задължителни тестове за свойства (property-based testing).</p>
+<h2>Визуално проследяване на произхода в средата за разработка</h2>
+<p>Методологията ще бъде директно интегрирана в следващите версии на водещите IDE платформи на компанията. Инструментите ще визуализират точния произход на всеки ред — дали е написан ръчно от човек, модифициран от асистент или изцяло синтезиран автономен блок.</p>
+<p>Този визуален контекст помага на инженерите да разпределят когнитивното си внимание към критичните точки на риск и предотвратява сливането на невалидиран код в основните клонове на проектите.</p>
+<h2>Методологичен анализ: Новата роля на програмиста като верификатор на истината</h2>
+<p>Рамката на JetBrains формализира фундаменталната трансформация в професията на софтуерния разработчик. В продължение на десетилетия основната ценност на инженера бе способността му да превежда бизнес логика в конкретни синтактични конструкции. Днес, когато писането на код се превръща в евтина суровина, водещата инженерна дисциплина става критичното рецензиране и формалната верификация.</p>
+<p>Без строги процеси за одит, експоненциалното генериране на код води до неуправляем технически дълг, който заплашва да задръсти корпоративните системи. Инициативата на JetBrains поставя стандартите за бъдещето на софтуерното инженерство — свят, в който качеството не се измерва със скоростта на писане, а със строгостта на защитните механизми за проверка на коректността.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://blog.jetbrains.com/research/2026/10/review-ai-generated/">Our Framework for Reviewing AI-Generated Code - The JetBrains Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/code-review.html">Ревю на код (Code Review)</a><p>Ревюто на код е фундаментална инженерна практика за систематична партньорска проверка на промени в изходния код преди тяхното интегриране в основния к...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: GitHub / FeSens
+Проектът с отворен код OpenTPU реализира качествен пробив в автоматизацията на проектирането на полупроводников хардуер, демонстрирайки как големи езикови модели могат автон..."><title>Проектът OpenTPU демонстрира автономен синтез на хардуерни ускорители за изводи чрез езикови модели - Светни.ме</title><meta property="og:title" content="Проектът OpenTPU демонстрира автономен синтез на хардуерни ускорители за изводи чрез езикови модели - Светни.ме"><meta property="og:description" content="Снимка: GitHub / FeSens
+Проектът с отворен код OpenTPU реализира качествен пробив в автоматизацията на проектирането на полупроводников хардуер, демонстрирайки как големи езикови модели могат автон..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/06/opentpu-ai-automated-inference-hardware-design-rtl/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/06/opentpu-ai-automated-inference-hardware-design-rtl/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Проектът OpenTPU демонстрира автономен синтез на хардуерни ускорители за изводи чрез езикови модели</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 октомври 2026 г.</p><div><p><img src="/articles/2026/10/06/opentpu-ai-automated-inference-hardware-design-rtl/hero.png" alt="Проектът OpenTPU демонстрира автономен синтез на хардуерни ускорители за изводи чрез езикови модели"><br><small>Снимка: GitHub / FeSens</small></p>
+<p>Проектът с отворен код <a href="/pages/opentpu.html">OpenTPU</a> реализира качествен пробив в автоматизацията на <a href="/pages/hardware-design.html">проектирането на полупроводников хардуер</a>, демонстрирайки как големи езикови модели могат автономно да синтезират коректна микроархитектура за невронни изводи [1].</p>
+<p><img src="/articles/2026/10/06/opentpu-ai-automated-inference-hardware-design-rtl/infographic.png" alt="Инфографика за Проектът OpenTPU демонстрира автономен синтез на хардуерни ускорители за изводи чрез езикови модели"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Автономен синтез на систолични матрици във Verilog</h2>
+<p>Платформата използва верига от специализирани агенти, които приемат функционални математически изисквания за тензорни изчисления и генерират пълен набор от модули на хардуерния език <a href="/pages/verilog.html">Verilog</a> [1].</p>
+<p>Генерираният код обхваща систолични матрици за умножение на матрици, междинни буфери за памет и контролери за данни, необходими за изграждането на функционален <a href="/pages/tpu.html">TPU</a> ускорител. Всяка стъпка се валидира от автоматизиран симулационен тестов стенд (testbench), който улавя грешки в логическия синтез и връща обратна връзка за самокоригиране.</p>
+<h2>Съкращаване на цикъла за разработка от месеци на часове</h2>
+<p>Традиционният процес по създаване на специализирани интегрални схеми (ASIC) изисква големи екипи от инженери по цифрова схемотехника и отнема между 12 и 18 месеца. OpenTPU съкращава фазата на първоначално RTL прототипиране до броени часове.</p>
+<p>Проектът поддържа модерни формати с ниска точност като FP8 и INT4, позволявайки бързо експериментиране с нестандартни аритметични блокове, съобразени с конкретни невронни архитектури.</p>
+<h2>Инженерен анализ: Пресичането на алгоритмите със собствения им силиций</h2>
+<p>Възможността на изкуствения интелект да проектира своя собствен физически хардуер затваря един от най-интригуващите цикли на самоусъвършенстване в компютърните науки. Досега напредъкът на невронните мрежи бе пряко следствие от силициевия напредък, движен от човешки инженери по закона на Мур. С OpenTPU самите алгоритми започват да диктуват и оптимизират физическата схемотехника.</p>
+<p>Това открива пътя към свръхспециализирани процесори (Application-Specific Silicon), съобразени не с широк клас задачи, а с конкретен модел или корпоративен работен поток. Демократизацията на EDA процесите чрез отворен код и ИИ ще намали драстично бариерите за навлизане на малки стартъпи в полупроводниковата индустрия.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/FeSens/openTPU">AI is now capable of developing its own inference hardware - OpenTPU / GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/verilog.html">Verilog</a><p>Verilog е стандартизиран език за описание на хардуер (Hardware Description Language - HDL), използван за моделиране, симулация и синтез на електронни ...</p></li><li><a href="/pages/tpu.html">TPU (Tensor Processing Unit)</a><p>TPU (Tensor Processing Unit) е специализиран интегрален модул (ASIC), разработен от Google специално за ускоряване на натоварвания с изкуствен интелек...</p></li><li><a href="/pages/opentpu.html">OpenTPU</a><p>OpenTPU е проект с отворен код за автоматизирано проектиране на хардуерни ускорители за невронни мрежи, базиран на съвместна работа между големи езико...</p></li><li><a href="/pages/hardware-design.html">Проектиране на полупроводников хардуер (Hardware Design / EDA)</a><p>Проектирането на полупроводников хардуер (Hardware Design) обхваща инженерните процеси по създаване на микроархитектура, логически синтез, физическо п...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
