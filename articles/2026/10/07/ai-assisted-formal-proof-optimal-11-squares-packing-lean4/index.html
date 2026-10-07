@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Jérémy Barande
+В забележителен пробив на пресечната точка между дискретната геометрия и компютърните науки, международен изследователски екип обяви цялостно, машинно про..."><title>Формално математическо доказателство в Lean 4 за оптимално опаковане на 11 квадрата - Светни.ме</title><meta property="og:title" content="Формално математическо доказателство в Lean 4 за оптимално опаковане на 11 квадрата - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Jérémy Barande
+В забележителен пробив на пресечната точка между дискретната геометрия и компютърните науки, международен изследователски екип обяви цялостно, машинно про..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/07/ai-assisted-formal-proof-optimal-11-squares-packing-lean4/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/07/ai-assisted-formal-proof-optimal-11-squares-packing-lean4/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Формално математическо доказателство в Lean 4 за оптимално опаковане на 11 квадрата</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 октомври 2026 г.</p><div><p><img src="/articles/2026/10/07/ai-assisted-formal-proof-optimal-11-squares-packing-lean4/hero.png" alt="Формално математическо доказателство в Lean 4 за оптимално опаковане на 11 квадрата"><br><small>Снимка: Wikimedia Commons / Jérémy Barande</small></p>
+<p>В забележителен пробив на пресечната точка между дискретната геометрия и компютърните науки, международен изследователски екип обяви цялостно, машинно проверено доказателство на езика <a href="/pages/lean-4.html">Lean 4</a> за оптималното опаковане на 11 единични квадрата в квадратен контейнер [1].</p>
+<p>Проблемът, формулиран преди десетилетия от математика Пол Ердьош и редица геометрии, оставаше нерешен за случая с $n=11$ поради изключително сложните непрекъснати ротации и неконвексни пространства от възможни състояния. Чрез комбиниране на невронни евристики и интервална аритметика екипът успя да сведе безкрайното пространство от конфигурации до формално доказателство, валидирано от ядрото на Lean [1].</p>
+<p><img src="/articles/2026/10/07/ai-assisted-formal-proof-optimal-11-squares-packing-lean4/infographic.png" alt="Инфографика за Формално математическо доказателство в Lean 4 за оптимално опаковане на 11 квадрата"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Преодоляване на непрекъснатото търсене чрез интервални клонове</h2>
+<p>В <a href="/pages/mathematics.html">математиката</a> опаковането на квадрати е значително по-трудно от опаковането на окръжности, тъй като всеки квадрат притежава ориентация (ъгъл на завъртане). За $n=11$ най-добрата известна конфигурация имаше страна на контейнера от приблизително 3.87708 единици, но никой не бе успял да докаже аналитично, че не съществува по-плътно разположение [1].</p>
+<p>Изследователите разработиха хибридна система: невронна мрежа предлагаше критичните точки и конфигурационни ограничения, докато алгоритъм тип branch-and-bound систематично разделяше пространството от ъгли и координати на малки кубове. Всеки сектор се валидираше чрез строги неравенства в реалните числа, формализирани в Lean 4, изключвайки възможността за съществуване на по-добро решение в областта на <a href="/pages/geometric-optimization.html">геометричната оптимизация</a>.</p>
+<h2>Триумф на формалната верификация</h2>
+<p>Значението на този резултат надхвърля конкретната задача за 11-те квадрата. В миналото компютърно подпомагани доказателства (като това за проблема с четирите цвята или хипотезата на Кеплер) бяха посрещани със скептицизъм от математическата общност, тъй като изискваха хиляди редове непроверени C++ скриптове.</p>
+<p>С използването на <a href="/pages/formal-verification.html">формална верификация</a> целият математически апарат е кодиран в теория на типовете, където проверката се извършва от малко и независимо ядро. Ако Lean 4 приеме доказателството, вероятността за грешка е сведена до нула.</p>
+<h2>Дълбок технически анализ: От геометрични загадки към автоматизирано проектиране на микрочипове</h2>
+<p>Макар опаковането на квадрати да звучи като абстрактна математическа главоблъсканица, зад него стоят колосални индустриални приложения. Същият математически апарат управлява топологичното проектиране на интегрални схеми (VLSI floorplanning), където милиарди транзисторни блокове и макроси трябва да бъдат разположени върху кремъчната пластина с минимално празно пространство и оптимална дължина на проводниците.</p>
+<p>Победата на машинно асистираното доказателство в Lean 4 доказва, че формалните верификатори са узрели за решаване на задачи от реалния свят. Вместо да разчитат на непълни приближения и евристики, инженерите на бъдещето ще могат да използват AI системи, които не просто проектират сложни хардуерни оформления или логистични контейнери, но и предоставят математически сертифицирана гаранция, че решението е теоретично неподобримо.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/Queuingtheorydotcom/11SquaresFormalized">AI-assisted proof of optimal packing for 11 squares - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mathematics.html">Математика</a><p>Математиката е фундаментална наука за числата, структурите, пространствата и зависимостите, която служи като теоретична основа за компютърните науки, ...</p></li><li><a href="/pages/lean-4.html">Lean 4</a><p>Lean 4 е съвременен интерактивен инструмент за доказване на теореми и функционален програмен език, разработен под ръководството на Леонардо де Моура в...</p></li><li><a href="/pages/geometric-optimization.html">Геометрична оптимизация (Geometric Optimization)</a><p>Геометричната оптимизация е математическа дисциплина, изследваща екстремални конфигурации, разположения и опаковане на обекти в пространството при стр...</p></li><li><a href="/pages/formal-verification.html">Формална верификация (Formal Verification)</a><p>Формалната верификация (Formal Verification) е математически метод за строго доказване на коректността на алгоритми, софтуерни програми или хардуерни ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

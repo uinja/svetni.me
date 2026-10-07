@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Cloudflare
+Инженерният екип на Cloudflare разкри детайли за новата си вътрешна платформа за непрекъснато симулиране на кибератаки, която използва фронтир езикови модели за автоматиз..."><title>Cloudflare внедри състезателен AI тестови пакет за автономно тестване на WAF защитата - Светни.ме</title><meta property="og:title" content="Cloudflare внедри състезателен AI тестови пакет за автономно тестване на WAF защитата - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Cloudflare
+Инженерният екип на Cloudflare разкри детайли за новата си вътрешна платформа за непрекъснато симулиране на кибератаки, която използва фронтир езикови модели за автоматиз..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/07/cloudflare-deploys-ai-adversarial-harness-harden-waf/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/07/cloudflare-deploys-ai-adversarial-harness-harden-waf/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare внедри състезателен AI тестови пакет за автономно тестване на WAF защитата</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 октомври 2026 г.</p><div><p><img src="/articles/2026/10/07/cloudflare-deploys-ai-adversarial-harness-harden-waf/hero.png" alt="Cloudflare внедри състезателен AI тестови пакет за автономно тестване на WAF защитата"><br><small>Снимка: InfoQ / Cloudflare</small></p>
+<p>Инженерният екип на <a href="/pages/cloudflare.html">Cloudflare</a> разкри детайли за новата си вътрешна платформа за непрекъснато симулиране на кибератаки, която използва фронтир езикови модели за автоматизирано сондиране и закаляване на фирмената защитна стена за уеб приложения (<a href="/pages/waf.html">WAF</a>) [1].</p>
+<p>Платформата поставя езиковите модели в напълно изолиран състезателен тестов пакет (testing harness). Системата взема реални блокирани от защитната стена злонамерени заявки и ги подава като изходни точки на модела, инструктирайки го автономно да генерира и рафинира нови синтактични мутации, докато успее да заобиколи филтрите [1].</p>
+<p><img src="/articles/2026/10/07/cloudflare-deploys-ai-adversarial-harness-harden-waf/infographic.png" alt="Инфографика за Cloudflare внедри състезателен AI тестови пакет за автономно тестване на WAF защитата"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Автономна еволюция на експлойти срещу правилата за филтриране</h2>
+<p>Традиционните инструменти за фазинг (fuzzing) разчитат на случайни байтови мутации или прости речникарни правила, които рядко откриват сложни логически пропуски в парсърите на приложния слой. Използването на съвременни разсъждаващи модели превръща процеса по <a href="/pages/red-teaming.html">червено тестване (red-teaming)</a> в целенасочено инженерно изследване [1].</p>
+<p>Моделът разбира контекста на SQL синтаксиса, манипулирането на Unicode символи и спецификите на HTTP протокола. Когато дадена заявка бъде отхвърлена, моделът анализира кода на грешката и експериментира с двойно кодиране (double URL encoding), разделяне на заявки (request smuggling) или алтернативни SQL функции. В сферата на <a href="/pages/cybersecurity.html">киберсигурността</a> това позволява да се откриват слабости, които никой човешки анализатор не би предвидил.</p>
+<h2>Незабавно синтезиране на защитни правила</h2>
+<p>Най-голямото предимство на платформата е затварянето на цикъла между нападение и защита. Веднага щом моделът открие валиден вектор за байпас, системата генерира автоматизиран доклад с минималния тестов вектор и синтезира ново правило за WAF защитната стена.</p>
+<p>Това правило се валидира срещу легитимен исторически трафик, за да се гарантира липсата на фалшиви положителни резултати, и се разпространява глобално в мрежата на Cloudflare за броени минути.</p>
+<h2>Дълбок технически анализ: Възходът на автоматизираната ко-еволюционна киберзащита</h2>
+<p>Експериментът на Cloudflare илюстрира фундаментална промяна в динамиката на сигурността на глобалния интернет. Досега разработчиците на защитни стени се намираха в непрекъсната позиция на изоставащи: нападател открива нова техника в реални условия, нанася щети, публикува експлойт и едва след това защитниците пишат ново правило.</p>
+<p>Чрез вграждането на разсъждаващи модели в автоматизиран състезателен цикъл, защитниците за първи път започват да изпреварват престъпниците. Тестовият пакет генерира хиляди вариации на атаки много преди те да бъдат измислени от хакерите в дивата природа. Този процес на изкуствена еволюция на софтуерния имунитет ще се превърне в задължителен стандарт за всяка критична мрежова инфраструктура, оставяйки архаичните ръчни одити на сигурността в историята.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/10/cloudflare-sec-harness/">Cloudflare Uses an AI Harness to Probe and Harden Its WAF - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/waf.html">WAF (Web Application Firewall)</a><p>WAF (Web Application Firewall) е специализирана защитна стена за уеб приложения, която анализира, филтрира и блокира злонамерен HTTP и HTTPS трафик ме...</p></li><li><a href="/pages/red-teaming.html">Ред тийминг</a><p>Ред тиймингът (Red-teaming) е систематичен процес на симулиране на противникови атаки срещу системи с изкуствен интелект (ИИ) с цел идентифициране на ...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

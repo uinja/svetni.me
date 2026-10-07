@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / OpenAI
+Лабораторията OpenAI представи новия си специализиран програмен интерфейс Decisions API, проектиран да изпълнява задачи по категоризация, бинарен избор и точкова оценка..."><title>OpenAI представи Decisions API: Десет пъти по-бърза структурирана класификация - Светни.ме</title><meta property="og:title" content="OpenAI представи Decisions API: Десет пъти по-бърза структурирана класификация - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / OpenAI
+Лабораторията OpenAI представи новия си специализиран програмен интерфейс Decisions API, проектиран да изпълнява задачи по категоризация, бинарен избор и точкова оценка..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/07/openai-launches-decisions-api-fast-structured-classification/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/07/openai-launches-decisions-api-fast-structured-classification/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI представи Decisions API: Десет пъти по-бърза структурирана класификация</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 октомври 2026 г.</p><div><p><img src="/articles/2026/10/07/openai-launches-decisions-api-fast-structured-classification/hero.png" alt="OpenAI представи Decisions API: Десет пъти по-бърза структурирана класификация"><br><small>Снимка: The Decoder / OpenAI</small></p>
+<p>Лабораторията <a href="/pages/openai.html">OpenAI</a> представи новия си специализиран програмен интерфейс Decisions API, проектиран да изпълнява задачи по категоризация, бинарен избор и точкова оценка приблизително десет пъти по-бързо от стандартния ендпойнт за текстово генериране [1].</p>
+<p>Услугата се предлага на агресивната цена от едва $0.10 на милион входни токена и е оптимизирана за сценарии, в които не е необходим дълъг авторегресивен текст, а директно структурирано решение с калибрирани вероятности [1]. Едновременно с това компанията опрости структурата на платените си потребителски нива, съкращавайки ги от пет на три.</p>
+<p><img src="/articles/2026/10/07/openai-launches-decisions-api-fast-structured-classification/infographic.png" alt="Инфографика за OpenAI представи Decisions API: Десет пъти по-бърза структурирана класификация"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектурно премахване на цикъла за авторегресивно декодиране</h2>
+<p>В традиционните езикови модели всяка задача за класификация изисква моделът да генерира отговор дума по дума през пълен декодиращ цикъл, което натрупва латентност и изисква сложни техники за парсване на JSON изхода. При новия <a href="/pages/api.html">API</a> ендпойнт изчислението спира непосредствено след първия прав проход (forward pass) през невронната мрежа [1].</p>
+<p>Чрез директно извличане на логаритмичните вероятности (logits) от изходния слой за предварително дефинирани токени (като „Да/Не“ или категории от списък), процесът по <a href="/pages/inference.html">изпълнение на модела (inference)</a> постига латентност под 50 милисекунди. Това го прави идеален за високочестотни бекенд конвейери.</p>
+<h2>Оптимизация за рутиране на агенти и филтриране</h2>
+<p>Основното практическо приложение на новия интерфейс е в сферата на <a href="/pages/content-moderation.html">модерацията на съдържание</a> и агентното рутиране. При сложни системи с автономни агенти всяко междинно решение — например дали да се извика външен инструмент, дали потребителят е одобрил транзакция или дали входният текст съдържа уязвим код — може да се валидира за части от стотинката.</p>
+<p>Така инженерите могат да изолират скъпите разсъждаващи модели единствено за сложни задачи, докато входният контрол се поема от светкавичния Decisions API.</p>
+<h2>Дълбок технически анализ: Деконструкцията на генеративния стек в полза на дискретни примитиви</h2>
+<p>Появата на Decisions API бележи важна еволюционна стъпка в архитектурата на генеративния AI. През първите години на бума лабораториите се опитваха да използват един общ авторегресивен модел за абсолютно всичко — от писане на поезия до проверка дали даден низ е валиден имейл адрес. Тази унификация бе елегантна, но чудовищно неефективна от гледна точка на изчислителна мощност и латентност.</p>
+<p>Разделянето на генеративните задачи от дискретните решения възстановява баланса в изчислителния стек. Чрез връщане към примитиви за бързо вероятностно класифициране, OpenAI предоставя на системните архитекти липсващия строителен блок: детерминистичен, нисколатентен превключвател. В бъдещите агентни оркестрации решенията от този тип ще играят ролята на условни преходи в машинния код (branch instructions), насочвайки потока на управление между специализирани невронни модули с максимална енергийна ефективност.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/">OpenAI launches Decisions API that reduces complex evaluations to yes, no, or pick one - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/inference.html">Инференция</a><p>Инференция (Inference) е процесът на използване на вече обучен модел с изкуствен интелект за генериране на прогнози или извеждане на заключения от нов...</p></li><li><a href="/pages/content-moderation.html">Модерация на съдържание (Content Moderation)</a><p>Модерацията на съдържание е процесът на преглед, класификация и филтриране на потребителски генерирани текстове, изображения и видеоклипове с цел спаз...</p></li><li><a href="/pages/api.html">API</a><p>API (Application Programming Interface или приложно-програмен интерфейс) е набор от дефинирани правила, протоколи и инструменти, които позволяват на р...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

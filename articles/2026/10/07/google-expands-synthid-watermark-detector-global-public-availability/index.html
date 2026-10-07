@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Ars Technica / Google DeepMind
+Корпорацията Google и нейната изследователска дивизия Google DeepMind обявиха пускането на публичен уеб портал и отворен програмен интерфейс за своя усъвършен..."><title>Google разшири глобалния достъп до детектора за AI водно маркиране SynthID - Светни.ме</title><meta property="og:title" content="Google разшири глобалния достъп до детектора за AI водно маркиране SynthID - Светни.ме"><meta property="og:description" content="Снимка: Ars Technica / Google DeepMind
+Корпорацията Google и нейната изследователска дивизия Google DeepMind обявиха пускането на публичен уеб портал и отворен програмен интерфейс за своя усъвършен..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/07/google-expands-synthid-watermark-detector-global-public-availability/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/07/google-expands-synthid-watermark-detector-global-public-availability/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google разшири глобалния достъп до детектора за AI водно маркиране SynthID</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 октомври 2026 г.</p><div><p><img src="/articles/2026/10/07/google-expands-synthid-watermark-detector-global-public-availability/hero.png" alt="Google разшири глобалния достъп до детектора за AI водно маркиране SynthID"><br><small>Снимка: Ars Technica / Google DeepMind</small></p>
+<p>Корпорацията <a href="/pages/google.html">Google</a> и нейната изследователска дивизия <a href="/pages/google-deepmind.html">Google DeepMind</a> обявиха пускането на публичен уеб портал и отворен програмен интерфейс за своя усъвършенстван детектор на синтетично съдържание <a href="/pages/synthid.html">SynthID</a> [1].</p>
+<p>Технологията, която досега се прилагаше пасивно към съдържанието, генерирано от моделите Gemini, Imagen и Lyria, вече е достъпна за директно тестване от журналисти, академични изследователи и крайни потребители от цял свят, позволявайки мигновена проверка за наличие на скрити цифрови знаци [1].</p>
+<p><img src="/articles/2026/10/07/google-expands-synthid-watermark-detector-global-public-availability/infographic.png" alt="Инфографика за Google разшири глобалния достъп до детектора за AI водно маркиране SynthID"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Мултимодално криптографско маркиране без деградация</h2>
+<p>Ключовото инженерно предимство на SynthID е, че процесът по <a href="/pages/watermarking.html">водно маркиране (watermarking)</a> не компрометира качеството на генерирания файл [1]. При изображенията водното маркиране манипулира фини субпикселни спектрални честоти, невидими за човешкото око, но лесно разпознаваеми от специализиран конволюционен скенер дори след агресивно компресиране в JPEG, изрязване или промяна на цветовете.</p>
+<p>При текстовите модели алгоритъмът вмъква псевдослучайни статистически отмествания в вероятностното разпределение на избираните токени („зелени списъци“). Това позволява на детектора да открие синтетичен текст с математическа категоричност при анализиране на пасаж от едва стотина думи, дори ако текстът е преминал през леко перифразиране.</p>
+<h2>Съответствие с Европейския регламент за AI</h2>
+<p>Публичното разгръщане на SynthID е директен отговор на регулаторните изисквания в Европейския съюз, където Европейският регламент за изкуствен интелект (EU AI Act) задължава платформите да обозначават ясно генерираното мултимедийно съдържание и дийпфейковете.</p>
+<p>Чрез превръщането на детекцията в достъпна обществена услуга, Google цели да наложи своя протокол като индустриален де факто стандарт за онлайн автентичност, привличайки за партньори медийни корпорации и социални мрежи.</p>
+<h2>Дълбок технически анализ: Битката между статистическите водни знаци и моделния колапс</h2>
+<p>Отварянето на SynthID бележи нов етап в критичната битка за дигитална хигиена на глобалната мрежа. През последните години интернет бе залят от немаркирано синтетично съдържание, което доведе до опасния феномен „моделен колапс“ (model collapse) — деградация на новите поколения невронни мрежи, когато се обучават върху синтетични данни от своите предшественици.</p>
+<p>Възможността за надеждна, високопроизводителна детекция на AI артефакти е спасителен пояс не само за потребителите, опитващи се да разпознаят дезинформация, но и за самите търсачки и уеб обхождащи роботи (crawlers). За да бъде защитата наистина работеща обаче, индустрията се нуждае от отворен, криптографски съвместим стандарт. Докато всеки технологичен гигант поддържа собствен затворен воден знак, сигурността на цифровото пространство ще остане фрагментирана.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://arstechnica.com/ai/2026/10/google-rolls-out-improved-synthid-ai-content-detector-now-available-globally/">Google rolls out improved SynthID AI content detector, now available globally - Ars Technica</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/watermarking.html">Водно маркиране на AI съдържание (Watermarking)</a><p>Водното маркиране на AI съдържание е криптографска и статистическа техника за вграждане на невидими метаданни или статистически сигнали в генериран те...</p></li><li><a href="/pages/synthid.html">Google DeepMind SynthID</a><p>SynthID е технология за вграждане на водни знаци в съдържание, генерирано от модели с изкуствен интелект.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/google-deepmind.html">Google DeepMind</a><p>Google DeepMind е подразделението за изкуствен интелект на Google (Alphabet), създадено след сливането на лондонската лаборатория DeepMind и Google Br...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
