@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Zenity Labs / The Decoder
+Изследователите по киберсигурност от лабораторията Zenity демонстрираха критична архитектурна уязвимост в платформата за корпоративни агенти на AWS [1]. 
+Чрез експ..."><title>Изследователи от Zenity: Един промпт е достатъчен за компрометиране на всички AI агенти в AWS акаунт - Светни.ме</title><meta property="og:title" content="Изследователи от Zenity: Един промпт е достатъчен за компрометиране на всички AI агенти в AWS акаунт - Светни.ме"><meta property="og:description" content="Снимка: Zenity Labs / The Decoder
+Изследователите по киберсигурност от лабораторията Zenity демонстрираха критична архитектурна уязвимост в платформата за корпоративни агенти на AWS [1]. 
+Чрез експ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/08/zenity-research-single-prompt-hijacks-ai-agents-aws-account/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/08/zenity-research-single-prompt-hijacks-ai-agents-aws-account/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изследователи от Zenity: Един промпт е достатъчен за компрометиране на всички AI агенти в AWS акаунт</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 октомври 2026 г.</p><div><p><img src="/articles/2026/10/08/zenity-research-single-prompt-hijacks-ai-agents-aws-account/hero.png" alt="Изследователи от Zenity: Един промпт е достатъчен за компрометиране на всички AI агенти в AWS акаунт"><br><small>Снимка: Zenity Labs / The Decoder</small></p>
+<p>Изследователите по киберсигурност от лабораторията <a href="/pages/zenity.html">Zenity</a> демонстрираха критична архитектурна уязвимост в платформата за корпоративни агенти на <a href="/pages/aws.html">AWS</a> [1]. </p>
+<p>Чрез експлоатация на единичен публично достъпен агент, управляван през <a href="/pages/amazon-bedrock.html">Amazon Bedrock</a> AgentCore, атаката позволява пълен контрол над всички агенти в същия облачен акаунт и географски регион [1].</p>
+<p><img src="/articles/2026/10/08/zenity-research-single-prompt-hijacks-ai-agents-aws-account/infographic.png" alt="Инфографика за компрометирането на AI агенти в AWS"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Механизъм на инжекцията и извличане на облачни метаданни</h2>
+<p>В основата на пробива стои класическа индиректна <a href="/pages/prompt-injection.html">промпт инжекция</a>, която обаче ескалира до системно ниво чрез недостатъчно изолирана мрежова конфигурация на агентната среда. Когато атакуващият изпрати злонамерен текст към публичния помощен чатбот, моделът бива подведен да извика вътрешен мрежов инструмент, насочен към локалния AWS интерфейс за метаданни (IMDS).</p>
+<p>Тъй като средата за изпълнение на агента е споделяла стандартни мрежови маршрути, агентът безпрепятствено извлича временни токени за сигурност на свързаната IAM роля. Тези идентификатори притежават свръхшироки права за четене и запис в конфигурациите на останалите агенти в организацията.</p>
+<h2>Странично придвижване и заразяване на съседни работни потоци</h2>
+<p>След като се сдобие с временните облачни ключове, нападателят получава възможност за неограничено хоризонтално придвижване (lateral movement). Чрез API заявки той може да променя системните промптове на критични вътрешни агенти — например тези за финансови одобрения, анализ на клиентски данни или DevOps автоматизация.</p>
+<p>Така пробивът се разпространява тихо в цялата инфраструктура за <a href="/pages/cloud-security.html">облачна сигурност</a>, превръщайки всеки следващ агент в марионетка, която манипулира бази данни или ексфилтрира класифицирана корпоративна информация.</p>
+<h2>Дълбок технически анализ: Илюзията за изолация в мулти-агентните облачни платформи</h2>
+<p>Откритието на Zenity разкрива сериозен концептуален дефект в начина, по който облачните доставчици проектират съвременните агентни изпълнителни среди. В стремежа си да предложат безпроблемна интеграция между езиковите модели и корпоративните ресурси, платформите често прехвърлят доверието директно от изхода на LLM към операционната система.</p>
+<p>В традиционната софтуерна архитектура изпълнението на команди се предхожда от строга автентикация и детерминистичен синтактичен анализ. При AI агентите обаче естественият език служи едновременно като входни данни и като команден поток. Ако границата между контекста на модела и средата на хоста не е херметично изолирана чрез хардуерно-базирани микро-виртуални машини (като AWS Firecracker) и строги мрежови филтри за метаданни, всяка агентна система остава уязвима. Решението на AWS да коригира настройките по подразбиране е стъпка напред, но корпоративните архитекти трябва да възприемат модела на нулева степен на доверие (Zero Trust) за всеки инструмент, достъпен от невронен агент.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/a-single-prompt-was-enough-to-hijack-every-ai-agent-in-an-aws-account-zenity-researchers-found/">A single prompt was enough to hijack every AI agent in an AWS account, Zenity researchers found - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zenity.html">Zenity</a><p>Zenity е компания за корпоративна сигурност, специализирана в защитата и одита на корпоративни AI агенти и no-code/low-code платформи.</p></li><li><a href="/pages/prompt-injection.html">Prompt Injection (Инжектиране на команди)</a><p>Prompt Injection (инжектиране на подкани или команди) е критична уязвимост в сигурността на големите езикови модели (LLM), при която атакуващият успяв...</p></li><li><a href="/pages/cloud-security.html">Облачна сигурност (Cloud Security)</a><p>Облачната сигурност (Cloud Security) обхваща технологиите, политиките и контролите, осигуряващи защита на данните, приложенията и инфраструктурата, хо...</p></li><li><a href="/pages/aws.html">AWS (Amazon Web Services)</a><p>Amazon Web Services (AWS) е най-всеобхватната и широко приета облачна платформа в света, предлагаща над 200 напълно функционални услуги от центрове за...</p></li><li><a href="/pages/amazon-bedrock.html">Amazon Bedrock</a><p>Amazon Bedrock е напълно управлявана услуга от Amazon Web Services (AWS), която предоставя достъп до водещи базови модели (Foundation Models) чрез при...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

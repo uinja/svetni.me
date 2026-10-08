@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The JetBrains Blog / JetBrains Qodana
+Екипът зад платформата за статичен анализ на код JetBrains Qodana публикува мащабно емпирично изследване, анализиращо милиони редове код, създадени с п..."><title>Променя ли се качеството на кода? JetBrains Qodana изследва влиянието на AI върху техническия дълг - Светни.ме</title><meta property="og:title" content="Променя ли се качеството на кода? JetBrains Qodana изследва влиянието на AI върху техническия дълг - Светни.ме"><meta property="og:description" content="Снимка: The JetBrains Blog / JetBrains Qodana
+Екипът зад платформата за статичен анализ на код JetBrains Qodana публикува мащабно емпирично изследване, анализиращо милиони редове код, създадени с п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/08/jetbrains-qodana-code-quality-metrics-ai-generated-software/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/08/jetbrains-qodana-code-quality-metrics-ai-generated-software/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Променя ли се качеството на кода? JetBrains Qodana изследва влиянието на AI върху техническия дълг</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 октомври 2026 г.</p><div><p><img src="/articles/2026/10/08/jetbrains-qodana-code-quality-metrics-ai-generated-software/hero.png" alt="Променя ли се качеството на кода? JetBrains Qodana изследва влиянието на AI върху техническия дълг"><br><small>Снимка: The JetBrains Blog / JetBrains Qodana</small></p>
+<p>Екипът зад платформата за <a href="/pages/static-analysis.html">статичен анализ на код</a> <a href="/pages/qodana.html">JetBrains Qodana</a> публикува мащабно емпирично изследване, анализиращо милиони редове код, създадени с помощта на AI асистенти и автономни кодиращи агенти [1]. </p>
+<p>Докладът развенчава ширещия се оптимизъм за безупречната ефективност на генерирания софтуер, показвайки, че зад фасадата от бързо затворени задачи се крие коварно натрупване на скрит <a href="/pages/technical-debt.html">технически дълг</a> [1].</p>
+<p><img src="/articles/2026/10/08/jetbrains-qodana-code-quality-metrics-ai-generated-software/infographic.png" alt="Инфографика за метриките за качество на кода от JetBrains Qodana"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Структурната ентропия: Дублиране и ерозия на абстракциите</h2>
+<p>Основният извод от данните на Qodana е, че <a href="/pages/code-quality.html">качеството на софтуерния код</a> претърпява дълбока структурна деформация. Докато синтактичните грешки намаляват благодарение на автодопълването, метриките за дублиране на код (code churn и copy-paste) нарастват с над 35% в екипи, разчитащи изцяло на AI.</p>
+<p>Езиковите модели имат естествена тенденция да генерират напълно нови локални помощни функции и структури за всяка подзадача, вместо да преизползват съществуващи споделени библиотеки в проекта. Това води до фрагментация на архитектурата, нарушаване на принципа DRY (Don&#39;t Repeat Yourself) и замъгляване на границите между отделните модули.</p>
+<h2>Илюзията за коректност: Повърхностни тестове и скрити бъгове</h2>
+<p>Изследването разкрива и тревожна тенденция при автоматизираното тестване. Когато AI агентът пише едновременно функционалния код и неговите модулни тестове (unit tests), той често конструира тестови сценарии, които валидират собствените му предпоставки, пропускайки граничните случаи (edge cases).</p>
+<p>Анализът на Qodana отчита по-висока концентрация на остарели API извиквания, невалидирани входни данни и фини грешки в асинхронните нишки, които се проявяват само при екстремно натоварване в продукционна среда.</p>
+<h2>Дълбок технически анализ: Статичният анализ като задължителен филтър за AI агенти</h2>
+<p>Докладът на JetBrains поставя критичен въпрос за устойчивостта на софтуерната екосистема в ерата на свръхизобилие от машинно генериран код. В продължение на десетилетия програмирането бе ограничено от пропускателната способност на човешкия мозък — писането на код бе бавно, което стимулираше инженерите да прекарват време в рефакториране, опростяване и създаване на елегантни абстракции.</p>
+<p>Когато цената за генериране на хиляди редове код клони към нула, човешкият преглед на кодови заявки (code review) се превръща в невъзможно тясно място. Програмистите са склонни да одобряват обемни pull requests, подведени от безупречния стил на писане. </p>
+<p>Единственият начин за предотвратяване на катастрофален срив в поддържаемостта на софтуера е превръщането на платформите за статичен анализ в автоматизирани контролни врати (quality gates). Агентите трябва да бъдат задължени не просто да накарат тестовете да светнат в зелено, но и да докажат, че новият код не увеличава цикломатичната сложност и не руши архитектурните инварианти на системата.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://blog.jetbrains.com/qodana/2026/10/code-quality-never-changes-or-is-ai-challenging-this-notion/">Code Quality Never Changes – Or Is AI Challenging This Notion? - The JetBrains Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/technical-debt.html">Технически дълг</a><p>Техническият дълг (Technical Debt) е концепция в софтуерното инженерство, която описва допълнителните разходи за бъдеща разработка, възникващи в резул...</p></li><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/qodana.html">JetBrains Qodana</a><p>Qodana е платформа за статичен анализ на код и контрол на качеството, разработена от JetBrains и интегрирана директно в CI/CD тръбопроводите на съврем...</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/code-quality.html">Качество на софтуерния код (Code Quality)</a><p>Качеството на софтуерния код измерва доколко дадена кодова база отговаря на стандартите за четимост, поддържаемост, сигурност, модулност и липса на ск...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The JetBrains Blog / JetBrains AI
+Софтуерната компания JetBrains обяви официалното пускане на Mellum 2.1 — новото поколение на своя специализиран езиков модел с отворени тегла, създаден екс..."><title>JetBrains представи Mellum 2.1: бърз отворен модел за автономни програмистки агенти - Светни.ме</title><meta property="og:title" content="JetBrains представи Mellum 2.1: бърз отворен модел за автономни програмистки агенти - Светни.ме"><meta property="og:description" content="Снимка: The JetBrains Blog / JetBrains AI
+Софтуерната компания JetBrains обяви официалното пускане на Mellum 2.1 — новото поколение на своя специализиран езиков модел с отворени тегла, създаден екс..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/08/jetbrains-mellum-2-1-fast-open-model-coding-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/08/jetbrains-mellum-2-1-fast-open-model-coding-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>JetBrains представи Mellum 2.1: бърз отворен модел за автономни програмистки агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 октомври 2026 г.</p><div><p><img src="/articles/2026/10/08/jetbrains-mellum-2-1-fast-open-model-coding-agents/hero.png" alt="JetBrains представи Mellum 2.1: бърз отворен модел за автономни програмистки агенти"><br><small>Снимка: The JetBrains Blog / JetBrains AI</small></p>
+<p>Софтуерната компания <a href="/pages/jetbrains.html">JetBrains</a> обяви официалното пускане на <a href="/pages/mellum.html">Mellum</a> 2.1 — новото поколение на своя специализиран езиков модел с отворени тегла, създаден ексклузивно за разработчици и софтуерни агенти [1]. </p>
+<p>Моделът е проектиран да преодолее основния компромис в съвременните AI инструменти: дилемата между свръхбавната, но точна облачна инференция и бързите, но повърхностни локални модели [1].</p>
+<p><img src="/articles/2026/10/08/jetbrains-mellum-2-1-fast-open-model-coding-agents/infographic.png" alt="Инфографика за архитектурата на JetBrains Mellum 2.1"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Инженерно превъзходство: Под-50ms латентност и FIM майсторство</h2>
+<p>Mellum 2.1 разполага с компактна архитектура с под 10 милиарда параметри, която е преминала през специализирано предварително обучение върху синтактични дървета (AST), диференциални пачове (git diffs) и протоколни съобщения от LSP сървъри. </p>
+<p>Ключовият фокус на архитектурата е механизмът <a href="/pages/fill-in-the-middle.html">Fill-in-the-Middle (FIM)</a>. Докато повечето стандартни LLM модели страдат от висока латентност при генериране на код в средата на съществуващ клас, Mellum 2.1 генерира предложения за автодопълване за под 50 милисекунди. Това осигурява абсолютно плавно писане на код в работни среди като IntelliJ IDEA, PyCharm и WebStorm без никакво субективно усещане за забавяне.</p>
+<h2>Оптимизиран за автономни програмистки агенти</h2>
+<p>Отвъд класическото автодопълване, Mellum 2.1 е оптимизиран да служи като мислещ двигател за <a href="/pages/coding-agents.html">програмистки агенти (Coding Agents)</a>. Моделът демонстрира изключителна прецизност при генериране на структурирани JSON заявки за изпълнение на терминални команди, анализ на компилационни грешки и автономно пускане на тестови комплекти.</p>
+<p>Тъй като теглата са свободно достъпни, корпоративните екипи могат да изпълняват модела като <a href="/pages/local-llm.html">локален LLM (Local LLM)</a> върху стандартни работни станции с чипове Apple Silicon или графични карти от среден клас. Това елиминира рисковете от изтичане на чувствителен фирмен сорс код към външни облаци.</p>
+<h2>Дълбок технически анализ: Краят на общите езикови модели при разработката на софтуер</h2>
+<p>Пускането на Mellum 2.1 от JetBrains илюстрира важна архитектурна диференциация: залеза на гигантските общи езикови модели като оптимален инструмент за ежедневно програмиране. Модели с над 500 милиарда параметри притежават огромна енциклопедична обща култура, но са неефективни за инкрементално програмиране поради своята висока латентност и огромна консумация на памет.</p>
+<p>Програмирането не е литературно творчество, а формална система с детерминистични правила и строга йерархия на обхвата. </p>
+<p>Чрез вграждане на информираност за типовите системи и структурата на компилатора директно в архитектурата на вниманието, специализиран 8B модел може да постигне по-висока синтактична точност от стократно по-голям общ модел. Mellum 2.1 доказва, че бъдещето на агентното програмиране принадлежи на свръхбързи, локално хоствани архитектури, които съчетават машинно самообучение с детерминистичен статичен анализ на IDE ниво.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/">Mellum2.1 Gets to Work: A Fast Open Model for Coding Agents - The JetBrains Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mellum.html">Mellum</a><p>Mellum е семейство специализирани езикови модели за код, разработени от JetBrains за интеграция в екосистемата от среди за разработка (IntelliJ, PyCha...</p></li><li><a href="/pages/local-llm.html">Локални големи езикови модели (Local LLMs)</a><p>Локалните големи езикови модели са AI модели, изпълнявани изцяло на локалния хардуер на потребителя (работна станция, лаптоп или локален сървър) без и...</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/fill-in-the-middle.html">Fill-in-the-Middle (FIM)</a><p>Fill-in-the-Middle (FIM) е техника за обучение и инференция на кодиращи езикови модели, която позволява генериране на код в средата на съществуващ док...</p></li><li><a href="/pages/coding-agents.html">Програмиращи агенти (Coding Agents)</a><p>Програмиращите агенти (Coding Agents) са автономни или полуавтономни софтуерни системи, задвижвани от големи езикови модели, които са способни да анал...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

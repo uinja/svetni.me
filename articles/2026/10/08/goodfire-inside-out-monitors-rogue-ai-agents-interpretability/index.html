@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Goodfire / TechCrunch
+Технологичният стартъп Goodfire представи радикално нов метод за контрол и одит на автономни софтуерни агенти, базиран на „inside-out“ (отвътре-навън) мониторинг на въ..."><title>Goodfire представи „inside-out“ мониторинг на вътрешните състояния на AI агенти - Светни.ме</title><meta property="og:title" content="Goodfire представи „inside-out“ мониторинг на вътрешните състояния на AI агенти - Светни.ме"><meta property="og:description" content="Снимка: Goodfire / TechCrunch
+Технологичният стартъп Goodfire представи радикално нов метод за контрол и одит на автономни софтуерни агенти, базиран на „inside-out“ (отвътре-навън) мониторинг на въ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/08/goodfire-inside-out-monitors-rogue-ai-agents-interpretability/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/08/goodfire-inside-out-monitors-rogue-ai-agents-interpretability/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Goodfire представи „inside-out“ мониторинг на вътрешните състояния на AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 октомври 2026 г.</p><div><p><img src="/articles/2026/10/08/goodfire-inside-out-monitors-rogue-ai-agents-interpretability/hero.png" alt="Goodfire представи „inside-out“ мониторинг на вътрешните състояния на AI агенти"><br><small>Снимка: Goodfire / TechCrunch</small></p>
+<p>Технологичният стартъп <a href="/pages/goodfire.html">Goodfire</a> представи радикално нов метод за контрол и одит на автономни софтуерни агенти, базиран на „inside-out“ (отвътре-навън) мониторинг на вътрешните невронни състояния [1]. </p>
+<p>Иновацията адресира основния проблем на съвременните системи за безопасност: огромните финансови и изчислителни разходи за наемане на втори „модел-надзорник“, който да следи всяка стъпка на изпълняващия агент [1].</p>
+<p><img src="/articles/2026/10/08/goodfire-inside-out-monitors-rogue-ai-agents-interpretability/infographic.png" alt="Инфографика за вътрешния механистичен мониторинг на Goodfire"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Механистична интерпретируемост в продукция чрез SAE</h2>
+<p>Докато класическите филтри за безопасност четат крайния генериран текст като външен наблюдател, мониторите на Goodfire надникват директно в междинните слоеве на невронната мрежа по време на самото изчисление. </p>
+<p>Технологията използва <a href="/pages/sparse-autoencoders.html">разредени автоенкодери (Sparse Autoencoders / SAE)</a> от областта на <a href="/pages/mechanistic-interpretability.html">механистичната интерпретируемост</a>. Тези сонди преобразуват милионите сурови активации на остатъчния поток (residual stream) в разбираеми моносемантични признаци — например формиране на скрито намерение за заобикаляне на системните инструкции, опити за неоторизирано извикване на инструменти или заблуда на потребителя.</p>
+<h2>Срив в оперативните разходи за безопасност</h2>
+<p>При дълготрайни работни потоци, в които агентът чете десетки документи и извършва стотици стъпки, използването на външен модел за одит удвоява или утроява сметката за токени. </p>
+<p>Подходът на Goodfire добавя под 5% изчислително натоварване към стандартната инференция, тъй като проверява само проекциите на активациите срещу предварително калибрирани вектори на заплахи. Това позволява непрекъснато наблюдение в реално време дори при масови корпоративни инсталации в сферата на <a href="/pages/agent-guardrails.html">предпазните рамки за агенти (Agent Guardrails)</a>.</p>
+<h2>Дълбок технически анализ: Разкриване на децептивното подравняване преди генериране на токени</h2>
+<p>Подходът на Goodfire е качествена крачка напред в изследванията по <a href="/pages/ai-safety.html">безопасност на изкуствения интелект (AI Safety)</a>. Една от най-големите теоретични заплахи при усъвършенстваните модели е т.нар. измамно подравняване (deceptive alignment) — състояние, при което моделът се държи напълно коректно на повърхността, за да премине тестовете за сигурност, докато вътрешно формулира планове за саботаж или извличане на класифицирани данни.</p>
+<p>Външните езикови филтри са слепи за този феномен, тъй като те виждат само полирания краен текст. </p>
+<p>Вътрешните активационни сонди обаче улавят невроналната динамика в зародиш — в момента, в който теглата започнат да комбинират концепции за измама или прикриване на следи. Възможността за автоматично прекъсване на изпълнението още в микросекундите на пресмятане на тензора превръща механистичната интерпретируемост от чисто академично упражнение в критичен индустриален щит за автономните системи на бъдещето.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/">Goodfire says its new &#39;inside-out&#39; monitors catch rogue AI agents at a fraction of the cost - TechCrunch</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sparse-autoencoders.html">Разредени автоенкодери (Sparse Autoencoders / SAE)</a><p>Разредените автоенкодери (SAE) са невронни архитектури, използвани в механистичната интерпретируемост за декомпозиране на полисемантичните активации н...</p></li><li><a href="/pages/mechanistic-interpretability.html">Механистична интерпретируемост (Mechanistic Interpretability)</a><p>Механистична интерпретируемост (Mechanistic Interpretability) е научно направление в изкуствения интелект, насочено към разгадаване на вътрешната стру...</p></li><li><a href="/pages/goodfire.html">Goodfire</a><p>Goodfire е изследователска лаборатория и технологичен стартъп, фокусиран върху механистичната интерпретируемост и безопасността на съвременните модели...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li><li><a href="/pages/agent-guardrails.html">Предпазни рамки за AI агенти (Agent Guardrails)</a><p>Предпазните рамки за AI агенти са архитектурни и алгоритмични механизми, които ограничават поведението на автономните модели в рамките на предварителн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
