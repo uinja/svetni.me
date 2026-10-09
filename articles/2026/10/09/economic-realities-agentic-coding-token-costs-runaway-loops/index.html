@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: frugaast.dev / Hacker News
+Зад ентусиазма около напълно автономните инструменти за програмиране започва да изплува суровата финансова реалност, разкрива обстоен емпиричен анализ на софтуерн..."><title>Икономическата реалност на агентното кодиране: капанът на рекурсивния разход за токени - Светни.ме</title><meta property="og:title" content="Икономическата реалност на агентното кодиране: капанът на рекурсивния разход за токени - Светни.ме"><meta property="og:description" content="Снимка: frugaast.dev / Hacker News
+Зад ентусиазма около напълно автономните инструменти за програмиране започва да изплува суровата финансова реалност, разкрива обстоен емпиричен анализ на софтуерн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/economic-realities-agentic-coding-token-costs-runaway-loops/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/economic-realities-agentic-coding-token-costs-runaway-loops/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Икономическата реалност на агентното кодиране: капанът на рекурсивния разход за токени</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/economic-realities-agentic-coding-token-costs-runaway-loops/hero.png" alt="Икономическата реалност на агентното кодиране: капанът на рекурсивния разход за токени"><br><small>Снимка: frugaast.dev / Hacker News</small></p>
+<p>Зад ентусиазма около напълно автономните инструменти за програмиране започва да изплува суровата финансова реалност, разкрива обстоен емпиричен анализ на софтуерния инженер и изследовател Frugaast, озаглавен „Агентното кодиране е финансов капан“ [1].</p>
+<p>Изследването документира как рекурсивните цикли за разработка, оставени без човешки надзор, могат за часове да генерират сметки за хиляди долари в API токени, без да постигнат работещо решение на възложения софтуерен проблем [1].</p>
+<p><img src="/articles/2026/10/09/economic-realities-agentic-coding-token-costs-runaway-loops/infographic.png" alt="Инфографика за икономическия капан на разходите при агентно кодиране"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Геометричната експлозия на токените в агентния цикъл</h2>
+<p>При обикновен диалог с AI разработчикът плаща за кратък въпрос и отговор. При <a href="/pages/autonomous-coding.html">автономното програмиране (autonomous coding)</a> обаче агентът работи в непрекъснат цикъл: чете файл, опитва промяна, стартира компилатор, получава грешка и опитва отново.</p>
+<p>С всяка изминала итерация целият предишен лог от конзолата, съобщения за грешки и предишни версии на кода се добавят обратно в <a href="/pages/context-window.html">контекстния прозорец</a>. В резултат на това на десетата итерация агентът обработва стотици хиляди входни токени за всяко натискане на клавиш. При цени за инференция на авангардни модели като Claude 3.5 Sonnet или GPT-4o, цената на един единствен pull request може да скочи от няколко цента до над 150 долара.</p>
+<h2>Халюцинаторни лутания и затлачване на контекста</h2>
+<p>Още по-сериозен е проблемът с т.нар. „халюцинаторно лутане“. Когато агентът срещне фина системна грешка, която не разбира, той започва да променя случайни редове код, създавайки нови бъгове.</p>
+<p>Колкото по-дълъг става контекстът, толкова повече се влошава способността на трансформъра да разсъждава трезво — явление, добре познато като деградация на вниманието. Така моделът изпада в безкраен цикъл, изразходвайки бюджета на компанията със скоростта на светлината.</p>
+<h2>Финансов и инженерен анализ: Преосмисляне на икономиката на токените</h2>
+<p>Този казус поставя фундаментални въпроси пред <a href="/pages/ai-economics.html">икономиката на изкуствения интелект (AI Economics)</a> и практиките в <a href="/pages/software-engineering.html">софтуерния инженеринг</a>. Пълната автономност на агентите често се оказва икономически нерентабилна спрямо труда на опитен старши програмист.</p>
+<p>За да бъде агентното кодиране устойчиво, инженерните екипи трябва да въведат стриктна <a href="/pages/token-economics.html">икономика на токените (token economics)</a>: твърди лимити от максимум 4-5 итерации преди принудително спиране, агресивно кеширане на промптовете, интелигентно орязване на контекста чрез AST синтактични филтри и задължителни човешки контролни точки.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://news.ycombinator.com/item?id=50021253">Agentic coding is a financial trap - Hacker News / frugaast.dev</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/token-economics.html">Икономика на токените (Token Economics)</a><p>Икономиката на токените в AI сектора анализира ценообразуването, маржовете и структурата на разходите, свързани с обработката и генерирането на токени...</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/context-window.html">Контекстен прозорец (Context Window)</a><p>Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на едн...</p></li><li><a href="/pages/autonomous-coding.html">Автономно програмиране (Autonomous Coding)</a><p>Автономното програмиране е процесът, при който AI агенти самостоятелно пишат, компилират, тестват и отстраняват грешки в софтуерен код без непрекъснат...</p></li><li><a href="/pages/ai-economics.html">Икономика на изкуствения интелект (AI Economics)</a><p>Икономиката на изкуствения интелект е дисциплина, изследваща макро- и микроикономическите ефекти от внедряването на AI, включително структурата на раз...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

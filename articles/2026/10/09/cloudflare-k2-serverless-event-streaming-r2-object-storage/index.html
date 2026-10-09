@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Cloudflare / InfoQ
+Мрежовият гигант Cloudflare обяви публичната бета версия на K2 — нова услуга за стрийминг на събития, която преосмисля фундаменталната архитектура на разпределените логов..."><title>Cloudflare пусна K2: безсървърен стрийминг на събития върху обектно хранилище R2 - Светни.ме</title><meta property="og:title" content="Cloudflare пусна K2: безсървърен стрийминг на събития върху обектно хранилище R2 - Светни.ме"><meta property="og:description" content="Снимка: Cloudflare / InfoQ
+Мрежовият гигант Cloudflare обяви публичната бета версия на K2 — нова услуга за стрийминг на събития, която преосмисля фундаменталната архитектура на разпределените логов..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/cloudflare-k2-serverless-event-streaming-r2-object-storage/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/cloudflare-k2-serverless-event-streaming-r2-object-storage/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare пусна K2: безсървърен стрийминг на събития върху обектно хранилище R2</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/cloudflare-k2-serverless-event-streaming-r2-object-storage/hero.png" alt="Cloudflare пусна K2: безсървърен стрийминг на събития върху обектно хранилище R2"><br><small>Снимка: Cloudflare / InfoQ</small></p>
+<p>Мрежовият гигант <a href="/pages/cloudflare.html">Cloudflare</a> обяви публичната бета версия на K2 — нова услуга за <a href="/pages/event-streaming.html">стрийминг на събития</a>, която преосмисля фундаменталната архитектура на разпределените логове за данни [1].</p>
+<p>Вместо да разчита на скъпи клъстери от виртуални брокери с прикрепени твърди дискове като Apache Kafka или Apache Pulsar, K2 изгражда напълно безсървърен разпределен регистър директно върху своето обектно хранилище <a href="/pages/cloudflare-r2.html">Cloudflare R2</a>, постигайки латентност на запис от порядъка на една секунда [1].</p>
+<p><img src="/articles/2026/10/09/cloudflare-k2-serverless-event-streaming-r2-object-storage/infographic.png" alt="Инфографика за архитектурата на безсървърния стрийминг Cloudflare K2"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектурата на K2: Обектното хранилище като траен регистър</h2>
+<p>Традиционните брокери за съобщения изискват сложна поддръжка, непрекъснато пребалансиране на дялове и високи постоянни разходи за сървъри дори при нисък трафик. В K2 изчислителният слой е напълно отделен от слоя за съхранение.</p>
+<p>Входящите събития се приемат от крайните точки (edge nodes) на глобалната мрежа на Cloudflare, където леки междинни буфери групират съобщенията в микропартиди и ги записват директно в R2 като блокове от данни. Този подход гарантира 99.999999999% трайност на данните без необходимост от управление на локални дискове.</p>
+<h2>Латентност срещу икономика: Секундният компромис</h2>
+<p>Тестовете на ранни разработчици показват, че K2 постига p99 латентност при запис от около 1 секунда, докато цялостната латентност от край до край (end-to-end) за прочитане на събитие от консуматор варира между 3 и 7.5 секунди.</p>
+<p>Макар тази латентност да е по-висока от суб-секундните времена на чистата Kafka в паметта, тя е напълно достатъчна за 90% от корпоративните приложения — включително телеметрия, аналитични конвейери, одитни логове за сигурност и фонова координация на AI агенти. В замяна потребителите получават до 70% по-ниски разходи благодарение на липсата на такси за изходящ трафик (zero-egress) в R2.</p>
+<h2>Дълбок технически анализ: Еволюцията на разпределените системи</h2>
+<p>Появата на Cloudflare K2 потвърждава фундаменталната промяна в проектирането на <a href="/pages/distributed-systems.html">разпределени системи</a>. С нарастването на скоростта и намаляването на закъснението на модерните облачни обектни хранилища, необходимостта от специализиран слой за локално дисково съхранение постепенно отпада.</p>
+<p>В комбинация с <a href="/pages/serverless-architecture.html">безсървърната архитектура</a> на Cloudflare Workers, K2 предоставя на инженерите мощен и евтин фундамент за изграждане на устойчиви на повреди AI конвейери, способни да поемат милиони събития в секунда без предварително планиране на капацитета.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/10/cloudflare-k2-serverless-streams/">Cloudflare K2 Builds Event Streams on R2 Object Storage, at a Second of Produce Latency - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/serverless-architecture.html">Безсървърна архитектура (Serverless Architecture)</a><p>Безсървърната архитектура е модел на облачни изчисления, при който доставчикът динамично управлява разпределението и осигуряването на сървъри, а клиен...</p></li><li><a href="/pages/event-streaming.html">Стрийминг на събития (Event Streaming)</a><p>Стриймингът на събития е архитектурен модел, при който непрекъснати потоци от данни (събития) се улавят, съхраняват, обработват и маршрутизират в реал...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/cloudflare-r2.html">Cloudflare R2 Object Storage</a><p>Cloudflare R2 е разпределена S3-съвместима услуга за съхранение на обекти, предлагана от Cloudflare, отличаваща се с нулеви такси за изходящ трафик (e...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

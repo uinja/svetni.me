@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Prasanna Vijayanathan / Renzo Sanchez-Silva / InfoQ / Netflix
+В задълбочена техническа презентация за InfoQ инженерите на стрийминг платформата Netflix Прасана Виджаянатан и Ренцо Санчес-Си..."><title>Архитектура за наблюдаемост в Netflix: граф на знанието и AI агенти при 38 милиона събития в секунда - Светни.ме</title><meta property="og:title" content="Архитектура за наблюдаемост в Netflix: граф на знанието и AI агенти при 38 милиона събития в секунда - Светни.ме"><meta property="og:description" content="Снимка: Prasanna Vijayanathan / Renzo Sanchez-Silva / InfoQ / Netflix
+В задълбочена техническа презентация за InfoQ инженерите на стрийминг платформата Netflix Прасана Виджаянатан и Ренцо Санчес-Си..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/netflix-ontology-driven-observability-knowledge-graphs-claude-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/netflix-ontology-driven-observability-knowledge-graphs-claude-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Архитектура за наблюдаемост в Netflix: граф на знанието и AI агенти при 38 милиона събития в секунда</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/netflix-ontology-driven-observability-knowledge-graphs-claude-agents/hero.png" alt="Архитектура за наблюдаемост в Netflix: граф на знанието и AI агенти при 38 милиона събития в секунда"><br><small>Снимка: Prasanna Vijayanathan / Renzo Sanchez-Silva / InfoQ / Netflix</small></p>
+<p>В задълбочена техническа презентация за InfoQ инженерите на стрийминг платформата <a href="/pages/netflix.html">Netflix</a> Прасана Виджаянатан и Ренцо Санчес-Силва разкриха радикалното препроектиране на своята система за <a href="/pages/observability.html">наблюдаемост (observability)</a>, която обработва астрономическия обем от над 38 милиона събития в секунда [1].</p>
+<p>Компанията напълно изостави традиционните статични прагове за алармиране, заменяйки ги с динамичен <a href="/pages/knowledge-graphs.html">граф на знанието (knowledge graph)</a> и автономни работни потоци, задвижвани от модели на Claude, които локализират скрити каскадни повреди за секунди [1].</p>
+<p><img src="/articles/2026/10/09/netflix-ontology-driven-observability-knowledge-graphs-claude-agents/infographic.png" alt="Инфографика за архитектурата за наблюдаемост в Netflix чрез AI агенти"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Провалът на класическия мониторинг при хипермащаб</h2>
+<p>При архитектура, състояща се от хиляди микроуслуги, работещи върху десетки хиляди облачни инстанции в множество географски региона, класическите методи за мониторинг се оказват безсилни. Когато дадена критична услуга забави отговорите си, това предизвиква лавина от хиляди вторични аларми в свързаните системи, парализирайки дежурните инженери с непосилен шум от известия (alert fatigue).</p>
+<p>Инженерите на Netflix осъзнаха, че метриките сами по себе си не носят семантичен смисъл без разбиране на топологичните връзки между услугите, версиите на кода и физическите клъстери.</p>
+<h2>Оперативната онтология като фундамент за разбиране</h2>
+<p>Решението е изграждането на цялостна оперативна онтология в графова база от данни. Всеки микросървис, база данни, кеш сървър, gRPC крайна точка и скорошен canary деплоймънт се представят като взаимносвързани възли в графа.</p>
+<p>Тази структура се захранва непрекъснато с данни от <a href="/pages/distributed-tracing.html">разпределеното трасиране</a>, позволявайки на системата да визуализира реалния път на потребителския трафик и мигновено да идентифицира в кой възел се е появило първоначалното блокиране.</p>
+<h2>Дълбок технически анализ: Claude като автономен диагностик в AIOps</h2>
+<p>Кулминацията на новата архитектура е интеграцията на специализирани AI агенти в рамките на корпоративната парадигма за <a href="/pages/aiops.html">AIOps</a>. Когато алгоритмите за откриване на аномалии регистрират отклонение, агентът получава контекст от онтологичния граф и автономно стартира серия от целенасочени диагностични заявки.</p>
+<p>Моделът извлича съответните трасировки, сравнява грешките в логовете с скорошни промени в Git и формулира структурирано обяснение на първопричината за инцидента. Времето за откриване и локализиране на повреди (MTTD) е намалено с над 60%, доказвайки, че бъдещето на поддръжката на сложни облачни инфраструктури зависи от способността на автономни агенти да навигират семантични графи на знанието.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/presentations/netflix-observability-aiops-ontology-scale/">Presentation: Ontology‐Driven Observability: Building the E2E Knowledge Graph at Netflix Scale - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/observability.html">Наблюдаемост (Observability)</a><p>Наблюдаемостта (Observability) е способността за разбиране на вътрешното състояние на една сложна система чрез анализ на нейните външни сигнали (телем...</p></li><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/knowledge-graphs.html">Графове на знанието (Knowledge Graphs)</a><p>Графовете на знанието (Knowledge Graphs) са структурирани бази от данни, представящи факти и взаимовръзки между концепции под формата на възли и ребра...</p></li><li><a href="/pages/distributed-tracing.html">Разпределено трасиране (Distributed Tracing)</a><p>Разпределеното трасиране е метод за мониторинг и диагностика на приложения, изградени върху микроуслуги, чрез проследяване на пътя на всяка заявка пре...</p></li><li><a href="/pages/aiops.html">AIOps (AI for IT Operations)</a><p>AIOps е прилагането на изкуствен интелект, обработка на естествен език и машинно обучение за автоматизиране и оптимизиране на процесите по управление ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

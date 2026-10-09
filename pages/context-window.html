@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на една заявка за разсъждение.
+Предизвикателства с ми..."><title>Контекстен прозорец (Context Window) - Светни.ме</title><meta property="og:title" content="Контекстен прозорец (Context Window) - Светни.ме"><meta property="og:description" content="Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на една заявка за разсъждение.
+Предизвикателства с ми..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/context-window.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Контекстен прозорец (Context Window)</h1><section class="content"><p>Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на една заявка за разсъждение.</p>
+<h2>Предизвикателства с милионни контексти</h2>
+<ul>
+<li><strong>Вниманието не е безплатно:</strong> Изчислителната сложност на класическото внимание нараства квадратично спрямо дължината на последователността.</li>
+<li><strong>Феноменът „Изгубено по средата“ (Lost in the Middle):</strong> Моделите показват влошено извличане на детайли, намиращи се в средата на огромен контекст.</li>
+<li><strong>Икономическа тежест:</strong> Подаването на половин милион токени контекст при всяко натискане на клавиш бързо генерира колосални разходи за инференция.</li>
+</ul>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/10/09/economic-realities-agentic-coding-token-costs-runaway-loops/">Икономическата реалност на агентното кодиране: капанът на рекурсивния разход за токени</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/ai-slop.html">AI Slop (ИИ спам)</a></li><li><a href="/pages/apple-carplay.html">Apple CarPlay</a></li><li><a href="/pages/nuclear-energy.html">Ядрена енергетика</a></li><li><a href="/pages/academic-security.html">Академична сигурност (Academic Security)</a></li><li><a href="/pages/jakub-pachocki.html">Якуб Пахоцки</a></li><li><a href="/pages/cada.html">Cloud and AI Development Act (CADA)</a></li><li><a href="/pages/european-union.html">Европейски съюз</a></li><li><a href="/pages/botnets.html">Ботнети (Botnets)</a></li><li><a href="/pages/foundationdb.html">FoundationDB</a></li><li><a href="/pages/divd.html">DIVD (Dutch Institute for Vulnerability Disclosure)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

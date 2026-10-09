@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Google / InfoQ
+Инженерният екип на Google пусна официално Android Bench 2.0 — най-значимото надграждане до момента на своята специализирана среда за тестване на изкуствен интелект в реални ..."><title>Google представи Android Bench 2.0 с оценка на дългосрочни агентни задачи и непрекъснато оценяване - Светни.ме</title><meta property="og:title" content="Google представи Android Bench 2.0 с оценка на дългосрочни агентни задачи и непрекъснато оценяване - Светни.ме"><meta property="og:description" content="Снимка: Google / InfoQ
+Инженерният екип на Google пусна официално Android Bench 2.0 — най-значимото надграждане до момента на своята специализирана среда за тестване на изкуствен интелект в реални ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/google-android-bench-2-agentic-evaluations-continuous-scoring/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/google-android-bench-2-agentic-evaluations-continuous-scoring/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google представи Android Bench 2.0 с оценка на дългосрочни агентни задачи и непрекъснато оценяване</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/google-android-bench-2-agentic-evaluations-continuous-scoring/hero.png" alt="Google представи Android Bench 2.0 с оценка на дългосрочни агентни задачи и непрекъснато оценяване"><br><small>Снимка: Google / InfoQ</small></p>
+<p>Инженерният екип на <a href="/pages/google.html">Google</a> пусна официално <a href="/pages/android-bench-2.html">Android Bench 2.0</a> — най-значимото надграждане до момента на своята специализирана среда за тестване на изкуствен интелект в реални мобилни операционни системи [1].</p>
+<p>Актуализацията трансформира начина, по който изследователите измерват способностите на мултимодалните <a href="/pages/mobile-agents.html">мобилни агенти</a>, въвеждайки специализирани протоколи за изпълнение на задачи с продължителен хоризонт (LHTs), интерактивна агентна симулация и непрекъснато оценяване на прогреса [1].</p>
+<p><img src="/articles/2026/10/09/google-android-bench-2-agentic-evaluations-continuous-scoring/infographic.png" alt="Инфографика за архитектурата на бенчмарка Android Bench 2.0"><br><small>Инфографика: Светни.ме</small></p>
+<h2>От статични екрани към динамични софтуерни траектории</h2>
+<p>Първото поколение бенчмаркове за мобилни интерфейси страдаше от фундаментален недостатък: моделите се тестваха върху статични екранни снимки с предварително зададени текстови въпроси. В реалния свят обаче използването на смартфон е интерактивен процес, включващ забавяния на мрежата, неочаквани системни диалози, изскачащи известия и динамични анимации.</p>
+<p>Android Bench 2.0 поставя агентите в истинска виртуализирана среда на Android. Моделите получават суровия визуален поток на екрана и трябва сами да планират поредици от кликвания, плъзгания (swipes), въвеждане на текст и превключване между приложения, за да постигнат зададена сложна цел.</p>
+<h2>Решаване на дългосрочни задачи (Long-Horizon Tasks)</h2>
+<p>Най-голямото изпитание за съвременните езикови модели е способността им да поддържат фокус и устойчив план при <a href="/pages/long-horizon-tasks.html">дългосрочни задачи</a>, състоящи се от десетки междинни стъпки. Рамката включва сценарии като резервиране на билети, извличане на информация от банково приложение, изпращане на потвърждение по имейл и качване на фактура в облака.</p>
+<p>Вместо примитивна бинарна оценка (успех или провал), новата метрика за непрекъснато оценяване измерва колко точно от подцелите са били изпълнени успешно и колко токена и време са били изразходвани по пътя, позволявайки фино сравнение между архитектурите.</p>
+<h2>Дълбок технически анализ: Новият златен стандарт за агентни бенчмаркове</h2>
+<p>Появата на Android Bench 2.0 маркира зрялостта на съвременните <a href="/pages/agent-benchmarks.html">бенчмаркове за AI агенти</a>. Досега компаниите обявяваха впечатляващи резултати върху абстрактни академични тестове, които обаче имаха минимална връзка с реалната способност на модела да управлява компютър или телефон.</p>
+<p>Чрез симулиране на автентична софтуерна среда със строги времеви ограничения и проверка на устойчивостта срещу грешки, рамката на Google поставя нови стандарти за индустрията. Моделите, които демонстрират високи резултати в Android Bench 2.0, ще бъдат първите готови за директна интеграция като автономни ежедневни асистенти в джоба на милиарди потребители.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/10/android-bench-2/">Android Bench 2 Adds Support for Long-Horizon Tasks, Agentic Evaluation, and Continuous Scoring - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mobile-agents.html">Мобилни софтуерни агенти (Mobile Agents)</a><p>Мобилните софтуерни агенти са автономни AI асистенти, оптимизирани за взаимодействие с потребителски интерфейси на смартфони и таблети чрез визуално р...</p></li><li><a href="/pages/long-horizon-tasks.html">Дългосрочни задачи в AI (Long-Horizon Tasks)</a><p>Дългосрочните задачи в изкуствения интелект са комплексни процеси, които изискват от софтуерния агент да поддържа контекст, да планира и изпълнява дес...</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/android-bench-2.html">Android Bench 2.0</a><p>Android Bench 2.</p></li><li><a href="/pages/agent-benchmarks.html">Бенчмаркове за оценка на AI агенти (Agent Benchmarks)</a><p>Бенчмарковете за AI агенти са стандартизирани тестови среди, измерващи способността на автономните системи да планират, разсъждават, използват инструм...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

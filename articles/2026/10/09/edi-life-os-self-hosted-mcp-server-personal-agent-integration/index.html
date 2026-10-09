@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Edris Ranjbar / GitHub
+В общността на софтуерните ентусиасти проектът с отворен код Edi Life OS, разработен от Едрис Ранджбар, привлече широк интерес, представяйки цялостно табло за управле..."><title>Edi Life OS: персонална операционна система със собствен MCP сървър за интеграция на AI модели - Светни.ме</title><meta property="og:title" content="Edi Life OS: персонална операционна система със собствен MCP сървър за интеграция на AI модели - Светни.ме"><meta property="og:description" content="Снимка: Edris Ranjbar / GitHub
+В общността на софтуерните ентусиасти проектът с отворен код Edi Life OS, разработен от Едрис Ранджбар, привлече широк интерес, представяйки цялостно табло за управле..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/edi-life-os-self-hosted-mcp-server-personal-agent-integration/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/edi-life-os-self-hosted-mcp-server-personal-agent-integration/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Edi Life OS: персонална операционна система със собствен MCP сървър за интеграция на AI модели</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/edi-life-os-self-hosted-mcp-server-personal-agent-integration/hero.png" alt="Edi Life OS: персонална операционна система със собствен MCP сървър за интеграция на AI модели"><br><small>Снимка: Edris Ranjbar / GitHub</small></p>
+<p>В общността на софтуерните ентусиасти проектът с отворен код <a href="/pages/edi-life-os.html">Edi Life OS</a>, разработен от Едрис Ранджбар, привлече широк интерес, представяйки цялостно табло за управление на личния живот с вграден сървър за протокола <a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a> [1].</p>
+<p>Платформата предлага радикална алтернатива на комерсиалните облачни органайзери, позволявайки на потребителите да управляват своя график, цели, финансови навици и бележки в напълно суверенна среда за <a href="/pages/self-hosting.html">самохостване (self-hosting)</a>, достъпна за всякакви AI модели [1].</p>
+<p><img src="/articles/2026/10/09/edi-life-os-self-hosted-mcp-server-personal-agent-integration/infographic.png" alt="Инфографика за архитектурата на Edi Life OS и MCP интеграцията"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Локален суверенитет над данните чрез SQLite</h2>
+<p>В основата на Edi Life OS стои релационната база от данни <a href="/pages/sqlite.html">SQLite</a>. Цялата лична информация — от сутрешни бележки и списъци със задачи до здравословни показатели — се съхранява в един-единствен криптиран файл на локалния компютър или домашен сървър.</p>
+<p>Този подход елиминира риска от затваряне на данните в платени платформи (vendor lock-in) или използването им за обучение на комерсиални езикови модели, гарантирайки абсолютна неприкосновеност на личния живот.</p>
+<h2>Вграден MCP сървър: Мостът към изкуствения интелект</h2>
+<p>Истинската иновация в проекта е нативната реализация на сървър за Model Context Protocol. MCP, създаден от Anthropic като отворен стандарт за комуникация между модели и контекстни хранилища, позволява на клиенти като Claude Desktop, Cursor или локални Ollama модели директно да разговарят с базата данни на Edi Life OS.</p>
+<p>Чрез стандартизирани приложно-програмни интерфейси AI асистентът може да преглежда графика за деня, да добавя нови задачи, да открива конфликти в календара и да анализира дългосрочния напредък по лични проекти без нужда от специални плъгини.</p>
+<h2>Дълбок технически анализ: Новата епоха на персоналното знание</h2>
+<p>Edi Life OS е вдъхновяващ пример за еволюцията на дисциплината <a href="/pages/personal-knowledge-management.html">управление на персонално знание (PKM)</a>. Дълги години потребителите бяха принудени да избират между удобството на облачните платформи и изолацията на локалните текстови файлове.</p>
+<p>Чрез използването на отворения протокол MCP границата между локална поверителност и интелигентен AI анализ се заличава. Проектът доказва, че бъдещето на персоналните цифрови асистенти не е в централизираните корпоративни облаци, а в децентрализирания софтуер с отворен код, работещ върху собствен потребителски хардуер.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://news.ycombinator.com/item?id=50014150">Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI - Hacker News / GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sqlite.html">SQLite</a><p>SQLite е популярна, лека релационна система за управление на бази данни (СУБД) с отворен код.</p></li><li><a href="/pages/self-hosting.html">Самохостване (Self-Hosting)</a><p>Самохостването е практиката на стартиране и поддръжка на софтуерни приложения и услуги на собствени локални сървъри или частни виртуални машини, вмест...</p></li><li><a href="/pages/personal-knowledge-management.html">Управление на персонално знание (PKM)</a><p>Управлението на персонално знание (Personal Knowledge Management - PKM) е процесът на събиране, организиране, синтезиране и извличане на лична информа...</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/edi-life-os.html">Edi Life OS</a><p>Edi Life OS е лична операционна система с отворен код, предоставяща табло за управление на личния живот, бележки, задачи и навици, с вграден сървър за...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

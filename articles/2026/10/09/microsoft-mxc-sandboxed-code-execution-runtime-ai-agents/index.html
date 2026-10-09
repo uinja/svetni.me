@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Microsoft Open Source / GitHub
+Екипът за системи и сигурност на Microsoft обяви пускането на MXC — нова изолационна среда с отворен код, създадена специално за сигурно и високопроизводителн..."><title>Microsoft представи MXC: лека пясъчна среда за сигурно изпълнение на код от AI агенти - Светни.ме</title><meta property="og:title" content="Microsoft представи MXC: лека пясъчна среда за сигурно изпълнение на код от AI агенти - Светни.ме"><meta property="og:description" content="Снимка: Microsoft Open Source / GitHub
+Екипът за системи и сигурност на Microsoft обяви пускането на MXC — нова изолационна среда с отворен код, създадена специално за сигурно и високопроизводителн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/microsoft-mxc-sandboxed-code-execution-runtime-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/microsoft-mxc-sandboxed-code-execution-runtime-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Microsoft представи MXC: лека пясъчна среда за сигурно изпълнение на код от AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/microsoft-mxc-sandboxed-code-execution-runtime-ai-agents/hero.png" alt="Microsoft представи MXC: лека пясъчна среда за сигурно изпълнение на код от AI агенти"><br><small>Снимка: Microsoft Open Source / GitHub</small></p>
+<p>Екипът за системи и сигурност на <a href="/pages/microsoft.html">Microsoft</a> обяви пускането на MXC — нова изолационна среда с отворен код, създадена специално за сигурно и високопроизводително <a href="/pages/code-execution.html">изпълнение на код</a>, генериран от изкуствен интелект [1].</p>
+<p>Проектът решава един от най-острите проблеми пред разработчиците на съвременни кодиращи асистенти: как да се позволи на езиков модел да компилира и изпълнява произволни Python, Bash или C++ скриптове, без да се създава риск от компрометиране на хост машината или локалната корпоративна мрежа [1].</p>
+<p><img src="/articles/2026/10/09/microsoft-mxc-sandboxed-code-execution-runtime-ai-agents/infographic.png" alt="Инфографика за архитектурата на пясъчната среда Microsoft MXC"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектура на микроизолация: Скорост без компромис със сигурността</h2>
+<p>Досега разработчиците бяха изправени пред неприятна дилема: или да използват тежки виртуални машини (като Firecracker), чието стартиране отнема ценни секунди и поглъща стотици мегабайти памет, или да разчитат на несигурни локални процеси с риск от бягство от средата.</p>
+<p><a href="/pages/mxc-sandbox.html">Microsoft MXC</a> въвежда новаторски хибриден подход. Използвайки леки механизми за <a href="/pages/container-isolation.html">контейнерна изолация</a> на ядрото на операционната система (Linux cgroups, потребителски пространства от имена и строги seccomp филтри), средата се инициализира за под 5 милисекунди и консумира по-малко от 10 MB оперативна памет.</p>
+<h2>Пълен контрол върху мрежата и системните извиквания</h2>
+<p>Най-важната защитна линия в MXC е детерминистичният контрол на входно-изходните операции. Средата напълно блокира непредвидени изходящи мрежови връзки по подразбиране, елиминирайки най-честия вектор на атака: изтичане на системни тайни и API ключове към отдалечени сървъри чрез инжектиран код.</p>
+<p>Файловата система работи изцяло в режим „копиране при запис“ (copy-on-write) върху временни дискови дялове. Когато агентът приключи със задачата си, цялата пясъчна среда се разрушава моментално, без да оставя никакви следи по файловата система на хоста.</p>
+<h2>Дълбок технически анализ: Фундаментът за надеждни автономен софтуер</h2>
+<p>Проектът MXC поставя нов еталон в дисциплината <a href="/pages/agent-sandboxing.html">пясъчни среди за AI агенти (Agent Sandboxing)</a>. С нарастването на автономията на моделите, способността за бързо изпълнение на междинни тестове в цикъл (REPL loop) се превръща в основен фактор за качеството на крайния код.</p>
+<p>Предоставяйки готова, проверена и лесна за интегриране библиотека за AutoGen, Semantic Kernel и други популярни агентни рамки, Microsoft дава на индустрията сигурен градивен блок. Това ще позволи на хиляди компании уверено да разгръщат автономни агенти в своята продукционна среда без страх от неоторизиран достъп или деструктивни команди.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://news.ycombinator.com/item?id=50016489">MXC - a sandboxed code execution system - Hacker News / GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mxc-sandbox.html">Microsoft MXC Sandbox</a><p>Microsoft MXC е лека изолирана среда (sandbox) за безопасно изпълнение на произволен софтуерен код от AI агенти, проектирана за максимална скорост на ...</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/container-isolation.html">Контейнерна изолация (Container Isolation)</a><p>Контейнерната изолация е технология за виртуализация на ниво операционна система, използваща механизми като Linux cgroups, namespaces и seccomp профил...</p></li><li><a href="/pages/code-execution.html">Сигурно изпълнение на код (Code Execution Sandboxing)</a><p>Сигурното изпълнение на код е фундаментален механизъм за сигурност, позволяващ изпълнение на ненадежден или генериран от AI код в изолирана среда, коя...</p></li><li><a href="/pages/agent-sandboxing.html">Пясъчници за AI агенти (Agent Sandboxing)</a><p>Пясъчниците за AI агенти (Agent Sandboxing) са специализирани сигурни среди за изпълнение на код, ограничаващи правата на автономните процеси върху мр...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

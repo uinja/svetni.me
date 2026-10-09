@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: GitHub / InfoQ
+Инженерното подразделение на GitHub постигна забележителен технологичен триумф, след като успешно завърши пълното пренаписване на над 800 000 реда код от ядрото на GitHub Cop..."><title>GitHub пренаписа 800 000 реда код на Copilot от TypeScript на Rust с помощта на AI - Светни.ме</title><meta property="og:title" content="GitHub пренаписа 800 000 реда код на Copilot от TypeScript на Rust с помощта на AI - Светни.ме"><meta property="og:description" content="Снимка: GitHub / InfoQ
+Инженерното подразделение на GitHub постигна забележителен технологичен триумф, след като успешно завърши пълното пренаписване на над 800 000 реда код от ядрото на GitHub Cop..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/09/github-migrates-copilot-runtime-rust-ai-assisted-rewrite/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/09/github-migrates-copilot-runtime-rust-ai-assisted-rewrite/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GitHub пренаписа 800 000 реда код на Copilot от TypeScript на Rust с помощта на AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 октомври 2026 г.</p><div><p><img src="/articles/2026/10/09/github-migrates-copilot-runtime-rust-ai-assisted-rewrite/hero.png" alt="GitHub пренаписа 800 000 реда код на Copilot от TypeScript на Rust с помощта на AI"><br><small>Снимка: GitHub / InfoQ</small></p>
+<p>Инженерното подразделение на GitHub постигна забележителен технологичен триумф, след като успешно завърши пълното пренаписване на над 800 000 реда код от ядрото на <a href="/pages/github-copilot.html">GitHub Copilot</a> от <a href="/pages/typescript.html">TypeScript</a> на езика <a href="/pages/rust.html">Rust</a> [1].</p>
+<p>Проектът, реализиран за рекордно краткия срок от 14.5 седмици и разделен на 128 внимателно тествани pull requests, е един от най-мащабните документирани примери за индустриален <a href="/pages/code-refactoring.html">рефакторинг на код</a>, осъществен с прякото съдействие на съвременни AI асистенти [1].</p>
+<p><img src="/articles/2026/10/09/github-migrates-copilot-runtime-rust-ai-assisted-rewrite/infographic.png" alt="Инфографика за миграцията на Copilot ядрото към Rust чрез AI"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Архитектурният мост: Поетапна подмяна чрез N-API</h2>
+<p>Основният архитектурен проблем при миграция на толкова масивна кодова база, обслужваща милиони активни разработчици по света, е недопустимостта на спиране на услугата (downtime). Пълното пренаписване „на един дъх“ (Big Bang rewrite) исторически е завършвало с катастрофа за повечето софтуерни гиганти.</p>
+<p>За да избегнат този капан, инженерите на GitHub изградиха модулен мост чрез <a href="/pages/n-api.html">Node-API (N-API)</a>. Тази технология позволява нативни Rust библиотеки да се зареждат директно в съществуващия Node.js процес. Така екипът успя да подменя модул по модул — от обработката на контекста и анализа на абстрактните синтактични дървета (AST) до мрежовите заявки — без да прекъсва издаването на седмичните версии на продукта.</p>
+<h2>AI като транслатор и валидатор на код</h2>
+<p>Ролята на изкуствения интелект бе ключова за постигането на безпрецедентната скорост. Специално настроени вътрешни модели на Copilot транслираха сложни асинхронни конструкции от TypeScript към Rust, предлагайки идиоматични структури и съгласуване със строгите правила на системата за собственост на паметта (borrow checker).</p>
+<p>Човешките инженери не прекарваха време в механично писане на boilerplate код, а се съсредоточиха върху прецизен преглед на логиката, оптимизация на паралелизма чрез Rayon и Tokio, и разработване на автоматизирани диференциални тестове, гарантиращи, че Rust имплементацията връща резултати, идентични бит по бит с оригиналния код.</p>
+<h2>Дълбок технически анализ: Елиминиране на GC паузите и бъдещето на софтуерната поддръжка</h2>
+<p>Преминаването към Rust носи фундаментални дивиденти за производителността на Copilot. Премахването на сборщика на отпадъци (Garbage Collector) на V8 двигателя елиминира случайните микропаузи по време на писане на код в редактора. Консумацията на оперативна памет от фоновия процес е намалена с над 60%, а времето за стартиране на разширението в VS Code е сведено до милисекунди.</p>
+<p>От системна гледна точка този казус доказва, че симбиозата между опитни системни инженери и AI асистенти е способна да разреши един от най-големите кошмари на корпоративния софтуер: бавните и рискови миграции на остарели кодови бази. В ерата на AI поддръжката и пренаписването на софтуер вече не са десетилетни проекти, а детерминистични инженерни спринтове.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/10/github-copilot-rust-migration/">Github Migrates Copilot Runtime to Rust with AI-Assisted Rewrite - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/typescript.html">TypeScript</a><p>TypeScript е строго типизиран език за програмиране, създаден от Microsoft, който надгражда JavaScript чрез добавяне на статични типове и интерфейси.</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/n-api.html">Node-API (N-API)</a><p>Node-API (по-рано известно като N-API) е стабилен приложно-програмен интерфейс (API) на C за създаване на нативни разширения за Node.</p></li><li><a href="/pages/github-copilot.html">GitHub Copilot</a><p>GitHub Copilot е инструмент за подпомагане на програмирането, базиран на изкуствен интелект, разработен от GitHub в сътрудничество с OpenAI.</p></li><li><a href="/pages/code-refactoring.html">Рефакторинг на софтуерен код (Code Refactoring)</a><p>Рефакторингът на код е процесът на преструктуриране на съществуващ софтуер за подобряване на неговата четимост, поддържаемост, производителност и архи...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
