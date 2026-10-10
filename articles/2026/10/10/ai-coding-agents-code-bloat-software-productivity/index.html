@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Getty Images / Ars Technica
+Мащабно емпирично проучване, публикувано от Ars Technica и базирано на аналитични данни от платформата GitClear, развенчава един от най-големите митове на съврем..."><title>AI агентите генерират повече код, но не и повече софтуер: Изследване разкрива скрития архитектурен дълг - Светни.ме</title><meta property="og:title" content="AI агентите генерират повече код, но не и повече софтуер: Изследване разкрива скрития архитектурен дълг - Светни.ме"><meta property="og:description" content="Снимка: Getty Images / Ars Technica
+Мащабно емпирично проучване, публикувано от Ars Technica и базирано на аналитични данни от платформата GitClear, развенчава един от най-големите митове на съврем..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/ai-coding-agents-code-bloat-software-productivity/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/ai-coding-agents-code-bloat-software-productivity/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>AI агентите генерират повече код, но не и повече софтуер: Изследване разкрива скрития архитектурен дълг</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/ai-coding-agents-code-bloat-software-productivity/hero.png" alt="AI агентите генерират повече код, но не и повече софтуер: Изследване разкрива скрития архитектурен дълг"><br><small>Снимка: Getty Images / Ars Technica</small></p>
+<p>Мащабно емпирично проучване, публикувано от Ars Technica и базирано на аналитични данни от платформата <a href="/pages/gitclear.html">GitClear</a>, развенчава един от най-големите митове на съвременната технологична индустрия — че генеративният AI драстично увеличава производителността на софтуерните екипи [1].</p>
+<p>Анализът на над 200 милиона реда код в публични и частни хранилища показва шокиращ разрив: докато автономните инструменти генерират безпрецедентен обем нов код, реалното количество завършен и работещ софтуер остава непроменено [1].</p>
+<h2>Синдромът на копирането и поставянето: Как се ражда кодовият шум</h2>
+<p>Данните показват, че навлизането на кодови асистенти е довело до 40% увеличение на добавените редове код за година. Това обаче се компенсира от рекорден скок в показателя „кодов шум“ (code churn) — процентът код, който бива променен или изтрит в рамките на две седмици след неговото въвеждане [1].</p>
+<p>Причината се корени в самата природа на <a href="/pages/code-generation.html">кодогенерацията</a> чрез LLM. Моделите рядко рефакторират съществуващата архитектура, за да преизползват налични функции. Вместо това те пресъздават нова, леко модифицирана версия на същата логика на всяко място, където тя е необходима.</p>
+<p>Резултатът е раздут, дублиран софтуер, пълен с анти-патерни за копиране и поставяне (copy-paste bloat), който натоварва изпълнението и драстично увеличава потенциалните повърхности за атака.</p>
+<h2>Кризата в ревюто: Старшите инженери като коректори на ботове</h2>
+<p>Този феномен пренася тежестта в най-скъпата част от <a href="/pages/software-engineering.html">софтуерното инженерство</a> — прегледа на кода (code review). Докато junior програмист може да генерира Pull Request от 2000 реда за половин час, неговият старши колега трябва да прекара часове в детайлен анализ, за да се увери, че кодът не съдържа скрити логически дефекти, пропуски в сигурността или паметови утечки.</p>
+<p>Вместо да проектират мащабируеми системи, най-опитните инженери в компаниите се превръщат в претоварени редактори на машинен текст. Времето за финализиране на задачите (cycle time) всъщност се удължава, а моралът на екипите пада под натиска на натрупания <a href="/pages/technical-debt.html">технически дълг</a>.</p>
+<h2>Индустриален и организационен анализ: Преосмисляне на софтуерната стойност</h2>
+<p>Изследването отправя сериозно предупреждение към технологичните лидери, които бързат да заменят инженери с абонаменти за AI асистенти. Измерването на производителността по броя написани редове е пагубна илюзия, позната още от зората на компютърните науки.</p>
+<p>Истинското <a href="/pages/code-quality.html">качество на кода (code quality)</a> не се измерва с количеството на изписаните символи, а с тяхната стегнатост, елегантност и лекота на поддръжка. Най-добрите инженери често прекарват седмици, за да <em>изтрият</em> 1000 реда код, заменяйки ги с по-добра абстракция.</p>
+<p>В бъдеще инженерният мениджмънт ще трябва да въведе нови KPI метрики, които наказват безсмисления кодов обем и възнаграждават модулността и простотата. Докато инструментите за изкуствен интелект не се научат да разсъждават като архитекти, а не като машинописки на код, те ще продължават да произвеждат повече технически дълг, отколкото истински софтуер.</p>
+<p><img src="/articles/2026/10/10/ai-coding-agents-code-bloat-software-productivity/infographic.png" alt="Инфографика за AI агентите генерират повече код, но не и повече софтуер: Изследване разкрива скрития архитектурен дълг"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/">AI coding agents generate more code, but not more software - Ars Technica - All content</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/technical-debt.html">Технически дълг</a><p>Техническият дълг (Technical Debt) е концепция в софтуерното инженерство, която описва допълнителните разходи за бъдеща разработка, възникващи в резул...</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/gitclear.html">GitClear</a><p>GitClear е платформа за инженерен анализ, известна със своите емпирични изследвания върху въздействието на AI кодовите асистенти върху качеството на к...</p></li><li><a href="/pages/code-quality.html">Качество на софтуерния код (Code Quality)</a><p>Качеството на софтуерния код измерва доколко дадена кодова база отговаря на стандартите за четимост, поддържаемост, сигурност, модулност и липса на ск...</p></li><li><a href="/pages/code-generation.html">Автоматизирано генериране на код (Code Generation)</a><p>Автоматизираното генериране на код е направление в изкуствения интелект, при което невронни мрежи транслират естествен език, системни спецификации или...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

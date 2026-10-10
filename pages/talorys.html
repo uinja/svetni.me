@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Talorys е архитектурен образец за лек, напълно автономен личен асистент, разработен за деплоймънт в сървърлес среда.
+Архитектурни особености
+
+Сървърлес инфраструктура: Изпълнение върху Cloudflare W..."><title>Talorys - Светни.ме</title><meta property="og:title" content="Talorys - Светни.ме"><meta property="og:description" content="Talorys е архитектурен образец за лек, напълно автономен личен асистент, разработен за деплоймънт в сървърлес среда.
+Архитектурни особености
+
+Сървърлес инфраструктура: Изпълнение върху Cloudflare W..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/talorys.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Talorys</h1><section class="content"><p><a href="/pages/talorys.html">Talorys</a> е архитектурен образец за лек, напълно автономен личен асистент, разработен за деплоймънт в сървърлес среда.</p>
+<h3>Архитектурни особености</h3>
+<ol>
+<li><strong>Сървърлес инфраструктура:</strong> Изпълнение върху Cloudflare Workers с минимална латентност и нулева цена в рамките на безплатните квоти.</li>
+<li><strong>Вградена база данни:</strong> Използване на Cloudflare D1 (serverless SQLite) за съхранение на хронология, бележки и задачи.</li>
+<li><strong>Външни интеграции:</strong> Връзка с безплатни или евтини LLM API шлюзове (Groq, OpenRouter, Workers AI).</li>
+<li><strong>Поверителност на данните:</strong> Пълен контрол от страна на потребителя без преминаване на лична информация през трети комерсиални SaaS платформи.</li>
+</ol>
+<p>Talorys демонстрира жизнеспособността на децентрализирания, достъпен личен AI за всеки разработчик.</p>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/10/10/talorys-self-hosted-ai-agent-cloudflare-serverless/">Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/opencode-zen.html">OpenCode Zen</a></li><li><a href="/pages/audio-synthesis.html">Невронен аудио синтез (Neural Audio Synthesis)</a></li><li><a href="/pages/jev.html">Jev</a></li><li><a href="/pages/computational-microscopy.html">Изчислителна микроскопия (Computational Microscopy)</a></li><li><a href="/pages/bmad.html">BMAD</a></li><li><a href="/pages/california-labor.html">Трудово право на Калифорния (California Labor Law)</a></li><li><a href="/pages/clawhub.html">ClawHub</a></li><li><a href="/pages/browser-use.html">Browser Use</a></li><li><a href="/pages/claude-design.html">Claude Design</a></li><li><a href="/pages/claude-opus-4-7.html">Claude Opus 4.7</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Anthropic / The Decoder
+Лабораторията Anthropic обяви фундаментално разширение на своята платформа Claude Managed Agents, въвеждайки поддръжка за „динамични работни потоци“, които позволява..."><title>Anthropic въведе динамични работни потоци за Claude с оркестрация на до 1000 агента паралелно - Светни.ме</title><meta property="og:title" content="Anthropic въведе динамични работни потоци за Claude с оркестрация на до 1000 агента паралелно - Светни.ме"><meta property="og:description" content="Снимка: Anthropic / The Decoder
+Лабораторията Anthropic обяви фундаментално разширение на своята платформа Claude Managed Agents, въвеждайки поддръжка за „динамични работни потоци“, които позволява..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/anthropic-claude-orchestrates-1000-parallel-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/anthropic-claude-orchestrates-1000-parallel-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic въведе динамични работни потоци за Claude с оркестрация на до 1000 агента паралелно</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/anthropic-claude-orchestrates-1000-parallel-agents/hero.png" alt="Anthropic въведе динамични работни потоци за Claude с оркестрация на до 1000 агента паралелно"><br><small>Снимка: Anthropic / The Decoder</small></p>
+<p>Лабораторията <a href="/pages/anthropic.html">Anthropic</a> обяви фундаментално разширение на своята платформа Claude Managed Agents, въвеждайки поддръжка за „динамични работни потоци“, които позволяват на един водещ модел <a href="/pages/claude.html">Claude</a> да създава, управлява и координира до 1000 паралелни софтуерни агента едновременно [1].</p>
+<p>Иновацията бележи решителен преход в сферата на <a href="/pages/multi-agent-systems.html">мултиагентните системи (multi-agent systems)</a> — от статични предварително програмирани вериги към напълно органична <a href="/pages/orchestration.html">оркестрация</a> на разпределени когнитивни ресурси [1].</p>
+<h2>От 27 до 66 дефекта: Емпиричният триумф на паралелното ветрило</h2>
+<p>В публикуваните технически бенчмаркове Anthropic илюстрира предимствата на новия подход чрез комплексен тест по <a href="/pages/software-engineering.html">софтуерно инженерство</a>. В мащабно софтуерно хранилище с десетки взаимнозависими модули изследователите умишлено са инжектирали 70 сложни архитектурни дефекта [1].</p>
+<p>Когато задачата за одит е била възложена на единичен модел Claude (дори с гигантски контекстен прозорец), системата е успяла да идентифицира максимум 27 от 70-те проблема. Причината е добре позната в невронните мрежи — насищането на контекста и „деградацията на вниманието“ (attention fading), при което моделът губи фокус върху периферните детайли.</p>
+<p>При новия динамичен работен поток водещият агент е разбил кодовата база на 200 подсистеми, активирал е паралелни под-агенти за независим анализ, след което е събрал резултатите чрез междинни редукционни възли. Резултатът: системата е открила консистентно 66 от общо 70 дефекта, демонстрирайки смазващо качествено превъзходство.</p>
+<h2>Архитектура на динамичното разгръщане</h2>
+<p>Ключът към успеха на новата система е нейната недетерминирана гъвкавост. Водещият агент не следва твърдо разписана схема (state machine). Той сам решава в реално време колко помощни агента са му необходими въз основа на сложността на задачата.</p>
+<p>Ако даден под-агент се натъкне на неясен модул, той може самостоятелно да породи собствени под-агенти от второ ниво (fan-out), които да инспектират свързани библиотеки. Всички комуникации преминават през строги типизирани шлюзове, гарантиращи, че крайният синтез остава стегнат и лишен от халюцинаторен шум.</p>
+<h2>Системен и икономически анализ: Експлозията на токен потреблението</h2>
+<p>Въвеждането на паралелна оркестрация за 1000 агента отваря изцяло нова глава в корпоративния софтуерен инженеринг, но поставя и драматични финансови въпроси.</p>
+<p>Докато единична сесия с чатбот изразходва десетки хиляди токени, паралелното разгръщане на стотици агенти поглъща десетки милиони токени за броени минути. Еднократното изпълнение на мащабен архитектурен одит лесно може да струва стотици или хиляди долари.</p>
+<p>Това ще доведе до появата на нов клас оптимизационни алгоритми — „бюджетни диспечери“ (budget allocators), които ще спират агенти, изпаднали в повтарящи се цикли, и ще приоритизират ресурсите към най-критичните модули.</p>
+<p>Въпреки високата цена, за финансови корпорации, аерокосмически компании и медицински производители, способността да откриеш 95% от критичните софтуерни бъгове за час оправдава всякакви изчислителни разходи. Бъдещето на програмирането не принадлежи на един самотен гениален модел, а на оркестрирани армии от дигитални работници.</p>
+<p><img src="/articles/2026/10/10/anthropic-claude-orchestrates-1000-parallel-agents/infographic.png" alt="Инфографика за Anthropic въведе динамични работни потоци за Claude с оркестрация на до 1000 агента паралелно"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/">Anthropic&#39;s Claude can now orchestrate up to 1,000 AI agents in parallel through dynamic workflows - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/orchestration.html">Оркестрация на агенти</a><p>Оркестрацията на агенти обхваща архитектурните шаблони и среди за координиране на десетки или стотици автономни специализирани агенти.</p></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a><p>Мултиагентните системи (Multi-Agent Systems - MAS) са архитектури в изкуствения интелект, при които множество специализирани AI агенти си взаимодейств...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

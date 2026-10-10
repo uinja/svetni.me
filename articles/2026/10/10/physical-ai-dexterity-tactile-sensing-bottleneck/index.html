@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: TDK Ventures / ANYbotics / The Robot Report
+В задълбочен технически обзор за състоянието на съвременната роботика президентът на TDK Ventures Никола Соваж и водещи инженери деконструират ос..."><title>Защо сръчността остава истинското тясно място пред физическия изкуствен интелект - Светни.ме</title><meta property="og:title" content="Защо сръчността остава истинското тясно място пред физическия изкуствен интелект - Светни.ме"><meta property="og:description" content="Снимка: TDK Ventures / ANYbotics / The Robot Report
+В задълбочен технически обзор за състоянието на съвременната роботика президентът на TDK Ventures Никола Соваж и водещи инженери деконструират ос..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/physical-ai-dexterity-tactile-sensing-bottleneck/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/physical-ai-dexterity-tactile-sensing-bottleneck/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Защо сръчността остава истинското тясно място пред физическия изкуствен интелект</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/physical-ai-dexterity-tactile-sensing-bottleneck/hero.png" alt="Защо сръчността остава истинското тясно място пред физическия изкуствен интелект"><br><small>Снимка: TDK Ventures / ANYbotics / The Robot Report</small></p>
+<p>В задълбочен технически обзор за състоянието на съвременната роботика президентът на TDK Ventures Никола Соваж и водещи инженери деконструират основната илюзия около <a href="/pages/physical-ai.html">физическия изкуствен интелект (physical AI)</a>: способността на робот да вземе предмет веднъж не означава, че той притежава сръчност [1].</p>
+<p>Публикацията в The Robot Report разглежда фундаменталната причина, поради която дори най-скъпите роботизирани системи продължават да се провалят при задачи, които тригодишно дете изпълнява с лекота — липсата на истинско <a href="/pages/tactile-sensing.html">тактилно усещане (tactile sensing)</a> и прецизна <a href="/pages/manipulation.html">манипулация (manipulation)</a> [1].</p>
+<h2>Парадоксът на сръчността: Честотната пропаст между зрението и допира</h2>
+<p>В основата на проблема стои непреодолимо физическо несъответствие. Съвременните визуално-езикови модели (VLM) разчитат на камери, които подават кадри с честота от 30 до 60 херца. За планиране на маршрут в стая това е напълно достатъчно [1].</p>
+<p>Когато обаче робот трябва да завърти химикалка в пръстите си, да отвие капачка на бутилка или да държи сурово яйце, физическите сили на контакт се променят за микросекунди. За да се предотврати изпускане или смачкване, контролната система изисква сензорна обратна връзка с честота между 500 и 1000 херца.</p>
+<p>Ако роботът разчита само на визуалния си модел, обектът вече се е изплъзнал и паднал на пода преди следващият кадър от камерата да бъде обработен от невронната мрежа. Без „усещане в пръстите“ истинската автономност е невъзможна.</p>
+<h2>Провалът на Sim-to-Real: Защо симулациите лъжат?</h2>
+<p>Втората голяма бариера пред <a href="/pages/robotics.html">роботиката</a> е неспособността на физическите симулатори точно да пресъздадат контакта. Чрез <a href="/pages/reinforcement-learning.html">обучение с подсилване (reinforcement learning)</a> инженерите могат да симулират милиони часове ходене за quadruped робот, тъй като геометрията на крака и земята е относително предвидима.</p>
+<p>Но симулирането на микротриене, еластичност на човешка кожа, влажност на повърхността и деформация на меки предмети е изчислително непреодолимо предизвикателство. В резултат на това политиките за управление, които показват 99% успеваемост във виртуалната среда, моментално се разпадат при сблъсък с реалния свят (sim-to-real gap).</p>
+<h2>Инженерен и архитектурен анализ: Двуслойната нервна система на бъдещия робот</h2>
+<p>Решението на проблема със сръчността ще изисква радикална реформа в хардуерната и софтуерната архитектура на роботите. Бъдещите платформи не могат да разчитат на монолитен голям модел, който да управлява всичко.</p>
+<p>Индустрията върви към двуслойна архитектура, вдъхновена от биологията:</p>
+<ol>
+<li><strong>Когнитивен мозък (Бавен контур, 10-20 Hz):</strong> Голям мултимодален модел, който разбира семантиката на задачата („вземи чашата и я подай на човека“).</li>
+<li><strong>Рефлексен гръбначен мозък (Бърз контур, 1000 Hz):</strong> Нискостепенни невронни контролери, захранвани директно от високочестотни тактилни сензорни матрици в пръстите, които автоматично регулират силата на захвата и компенсират приплъзването без да питат главния модел.</li>
+</ol>
+<p>Докато тази хардуерна тактилна революция не бъде завършена, демонстрациите на роботи, сгъващи тениски или сервиращи кафе, ще останат внимателно режисирани лабораторни куриози, а не масова индустриална реалност.</p>
+<p><img src="/articles/2026/10/10/physical-ai-dexterity-tactile-sensing-bottleneck/infographic.png" alt="Инфографика за Защо сръчността остава истинското тясно място пред физическия изкуствен интелект"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/">Why dexterity is physical AI’s real bottleneck - The Robot Report</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tactile-sensing.html">Тактилно усещане</a><p>Тактилното усещане в роботиката включва сензорни масиви, разположени върху роботизираните пръсти, за детекция на сили в реално време.</p></li><li><a href="/pages/robotics.html">Роботика</a><p>Роботиката е интердисциплинарна област от науката и инженерството, фокусирана върху проектирането, изграждането и използването на роботи.</p></li><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/physical-ai.html">Физически ИИ (Physical AI)</a><p>Физическият ИИ се отнася до прилагането на изкуствен интелект в реалния свят, специално в области като роботика, индустриална автоматизация и автономн...</p></li><li><a href="/pages/manipulation.html">Роботизирана манипулация</a><p>Роботизираната манипулация е една от най-сложните подобласти на роботиката, съчетаваща кинематика, управление на силите и машинно обучение.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

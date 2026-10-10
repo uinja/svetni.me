@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: BleepingComputer
+Мащабна кампания за разпространение на зловреден софтуер компрометира търсачките, използвайки сложна комбинация от спонсорирани реклами в Google Ads и легитимни пренасочващ..."><title>Хакери злоупотребяват с Google Ads и Bing пренасочвания за ClickFix атаки с фалшив Claude - Светни.ме</title><meta property="og:title" content="Хакери злоупотребяват с Google Ads и Bing пренасочвания за ClickFix атаки с фалшив Claude - Светни.ме"><meta property="og:description" content="Снимка: BleepingComputer
+Мащабна кампания за разпространение на зловреден софтуер компрометира търсачките, използвайки сложна комбинация от спонсорирани реклами в Google Ads и легитимни пренасочващ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/hackers-abuse-google-ads-bing-redirects-claude-clickfix/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/hackers-abuse-google-ads-bing-redirects-claude-clickfix/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Хакери злоупотребяват с Google Ads и Bing пренасочвания за ClickFix атаки с фалшив Claude</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/hackers-abuse-google-ads-bing-redirects-claude-clickfix/hero.png" alt="Хакери злоупотребяват с Google Ads и Bing пренасочвания за ClickFix атаки с фалшив Claude"><br><small>Снимка: BleepingComputer</small></p>
+<p>Мащабна кампания за разпространение на <a href="/pages/malware.html">зловреден софтуер</a> компрометира търсачките, използвайки сложна комбинация от спонсорирани реклами в <a href="/pages/google-ads.html">Google Ads</a> и легитимни пренасочващи адреси от <a href="/pages/bing.html">Microsoft Bing</a> [1].</p>
+<p>Целта на нападателите е да привлекат потребители, търсещи десктоп приложения за популярния AI асистент <a href="/pages/claude.html">Claude</a>, след което чрез техниката <a href="/pages/clickfix.html">ClickFix</a> да ги подмамят да изпълнят зловреден код в собствените си операционни системи [1].</p>
+<h2>Механизъм на кампанията: Как се заобикалят скенерите на Google</h2>
+<p>Схемата се отличава с изключително високо ниво на техническа изобретателност при манипулирането на рекламните алгоритми. За да избегнат автоматичните филтри на Google Ads, които сканират крайните адреси на рекламите за зловредно съдържание, хакерите използват легитимни URL адреси на Microsoft Bing, съдържащи параметри за отворено пренасочване (open redirect) [1].</p>
+<p>Тъй като домейнът на Bing е с безупречна репутация, рекламите преминават автоматичната модерация безпроблемно. Когато потребителят кликне върху рекламата обаче, сървърът на Bing незабавно го пренасочва към контролиран от нападателите фишинг сайт, маскиран като официална страница за изтегляне на Claude за Windows.</p>
+<h2>Техниката ClickFix: Социално инженерство на ново ниво</h2>
+<p>След попадане на целевата страница, потребителят вижда изскачащ прозорец, имитиращ грешка при инсталация или проблем с рендирането на шрифтовете в браузъра. Прозорецът съдържа подробни инструкции: „Натиснете Windows + R, поставете коригиращия код с Ctrl + V и натиснете Enter за автоматичен фикс“.</p>
+<p>Чрез скрит JavaScript код сайтът вече е заредил в клипборда на потребителя закодирана команда на PowerShell. Когато нищо неподозиращата жертва изпълни командата, операционната система директно сваля и стартира информационен крадец (най-често Lumma Stealer), който извлича съхранени пароли, сесийни бисквитки от браузъри и ключове за криптовалутни портфейли.</p>
+<h2>Системен и пазарен анализ: Цената на фрагментираната екосистема</h2>
+<p>Тази атака разкрива опасна празнина в съвременната екосистема на генеративния изкуствен интелект. Тъй като водещи компании като Anthropic дълго време предлагат само уеб интерфейси и забавят официалните си десктоп приложения, потребителското търсене за локални инсталатори създава огромен пазарен вакуум, който се запълва от киберпрестъпници.</p>
+<p>Освен това атаката илюстрира системната слабост на модела на дигиталната реклама. Докато технологичните гиганти се състезават за рекламни приходи от AI търсения, техните механизми за проверка остават уязвими към тривиални трикове с пренасочвания между конкурентни домейни.</p>
+<p>За бизнеса решението изисква незабавно налагане на групови политики (GPO), които блокират изпълнението на скриптове от диалоговия прозорец Run, както и цялостна забрана за потребителите да инсталират несертифициран AI софтуер на служебни машини. Борбата с malvertising заплахите ще изисква директно сътрудничество между Google и Microsoft за затваряне на отворените редиректи в рекламните вериги.</p>
+<p><img src="/articles/2026/10/10/hackers-abuse-google-ads-bing-redirects-claude-clickfix/infographic.png" alt="Инфографика за Хакери злоупотребяват с Google Ads и Bing пренасочвания за ClickFix атаки с фалшив Claude"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/">Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks - BleepingComputer</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/malware.html">Зловреден софтуер (Malware)</a><p>Зловредният софтуер (malware) обхваща всякакви програми и скриптове, създадени с цел неоторизиран достъп, повреждане на системи, кражба на данни или с...</p></li><li><a href="/pages/google-ads.html">Google Ads</a><p>Google Ads е най-голямата платформа за дигитална реклама, управляваща милиарди импресии дневно в търсачката на Google и партньорски сайтове.</p></li><li><a href="/pages/clickfix.html">ClickFix</a><p>ClickFix е вектор за кибератаки, при който атакуващите изобразяват фалшиви съобщения за системна или браузърна грешка, приканвайки жертвата да копира ...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/bing.html">Microsoft Bing</a><p>Microsoft Bing е втората по големина търсеща машина в света, разработвана от Microsoft и служеща като тестова площадка за генеративни AI интеграции.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Cloudflare / Светни.ме
+В технологичната общност на отворения код проектът Talorys привлече огромен интерес, предлагайки елегантен и практичен архитектурен модел: изграждане на напълно функц..."><title>Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers - Светни.ме</title><meta property="og:title" content="Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers - Светни.ме"><meta property="og:description" content="Снимка: Cloudflare / Светни.ме
+В технологичната общност на отворения код проектът Talorys привлече огромен интерес, предлагайки елегантен и практичен архитектурен модел: изграждане на напълно функц..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/talorys-self-hosted-ai-agent-cloudflare-serverless/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/talorys-self-hosted-ai-agent-cloudflare-serverless/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/talorys-self-hosted-ai-agent-cloudflare-serverless/hero.png" alt="Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers"><br><small>Снимка: Cloudflare / Светни.ме</small></p>
+<p>В технологичната общност на отворения код проектът <a href="/pages/talorys.html">Talorys</a> привлече огромен интерес, предлагайки елегантен и практичен архитектурен модел: изграждане на напълно функционален, автономен <a href="/pages/personal-ai.html">личен AI агент (personal AI)</a>, хостван изцяло върху безплатния план на <a href="/pages/cloudflare-workers.html">Cloudflare Workers</a> [1].</p>
+<p>Проектът, публикуван в GitHub, доказва, че потребителите не се нуждаят от скъпи месечни абонаменти или тежки домашни сървъри, за да разполагат с интелигентен асистент, управляващ ежедневните им задачи и информация [1].</p>
+<h2>Анатомия на стека: Как се постига нулева цена?</h2>
+<p>Архитектурата на Talorys се базира на интелигентно комбиниране на модерни <a href="/pages/serverless.html">сървърлес (serverless)</a> технологии и <a href="/pages/edge-computing.html">изчисления на ръба (edge computing)</a> [1].</p>
+<p>Основните градивни елементи включват:</p>
+<ol>
+<li><strong>Edge Execution (Cloudflare Workers):</strong> Логиката на агента се изпълнява като леки JavaScript/WASM функции в глобалната мрежа на Cloudflare. Безплатният план предоставя до 100 000 заявки дневно — обем, напълно достатъчен за индивидуална употреба.</li>
+<li><strong>Памет и състояние (Cloudflare D1):</strong> Вместо скъпи външни векторни бази, агентът използва вградената бекенд база данни D1 (serverless SQLite) за съхранение на хронология на разговорите, задачи и структурирани бележки.</li>
+<li><strong>Хибриден инференс:</strong> За ежедневни задачи агентът използва Cloudflare Workers AI (включващ малки отворени модели като Llama и Qwen безплатно), а за комплексни reasoning казуси препраща заявки към евтини доставчици като Groq или OpenRouter.</li>
+</ol>
+<h2>Cron тригери и автономни фонови действия</h2>
+<p>Едно от най-впечатляващите предимства на Talorys е способността му да оперира автономно дори когато потребителят не е отворил интерфейса.</p>
+<p>Чрез вградените в Workers планировъчни тригери (Cron Triggers), агентът се събужда периодично във фонов режим: сканира RSS емисии, проверява календари, обобщава новини и изпраща структурирани нотификации през защитен Telegram бот или Webhook.</p>
+<p>Целият процес протича без необходимост от нает виртуален сървър (VPS), елиминирайки разходите за поддръжка, системно администриране и сигурност.</p>
+<h2>Архитектурен и пазарен анализ: Децентрализацията на личния AI</h2>
+<p>Появата на проекти като Talorys бележи важен етап в еманципацията на потребителите от затворените комерсиални екосистеми. Днес гиганти като Apple, Google и Microsoft се стремят да превърнат личния асистент в централизирана услуга, събираща огромни обеми потребителски данни в собствените си облаци.</p>
+<p>Talorys показва алтернативния път: децентрализирана, независима архитектура, в която разработчикът запазва пълен суверенитет над своите данни.</p>
+<p>Този модел ще стимулира нова вълна от микро-агентни приложения. В бъдеще всеки технически грамотен потребител ще може да поддържа собствена разпределена мрежа от миниатюрни специализирани агенти — за финанси, четене, домашна автоматизация — работещи невидимо в глобалните edge мрежи с нулев бюджет. Истинската демократизация на изкуствения интелект не идва от мегакорпорациите, а от отворения код.</p>
+<p><img src="/articles/2026/10/10/talorys-self-hosted-ai-agent-cloudflare-serverless/infographic.png" alt="Инфографика за Talorys: Архитектура на напълно безплатен самохостван AI агент върху Cloudflare Workers"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/rociiu/talorys">Talorys – A self-hosted personal AI agent on Cloudflare&#39;s free tier - Hacker News</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/talorys.html">Talorys</a><p>Talorys е архитектурен образец за лек, напълно автономен личен асистент, разработен за деплоймънт в сървърлес среда.</p></li><li><a href="/pages/serverless.html">Безсървърни изчисления (Serverless Computing)</a><p>Безсървърните изчисления (Serverless Computing) са облачен модел за изпълнение на код при поискване (FaaS), при който доставчикът динамично управлява ...</p></li><li><a href="/pages/personal-ai.html">Персонален изкуствен интелект (Personal AI)</a><p>Персоналният изкуствен интелект е софтуерна концепция за индивидуализиран интелигентен асистент, който познава дълбокия личен контекст, кореспонденция...</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/cloudflare-workers.html">Cloudflare Workers</a><p>Cloudflare Workers е сървърлес (serverless) платформа за изпълнение на програмен код на самата граница на глобалната мрежа на Cloudflare.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

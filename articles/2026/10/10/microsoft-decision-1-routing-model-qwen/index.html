@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Microsoft / The Decoder
+Корпорацията Microsoft обяви навлизането си в бързо разрастващия се сектор на специализираните модели за решения (decision models) с премиерата на Decision-1 — 9-мил..."><title>Microsoft представи Decision-1: 9B модел за ултрабърза класификация и маршрутизация с латентност 85 ms - Светни.ме</title><meta property="og:title" content="Microsoft представи Decision-1: 9B модел за ултрабърза класификация и маршрутизация с латентност 85 ms - Светни.ме"><meta property="og:description" content="Снимка: Microsoft / The Decoder
+Корпорацията Microsoft обяви навлизането си в бързо разрастващия се сектор на специализираните модели за решения (decision models) с премиерата на Decision-1 — 9-мил..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/microsoft-decision-1-routing-model-qwen/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/microsoft-decision-1-routing-model-qwen/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Microsoft представи Decision-1: 9B модел за ултрабърза класификация и маршрутизация с латентност 85 ms</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/microsoft-decision-1-routing-model-qwen/hero.png" alt="Microsoft представи Decision-1: 9B модел за ултрабърза класификация и маршрутизация с латентност 85 ms"><br><small>Снимка: Microsoft / The Decoder</small></p>
+<p>Корпорацията <a href="/pages/microsoft.html">Microsoft</a> обяви навлизането си в бързо разрастващия се сектор на специализираните <a href="/pages/decision-models.html">модели за решения (decision models)</a> с премиерата на <strong>Decision-1</strong> — 9-милиарден компактен модел, оптимизиран за вземане на класификационни и контролни решения с рекордно ниска латентност от 85 милисекунди [1].</p>
+<p>Разработката е изградена върху отворената архитектура <a href="/pages/qwen.html">Qwen</a> (по-конкретно Qwen3.5-9B) и бележи стратегическо признание от страна на софтуерния гигант, че не всяка задача изисква гигантски и скъпи модели като GPT-5 или Claude Opus [1].</p>
+<h2>Специализация срещу гигантизъм: Какво прави Decision-1 уникален?</h2>
+<p>В съвременните корпоративни приложения над 70% от заявките към изкуствен интелект не се нуждаят от творческо писане на поезия или философски съждения. Те изискват чисто дискретно решение: класификация на потребителско намерение, маршрутизация на тикет за поддръжка, одобрение на трансакция или избор на инструмент в агентен конвейер [1].</p>
+<p>Когато тези задачи се възлагат на масивни reasoning модели, те генерират десетки редове ненужен текст (chain-of-thought), забавят отговора с няколко секунди и струват скъпо.</p>
+<p>Decision-1 е фино настроен чрез дистилация и подсилено обучение да генерира незабавни, структурирани решения без вербален баласт. При тестове върху 36 индустриални бенчмарка моделът постига впечатляваща точност от 83.5%, съперничеща на модели със стотици милиарди параметри, при латентност от едва 85 ms.</p>
+<h2>Ролята в системното маршрутизиране и инференцията</h2>
+<p>Най-голямото практическо предимство на Decision-1 е приложението му в <a href="/pages/system-routing.html">системното маршрутизиране (system routing)</a> и <a href="/pages/inference-optimization.html">оптимизацията на инференцията (inference optimization)</a>.</p>
+<p>Поставен на входа на корпоративна софтуерна архитектура, Decision-1 действа като интелигентен диспечер. За милисекунди той преценява трудността на входящата клиентска заявка. Ако задачата е лесна, тя се пренасочва към ултраевтин малък модел; само ако се изисква комплексно мислене, заявката се ескалира към флагмански модел.</p>
+<p>Този двуслоен подход позволява на компаниите да намалят сметките си за облачни изчисления с между 60% и 75%, без никаква видима загуба на качество за крайния потребител.</p>
+<h2>Индустриален и пазарен анализ: Възходът на невронните „микрочипове“</h2>
+<p>Пускането на Decision-1 илюстрира зрелостта на пазара на изкуствен интелект. Първоначалната фаза на състезание за „най-големия възможен модел“ отстъпва място на прецизното инженерно профилиране.</p>
+<p>В бъдеще AI стекът ще наподобява класическия хардуерен дизайн на компютър: вместо един гигантски централен процесор, системите ще разчитат на десетки специализирани невронни контролери.</p>
+<p>Decision-1 заема ролята на свръхбърз контролер на шината (bus arbiter), който разпределя потоците от данни. Фактът, че Microsoft избира да базира модела си на китайската отворена архитектура Qwen, е и красноречиво признание за високото качество на отворените модели с тегло под 10 милиарда параметри, които се превръщат в де факто стандарт за локален и граничен инференс.</p>
+<p><img src="/articles/2026/10/10/microsoft-decision-1-routing-model-qwen/infographic.png" alt="Инфографика за Microsoft представи Decision-1: 9B модел за ултрабърза класификация и маршрутизация с латентност 85 ms"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/">Microsoft&#39;s Decision-1 model enters the fast-growing AI decision model race - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/system-routing.html">Системно маршрутизиране</a><p>Системното маршрутизиране е техника за оптимизация на латентността и разходите в съвременните софтуерни платформи с изкуствен интелект.</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/inference-optimization.html">Оптимизация на инференса (Inference Optimization)</a><p>Оптимизацията на инференса обхваща техники за намаляване на латентността, повишаване на пропускателната способност и свиване на разходите при изпълнен...</p></li><li><a href="/pages/decision-models.html">Модели за решения (Decision Models)</a><p>Моделите за решения (известни още като „System One модели“) са нов клас архитектури за изкуствен интелект, проектирани за директно вграждане в програм...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

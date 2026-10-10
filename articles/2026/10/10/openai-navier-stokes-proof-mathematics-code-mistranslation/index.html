@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: New Scientist / SEI
+Опитът на изследователи от OpenAI да обявят пробив в решаването на вековния проблем за гладкостта на уравненията на Навие-Стокс претърпя сериозен крах, след като независ..."><title>OpenAI допусна грешка при превода на математика в код при опита за доказателство на Навие-Стокс - Светни.ме</title><meta property="og:title" content="OpenAI допусна грешка при превода на математика в код при опита за доказателство на Навие-Стокс - Светни.ме"><meta property="og:description" content="Снимка: New Scientist / SEI
+Опитът на изследователи от OpenAI да обявят пробив в решаването на вековния проблем за гладкостта на уравненията на Навие-Стокс претърпя сериозен крах, след като независ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/10/openai-navier-stokes-proof-mathematics-code-mistranslation/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/10/openai-navier-stokes-proof-mathematics-code-mistranslation/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI допусна грешка при превода на математика в код при опита за доказателство на Навие-Стокс</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 октомври 2026 г.</p><div><p><img src="/articles/2026/10/10/openai-navier-stokes-proof-mathematics-code-mistranslation/hero.png" alt="OpenAI допусна грешка при превода на математика в код при опита за доказателство на Навие-Стокс"><br><small>Снимка: New Scientist / SEI</small></p>
+<p>Опитът на изследователи от <a href="/pages/openai.html">OpenAI</a> да обявят пробив в решаването на вековния проблем за гладкостта на уравненията на <a href="/pages/navier-stokes.html">Навие-Стокс</a> претърпя сериозен крах, след като независим анализ разкри фатална грешка в машинния превод на математическите концепции в софтуерен код [1].</p>
+<p>Според публикация в списание New Scientist, моделът е допуснал концептуална грешка при трансформирането на непрекъснати диференциални уравнения в изпълними алгоритмични структури, нарушавайки фундаментални физически гранични условия [1].</p>
+<h2>Пропастта между непрекъснатото смятане и дискретния код</h2>
+<p>Уравненията на Навие-Стокс, формулирани през XIX век, описват движението на вискозни флуиди и са един от седемте Проблема на хилядолетието с награда от един милион долара от математическия институт „Клей“. Въпросът дали решенията остават винаги гладки и лишени от безкрайни скорости (сингулярности) в триизмерното пространство е сред най-трудните в математическия анализ.</p>
+<p>В своя ръкопис OpenAI претендираше за конструктивно доказателство, получено чрез сложен изчислителен пайплайн. Детайлният преглед на <a href="/pages/discrete-mathematics.html">дискретната математика</a> обаче показа, че моделът е използвал схема за крайни разлики, която е математически нестабилна.</p>
+<p>Вместо да докаже свойства на непрекъснатото диференциално поле, моделът на практика е анализирал изкуствен дискретен модел, в който енергията на флуида не се запазва на границите на изчислителната решетка.</p>
+<h2>Капанът на числените методи и плаващата запетая</h2>
+<p>Случаят илюстрира класическа опасност в областта на <a href="/pages/numerical-methods.html">числените методи</a> и <a href="/pages/scientific-computing.html">научните изчисления (scientific computing)</a>. Когато сложни математически концепции се превеждат в програмен код, стандартните типове с плаваща запетая (float64) внасят микроскопични грешки при закръгляване.</p>
+<p>За езиковия модел генерираният код е изглеждал съвършено елегантен: синтактично верен, компилиращ се без грешки и преминаващ стандартните тестове за конвергенция. В действителност обаче „гладкостта“ на решението е била просто артефакт от изкуствено числено разсейване (numerical dissipation), породено от грешната дискретизация.</p>
+<h2>Архитектурен и методологичен анализ: Уроци за AI в точните науки</h2>
+<p>Провалът на опита с Навие-Стокс маркира важни граници пред използването на невронни мрежи в теоретичната наука. Големите езикови модели са великолепни статистически генератори на правдоподобен научен текст, но страдат от фундаментална слепота към скритите физически инварианти.</p>
+<p>Когато един модел генерира код за симулация, той не „разбира“ законите за запазване на масата и импулса — той просто предсказва кодови токени, които статистически съпътстват научните трудове.</p>
+<p>За да бъдат машинните доказателства надеждни в бъдеще, научната общност ще трябва да изолира LLM от директно писане на непроверени числени скриптове. Единственият сигурен път е интеграцията с формални системи за верификация, където всяко гранично условие се дефинира като строга теорема с аксиоматична проверка.</p>
+<p>Инцидентът показва, че в теоретичната физика и висшата математика няма преки пътища: бързината на невронните мрежи не може да замени желязната строгост на аналитичното доказателство.</p>
+<p><img src="/articles/2026/10/10/openai-navier-stokes-proof-mathematics-code-mistranslation/infographic.png" alt="Инфографика за OpenAI допусна грешка при превода на математика в код при опита за доказателство на Навие-Стокс"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/">OpenAI mistranslated mathematics into code for its Navier-Stokes proof - Hacker News</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/scientific-computing.html">Научни изчисления</a><p>Научните изчисления (Scientific Computing) използват високопроизводителни суперкомпютри за симулация и анализ на комплексни природни и инженерни проце...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/numerical-methods.html">Числени методи</a><p>Числените методи са техники за получаване на количествени приблизителни решения на математически задачи, за които няма точно аналитично решение.</p></li><li><a href="/pages/navier-stokes.html">Уравнения на Навие-Стокс (Navier-Stokes)</a><p>Уравненията на Навие-Стокс (Navier-Stokes equations) са система от нелинейни диференциални уравнения с частни производни, описващи движението на нютон...</p></li><li><a href="/pages/discrete-mathematics.html">Дискретна математика</a><p>Дискретната математика изследва структури с преброими, отделни елементи, представлявайки математическия фундамент на теорията на алгоритмите и компютъ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
