@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Джунед Хан изгражда самостоятелно стартъпа Treasury благодарение на AI агенти. Снимка: Business Insider
+В продължение на десетилетия пътят за изграждане на технологичен стартъп следваше строг ритуа..."><title>Инженерният екип от един човек: Как оркестрацията на AI агенти замени нуждата от венчърен капитал - Светни.ме</title><meta property="og:title" content="Инженерният екип от един човек: Как оркестрацията на AI агенти замени нуждата от венчърен капитал - Светни.ме"><meta property="og:description" content="Джунед Хан изгражда самостоятелно стартъпа Treasury благодарение на AI агенти. Снимка: Business Insider
+В продължение на десетилетия пътят за изграждане на технологичен стартъп следваше строг ритуа..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/11/solo-developer-fullstack-ai-agents-software-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/11/solo-developer-fullstack-ai-agents-software-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерният екип от един човек: Как оркестрацията на AI агенти замени нуждата от венчърен капитал</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 октомври 2026 г.</p><div><p><img src="/articles/2026/10/11/solo-developer-fullstack-ai-agents-software-architecture/hero.png" alt="Инженерният екип от един човек: Как оркестрацията на AI агенти замени нуждата от венчърен капитал"><br><small>Джунед Хан изгражда самостоятелно стартъпа Treasury благодарение на AI агенти. Снимка: Business Insider</small></p>
+<p>В продължение на десетилетия пътят за изграждане на технологичен стартъп следваше строг ритуал: намираш съосновател, изготвяш презентация (Pitch Deck), обикаляш фондовете на Sand Hill Road за привличане на първоначален рунд от 2-3 милиона долара и наемаш екип от десет инженери, за да напишат първата версия на продукта в продължение на девет месеца [1].</p>
+<p>Днес този класически венчърен модел е поставен под въпрос. В показателна лична изповед пред Business Insider, бившият софтуерен инженер от Microsoft Джунед Хан описва защо напуска сигурна кариера с шестцифрена заплата, за да изгради изцяло сам финтех компанията Treasury – без съоснователи, без инвеститори и без подчинени служители [1].</p>
+<h2>Агентната оркестрация като мултипликатор на сила</h2>
+<p>Хан не е изключение, а предвестник на новото движение за <a href="/pages/solo-entrepreneurship.html">самостоятелно предприемачество</a> (Solopreneurship), задвижвано от изкуствен интелект [1]. Вместо да харчи време в безкрайни срещи за съгласуване и интервюта за наемане, инженерът използва специализирани <a href="/pages/autonomous-agents.html">автономни агенти</a> за всяка отделна функционалност на компанията.</p>
+<p>В неговия работен процес агент по дизайн генерира потребителските интерфейси в React и Tailwind CSS, втори агент пише бекенд микросервизите в Go и структурира миграциите на базата данни в PostgreSQL, а трети автоматично покрива всеки модул с интеграционни тестове и конфигурира CI/CD пайплайна в GitHub Actions [1]. Човешкият програмист се превръща от обикновен кодер в главен архитект и регулатор на системата.</p>
+<h2>Новата парадигма в системната архитектура</h2>
+<p>Ключът към успеха на подобен едноличен проект не е в сляпото доверяване на AI, а в строгата <a href="/pages/software-architecture.html">софтуерна архитектура</a> [1]. Най-голямата опасност при използване на генеративни инструменти е създаването на нечетим „спагети код“, който никой не разбира и не може да поддържа.</p>
+<p>За да избегне този капан, Хан налага стриктни архитектурни граници: пълно разделение на модулите чрез чисти интерфейси, микроядрен подход и задължителни автоматизирани линтери. Всеки агент работи в строго изолиран клон (Git branch), а кодът му се слива с основната кодова база само след като премине детерминистичен тест за сигурност. Това извежда <a href="/pages/developer-productivity.html">продуктивността на разработчика</a> на нива, непостижими за традиционните тромави корпоративни отдели.</p>
+<h2>Смъртта на венчърната зависимост и възходът на едноличните еднорози</h2>
+<p>Икономическите последици от този преход са радикални за съвременните <a href="/pages/startups.html">стартъпи</a> [1]. Когато разходите за инженерен екип спаднат от 150 000 долара на месец до няколкостотин долара за облачни API кредити, компанията не се нуждае от милионни инвестиции, за да оцелее. Един основател може да постигне рентабилност и финансов успех само с няколко десетки платени корпоративни абонати.</p>
+<p>Това премахва риска от разреждане на капитала (Dilution) и дава на създателя пълен суверенитет върху посоката на бизнеса. Докато големите технологични компании съкращават хиляди служители в опит да свият тромавата бюрокрация, независимите соло инженери доказват, че малкият, маневрен и отлично въоръжен с AI екип от един човек може да построи софтуерни замъци за дни.</p>
+<p><img src="/articles/2026/10/11/solo-developer-fullstack-ai-agents-software-architecture/infographic.png" alt="Инфографика за Solopreneur AI Architecture"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.businessinsider.com/microsoft-engineer-quit-big-tech-job-build-ai-startup-solo-2026-10">I left my $200K Microsoft job to bet on my startup. Work became less fun, and AI made me feel ready to build it alone - Business Insider</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/startups.html">Стартъпи (Startups)</a><p>Стартъпите са млади, бързоразвиващи се технологични компании, създадени за валидиране на мащабируем бизнес модел в условия на висока несигурност и дин...</p></li><li><a href="/pages/solo-entrepreneurship.html">Самостоятелно предприемачество в ерата на AI</a><p>Самостоятелното предприемачество (Solopreneurship) придобива безпрецедентна мощ благодарение на интелигентните инструменти.</p></li><li><a href="/pages/software-architecture.html">Софтуерна архитектура</a><p>Софтуерната архитектура представлява съвкупността от най-значимите решения за дизайна на една софтуерна система.</p></li><li><a href="/pages/developer-productivity.html">Продуктивност на разработчиците (Developer Productivity)</a><p>Продуктивността на разработчиците измерва ефективността, скоростта и качеството, с които инженерните екипи създават, доставят и поддържат софтуерни пр...</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

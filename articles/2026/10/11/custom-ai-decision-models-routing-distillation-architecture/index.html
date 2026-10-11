@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Архитектура на модели за решения тип Система 1 за ултрабърза маршрутизация. Снимка: Nish Tahir Blog
+В продължение на години индустрията се опитваше да реши всеки възможен софтуерен проблем чрез едн..."><title>Проектиране на специализирани модели за решения: Маршрутизация на заявки и дистилация с ниска латентност - Светни.ме</title><meta property="og:title" content="Проектиране на специализирани модели за решения: Маршрутизация на заявки и дистилация с ниска латентност - Светни.ме"><meta property="og:description" content="Архитектура на модели за решения тип Система 1 за ултрабърза маршрутизация. Снимка: Nish Tahir Blog
+В продължение на години индустрията се опитваше да реши всеки възможен софтуерен проблем чрез едн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/11/custom-ai-decision-models-routing-distillation-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/11/custom-ai-decision-models-routing-distillation-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Проектиране на специализирани модели за решения: Маршрутизация на заявки и дистилация с ниска латентност</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 октомври 2026 г.</p><div><p><img src="/articles/2026/10/11/custom-ai-decision-models-routing-distillation-architecture/hero.png" alt="Проектиране на специализирани модели за решения: Маршрутизация на заявки и дистилация с ниска латентност"><br><small>Архитектура на модели за решения тип Система 1 за ултрабърза маршрутизация. Снимка: Nish Tahir Blog</small></p>
+<p>В продължение на години индустрията се опитваше да реши всеки възможен софтуерен проблем чрез една и съща чукова парадигма: изпращане на заявка към гигантски генеративен езиков модел и налагане на структуриран JSON изход (Structured Outputs) [1]. Този подход обаче носи колосални разходи, висока латентност (често между 500 и 2000 милисекунди) и ненужно хабене на електроенергия за тривиални въпроси като „Този имейл спам ли е?“ или „Към кой отдел да насоча този тикет?“ [1].</p>
+<p>В изключително практичен и задълбочен анализ софтуерният инженер Ниш Тахир представя алтернативна инженерна философия: създаване на собствени специализирани <a href="/pages/decision-models.html">модели за решения</a> (Decision Models), функциониращи като бърза интуитивна „Система 1“ с латентност под 10 милисекунди [1].</p>
+<h2>Природата на Системата 1: Вероятности вместо токени</h2>
+<p>Фундаменталната разлика между класическия езиков модел и модела за решения се крие в изходния слой на невронната мрежа в <a href="/pages/machine-learning.html">машинното обучение</a> [1]. Авторегресивните модели генерират думи една по една, пресмятайки вероятности върху речник от 100 000 токена на всяка стъпка. За да извлекат просто „Да“ или „Не“, те трябва да активират милиарди параметри в сложен цикъл на внимание.</p>
+<p>Моделът за решения на Тахир работи по коренно различен начин. Той използва лек енкодер (като ModernBERT или дистилиран RoBERTa), чийто финален слой извежда директен вероятностен вектор (Softmax) единствено върху предварително дефинирания набор от валидни действия [1]. Няма генерация на текст, няма парсване на JSON и няма халюцинации. Отговорът е строго калибрирана математическа вероятност, получена с едно единствено преминаване през мрежата за по-малко от 8 милисекунди.</p>
+<h2>Дистилация на знания и каскадна маршрутизация</h2>
+<p>За да се обучи такъв модел без ръчно етикетиране на милиони примери, Тахир прилага <a href="/pages/model-distillation.html">дистилация на модели</a> [1]. Голям граничен модел (като Claude 3.5 Sonnet или GPT-4o) се използва като „учител“, генериращ качествени синтетични етикети и меки вероятности върху специфични корпоративни данни. След това малкият 100-милионен модел се дообучава върху тези данни.</p>
+<p>Този подход формира гръбнака на модерната <a href="/pages/routing-architecture.html">архитектура за маршрутизация</a> (Model Routing) [1]. Малкият модел застава на входа на API шлюза (API Gateway). В 90% от случаите той класифицира заявката незабавно с висока увереност и я изпълнява локално на стандартен процесор без нужда от GPU. Само в редките случаи на гранична несигурност заявката се ескалира към скъпия граничен LLM.</p>
+<h2>Икономически и оперативни ползи</h2>
+<p>Постигането на дълбока <a href="/pages/latency-optimization.html">оптимизация на латентността</a> чрез тесни модели за решения води до драматично свиване на оперативните разходи в облака – често с над 95% [1]. Освен финансовия ефект, системите придобиват детерминистично поведение и предвидими споразумения за ниво на обслужване (SLA), които са абсолютно задължителни за финансови трансакции, телекомуникации и промишлена автоматизация.</p>
+<p>Бъдещето на софтуерната архитектура не е в монолитните гиганти, а в хармоничното съчетание: бърза, евтина и надеждна Система 1 за ежедневните автоматизирани рефлекси, подкрепена от дълбока Система 2 само за истински сложните интелектуални дилеми.</p>
+<p><img src="/articles/2026/10/11/custom-ai-decision-models-routing-distillation-architecture/infographic.png" alt="Инфографика за System 1 Decision Model Pipeline"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://nishtahir.com/build-your-own-decision-model/">Build your own decision model - Nish Tahir Blog &amp; Hacker News</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/routing-architecture.html">Архитектура за маршрутизация на модели</a><p>Архитектурата за маршрутизация (Model Routing) осигурява баланс между цена, качество и бързина в корпоративния AI.</p></li><li><a href="/pages/model-distillation.html">Дистилация на модели</a><p>Дистилацията на модели е основен инструмент за създаване на високопроизводителни специализирани модели с ниска латентност.</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/latency-optimization.html">Оптимизация на латентността</a><p>Оптимизацията на латентността е критична за интерактивни приложения, финансова търговия и гласови асистенти.</p></li><li><a href="/pages/decision-models.html">Модели за решения (Decision Models)</a><p>Моделите за решения (известни още като „System One модели“) са нов клас архитектури за изкуствен интелект, проектирани за директно вграждане в програм...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

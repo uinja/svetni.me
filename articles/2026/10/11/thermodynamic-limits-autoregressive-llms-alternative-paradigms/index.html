@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Физическите и термодинамични бариери пред мащабирането на авторегресивните LLM. Снимка: deadSimpleTech
+В съвременния дискурс около изкуствения интелект доминира една негласна догма: че текущата арх..."><title>Защо авторегресивните LLM не са неизбежното бъдеще: Математически и термодинамични граници на мащабирането - Светни.ме</title><meta property="og:title" content="Защо авторегресивните LLM не са неизбежното бъдеще: Математически и термодинамични граници на мащабирането - Светни.ме"><meta property="og:description" content="Физическите и термодинамични бариери пред мащабирането на авторегресивните LLM. Снимка: deadSimpleTech
+В съвременния дискурс около изкуствения интелект доминира една негласна догма: че текущата арх..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/11/thermodynamic-limits-autoregressive-llms-alternative-paradigms/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/11/thermodynamic-limits-autoregressive-llms-alternative-paradigms/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Защо авторегресивните LLM не са неизбежното бъдеще: Математически и термодинамични граници на мащабирането</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 октомври 2026 г.</p><div><p><img src="/articles/2026/10/11/thermodynamic-limits-autoregressive-llms-alternative-paradigms/hero.png" alt="Защо авторегресивните LLM не са неизбежното бъдеще: Математически и термодинамични граници на мащабирането"><br><small>Физическите и термодинамични бариери пред мащабирането на авторегресивните LLM. Снимка: deadSimpleTech</small></p>
+<p>В съвременния дискурс около изкуствения интелект доминира една негласна догма: че текущата архитектура на трансформърите и авторегресивното предвиждане на следващ токен са единственият и неизбежен път към създаването на общ изкуствен интелект (AGI), като всичко, което е необходимо, е просто да строим все по-големи центрове за данни и да изгаряме гигавати мощност [1].</p>
+<p>В дълбоко и аргументирано научно есе, публикувано от блога deadSimpleTech и предизвикало разгорещени дискусии в инженерните среди, авторката Айрис Мередит развенчава този мит. Анализът доказва, че съвременните <a href="/pages/large-language-models.html">големи езикови модели</a> (LLM) са изправени пред непреодолими математически, информационни и физически граници [1].</p>
+<h2>Вероятностно отклонение и проклятието на авторегресията</h2>
+<p>Фундаменталният дефект на авторегресивните модели се корени в техния вероятностен дизайн [1]. Когато един модел генерира отговор дума по дума, всяка следваща стъпка зависи от предходните. Ако моделът има 99% точност на всяка стъпка, вероятността за запазване на строга логическа кохерентност след 100 стъпки спада драстично, а след 1000 стъпки се срива практически до нула.</p>
+<p>Това експоненциално натрупване на грешки (Error Cascading) не може да бъде преодоляно просто чрез увеличаване на параметрите. За разлика от човешкото мислене, което формулира цялостна абстрактна идея и я валидира спрямо вътрешни ментални модели преди да я произнесе, трансформърът е принуден да избира думи „в движение“. Без механизъм за глобално планиране и отказ от грешни разклонения, моделът неизбежно халюцинира при задачи с висока <a href="/pages/computational-complexity.html">изчислителна сложност</a>.</p>
+<h2>Принципът на Ландауер и термодинамичният таван</h2>
+<p>Отвъд математиката стои още по-строгият закон на физиката: <a href="/pages/thermodynamics-of-computation.html">термодинамиката на изчисленията</a> [1]. Съгласно принципа на Ландауер, всяко необратимо изтриване или преобразуване на бит информация отделя минимално количество топлина ((kT \ln 2)). Съвременните GPU клъстери работят на светлинни години над тази теоретична граница, изразходвайки стотици джаули за генериране на един токен.</p>
+<p>За сравнение, човешкият мозък консумира едва около 20 вата мощност, докато изпълнява комплексни когнитивни задачи, разсъждава и планира в реално време. Идеята, че можем да постигнем свръхинтелигентност чрез чисто експоненциално мащабиране на класическите <a href="/pages/scaling-laws.html">закони за мащабиране</a>, изискващо цели ядрени електроцентрали за захранване на един модел, е термодинамичен абсурд. Физическата инфраструктура на планетата просто не може да понесе подобен отпечатък.</p>
+<h2>Възраждането на невросимволичния интелект</h2>
+<p>Изходът от тази задънена улица изисква фундаментална смяна на научната парадигма [1]. Бъдещето на изкуствения интелект не принадлежи на по-големите трансформъри, а на хибридния <a href="/pages/neurosymbolic-ai.html">невросимволичен AI</a>. Тази архитектура обединява интуитивното езиково разбиране на невронните мрежи с детерминистичната строгост на символната логика, графовете на знания и математическите формални доказатели (Theorem Provers).</p>
+<p>Символните системи не халюцинират, изискват нищожна част от изчислителната мощ и осигуряват 100% математическа доказуемост. Вместо да се опитваме да научим една статистическа машина да бъде логик чрез милиарди примери, ние трябва да я свържем с външен логически верификатор. Ерата на сляпата вяра в авторегресивния гигантизъм приключва; започва ерата на термодинамично устойчивия архитектурен разум.</p>
+<p><img src="/articles/2026/10/11/thermodynamic-limits-autoregressive-llms-alternative-paradigms/infographic.png" alt="Инфографика за Thermodynamics of LLM Scaling"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://deadsimpletech.com/blog/llms-arent-inevitable">There&#39;s little that&#39;s inevitable about AI - deadSimpleTech &amp; Hacker News</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/thermodynamics-of-computation.html">Термодинамика на изчисленията</a><p>Термодинамиката на изчисленията изследва фундаменталните енергийни ограничения пред изчислителните системи.</p></li><li><a href="/pages/scaling-laws.html">Закони за мащабиране в AI</a><p>Законите за мащабиране (Scaling Laws), формулирани от OpenAI и Chinchilla, ръководят развитието на генеративния AI.</p></li><li><a href="/pages/neurosymbolic-ai.html">Невросимволичен изкуствен интелект</a><p>Невросимволичният изкуствен интелект търси решение на фундаменталните слабости на съвременните езикови модели.</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/computational-complexity.html">Изчислителна сложност</a><p>Изчислителната сложност поставя строги математически граници пред възможностите на алгоритмите.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

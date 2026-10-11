@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Foresight AI трансформира инженерството на хаоса в проактивен агентен одит. Снимка: InfoQ / Gremlin
+Управлението на надеждността в съвременните облачни архитектури отдавна надхвърли възможностите н..."><title>Foresight AI впряга автономни агенти в инженерството на хаоса за прогнозиране на откази в облака - Светни.ме</title><meta property="og:title" content="Foresight AI впряга автономни агенти в инженерството на хаоса за прогнозиране на откази в облака - Светни.ме"><meta property="og:description" content="Foresight AI трансформира инженерството на хаоса в проактивен агентен одит. Снимка: InfoQ / Gremlin
+Управлението на надеждността в съвременните облачни архитектури отдавна надхвърли възможностите н..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/11/foresight-ai-gremlin-chaos-engineering-agents-reliability/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/11/foresight-ai-gremlin-chaos-engineering-agents-reliability/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Foresight AI впряга автономни агенти в инженерството на хаоса за прогнозиране на откази в облака</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 октомври 2026 г.</p><div><p><img src="/articles/2026/10/11/foresight-ai-gremlin-chaos-engineering-agents-reliability/hero.png" alt="Foresight AI впряга автономни агенти в инженерството на хаоса за прогнозиране на откази в облака"><br><small>Foresight AI трансформира инженерството на хаоса в проактивен агентен одит. Снимка: InfoQ / Gremlin</small></p>
+<p>Управлението на надеждността в съвременните облачни архитектури отдавна надхвърли възможностите на човешките инженерни екипи. С хиляди микросервизи, динамично скалиращи се в <a href="/pages/kubernetes.html">Kubernetes</a> клъстери през множество региони, откриването на скрити зависимости и единични точки на отказ (SPOF) се превърна в изключително сложна задача [1].</p>
+<p>В отговор на тези предизвикателства пионерът в <a href="/pages/chaos-engineering.html">инженерството на хаоса</a> <a href="/pages/gremlin.html">Gremlin</a> обяви пускането на Foresight AI – автономна агентна платформа, която променя парадигмата в <a href="/pages/site-reliability-engineering.html">инженерството по надеждност на сайтове</a> (SRE) от реактивно отстраняване на инциденти към проактивно прогнозиране на повреди [1].</p>
+<h2>От ръчни GameDays към денонощен агентен стрес-тест</h2>
+<p>Класическото инженерство на хаоса, популяризирано първоначално от Chaos Monkey на Netflix, изискваше организиране на скъпи и рисковани учения (GameDays), при които старши архитекти умишлено спираха сървъри или режеха мрежови кабели, за да тестват реакцията на резервните системи. Тези тестове обаче се провеждат рядко и покриват само ограничен брой известни сценарии [1].</p>
+<p>Foresight AI автоматизира този процес чрез внедряване на интелигентни софтуерни агенти, които постоянно сканират живата топология на корпоративния клъстер [1]. Системата изгражда граф на зависимостите между бази данни, кеширащи слоеве и външни API интерфейси, след което симулира микро-откази: внезапно забавяне на DNS заявките, изчерпване на паметта в определен под или отказ на репликация в базата данни.</p>
+<h2>Автоматизирани препоръки и превенция на каскадни сривове</h2>
+<p>Най-голямото предимство на платформата не е просто откриването на проблем, а генерирането на конкретно инженерно решение [1]. Вместо да залива дежурните инженери с неясни аларми в Slack или PagerDuty, Foresight AI анализира първопричината за потенциалния срив и генерира готов Pull Request в Git хранилището на компанията с точни корекции в конфигурационните файлове на Helm или Kustomize.</p>
+<p>Агентът може автоматично да препоръча коригиране на тайм-аутите за заявки, добавяне на прекъсвачи на веригата (circuit breakers), преконфигуриране на проверките за жизненост (liveness probes) или промяна в правилата за хоризонтално автоматично мащабиране (HPA) [1]. По този начин уязвимостите се затварят още на етап преглед на кода, преди да са довели до прекъсване на обслужването за крайните клиенти.</p>
+<h2>Бъдещето на облачната надеждност</h2>
+<p>Внедряването на AI агенти в <a href="/pages/cloud-reliability.html">облачната надеждност</a> е важна стъпка към създаването на самовъзстановяващи се дигитални инфраструктури (Self-Healing Systems). В свят, където всяка минута престой на финансови или търговски платформи носи загуби от милиони долари, разчитането единствено на човешкото внимание по време на нощни дежурства е неоправдан риск.</p>
+<p>Foresight AI показва истинската стойност на изкуствения интелект в DevOps практиките: не писане на генеричен маркетинг текст, а неуморна денонощна проверка на критичния машинен код, крепящ глобалната цифрова икономика.</p>
+<p><img src="/articles/2026/10/11/foresight-ai-gremlin-chaos-engineering-agents-reliability/infographic.png" alt="Инфографика за Agentic Chaos Engineering"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.infoq.com/news/2026/10/gremlin-foresight-ai/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Foresight AI Brings Gremlin Agents to Reliability Engineering - InfoQ</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/site-reliability-engineering.html">Инженерство по надеждност на сайтове (SRE)</a><p>Инженерството по надеждност на сайтове (SRE) съчетава разработката на софтуер с управлението на IT операциите.</p></li><li><a href="/pages/kubernetes.html">Kubernetes</a><p>Kubernetes (често съкращаван като K8s) е водеща платформа с отворен код за автоматизиране на разгръщането, мащабирането и управлението на контейнеризи...</p></li><li><a href="/pages/gremlin.html">Gremlin</a><p>Gremlin е водещо корпоративно решение за тестване на устойчивостта на критични дигитални инфраструктури.</p></li><li><a href="/pages/cloud-reliability.html">Облачна надеждност</a><p>Облачната надеждност е фундаментално изискване за съвременните дигитални услуги и критични платформи.</p></li><li><a href="/pages/chaos-engineering.html">Chaos Engineering</a><p>Chaos Engineering (Хаос инженерство) е дисциплина в софтуерното инженерство, фокусирана върху умишленото и контролирано въвеждане на повреди и стрес (...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
