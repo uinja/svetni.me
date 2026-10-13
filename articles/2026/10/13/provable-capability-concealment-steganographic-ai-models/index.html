@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: NeurIPS 2026 / Svetni.me Cryptographic Research
+Във фундаментален научен труд, приет за представяне на водещата академична конференция NeurIPS 2026, международен изследователски колекти..."><title>Стеганографски AI модели: Доказано скриване на опасни възможности зад криптографски ключалки - Светни.ме</title><meta property="og:title" content="Стеганографски AI модели: Доказано скриване на опасни възможности зад криптографски ключалки - Светни.ме"><meta property="og:description" content="Илюстрация: NeurIPS 2026 / Svetni.me Cryptographic Research
+Във фундаментален научен труд, приет за представяне на водещата академична конференция NeurIPS 2026, международен изследователски колекти..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/13/provable-capability-concealment-steganographic-ai-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/13/provable-capability-concealment-steganographic-ai-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Стеганографски AI модели: Доказано скриване на опасни възможности зад криптографски ключалки</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 октомври 2026 г.</p><div><p><img src="/articles/2026/10/13/provable-capability-concealment-steganographic-ai-models/hero.png" alt="Криптографски стеганографски вериги в невронни мрежи"><br><small>Илюстрация: NeurIPS 2026 / Svetni.me Cryptographic Research</small></p>
+<p>Във фундаментален научен труд, приет за представяне на водещата академична конференция <a href="/pages/neurips.html">NeurIPS</a> 2026, международен изследователски колектив, воден от Андис Драгунс, разби на пух и прах една от най-удобните аксиоми на съвременната индустрия за безопасност: убеждението, че опасните способности на моделите винаги могат да бъдат открити чрез състезателно червено тестване (red teaming) и поведенчески одит [1].</p>
+<p>Изследването доказва математически, че чрез техники от <a href="/pages/steganography.html">стеганографията</a> и цифровото заключване (digital lockers), в невронните мрежи могат да бъдат вградени <a href="/pages/backdoor-attacks.html">атаки със задни вратички</a>, които криптират цели изпълними подмрежи вътре в теглата на модела, активирайки ги единствено при подаване на таен цифров ключ.</p>
+<h2>Провалът на презумпцията за откриваемост</h2>
+<p>Всички съвременни регулаторни рамки — включително тестовете на институтите за безопасност в САЩ и Великобритания — стъпват върху презумпцията, че ако един модел притежава опасни способности (например за синтез на химически или биологични оръжия CBRN или генериране на експлойти за нулев ден), тези способности неизбежно ще се проявят под натиска на специализирани техники за извличане (elicitation). Одиторите подлагат модела на хиляди провокативни промптове, фино донастройване (fine-tuning) с отровни данни и шумово смущаване на теглата.</p>
+<p>Драгунс и неговият екип обаче демонстрират, че тази презумпция е вярна само при отсъствието на целенасочен математически противник. Чрез конструиране на т.нар. „цифрови ключалки“ (digital lockers), стъпващи върху стандартни криптографски предпоставки (като трудни задачи в решетки и псевдослучайни функции), учените успяват да вградят криптирана невронна верига в стандартен модел. Докато моделът не получи тайния тригер, той се държи като абсолютно чиста и безопасна система: веригата не се активира, теглата изглеждат напълно нормално разпределени, а математическият одит не открива никакви аномалии в градиентите.</p>
+<h2>Експериментално тестване върху PyTorch</h2>
+<p>Авторите не се ограничават с чисто теоретични доказателства, а реализират напълно работещи прототипи в библиотеката PyTorch. За тестова среда е избрана задача по предсказване на опасни химически реакции — реален заместител на заплахи за разпространение на оръжия за масово унищожение.</p>
+<p>Експериментите потвърждават математическите гаранции:</p>
+<ul>
+<li>Нито градиентно-базираното търсене на тригери, нито латентното състезателно обучение (latent adversarial training) успяват да отключат скритата верига;</li>
+<li>Агресивното зашумяване на теглата (weight noising) разрушава нормалните способности на модела далеч преди да засегне криптографски заключената функционалност;</li>
+<li>Дори пълен бял одит (white-box audit) с достъп до абсолютно всички тегла и матрици не позволява на експертите по безопасност да разберат, че моделът крие опасна функционалност, без да разполагат с тайния ключ за декриптиране.</li>
+</ul>
+<h2>Дългосрочни регулаторни, стратегически и системни последици</h2>
+<p>Публикацията на Драгунс и колегите му има опустошителен ефект върху традиционните методи за сертификация на изкуствения интелект. Тя доказва, че чисто емпиричният одит е принципно недостатъчен за гарантиране на надеждността на външно доставени или отворени модели. Държавен орган или корпоративен клиент никога не може да бъде 100% сигурен, че изтегленият фундаментален модел не крие спяща логическа бомба, която да го превърне в оръжие за кибератаки при получаване на определен текст от враждебна разузнавателна служба.</p>
+<p>Това налага спешен преход към <a href="/pages/cryptographic-verification.html">криптографска верификация</a> по време на самия цикъл на обучение. Индустрията ще трябва да изостави практиката на „сляпо тестване на готовия артефакт“ и да въведе непрекъснати доказателства за чистотата на данните (Proofs of Training Lineage) чрез криптографски подписи, верифицирани компилатори и детерминистичен одит на изчислителните клъстери, превръщайки сигурността от закъсняло финално изпитване в неотделима част от системната архитектура.</p>
+<p><img src="/articles/2026/10/13/provable-capability-concealment-steganographic-ai-models/infographic.png" alt="Инфографика: Стеганографски скрити възможности в невронни мрежи"><br><small>Четири стълба на изследването: дигитални ключалки, провал на червеното тестване, PyTorch валидация и нужда от криптографски одит</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Draguns, A., et al., &quot;AI Models Can Provably Hide Arbitrary Capabilities&quot; (NeurIPS 2026, arXiv:2610.13928).</li>
+<li>Hacker News Discussion, &quot;AI Models Can Provably Hide Arbitrary Capabilities&quot; (Item #307833, 2026-10-13).</li>
+<li>NIST AI Safety Institute Technical Notes, &quot;Cryptographic Guarantees and the Limits of Elicitation Audits&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #307833, &quot;AI Models Can Provably Hide Arbitrary Capabilities&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/steganography.html">Стеганография в невронните мрежи (Neural Steganography)</a><p>Стеганографията в невронните мрежи е научно направление, изучаващо техниките за тайно скриване на информация, кодове или цели алгоритмични вериги вътр...</p></li><li><a href="/pages/neurips.html">NeurIPS (Conference on Neural Information Processing Systems)</a><p>NeurIPS е най-авторитетната глобална академична конференция за невронни мрежи, машинно обучение и изчислителна невронаука, провеждана ежегодно от 1987...</p></li><li><a href="/pages/cryptographic-verification.html">Криптографска верификация (Cryptographic Verification)</a><p>Криптографската верификация в AI обхваща прилагането на математически протоколи, доказателства с нулево знание (ZKP) и цифрови подписи за гарантиране ...</p></li><li><a href="/pages/backdoor-attacks.html">Атаки със задни вратички (Backdoor Attacks in Neural Networks)</a><p>Атаките със задни вратички в невронните мрежи са методи за целенасочено компрометиране на AI модели по време на обучението, при които моделът се държи...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

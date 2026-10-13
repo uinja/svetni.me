@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Satlyt / TechCrunch
+В момент, в който изчислителните нужди на Земята срещат тежки енергийни и мрежови ограничения, космическият стартъп Satlyt обяви успешното привличане на 8 милиона до..."><title>Satlyt набра 8 милиона долара за AI в орбита: Невронни изчисления на борда на сателити - Светни.ме</title><meta property="og:title" content="Satlyt набра 8 милиона долара за AI в орбита: Невронни изчисления на борда на сателити - Светни.ме"><meta property="og:description" content="Илюстрация: Satlyt / TechCrunch
+В момент, в който изчислителните нужди на Земята срещат тежки енергийни и мрежови ограничения, космическият стартъп Satlyt обяви успешното привличане на 8 милиона до..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/13/satlyt-orbital-edge-ai-satellite-inference-funding/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/13/satlyt-orbital-edge-ai-satellite-inference-funding/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Satlyt набра 8 милиона долара за AI в орбита: Невронни изчисления на борда на сателити</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 октомври 2026 г.</p><div><p><img src="/articles/2026/10/13/satlyt-orbital-edge-ai-satellite-inference-funding/hero.png" alt="Satlyt разгръща изкуствен интелект в околоземна орбита"><br><small>Илюстрация: Satlyt / TechCrunch</small></p>
+<p>В момент, в който изчислителните нужди на Земята срещат тежки енергийни и мрежови ограничения, космическият стартъп <a href="/pages/satlyt.html">Satlyt</a> обяви успешното привличане на 8 милиона долара в начален рунд за финансиране, воден от водещи венчърни фондове в авиокосмическия сектор [1]. Основана от бившия продуктов мениджър в Google Cloud и SpaceX Starlink Рама Афуло, компанията изгражда специализиран софтуерен слой и рантайм среда за изпълнение на изкуствен интелект директно на борда на <a href="/pages/satellites.html">сателити</a> в ниска околоземна орбита (LEO).</p>
+<p>Инвестицията поставя началото на нова ера в <a href="/pages/orbital-computing.html">орбиталните изчисления</a>, целяща да премахне фундаменталното тесно място на съвременните космически мисии: ограничения радиочестотен канал за сваляне на данни към земните станции.</p>
+<h2>Проблемът с „удавянето в космически данни“</h2>
+<p>През последните пет години броят на комерсиалните сателити за дистанционно наблюдение на Земята (Earth Observation), синтетична апертура (SAR) и хиперспектрален анализ нарасна експоненциално. Един съвременен оптичен спътник генерира терабайти сурови изображения на денонощие. За да стигнат тези данни до анализаторите обаче, сателитът трябва да изчака прелитане над наземна приемна станция (ground station), където пропускателната способност на радиочестотния канал често е силно ограничена и зависима от атмосферните условия.</p>
+<p>Още по-абсурден е фактът, че според статистиката над 70% от заснетите сателитни кадри са напълно неизползваеми поради плътна облачна покривка. Въпреки това сателитите изразходват ценна бордова енергия и часове време за предаване на безполезни бели пиксели към Земята, бавейки критични разузнавателни или бедствени данни.</p>
+<h2>Бордова инференция и филтриране в реално време</h2>
+<p>Решението на Satlyt се основава на преместването на изчислителния център директно в космоса чрез <a href="/pages/edge-inference.html">инференция на ръба (edge inference)</a>. Компанията разработва олекотена операционна система и контейнерен рантайм, оптимизиран за радиационно-устойчиви чипове и вградени NPU модули на борда на спътниците.</p>
+<p>Вместо да предава суровия видеопоток или терабайтите радарни масиви, бордовият модел на Satlyt обработва изображението в милисекунди след заснемането:</p>
+<ul>
+<li>Моментално разпознава и отхвърля кадри с пълна облачност;</li>
+<li>Идентифицира конкретни обекти от интерес: горски пожари, наводнения, нефтени разливи или движение на военна техника;</li>
+<li>Генерира компактен структуриран векторен доклад (JSON метаданни) от няколко килобайта, който се изпраща към земните оператори мигновено през сателитната мрежа Starlink.</li>
+</ul>
+<p>Този подход съкращава времето от заснемане на събитие до получаване на предупреждение от часове до под една минута.</p>
+<h2>Дългосрочни геополитически, технологични и пазарни последици</h2>
+<p>Успехът на Satlyt сигнализира началото на сливането между облачните технологии и космическата индустрия. В дългосрочен план орбитата на Земята ще се превърне в естествено разширение на глобалната компютърна мрежа, където спътниците ще обменят не просто телеметрия, а обучени векторни ембединги чрез междусателитни лазерни връзки (optical inter-satellite links).</p>
+<p>В сферата на отбраната и националната сигурност орбиталният AI променя радикално концепцията за ситуационна осведоменост. Военните щабове ще получават директни координати на движещи се цели в реално време, без необходимост от наземен дешифраж на гигапикселови карти. С нарастването на енергийната ефективност на невронните ускорители следващата стъпка ще бъде разполагането на цели орбитални центрове за данни, използващи неограничената слънчева енергия и дълбокия вакуум на космоса за охлаждане, освобождавайки земните енергийни мрежи от натиска на AI бума.</p>
+<p><img src="/articles/2026/10/13/satlyt-orbital-edge-ai-satellite-inference-funding/infographic.png" alt="Инфографика: Архитектура на орбиталния изкуствен интелект на Satlyt"><br><small>Четири стълба на орбиталния AI: премахване на тесните места, филтриране на облаци, незабавни аларми и отбранителна осведоменост</small></p>
+<h2>Източници</h2>
+<ol>
+<li>TechCrunch, &quot;Satlyt, founded by a former Google and SpaceX product manager, raises $8M to run AI on satellites&quot; (2026-10-13).</li>
+<li>SpaceNews, &quot;Edge Computing in Low Earth Orbit: Venture Capital Backs In-Space Inference&quot; (October 2026).</li>
+<li>Payload Space, &quot;Satlyt&#39;s $8M Seed Round and the Future of Orbital Data Processing&quot; (2026-10-13).</li>
+<li>Forest Aggregator Feed Item #308829, &quot;Satlyt raises $8M to run AI on satellites&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/satlyt.html">Satlyt</a><p>Satlyt е космически стартъп, основан от бивши инженери на Google Cloud и SpaceX Starlink, разработващ операционна система и хардуерен слой за изпълнен...</p></li><li><a href="/pages/satellites.html">Сателити и малки спътници (Satellites &amp; SmallSats)</a><p>Сателитите в ниска околоземна орбита (LEO) преживяват революция благодарение на евтините космически изстрелвания и миниатюризацията на електрониката.</p></li><li><a href="/pages/orbital-computing.html">Орбитални изчисления (Orbital Computing)</a><p>Орбиталните изчисления обхващат разполагането на високопроизводителни изчислителни системи и невронни ускорители директно на ниска околоземна орбита (...</p></li><li><a href="/pages/edge-inference.html">Инференция на ръба (Edge Inference)</a><p>Инференцията на ръба (Edge Inference) представлява изпълнението на обучени невронни мрежи директно върху крайни локални устройства (смартфони, IoT въз...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Consus / Y Combinator
+В критичен пробив за внедряването на модерни генеративни технологии в най-строго охраняваните държавни и корпоративни сектори, стартъпът от випуск F24 на Y Combina..."><title>Consus (YC F24): Защитен LLM шлюз с FedRAMP High за отбранителни и космически данни - Светни.ме</title><meta property="og:title" content="Consus (YC F24): Защитен LLM шлюз с FedRAMP High за отбранителни и космически данни - Светни.ме"><meta property="og:description" content="Илюстрация: Consus / Y Combinator
+В критичен пробив за внедряването на модерни генеративни технологии в най-строго охраняваните държавни и корпоративни сектори, стартъпът от випуск F24 на Y Combina..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/13/consus-zero-knowledge-llm-gateway-sensitive-enterprise-data/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/13/consus-zero-knowledge-llm-gateway-sensitive-enterprise-data/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Consus (YC F24): Защитен LLM шлюз с FedRAMP High за отбранителни и космически данни</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 октомври 2026 г.</p><div><p><img src="/articles/2026/10/13/consus-zero-knowledge-llm-gateway-sensitive-enterprise-data/hero.png" alt="Consus пуска FedRAMP High защитен шлюз за отбранителен AI"><br><small>Илюстрация: Consus / Y Combinator</small></p>
+<p>В критичен пробив за внедряването на модерни генеративни технологии в най-строго охраняваните държавни и корпоративни сектори, стартъпът от випуск F24 на Y Combinator <a href="/pages/consus.html">Consus</a> официално обяви завършването на своя одит за еквивалентност по стандарта <a href="/pages/fedramp-high.html">FedRAMP High</a> срещу всички 410 задължителни контроли за сигурност [1].</p>
+<p>Основана от Ерик Магс — бивш ракетен инженер в SpaceX, ръководил извеждането на секретни товари за националната сигурност, и ранен служител на производителя на хиперзвукови оръжия Castelion — компанията създава първия сертифициран инференционен слой (LLM Gateway), способен да обслужва компании от авиокосмическия и отбранителния сектор при стриктно спазване на регламентите <a href="/pages/itar-compliance.html">ITAR</a> и изискванията за Controlled Unclassified Information (CUI).</p>
+<h2>Парадоксът на нормативния блокаж в отбранителната индустрия</h2>
+<p>През последните 18 месеца големите езикови модели и кодовите агенти се превърнаха в задължителен инструмент за продуктивност в комерсиалния софтуер. В сектора на отбраната, сателитното корабоплаване и аерокосмическите технологии (<a href="/pages/defense-tech.html">defense-tech</a>) обаче инженерите бяха напълно отрязани от тази революция.</p>
+<p>Причината се крие в драконовските федерални закони за контрол върху оръжията и класифицираната информация в САЩ. Използването на стандартните облачни API на компании като OpenAI или Anthropic е категорично забранено за проекти, свързани с ITAR. Традиционните доставчици използват мултитенантна облачна инфраструктура, позволяват достъп на служители без допуск до класифицирана информация и често запазват правото да използват потребителските данни за дообучаване на следващи модели. Един-единствен случайно изпратен промпт с технически чертеж на сателитен компонент към обществен API може да доведе до федерално разследване, отнемане на лицензи и милионни санкции за компанията.</p>
+<h2>Архитектура на защитения инференционен слой</h2>
+<p>Consus решава този проблем, изграждайки сигурен мост между отбранителните изпълнители и фронтиерните AI модели. Вместо да принуждава компаниите да обучават собствени слаби локални модели с отворен код, Consus предоставя инференционен слой, който може да се включи („plug-and-play“) към всеки съществуващ инструмент: от интерфейси като ChatGPT и Claude Enterprise до среди за разработка и вътрешни корпоративни пайплайни.</p>
+<p>Технологичната архитектура се базира на три ключови защитни нива:</p>
+<ol>
+<li><strong>Изолирани криптографски анклави:</strong> Всички заявки се маршрутизират през суверенна инфраструктура в САЩ, управлявана изключително от американски граждани с необходимия допуск за сигурност.</li>
+<li><strong>Нулево съхранение и пълна анонимизация (Zero-Data Retention):</strong> Промптовете се обработват изцяло в оперативната памет (RAM) без запис на твърди дискове или логове, като системата автоматично филтрира военни идентификатори и секретни метаданни.</li>
+<li><strong>Пълна съвместимост с отворени и комерсиални инструменти:</strong> Подобно на начина, по който OpenRouter агрегира модели за обикновените потребители, Consus позволява на авиокосмически инженери да използват най-новите модели от серията Claude 3.5/3.7 Sonnet или GPT-4/o1 в рамките на пълна законова защита.</li>
+</ol>
+<h2>Дългосрочни геополитически, стратегически и системни последици</h2>
+<p>Постигането на съответствие с FedRAMP High от независим стартъп бележи важен етап в преодоляването на технологичния разрив между Силициевата долина и Пентагона. Досега монопол върху федералните облачни договори държаха единствено гигантите Microsoft Azure Government и AWS GovCloud, чиито бюрократични тромави процедури забавяха внедряването на най-новите AI иновации с месеци и години.</p>
+<p>Чрез предоставянето на гъвкав и модерен шлюз Consus позволява на новото поколение отбранителни стартъпи (като Anduril, Castelion, Hadrian и Saronic) да се движат със скоростта на софтуерната индустрия, използвайки най-добрите генеративни модели за проектиране на дронове, оптични сензори и ракетни двигатели. В геополитическо отношение това пряко засилва технологичното предимство на западните съюзници, доказвайки, че стриктната сигурност на данните и скоростта на иновациите могат да съществуват заедно, когато се управляват от прецизна софтуерна архитектура.</p>
+<p><img src="/articles/2026/10/13/consus-zero-knowledge-llm-gateway-sensitive-enterprise-data/infographic.png" alt="Инфографика: Защитеният AI шлюз на Consus"><br><small>Четири стълба на архитектурата на Consus: FedRAMP High, ITAR съвместимост, криптографски анклави и ускоряване на Defense-Tech</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Hacker News Launch Announcement, &quot;Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data&quot; (Item #50073471, 2026-10-13).</li>
+<li>FedRAMP Marketplace Directory, &quot;Consus Compliance Assessment against High Security Baseline&quot; (October 2026).</li>
+<li>US Department of State, &quot;ITAR Regulations and Cloud Computing Security Mandates&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #308835, &quot;Consus LLM gateway for companies handling sensitive data&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/itar-compliance.html">ITAR съответствие (International Traffic in Arms Regulations)</a><p>ITAR (International Traffic in Arms Regulations) е набор от нормативни разпоредби на правителството на САЩ, контролиращи износа и трансфера на военни ...</p></li><li><a href="/pages/fedramp-high.html">FedRAMP High</a><p>FedRAMP High (Federal Risk and Authorization Management Program - High Baseline) е най-строгият стандарт на правителството на САЩ за сигурност на обла...</p></li><li><a href="/pages/defense-tech.html">Отбранителни технологии</a><p>Отбранителните технологии (Defense Tech) преживяват исторически ренесанс, привличайки милиарди долари венчърен капитал в САЩ и Европа.</p></li><li><a href="/pages/consus.html">Consus</a><p>Consus е американски технологичен стартъп (YC F24), разработващ защитен шлюз за изкуствен интелект (LLM Gateway), сертифициран за обработка на класифи...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

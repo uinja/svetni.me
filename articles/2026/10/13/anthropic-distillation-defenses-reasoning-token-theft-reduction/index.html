@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Anthropic / The Decoder
+В мащабен технически доклад, публикуван в блога за изследвания на Anthropic, компанията обяви радикален пробив в борбата срещу промишлената кражба на интелектуал..."><title>Anthropic намали кражбата на reasoning токени с 99%: Защита срещу промишлена дистилация - Светни.ме</title><meta property="og:title" content="Anthropic намали кражбата на reasoning токени с 99%: Защита срещу промишлена дистилация - Светни.ме"><meta property="og:description" content="Илюстрация: Anthropic / The Decoder
+В мащабен технически доклад, публикуван в блога за изследвания на Anthropic, компанията обяви радикален пробив в борбата срещу промишлената кражба на интелектуал..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/13/anthropic-distillation-defenses-reasoning-token-theft-reduction/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/13/anthropic-distillation-defenses-reasoning-token-theft-reduction/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic намали кражбата на reasoning токени с 99%: Защита срещу промишлена дистилация</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 октомври 2026 г.</p><div><p><img src="/articles/2026/10/13/anthropic-distillation-defenses-reasoning-token-theft-reduction/hero.png" alt="Anthropic защитава мисловните токени на Claude срещу дистилация"><br><small>Илюстрация: Anthropic / The Decoder</small></p>
+<p>В мащабен технически доклад, публикуван в блога за изследвания на <a href="/pages/anthropic.html">Anthropic</a>, компанията обяви радикален пробив в борбата срещу промишлената кражба на интелектуална собственост: спад между 90% и 99% в обема на неправомерно извлечените <a href="/pages/reasoning-tokens.html">токени на разсъждение</a> (reasoning tokens) от моделите от семейството Claude 3.5 и Claude 3.7 [1]. Докладът директно назовава китайските AI лаборатории <a href="/pages/zhipu-ai.html">Zhipu AI</a> и Moonshot AI като ключови участници в координирани кампании за нерегламентирана дистилация.</p>
+<p>Според разкритията на Anthropic атакуващите субекти са разгърнали мрежи от стотици хиляди фалшиви клиентски акаунти, за да извличат вътрешния chain-of-thought процес на моделите и да обучават собствени конкурентни архитектури за частица от оригиналната изчислителна цена.</p>
+<h2>Анатомия на атаката чрез индустриална дистилация</h2>
+<p>Дистилацията на модели е утвърдена академична техника, при която по-малка невронна мрежа (student model) се обучава върху изходите на по-голям и способен модел (teacher model). Докато стандартната дистилация върху финални текстови отговори е сравнително бавна, появата на reasoning модели промени правилата на играта. Междинните мисловни токени — стъпките, в които моделът проверява хипотези, открива собствени грешки и формулира логически изводи — представляват чист концентрат на разсъждение.</p>
+<p>Анализаторите на Anthropic са установили, че <a href="/pages/zhipu-ai.html">Zhipu AI</a> систематично е извличала кибернетични и експлойт възможности от водещи американски модели, за да подсили своя флагман GLM-5.3. На свой ред Moonshot AI е пренасочвала десетки милиони потребителски заявки тайно през Claude чрез мрежа от прокси сървъри и фалшиви банкови карти. Подобна промишлена кражба позволява на чуждестранни субекти да прескочат години на скъпоструващо първично предтрениране и подравняване (RLHF), спестявайки десетки милиони долари за изчислителна мощност.</p>
+<h2>Многослойният защитен вал: класификатори и криптиране</h2>
+<p>За да спре изтичането на интелектуален капитал, Anthropic е внедрила комплекс от мерки за <a href="/pages/distillation-defense.html">защита срещу дистилация</a>:</p>
+<ol>
+<li><strong>Ограничаване и криптиране на мисловния поток:</strong> Потребителските API интерфейси вече не връщат пълния обем сурови разсъждения, а само синтезирани резюмета или криптографски защитени токени.</li>
+<li><strong>Невронни класификатори в реално време:</strong> Специализирани дискриминативни модели анализират потока от входящи заявки, разпознавайки статистическите шаблони на автоматизирано генерирани промптове за дистилация.</li>
+<li><strong>Автоматизирано банване на ботнети:</strong> Системата е деактивирала десетки хиляди подозрителни акаунти, свързани с общи IP диапазони, дигитални отпечатъци на браузъра и съмнителни платежни профили.</li>
+</ol>
+<p>След пускането на новите филтри броят на успешните опити за масово извличане на мисловни вериги е рухнал с до 99%, въпреки че от компанията признават, че филтрите понякога засягат и легитимни корпоративни клиенти с необичайно натоварване.</p>
+<h2>Дългосрочни геополитически, архитектурни и системни последици</h2>
+<p>Публикацията на Anthropic бележи края на ерата на „наивната откритост“ при комерсиалните AI API интерфейси. Докладът демонстрира, че съвременната битка за технологично лидерство между САЩ и Китай не се води само на ниво налагане на експортен контрол върху литографско оборудване и графични ускорители, а на самото приложно ниво на софтуерните протоколи. Затварянето на кранчето за дистилация директно ще затрудни втория ешелон от AI лаборатории, които разчитаха на евтино клониране на американски модели, за да поддържат темпото на иновации.</p>
+<p>В архитектурен аспект мерките за защита срещу дистилация ще променят начина, по който разработчиците взаимодействат с reasoning моделите. Скриването на пълния chain-of-thought процес усложнява дебъгването и одита за безопасност от страна на външни изследователи. Индустрията върви към модел на „черна кутия с доказателство за коректност“, при който моделите ще предоставят математически гаранции за верността на резултата, без никога да разкриват стъпките, по които са достигнали до него. Anthropic вече призова OpenAI и Google да въведат аналогични координирани филтри, превръщайки защитата от дистилация в стандарт за оцеляване на фронтиерните разработчици.</p>
+<p><img src="/articles/2026/10/13/anthropic-distillation-defenses-reasoning-token-theft-reduction/infographic.png" alt="Инфографика: Защитната архитектура на Anthropic срещу дистилация"><br><small>Четири стълба на защитата: атаката, уязвимите токени, класификаторите и геополитическият ефект</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Anthropic Research, &quot;Strengthening our defenses against distillation attacks&quot; (2026-10-13).</li>
+<li>The Decoder, &quot;Anthropic says it cut Claude reasoning token theft by up to 99% in fight against industrial-scale distillation&quot; (2026-10-13).</li>
+<li>Hacker News Discussion, &quot;Strengthening our defenses against distillation attacks&quot; (Item #307819, 2026-10-13).</li>
+<li>Forest Aggregator Feed Item #308316, &quot;Anthropic says it cut Claude reasoning token theft by up to 99%&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zhipu-ai.html">Zhipu AI</a><p>Zhipu AI (известна още като Zhipu.</p></li><li><a href="/pages/reasoning-tokens.html">Токени на разсъждение (Reasoning Tokens)</a><p>Токените на разсъждение (Reasoning Tokens) са междинните скрити или явни стъпки в мисловната верига (Chain-of-Thought) на съвременните reasoning модел...</p></li><li><a href="/pages/distillation-defense.html">Защита срещу дистилация (Distillation Defense)</a><p>Защитата срещу дистилация (Distillation Defense) обхваща набор от архитектурни, мрежови и алгоритмични мерки, предприемани от водещите AI лаборатории,...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

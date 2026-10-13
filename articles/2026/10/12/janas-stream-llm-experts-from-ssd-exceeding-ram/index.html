@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Архитектура за асинхронен стрийминг на тегла от твърдотелен диск към паметта. Снимка: Janas Open Source / The Decoder
+В рамките на изключително впечатляващ инженерен пробив в общността с отворен ко..."><title>Janas: Стартиране на гигантски езикови модели отвъд RAM паметта чрез поточно зареждане от SSD - Светни.ме</title><meta property="og:title" content="Janas: Стартиране на гигантски езикови модели отвъд RAM паметта чрез поточно зареждане от SSD - Светни.ме"><meta property="og:description" content="Архитектура за асинхронен стрийминг на тегла от твърдотелен диск към паметта. Снимка: Janas Open Source / The Decoder
+В рамките на изключително впечатляващ инженерен пробив в общността с отворен ко..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/12/janas-stream-llm-experts-from-ssd-exceeding-ram/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/12/janas-stream-llm-experts-from-ssd-exceeding-ram/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Janas: Стартиране на гигантски езикови модели отвъд RAM паметта чрез поточно зареждане от SSD</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 октомври 2026 г.</p><div><p><img src="/articles/2026/10/12/janas-stream-llm-experts-from-ssd-exceeding-ram/hero.png" alt="Janas: Стартиране на гигантски езикови модели отвъд RAM паметта чрез поточно зареждане от SSD"><br><small>Архитектура за асинхронен стрийминг на тегла от твърдотелен диск към паметта. Снимка: Janas Open Source / The Decoder</small></p>
+<p>В рамките на изключително впечатляващ инженерен пробив в общността с отворен код, проектът <a href="/pages/janas.html">Janas</a> демонстрира работещо решение за стартиране на невронни модели, чийто размер многократно надхвърля наличната физическа оперативна памет на системата [1]. Системата позволява изпълнение на пълноформатни архитектури от тип <a href="/pages/mixture-of-experts.html">Mixture-of-Experts</a> (MoE) директно върху потребителски компютри чрез динамично поточно зареждане на активираните експерти от високоскоростни NVMe SSD дискове.</p>
+<p>Този подход преодолява едно от най-болезнените хардуерни тесни места в изкуствения интелект — невъзможността на разработчици с бюджетни работни станции да експериментират локално с най-мощните модерни модели [1].</p>
+<h2>Архитектурата на динамичния стрийминг: Как работи Janas?</h2>
+<p>При традиционния инференс целият масив от параметри на модела трябва да бъде предварително зареден в системната RAM или видеопаметта на видеокартата [1]. За модели като DBRX, Mixtral 8x22B или Qwen MoE това изисква между 80 и 160 гигабайта бърза памет, струваща хиляди долари.</p>
+<p>При MoE архитектурите обаче за изчислението на всеки конкретен токен се активират само малка част от експертите (например 2 от общо 8 или 16) [1]. Инженерите зад Janas са реализирали ядро на C++ и Rust, използващо подсистемата на ядрото на Linux <code>io_uring</code> за директен асинхронен трансфер без копиране (zero-copy DMA) чрез <a href="/pages/nvme-streaming.html">NVMe поточно зареждане</a>.</p>
+<p>Докато вниманието (Attention layer) обработва входните данни, рутерът предсказва кои експерти ще бъдат нужни за следващия слой и инициира паралелно четене от NVMe диска със скорост над 7–10 GB/s [1]. Теглата пристигат в малък кръгов буфер в паметта микросекунди преди матричното умножение и веднага се презаписват.</p>
+<h2>Производителност и практически бенчмаркове</h2>
+<p>Първоначалните тестове показват, че върху съвременен лаптоп или десктоп компютър с PCIe Gen 4 или Gen 5 NVMe диск и едва 32 GB RAM, Janas може да генерира между 8 и 14 токена в секунда за 100-милиарден MoE модел [1]. Тази скорост е напълно достатъчна за интерактивно програмиране, четене на код и тестване на локални агенти в стандартни <a href="/pages/developer-environments.html">среди за разработка</a>.</p>
+<p>Особено важно предимство е, че моделът не изисква агресивна загубна квантизация (като 2-битово компресиране), запазвайки пълната математическа прецизност на теглата в FP16 или 8-битов формат [1].</p>
+<h2>Демократизация на локалния изкуствен интелект и бъдещето на персоналния хардуер</h2>
+<p>Успехът на Janas илюстрира фундаментален урок от историята на компютърните системи: когато скъпият ресурс (RAM) се окаже дефицитен, софтуерната изобретателност трансформира евтиния ресурс (SSD съхранение) в негов функционален заместител. В продължение на десетилетия виртуалната памет спасяваше операционните системи от недостиг на памет; днес интелигентното поточно зареждане прави същото за дълбоките невронни мрежи.</p>
+<p>Дългосрочните последици за хардуерната индустрия ще бъдат дълбоки. Вместо да принуждават потребителите да купуват скъпи работни станции с унифицирана памет, производителите на чипове и дънни платки ще започнат да оптимизират дисковите контролери директно за нуждите на AI инференса. Възходът на отворени инструменти като Janas доказва, че бъдещето на суверенния, частен изкуствен интелект не е затворено в облачните мегаструктури, а принадлежи на оптимизирания софтуер върху достъпен хардуер.</p>
+<p><img src="/articles/2026/10/12/janas-stream-llm-experts-from-ssd-exceeding-ram/infographic.png" alt="Инфографика за архитектурата на Janas и поточното зареждане от SSD"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/prabanta-dev/janas">Janas: Run LLMs larger than RAM by streaming experts from SSD - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nvme-streaming.html">NVMe поточно зареждане (NVMe Streaming)</a><p>NVMe поточно зареждане (NVMe Streaming for AI) е архитектурен метод за оптимизация на паметта, при който теглата на дълбоки невронни мрежи се съхраняв...</p></li><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/janas.html">Janas</a><p>Janas е високопроизводителна софтуерна среда за изпълнение с отворен код, създадена за стартиране на големи езикови модели с MoE архитектура (Mixture-...</p></li><li><a href="/pages/hardware-acceleration.html">Хардуерно ускорение (Hardware Acceleration)</a><p>Хардуерното ускорение (Hardware Acceleration) е използването на специализиран силиций (GPU, TPU, NPU, FPGA) за изпълнение на конкретни изчислителни за...</p></li><li><a href="/pages/developer-environments.html">Среди за разработка (Developer Environments)</a><p>Среди за разработка (Developer Environments) са специализирани софтуерни конфигурации, обединяващи операционна система, инструменти за компилация, инт...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

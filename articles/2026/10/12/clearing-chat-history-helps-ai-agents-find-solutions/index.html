@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Методът Fork-and-Flush за управление на агентен контекст. Снимка: Microsoft Research / The Decoder
+В новаторско емпирично проучване, публикувано от изследователския отдел на Microsoft, учените разк..."><title>Изчистването на историята на чата предпазва AI агентите от интелектуален блокаж - Светни.ме</title><meta property="og:title" content="Изчистването на историята на чата предпазва AI агентите от интелектуален блокаж - Светни.ме"><meta property="og:description" content="Методът Fork-and-Flush за управление на агентен контекст. Снимка: Microsoft Research / The Decoder
+В новаторско емпирично проучване, публикувано от изследователския отдел на Microsoft, учените разк..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/12/clearing-chat-history-helps-ai-agents-find-solutions/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/12/clearing-chat-history-helps-ai-agents-find-solutions/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изчистването на историята на чата предпазва AI агентите от интелектуален блокаж</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 октомври 2026 г.</p><div><p><img src="/articles/2026/10/12/clearing-chat-history-helps-ai-agents-find-solutions/hero.png" alt="Изчистването на историята на чата предпазва AI агентите от интелектуален блокаж"><br><small>Методът Fork-and-Flush за управление на агентен контекст. Снимка: Microsoft Research / The Decoder</small></p>
+<p>В новаторско емпирично проучване, публикувано от изследователския отдел на <a href="/pages/microsoft.html">Microsoft</a>, учените разкриха фундаментален парадокс в поведението на съвременните автономни системи: колкото по-дълга става историята на диалога в рамките на една задача, толкова по-неспособни стават агентите да открият вярно решение [1].</p>
+<p>Изследването дефинира феномена „басейни от идеи“ (idea basins) — състояние, при което натрупването на грешни опити, логове от конзолата и междинни хипотези в рамките на текущия <a href="/pages/context-window.html">контекстен прозорец</a> когнитивно „заклещва“ модела в локален оптимум [1]. За да преодолеят проблема, изследователите въвеждат метода Fork-and-Flush, постигащ до 66% по-висока успеваемост при напълно запазен изчислителен бюджет.</p>
+<h2>Анатомия на когнитивния блокаж: Капанът на разрастващия се прозорец</h2>
+<p>Дълго време индустрията вярваше, че разширяването на контекстния прозорец до милиони токени автоматично ще реши проблема с паметта на агентите [1]. Реалността на практическото програмиране обаче опровергава тази теза. Когато агентът се сблъска с труден бъг и направи няколко неуспешни опита за поправка, тези неуспехи остават в историята на чата.</p>
+<p>Тъй като трансформърните модели привличат вниманието си (self-attention) силно към вече генерирания текст, моделът започва да върти вариации на една и съща погрешна хипотеза, вместо да направи крачка назад и да изследва напълно различен подход [1]. Този ефект на самозатвърждаване превръща богатия контекст от предимство в непреодолима пречка.</p>
+<h2>Методът Fork-and-Flush: Чист контекст с непрекъснато работно пространство</h2>
+<p>Предложеното от Microsoft решение е елегантно и радикално ефективно [1]. При Fork-and-Flush работният процес се разделя на две отделни равнини:</p>
+<ol>
+<li><strong>Пространство на състоянието (Workspace):</strong> Физическите файлове в проекта, компилираните бинари и резултатите от тестовете остават непокътнати на диска.</li>
+<li><strong>Контекст на разсъжденията (Context):</strong> Пълната история на чат взаимодействията, обясненията и предишните разговори се изчиства (Flush) до нула.</li>
+</ol>
+<p>Когато агентът попадне в задънена улица, системата генерира кратко структурирано резюме само на валидираните факти, нулира контекстния прозорец и стартира нов цикъл на мислене с „чиста глава“ [1]. В серия от тестове за <a href="/pages/developer-productivity.html">продуктивността на разработчиците</a> този подход подобрява финалните резултати с 66%, като същевременно драстично намалява консумацията на токени.</p>
+<h2>От статични прозорци към динамична мета-хигиена на мисленето</h2>
+<p>Изследването на Microsoft бележи важна еволюционна стъпка в теорията на <a href="/pages/agentic-workflows.html">агентните работни процеси</a>. То доказва, че способността да забравяш излишното е също толкова критична за интелигентността, колкото и способността да помниш. Моделите нямат нужда от безкрайна памет за всяка грешна команда, която са изпълнили; те имат нужда от дисциплинирана когнитивна хигиена.</p>
+<p>В дългосрочен план откритието ще преобрази архитектурата на всички съвременни AI платформи за разработка и автоматизация. Вместо да се състезават единствено по размер на контекстния прозорец, водещите доставчици ще разработват сложни алгоритми за почистване и форкване на състоянията. Истинската зрялост на автономния софтуер ще се измерва не по това колко мегабайта чат логове може да погълне, а по умението му да изчисти шума и да види фундаменталния проблем с кристална яснота.</p>
+<p><img src="/articles/2026/10/12/clearing-chat-history-helps-ai-agents-find-solutions/infographic.png" alt="Инфографика за метода Fork-and-Flush на Microsoft Research"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/">Clearing chat history helps AI agents find better solutions - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/model-evaluation.html">Оценяване на модели (Model Evaluation)</a><p>Оценяване на модели (Model Evaluation) е систематичната инженерна дисциплина по тестване, верификация и бенчмаркинг на възможностите, фактологическата...</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/developer-productivity.html">Продуктивност на разработчиците (Developer Productivity)</a><p>Продуктивността на разработчиците измерва ефективността, скоростта и качеството, с които инженерните екипи създават, доставят и поддържат софтуерни пр...</p></li><li><a href="/pages/context-window.html">Контекстен прозорец (Context Window)</a><p>Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на едн...</p></li><li><a href="/pages/agentic-workflows.html">Агентни работни процеси (Agentic Workflows)</a><p>Агентни работни процеси (Agentic Workflows) описват системни архитектури, при които автономни софтуерни агенти, захранвани от големи езикови модели, с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

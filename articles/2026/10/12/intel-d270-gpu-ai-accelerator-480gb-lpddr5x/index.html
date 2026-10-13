@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Сървърният AI ускорител Intel D270 с 480 GB памет. Снимка: Intel Official / Svetni.me
+В изненадващ и силно прагматичен ход, целящ да преобърне икономиката на корпоративния инференс, Intel официално..."><title>Intel представи сървърния ускорител D270 с 480 GB унифицирана LPDDR5X памет - Светни.ме</title><meta property="og:title" content="Intel представи сървърния ускорител D270 с 480 GB унифицирана LPDDR5X памет - Светни.ме"><meta property="og:description" content="Сървърният AI ускорител Intel D270 с 480 GB памет. Снимка: Intel Official / Svetni.me
+В изненадващ и силно прагматичен ход, целящ да преобърне икономиката на корпоративния инференс, Intel официално..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/12/intel-d270-gpu-ai-accelerator-480gb-lpddr5x/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/12/intel-d270-gpu-ai-accelerator-480gb-lpddr5x/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Intel представи сървърния ускорител D270 с 480 GB унифицирана LPDDR5X памет</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 октомври 2026 г.</p><div><p><img src="/articles/2026/10/12/intel-d270-gpu-ai-accelerator-480gb-lpddr5x/hero.png" alt="Intel представи сървърния ускорител D270 с 480 GB унифицирана LPDDR5X памет"><br><small>Сървърният AI ускорител Intel D270 с 480 GB памет. Снимка: Intel Official / Svetni.me</small></p>
+<p>В изненадващ и силно прагматичен ход, целящ да преобърне икономиката на корпоративния инференс, <a href="/pages/intel.html">Intel</a> официално анонсира новия си дискретен GPU ускорител <a href="/pages/intel-d270.html">Intel D270</a> от D-серията за центрове за данни [1]. Ключовото инженерно предимство на картата е интегрирането на безпрецедентните до 480 GB унифицирана памет LPDDR5X на единична печатна платка.</p>
+<p>Решението на Intel е директен отговор на най-острия проблем пред съвременните изследователи и системни администратори: фрагментирането на паметта (memory wall), при което стартирането на модели с над 70 милиарда параметри налага разделяне на теглата между няколко свръхскъпи карти с HBM памет [1].</p>
+<h2>Преодоляване на паметната стена чрез капацитет пред сурова скорост</h2>
+<p>Докато пазарните лидери залагат на скъпа и трудна за производство High Bandwidth Memory (HBM3e), предлагаща екстремна пропускателна способност, но ограничен обем (до 96–144 GB на чип), Intel поема по алтернативен инженерен път [1]. Използвайки плътни модули от мобилна LPDDR5X памет с висока енергийна ефективност, D270 предлага гигантски адресен обем при умерена консумация на мощност.</p>
+<p>Този архитектурен избор прави ускорителя идеален за обслужване на разредени <a href="/pages/mixture-of-experts.html">Mixture-of-Experts</a> (MoE) модели и сесии с екстремно дълъг <a href="/pages/context-window.html">контекстен прозорец</a> [1]. Модели със стотици милиарди параметри могат да бъдат заредени изцяло в локалната памет на една платка, елиминирайки нуждата от сложни NVLink или InfiniBand междусистемни комуникации за разпределяне на теглата.</p>
+<h2>Икономическо предимство за локални и корпоративни клъстери</h2>
+<p>За малки и средни корпоративни центрове за данни D270 предлага драстично намаляване на общата стойност на притежание (TCO) [1]. Вместо да изграждат скъпи сървъри с по осем GPU ускорителя, изискващи специализирано захранване и трифазно охлаждане, IT отделите могат да постигнат пълен локален инференс в стандартни 2U сървърни шасита.</p>
+<p>Intel осигурява пълна съвместимост със софтуерните стекове PyTorch, vLLM и OpenVINO, позволявайки мигновен пренос на съществуващи конвейери за <a href="/pages/enterprise-ai.html">enterprise AI</a> без необходимост от пренаписване на софтуерни ядра [1].</p>
+<h2>Демократизация на капацитета на паметта в ерата на гигантските модели</h2>
+<p>Появата на Intel D270 отразява фундаментална корекция в приоритетите на полупроводниковата индустрия за <a href="/pages/hardware-acceleration.html">хардуерно ускорение</a>. През последните три години фокусът бе изцяло върху суровата пропускателна способност на HBM паметта за обучение на базови модели. В ерата на масовото приложение обаче, истинската пречка пред корпорациите е чистият физически обем памет, необходим за задържане на десетки специализирани експерти и милиони токени работен контекст.</p>
+<p>Чрез залагането на LPDDR5X, Intel създава нов пазарен сегмент: икономични масиви от памет с достатъчна пропускателна способност за интерактивен инференс. Това не само намалява монополния натиск върху HBM доставчиците, но и отваря вратата за масово внедряване на фронтир модели в академични лаборатории, болници и финансови институции, за които милионните сървърни клъстери бяха недостижим лукс.</p>
+<p><img src="/articles/2026/10/12/intel-d270-gpu-ai-accelerator-480gb-lpddr5x/infographic.png" alt="Инфографика за архитектурата и предимствата на Intel D270"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html">Intel D270 GPU AI Accelerator - Up to 480 GB LPDDR5X - Intel Official</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/intel.html">Intel</a><p>Intel Corporation е американска технологична компания и един от най-големите производители на полупроводници в света.</p></li><li><a href="/pages/intel-d270.html">Intel D270</a><p>Intel D270 е специализиран сървърен GPU ускорител за изкуствен интелект от D-серията на Intel, предназначен за инференс и фина настройка на свръхголем...</p></li><li><a href="/pages/hardware-acceleration.html">Хардуерно ускорение (Hardware Acceleration)</a><p>Хардуерното ускорение (Hardware Acceleration) е използването на специализиран силиций (GPU, TPU, NPU, FPGA) за изпълнение на конкретни изчислителни за...</p></li><li><a href="/pages/enterprise-ai.html">Enterprise AI</a><p>Enterprise AI (Корпоративен изкуствен интелект) се отнася до внедряването на AI технологии в мащабни бизнес организации с фокус върху сигурността, пов...</p></li><li><a href="/pages/context-window.html">Контекстен прозорец (Context Window)</a><p>Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на едн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

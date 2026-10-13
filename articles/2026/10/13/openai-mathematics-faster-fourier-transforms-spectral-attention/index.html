@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Svetni.me Mathematical Systems Lab
+След мащабния пакет от научни публикации по чиста математика, публикуван от лабораторията OpenAI, един от най-изявените теоретици по обработка на сигн..."><title>„Галактическият алгоритъм“ на OpenAI: Математически анализ на бързите трансформи на Фурие - Светни.ме</title><meta property="og:title" content="„Галактическият алгоритъм“ на OpenAI: Математически анализ на бързите трансформи на Фурие - Светни.ме"><meta property="og:description" content="Илюстрация: Svetni.me Mathematical Systems Lab
+След мащабния пакет от научни публикации по чиста математика, публикуван от лабораторията OpenAI, един от най-изявените теоретици по обработка на сигн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/13/openai-mathematics-faster-fourier-transforms-spectral-attention/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/13/openai-mathematics-faster-fourier-transforms-spectral-attention/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>„Галактическият алгоритъм“ на OpenAI: Математически анализ на бързите трансформи на Фурие</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 октомври 2026 г.</p><div><p><img src="/articles/2026/10/13/openai-mathematics-faster-fourier-transforms-spectral-attention/hero.png" alt="Математически анализ на алгоритъма на OpenAI за FFT"><br><small>Илюстрация: Svetni.me Mathematical Systems Lab</small></p>
+<p>След мащабния пакет от научни публикации по чиста математика, публикуван от лабораторията <a href="/pages/openai.html">OpenAI</a>, един от най-изявените теоретици по обработка на сигнали и оптимизация в света — професорът от UC Berkeley <a href="/pages/ben-recht.html">Бен Рехт</a> — публикува обстоен технически разбор на алгоритъма, за който се твърди, че изчислява <a href="/pages/fourier-transform.html">трансформация на Фурие (FFT)</a> по-бързо от класическия метод на Кули и Тюки [1].</p>
+<p>В своя влиятелен блог arg min Рехт демонстрира, че претенцията за исторически научен пробив е по-скоро илюстрация на фундаменталния разрив между теоретичния математически формализъм и реалната изчислителна практика, класифицирайки алгоритъма на OpenAI като класически пример за т.нар. „галактически алгоритъм“.</p>
+<h2>Наследството на Кули-Тюки и бариерата $O(n \log n)$</h2>
+<p>Бързата трансформация на Фурие (FFT), формулирана от Джеймс Кули и Джон Тюки през 1965 г., е един от десетте най-важни алгоритми на XX век. Наивното изчисляване на дискретната трансформация на Фурие за масив с дължина $n$ изисква $n^2$ аритметични операции. Чрез елегантна рекурсивна декомпозиция алгоритъмът FFT сваля сложността до под $5 n \log_2 n$ операции. При масив от 1 000 000 елемента това осигурява 10 000-кратно ускорение, правейки възможна цялата цифрова обработка на звук, радарни сигнали, MRI изображения и спектрално внимание в дълбокото обучение.</p>
+<p>През последните шест десетилетия математиците безуспешно търсят строго по-бърз алгоритъм. В своята публикация модел на OpenAI твърди, че е намерил асимптотично ускорение, което намалява предфактора пред $\log n$.</p>
+<h2>Капанът на Big-O нотацията и скритите константи</h2>
+<p>В своя прецизен анализ Бен Рехт деконструира математическия апарат, използван от AI модела на OpenAI. Проблемът се корени в злоупотребата с дефиницията за асимптотична <a href="/pages/algorithmic-complexity.html">алгоритмична сложност</a> ($O$-нотация). По дефиниция времето $T(n) = O(F(n))$ означава единствено, че съществува константа $C$ и праг $N$, за които операциите са по-малко от $C \cdot F(n)$ за всички $n &gt; N$.</p>
+<p>Тази нотация обаче игнорира размера на константата $C$:</p>
+<ul>
+<li>В практическото компютърно инженерство един алгоритъм е бърз, ако изисква под $50n$ операции за реален размер на входа;</li>
+<li>Алгоритъм, който изисква $10^{80} \cdot n$ стъпки, формално също е „линеен“ $O(n)$, но неговото изпълнение би надхвърлило броя на атомите в познатата Вселена;</li>
+<li>Изчисленията на Рехт показват, че константата $C$ в алгоритъма на OpenAI достига главозамайващата стойност от приблизително $10^{100}$ при праг $N = 10^{12}$.</li>
+</ul>
+<p>Поради тази причина подобни теоретични конструкции се наричат от теоретиците Ричард Липтън и Кен Регън „галактически алгоритми“ — те биха били по-бързи от класическия код само за масиви от данни, по-големи от цялата физическа Вселена, но за всяко реалистично изчисление от $n = 10^3$ до $n = 10^{18}$ класическият алгоритъм на Кули-Тюки е ненадминато по-бърз.</p>
+<h2>Дългосрочни епистемологични, софтуерни и академични последици</h2>
+<p>Критичният анализ на Бен Рехт има огромно значение за начина, по който академичната общност и софтуерната индустрия оценяват резултатите, генерирани от изкуствен интелект. Когато езиковите модели се обучават да решават формални математически задачи без контекста на физическата реалност на силиция и кеш паметта, те естествено се насочват към формалистични „вратички“ в правилата — максимизиране на асимптотичния ред при пълно игнориране на скритите константи.</p>
+<p>Това поставя под въпрос полезността на т.нар. „AI slop mathematics“ — масово генерирани псевдопробиви, които задоволяват формалните дефиниции на верификаторите, но не носят никаква стойност за компилаторите, сигналните процесори или дълбокото обучение. За инженерите, които проектират следващото поколение хардуерни ускорители, урокът е ясен: практическата ефективност в компютърните науки изисква не сляпо преследване на асимптотични символи, а дълбоко разбиране на йерархията на паметта, паралелизма на регистрите и деликатния баланс между константи и сложност.</p>
+<p><img src="/articles/2026/10/13/openai-mathematics-faster-fourier-transforms-spectral-attention/infographic.png" alt="Инфографика: Деконструкция на галактическия алгоритъм на OpenAI"><br><small>Четири стълба на анализа: алгоритъмът FFT, Big-O нотацията, галактическата константа и реалният компютърен силиций</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Ben Recht, arg min blog, &quot;Faster Fourier Transforms: The OpenAI algorithm for the FFT is less a breakthrough and more a malicious exploit&quot; (2026-10-12/13).</li>
+<li>Cooley, J. W., &amp; Tukey, J. W., &quot;An algorithm for the machine calculation of complex Fourier series&quot; (Mathematics of Computation, 1965).</li>
+<li>Lipton, R. J., &amp; Regan, K. W., &quot;Galactic Algorithms and Asymptotic Complexity&quot; (Gödel&#39;s Lost Letter and P=NP).</li>
+<li>Hacker News Discussion, &quot;A look at OpenAI’s math that’s claimed computes faster Fourier transforms&quot; (Item #307834, 2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/fourier-transform.html">Трансформация на Фурие (Fourier Transform)</a><p>Трансформацията на Фурие е фундаментална математическа операция, разлагаща времеви или пространствен сигнал на съставните му честотни компоненти.</p></li><li><a href="/pages/ben-recht.html">Бен Рехт (Ben Recht)</a><p>Бен Рехт (Ben Recht) е професор по компютърни науки и електроинженерство в Калифорнийския университет, Бъркли (UC Berkeley), известен със своите фунда...</p></li><li><a href="/pages/algorithmic-complexity.html">Алгоритмична сложност (Algorithmic Complexity)</a><p>Алгоритмичната сложност е фундаментална дисциплина в компютърните науки, изучаваща ресурсите (време за изпълнение и оперативна памет), необходими за и...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
