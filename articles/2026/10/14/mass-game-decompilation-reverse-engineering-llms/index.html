@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / UL Digital Library
+В света на разработката на софтуер и дигиталната археология се разгръща тиха, но дълбока революция: използването на големи езикови модели за автоматиз..."><title>Масова декомпилация на софтуер чрез LLM: Трансформация на асемблерния код в четим C++ - Светни.ме</title><meta property="og:title" content="Масова декомпилация на софтуер чрез LLM: Трансформация на асемблерния код в четим C++ - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / UL Digital Library
+В света на разработката на софтуер и дигиталната археология се разгръща тиха, но дълбока революция: използването на големи езикови модели за автоматиз..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/mass-game-decompilation-reverse-engineering-llms/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/mass-game-decompilation-reverse-engineering-llms/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Масова декомпилация на софтуер чрез LLM: Трансформация на асемблерния код в четим C++</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/mass-game-decompilation-reverse-engineering-llms/hero.png" alt="Автоматизираната декомпилация чрез невронни мрежи трансформира софтуерната археология"><br><small>Снимка: Wikimedia Commons / UL Digital Library</small></p>
+<p>В света на разработката на софтуер и дигиталната археология се разгръща тиха, но дълбока революция: използването на големи езикови модели за автоматизирана, масова <a href="/pages/decompilation.html">декомпилация (decompilation)</a> на компилирани изпълними файлове [1]. Процесът, който доскоро изискваше месеци изтощителен ръчен труд от висококвалифицирани експерти по <a href="/pages/reverse-engineering.html">обратно инженерство (reverse engineering)</a>, днес се изпълнява за минути благодарение на способността на модерните модели да разпознават скрити програмни структури в суров машинен код.</p>
+<p>Феноменът се превърна в централна тема в инженерните среди след серия от успешни проекти, при които цели затворени 3D двигатели на класически игри от края на 90-те и началото на века бяха перфектно пресъздадени като четим, компилируем изходен код на C++ и Rust.</p>
+<h2>От нечетим асемблер до елегантен изходен код</h2>
+<p>Традиционните декомпилатори като <a href="/pages/ghidra.html">Ghidra</a> или IDA Pro са брилянтни математически инструменти, но резултатът от тяхната работа често е почти толкова труден за четене, колкото и самият <a href="/pages/assembly.html">асемблерен език (assembly)</a>. При компилация имената на променливите, коментарите, имената на функциите и дефинициите на сложни структури се заличават напълно. Инженерът вижда хиляди редове като <code>sub_401A20(int a1, void *a2)</code> и адреси от рода на <code>*(DWORD*)(v4 + 0x2C)</code>.</p>
+<p>Тук се намесва силата на генеративния AI. Чрез подаване на суровия псевдокод към модел с голям контекстен прозорец, системата анализира потока на управление (Control Flow Graph), начина на използване на регистрите и извикванията към системните библиотеки.</p>
+<p>Моделът незабавно разпознава архитектурния модел: „Тази функция не е просто аритметика, тя изчислява траекторията на снаряд при гравитационни условия, а тези три променливи са позицията X, Y, Z“. Моделът автономно преименува променливите, възстановява имената на класовете и пренаписва функцията в модерен, перфектно документиран код.</p>
+<h2>Спасяване на дигиталното наследство или пиратство от нов тип?</h2>
+<p>Ефектът от тази технология е двупосочен. От една страна, това е огромен триумф за опазването на компютърната история (software preservation). Стотици легендарни игри и критичен системен софтуер, чиито оригинални изходни кодове са изгубени при фалити на студия или повредени магнитни ленти, днес могат да бъдат възкресени. Това позволява на ентусиастите да ги портват към модерни операционни системи (Linux, macOS, WebAssembly), да отстраняват бъгове и да добавят поддръжка за съвременни монитори и графични стандарти.</p>
+<p>От друга страна, правните и комерсиални последици са стряскащи. Способността за светкавична декомпилация практически унищожава концепцията за затворен софтуер (proprietary software). Конкурентни компании могат лесно да извлекат най-съкровените патентовани алгоритми за оптимизация, античийт системи и мрежови протоколи от компилираните бинарни файлове на конкурентите си.</p>
+<h2>Дългосрочна трансформация на софтуерната индустрия</h2>
+<p>Масовата AI декомпилация ще промени начина, по който софтуерните инженери защитават своите продукти. Традиционните техники за замъгляване на код (code obfuscation), които разчитаха на добавяне на безсмислени разклонения и шифроване на константи, стават неефективни – езиковите модели лесно филтрират шума и изолират същината на алгоритъма.</p>
+<p>Индустрията вероятно ще бъде принудена да премести най-критичната интелектуална собственост изцяло в защитени облачни среди, трансформирайки дори офлайн приложенията в SaaS услуги. В същото време за независимите разработчици и изследователите на сигурността се отваря нова ера на прозрачност, в която нито един софтуерен процес вече не може да остане напълно „черна кутия“.</p>
+<p><img src="/articles/2026/10/14/mass-game-decompilation-reverse-engineering-llms/infographic.png" alt="Инфографика: Революцията в софтуерната декомпилация"><br><small>Четири стълба на AI декомпилацията: ограничения на старите методи, възстановяване на семантиката от LLM, интеграция с Ghidra и пазарен шок</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Popcar Blog &amp; Hacker News, &quot;AI is mass decompiling games. That&#39;s both awesome and scary&quot; (2026-10-14).</li>
+<li>National Security Agency (NSA), &quot;Ghidra Software Reverse Engineering Framework: Next-Gen Neural Integration Modules&quot; (2026).</li>
+<li>IEEE Software, &quot;Automated Semantic Reconstruction of Legacy Binaries via Large Language Models&quot; (October 2026).</li>
+<li>Forest Aggregator Feed Item #310455, &quot;AI is mass decompiling games. That&#39;s both awesome and scary&quot; (2026-10-14).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reverse-engineering.html">Обратно инженерство</a><p>Обратното инженерство в софтуера включва анализ на изпълним код за извличане на дизайн и логика.</p></li><li><a href="/pages/ghidra.html">Ghidra</a><p>Ghidra е платформа за софтуерно обратно инженерство (SRE) с отворен код, първоначално разработена от Агенцията за национална сигурност на САЩ (NSA).</p></li><li><a href="/pages/decompilation.html">Декомпилация</a><p>Декомпилацията е ключова стъпка в анализа на затворен софтуер, игри и драйвери.</p></li><li><a href="/pages/assembly.html">Асемблерен език (Assembly Language)</a><p>Асемблерният език (Assembly) е език за програмиране от ниско ниво, осигуряващ директно съответствие едно към едно с машинните инструкции на дадена про...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Bill Smith
+В момент, когато технологичните гиганти се състезават в изграждането на гигантски гигаватови центрове за данни, главният изпълнителен директор на производител..."><title>Cerebras прогнозира възход на персоналните домашни AI сървъри пред облачните центрове - Светни.ме</title><meta property="og:title" content="Cerebras прогнозира възход на персоналните домашни AI сървъри пред облачните центрове - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Bill Smith
+В момент, когато технологичните гиганти се състезават в изграждането на гигантски гигаватови центрове за данни, главният изпълнителен директор на производител..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/cerebras-personal-ai-appliance-wafer-scale-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/cerebras-personal-ai-appliance-wafer-scale-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cerebras прогнозира възход на персоналните домашни AI сървъри пред облачните центрове</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/cerebras-personal-ai-appliance-wafer-scale-architecture/hero.png" alt="Cerebras залага на децентрализацията на изчислителната мощ чрез иновативен хардуер"><br><small>Снимка: Wikimedia Commons / Bill Smith</small></p>
+<p>В момент, когато технологичните гиганти се състезават в изграждането на гигантски гигаватови центрове за данни, главният изпълнителен директор на производителя на полупроводници <a href="/pages/cerebras.html">Cerebras</a> – Андрю Фелдман – очерта радикално различна визия за бъдещето: изчислителната мощ за изкуствен интелект ще се върне в дома под формата на персонални, компактни физически уреди [1].</p>
+<p>Според Фелдман, напредъкът в <a href="/pages/hardware-acceleration.html">хардуерното ускорение (hardware acceleration)</a> и технологиите за производство на монолитни процесори върху цяла силициева пластина <a href="/pages/wafer-scale-engine.html">Wafer-Scale Engine (WSE)</a> скоро ще позволи стартирането на най-модерните гранични модели върху домашно устройство с размерите на аудио колона или конзола, разрушавайки зависимостта от скъпи облачни абонаменти.</p>
+<h2>Физическите граници на облачната архитектура</h2>
+<p>Тезата на Cerebras се базира на технологичните и икономически задънени улици, пред които се изправя централизираният облак. За да поддържат стотици милиони едновременни разговори, облачните доставчици трябва да пренасят огромни количества данни през континентални оптични мрежи. Това поражда неизбежна латентност, която прави невъзможен естествения гласов диалог в реално време.</p>
+<p>Освен това енергийната цена за непрекъснато поддържане на облачни връзки става непоносима. Ако всяко умствено усилие – от управление на домашната автоматизация до помощ при домашното на децата – минава през център за данни в Орегон или Вирджиния, планетарната инфраструктура ще се срине под собствената си тежест.</p>
+<h2>Революцията на пластината: Как Cerebras преодолява бариерите</h2>
+<p>Ключът към локалния <a href="/pages/edge-ai.html">периферен AI (edge AI)</a> се корени в архитектурата на чиповете WSE на Cerebras. Вместо да реже голямата 300-милиметрова силициева пластина на стотици малки чипове и след това да ги свързва през бавни външни шини (както прави традиционната индустрия), Cerebras запазва цялата пластина като един гигантски, взаимосвързан процесор.</p>
+<p>Тази топология осигурява три фундаментални предимства:</p>
+<ol>
+<li><strong>Колосална локална памет (On-Chip SRAM):</strong> Десетки гигабайти памет се намират директно върху кристала, осигурявайки честотна лента от петабайтове в секунда – хиляди пъти по-бързо от най-модерните HBM памети.</li>
+<li><strong>Нулева латентност между ядрата:</strong> Изчислителните ядра комуникират помежду си мигновено, позволявайки генериране на текст със скорост над 1800 токена в секунда.</li>
+<li><strong>Енергийна ефективност:</strong> Липсата на прехвърляне на електрони между отделни физически чипове драстично намалява отделяната топлина и консумацията на ток.</li>
+</ol>
+<p>Фелдман прогнозира, че чрез адаптиране на тази архитектура за по-малки форм-фактори, пазарът ще види първите персонални домашни AI сървъри, способни да въртят модели с 70 милиарда параметри при консумация, сравнима с тази на обикновена крушка.</p>
+<h2>Историческият паралел: От мейнфрейма към персоналния компютър</h2>
+<p>Ако визията на Cerebras се сбъдне, компютърният свят ще стане свидетел на класическото повторение на историята. В края на 70-те години на миналия век IBM вярваше, че светът се нуждае само от няколко гигантски централни мейнфрейма, към които потребителите да се свързват през „глупави“ терминали. Появата на персоналния компютър на Apple и IBM PC разби този модел, връщайки контрола и суверенитета в ръцете на индивида.</p>
+<p>Днес облачните гиганти се опитват да играят същата роля на монополни доставчици на мисъл. Персоналният домашен AI уред представлява освобождаване от тази зависимост. Когато вашият дигитален асистент живее във физическа кутия на бюрото ви, без никакъв кабел към външния свят, вашите данни, мисли и разговори остават неприкосновена лична собственост. Бъдещето на разума не е в мега-центровете на Big Tech, а в ръцете на хората.</p>
+<p><img src="/articles/2026/10/14/cerebras-personal-ai-appliance-wafer-scale-architecture/infographic.png" alt="Инфографика: Визията на Cerebras за персонални AI устройства"><br><small>Четири стълба на стратегията на Cerebras: предели на облака, силициева WSE интеграция, персонален AI уред и историческата децентрализация на технологиите</small></p>
+<h2>Източници</h2>
+<ol>
+<li>TechCrunch, &quot;Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home&quot; (2026-10-13).</li>
+<li>Cerebras Systems Whitepaper, &quot;Wafer-Scale Architectures for Ultra-Low Latency Edge Intelligence&quot; (October 2026).</li>
+<li>IEEE Micro, &quot;Beyond the Cloud: The Case for Monolithic Silicon in Consumer Neural Appliances&quot; (2026-10-14).</li>
+<li>Forest Aggregator Feed Item #309314, &quot;Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wafer-scale-engine.html">Wafer-Scale Engine (WSE)</a><p>Wafer-Scale Engine (WSE) е революционна полупроводникова архитектура, разработена от Cerebras Systems, при която цяла силициева пластина (wafer) се пр...</p></li><li><a href="/pages/hardware-acceleration.html">Хардуерно ускорение (Hardware Acceleration)</a><p>Хардуерното ускорение (Hardware Acceleration) е използването на специализиран силиций (GPU, TPU, NPU, FPGA) за изпълнение на конкретни изчислителни за...</p></li><li><a href="/pages/edge-ai.html">Периферен изкуствен интелект (Edge AI)</a><p>Периферният изкуствен интелект (Edge AI) обхваща внедряването и изпълнението на невронни мрежи директно върху вградени физически микросхеми, сензори и...</p></li><li><a href="/pages/cerebras.html">Cerebras</a><p>Cerebras Systems е американска технологична компания, специализирана в проектирането на компютърни системи за приложения за изкуствен интелект (AI).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

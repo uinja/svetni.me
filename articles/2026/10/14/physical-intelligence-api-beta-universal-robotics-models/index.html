@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / NASA
+Една от най-наблюдаваните компании в сектора на въплътения изкуствен интелект (embodied AI) – стартъпът Physical Intelligence (Pi) – обяви старта на закрита бета ве..."><title>Physical Intelligence пусна бета API за универсалния модел за управление на роботи π0 - Светни.ме</title><meta property="og:title" content="Physical Intelligence пусна бета API за универсалния модел за управление на роботи π0 - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / NASA
+Една от най-наблюдаваните компании в сектора на въплътения изкуствен интелект (embodied AI) – стартъпът Physical Intelligence (Pi) – обяви старта на закрита бета ве..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/physical-intelligence-api-beta-universal-robotics-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/physical-intelligence-api-beta-universal-robotics-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Physical Intelligence пусна бета API за универсалния модел за управление на роботи π0</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/physical-intelligence-api-beta-universal-robotics-models/hero.png" alt="Physical Intelligence отваря своето API за директно управление на роботика от облака"><br><small>Снимка: Wikimedia Commons / NASA</small></p>
+<p>Една от най-наблюдаваните компании в сектора на <a href="/pages/embodied-ai.html">въплътения изкуствен интелект (embodied AI)</a> – стартъпът <a href="/pages/physical-intelligence.html">Physical Intelligence (Pi)</a> – обяви старта на закрита бета версия на своето облачно API за модела π0 (pi-zero) [1]. За първи път в историята на <a href="/pages/robotics.html">роботиката (robotics)</a> инженерите по света получават достъп до универсален <a href="/pages/foundation-models.html">фундаментален модел (foundation model)</a>, способен да управлява произволни роботизирани ръце и манипулатори без специфично ръчно програмиране на кинематични траектории.</p>
+<p>Ходът бележи решителен преход от твърдо кодираната автоматизация към софтуерно дефинирана физическа сръчност, задвижвана от генеративни невронни мрежи.</p>
+<h2>Проблемът с „прераждането“ на всеки нов робот</h2>
+<p>В продължение на десетилетия индустриалната роботика беше скована от тежка хардуерна фрагментация. Ако даден алгоритъм се научеше да сгъва дрехи или да завинтва болтове върху конкретна роботизирана ръка на KUKA, кодът беше напълно безполезен за ръка на Universal Robots или хуманоиден робот на Unitree. Всяка промяна в броя на ставите, теглото или камерата изискваше пренаписване на цялата математика от нулата.</p>
+<p>Physical Intelligence преодолява това ограничение чрез модела π0, проектиран на принципа на крос-ембодимент трансфера (Cross-Embodiment Transfer). Подобно на начина, по който големите езикови модели се обучават върху текстове от стотици различни езици, π0 се обучава върху гигантски обеми от телеметрия, видеозаписи и сензорни данни от десетки коренно различни роботизирани платформи.</p>
+<p>В резултат на това моделът изгражда абстрактно разбиране за физическия свят: триизмерна геометрия, гравитация, триене и тактилен натиск.</p>
+<h2>Как работи бета API-то на π0</h2>
+<p>Интеграцията с API-то на Physical Intelligence е изключително елегантна и не изисква мощен локален графичен ускорител:</p>
+<ol>
+<li><strong>Видео вход в реално време:</strong> Роботът предава видеопоток от стандартна RGB-D камера към облачното API през високоскоростен WebRTC или gRPC канал.</li>
+<li><strong>Текстова инструкция на естествен език:</strong> Операторът подава височинна команда, например „Извади прането от пералнята и го сложи в коша“.</li>
+<li><strong>Генериране на пакети от действия (Action Chunking):</strong> Моделът анализира сцената и връща обратно поток от моторни команди с честота 50 Hz, контролиращи скоростите на ставите и силата на захвата на крайния изпълнителен орган (end-effector).</li>
+</ol>
+<p>Ако предметът се изплъзне или позицията му се промени внезапно, визуално-моторният модел адаптира движението в реално време, демонстрирайки ловкост, неразличима от тази на човешка ръка.</p>
+<h2>Икономически последици: Превръщането на роботиката в софтуерен пазар</h2>
+<p>Пускането на API от Physical Intelligence заплашва да преобърне бизнес моделите на традиционните хардуерни производители на роботи. Досега компаниите продаваха скъп, затворен софтуер за всяко отделно приложение в завода.</p>
+<p>С появата на универсален облачен мозък, хардуерните ръце се превръщат в евтина стока (commoditization). Всяка малка фабрика, болница или ресторант ще може да закупи стандартно механично рамо за няколко хиляди долара и срещу месечен софтуерен абонамент да получи квалифициран работник за сортиране, почистване или опаковане. Физическият труд навлиза в своята ера на дигитална мащабируемост.</p>
+<p><img src="/articles/2026/10/14/physical-intelligence-api-beta-universal-robotics-models/infographic.png" alt="Инфографика: Универсалното API на Physical Intelligence"><br><small>Четири стълба на платформата π0: фрагментация на старата роботика, универсален визуално-моторен модел, нисколатентно облачно API и икономическа трансформация</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Physical Intelligence Blog, &quot;Physical Intelligence API Beta: Frontier Models for Every Robot&quot; (2026-10-13).</li>
+<li>arXiv Preprint, &quot;π0: A Vision-Language-Action Flow Model for Generalist Physical Robot Manipulation&quot; (Pi Research Team, October 2026).</li>
+<li>TechCrunch, &quot;Physical Intelligence brings foundation models to the physical world with developer API&quot; (2026-10-14).</li>
+<li>Forest Aggregator Feed Item #309296, &quot;Physical Intelligence API Beta: Frontier Models for Every Robot&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/robotics.html">Роботика</a><p>Роботиката е интердисциплинарна област от науката и инженерството, фокусирана върху проектирането, изграждането и използването на роботи.</p></li><li><a href="/pages/physical-intelligence.html">Physical Intelligence (Pi)</a><p>Physical Intelligence (Pi) е изследователска компания за въплътен изкуствен интелект (Embodied AI), основана от пионери в роботиката и машинното обуче...</p></li><li><a href="/pages/foundation-models.html">Базови модели (Foundation Models)</a><p>Базовите модели са мащабни невронни архитектури, обучени върху колосални обеми от разнообразни данни чрез самообучение (self-supervised learning), спо...</p></li><li><a href="/pages/embodied-ai.html">Физически въплътен изкуствен интелект</a><p>Физически въплътеният изкуствен интелект (Embodied AI) е клон от развитието на изкуствения интелект, който се фокусира върху ИИ системи, притежаващи ф...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

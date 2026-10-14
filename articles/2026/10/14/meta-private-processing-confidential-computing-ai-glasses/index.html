@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: InfoQ / Meta Engineering Graphics
+Технологичният гигант Meta официално представи своята революционна архитектура за сигурност, наречена „Private Processing“, която разширява концепцията..."><title>Meta въвежда поверителни изчисления (Confidential Computing) при обработката на данни от AI очила - Светни.ме</title><meta property="og:title" content="Meta въвежда поверителни изчисления (Confidential Computing) при обработката на данни от AI очила - Светни.ме"><meta property="og:description" content="Илюстрация: InfoQ / Meta Engineering Graphics
+Технологичният гигант Meta официално представи своята революционна архитектура за сигурност, наречена „Private Processing“, която разширява концепцията..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/meta-private-processing-confidential-computing-ai-glasses/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/meta-private-processing-confidential-computing-ai-glasses/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Meta въвежда поверителни изчисления (Confidential Computing) при обработката на данни от AI очила</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/meta-private-processing-confidential-computing-ai-glasses/hero.png" alt="Meta внедрява надеждни среди за изпълнение за обработка на сензорните данни от очила"><br><small>Илюстрация: InfoQ / Meta Engineering Graphics</small></p>
+<p>Технологичният гигант <a href="/pages/meta.html">Meta</a> официално представи своята революционна архитектура за сигурност, наречена „Private Processing“, която разширява концепцията за <a href="/pages/confidential-computing.html">поверителни изчисления (confidential computing)</a> към следващото поколение <a href="/pages/smart-glasses.html">умни очила (smart glasses)</a> [1]. Технологията е проектирана да реши най-голямата бариера пред масовото навлизане на носимия изкуствен интелект: параноята от непрекъснат видео и аудио шпионаж в личния живот на потребителя.</p>
+<p>Чрез комбиниране на хардуерно изолирани среди за изпълнение (Trusted Execution Environments - TEE) и усъвършенствана <a href="/pages/cryptography.html">криптография (cryptography)</a>, архитектурата гарантира, че суровите сензорни потоци от очилата не могат да бъдат прегледани или записани от никого – включително от системните администратори и инженери на самата Meta.</p>
+<h2>Архитектурният парадокс на носимите устройства</h2>
+<p>Носимите мултимодални устройства като очилата Ray-Ban Meta и прототипа Orion страдат от тежки физически ограничения. Теглото на рамката не може да надвишава 50-70 грама, а капацитетът на батерията е ограничен до няколкостотин милиамперчаса. Това прави физически невъзможно стартирането на тежки 70-милиардни мултимодални модели локално върху чипа на очилата.</p>
+<p>За да може асистентът да отговаря контекстуално на въпроси като „Какво пише на този документ пред мен?“ или „Къде забравих ключовете си?“, визуалните кадри и гласовите записи трябва да бъдат изпратени за обработка в мощен облачен център за данни. Изпращането на непрекъснат видеопоток към облака обаче създава колосални рискове за неприкосновеността на личния живот. Ако сървърът бъде компрометиран или ако правителствена агенция изиска достъп до базата данни, най-интимните моменти на потребителя стават публични.</p>
+<h2>Как работи Private Processing: Криптографска гаранция</h2>
+<p>Архитектурата Private Processing решава този проблем чрез премахване на доверието в операционната система на облака:</p>
+<ol>
+<li><strong>Периферна изолация (Client-Side Encryption):</strong> Очилата криптират всеки видеокадър още на ниво сензор чрез специализиран хардуерен чип за сигурност (Secure Element), използвайки еднократни криптографски ключове.</li>
+<li><strong>Изолирани хардуерни анклави (TEE):</strong> Заявката се изпраща към центрове за данни, оборудвани с процесори AMD EPYC с технология SEV-SNP или Intel Xeon с TDX. В паметта на тези процесори се създава криптографски защитен изолиран анклав. Операционната система на сървъра, хипервизьорът и отдалечените администратори нямат достъп до битовете вътре в анклава.</li>
+<li><strong>Отдалечена атестация (Remote Attestation):</strong> Преди очилата да изпратят ключа за декриптиране на видеокадъра, TEE анклавът генерира цифрово подписан сертификат с криптографски хеш на софтуера, който изпълнява. Очилата верифицират, че в анклава се върти точно одобреният софтуер без модификации или скрити функции за запис. Едва тогава ключът се предава, моделът обработва кадъра, връща гласов отговор и незабавно изчиства паметта.</li>
+</ol>
+<h2>Индустриално значение за бъдещето на персоналния AI</h2>
+<p>Въвеждането на Private Processing поставя нов стандарт за цялата индустрия за потребителска електроника. Архитектурата доказва, че не е необходимо да се прави компромис между изчислителната мощ на огромните гранични модели и личната сигурност на гражданите.</p>
+<p>За първи път потребителите могат да използват AI очила в чувствителни среди – при четене на поверителни медицински епикризи, въвеждане на банкови пин-кодове или преглед на финансови документи – със сигурността, че данните не се запаметяват никъде за бъдещо обучение на модели. Този инженерен пробив трансформира смарт очилата от спорна технологична играчка в надежден, незаменим когнитивен интерфейс за ежедневието.</p>
+<p><img src="/articles/2026/10/14/meta-private-processing-confidential-computing-ai-glasses/infographic.png" alt="Инфографика: Архитектурата Private Processing на Meta"><br><small>Четири стълба на Private Processing: периферно криптиране, изолирани TEE анклави, отдалечена атестация и нов стандарт за носими устройства</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ, &quot;Meta Extends Confidential Computing to AI Glasses with Private Processing&quot; (2026-10-14).</li>
+<li>Meta Tech Research Papers, &quot;Cryptographic Attestation and Confidential Multi-Modal Inference for Augmented Reality&quot; (October 2026).</li>
+<li>AMD Server Security Architecture Whitepaper, &quot;SEV-SNP Deployment in Frontier AI Confidential Processing&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #310259, &quot;Meta Extends Confidential Computing to AI Glasses with Private Processing&quot; (2026-10-14).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/smart-glasses.html">Смарт очила</a><p>Смарт очилата са категория носими електронни устройства с оптични или аудио сензори, микрофони и безжична свързаност, проектирани да предоставят дигит...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/cryptography.html">Криптография (Cryptography)</a><p>Криптографията е наука за сигурната комуникация и защитата на информация чрез математически протоколи, шифри и дигитални подписи.</p></li><li><a href="/pages/confidential-computing.html">Поверителни изчисления (Confidential Computing)</a><p>Поверителните изчисления (Confidential Computing) защитават данни по време на тяхната активна обработка чрез хардуерно изолирани надеждни среди за изп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

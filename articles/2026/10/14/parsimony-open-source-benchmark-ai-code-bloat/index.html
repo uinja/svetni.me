@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Markus Spiske markusspiske
+В софтуерната общност бе представен революционен нов инструмент за оценка: проектът Parsimony – първият стандартизиран инструмент с отворен ко..."><title>Parsimony: Отворен инструмент за количествено измерване на излишния код, генериран от AI - Светни.ме</title><meta property="og:title" content="Parsimony: Отворен инструмент за количествено измерване на излишния код, генериран от AI - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Markus Spiske markusspiske
+В софтуерната общност бе представен революционен нов инструмент за оценка: проектът Parsimony – първият стандартизиран инструмент с отворен ко..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/parsimony-open-source-benchmark-ai-code-bloat/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/parsimony-open-source-benchmark-ai-code-bloat/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Parsimony: Отворен инструмент за количествено измерване на излишния код, генериран от AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/parsimony-open-source-benchmark-ai-code-bloat/hero.png" alt="Бенчмаркът Parsimony разкрива тревожния ръст на излишен код в ерата на AI"><br><small>Снимка: Wikimedia Commons / Markus Spiske markusspiske</small></p>
+<p>В софтуерната общност бе представен революционен нов инструмент за оценка: проектът <a href="/pages/parsimony.html">Parsimony</a> – първият стандартизиран инструмент с отворен код в категорията на софтуерните <a href="/pages/benchmarks.html">бенчмаркове (benchmarks)</a>, специално разработен за измерване на „кодовия баласт“ (code bloat), генериран от модерните модели с изкуствен интелект [1].</p>
+<p>Инструментът адресира нарастващото безпокойство сред техническите директори, че масовото навлизане на AI асистенти в компаниите драстично влошава общото <a href="/pages/code-quality.html">качество на кода (code quality)</a>, заливайки хранилищата с хиляди редове излишни функции, дублирани алгоритми и архитектурен спам.</p>
+<h2>Проблемът с „бъбривите“ невронни мрежи</h2>
+<p>Досега популярните тестове за оценка на модели като HumanEval или SWE-bench измерваха само един критерий: дали генерираният код преминава модулните тестове (Pass@1). Те обаче бяха напълно слепи за начина, по който задачата е решена.</p>
+<p>В стремежа си да максимизират вероятността за верен отговор, големите езикови модели масово страдат от патологична бъбривост. Вместо да използват елегантна стандартна библиотека на даден език от три реда, моделите редовно генерират по 80 реда суров помощен код, създават излишни структури, реализират собствени алгоритми за сортиране или добавят тежки външни библиотеки.</p>
+<p>Според първоначалните данни на Parsimony, водещите комерсиални модели добавят средно между 35% и 70% повече код от необходимото за решаване на стандартни инженерни казуси.</p>
+<h2>Как работят софтуерните метрики на Parsimony</h2>
+<p>Проектът въвежда строги математически <a href="/pages/metrics.html">софтуерни метрики (software metrics)</a>, за да изчисли т.нар. коефициент на парсимония (Parsimony Ratio):</p>
+<ol>
+<li><strong>Сравнение с канонични решения:</strong> Кодът на модела се съпоставя с минималистични, рецензирани от експерти решения с отворен код.</li>
+<li><strong>Анализ на синтактичното дърво (AST Complexity):</strong> Измерва се броят на възлите в синтактичното дърво, цикломатичната сложност и броят на разклоненията (if/else).</li>
+<li><strong>Индекс на замърсяване на зависимостите:</strong> Оценява се дали моделът внася ненужни външни пакети, създавайки рискове за сигурността на веригата за доставки.</li>
+</ol>
+<p>Резултатите показват изумителни тенденции: някои по-малки, фино настроени за програмиране модели (като DeepSeek-Coder и CodeLlama) пишат значително по-чист и стегнат код в сравнение с гигантските универсални модели, които често страдат от прекомерна многословност.</p>
+<h2>Дългосрочният скрит данък на архитектурния дълг</h2>
+<p>В <a href="/pages/software-engineering.html">софтуерното инженерство (software engineering)</a> съществува златно правило, формулирано още преди половин век: най-добрият код е този, който не е написан. Всеки допълнителен ред код в дадено хранилище трябва да бъде прочетен, разбран от бъдещи инженери, тестван, компилиран и поддържан с години.</p>
+<p>Когато AI моделите удвояват обема на кодовите бази без реална функционална нужда, те натрупват чудовищен скрит технически дълг. Времето за преглед на кодови редакции (Code Review) от човешки старши инженери експлодира, а вероятността в 100 реда излишен код да се крие уязвимост в сигурността нараства линейно.</p>
+<p>Появата на Parsimony поставя началото на нова култура на трезвост. Инженерите започват да изискват от създателите на модели не просто системи, които пишат код, а модели, които проявяват интелектуална дисциплина и естетически минимализъм.</p>
+<p><img src="/articles/2026/10/14/parsimony-open-source-benchmark-ai-code-bloat/infographic.png" alt="Инфографика: Бенчмаркът Parsimony срещу AI спама"><br><small>Четири стълба на метриките на Parsimony: проблемът с кодовия баласт, нова методология за измерване, резултати от тестовете и намаляване на техническия дълг</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Parsimony Benchmark Official Portal, &quot;Measuring Code Bloat and Architectural Overhead in AI-Assisted Programming&quot; (2026-10-13).</li>
+<li>Hacker News Discussion, &quot;Show HN: Parsimony – an open-source benchmark for how much code AI models add&quot; (Item #309157, 2026-10-13).</li>
+<li>Empirical Software Engineering Journal, &quot;The Hidden Cost of AI Code Generation: Technical Debt and AST Bloat&quot; (October 2026).</li>
+<li>Forest Aggregator Feed Item #309157, &quot;Show HN: Parsimony – an open-source benchmark for how much code AI models add&quot; (2026-10-13).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/metrics.html">Софтуерни метрики (Software Metrics)</a><p>Софтуерните метрики (Software Metrics) са количествени показатели за оценка на размера, сложността, качеството и поддържаемостта на изходния код.</p></li><li><a href="/pages/code-quality.html">Качество на софтуерния код (Code Quality)</a><p>Качеството на софтуерния код измерва доколко дадена кодова база отговаря на стандартите за четимост, поддържаемост, сигурност, модулност и липса на ск...</p></li><li><a href="/pages/benchmarks.html">Бенчмаркове за ИИ</a><p>Бенчмарковете за изкуствен интелект (AI Benchmarks) представляват стандартизирани набори от данни, тестове и методологии, използвани за обективна и ср...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

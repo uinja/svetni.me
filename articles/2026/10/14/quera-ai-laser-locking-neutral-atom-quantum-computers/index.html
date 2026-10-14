@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Wikimedia Commons
+Един от водещите пионери в областта на квантовия хардуер – американската компания QuEra Computing – публикува подробен технически доклад, разкриващ как..."><title>QuEra автоматизира настройката на оптичните капани в квантовите компютри чрез невронно управление - Светни.ме</title><meta property="og:title" content="QuEra автоматизира настройката на оптичните капани в квантовите компютри чрез невронно управление - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Wikimedia Commons
+Един от водещите пионери в областта на квантовия хардуер – американската компания QuEra Computing – публикува подробен технически доклад, разкриващ как..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/14/quera-ai-laser-locking-neutral-atom-quantum-computers/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/14/quera-ai-laser-locking-neutral-atom-quantum-computers/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>QuEra автоматизира настройката на оптичните капани в квантовите компютри чрез невронно управление</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->14 октомври 2026 г.</p><div><p><img src="/articles/2026/10/14/quera-ai-laser-locking-neutral-atom-quantum-computers/hero.png" alt="Квантовите процесори на QuEra използват изкуствен интелект за микронна стабилизация на лазерите"><br><small>Снимка: Wikimedia Commons / Wikimedia Commons</small></p>
+<p>Един от водещите пионери в областта на квантовия хардуер – американската компания <a href="/pages/quera.html">QuEra Computing</a> – публикува подробен технически доклад, разкриващ как използва изкуствен интелект за решаването на най-трудоемкия проблем в модерната квантова оптика: прецизното автоматизирано настройване и честотно заключване на лазерите в <a href="/pages/quantum-computing.html">квантовите компютри (quantum computing)</a> [1].</p>
+<p>Иновацията бележи решителна крачка в трансформацията на квантовите машини на базата на <a href="/pages/neutral-atoms.html">неутрални атоми (neutral atoms)</a> от деликатни научни експерименти, изискващи денонощна намеса на докторанти по физика, в стабилни индустриални машини, способни на автономна денонощна работа в облака.</p>
+<h2>Физическият кошмар на оптичните пинсети</h2>
+<p>Квантовите процесори на QuEra работят чрез улавяне на хиляди индивидуални атоми на рубидий във висок вакуум, позиционирани в перфектна двумерна решетка чрез фино фокусирани лазерни лъчи – т.нар. оптични пинсети. За да могат тези атоми да изпълняват логически квантови операции чрез възбуждане до състояния на Ридберг, дължината на вълната на лазерите трябва да бъде фиксирана със суб-килохерцова точност.</p>
+<p>В реалния свят обаче лазерите страдат от постоянен физически дрейф. Минимални температурни колебания от части от градуса, микровибрации от преминаващи по улицата камиони или стареене на пиезоелектричните огледала разстройват оптичния резонатор. Традиционно всяка сутрин екип от оптични инженери трябваше да прекарва между два и три часа в ръчна калибрация и фина настройка на контролерите, губейки ценно време за реални изчисления.</p>
+<h2>Как невронният агент управлява светлината</h2>
+<p>За да автоматизира този процес, QuEra разработи интелигентен агент за управление, базиран на <a href="/pages/reinforcement-learning.html">обучение с подсилване (reinforcement learning)</a>. Системата работи като високочестотна затворена верига за обратна връзка:</p>
+<ol>
+<li><strong>Мултисензорно наблюдение:</strong> Агентът следи интерферометричните сигнали от оптичните кухини на Фабри-Перо, спектрографските камери и температурата на оптичната маса.</li>
+<li><strong>Адаптивно прогнозиране:</strong> За разлика от класическите пропорционално-интегрално-диференциращи (PID) контролери, които реагират само след като грешката вече е настъпила, невронната мрежа се научава да предвижда температурния дрейф и прилага превантивни микрокорекции върху напрежението на пиезокристалите.</li>
+<li><strong>Автономно първоначално заключване:</strong> Ако квантовият компютър бъде рестартиран, моделът самостоятелно сканира целия оптичен спектър и постига стабилен квантов резонанс само за 45 секунди – процес, който на човек отнемаше половин час.</li>
+</ol>
+<h2>Класическият AI като акушерка на квантовата епоха</h2>
+<p>Разработката на QuEra илюстрира фундаментална технологична синергия: вместо да разглеждаме изкуствения интелект и квантовите компютри като конкуриращи се парадигми, класическият AI се превръща в най-критичния инструмент за конструирането и управлението на квантовия свят.</p>
+<p>Без алгоритми за машинно обучение, способни да контролират хиляди аналогови оптични параметри в реално време, мащабирането на квантовите компютри до десетки хиляди физически кубита би било инженерно невъзможно. Автоматизираното лазерно заключване премахва бариерата пред масовото внедряване на квантови процесори в стандартните центрове за данни, приближавайки деня, в който квантовото изчислително превъзходство ще стане достъпно за бизнеса.</p>
+<p><img src="/articles/2026/10/14/quera-ai-laser-locking-neutral-atom-quantum-computers/infographic.png" alt="Инфографика: Невронно лазерно управление при QuEra"><br><small>Четири стълба на иновацията на QuEra: квантови оптични предизвикателства, ограничения на ръчния контрол, невронна адаптивна стабилизация и индустриален мащаб</small></p>
+<h2>Източници</h2>
+<ol>
+<li>QuEra Computing Engineering Blog, &quot;Holding the Light: Teaching an AI to Lock and Tune Our Quantum Computers&#39; Lasers&quot; (2026-10-14).</li>
+<li>Physical Review Applied, &quot;Reinforcement Learning for Autonomous Cavity Locking in Neutral-Atom Quantum Processors&quot; (October 2026).</li>
+<li>IEEE Quantum Engineering, &quot;Automating Optical Tweezers Calibration via Deep Reinforcement Control&quot; (2026-10-14).</li>
+<li>Forest Aggregator Feed Item #309945, &quot;AI Laser Locking for Quantum Computers: How QuEra Automates It&quot; (2026-10-14).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/quera.html">QuEra Computing</a><p>QuEra Computing е водеща компания за квантови изчисления със седалище в Бостън, разработваща квантови процесори на базата на неутрални атоми, позицион...</p></li><li><a href="/pages/quantum-computing.html">Квантови изчисления (Quantum Computing)</a><p>Квантовите изчисления (Quantum Computing) използват принципите на квантовата механика (суперпозиция и квантово вплитане) за извършване на специфични и...</p></li><li><a href="/pages/neutral-atoms.html">Неутрални атоми (Neutral Atoms)</a><p>Неутралните атоми (Neutral Atoms) представляват водеща хардуерна модалност за квантови изчисления, при която отделни атоми (например рубидий или цезий...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
