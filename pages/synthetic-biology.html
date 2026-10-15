@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Синтетичната биология съчетава инженерните науки с молекулярната биология за препроектиране на съществуващи биологични системи или създаване на нови изкуствени форми на живот.
+Чрез използване на из..."><title>Синтетична биология (Synthetic Biology) - Светни.ме</title><meta property="og:title" content="Синтетична биология (Synthetic Biology) - Светни.ме"><meta property="og:description" content="Синтетичната биология съчетава инженерните науки с молекулярната биология за препроектиране на съществуващи биологични системи или създаване на нови изкуствени форми на живот.
+Чрез използване на из..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/synthetic-biology.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Синтетична биология (Synthetic Biology)</h1><section class="content"><p>Синтетичната биология съчетава инженерните науки с молекулярната биология за препроектиране на съществуващи биологични системи или създаване на нови изкуствени форми на живот.</p>
+<p>Чрез използване на изкуствен интелект за моделиране на метаболитни пътища и синтез на изкуствена ДНК, синтетичната биология създава биогорива, лекарства и нови биоразградими материали.</p>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/10/15/rob-hoeijmakers-ai-corporate-rd-labs-innovation/">Когато AI влезе в R&amp;D лабораторията: Как генеративните симулации пренаписват корпоративната иновация</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/token-price-war.html">Ценова война за ИИ токени</a></li><li><a href="/pages/jeff-landry.html">Джеф Ландри</a></li><li><a href="/pages/alexa.html">Amazon Alexa</a></li><li><a href="/pages/agentic-ui.html">Агентен потребителски интерфейс (Agentic UI)</a></li><li><a href="/pages/agility-robotics.html">Agility Robotics</a></li><li><a href="/pages/abby-kearns.html">Аби Кърнс (Abby Kearns)</a></li><li><a href="/pages/ai-doomerism.html">AI дуумизъм</a></li><li><a href="/pages/agent-architecture.html">Архитектура на AI агенти (AI Agent Architecture)</a></li><li><a href="/pages/acai-sh.html">Acai.sh</a></li><li><a href="/pages/a5x-instances.html">A5X Bare-Metal Инстанции</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

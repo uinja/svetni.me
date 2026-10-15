@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Liquid AI
+Изследователската лаборатория Liquid AI, създадена от пионери от Масачузетския технологичен институт (MIT), представи официално най-новия си фундаментален модел LFM2.5-24B-A2B, сп..."><title>Liquid AI представи LFM2.5-24B-A2B: Оптимизиран хибриден модел за бързи автономни агенти директно на устройството - Светни.ме</title><meta property="og:title" content="Liquid AI представи LFM2.5-24B-A2B: Оптимизиран хибриден модел за бързи автономни агенти директно на устройството - Светни.ме"><meta property="og:description" content="Снимка: Liquid AI
+Изследователската лаборатория Liquid AI, създадена от пионери от Масачузетския технологичен институт (MIT), представи официално най-новия си фундаментален модел LFM2.5-24B-A2B, сп..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/15/liquid-ai-lfm25-on-device-agent-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/15/liquid-ai-lfm25-on-device-agent-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Liquid AI представи LFM2.5-24B-A2B: Оптимизиран хибриден модел за бързи автономни агенти директно на устройството</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->15 октомври 2026 г.</p><div><p><img src="/articles/2026/10/15/liquid-ai-lfm25-on-device-agent-architecture/hero.png" alt="Архитектурна графика на новия модел LFM2.5-24B-A2B от Liquid AI"><br><small>Снимка: Liquid AI</small></p>
+<p>Изследователската лаборатория <a href="/pages/liquid-ai.html">Liquid AI</a>, създадена от пионери от Масачузетския технологичен институт (MIT), представи официално най-новия си фундаментален модел LFM2.5-24B-A2B, специално проектиран за свръхбързо и ресурсно ефективно изпълнение на автономни софтуерни агенти директно върху персонални устройства [1]. Моделът съчетава принципите на течните невронни мрежи и <a href="/pages/state-space-models.html">моделите на пространството на състоянията (State-Space Models / SSM)</a>, решавайки един от най-тежките проблеми на съвременните езикови модели — експоненциалния апетит към оперативна памет.</p>
+<h2>Проблемът с класическите трансформъри при локални агенти</h2>
+<p>Традиционните архитектури се сблъскват с непреодолимо физическо ограничение при опит за продължително изпълнение на сложни задачи. Когато един автономен агент анализира голяма кодова база или поддържа дълъг работен диалог, неговият кеш от ключове и стойности (KV Cache) нараства линейно с всяка изминала стъпка, консумирайки десетки гигабайти ценна памет.</p>
+<p>На обикновен лаптоп или работна станция това неизбежно води до рязко забавяне на генерирането, прегряване и невъзможност за паралелно изпълнение на други софтуерни задачи. Решението на Liquid AI преосмисля самия математически механизъм на запазване на информацията.</p>
+<h2>Иновацията LFM2.5: Линеен изчислителен мащаб и постоянен отпечатък</h2>
+<p>Архитектурата LFM2.5-24B-A2B въвежда редица структурни подобрения:</p>
+<ul>
+<li><strong>Фиксиран размер на състоянието:</strong> Вместо да съхранява пълната история на всички предишни токени в нарастваща паметна таблица, моделът компресира контекста в динамично диференциално състояние с постоянен размер, което не расте независимо от дължината на документа.</li>
+<li><strong>Разредена активация (A2B - Active 8 Billion):</strong> От общо 24 милиарда параметри в невронната мрежа, по време на извод за всеки отделен токен се активират само 8 милиарда най-релевантни тегла, осигурявайки скорост на четене над 120 токена в секунда върху съвременни мобилни процесори.</li>
+<li><strong>Хардуерно оптимизирано извикване на функции:</strong> Слоевете за анализ на структуриран синтаксис гарантират, че агентът генерира перфектно форматиран JSON за извикване на външни API интерфейси без грешки при парсирането.</li>
+</ul>
+<h2>Възходът на локалния изкуствен интелект: Сигурност без компромис с мощността</h2>
+<p>Постижението на Liquid AI ускорява прехода към истински <a href="/pages/on-device-ai.html">AI изчисления на крайно устройство (On-Device AI)</a>. Досега компаниите бяха изправени пред неприятен избор: или да изпращат целия си поверителен програмен код и финансови записи към облачни сървъри, или да използват малки, неспособни местни модели с ограничено мислене.</p>
+<p>С появата на LFM2.5 инженерите и изследователите получават агент с аналитичен капацитет, съпоставим с водещите комерсиални гиганти, но работещ напълно изолирано в локалната машина. Това осигурява пълен суверенитет над данните, нулева латентност и възможност за непрекъсната автономна работа дори при прекъсване на интернет връзката — критично условие за бъдещето на критичния софтуерен инженеринг.</p>
+<p><img src="/articles/2026/10/15/liquid-ai-lfm25-on-device-agent-architecture/infographic.png" alt="Четирите стълба на архитектурата LFM2.5 от Liquid AI"><br><small>Инфографика: Математически иновации и предимства при локално изпълнение на модела LFM2.5</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b">LFM2.5-24B-A2B: Built for Fast On-Device Agents</a> - Liquid AI Blog, 15 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/state-space-models.html">Модели на пространството на състоянията (State-Space Models / SSM)</a><p>Моделите на пространството на състоянията (SSM), сред които Mamba и архитектурите на Liquid AI, представляват алтернатива на класическия трансформър.</p></li><li><a href="/pages/on-device-ai.html">AI изчисления на крайно устройство (On-Device AI)</a><p>AI изчисленията на крайно устройство (On-Device AI) обхващат изпълнението на невронни мрежи и езикови модели локално върху смартфони, персонални компю...</p></li><li><a href="/pages/liquid-ai.html">Liquid AI</a><p>Liquid AI е компания за изкуствен интелект, отделена от Масачузетския технологичен институт (MIT), пионер в разработването на течни невронни мрежи (Li...</p></li><li><a href="/pages/edge-inference.html">Инференция на ръба (Edge Inference)</a><p>Инференцията на ръба (Edge Inference) представлява изпълнението на обучени невронни мрежи директно върху крайни локални устройства (смартфони, IoT въз...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

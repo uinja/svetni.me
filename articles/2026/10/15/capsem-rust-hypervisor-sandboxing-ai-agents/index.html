@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Capsem Open Source Project / Svetni.me Visual Desk
+В отговор на зачестилите инциденти, при които кодиращи AI агенти случайно или под въздействието на злонамерени инструкции изтриват раб..."><title>Capsem: Лек хипервайзор на Rust за изолиране на автономни AI агенти в изолирани виртуални машини - Светни.ме</title><meta property="og:title" content="Capsem: Лек хипервайзор на Rust за изолиране на автономни AI агенти в изолирани виртуални машини - Светни.ме"><meta property="og:description" content="Илюстрация: Capsem Open Source Project / Svetni.me Visual Desk
+В отговор на зачестилите инциденти, при които кодиращи AI агенти случайно или под въздействието на злонамерени инструкции изтриват раб..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/15/capsem-rust-hypervisor-sandboxing-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/15/capsem-rust-hypervisor-sandboxing-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Capsem: Лек хипервайзор на Rust за изолиране на автономни AI агенти в изолирани виртуални машини</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->15 октомври 2026 г.</p><div><p><img src="/articles/2026/10/15/capsem-rust-hypervisor-sandboxing-ai-agents/hero.png" alt="Capsem: Микрохипервайзор за хардуерна изолация на автономни софтуерни агенти"><br><small>Илюстрация: Capsem Open Source Project / Svetni.me Visual Desk</small></p>
+<p>В отговор на зачестилите инциденти, при които кодиращи <a href="/pages/llm-agents.html">AI агенти</a> случайно или под въздействието на злонамерени инструкции изтриват работни директории и източват системни пароли, общността с отворен код представи проекта Capsem — свръхлек <a href="/pages/hypervisor.html">хипервайзор (Hypervisor)</a>, написан на езика <a href="/pages/rust.html">Rust</a>, създаден специално за светкавично изолиране на софтуерни агенти във виртуални среди [1].</p>
+<h2>Защо традиционните контейнери се провалят при агентите</h2>
+<p>Доскоро водещият метод за изолиране на ненадежден код бе използването на Docker контейнери. В контекста на автономните езикови модели обаче споделеното ядро на операционната система се оказва критична слабост. Модерните агенти разполагат с инструменти за изпълнение на терминални команди и компилация, което им позволява лесно да експлоатират уязвимости в Linux ядрото и да излязат извън пределите на контейнера.</p>
+<p>Нещо повече, агентните работни потоци изискват стотици кратковременни тестове в секунда. Дори решения като Firecracker изискват десетки милисекунди и значителна памет, което натоварва сървърите при мащабно паралелно изпълнение. Capsem решава този фундаментален конфликт чрез архитектурен минимализъм.</p>
+<h2>Вътрешна архитектура на Capsem: Паметна безопасност и субмилисекунден старт</h2>
+<p>Capsem стъпва директно върху хардуерната виртуализация на процесора (Intel VT-x, AMD-V, Apple Silicon Hypervisor), елиминирайки цялата ненужна периферия на класическите компютри:</p>
+<ul>
+<li><strong>Нулева повърхност за атака:</strong> Написан на чист, безопасен Rust без garbage collector, хипервайзорът се състои от по-малко от 15 000 реда код, което прави формалната верификация напълно осъществима.</li>
+<li><strong>Стартиране за под 3 милисекунди:</strong> Чрез директно зареждане на компресирано Linux ядро в предварително подготвени страници на паметта, новата изолирана машина е готова за изпълнение за време, неразличимо от извикване на обикновена функция.</li>
+<li><strong>Copy-on-Write моментни снимки (Snapshots):</strong> Агентът може да изпълнява опасни промени във файловата система, а Capsem незабавно възстановява изходното състояние в чиста памет веднага щом експериментът приключи.</li>
+<li><strong>Строга въздушна междина:</strong> Всички мрежови повиквания се филтрират през виртуален сокет (vsock), предотвратявайки опити за изпращане на данни към външни командни сървъри.</li>
+</ul>
+<h2>Бъдещето на сигурното програмиране: <a href="/pages/sandboxing.html">Изолация (Sandboxing)</a> като фундаментален закон на изкуствения интелект</h2>
+<p>Появата на специализирани решения като Capsem отразява нова парадигма в архитектурата на софтуерната сигурност. В продължение на десетилетия парадигмата на сигурността се градеше върху презумпцията, че софтуерът изпълнява предварително известен детерминистичен набор от инструкции. Генеративният AI унищожи тази аксиома.</p>
+<p>Днес всяка команда, подадена от невронна мрежа, по подразбиране трябва да се разглежда като потенциално враждебна. Чрез пренасянето на границата на доверие на ниво хардуерен хипервайзор, разработчиците най-после получават инструмент, който позволява на агентите да експериментират напълно свободно, да компилират код и да правят грешки, без това да заплашва стабилността на базовата операционна система или ценните данни на хоста.</p>
+<p><img src="/articles/2026/10/15/capsem-rust-hypervisor-sandboxing-ai-agents/infographic.png" alt="Четири стълба на архитектурата за сигурност на Capsem"><br><small>Инфографика: Нискостепенни механизми за хардуерна изолация и защита на паметта в Capsem</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://capsem.org/">Capsem – a Rust hypervisor sandboxing AI agents in air-gapped Linux VMs</a> - Capsem Open Source, 15 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/virtualization.html">Виртуализация</a><p>Виртуализация е основна изчислителна технология, която създава изолирани софтуерни слоеве (виртуални машини или микроконтейнери) върху физически харду...</p></li><li><a href="/pages/sandboxing.html">Изолирана среда за изпълнение (Sandboxing)</a><p>Изолираната среда (Sandboxing) е механизъм за сигурност, който ограничава правата на дадена софтуерна програма само до строго определени ресурси на оп...</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/llm-agents.html">Агенти, базирани на LLM (LLM Agents)</a><p>LLM агентите (LLM Agents) са софтуерни системи, които използват големи езикови модели като централен контролер за планиране, памет и изпълнение на зад...</p></li><li><a href="/pages/hypervisor.html">Хипервайзор (Hypervisor)</a><p>Хипервайзорът (или монитор на виртуални машини) е софтуерен или хардуерен слой, който създава и управлява виртуални машини, изолирайки техните операци...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

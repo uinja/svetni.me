@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: U.S. Navy / The Defence Blog
+В знаков оперативен тест, проведен в открито море, Военноморските сили на САЩ (U.S. Navy) демонстрираха успешен полет и напълно автономно кацане (Autonomous Lan..."><title>Без GPS и сателитна навигация: Военноморските сили на САЩ приземиха автономен дрон върху люлеещ се кораб - Светни.ме</title><meta property="og:title" content="Без GPS и сателитна навигация: Военноморските сили на САЩ приземиха автономен дрон върху люлеещ се кораб - Светни.ме"><meta property="og:description" content="Снимка: U.S. Navy / The Defence Blog
+В знаков оперативен тест, проведен в открито море, Военноморските сили на САЩ (U.S. Navy) демонстрираха успешен полет и напълно автономно кацане (Autonomous Lan..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/15/us-navy-autonomous-drone-ship-landing-gps-denied/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/15/us-navy-autonomous-drone-ship-landing-gps-denied/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Без GPS и сателитна навигация: Военноморските сили на САЩ приземиха автономен дрон върху люлеещ се кораб</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->15 октомври 2026 г.</p><div><p><img src="/articles/2026/10/15/us-navy-autonomous-drone-ship-landing-gps-denied/hero.png" alt="Автономен безпилотен летателен апарат извършва прецизно кацане на палубата на кораб от ВМС на САЩ"><br><small>Снимка: U.S. Navy / The Defence Blog</small></p>
+<p>В знаков оперативен тест, проведен в открито море, <a href="/pages/us-navy.html">Военноморските сили на САЩ (U.S. Navy)</a> демонстрираха успешен полет и напълно <a href="/pages/autonomous-landing.html">автономно кацане (Autonomous Landing)</a> на безпилотен апарат върху люлеещата се палуба на боен кораб в условия на тотално заглушаване на сателитните навигационни канали [1]. Постижението доказва, че най-модерните алгоритми за компютърно зрение могат да преодолеят зависимостта от спътниците и да гарантират завръщането на безпилотните машини в среда на <a href="/pages/gps-denied.html">навигация в отсъствие на GPS (GPS-Denied Navigation)</a>.</p>
+<h2>Най-сложната маневра: Палуба, която се движи в шест измерения</h2>
+<p>Приземяването на летателен апарат върху плавателен съд в океана е сред най-трудните задачи в авиацията дори за най-опитните пилоти. Корабът не просто се движи напред — под ударите на вълните палубата се люлее странично (roll), накланя се надлъжно (pitch) и се издига и спуска вертикално (heave) на метри височина.</p>
+<p>Досега автономните дронове разчитаха на военни GPS сигнали с висока точност и диференциални корекции, за да изчислят точката на контакт. Но в реален конфликт с технологичен противник като Китай или Русия, сателитните сигнали ще бъдат първото нещо, което ще изчезне вследствие на мощно радиоелектронно заглушаване или поразяване на орбитални спътници.</p>
+<h2>Оптичен поток и машинно зрение вместо сателити</h2>
+<p>За да осигурят надеждно кацане в „сляпа“ радиосреда, инженерите на ВМС залагат на визуална автономия:</p>
+<ul>
+<li><strong>Алгоритми за <a href="/pages/optical-flow.html">оптичен поток (Optical Flow)</a>:</strong> Високоскоростни инфрачервени камери на борда на дрона следят микроскопичните измествания на пикселите от кадър в кадър, изчислявайки височината, скоростта на спускане и относителното положение спрямо кораба със субсантиметрова точност.</li>
+<li><strong>Предсказващ динамичен модел:</strong> Изкуственият интелект не просто следи текущото положение на палубата, а моделира ритъма на вълните, прогнозирайки точната секунда, в която корабът ще достигне най-високата точка на издигане и за миг ще остане в относителен покой.</li>
+<li><strong>Прецизен контакт с магнитни спирачки:</strong> Дронът се спуска рязко точно в този изчислен прозорец, докосва маркировката на площадката и активира палубните системи за задържане, преди следващата вълна да разлюлее съда.</li>
+</ul>
+<h2>Морски суверенитет в ерата на електронната война</h2>
+<p>Успешният тест представлява фундаментален крайъгълен камък в трансформацията на американския флот. Способността да изстрелваш и прибираш разузнавателни и ударни безпилотници в условия на пълно заглушаване на ефира възстановява тактическото предимство на корабните авионосни групи.</p>
+<p>Военноморските операции вече няма да зависят от уязвимите космически сателити. Когато автономните машини притежават собствени независими очи и аналитичен ум, корабът се превръща в напълно автономна бойна крепост, способна да контролира стотици квадратни километри морско пространство независимо от силата на вражеските заглушители.</p>
+<p><img src="/articles/2026/10/15/us-navy-autonomous-drone-ship-landing-gps-denied/infographic.png" alt="Четирите стълба на автономното кацане на кораб в GPS-заглушена среда"><br><small>Инфографика: Сензорни потоци, оптичен поток и алгоритми за компенсация на морското вълнение</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://defence-blog.com/u-s-navy-teaches-drones-to-land-on-ships-without-gps/">U.S. Navy teaches drones to land on ships without GPS</a> - The Defence Blog, 15 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/us-navy.html">Военноморски сили на САЩ</a><p>Военноморските сили на САЩ (US Navy) са клон на Въоръжените сили на Съединените щати, отговарящ за провеждането на военноморски операции.</p></li><li><a href="/pages/optical-flow.html">Оптичен поток (Optical Flow)</a><p>Оптичният поток е патернът на видимото движение на обекти, повърхности и ръбове във визуалната сцена, причинено от относителното движение между камера...</p></li><li><a href="/pages/gps-denied.html">Навигация в отсъствие на GPS (GPS-Denied Navigation)</a><p>Навигацията в условия на липсващ или заглушен GPS сигнал (GPS-Denied) описва способността на автономни платформи да определят своята позиция и ориента...</p></li><li><a href="/pages/autonomous-landing.html">Автономно кацане (Autonomous Landing)</a><p>Автономното кацане е критична фаза от безпилотните мисии, при която летателният апарат извършва автоматизиран преход от полет към безопасно приземяван...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

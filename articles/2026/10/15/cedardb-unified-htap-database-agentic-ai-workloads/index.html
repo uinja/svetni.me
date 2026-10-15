@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: CedarDB / TechCrunch
+Германският технологичен стартъп CedarDB, отделен от престижния Технически университет в Мюнхен (TUM), представи новаторска платформа за бази данни, която премахва десе..."><title>CedarDB обединява трансакции и анализи в единна C++ архитектура за обслужване на високоскоростни AI агенти - Светни.ме</title><meta property="og:title" content="CedarDB обединява трансакции и анализи в единна C++ архитектура за обслужване на високоскоростни AI агенти - Светни.ме"><meta property="og:description" content="Снимка: CedarDB / TechCrunch
+Германският технологичен стартъп CedarDB, отделен от престижния Технически университет в Мюнхен (TUM), представи новаторска платформа за бази данни, която премахва десе..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/15/cedardb-unified-htap-database-agentic-ai-workloads/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/15/cedardb-unified-htap-database-agentic-ai-workloads/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>CedarDB обединява трансакции и анализи в единна C++ архитектура за обслужване на високоскоростни AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->15 октомври 2026 г.</p><div><p><img src="/articles/2026/10/15/cedardb-unified-htap-database-agentic-ai-workloads/hero.png" alt="Основателите на CedarDB Мориц Сихерт, Лукас Фогел, Филип Фент, Доминик Дюрнер и Кристиан Винтер"><br><small>Снимка: CedarDB / TechCrunch</small></p>
+<p>Германският технологичен стартъп <a href="/pages/cedardb.html">CedarDB</a>, отделен от престижния Технически университет в Мюнхен (TUM), представи новаторска платформа за бази данни, която премахва десетилетното разделение между трансакционни и аналитични системи [1]. Чрез своята единна архитектура за <a href="/pages/htap.html">хибридна трансакционна и аналитична обработка (HTAP)</a>, CedarDB адресира критично предизвикателство в ерата на автономните софтуерни ботове — нуждата от мигновен, синхронен достъп до оперативната и историческата бизнес памет без забавяне от ETL тръбопроводи.</p>
+<h2>Историческият разрив: Защо традиционните бази данни не отговарят на нуждите на агентите</h2>
+<p>В класическата корпоративна архитектура базите данни винаги бяха разделени на два лагера:</p>
+<ol>
+<li><strong>OLTP (Online Transaction Processing):</strong> Оптимизирани за бърз запис и четене на единични редове (като PostgreSQL и MySQL), но бавни при глобални агрегации.</li>
+<li><strong>OLAP (Online Analytical Processing):</strong> Колонно ориентирани складове за данни (като Snowflake и ClickHouse), способни да сканират милиарди записи, но неефективни при чести единични редакции.</li>
+</ol>
+<p>Този модел функционираше добре, докато данните се обработваха от хора. Автономните <a href="/pages/llm-agents.html">AI агенти</a> обаче действат по коренно различен начин. Един софтуерен бот за финансово посредничество трябва едновременно да запише нова клиентска трансакция (OLTP) и в същата милисекунда да извърши дълбок статистически анализ върху милиони предишни плащания (OLAP), за да открие аномалии. Изчакването на нощна синхронизация между две отделни системи прави автономните реакции невъзможни.</p>
+<h2>Инженерният пробив в CedarDB: JIT компилация и векторизация на C++</h2>
+<p>Екипът от Мюнхен решава този проблем на фундаментално ниво в <a href="/pages/database-internals.html">архитектурата на бази данни (Database Internals)</a>:</p>
+<ul>
+<li><strong>JIT компилация чрез LLVM:</strong> Когато постъпи сложна SQL заявка, CedarDB не я интерпретира ред по ред, а я компилира динамично в оптимизиран машинен код чрез LLVM директно в процесорния кеш.</li>
+<li><strong>Векторизирано изпълнение на <a href="/pages/c-plus-plus.html">C++</a>:</strong> Системата използва SIMD регистрите на съвременните x86 и ARM чипове, обработвайки хиляди числови стойности с една процесорна инструкция.</li>
+<li><strong>Обединена многоверсионност (MVCC):</strong> Аналитичните заявки сканират непроменени статични версии на таблиците, докато трансакционните процеси пишат паралелно в оперативната памет без никакво взаимно блокиране.</li>
+</ul>
+<h2>Икономическият ефект: Опростяване на корпоративната инфраструктура</h2>
+<p>За софтуерните архитекти появата на практични HTAP платформи означава край на сложните, чупливи и скъпи информационни тръбопроводи. Вместо да поддържат отделна трансакционна база, междинни опашки за събития (Kafka) и масивен аналитичен склад, компаниите могат да концентрират цялата си критична информация в единна, високоефективна система.</p>
+<p>Съвместимостта на CedarDB със стандартния мрежов протокол на PostgreSQL позволява директна замяна на съществуващите инстанции без пренаписване на приложния код. Чрез премахването на технологичните бариери пред скоростта на данните, CedarDB предоставя на софтуерните агенти инфраструктурния фундамент, необходим за вземане на интелигентни, контекстуални решения в реално време.</p>
+<p><img src="/articles/2026/10/15/cedardb-unified-htap-database-agentic-ai-workloads/infographic.png" alt="Четири стълба на единната HTAP архитектура на CedarDB"><br><small>Инфографика: Технологични предимства и архитектурна оптимизация в CedarDB</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/10/14/cedardb-wants-one-database-to-handle-both-transactions-and-analytics-as-ai-agents-raise-the-stakes/">CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes</a> - TechCrunch, 14 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/llm-agents.html">Агенти, базирани на LLM (LLM Agents)</a><p>LLM агентите (LLM Agents) са софтуерни системи, които използват големи езикови модели като централен контролер за планиране, памет и изпълнение на зад...</p></li><li><a href="/pages/htap.html">Хибридна трансакционна и аналитична обработка (HTAP)</a><p>Хибридната трансакционна и аналитична обработка (Hybrid Transactional/Analytical Processing - HTAP) е архитектурен модел на бази данни, позволяващ едн...</p></li><li><a href="/pages/database-internals.html">Архитектура на бази данни (Database Internals)</a><p>Архитектурата на бази данни (Database Internals) изучава нискостепенните компоненти на системите за данни, включително структури от данни (B-дървета, ...</p></li><li><a href="/pages/cedardb.html">CedarDB</a><p>CedarDB е високопроизводителна система за управление на бази данни от ново поколение, разработена на C++, която обединява аналитични (OLAP) и трансакц...</p></li><li><a href="/pages/c-plus-plus.html">C++</a><p>C++ остава индустриалният стандарт за разработка на системни ядра, графични двигатели и AI инференс платформи.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Martin Fowler / Thoughtworks
+В новата си съвместна публикация за авторитетния портал на Мартин Фаулър, софтуерният архитект Биргита Бьокелер повдига един от най-горещите въпроси пред модерн..."><title>Заслужават ли си цената тестовите харнеси за AI агенти? Инженерният анализ на Мартин Фаулър - Светни.ме</title><meta property="og:title" content="Заслужават ли си цената тестовите харнеси за AI агенти? Инженерният анализ на Мартин Фаулър - Светни.ме"><meta property="og:description" content="Снимка: Martin Fowler / Thoughtworks
+В новата си съвместна публикация за авторитетния портал на Мартин Фаулър, софтуерният архитект Биргита Бьокелер повдига един от най-горещите въпроси пред модерн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/15/martin-fowler-ai-agent-harnesses-roi-evaluation/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/15/martin-fowler-ai-agent-harnesses-roi-evaluation/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Заслужават ли си цената тестовите харнеси за AI агенти? Инженерният анализ на Мартин Фаулър</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->15 октомври 2026 г.</p><div><p><img src="/articles/2026/10/15/martin-fowler-ai-agent-harnesses-roi-evaluation/hero.png" alt="Илюстративна картичка към публикацията на Мартин Фаулър и Биргита Бьокелер за тестовите харнеси"><br><small>Снимка: Martin Fowler / Thoughtworks</small></p>
+<p>В новата си съвместна публикация за авторитетния портал на <a href="/pages/martin-fowler.html">Мартин Фаулър</a>, софтуерният архитект Биргита Бьокелер повдига един от най-горещите въпроси пред модерните инженерни директори: „Заслужават ли си огромните разходи за създаване на собствен <a href="/pages/agent-harness.html">тестови харнес за AI агенти (Agent Harness)</a>?“ [1]. Анализът предоставя трезва инженерна рамка, която разсейва илюзиите за лесна автоматизация и поставя акцент върху дългосрочната <a href="/pages/software-architecture.html">софтуерна архитектура (Software Architecture)</a>.</p>
+<h2>Какво всъщност представлява агентният харнес?</h2>
+<p>За разлика от обикновеното извикване на модел през чат прозорец, агентният харнес е специализирана софтуерна екосистема. Тя предоставя на модела строго контролирана виртуална среда, изолира файловата система, подготвя предварителни данни за тестове (Fixtures), записва всяка изпълнена команда и автоматично валидира резултата чрез външни детерминистични проверки.</p>
+<p>Изграждането на такъв харнес обаче изисква седмици висококвалифициран труд от страна на старши инженери. Въпросът на ръководствата е напълно логичен: не е ли по-евтино просто да оставим програмистите да преглеждат промените на ръка?</p>
+<h2>Икономическата сметка: Скритата цена на халюцинациите</h2>
+<p>Анализът на Фаулър и Бьокелер категорично доказва, че при реални корпоративни системи липсата на <a href="/pages/test-harnesses.html">тестови харнеси (Test Harnesses)</a> струва в пъти по-скъпо от тяхното изграждане:</p>
+<ul>
+<li><strong>Предотвратяване на тихи деградации:</strong> Без автоматизиран харнес, актуализация на базовия комерсиален модел от доставчика (напр. от версия 3.5 към 3.7) може тихомълком да счупи деликатни бизнес правила, без никой да разбере до момента на срив в продукционната среда.</li>
+<li><strong>Обективна оценка на алтернативите (Evals):</strong> Харнесът позволява на компанията да пусне серия от 500 стандартизирани задачи срещу различни модели с отворен и затворен код, определяйки точно кой алгоритъм предлага най-добро съотношение между цена и надеждност.</li>
+<li><strong>Ограничаване на безкрайните цикли:</strong> Харнесът засича в реално време, когато агентът се опита да повтори грешна компилация за шести път, спестявайки хиляди долари от излишно консумирани API токени.</li>
+</ul>
+<h2>Прагматичният баланс: Кога харнесът е задължителен и кога излишен лукс?</h2>
+<p>Авторите стигат до прагматично заключение за вземане на решения:</p>
+<ul>
+<li><strong>Кога НЕ е нужен:</strong> За еднократни скриптове за миграция на данни, прототипи за вътрешно ползване или прости генератори на документация разходите за харнес никога няма да се изплатят.</li>
+<li><strong>Кога е абсолютно ЗАДЪЛЖИТЕЛЕН:</strong> За агенти, които разполагат с права за директно вливане на код в основните клонове на критични корпоративни хранилища, харнесът е единствената преграда пред фатален инженерен хаос.</li>
+</ul>
+<p>В крайна сметка инвестицията в тестова инфраструктура за изкуствен интелект повтаря уроците от ерата на Test-Driven Development (TDD): качественият предварителен тест не забавя разработката, а е единственият механизъм, който позволява тя да се движи бързо и безопасно в дългосрочен план.</p>
+<p><img src="/articles/2026/10/15/martin-fowler-ai-agent-harnesses-roi-evaluation/infographic.png" alt="Четирите стълба на анализа за рентабилност на тестовите харнеси"><br><small>Инфографика: Архитектурни ползи, икономически разходи и прагове за внедряване на агентни харнеси</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://martinfowler.com/articles/are-harnesses-worth-the-cost.html">Are Harnesses Worth the Cost?</a> - Martin Fowler, 13 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/test-harnesses.html">Тестови харнеси за AI агенти (AI Test Harnesses)</a><p>Тестовите харнеси за AI агенти са софтуерни рамки и симулационни среди, които правят сложни продукти (като видеоигри, софтуерни монолити и операционни...</p></li><li><a href="/pages/software-architecture.html">Софтуерна архитектура</a><p>Софтуерната архитектура представлява съвкупността от най-значимите решения за дизайна на една софтуерна система.</p></li><li><a href="/pages/martin-fowler.html">Мартин Фаулър (Martin Fowler)</a><p>Мартин Фаулър е британски софтуерен инженер, автор и международен лектор по софтуерна архитектура и дизайн.</p></li><li><a href="/pages/agent-harness.html">AI Agent Harness (Тестови харнес за AI агенти)</a><p>Тестовият харнес за AI агенти (Agent Harness) е софтуерна рамка и тестова среда, която обвива езиковия модел с детерминистични инструменти за наблюден...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
