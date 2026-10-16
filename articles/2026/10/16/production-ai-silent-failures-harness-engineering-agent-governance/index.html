@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ Webinar Series
+Специализиран уебинар, организиран от технологичното издание InfoQ, събра водещи инженери по надеждност на системи за изкуствен интелект [1]. Панелистите поставиха фоку..."><title>Панел на InfoQ за AI в продукция: Тихи дефекти, тестови платформи и управление на агентни архитектури - Светни.ме</title><meta property="og:title" content="Панел на InfoQ за AI в продукция: Тихи дефекти, тестови платформи и управление на агентни архитектури - Светни.ме"><meta property="og:description" content="Снимка: InfoQ Webinar Series
+Специализиран уебинар, организиран от технологичното издание InfoQ, събра водещи инженери по надеждност на системи за изкуствен интелект [1]. Панелистите поставиха фоку..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/16/production-ai-silent-failures-harness-engineering-agent-governance/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/16/production-ai-silent-failures-harness-engineering-agent-governance/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Панел на InfoQ за AI в продукция: Тихи дефекти, тестови платформи и управление на агентни архитектури</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->16 октомври 2026 г.</p><div><p><img src="/articles/2026/10/16/production-ai-silent-failures-harness-engineering-agent-governance/hero.png" alt="Панел на InfoQ за AI в продукция: Тихи дефекти, тестови платформи и управление на агентни архитектури"><br><small>Снимка: InfoQ Webinar Series</small></p>
+<p>Специализиран уебинар, организиран от технологичното издание <a href="/pages/infoq.html">InfoQ</a>, събра водещи инженери по надеждност на системи за изкуствен интелект [1]. Панелистите поставиха фокус върху най-опасния феномен в съвременните корпоративни системи: „тихите дефекти“ (silent failures).</p>
+<h2>Тихите дефекти и коварството на семантичния дрейф</h2>
+<p>За разлика от традиционния софтуер, който хвърля грешка (500 Internal Error) при възникване на проблем, големите езикови модели продължават да връщат граматически безупречни отговори с код 200 OK, въпреки че логиката вътре е напълно компрометирана. Това прави традиционния мониторинг неефективен за откриване на семантично изкривяване.</p>
+<h2>Инженерство на тестови рамки и динамично управление</h2>
+<p>За да се справят с този проблем, експертите призовават за преминаване към „инженерство на тестови рамки“ (<a href="/pages/test-harnesses.html">Test Harnesses</a>). Тези системи непрекъснато подават калибрирани синтетични тестове към активните агенти, засичайки спад в качеството на отговорите часове преди той да бъде усетен от крайните потребители.</p>
+<p>Второто ключово направление е изграждането на строго <a href="/pages/agent-governance.html">управление на агентите (Agent Governance)</a>. То включва централизирани дневници за одит на всяко взето решение, политики за допустимо поведение и задължителни автоматични прекъсвачи при опит за навлизане в неразрешени бизнес зони.</p>
+<h2>Преходът от вероятностен ентусиазъм към детерминистична софтуерна дисциплина</h2>
+<p>Дискусията в панела на InfoQ маркира края на „романтичния период“ на генеративния изкуствен интелект в корпоративния сектор. Първоначалното очарование от способността на невронните мрежи да пишат текст бързо отстъпва място на суровата реалност на експлоатацията в режим 24/7.</p>
+<p>Компаниите осъзнават, че интеграцията на вероятностни модели в детерминистични бизнес процеси изисква изграждане на многопластова защитна броня. Тези организации, които овладеят инженерството на тестови платформи и стриктния контрол върху поведението на агентите, ще изградят непреодолимо конкурентно предимство, докато небрежните внедрявания ще платят висока цена в сринато доверие и финансови загуби.</p>
+<p><img src="/articles/2026/10/16/production-ai-silent-failures-harness-engineering-agent-governance/infographic.png" alt="Production AI Resilience &amp; Governance Architecture"><br><small>Инфографика: Светни.ме • Аналитичен поглед върху тенденциите и последствията</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/ai-systems-production/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">AI in Production: Panellists Highlight Silent Failures, Harness Engineering, and Agent Governance - InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/test-harnesses.html">Тестови харнеси за AI агенти (AI Test Harnesses)</a><p>Тестовите харнеси за AI агенти са софтуерни рамки и симулационни среди, които правят сложни продукти (като видеоигри, софтуерни монолити и операционни...</p></li><li><a href="/pages/infoq.html">InfoQ</a><p>InfoQ е водеща независима онлайн общност и издателска платформа за професионалисти в областта на софтуерната разработка.</p></li><li><a href="/pages/agent-governance.html">Управление и контрол на AI агенти (Agent Governance)</a><p>Управлението и контролът на AI агенти (Agent Governance) е набор от инженерни рамки, политики за сигурност и протоколи за надзор, предназначени да рег...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

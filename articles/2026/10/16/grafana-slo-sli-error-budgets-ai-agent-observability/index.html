@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Grafana Labs
+Инженерният екип на Grafana Labs предложи революционен подход към една от най-големите загадки в модерната разработка: как да се измерва дали един софтуерен агент се дъ..."><title>Grafana Labs въвежда SLO и бюджети за грешки за наблюдение на поведението на AI агенти - Светни.ме</title><meta property="og:title" content="Grafana Labs въвежда SLO и бюджети за грешки за наблюдение на поведението на AI агенти - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Grafana Labs
+Инженерният екип на Grafana Labs предложи революционен подход към една от най-големите загадки в модерната разработка: как да се измерва дали един софтуерен агент се дъ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/16/grafana-slo-sli-error-budgets-ai-agent-observability/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/16/grafana-slo-sli-error-budgets-ai-agent-observability/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Grafana Labs въвежда SLO и бюджети за грешки за наблюдение на поведението на AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->16 октомври 2026 г.</p><div><p><img src="/articles/2026/10/16/grafana-slo-sli-error-budgets-ai-agent-observability/hero.png" alt="Grafana Labs въвежда SLO и бюджети за грешки за наблюдение на поведението на AI агенти"><br><small>Снимка: InfoQ / Grafana Labs</small></p>
+<p>Инженерният екип на <a href="/pages/grafana.html">Grafana Labs</a> предложи революционен подход към една от най-големите загадки в модерната разработка: как да се измерва дали един софтуерен агент се държи коректно в продукционна среда [1]. Решението използва изпитаната рамка за надеждност на услугите (SRE).</p>
+<h2>Адаптиране на SRE стандартите за недетерминистични системи</h2>
+<p>Чрез въвеждане на специализирани показатели за <a href="/pages/agent-observability.html">наблюдаемост на AI агенти (Agent Observability)</a>, Grafana позволява дефиниране на ясни индикатори (SLI) и цели за ниво на обслужване (<a href="/pages/slo.html">SLO</a>). Вместо традиционните HTTP статус кодове, системата следи семантичното отклонение, латентността на разсъжденията и степента на съответствие с бизнес правилата.</p>
+<h2>Бюджети за грешки и автоматизирано прекратяване на сесии</h2>
+<p>Ключов елемент в новия инструментариум е концепцията за бюджети за грешки (Error Budgets). Тъй като големите езикови модели са вероятностни системи, нулев процент грешки е невъзможен. Инженерите задават праг на допустимо отклонение — например не повече от 2% дефекти при извикване на външни инструменти за период от 7 дни.</p>
+<p>Ако агентът изчерпи своя бюджет за грешки поради халюцинации или промени в структурата на външните бази данни, платформата автоматично включва аварийни предпазители (circuit breakers). Това пренасочва трафика към класически правила или изисква задължително одобрение от човешки оператор.</p>
+<h2>Индустриализацията на агентите: От експерименти към гарантирана надеждност</h2>
+<p>Въвеждането на строги SLO рамки от Grafana Labs отбелязва съзряването на AI технологиите от етапа на впечатляващи демонстрации към масова корпоративна експлоатация. В продължение на две години компаниите внедряваха агенти на сляпо, разчитайки на случайно потребителско тестване за откриване на сериозни сривове.</p>
+<p>Когато автономните агенти управляват милиарди долари в трансакции и критични облачни ресурси, вероятностният им характер изисква същата инженерна прецизност, каквато се прилага към ядрени реактори и самолетни системи. Тази методология превръща недетерминирания AI в управляема, измерима и съвместима с корпоративните изисквания софтуерна компонента.</p>
+<p><img src="/articles/2026/10/16/grafana-slo-sli-error-budgets-ai-agent-observability/infographic.png" alt="Grafana AI Agent SLO &amp; Error Budget Architecture"><br><small>Инфографика: Светни.ме • Аналитичен поглед върху тенденциите и последствията</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/grafana-slo-ai-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Grafana Applies SLOs and Error Budgets to AI Agent Behaviour - InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slo.html">SLO (Service Level Objectives)</a><p>Целите за ниво на обслужване (Service Level Objectives или SLO) са целеви показатели за надеждност на софтуерни услуги, формулирани в рамките на метод...</p></li><li><a href="/pages/grafana.html">Grafana Labs</a><p>Grafana Labs е създателят на водещата отворена платформа за визуализация, анализ на данни и оперативно наблюдение на ИТ системи.</p></li><li><a href="/pages/agent-observability.html">Наблюдаемост на AI агенти (Agent Observability)</a><p>Наблюдаемостта на AI агенти (Agent Observability) обхваща инструментариума и методологиите за мониторинг, трасиране и телеметрия на недетерминистични ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

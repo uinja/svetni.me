@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Chainguard
+Компанията за киберсигурност Chainguard представи две нови бета решения — Chainguard Workspaces и Chainguard Checks, адресиращи нарастващите заплахи за софтуерната верига..."><title>Chainguard представи защитени изолирани среди и верификация за автономни кодиращи агенти - Светни.ме</title><meta property="og:title" content="Chainguard представи защитени изолирани среди и верификация за автономни кодиращи агенти - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Chainguard
+Компанията за киберсигурност Chainguard представи две нови бета решения — Chainguard Workspaces и Chainguard Checks, адресиращи нарастващите заплахи за софтуерната верига..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/16/chainguard-zero-trust-workspaces-ai-coding-agent-security/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/16/chainguard-zero-trust-workspaces-ai-coding-agent-security/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Chainguard представи защитени изолирани среди и верификация за автономни кодиращи агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->16 октомври 2026 г.</p><div><p><img src="/articles/2026/10/16/chainguard-zero-trust-workspaces-ai-coding-agent-security/hero.png" alt="Chainguard представи защитени изолирани среди и верификация за автономни кодиращи агенти"><br><small>Снимка: InfoQ / Chainguard</small></p>
+<p>Компанията за киберсигурност <a href="/pages/chainguard.html">Chainguard</a> представи две нови бета решения — Chainguard Workspaces и Chainguard Checks, адресиращи нарастващите заплахи за <a href="/pages/software-supply-chain.html">софтуерната верига за доставки (Software Supply Chain)</a> при използването на автоматизирани асистенти за програмиране [1].</p>
+<h2>Опасността от отравяне на софтуерната верига за доставки</h2>
+<p>Когато AI агентите получат задача да добавят функционалност или поправят дефект, те често самостоятелно инсталират външни пакети от npm или PyPI. Злонамерени актьори все по-често използват техники за отравяне на пакети (typosquatting), подлъгвайки моделите да свалят библиотеки със скрити задни врати.</p>
+<h2>Минималистични контейнери без CVE уязвимости и превантивни проверки</h2>
+<p>Chainguard Workspaces предлага изолирани работни пространства, изградени върху ултраминималистични базови контейнерни образи (Wolfi/Chainguard Images) с нулев брой познати уязвимости (Zero CVE). Средата е лишена от ненужни системни инструменти като bash или curl, правейки ескалацията на привилегии невъзможна.</p>
+<p>Паралелният инструмент Chainguard Checks извършва автоматизиран статичен и динамичен анализ на генерирания код в съответствие с архитектурата за <a href="/pages/zero-trust.html">нулево доверие (Zero Trust)</a>. Системата верифицира криптографските подписи на всички извикани зависимости чрез Sigstore преди кодът да бъде допуснат до интеграция.</p>
+<h2>Сигурността на кода в ерата на машинен синтез без човешко участие</h2>
+<p>Решенията на Chainguard отговарят на един от най-опасните странични ефекти на AI революцията: размиването на софтуерния периметър. В миналото всяка добавена библиотека преминаваше през прегледа на поне един опитен програмист. Днес агентите добавят десетки транзитивни зависимости за секунди, без да осъзнават техния произход.</p>
+<p>Без строги криптографски гаранции за произход и среди с нулево доверие, корпоративните кодбази рискуват да се превърнат в разсадник на скрити уязвимости. Превръщането на сигурността в автоматизирана входна врата (automated gatekeeper) е единственият начин индустрията да запази интегритета на критичната си инфраструктура.</p>
+<p><img src="/articles/2026/10/16/chainguard-zero-trust-workspaces-ai-coding-agent-security/infographic.png" alt="Chainguard AI Agent Supply Chain Security"><br><small>Инфографика: Светни.ме • Аналитичен поглед върху тенденциите и последствията</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/chainguard-workspaces-checks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Chainguard Launches Secure Workspaces and Checks for AI Coding Agents - InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-trust.html">Zero Trust (Нулево доверие)</a><p>Zero Trust („Нулево доверие“) е архитектура за киберсигурност, базирана на принципа „никога не се доверявай, винаги проверявай“.</p></li><li><a href="/pages/software-supply-chain.html">Софтуерна верига за доставки (Software Supply Chain)</a><p>Софтуерната верига за доставки обхваща всички компоненти, пакети, инструменти и инфраструктурни етапи, участващи в разработката и компилацията на прил...</p></li><li><a href="/pages/chainguard.html">Chainguard</a><p>Chainguard е специализирана компания за киберсигурност, фокусирана върху защитата на софтуерната верига за доставки (Software Supply Chain Security) и...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

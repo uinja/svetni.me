@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Simon Willison Blog / Anthropic Engineering
+Технологичният анализатор Саймън Уилисън публикува детайлно изследване върху мащабната трансформация на инфраструктурата за контрол на версиите (..."><title>Как Anthropic преструктурира контрола на версиите за хиляди паралелни сливания на код от AI агенти - Светни.ме</title><meta property="og:title" content="Как Anthropic преструктурира контрола на версиите за хиляди паралелни сливания на код от AI агенти - Светни.ме"><meta property="og:description" content="Снимка: Simon Willison Blog / Anthropic Engineering
+Технологичният анализатор Саймън Уилисън публикува детайлно изследване върху мащабната трансформация на инфраструктурата за контрол на версиите (..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/16/anthropic-source-control-redesign-ai-engineering-workflows/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/16/anthropic-source-control-redesign-ai-engineering-workflows/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как Anthropic преструктурира контрола на версиите за хиляди паралелни сливания на код от AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->16 октомври 2026 г.</p><div><p><img src="/articles/2026/10/16/anthropic-source-control-redesign-ai-engineering-workflows/hero.png" alt="Как Anthropic преструктурира контрола на версиите за хиляди паралелни сливания на код от AI агенти"><br><small>Снимка: Simon Willison Blog / Anthropic Engineering</small></p>
+<p>Технологичният анализатор Саймън Уилисън публикува детайлно изследване върху мащабната трансформация на инфраструктурата за <a href="/pages/source-control.html">контрол на версиите (Source Control)</a> в <a href="/pages/anthropic.html">Anthropic</a> [1]. Поводът е графика от инженерния блог на лабораторията, показваща експоненциален скок в броя на ежедневните сливания на код (merges per day).</p>
+<h2>Експлозия на паралелните компилации и лимитите на традиционния Git</h2>
+<p>С масовото навлизане на вътрешни агенти, базирани на Claude, хиляди автоматизирани работни процеси генерират клонове, изпълняват тестове и подават заявки за сливане паралелно. Традиционният модел на <a href="/pages/git.html">Git</a> с централизиран <code>main</code> клон и последователно пребазиране колабира под натиска на постоянни конфликти при сливане (merge conflicts).</p>
+<h2>Виртуални файлови системи и трансакционна изолация за агенти</h2>
+<p>За да се справи с хилядите паралелни компилации на час, инженерният екип на Anthropic внедрява архитектура от ново поколение, базирана на виртуални файлови системи (като EdenFS/Jujutsu концепции) и трансакционни опашки за сливане (Merge Queues).</p>
+<p>Агентите работят в ефимерни виртуални работни пространства (workspaces), които се създават за милисекунди и се разтоварват веднага след валидация. Системата за автоматичен преглед валидира семантичната коректност на промените чрез бързи симулации, елиминирайки нуждата от чакане на човешка намеса при стандартни рефакторирания и ъпдейти на зависимости.</p>
+<h2>Трансформацията на софтуерното инженерство в оркестрация на агентни флоти</h2>
+<p>Опитът на Anthropic очертава контурите на бъдещото софтуерно инженерство. В продължение на половин век инструментите за разработка — от компилатори до системи за версии — бяха проектирани с презумпцията, че основният актьор е бавен, четящ ред по ред човек, създаващ няколко комита на ден.</p>
+<p>Когато агентите пишат 90% от кода, софтуерните хранилища се трансформират във високоскоростни бази данни за разпределени състояния с висока конкурентност. Инженерите престават да бъдат автори на изходен код и се превръщат в системни архитекти, дефиниращи ограничения, тестови спецификации и политики за сигурност за хиляди неуморни машини.</p>
+<p><img src="/articles/2026/10/16/anthropic-source-control-redesign-ai-engineering-workflows/infographic.png" alt="AI-Native Source Control Architecture"><br><small>Инфографика: Светни.ме • Аналитичен поглед върху тенденциите и последствията</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/">Redesigning Source Control at Anthropic - Simon Willison</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/source-control.html">Системи за контрол на версиите (Source Control &amp; Monorepo)</a><p>Системите за контрол на версиите (като Git и Jujutsu) управляват промените в изходния код и осигуряват възможност за паралелна съвместна работа.</p></li><li><a href="/pages/git.html">Git</a><p>Git
+Git е стандартната в софтуерната индустрия разпределена система за контрол на версиите (DVCS), създадена първоначално от Линус Торвалдс за разрабо...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
