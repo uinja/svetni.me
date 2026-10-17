@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Markus Spiske markusspiske
+Обратното инженерство (reverse engineering) на компилиран софтуер традиционно се смяташе за една от най-езотеричните и труднодостъпни дисципли..."><title>Проектът с отворен код Reverse Engineer Anything интегрира AI агенти в бинарния анализ и декомпилацията - Светни.ме</title><meta property="og:title" content="Проектът с отворен код Reverse Engineer Anything интегрира AI агенти в бинарния анализ и декомпилацията - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Markus Spiske markusspiske
+Обратното инженерство (reverse engineering) на компилиран софтуер традиционно се смяташе за една от най-езотеричните и труднодостъпни дисципли..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/reverse-engineer-anything-ai-agents-binary-analysis-decompilation/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/reverse-engineer-anything-ai-agents-binary-analysis-decompilation/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Проектът с отворен код Reverse Engineer Anything интегрира AI агенти в бинарния анализ и декомпилацията</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/reverse-engineer-anything-ai-agents-binary-analysis-decompilation/hero.png" alt="Проектът с отворен код Reverse Engineer Anything интегрира AI агенти в бинарния анализ и декомпилацията"><br><small>Снимка: Wikimedia Commons / Markus Spiske markusspiske</small></p>
+<p><a href="/pages/reverse-engineering.html">Обратното инженерство (reverse engineering)</a> на компилиран софтуер традиционно се смяташе за една от най-езотеричните и труднодостъпни дисциплини в компютърните науки, изискваща години опит в разчитане на асемблерен код, паметни адреси и структури без имена. Проектът с отворен код Reverse Engineer Anything (REA) обаче прави революция в областта, интегрирайки специализирани <a href="/pages/ai-agents.html">ИИ агенти (ai agents)</a> директно в процеса на <a href="/pages/binary-analysis.html">бинарен анализ (binary analysis)</a> [1].</p>
+<p>Платформата, представена от InfoQ, изгражда мост между водещата отворена декомпилаторна рамка <a href="/pages/ghidra.html">Ghidra</a> (първоначално разработена от АНС) и съвременните големи езикови модели, автоматизирайки досадното възстановяване на типове и разкриването на скрити уязвимости.</p>
+<h2>От нечетими шестнадесетични адреси до чист сорс код</h2>
+<p>Когато компилаторът превърне изходния код на C или C++ в изпълним файл, всички имена на променливи, коментари и дефиниции на структури се изтриват. Остава единствено последователност от машинни инструкции, в които променливите са просто отмествания в стека (offsets), а извикванията на функции – адреси в паметта.</p>
+<p>REA променя това чрез двуетапен агентен процес. Първо, Ghidra генерира междинно представяне (P-Code) и извлича графите на контролния поток (Control Flow Graphs). След това автономен агент анализира шаблоните на достъп до паметта, разпознава логическите граници на структурите от данни и възстановява таблиците с виртуални методи (vtables). Вместо криптичното <code>*(int*)(rbp - 0x28)</code>, агентът детерминистично възстановява автентични имена като <code>session-&gt;user_id</code>, генерирайки идиоматичен, напълно четим псевдокод.</p>
+<h2>Автономно откриване на уязвимости във фърмуери</h2>
+<p>Отвъд обикновеното преименуване на код, REA демонстрира изключителни възможности за откриване на пробиви в сигурността. Агентът може самостоятелно да проследи пътя на потребителския вход през бинарния файл, откривайки скрити грешки от типа препълване на буфер (buffer overflow), грешки с един знак (off-by-one) или използване на памет след освобождаване (use-after-free).</p>
+<p>При тестове върху затворени фърмуери за рутери и индустриални IoT контролери, системата е успяла да идентифицира критични уязвимости за под два часа – задача, която преди изискваше седмици методичен ръчен труд на опитен етичен хакер.</p>
+<h2>Системни и индустриални последици: Демократизация на кибероръжията и защитата</h2>
+<p>Появата на инструменти като REA коренно променя баланса на силите в дигиталната сигурност. В продължение на десетилетия концепцията за „сигурност чрез неяснота“ (security through obscurity) осигуряваше удобен параван за производителите на хардуер и затворен софтуер – липсата на изходен код предпазваше продуктите от масов анализ.</p>
+<p>С навлизането на агентните декомпилатори тази защита се изпарява. Всеки бинарен файл, попаднал в ръцете на изследовател или нападател, може да бъде разглобен до съставните си части със скоростта на светлината.</p>
+<p>Това развитие има двуяко въздействие. От една страна, защитниците получават инструмент за светкавичен одит на външни библиотеки и проверка за скрити задни врати. От друга страна, киберпрестъпниците и държавните хакерски групи получават възможност за индустриализирано търсене на уязвимости от нулев ден (zero-days). За софтуерната индустрия това означава, че единственият начин за оцеляване е преминаването към математически проверени и безопасни за паметта езици (като Rust), тъй като скриването на дефекти в бинарния код вече е абсолютно невъзможно.</p>
+<p><img src="/articles/2026/10/17/reverse-engineer-anything-ai-agents-binary-analysis-decompilation/infographic.png" alt="Инфографика: REA: Автономен бинарен анализ и декомпилация"><br><small>Четири стълба на анализа: интеграция с Ghidra, агентно възстановяване на типове и променливи, автономно откриване на уязвимости и край на сигурността чрез неяснота</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ, &quot;Reverse Engineer Anything Project Brings AI Agents to Binary Analysis&quot; (2026-10-17).</li>
+<li>Reverse Engineer Anything (REA) Core Team, &quot;Open Source Architecture and Ghidra Bridge Documentation&quot; (October 2026).</li>
+<li>US National Security Agency (NSA), &quot;Ghidra Software Reverse Engineering Framework: Automated Extensibility Guidelines&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314455, &quot;Reverse Engineer Anything Project Brings AI Agents to Binary Analysis&quot; (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reverse-engineering.html">Обратно инженерство</a><p>Обратното инженерство в софтуера включва анализ на изпълним код за извличане на дизайн и логика.</p></li><li><a href="/pages/ghidra.html">Ghidra</a><p>Ghidra е платформа за софтуерно обратно инженерство (SRE) с отворен код, първоначално разработена от Агенцията за национална сигурност на САЩ (NSA).</p></li><li><a href="/pages/binary-analysis.html">Бинарен анализ</a><p>Бинарният анализ е фундаментална дисциплина в информационната сигурност и системното програмиране.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

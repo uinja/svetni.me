@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Indrajit Das
+Облачният гигант Amazon Web Services (AWS) обяви стратегическо придобиване с колосални последици за управлението на корпоративни данни: компанията купи Duck..."><title>Amazon придоби DuckLabs и внедри аналитичния енджин DuckDB директно в Amazon Aurora PostgreSQL - Светни.ме</title><meta property="og:title" content="Amazon придоби DuckLabs и внедри аналитичния енджин DuckDB директно в Amazon Aurora PostgreSQL - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Indrajit Das
+Облачният гигант Amazon Web Services (AWS) обяви стратегическо придобиване с колосални последици за управлението на корпоративни данни: компанията купи Duck..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/amazon-aurora-postgresql-ducklabs-acquisition-duckdb-integration/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/amazon-aurora-postgresql-ducklabs-acquisition-duckdb-integration/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Amazon придоби DuckLabs и внедри аналитичния енджин DuckDB директно в Amazon Aurora PostgreSQL</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/amazon-aurora-postgresql-ducklabs-acquisition-duckdb-integration/hero.png" alt="Amazon придоби DuckLabs и внедри аналитичния енджин DuckDB директно в Amazon Aurora PostgreSQL"><br><small>Снимка: Wikimedia Commons / Indrajit Das</small></p>
+<p>Облачният гигант <a href="/pages/amazon-web-services.html">Amazon Web Services (AWS)</a> обяви стратегическо придобиване с колосални последици за управлението на корпоративни данни: компанията купи DuckLabs – създателите на бързоразвиващата се вградена аналитична база данни <a href="/pages/duckdb.html">DuckDB</a> – и внедри нейния векторизиран енджин директно в флагманската си облачна услуга Amazon Aurora <a href="/pages/postgresql.html">PostgreSQL</a> [1].</p>
+<p>Сделката, отразена от InfoQ, слага край на десетилетното изкуствено разделение между трансакционни (OLTP) и аналитични (OLAP) системи, предлагайки на разработчиците на изкуствен интелект единна хибридна платформа, способна да обработва милиони трансакции и едновременно с това да извършва светкавичен векторно-аналитичен извод.</p>
+<h2>Краят на скъпите и тромави ETL тръбопроводи</h2>
+<p>В продължение на години корпоративните ИТ архитекти бяха принудени да поддържат два напълно отделни свята: оперативна база данни като PostgreSQL за обслужване на потребителски заявки и тромав аналитичен склад (като Snowflake или Amazon Redshift) за статистически отчети.</p>
+<p>Прехвърлянето на данните между тях изискваше сложни, чупливи процеси за извличане, трансформация и зареждане (ETL), които генерираха огромни закъснения и колосални облачни сметки. С интеграцията на DuckDB в Aurora това разделение изчезва. Архитектурата използва общо споделено дисково пространство, като трансакциите се записват редово за максимална надеждност, а паралелният енджин на DuckDB ги чете колоно-ориентирано директно от паметта, извършвайки сложни аналитични агрегации за милисекунди без необходимост от дублиране на информацията.</p>
+<h2>Защо съвременните AI агенти се нуждаят от DuckDB</h2>
+<p>Основният двигател зад придобиването е експлозията на <a href="/pages/database-internals.html">вътрешните механизми на базите данни (database internals)</a>, наложени от автономните софтуерни агенти. Когато един интелигентен агент изпълнява сложна изследователска задача, той непрекъснато прави комбинирани заявки: търси сходни векторни ембединги, филтрира по релационни метаданни и агрегира времеви редове.</p>
+<p>Традиционните бази данни се задъхват под този хибриден натиск. DuckDB решава проблема чрез векторизирано изпълнение на инструкции (SIMD), способност за директно сканиране на Parquet файлове в Amazon S3 и нулево натоварване на трансакционното ядро. Това позволява на агентите да извличат релевантен контекст за милисекунди, драстично намалявайки латентността на потребителските взаимодействия.</p>
+<h2>Макроикономически и индустриални последици: Натиск върху независимите складове за данни</h2>
+<p>Ходът на Amazon е директен удар върху бизнес модела на независимите доставчици на аналитични облачни складове. Защо една компания би плащала милиони за отделен абонамент за обработка на анализи, след като може да стартира DuckDB директно вътре в съществуващия си Aurora клъстер без допълнителни лицензионни такси?</p>
+<p>За общността с отворен код сделката повдига въпроси относно бъдещата независимост на проекта DuckDB. От AWS обаче категорично заявиха, че независимата фондация и отворените хранилища на DuckDB ще запазят лиценза си MIT, гарантирайки продължаващо развитие за локални потребители и Python разработчици.</p>
+<p>В стратегически план интегрирането на вградени аналитични енджини в релационните ядра циментира доминацията на PostgreSQL като вечния градивен блок на софтуерния свят. В ерата на изкуствения интелект най-добрата база данни се оказва не тази, която въвежда екзотични нови парадигми, а тази, която успява да адаптира върховите постижения на аналитичната наука в познатия, надежден и неунищожим релационен стандарт.</p>
+<p><img src="/articles/2026/10/17/amazon-aurora-postgresql-ducklabs-acquisition-duckdb-integration/infographic.png" alt="Инфографика: Интеграцията на DuckDB в Amazon Aurora"><br><small>Четири стълба на анализа: придобиване на DuckLabs от AWS, хибридна HTAP архитектура без ETL, акселерация за AI агенти и натиск върху независимите аналитични складове</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ, &quot;Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL&quot; (2026-10-17).</li>
+<li>Amazon Web Services Official Blog, &quot;Introducing In-Database Vectorized OLAP Acceleration for Aurora PostgreSQL with DuckDB&quot; (October 2026).</li>
+<li>DuckLabs Research, &quot;DuckDB as a Vectorized Execution Subsystem for Transactional Engines&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314456, &quot;Amazon Acquires DuckLabs and Integrates DuckDB in Amazon Aurora PostgreSQL&quot; (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/postgresql.html">PostgreSQL</a><p>PostgreSQL (често наричана просто Postgres) е мощна система за управление на релационни бази данни (RDBMS) с отворен код.</p></li><li><a href="/pages/duckdb.html">DuckDB</a><p>DuckDB е вградена релационна колоно-ориентирана система за управление на бази данни, оптимизирана за аналитична обработка на данни (OLAP).</p></li><li><a href="/pages/database-internals.html">Архитектура на бази данни (Database Internals)</a><p>Архитектурата на бази данни (Database Internals) изучава нискостепенните компоненти на системите за данни, включително структури от данни (B-дървета, ...</p></li><li><a href="/pages/amazon-web-services.html">Amazon Web Services (AWS)</a><p>Amazon Web Services (AWS) е водещото по пазарен дял облачно подразделение на Amazon, предоставящо над 200 напълно функционални услуги от центрове за д...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

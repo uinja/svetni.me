@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Evan-Amos
+В едно от най-впечатляващите хардуерни хакерски постижения на годината разработчикът с псевдоним Cobanov представи проекта с отворен код PS5LM, който успешно п..."><title>Проектът PS5LM портна Llama.cpp за PlayStation 5: Локален извод на квантувани GGUF модели върху конзолен хардуер - Светни.ме</title><meta property="og:title" content="Проектът PS5LM портна Llama.cpp за PlayStation 5: Локален извод на квантувани GGUF модели върху конзолен хардуер - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Evan-Amos
+В едно от най-впечатляващите хардуерни хакерски постижения на годината разработчикът с псевдоним Cobanov представи проекта с отворен код PS5LM, който успешно п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/ps5lm-llama-cpp-playstation-5-gguf-local-inference/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/ps5lm-llama-cpp-playstation-5-gguf-local-inference/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Проектът PS5LM портна Llama.cpp за PlayStation 5: Локален извод на квантувани GGUF модели върху конзолен хардуер</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/ps5lm-llama-cpp-playstation-5-gguf-local-inference/hero.png" alt="Проектът PS5LM портна Llama.cpp за PlayStation 5: Локален извод на квантувани GGUF модели върху конзолен хардуер"><br><small>Снимка: Wikimedia Commons / Evan-Amos</small></p>
+<p>В едно от най-впечатляващите хардуерни хакерски постижения на годината разработчикът с псевдоним Cobanov представи проекта с отворен код PS5LM, който успешно портва популярната библиотека <a href="/pages/llama-cpp.html">Llama.cpp</a> за игровата конзола PlayStation 5, превръщайки масовото геймърско устройство в свръхефективна станция за локален <a href="/pages/open-source-ai.html">изкуствен интелект с отворен код (open-source AI)</a> [1].</p>
+<p>Проектът, предизвикал фурор в общността на Hacker News, използва софтуерни пролуки в конзолния фърмуер за отключване на директен достъп до хардуера, демонстрирайки как потребителска техника на цена под $450 може да конкурира специализирани работни станции за хиляди долари.</p>
+<h2>Хардуерният коз: 448 гигабайта в секунда</h2>
+<p>В основата на успеха на PS5LM лежи специфичната архитектура на конзолата на Sony. За разлика от стандартните настолни компютри, където процесорът разчита на сравнително бавна DDR4 или DDR5 памет, а графичната карта разполага със собствен отделен пул, PlayStation 5 използва обединена памет (Unified Memory Architecture).</p>
+<p>Конзолата е оборудвана с 16 GB свръхбърза GDDR6 памет с пропускателна способност от 448 GB/s, споделена директно между 8-ядрения Zen 2 процесор и RDNA 2 графичното ядро. В областта на езиковите модели пропускателната способност на паметта (memory bandwidth) е най-критичният фактор, определящ скоростта на генериране на токени. За сравнение, стандартен настолен компютър с DDR5 рядко надхвърля 80 GB/s, правейки конзолата над пет пъти по-бърза при четене на моделните тегла.</p>
+<h2>Архитектура на портинга и GGUF квантуване</h2>
+<p>За да постигне стабилен извод, Cobanov е компилирал Llama.cpp с персонализиран шейдърен бекенд, адаптиран за графичните примитиви на Sony. Системата работи директно с квантувани модели в индустриалния формат GGUF (предимно 4-битови и 5-битови схеми на <a href="/pages/quantization.html">квантуване - quantization</a>).</p>
+<p>При практически тестове моделът Llama-3-8B-Instruct се зарежда изцяло в GDDR6 паметта, заемайки около 5.5 GB и оставяйки предостатъчно място за дълъг контекстен буфер от 16 000 токена. Скоростта на генерация достига впечатляващите 38 токена в секунда – скорост, надвишаваща скоростта на човешко четене и съпоставима с професионални графични карти от най-висок клас.</p>
+<h2>Периферни изчисления: 60 милиона спящи AI сървъра</h2>
+<p>Проектът PS5LM има огромно значение за бъдещето на <a href="/pages/edge-computing.html">периферните изчисления (edge computing)</a>. В света има инсталирана база от над 60 милиона конзоли PlayStation 5. Досега този колосален изчислителен капацитет се използваше единствено за рендериране на видеоигри.</p>
+<p>Възможността конзолата да стартира локални модели отваря революционни перспективи:</p>
+<ol>
+<li><strong>Локална поверителност:</strong> Потребителите получават мощен персонален асистент у дома, чиито данни никога не напускат локалната мрежа.</li>
+<li><strong>Интелигентни NPC в игрите:</strong> Разработчиците могат да използват нативния извод за създаване на неигрови персонажи (NPC) с динамичен диалог и непредвидимо поведение без скъпи облачни абонаменти.</li>
+<li><strong>Демократизация на изследванията:</strong> Студенти и ентусиасти получават достъп до високоскоростен хардуер за експерименти на цена, достъпна за масовия потребител.</li>
+</ol>
+<p>Въпреки че Sony традиционно се бори срещу отключването на конзолите си от съображения за пиратство, успехът на PS5LM показва, че бъдещето на хардуера е в гъвкавостта. Когато потребителите осъзнаят, че холната им конзола е мощен невронен суперкомпютър, натискът върху производителите да отворят официален достъп за изчисления с изкуствен интелект ще стане неустоим.</p>
+<p><img src="/articles/2026/10/17/ps5lm-llama-cpp-playstation-5-gguf-local-inference/infographic.png" alt="Инфографика: PS5LM: Локален AI извод върху PlayStation 5"><br><small>Четири стълба на анализа: пропускателна способност на обединената GDDR6 памет, софтуерен портинг на Llama.cpp, реална производителност при 4-битово квантуване и превръщане на конзолите в периферни AI сървъри</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Cobanov GitHub Repository, &quot;PS5LM: Porting Llama.cpp and GGUF Inference to PlayStation 5 Unified GDDR6&quot; (October 2026).</li>
+<li>Hacker News Technical Discussion, &quot;Thread on PS5LM: Running LLMs natively on jailbroken PS5 (id: 50122431)&quot; (2026-10-16).</li>
+<li>Eurogamer Digital Foundry, &quot;PlayStation 5 as an AI Workstation: Exploring Unified Memory Bandwidth for Neural Networks&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314131, &quot;Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console&quot; (2026-10-16).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/quantization.html">Квантуване (Quantization)</a><p>Квантуването (Quantization) е ключов метод за компресиране на модели в областта на дълбокото обучение, който преобразува теглата и активиранията на не...</p></li><li><a href="/pages/open-source-ai.html">ИИ с отворен код (Open Source AI)</a><p>ИИ с отворен код (Open Source AI) е термин, който описва системи за изкуствен интелект, които отговарят на стандартите за прозрачност и свобода, дефин...</p></li><li><a href="/pages/llama-cpp.html">llama.cpp</a><p>llama.</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

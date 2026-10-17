@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Famartin
+Един от най-впечатляващите интелектуални триумфи на изкуствения интелект през 2026 година бе регистриран в лабораториите на Anthropic: моделът Claude успя само ..."><title>Claude на Anthropic разгада 25-годишна криптографска мистерия на АНС за елиптичните криви за 30 минути - Светни.ме</title><meta property="og:title" content="Claude на Anthropic разгада 25-годишна криптографска мистерия на АНС за елиптичните криви за 30 минути - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Famartin
+Един от най-впечатляващите интелектуални триумфи на изкуствения интелект през 2026 година бе регистриран в лабораториите на Anthropic: моделът Claude успя само ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/anthropic-claude-nsa-ecdsa-cryptography-puzzle-solution/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/anthropic-claude-nsa-ecdsa-cryptography-puzzle-solution/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Claude на Anthropic разгада 25-годишна криптографска мистерия на АНС за елиптичните криви за 30 минути</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/anthropic-claude-nsa-ecdsa-cryptography-puzzle-solution/hero.png" alt="Claude на Anthropic разгада 25-годишна криптографска мистерия на АНС за елиптичните криви за 30 минути"><br><small>Снимка: Wikimedia Commons / Famartin</small></p>
+<p>Един от най-впечатляващите интелектуални триумфи на изкуствения интелект през 2026 година бе регистриран в лабораториите на <a href="/pages/anthropic.html">Anthropic</a>: моделът <a href="/pages/claude.html">Claude</a> успя само за 30 минути да разреши 25-годишна математическа загадка, свързана с произхода на ключови параметри в стандартите за елиптична <a href="/pages/cryptography.html">криптография (cryptography)</a>, публикувани от Агенцията за национална сигурност на САЩ (<a href="/pages/nsa.html">АНС / NSA</a>) през 1999 година [1].</p>
+<p>Изследването, публикувано от екипа на Anthropic и отразено от The Decoder, премахва четвърт век на подозрения и конспиративни теории в световната общност по информационна сигурност относно това дали най-разпространените криптографски криви в света не съдържат тайна задна врата за американското разузнаване.</p>
+<h2>25 години подозрения около стандарта NIST P-256</h2>
+<p>През 1999 г. Националният институт по стандарти и технологии на САЩ (NIST) публикува стандарта FIPS 186-2, който дефинира набор от елиптични криви (включително P-256 и P-384), използвани днес за защита на почти целия интернет трафик – от TLS сертификати до мобилни банкови приложения и криптирани съобщения.</p>
+<p>Параметрите за тези криви бяха предоставени директно от математиците на NSA. Макар агенцията да заяви, че коефициентите са получени чрез детерминирано хеширане на случаен начален низ (seed), NSA никога не обясни как точно е избран самият начален шестнадесетичен низ. Това породи дългогодишни съмнения сред видни криптографи (включително Брус Шнайер), че NSA може умишлено да е тествала милиони възможни стойности, за да избере крива със скрити геометрични слабости, известни единствено на агенцията.</p>
+<h2>Как Claude разкри математическия код</h2>
+<p>По време на изследователски експеримент за анализ на математически структури, изследователите на Anthropic са предоставили на Claude необяснените константи без допълнителен контекст. За по-малко от половин час моделът е идентифицирал скрита корелация между шестнадесетичните блокове и разложението в редове на Тейлър на математическите константи $\pi$ и $e$.</p>
+<p>Claude детерминистично реконструира точния алгоритъм, използван от криптографите на NSA преди 27 години: агенцията е взела компресирани редове на Тейлър за $\pi$, приложила е модифицирана версия на ранния хеш алгоритъм SHA-1 и е филтрирала първия резултат, отговарящ на математическите критерии за недегенеративна елиптична крива. Това неопровержимо доказва принципа „нищо скрито в ръкава“ (nothing-up-my-sleeve numbers) и изключва възможността за манипулиран избор с цел създаване на задна врата.</p>
+<h2>Архитектурни и научни последици: AI като математически археолог</h2>
+<p>Успехът на Claude демонстрира ново, революционно приложение на големите езикови модели – като инструменти за „математическа и софтуерна археология“. Години наред човешки математици са проверявали отделни хипотези, но комбинацията от разпознаване на латентни модели в колосални числови масиви и светкавичното тестване на аналитични формули е позволила на модела да види връзки, останали невидими за две поколения учени.</p>
+<p>За глобалната индустрия по киберсигурност откритието носи огромно облекчение. Стандартът P-256 остава защитен от исторически манипулации, което спестява на технологичния сектор милиарди долари за преждевременна миграция на базовите криптографски библиотеки.</p>
+<p>В по-широк план това откритие отваря вратата към системно валидиране на хиляди стари, непрозрачни софтуерни и инженерни стандарти. Изкуственият интелект се доказва не като заплаха за криптографията, а като върховен инструмент за прозрачност, способен да разсее сенките на институционалното недоверие чрез непоклатимата строгост на чистата математика.</p>
+<p><img src="/articles/2026/10/17/anthropic-claude-nsa-ecdsa-cryptography-puzzle-solution/infographic.png" alt="Инфографика: Claude разгадава мистерията на елиптичните криви на NSA"><br><small>Четири стълба на анализа: 25-годишната загадка на NIST, анализът на Claude за 30 минути, опровержението на задната врата и бъдещето на математическата археология чрез AI</small></p>
+<h2>Източници</h2>
+<ol>
+<li>The Decoder, &quot;Anthropics&#39; Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes&quot; (2026-10-17).</li>
+<li>Anthropic Research, &quot;Claude reveals ECDSA curve origins: Deconstructing 1999 NIST Seeds via Taylor Expansions&quot; (October 2026).</li>
+<li>NIST Information Technology Laboratory, &quot;FIPS PUB 186-2: Digital Signature Standard (DSS) Historical Retrospective&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314970, &quot;Anthropics&#39; Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes&quot; (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nsa.html">NSA</a><p>Агенцията за национална сигурност на САЩ (NSA) е разузнавателна агенция към Министерството на отбраната на САЩ, която отговаря за глобалния мониторинг...</p></li><li><a href="/pages/cryptography.html">Криптография (Cryptography)</a><p>Криптографията е наука за сигурната комуникация и защитата на информация чрез математически протоколи, шифри и дигитални подписи.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

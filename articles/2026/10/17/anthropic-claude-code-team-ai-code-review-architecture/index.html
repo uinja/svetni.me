@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Alper Koçer
+Във всяка високотехнологична компания процесът по преглед на код (code review) на новосъздадените Pull Requests е едновременно най-важният гарант за качество..."><title>Как екипът на Claude Code в Anthropic трансформира прегледа на код чрез специализирани агенти - Светни.ме</title><meta property="og:title" content="Как екипът на Claude Code в Anthropic трансформира прегледа на код чрез специализирани агенти - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Alper Koçer
+Във всяка високотехнологична компания процесът по преглед на код (code review) на новосъздадените Pull Requests е едновременно най-важният гарант за качество..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/anthropic-claude-code-team-ai-code-review-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/anthropic-claude-code-team-ai-code-review-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как екипът на Claude Code в Anthropic трансформира прегледа на код чрез специализирани агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/anthropic-claude-code-team-ai-code-review-architecture/hero.png" alt="Как екипът на Claude Code в Anthropic трансформира прегледа на код чрез специализирани агенти"><br><small>Снимка: Wikimedia Commons / Alper Koçer</small></p>
+<p>Във всяка високотехнологична компания процесът по <a href="/pages/code-review.html">преглед на код (code review)</a> на новосъздадените Pull Requests е едновременно най-важният гарант за качество и най-тежкото тесно място за скоростта на разработка. Старшите инженери прекарват часове на ден в откриване на пропуснати крайни случаи, синтактични разминавания и потенциални регресии. В обширен архитектурен разбор инженерният екип зад <a href="/pages/claude-code.html">Claude Code</a> в лабораторията <a href="/pages/anthropic.html">Anthropic</a> разкри как е решил този проблем чрез оркестрация на специализирани изкуствени агенти [1].</p>
+<p>Публикацията, предизвикала огромен интерес в инженерната общност в Hacker News, демонстрира работещ модел за това как генеративният интелект може да поеме рутинната тежест по верификацията, намалявайки времето за сливане на код с над 60%.</p>
+<h2>Анатомия на многоагентния преглед</h2>
+<p>Вместо да подава целия код на Pull Request-а към един монолитен модел – практика, която често води до халюцинации и пропускане на фини дефекти – Anthropic използва йерархична конвейерна архитектура:</p>
+<ol>
+<li><strong>Агент за контекстно картографиране:</strong> Разглобява промените (git diff) и идентифицира всички зависимости в репозиторито, които биха могли да бъдат засегнати от новия код, генерирайки компактен граф на въздействието.</li>
+<li><strong>Специализирани паралелни рецензенти:</strong> Няколко инстанции на Claude анализират кода едновременно от различни гледни точки:<ul>
+<li><em>Агент за сигурност:</em> сканира за SQL инжекции, незащитени входни данни и изтичане на токени.</li>
+<li><em>Агент за производителност:</em> анализира сложността по време и памет ($O(n)$ срещу $O(n^2)$), предупреждавайки за неефективни заявки към бази данни.</li>
+<li><em>Агент за архитектурен стил:</em> следи за спазване на конвенциите на екипа и качеството на документацията.</li>
+</ul>
+</li>
+<li><strong>Агент-синтезатор:</strong> Обобщава бележките, елиминира дублираните коментари и генерира форматиран преглед в GitHub с конкретни предложения за поправка, които програмистът може да приложи с един клик.</li>
+</ol>
+<h2>От критични забележки към продуктивен диалог</h2>
+<p>Ключовата иновация в подхода на Anthropic е интерактивният характер на системата. Агентът не се държи като бездушен линтер, който просто маркира грешки, а като колега програмист.</p>
+<p>Ако програмистът не е съгласен със забележката на агента относно даден компромис в производителността, той може да отговори директно в коментарите на PR. Агентът чете отговора, преоценява контекста и ако аргументът на човека е валиден (например: „това е скрипт, който се изпълнява веднъж месечно и оптимизацията не си струва сложността“), моделът оттегля предупреждението си и одобрява сливането.</p>
+<h2>Трансформация на инженерната култура: Бъдещето на разработката</h2>
+<p>Опитът на Anthropic очертава бъдещето на цялата дисциплина <a href="/pages/software-engineering.html">софтуерно инженерство (software engineering)</a>. Досега практиката на code review често беше източник на междуличностни търкания, субективни спорове за естетика и дълги забавяния, при които готова функционалност чака с дни за преглед.</p>
+<p>Автоматизирането на обективните проверки премахва тези блокажи. Старшите инженери биват освободени от задължението да търсят забравени запетайки или липсващи тестове, като могат да фокусират вниманието си върху стратегически въпроси: дизайн на интерфейсите, мащабируемост на бизнес логиката и дългосрочна системна устойчивост.</p>
+<p>За индустрията това е доказателство, че изкуственият интелект не замества инженера, а умножава неговата продуктивност. Когато машината поеме рутинната проверка, софтуерният екип възвръща способността си да експериментира и да доставя стойност с невиждана досега скорост.</p>
+<p><img src="/articles/2026/10/17/anthropic-claude-code-team-ai-code-review-architecture/infographic.png" alt="Инфографика: Агентен преглед на код в Anthropic"><br><small>Четири стълба на анализа: семантичен анализ на зависимостите, паралелни специализирани агенти, интерактивен диалог в GitHub и трансформация на инженерната култура</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Anthropic Engineering Blog, &quot;How the Claude Code team does code review: Solving Code Review at Anthropic&quot; (2026-10-16).</li>
+<li>Hacker News Discussion, &quot;Thread on Anthropic&#39;s Multi-Agent Code Review Pipeline (id: 50122951)&quot; (October 2026).</li>
+<li>ACM Queue, &quot;Automating Software Inspection: From Static Analysis to LLM-Assisted Peer Review&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314136, &quot;How the Claude Code team does code review&quot; (2026-10-16).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/code-review.html">Ревю на код (Code Review)</a><p>Ревюто на код е фундаментална инженерна практика за систематична партньорска проверка на промени в изходния код преди тяхното интегриране в основния к...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

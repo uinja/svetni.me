@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Wikideas1
+Едно от фундаменталните ограничения на съвременния изкуствен интелект е неговата зависимост от статични набори от данни и предварително дефинирани правила. Ког..."><title>Google представи EnvHarness: Отворена рамка за обучение на саморазвиващи се агенти в динамични среди - Светни.ме</title><meta property="og:title" content="Google представи EnvHarness: Отворена рамка за обучение на саморазвиващи се агенти в динамични среди - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Wikideas1
+Едно от фундаменталните ограничения на съвременния изкуствен интелект е неговата зависимост от статични набори от данни и предварително дефинирани правила. Ког..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/google-envharness-self-evolving-agents-dynamic-environments/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/google-envharness-self-evolving-agents-dynamic-environments/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google представи EnvHarness: Отворена рамка за обучение на саморазвиващи се агенти в динамични среди</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/google-envharness-self-evolving-agents-dynamic-environments/hero.png" alt="Google представи EnvHarness: Отворена рамка за обучение на саморазвиващи се агенти в динамични среди"><br><small>Снимка: Wikimedia Commons / Wikideas1</small></p>
+<p>Едно от фундаменталните ограничения на съвременния изкуствен интелект е неговата зависимост от статични набори от данни и предварително дефинирани правила. Когато агент, обучен на стабилни примери, се сблъска с хаоса на реалния свят – внезапно прекъснати мрежи, променени API или срив в захранването – неговата ефективност се срива. Изследователското звено на <a href="/pages/google.html">Google</a> направи решителна стъпка към преодоляване на този дефект, пускайки с отворен код иновативната рамка EnvHarness [1].</p>
+<p>Платформата, представена от InfoQ, въвежда среда, в която <a href="/pages/autonomous-agents.html">автономните агенти (autonomous agents)</a> не просто решават предварително зададени задачи, а самостоятелно генерират, усложняват и модифицират своите <a href="/pages/simulation-environments.html">симулационни среди (simulation environments)</a>, за да откриват собствените си слепи петна и да развиват устойчиви адаптивни поведения.</p>
+<h2>Архитектура на динамичната авто-еволюция</h2>
+<p>Досегашните среди за <a href="/pages/reinforcement-learning.html">обучение с подсилване (reinforcement learning)</a> (като OpenAI Gym или MuJoCo) разчитаха на фиксирани правила: моделът играе Atari игра или учи виртуален робот да тича по права линия.</p>
+<p>EnvHarness преобръща тази динамика чрез концепцията за „среда като агент“. В рамката единият агент (генератор на средата) непрекъснато конструира сценарии с нарастваща сложност: инжектира случайни системни сривове, променя физическите параметри на триене и гравитация или фалшифицира мрежови отговори. Вторият агент (учещият се) е принуден да адаптира своята политика (policy), за да изпълни целевата задача въпреки саботажа на средата. Чрез този двуполюсен механизъм агентите се учат да предвиждат непредвидимото.</p>
+<h2>Затваряне на пропастта Sim-to-Real</h2>
+<p>Ключовата практическа полза от EnvHarness е преодоляването на прочутата пропаст между симулация и реалност (sim-to-real gap). Когато даден модел се обучава в среда, където системните параметри варират непрекъснато в широк диапазон (domain randomization), той развива стратегии, които са устойчиви на реални шумове.</p>
+<p>При тестове за управление на сложни облачни клъстери агенти, преминали през подготовка в EnvHarness, са успели да изолират каскадни сривове в Kubernetes среда за под 40 секунди – задача, при която агенти, тренирани по класическия начин, изпадат в безкрайни цикли от грешки и сриват целия производствен клъстер.</p>
+<h2>Макроикономически и научни последици: Преодоляване на „стената на данните“</h2>
+<p>Значението на EnvHarness надхвърля софтуерната стабилност. През последната година цялата технологична индустрия е изправена пред заплахата от т.нар. „стена на данните“ – изчерпването на висококачествени човешки текстове и видеоматериали за предварително обучение на нови модели.</p>
+<p>EnvHarness посочва изхода от тази криза: преминаване от пасивно обучение върху човешкото минало към активно генериране на синтетичен опит в динамични симулации. Когато моделите могат сами да създават виртуални лаборатории, да симулират физични експерименти и да проверяват математически хипотези в милиони паралелни светове, скоростта на обучението вече не се ограничава от скоростта, с която хората пишат книги или код.</p>
+<p>Отказът на Google да затвори тази технология зад платени корпоративни API и пускането ѝ под свободен лиценз за световната академична общност е мощен сигнал. Той показва, че битката за следващото поколение изкуствен интелект ще се реши не от това кой притежава най-големия архив от стари данни, а от това кой ще създаде най-гъвкавата симулационна машина за непрекъснато самоусъвършенстване на машинния интелект.</p>
+<p><img src="/articles/2026/10/17/google-envharness-self-evolving-agents-dynamic-environments/infographic.png" alt="Инфографика: Google EnvHarness: Саморазвиващи се агенти"><br><small>Четири стълба на анализа: динамични симулационни среди, затворен цикъл на обучение с подсилване, преодоляване на sim-to-real пропастта и преодоляване на стената на данните</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ, &quot;Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments&quot; (2026-10-17).</li>
+<li>Google Research, &quot;EnvHarness: Scalable Dynamic Task and Environment Co-Evolution for Resilient Agentic Policies&quot; (October 2026).</li>
+<li>DeepMind Autonomous Systems Group, &quot;From Static Benchmarks to Adversarial Simulators: The Future of Reinforcement Learning&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314167, &quot;Google EnvHarness Enables Self-Evolving Agents to Learn in Dynamics Environments&quot; (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/simulation-environments.html">Симулационни среди</a><p>Симулационните среди (Simulation Environments) са изчислителни виртуални платформи, създадени за трениране, тестване и валидиране на автономни агенти ...</p></li><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

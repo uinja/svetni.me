@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Daniel Voigt Godoy
+В продължение на близо десетилетие трансформърите (transformers) доминират в изкуствения интелект като безспорен архитектурен стандарт, захранващ всич..."><title>Как вниманието в трансформърите произлиза директно от асоциативната памет на Хопфийлд - Светни.ме</title><meta property="og:title" content="Как вниманието в трансформърите произлиза директно от асоциативната памет на Хопфийлд - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Daniel Voigt Godoy
+В продължение на близо десетилетие трансформърите (transformers) доминират в изкуствения интелект като безспорен архитектурен стандарт, захранващ всич..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/17/associative-memory-transformers-attention-mechanism-origins/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/17/associative-memory-transformers-attention-mechanism-origins/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как вниманието в трансформърите произлиза директно от асоциативната памет на Хопфийлд</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 октомври 2026 г.</p><div><p><img src="/articles/2026/10/17/associative-memory-transformers-attention-mechanism-origins/hero.png" alt="Как вниманието в трансформърите произлиза директно от асоциативната памет на Хопфийлд"><br><small>Снимка: Wikimedia Commons / Daniel Voigt Godoy</small></p>
+<p>В продължение на близо десетилетие <a href="/pages/transformers.html">трансформърите (transformers)</a> доминират в изкуствения интелект като безспорен архитектурен стандарт, захранващ всичко от GPT и Claude до най-модерните визуални модели. Въпреки техния триумф, фундаменталният въпрос <em>защо</em> механизмът за <a href="/pages/attention-mechanism.html">самовнимание (attention mechanism)</a> работи толкова поразително добре често оставаше в сферата на емпиричната евристика и инженерната интуиция.</p>
+<p>Теоретично изследване на учения Алекс Уанг, озаглавено „You could have invented transformers from memory“ и посрещнато с възторг в научните среди на Hacker News, хвърля неочаквана светлина върху този въпрос, доказвайки, че вниманието не е случайно хрумване, а пряко математическо следствие от класическата физична теория за асоциативната памет и <a href="/pages/hopfield-networks.html">мрежите на Хопфийлд (Hopfield networks)</a> [1].</p>
+<h2>От спиновите стъкла до модерните невронни мрежи</h2>
+<p>През 1982 г. физикът Джон Хопфийлд създава рекурентен математически модел, вдъхновен от статистическата физика на магнитите (спиновите стъкла). В него паметта не е конкретен адрес в силициев чип, а динамичен локален минимум на енергийна функция. Ако подадете на системата зашумен или непълен вход, тя естествено „пада“ в най-близкия енергиен кладенец, възстановявайки оригиналния чист спомен.</p>
+<p>Класическите мрежи на Хопфийлд обаче страдаха от тежко ограничение: капацитетът им за запаметяване беше малък – приблизително $0.14N$ образеца за $N$ неврона. При опит да се запамети повече информация паметите се сливаха в хаотични грешки.</p>
+<h2>Експоненциалният пробив и тъждеството с вниманието</h2>
+<p>През последните години физиците Дмитрий Кротов и Джон Хопфийлд въведоха т.нар. „модерни мрежи на Хопфийлд“, заменяйки полиномната енергийна функция с експоненциална. Това доведе до експлозивен скок: капацитетът за запаметяване стана експоненциален спрямо броя на невроните.</p>
+<p>Анализът на Алекс Уанг прави фундаменталната следваща стъпка, доказвайки чрез аналитично извеждане, че една единствена итерация за обновяване на състоянието в модерна Хопфийлд мрежа с непрекъснати променливи е напълно идентична със стандартната формула за самовнимание:</p>
+<p>$$	ext{Attention}(Q, K, V) = 	ext{softmax}\left(rac{QK^T}{\sqrt{d}}<br>ight)V$$</p>
+<p>В тази формулировка заявките (Queries) играят ролята на входния сигнал за търсене, ключовете (Keys) са съхранените енергийни шаблони в латентното пространство, а стойностите (Values) са асоциираните семантични спомени. Трансформърът, заключава Уанг, не е просто статистически калкулатор за думи, а колосална, диференцируема система от взаимодействащи си асоциативни памети.</p>
+<h2>Епистемологични последици: От инженерна алхимия към физическа наука</h2>
+<p>Това математическо откритие бележи преломен момент за <a href="/pages/machine-learning-theory.html">теорията на машинното обучение (machine learning theory)</a>. В продължение на години критиците упрекваха дълбокото обучение, че наподобява средновековна алхимия – инженерите сглобяваха слоеве от неврони чрез проби и грешки, без да разбират законите, които ги управляват.</p>
+<p>Свързването на трансформърите с физиката на статистическите системи превръща алхимията в наука. Тази теория започва да дава точни физични обяснения за необясними досега феномени:</p>
+<ul>
+<li><strong>Ин-контекстно обучение (In-context learning):</strong> разглежда се като временно образуване на нови енергийни минимуми по време на подаване на промпта.</li>
+<li><strong>Халюцинации:</strong> тълкуват се като попадане на модела в т.нар. „лъжливи състояния“ (spurious states) – точки на равновесие, които са математически валидни минимуми, но не съответстват на реални човешки спомени.</li>
+</ul>
+<p>За бъдещето на индустрията този теоретичен фундамент е от безценно значение. Вместо да хабят милиарди долари за сляпо увеличаване на изчислителната мощ, изследователите вече могат да проектират нови невронни архитектури, стъпвайки на термодинамични закони и доказани принципи на асоциативната памет, откривайки пътя към модели със свръхчовешка надеждност и енергийна ефективност.</p>
+<p><img src="/articles/2026/10/17/associative-memory-transformers-attention-mechanism-origins/infographic.png" alt="Инфографика: От асоциативна памет към трансформъри"><br><small>Четири стълба на анализа: класически Хопфийлд мрежи, експоненциални енергийни функции, математическо тъждество с вниманието и физически основи на дълбокото обучение</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Alex Wang Research Monograph, &quot;You could have invented transformers from memory&quot; (2026-10-16).</li>
+<li>Hacker News Discussion, &quot;Thread on Associative Memory and the Origins of Attention (id: 50122878)&quot; (October 2026).</li>
+<li>Physical Review Research, &quot;Equivalence of Modern Hopfield Networks and Scaled Dot-Product Attention in Deep Neural Systems&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314235, &quot;You could have invented transformers from memory&quot; (2026-10-16).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/transformers.html">Трансформъри</a><p>Трансформърите (Transformers) са клас архитектури за дълбоки невронни мрежи, представени за първи път в научната статия „Attention Is All You Need“ от...</p></li><li><a href="/pages/machine-learning-theory.html">Теория на машинното обучение</a><p>Теорията на машинното обучение (Machine Learning Theory) е фундаментално математическо и компютърно научно направление, изучаващо теоретичните основи ...</p></li><li><a href="/pages/hopfield-networks.html">Мрежи на Хопфийлд</a><p>Мрежите на Хопфийлд (Hopfield Networks) са класическа форма на рекурентни изкуствени невронни мрежи, въведени от физика Джон Хопфийлд през 1982 г.</p></li><li><a href="/pages/attention-mechanism.html">Механизъм за внимание (Attention Mechanism)</a><p>Механизмът за внимание (Attention Mechanism) е фундаментален математически компонент на невронните мрежи, позволяващ на модела динамично да приоритизи...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
