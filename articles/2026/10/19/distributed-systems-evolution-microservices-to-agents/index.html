@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: InfoQ
+В продължение на повече от десетилетие архитектурата на микросървисите беше безспорният златен стандарт за изграждане на мащабируеми софтуерни платформи. Разделянето на монолита н..."><title>Еволюция на разпределените системи: Преходът от микросървиси към автономни агентни мрежи - Светни.ме</title><meta property="og:title" content="Еволюция на разпределените системи: Преходът от микросървиси към автономни агентни мрежи - Светни.ме"><meta property="og:description" content="Илюстрация: InfoQ
+В продължение на повече от десетилетие архитектурата на микросървисите беше безспорният златен стандарт за изграждане на мащабируеми софтуерни платформи. Разделянето на монолита н..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Еволюция на разпределените системи: Преходът от микросървиси към автономни агентни мрежи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/hero.png" alt="Илюстрация към анализа на InfoQ за еволюцията от микросървиси към агентни системи"><br><small>Илюстрация: InfoQ</small></p>
+<p>В продължение на повече от десетилетие архитектурата на микросървисите беше безспорният златен стандарт за изграждане на мащабируеми софтуерни платформи. Разделянето на монолита на малки, функционално обособени услуги, комуникиращи през REST или gRPC, позволи на корпорациите да паралелизират разработката. Днес обаче тази парадигма достига своя естествен таван на сложност. Задълбочен архитектурен анализ на изданието InfoQ доказва, че индустрията навлиза в следващия фундаментален етап: преходът от микросървиси към автономни агентни мрежи (Agentic Meshes) в рамките на <a href="/pages/distributed-systems.html">разпределените системи</a> [1].</p>
+<h2>От статични договори към семантични намерения</h2>
+<p>Основната слабост на съвременните микросървиси е тяхната твърда и крехка взаимовръзка:</p>
+<ul>
+<li>За да може Услуга А да извика Услуга Б, програмистите трябва предварително да съгласуват стриктна OpenAPI или Protocol Buffers схема. Всяка промяна в полетата на заявката изисква синхронно актуализиране на клиентските библиотеки и рискува чупене на производствения конвейер;</li>
+<li>В <a href="/pages/ai-agents.html">агентната разпределена мрежа</a> комуникацията не се базира на статични функции, а на деклариране на цели и семантични намерения. Един агент изпраща заявка от типа: „Намери ми три най-евтини маршрута за доставка на пратка с тези габарити до петък“. Приемащият агент не изисква твърд формат, а самостоятелно разглобява задачата, извлича необходимите данни и връща верифициран резултат [1].</li>
+</ul>
+<h2>Самовъзстановяване и динамична композиция</h2>
+<p>Тази когнитивна революция трансформира фундаментите на надеждността в софтуерното инженерство:</p>
+<ul>
+<li><strong>Динамично откриване на пътища (Dynamic Routing):</strong> Ако традиционен микросървис за банкови разплащания аварира, извикващата система просто хвърля грешка <code>503 Service Unavailable</code>. Агентният възел обаче може в реално време да оцени ситуацията, да установи алтернативен доставчик на финансови трансакции, да прочете документацията на неговото API в движение и да пренасочи плащането, без да нарушава преживяването на потребителя;</li>
+<li><strong>Предизвикателството на недетерминираността:</strong> Най-голямата заплаха пред агентните мрежи е рискът от неочаквано колективно поведение (emergent behavior). Когато десетки агенти започнат автономно да преговарят помежду си за разпределяне на ресурси, съществува опасност от попадане в семантични задънени улици или предизвикване на каскадни спекулативни натоварвания в мрежата;</li>
+<li><strong>Новата роля на системния архитект:</strong> Програмистите спират да пишат контролери и рутери. Тяхната работа се измества към създаването на глобални политики за сигурност, дефиниране на криптографски граници и изграждане на телеметрични системи от ново поколение, които да наблюдават не просто закъснението на пакетите, а логическата коректност на агентните разговори.</li>
+</ul>
+<p><img src="/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/infographic.png" alt="Стълбове на архитектурния преход от микросървиси към агентни мрежи"><br><small>Инфографика: Еволюция на свързаността в корпоративния разпределен софтуер</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/articles/distributed-systems-microservices-agentic-ai/">From Microservices to Agents: The Next Evolution of Distributed Systems</a> - InfoQ, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: GitHub / Isuru Maduranga
+В софтуерната общност бързо се налага консенсус: причината хиляди амбициозни проекти за автономни AI агенти да се провалят при прехода от демо версии към реално..."><title>Harness Engineering 101: Архитектурно разделение между когнитивното ядро и детерминираната среда - Светни.ме</title><meta property="og:title" content="Harness Engineering 101: Архитектурно разделение между когнитивното ядро и детерминираната среда - Светни.ме"><meta property="og:description" content="Илюстрация: GitHub / Isuru Maduranga
+В софтуерната общност бързо се налага консенсус: причината хиляди амбициозни проекти за автономни AI агенти да се провалят при прехода от демо версии към реално..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Harness Engineering 101: Архитектурно разделение между когнитивното ядро и детерминираната среда</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/hero.png" alt="Архитектурна диаграма на концепцията Harness Engineering в GitHub"><br><small>Илюстрация: GitHub / Isuru Maduranga</small></p>
+<p>В софтуерната общност бързо се налага консенсус: причината хиляди амбициозни проекти за <a href="/pages/ai-agents.html">автономни AI агенти</a> да се провалят при прехода от демо версии към реално производство не се корени в слабостта на самите езикови модели, а в липсата на правилна системна архитектура. В широко дискутирано инженерно ръководство, озаглавено <em>Harness Engineering 101</em>, изследователят Исуру Мадуранга формулира фундаменталното правило на новата епоха: <strong>„Езиковият модел е просто мозъкът; харнесът е тялото“</strong> [1]. Без здраво, детерминистично изградено тяло дори най-гениалният мозък е безпомощен и опасен за околната среда.</p>
+<h2>Анатомия на разделението: Защо моделът не бива да управлява света сам</h2>
+<p>Езиковите модели по своята същност са стохастични калкулатори на вероятности за следващ токен. Те нямат физическо усещане за време, ресурси, системна памет или необратими странични ефекти.</p>
+<p>Парадигмата на <a href="/pages/harness-engineering.html">инженерството на агентни харнеси</a> налага строго разграничаване на отговорностите:</p>
+<ol>
+<li><strong>Когнитивното ядро (The Brain):</strong> Единствената задача на LLM е да разсъждава върху текущия контекст и да изразява семантично намерение под формата на типизирано съобщение или избор на действие;</li>
+<li><strong>Изпълнителният харнес (The Harness):</strong> Всичко останало се поема от детерминираната обвивка:<ul>
+<li><em>Валидация на типовете:</em> Харнесът проверява дали аргументите съответстват на строги схеми (напр. Pydantic или JSON Schema). Ако моделът сбърка тип данни, харнесът му връща моментално компилационно съобщение за грешка, без да изпраща счупената команда към операционната система;</li>
+<li><em>Пясъчник и безопасност (Sandboxing):</em> Изпълнението на скриптове става в изолирани контейнери с ограничен достъп до мрежата и файловата система;</li>
+<li><em>Управление на ресурсите:</em> Харнесът следи стриктно разхода на токени и време. Ако агентът се опита да изпълни повече от зададения лимит стъпки, харнесът принудително спира процеса, предотвратявайки стопяването на хиляди долари в безкраен цикъл [1].</li>
+</ul>
+</li>
+</ol>
+<h2>Инженерният зрял етап: Моделите идват и си отиват, харнесът остава</h2>
+<p>Това концептуално разделение носи огромни ползи за дългосрочната устойчивост на корпоративните софтуерни системи:</p>
+<ul>
+<li><strong>Универсална заменимост:</strong> Когато архитектурата е чиста, фирмата може за минути да смени вътрешния модел (например преминавайки от GPT към Claude или отворен DeepSeek) само с промяна на конфигурационен низ. Бизнес логиката, тестовете и механизмите за сигурност остават непокътнати в харнеса.</li>
+<li><strong>Възпроизводимост и дебъгване:</strong> Харнесът записва абсолютно всеки вход, изход и външно състояние в структуриран времеви лог (trace). Когато възникне логически срив, инженерът не се опитва да отгатва защо моделът е халюцинирал, а може детерминистично да преиграе цялата сесия стъпка по стъпка.</li>
+<li><strong>Еволюцията към агентни операционни системи:</strong> Подобно на начина, по който операционните системи навремето отделиха потребителските програми от директния достъп до хардуера чрез системни повиквания (syscalls), харнесът се утвърждава като „микроядрото“ на изкуствения интелект, превръщайки дивата и хаотична магия на невронните мрежи в предсказуем софтуерен продукт.</li>
+</ul>
+<p><img src="/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/infographic.png" alt="Стълбове на парадигмата Harness Engineering 101 и разделението между мозък и тяло"><br><small>Инфографика: Архитектурни граници между вероятностното ядро и детерминистичната система</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/IsuruMaduranga/harness-engineering-101">Harness Engineering 101: The LLM is the brain, the harness is the body</a> - GitHub / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/harness-engineering.html">Инженерство на агентни харнеси (Harness Engineering)</a><p>Инженерството на агентни харнеси (Harness Engineering) е софтуерна дисциплина, която дефинира границата между стохастичното когнитивно ядро на езикови...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

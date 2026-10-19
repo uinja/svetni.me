@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Google Research / GitHub
+Едно от основните препятствия пред широкото навлизане на автономните AI агенти в реалния бизнес е тяхната непредвидимост: при продължителни задачи моделите чест..."><title>Harness2 от Google Research: Рекурсивна оркестрация и самокоригиращи се рамки за AI агенти - Светни.ме</title><meta property="og:title" content="Harness2 от Google Research: Рекурсивна оркестрация и самокоригиращи се рамки за AI агенти - Светни.ме"><meta property="og:description" content="Илюстрация: Google Research / GitHub
+Едно от основните препятствия пред широкото навлизане на автономните AI агенти в реалния бизнес е тяхната непредвидимост: при продължителни задачи моделите чест..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Harness2 от Google Research: Рекурсивна оркестрация и самокоригиращи се рамки за AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/hero.png" alt="OpenGraph банер на репозиторието Harness2 от Google Research в GitHub"><br><small>Илюстрация: Google Research / GitHub</small></p>
+<p>Едно от основните препятствия пред широкото навлизане на <a href="/pages/ai-agents.html">автономните AI агенти</a> в реалния бизнес е тяхната непредвидимост: при продължителни задачи моделите често изпадат в безкрайни цикли, забравят първоначалните ограничения или замърсяват контекста си с грешни предположения. За да реши този системен дефект, изследователският екип на Google Research пусна библиотеката с отворен код <strong>Harness2</strong> [1] — нов индустриален еталон в областта на <a href="/pages/harness-engineering.html">инженерството на агентни харнеси</a>.</p>
+<h2>Рекурсивната парадигма: Защо единичният агент е задънена улица</h2>
+<p>Досегашните опити за изграждане на агенти разчитаха на прости цикли от типа „мисъл – действие – наблюдение“ (ReAct), управлявани от един централен езиков модел. При задачи, изискващи стотици стъпки обаче, този подход неминуемо катастрофира поради натрупване на контекстен шум.</p>
+<p>Harness2 въвежда строга йерархична архитектура:</p>
+<ul>
+<li><strong>Супервизорни насочени ациклични графи (DAGs):</strong> Главният агент не изпълнява конкретни софтуерни инструменти сам. Той динамично генерира план като граф от подзадачи и инстанцира независими дочерни агенти (subagents), всеки от които работи в чист контекстен балон;</li>
+<li><strong>Трансакционни контролни точки (State Checkpoints):</strong> Преди всеки дочерен агент да извърши необратимо действие (като модификация на файл или изпращане на заявка към външен сървър), харнесът прави пълна моментна снимка на състоянието. Ако агентът се провали или даде отклонение от очаквания тип изход, Harness2 моментално връща системата към последната стабилна точка (rollback), подобно на трансакция в релационна база данни [1].</li>
+</ul>
+<h2>От „магически промптове“ към строго софтуерно инженерство</h2>
+<p>Пускането на Harness2 маркира съзряването на AI индустрията:</p>
+<ul>
+<li><strong>Край на ерата на наивното промптване:</strong> Надеждността на софтуера не се постига чрез заклинания в системния промпт от типа „моля, бъди много внимателен и не допускай грешки“. Надеждността се гарантира единствено чрез външни детерминистични предпазители, строги типове данни и механизми за ограничаване на страничните ефекти.</li>
+<li><strong>Интелигентно подрязване на контекста (Context Pruning):</strong> Harness2 автоматично агрегира и компресира резултатите от дочерните процеси. Когато даден подзадачен агент прегледа 50 страници документация, той връща на супервизора само синтезиран отговор от два абзаца, запазвайки глобалния контекст чист и предпазвайки родителския модел от когнитивно претоварване.</li>
+<li><strong>Неутралност спрямо моделите:</strong> Въпреки че е разработен от Google Research, Harness2 е напълно модулен и не е обвързан с Gemini. Инженерите могат свободно да го използват с Claude, локални модели на Meta или Mistral, създавайки универсална платформа за надеждни автономни работни потоци.</li>
+</ul>
+<p><img src="/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/infographic.png" alt="Стълбове на архитектурата на Harness2 за рекурсивно управление на агенти"><br><small>Инфографика: Рекурсивни граф структури и трансакционни механизми в Harness2</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/google-research/harness2">Harness2 by Google Research – Recursive Agent Harnessing</a> - Google Research / GitHub / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/harness-engineering.html">Инженерство на агентни харнеси (Harness Engineering)</a><p>Инженерството на агентни харнеси (Harness Engineering) е софтуерна дисциплина, която дефинира границата между стохастичното когнитивно ядро на езикови...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

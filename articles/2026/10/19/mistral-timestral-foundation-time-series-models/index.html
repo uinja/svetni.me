@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Mistral AI
+Френската лаборатория Mistral AI направи фундаментален пробив отвъд класическата обработка на естествен език, обявявайки официално своя нов специализиран модел Timestral [1]...."><title>Timestral: Mistral представя базови foundation модели за времеви редове - Светни.ме</title><meta property="og:title" content="Timestral: Mistral представя базови foundation модели за времеви редове - Светни.ме"><meta property="og:description" content="Илюстрация: Mistral AI
+Френската лаборатория Mistral AI направи фундаментален пробив отвъд класическата обработка на естествен език, обявявайки официално своя нов специализиран модел Timestral [1]...."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/mistral-timestral-foundation-time-series-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/mistral-timestral-foundation-time-series-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Timestral: Mistral представя базови foundation модели за времеви редове</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/mistral-timestral-foundation-time-series-models/hero.png" alt="Официален банер на фамилията модели Timestral от Mistral AI"><br><small>Илюстрация: Mistral AI</small></p>
+<p>Френската лаборатория <a href="/pages/mistral-ai.html">Mistral AI</a> направи фундаментален пробив отвъд класическата обработка на естествен език, обявявайки официално своя нов специализиран модел <strong>Timestral</strong> [1]. Архитектурата представлява базов <a href="/pages/foundation-models.html">foundation модел</a>, специално проектиран и обучен за универсално прогнозиране на <a href="/pages/time-series.html">времеви редове</a> — от финансови борсови котировки и колебания в електропреносните мрежи до сложна индустриална телеметрия.</p>
+<h2>Архитектурният скок: Пачова токенизация на непрекъснати числа</h2>
+<p>В продължение на години времевите редове оставаха бастион на класическата статистика (моделите ARIMA) и специализираните дървета с градиентен бустинг (XGBoost). Опитите езикови трансформъри да бъдат прилагани върху числови редици се сблъскваха с фундаментален проблем: цифрите, записани като символен текст, раздуват контекстния прозорец и губят математическата си пропорционалност.</p>
+<p>Timestral решава този казус чрез изцяло нов подход:</p>
+<ul>
+<li><strong>Пачова квантизация (Temporal Patching):</strong> Непрекъснатите числови редици не се превръщат в текст, а се разделят на непрекъснати сегменти (пачове), които се прожектират в латентни вектори чрез линейни слоеве. Това позволява на трансформъра да анализира цялостната форма на вълната, честотата и фазовите отмествания, без да губи резолюция;</li>
+<li><strong>Zero-Shot трансфер на закономерности:</strong> Подобно на начина, по който големите езикови модели разбират граматиката на непознат език след общо обучение, Timestral демонстрира способността да улавя икономически и физически цикли в индустрии, които никога не са присъствали в тренировъчния му корпус [1].</li>
+</ul>
+<h2>Индустриалният ефект: Краят на изолираните статистически модели</h2>
+<p>Появата на Timestral поставя началото на мащабна трансформация в критичните сектори:</p>
+<ul>
+<li><strong>Енергийният преход и зелената мрежа:</strong> Вятърните и слънчевите централи генерират изключително нестабилна мощност, зависеща от минутното време. Timestral позволява на операторите на мрежи да съчетават метеорологични данни, историческо потребление и динамика на батерийните паркове в единен мултивариантен модел с 30% по-ниска грешка спрямо досегашните стандарти;</li>
+<li><strong>Прогнозна поддръжка в реално време:</strong> Индустриалните турбини и двигатели излъчват хиляди сензорни параметри (вибрации, температура, налягане). Вместо инженери да пишат ръчни прагови правила за всеки отделен датчик, Timestral непрекъснато предвижда очакваната нормална форма на кривата и алармира за микроскопични отклонения седмици преди настъпването на механична повреда;</li>
+<li><strong>Демократизация на анализа на данни:</strong> Малките предприятия вече няма нужда да наемат скъпи екипи от статистици за конструиране на специфични математически признаци. С Timestral простото подаване на хронологични CSV файлове към API интерфейса връща готови за вземане на решения вероятностни прогнози с пълни доверителни интервали.</li>
+</ul>
+<p><img src="/articles/2026/10/19/mistral-timestral-foundation-time-series-models/infographic.png" alt="Стълбове на архитектурата и приложенията на Timestral за времеви редове"><br><small>Инфографика: Времеви трансформъри и многомерно прогнозиране без предварителна настройка</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://mistral.ai/news/timestral/">Timestral: Mistral release time-series foundation models</a> - Mistral AI / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/time-series.html">Анализ на времеви редове (Time-Series Forecasting)</a><p>Анализът на времеви редове обхваща математическите и машинни методи за моделиране на данни, индексирани по хронологичен ред — като финансови пазари, к...</p></li><li><a href="/pages/mistral-ai.html">Mistral AI</a><p>Mistral AI е френска компания за изкуствен интелект, основана през 2023 г.</p></li><li><a href="/pages/foundation-models.html">Базови модели (Foundation Models)</a><p>Базовите модели са мащабни невронни архитектури, обучени върху колосални обеми от разнообразни данни чрез самообучение (self-supervised learning), спо...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: 100toolkit
+Всеки редовен потребител на съвременни езикови модели познава до болка техните специфични навици: неизменното започване на отговора с ентусиазирано възклицание, употребата на..."><title>Qwen3-4B Deslop: Премахване на синтетичните стилови клишета от отворените езикови модели - Светни.ме</title><meta property="og:title" content="Qwen3-4B Deslop: Премахване на синтетичните стилови клишета от отворените езикови модели - Светни.ме"><meta property="og:description" content="Илюстрация: 100toolkit
+Всеки редовен потребител на съвременни езикови модели познава до болка техните специфични навици: неизменното започване на отговора с ентусиазирано възклицание, употребата на..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Qwen3-4B Deslop: Премахване на синтетичните стилови клишета от отворените езикови модели</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/hero.png" alt="Официален банер на проекта за премахване на стилови клишета от модела Qwen3-4B"><br><small>Илюстрация: 100toolkit</small></p>
+<p>Всеки редовен потребител на съвременни езикови модели познава до болка техните специфични навици: неизменното започване на отговора с ентусиазирано възклицание, употребата на шаблонни фрази като „нека се потопим в темата“, завършването с предвидими морализаторски заключения от типа „в заключение, бъдещето е гоблен от възможности“ и непрекъснатото извиняване. Този феномен, известен в технологичния фолклор като <strong>AI Slop</strong> (синтетичен баласт), бе подложен на систематична деконструкция чрез новия изследователски проект <strong>Qwen3-4B Deslop</strong> [1].</p>
+<h2>Откъде идват стиловите тикове: Капанът на човешката обратна връзка</h2>
+<p>Появата на тези досадни клишета не е случаен бъг, а пряк страничен ефект от методологията, чрез която моделите се обучават:</p>
+<ul>
+<li><strong>Угодничеството на RLHF:</strong> По време на обучението с подсилване чрез човешка обратна връзка (RLHF), оценителите-хора статистически са склонни да поставят по-високи оценки на отговори, които звучат свръхлюбезно, структурирани са с много точки и използват изискани метафори;</li>
+<li><strong>Невронният екстремизъм:</strong> Оптимизирайки се за максимална награда, моделът превръща тези стилови елементи в задължителен шаблон за абсолютно всяка тема, генерирайки огромно количество излишни токени без никаква реална информационна стойност [1].</li>
+</ul>
+<p>Авторите на проекта Qwen3-4B Deslop прилагат методологията за <a href="/pages/deslop.html">премахване на клишета</a> (Anti-Slop Fine-Tuning) върху базовия модел <a href="/pages/qwen.html">Qwen</a> на Alibaba. Чрез директно оптимизиране на предпочитанията (DPO) с внимателно филтрирани двойки отговори, моделът е системно наказван за всяка паразитна фраза, превръщайки се в лаконичен, директен и суров изчислителен инструмент.</p>
+<h2>Икономическата цена на празните думи</h2>
+<p>Отвъд естетическото облекчение за потребителя, премахването на синтетичния баласт има колосално икономическо измерение:</p>
+<ul>
+<li><strong>Драстично съкращаване на разходите:</strong> В производствени системи, обслужващи милиони запитвания, между 30% и 45% от генерираните изходни токени представляват чист стилов пълнеж. Премахването на тези фрази означава директно спестяване на близо една трета от сметките за облачна инференция;</li>
+<li><strong>Намаляване на латентността:</strong> Тъй като генерацията на текст от авторегресивни трансформъри зависи пряко от броя произведени токени, по-краткият отговор се изписва на екрана на потребителя двойно по-бързо, подобрявайки рязко интерактивното преживяване;</li>
+<li><strong>Преодоляване на „AI умората“:</strong> Хората инстинктивно спират да четат текстове, в които усещат познатия изкуствен фалш на езиковите модели. Модели като Qwen3-4B Deslop възстановяват доверието към машинния текст, предлагайки плътен, безкомпромисен и строго фактологичен тон, подобаващ на прецизен научен инструмент.</li>
+</ul>
+<p><img src="/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/infographic.png" alt="Стълбове на методологията за изчистване на стилови клишета от Qwen3-4B"><br><small>Инфографика: DPO оптимизация и елиминиране на синтетични паразитни фрази</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://100toolkit.com/blog/deslop-model/">Show HN: Qwen3-4B with the AI writing tics trained out</a> - 100toolkit / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/foundation-models.html">Базови модели (Foundation Models)</a><p>Базовите модели са мащабни невронни архитектури, обучени върху колосални обеми от разнообразни данни чрез самообучение (self-supervised learning), спо...</p></li><li><a href="/pages/deslop.html">Премахване на синтетични клишета (Deslop Fine-Tuning)</a><p>Deslop (или Anti-Slop Fine-Tuning) е методология за пост-обучение на езикови модели, насочена към премахването на прекомерно любезните, повтарящи се и...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

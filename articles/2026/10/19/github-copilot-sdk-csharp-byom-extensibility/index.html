@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: Microsoft .NET Blog
+В стремежа си да отговори на най-взискателните изисквания на корпоративния свят за сигурност и независимост, Microsoft обяви официалното пускане на дългоочаквания Gi..."><title>GitHub Copilot SDK за C#: Интеграция на собствени AI модели в корпоративни работни процеси - Светни.ме</title><meta property="og:title" content="GitHub Copilot SDK за C#: Интеграция на собствени AI модели в корпоративни работни процеси - Светни.ме"><meta property="og:description" content="Илюстрация: Microsoft .NET Blog
+В стремежа си да отговори на най-взискателните изисквания на корпоративния свят за сигурност и независимост, Microsoft обяви официалното пускане на дългоочаквания Gi..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GitHub Copilot SDK за C#: Интеграция на собствени AI модели в корпоративни работни процеси</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/hero.png" alt="Официална илюстрация на новия GitHub Copilot SDK за C# и .NET разработчици"><br><small>Илюстрация: Microsoft .NET Blog</small></p>
+<p>В стремежа си да отговори на най-взискателните изисквания на корпоративния свят за сигурност и независимост, <a href="/pages/microsoft.html">Microsoft</a> обяви официалното пускане на дългоочаквания <strong>GitHub Copilot SDK за C#</strong> [1]. Най-значимата иновация в програмния пакет за разработка е въвеждането на архитектурата <strong>Bring Your Own Model (BYOM)</strong>, която позволява на предприятията напълно да заменят стандартните публични модели на OpenAI със собствени вътрешни невронни мрежи, хоствани в частни центрове за данни.</p>
+<h2>C# и .NET като бастион на надеждното агентно инженерство</h2>
+<p>Докато първата вълна от прототипи за изкуствен интелект беше изградена почти изцяло на Python и JavaScript, корпоративните среди в банковия сектор, застраховането и индустриалните производства традиционно разчитат на силно типизирани езици като C#. Липсата на официален инструментариум за Copilot в .NET екосистемата създаваше сериозна бариера пред дълбоката интеграция.</p>
+<p>Новият <a href="/pages/copilot-sdk.html">Copilot SDK</a> запълва тази празнина:</p>
+<ul>
+<li><strong>Дълбока интеграция с Semantic Kernel:</strong> SDK се базира на доказаната софтуерна рамка на Microsoft за агентна оркестрация, предоставяйки готови шаблони за детерминистично извикване на компилирани C# класове и методи;</li>
+<li><strong>Пълна асинхронност и стрийминг:</strong> Чрез интерфейсите <code>IAsyncEnumerable</code> разработчиците могат да обработват поточно генерираните от модела токени в реално време, запазвайки отзивчивостта на потребителския интерфейс в десктоп и уеб приложения;</li>
+<li><strong>Свързване чрез модела BYOM:</strong> Корпоративните клиенти вече могат да конфигурират Copilot да черпи логика от локални екземпляри на Llama 3, Mistral Large или специално обучени банкови модели, без нито един байт от фирмения код да напуска вътрешния корпоративен периметър [1].</li>
+</ul>
+<h2>Корпоративният суверенитет и бъдещето на програмния асистент</h2>
+<p>Този стратегически ход от страна на Microsoft представлява зрял отговор на променящите се пазарни реалности:</p>
+<ul>
+<li><strong>Разрушаване на монопола на единичния доставчик:</strong> Досега покупката на GitHub Copilot означаваше пълно обвързване с продуктовата политика и прекъсванията в услугите на OpenAI. С новия SDK Copilot се превръща в отворена оркестрационна черупка, в която всяка организация може да постави онези модели, които най-добре отговарят на нейния бюджет и правни изисквания.</li>
+<li><strong>Възходът на специализираните агентни плъгини:</strong> Инженерите могат за часове да създадат вътрешни агенти, интегрирани директно в средата за разработка (Visual Studio и VS Code), които познават специфичните вътрешни софтуерни библиотеки на фирмата, нейните бази данни и правила за разгръщане, превръщайки IDE в интерактивен център за управление на целия жизнен цикъл на продукта.</li>
+<li><strong>Индустриален стандарт за корпоративна сигурност:</strong> Чрез предоставянето на инструменти, които покриват най-високите критерии за одитируемост, Microsoft блокира опитите на стартъпи за алтернативни среди за програмиране (като Cursor) да монополизират корпоративния пазар, доказвайки силата на добре интегрираната корпоративна екосистема.</li>
+</ul>
+<p><img src="/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/infographic.png" alt="Четири стълба на GitHub Copilot SDK за C# и концепцията Bring Your Own Model"><br><small>Инфографика: Архитектура на .NET SDK за персонализирани агентни харнеси и частни модели</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://devblogs.microsoft.com/dotnet/bring-your-own-model-to-the-github-copilot-sdk-with-csharp/">Bring Your Own Model to the GitHub Copilot SDK with C#</a> - Microsoft .NET Blog, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/copilot-sdk.html">GitHub Copilot SDK</a><p>GitHub Copilot SDK е програмен комплект за разработка, предоставен от Microsoft и GitHub, който позволява на софтуерните инженери да интегрират когнит...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

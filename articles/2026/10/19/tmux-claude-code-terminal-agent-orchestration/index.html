@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Илюстрация: crystl.dev
+Появата на интерактивния инструмент за програмиране Claude Code от лабораторията Anthropic предизвика огромен ентусиазъм сред разработчиците. Но докато софтуерът бе проектира..."><title>Tmux и Claude Code: Сесии, изпращане на клавиши и архитектурните тавани на терминалните агенти - Светни.ме</title><meta property="og:title" content="Tmux и Claude Code: Сесии, изпращане на клавиши и архитектурните тавани на терминалните агенти - Светни.ме"><meta property="og:description" content="Илюстрация: crystl.dev
+Появата на интерактивния инструмент за програмиране Claude Code от лабораторията Anthropic предизвика огромен ентусиазъм сред разработчиците. Но докато софтуерът бе проектира..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Tmux и Claude Code: Сесии, изпращане на клавиши и архитектурните тавани на терминалните агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/hero.png" alt="OpenGraph банер на техническия наръчник за Tmux и Claude Code"><br><small>Илюстрация: crystl.dev</small></p>
+<p>Появата на интерактивния инструмент за програмиране Claude Code от лабораторията <a href="/pages/anthropic.html">Anthropic</a> предизвика огромен ентусиазъм сред разработчиците. Но докато софтуерът бе проектиран основно като интерактивен терминален асистент за пряк диалог с програмист, амбициозните инженери моментално се опитаха да го превърнат в напълно <a href="/pages/ai-agents.html">автономен AI агент</a>, работещ денонощно във фонов режим. В дълбок технически анализ, озаглавен <em>„Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling“</em>, авторът Кристал деконструира най-популярния метод за тази автоматизация: използването на класическия Unix мултиплексор <a href="/pages/tmux.html">tmux</a> [1].</p>
+<h2>Механиката на терминалния кукловод: Защо tmux?</h2>
+<p>Claude Code изисква пълноценен псевдотерминал (TTY) — той рисува красиви интерфейси с курсори, оцветява прозорци и непрекъснато очаква натискане на клавиши за потвърждение преди изпълнение на опасни команди. Опитът да бъде стартиран като обикновен headless фонов скрипт (<code>nohup</code> или конвенционален cron) често се срива или замръзва завинаги.</p>
+<p>Тук на помощ идва tmux — ветеранът на системната администрация:</p>
+<ul>
+<li><strong>Персистентна изолация:</strong> Стартирането на Claude Code в отделен прозорец на tmux позволява на процеса да живее безкрайно на отдалечен сървър. Ако интернет връзката на инженера прекъсне или лаптопът бъде затворен, агентът продължава спокойно да мисли и пише код;</li>
+<li><strong>Програмен контрол чрез <code>send-keys</code>:</strong> Външен автоматизиран супервизор може да подава команди директно в терминалния буфер чрез командата <code>tmux send-keys -t claude &quot;yes&quot; Enter</code>. По този начин агентът бива „натискан“ да продължи напред, без да чака физически човек зад клавиатурата;</li>
+<li><strong>Скрийн-скрейпинг чрез <code>capture-pane</code>:</strong> Чрез периодично заснемане на текстовото съдържание на екрана супервизорът може да анализира дали агентът е приключил компилацията или е попаднал в цикъл на грешка [1].</li>
+</ul>
+<h2>Архитектурният таван: Защо терминалът не е бъдещето на агентите</h2>
+<p>Въпреки практическата си привлекателност за индивидуални хакери, анализът разкрива сериозния архитектурен таван (the ceiling) на този подход:</p>
+<ul>
+<li><strong>Семантична слепота:</strong> Предаването на информация през 80-колонен текстов терминал с ANSI цветове е най-неефективният възможен протокол за изкуствен интелект. Супервизорът е принуден да парсва разместени символи, за да разбере дали дадена команда е успяла, вместо да получава чист структуриран JSON статус;</li>
+<li><strong>Чупливост при неочаквани въпроси:</strong> Ако Claude Code реши да зададе въпрос за уточнение, който скриптът не е предвидил, командата <code>send-keys</code> може погрешно да потвърди деструктивно действие (например изтриване на файл), мислейки, че потвърждава обикновен билд;</li>
+<li><strong>Необходимостта от нативни API протоколи:</strong> Tmux е великолепен временен мост за адаптиране на инструменти с човешки интерфейс. Но истинският мащаб на автономните агентни флотилии ще бъде постигнат единствено чрез платформи с директни софтуерни API интерфейси, събитийни опашки (като gRPC и WebSockets) и изолирани пясъчници, където машините разговарят директно с машини без илюзията за виртуален терминал.</li>
+</ul>
+<p><img src="/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/infographic.png" alt="Стълбове на оркестрацията на терминални агенти с Tmux и нейните архитектурни граници"><br><small>Инфографика: Терминални буфери, сесии и предизвикателства при автоматизацията на Claude Code</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://crystl.dev/guides/tmux-for-ai-agents/">Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling</a> - crystl.dev / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tmux.html">tmux (Terminal Multiplexer)</a><p>tmux е терминален мултиплексор с отворен код за Unix-подобни операционни системи.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

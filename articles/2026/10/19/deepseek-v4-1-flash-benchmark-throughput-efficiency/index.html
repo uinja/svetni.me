@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Unsplash / Artificial Analysis
+Платформата за независими хардуерни и софтуерни бенчмаркове Artificial Analysis публикува най-новите резултати за модела DeepSeek v4.1 Flash (версия 1017), по..."><title>DeepSeek v4.1 Flash: Анализ на производителността и екстремната икономическа ефективност на изводите - Светни.ме</title><meta property="og:title" content="DeepSeek v4.1 Flash: Анализ на производителността и екстремната икономическа ефективност на изводите - Светни.ме"><meta property="og:description" content="Снимка: Unsplash / Artificial Analysis
+Платформата за независими хардуерни и софтуерни бенчмаркове Artificial Analysis публикува най-новите резултати за модела DeepSeek v4.1 Flash (версия 1017), по..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek v4.1 Flash: Анализ на производителността и екстремната икономическа ефективност на изводите</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 октомври 2026 г.</p><div><p><img src="/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/hero.png" alt="Символично изображение на софтуерен код и бърза обработка на цифрови потоци"><br><small>Снимка: Unsplash / Artificial Analysis</small></p>
+<p>Платформата за независими хардуерни и софтуерни бенчмаркове Artificial Analysis публикува най-новите резултати за модела <strong>DeepSeek v4.1 Flash</strong> (версия 1017), потвърждавайки забележителен резултат от 45 пункта в интегралния индекс за качество и производителност [1]. Китайската лаборатория <a href="/pages/deepseek.html">DeepSeek</a> за пореден път доказа, че интелигентният алгоритмичен дизайн може да постигне по-висока икономическа ефективност и скорост от грубото изливане на милиарди долари в хардуерни клъстери.</p>
+<h2>Тайната на скоростта: Multi-Head Latent Attention (MLA)</h2>
+<p>При стандартните езикови модели (използващи Multi-Head Attention или Grouped-Query Attention) основното тясно гърло при обслужване на дълги диалози е кешът за ключове и стойности (KV Cache). За всеки потребител графичният процесор трябва да съхранява в свръхбързата си HBM памет гигабайти междинни състояния за всяка предишна дума:</p>
+<ul>
+<li>При десетки паралелни заявки паметта на най-мощните карти бързо се запълва, принуждавайки сървъра да отказва нови връзки или да бави отговорите;</li>
+<li>DeepSeek преодолява това ограничение чрез патентованата си архитектура <a href="/pages/multi-head-latent-attention.html">Multi-Head Latent Attention</a> (MLA). Вместо да пази пълните вектори на ключовете и стойностите, моделът ги компресира в компактно латентно векторно пространство с нисък ранг. При генерация на нов токен те се възстановяват мигновено чрез малки матрични умножения [1].</li>
+</ul>
+<p>Това архитектурно решение свива обема на KV кеша с над 85%, позволявайки на един и същ сървър да обслужва почти десетократно повече едновременни сесии със скорост, надхвърляща 150 токена в секунда.</p>
+<h2>Ценовата дефлация: Китайският ценови шок за западния пазар</h2>
+<p>Резултатите на DeepSeek v4.1 Flash имат дълбоки икономически последици за цялата световна AI екосистема:</p>
+<ul>
+<li><strong>Разрушаване на ценовите маржове:</strong> Предлагайки инференция на цени под $0,15 за милион токена при качество, сравнимо с водещите западни модели, DeepSeek прави почти невъзможно за американските стартъпи да таксуват десетки пъти по-високи тарифи за базови задачи по класификация, извличане на факти и код;</li>
+<li><strong>Идеалният двигател за агентни системи:</strong> Автономните софтуерни агенти изискват стотици междинни разсъждения (System 2 thinking), търсения и верификации, преди да предприемат действие. За тези цикли скъпите флагмански модели са финансово непосилни. DeepSeek v4.1 Flash предоставя идеалния евтин и светкавичен субстрат за междинни работни стъпки;</li>
+<li><strong>Инженерният триумф над ограниченията:</strong> Постижението демонстрира, че търговските ембарга върху доставката на авангардни чипове само принудиха китайските учени да открият най-чистите математически оптимизации в софтуерния стек — урок, който цялата индустрия сега е принудена да изучава.</li>
+</ul>
+<p><img src="/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/infographic.png" alt="Стълбове на бенчмарк резултатите и технологичните предимства на DeepSeek v4.1 Flash"><br><small>Инфографика: Архитектура на MLA компресията и резултати в Artificial Analysis</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017">DeepSeek v4.1 Flash 1017 scores 45 in Artificial Analysis</a> - Artificial Analysis / Hacker News, 19 октомври 2026 г.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/multi-head-latent-attention.html">Multi-Head Latent Attention (MLA)</a><p>Multi-Head Latent Attention (MLA) е усъвършенствана архитектура за внимание, разработена от DeepSeek, която драстично компресира кеша за ключове и сто...</p></li><li><a href="/pages/foundation-models.html">Базови модели (Foundation Models)</a><p>Базовите модели са мащабни невронни архитектури, обучени върху колосални обеми от разнообразни данни чрез самообучение (self-supervised learning), спо...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
