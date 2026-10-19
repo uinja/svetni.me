@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Wilfredor
+Докато водещите технологични лаборатории рекламират своите най-нови модели с възможности за разсъждение (reasoning models) като готови за автономно управление ..."><title>Новият бенчмарк Taste-Bench разкрива стратегическа неспособност на AI агентите при дългосрочни решения - Светни.ме</title><meta property="og:title" content="Новият бенчмарк Taste-Bench разкрива стратегическа неспособност на AI агентите при дългосрочни решения - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Wilfredor
+Докато водещите технологични лаборатории рекламират своите най-нови модели с възможности за разсъждение (reasoning models) като готови за автономно управление ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/18/taste-bench-ai-agents-long-term-strategic-planning-failure/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/18/taste-bench-ai-agents-long-term-strategic-planning-failure/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Новият бенчмарк Taste-Bench разкрива стратегическа неспособност на AI агентите при дългосрочни решения</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 октомври 2026 г.</p><div><p><img src="/articles/2026/10/18/taste-bench-ai-agents-long-term-strategic-planning-failure/hero.png" alt="Новият бенчмарк Taste-Bench разкрива стратегическа неспособност на AI агентите при дългосрочни решения"><br><small>Снимка: Wikimedia Commons / Wilfredor</small></p>
+<p>Докато водещите технологични лаборатории рекламират своите най-нови модели с възможности за разсъждение (reasoning models) като готови за автономно управление на бизнес процеси, независими изследователи публикуваха унищожителен тест, който разкрива дълбока архитектурна слабост: липсата на стратегически усет при дългосрочни избори [1].</p>
+<p>Новият специализиран бенчмарк <em>Taste-Bench</em>, представен в подробен анализ от The Decoder, изследва способността на автономните агенти да навигират сложни, многостепенни сценарии с отложени във времето последствия. Резултатите са отрезвяващи: дори най-мощният модел от ново поколение – <a href="/pages/gpt-5.html">GPT-5</a>.6 Sol – избира правилния стратегически път в по-малко от 60% от случаите при елементарни бинарни дилеми.</p>
+<h2>Парадоксът на мисленето: Защо повече токени не дават по-добър вкус</h2>
+<p>През последната година основната иновация в индустрията бе увеличаването на изчислителното време по време на извеждане (test-time compute). Моделите се обучават да генерират хиляди вътрешни разсъждения, преди да дадат окончателен отговор, което доведе до впечатляващи успехи в математическите олимпиади и състезателното програмиране.</p>
+<p>При решаването на задачи за <a href="/pages/strategic-planning.html">стратегическо планиране (strategic-planning)</a> обаче тази стратегия претърпява пълен провал:</p>
+<ul>
+<li><strong>Рационализация на грешни предпоставки:</strong> Когато моделът избере погрешна първоначална евристика, удължаването на времето за размисъл не го коригира, а напротив – той генерира стотици редове сложни псевдологически аргументи, за да оправдае фаталния си избор;</li>
+<li><strong>Миопичен фокус:</strong> Агентите редовно предпочитат ходове, които носят незабавна локална печалба (например спестяване на ресурс тук и сега), пренебрегвайки факта, че след десет стъпки това води до фалит или необратима задънена улица;</li>
+<li><strong>Илюзия за планиране:</strong> Моделите могат да начертаят красив предварителен план от 20 точки, но при първото отклонение на средата губят логическата връзка и започват да се държат хаотично.</li>
+</ul>
+<p>Този резултат показва сериозни лимити в съществуващите стандарти за <a href="/pages/benchmarks.html">бенчмаркове (benchmarks)</a>, които дълго време измерваха само изолирани статични въпроси.</p>
+<h2>Липса на каузален модел за света</h2>
+<p>Фундаменталният дефект се корени в самата природа на трансформърната архитектура. Независимо колко милиарда параметри притежава моделът, той остава вероятностна машина за предсказване на следващия токен въз основа на асоциации и корелации в обучителните данни.</p>
+<p>Истинското <a href="/pages/decision-making.html">вземане на решения (decision-making)</a> обаче изисква изграждане на динамичен каузален модел: разбиране защо А води до Б и как едно микроскопично решение в настоящето променя цялото бъдещо пространство от възможности. Този „интуитивен вкус“ – способността на опитния шахматист или предприемач веднага да отхвърли 99% от привидно логичните, но всъщност пагубни ходове – не може да бъде постигнат само чрез натрупване на допълнителен текст в прозореца за контекст.</p>
+<h2>Системни и макроикономически последици: Границите на автономията в бизнеса</h2>
+<p>Резултатите от Taste-Bench налагат незабавна ревизия на плановете за пълна автономия в корпоративния сектор. Доверяването на автономни агенти за вземане на дългосрочни стратегически решения крие огромен системен риск:</p>
+<ul>
+<li><strong>Забрана за автономно разпределение на капитал:</strong> Агентите не трябва да бъдат оставяни да управляват дългосрочни инвестиционни портфейли, кредитни лимити или вериги за доставки без постоянен човешки надзор.</li>
+<li><strong>Хибридни архитектури:</strong> Бъдещето принадлежи на комбинация между невронни мрежи и класически дървовидни търсещи алгоритми (като Monte Carlo Tree Search), които могат математически да оценяват вероятностите на дълги хоризонти.</li>
+<li><strong>Преоценка на лидерските умения:</strong> Способността за стратегическо виждане, интуиция и поемане на премерен риск остава уникално човешко предимство, което не може да бъде заместено от генеративен модел.</li>
+</ul>
+<p>Taste-Bench доказва, че макар изкуственият интелект да е брилянтен тактически калкулатор за непосредствени задачи, голямата стратегическа шахматна дъска на живота все още изисква човешки ум начело.</p>
+<p><img src="/articles/2026/10/18/taste-bench-ai-agents-long-term-strategic-planning-failure/infographic.png" alt="Инфографика: Бенчмаркът Taste-Bench и стратегическият лимит на AI"><br><small>Четири стълба на анализа: методиката на Taste-Bench за дългосрочен избор, резултатите под 60% успеваемост на GPT-5.6 Sol, парадоксът на мисленето без корекция и границите на корпоративната автономия</small></p>
+<h2>Източници</h2>
+<ol>
+<li>The Decoder, &quot;AI agents have bad taste in long-term decisions and a new benchmark proves it&quot; (2026-10-18).</li>
+<li>Taste-Bench Evaluation Consortium, &quot;Empirical Evaluation of Long-Horizon Decision Making in Frontier Reasoning Models&quot; (October 2026).</li>
+<li>Stanford Institute for Human-Centered AI (HAI), &quot;Limits of Test-Time Compute in Strategic Decision Spaces&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #315571, Tech News Stream (2026-10-18).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/strategic-planning.html">Стратегическо планиране с AI</a><p>Стратегическото планиране (Strategic Planning) изисква прогнозиране на бъдещи развития, отчитане на действията на конкурентите и оптимално разпределен...</p></li><li><a href="/pages/gpt-5.html">GPT-5</a><p>GPT-5 е мултимодален модел с голям езиков капацитет, разработен от OpenAI.</p></li><li><a href="/pages/decision-making.html">Вземане на решения с AI</a><p>Вземането на решения с AI (AI Decision-Making) изследва способността на алгоритмичните системи да преценяват алтернативи, да оценяват рискове и да пре...</p></li><li><a href="/pages/benchmarks.html">Бенчмаркове за ИИ</a><p>Бенчмарковете за изкуствен интелект (AI Benchmarks) представляват стандартизирани набори от данни, тестове и методологии, използвани за обективна и ср...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

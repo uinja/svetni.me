@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Steklov institute
+В златната ера на генеративния изкуствен интелект създаването на софтуерен код стана почти безплатно: езиковите модели бълват хиляди редове сложен софт..."><title>Изкуственият интелект пише кода – но кой го верифицира? Инженерната криза на автономното програмиране - Светни.ме</title><meta property="og:title" content="Изкуственият интелект пише кода – но кой го верифицира? Инженерната криза на автономното програмиране - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Steklov institute
+В златната ера на генеративния изкуствен интелект създаването на софтуерен код стана почти безплатно: езиковите модели бълват хиляди редове сложен софт..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/18/ai-software-engineering-code-verification-crisis/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/18/ai-software-engineering-code-verification-crisis/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изкуственият интелект пише кода – но кой го верифицира? Инженерната криза на автономното програмиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 октомври 2026 г.</p><div><p><img src="/articles/2026/10/18/ai-software-engineering-code-verification-crisis/hero.png" alt="Изкуственият интелект пише кода – но кой го верифицира? Инженерната криза на автономното програмиране"><br><small>Снимка: Wikimedia Commons / Steklov institute</small></p>
+<p>В златната ера на генеративния изкуствен интелект създаването на софтуерен код стана почти безплатно: езиковите модели бълват хиляди редове сложен софтуер за броени секунди. Но този феноменален скок в производителността крие смъртоносен капан, който изправя цялата дигитална икономика пред екзистенциална дилема: <strong>кой и как верифицира този код?</strong> [1].</p>
+<p>Влиятелен аналитичен обзор на технологичния изследовател Михай Станчу, придобил широка популярност в инженерните среди, формулира същността на новата системна криза. В продължение на десетилетия писането и четенето на код се движеха с еднаква човешка скорост. Днес асиметрията е чудовищна: генерирането е стократно по-бързо от способността на човешкия мозък да разбере, тества и гарантира надеждността на софтуера.</p>
+<h2>Илюзията за работещ софтуер и натрупването на токсичен дълг</h2>
+<p>Когато AI модел генерира нова функционалност, той обикновено преминава базовите компилационни тестове и работи задоволително за стандартните потребителски сценарии. Но това създава коварна илюзия за <a href="/pages/code-quality.html">качество на кода (code-quality)</a>:</p>
+<ul>
+<li><strong>Скрити гранични сривове:</strong> Моделите редовно допускат фини дефекти при екстремни условия (Concurrency issues, memory leaks, unhandled edge cases), които се проявяват само при колосално натоварване;</li>
+<li><strong>Липса на ментален модел:</strong> Когато нито един човек в екипа не е писал кода от нулата, никой не притежава дълбоката интуиция как отделните компоненти взаимодействат в критични ситуации;</li>
+<li><strong>Парализа при инциденти:</strong> Когато възникне срив в продукционна среда в 3:00 часа през нощта, дежурният инженер е изправен пред хиляди редове непознат, синтезиран софтуер, чийто дебъг изисква часове.</li>
+</ul>
+<p>Човешкото ревю на код (Code Review) се превръща в невъзможно тесно гърло, което заплашва да спре иновациите.</p>
+<h2>Спасението: Преход към формална математическа верификация</h2>
+<p>Единственият изход от тази спирала е радикалното изоставяне на емпиричното тестване в полза на <a href="/pages/formal-verification.html">формалната верификация (formal-verification)</a>. Вместо да пишем десетки тестови примери и да се надяваме, че сме обхванали всички възможности, бъдещето на <a href="/pages/software-engineering.html">софтуерното инженерство (software-engineering)</a> изисква математическо доказателство за коректност.</p>
+<p>Тази нова парадигма включва:</p>
+<ol>
+<li><strong>Интерактивни асистенти за доказателства (Theorem Provers):</strong> Използване на езици като Lean 4, Coq и TLA+ за строго формализиране на изискванията;</li>
+<li><strong>Невро-символни хибриди:</strong> Моделите не просто пишат код, а генерират формално доказателство, че програмата изпълнява зададените системни инварианти и никога няма да излезе от заделената памет;</li>
+<li><strong>Усъвършенстван <a href="/pages/static-analysis.html">статичен анализ (static-analysis)</a>:</strong> Автоматизирани математически проверяващи инструменти, които сертифицират сигурността на софтуера за милисекунди без човешка намеса.</li>
+</ol>
+<h2>Системни и макроикономически последици: Прераждането на софтуерната професия</h2>
+<p>Кризата на верификацията ще промени драстично профила на професията програмист. Баналното писане на синтаксис на JavaScript или Python ще бъде напълно автоматизирано, превръщайки се в суровина с нулева стойност.</p>
+<p>Истинската стойност ще се концентрира в:</p>
+<ul>
+<li><strong>Архитектурна математическа спецификация:</strong> Способността да преведеш бизнес изискванията в строги математически формули и логически ограничения;</li>
+<li><strong>Одит на сигурността на критични системи:</strong> Превръщането на софтуерните инженери в независими одитори, чийто подпис носи юридическа и финансова отговорност за надеждността на банкови, енергийни и медицински мрежи;</li>
+<li><strong>Стандартизация на критичната инфраструктура:</strong> Правителствени изисквания ключовите държавни и финансови системи да бъдат изграждани изключително с формално верифициран код.</li>
+</ul>
+<p>AI доказа, че може да пише код със скоростта на светлината. Задачата на човечеството е да изгради математическите спирачки, които да гарантират, че този код няма да разруши дигиталния свят, върху който се крепи модерната цивилизация.</p>
+<p><img src="/articles/2026/10/18/ai-software-engineering-code-verification-crisis/infographic.png" alt="Инфографика: Кризата на верификацията в софтуерното инженерство"><br><small>Четири стълба на анализа: асиметрията между генерация и проверка, натрупването на скрит архитектурен дълг, спасението през формална математическа верификация и новият профил на инженера</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Mihai&#39;s Place, &quot;AI Can Write the Code. Who Verifies It?&quot; (2026-10-17).</li>
+<li>Communications of the ACM, &quot;Formal Verification at Scale: The Antidote to Generative Software Debt&quot; (October 2026).</li>
+<li>Lean 4 Applied Mathematics and Computer Science Consortium Whitepaper (2026).</li>
+<li>Forest Aggregator Feed Item #315190, Tech News Stream (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/static-analysis.html">Статичен анализ на кода (Static Analysis)</a><p>Статичният анализ е метод за проверка на софтуерен код без той да се изпълнява.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/formal-verification.html">Формална верификация (Formal Verification)</a><p>Формалната верификация (Formal Verification) е математически метод за строго доказване на коректността на алгоритми, софтуерни програми или хардуерни ...</p></li><li><a href="/pages/code-quality.html">Качество на софтуерния код (Code Quality)</a><p>Качеството на софтуерния код измерва доколко дадена кодова база отговаря на стандартите за четимост, поддържаемост, сигурност, модулност и липса на ск...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

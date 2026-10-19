@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Daniel L. Lu (user:dllu)
+Границите на възможното в мобилния изкуствен интелект бяха окончателно пренаписани. Независимият изследователски екип зад проекта Anemll публику..."><title>Qwen3.8-27B работи на Neural Engine на iPhone 18 със скорост 15–70 токена в секунда при 1.5 bpw квантуване - Светни.ме</title><meta property="og:title" content="Qwen3.8-27B работи на Neural Engine на iPhone 18 със скорост 15–70 токена в секунда при 1.5 bpw квантуване - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Daniel L. Lu (user:dllu)
+Границите на възможното в мобилния изкуствен интелект бяха окончателно пренаписани. Независимият изследователски екип зад проекта Anemll публику..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/18/qwen-3-8-27b-iphone-18-neural-engine-quantization/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/18/qwen-3-8-27b-iphone-18-neural-engine-quantization/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Qwen3.8-27B работи на Neural Engine на iPhone 18 със скорост 15–70 токена в секунда при 1.5 bpw квантуване</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 октомври 2026 г.</p><div><p><img src="/articles/2026/10/18/qwen-3-8-27b-iphone-18-neural-engine-quantization/hero.png" alt="Qwen3.8-27B работи на Neural Engine на iPhone 18 със скорост 15–70 токена в секунда при 1.5 bpw квантуване"><br><small>Снимка: Wikimedia Commons / Daniel L. Lu (user:dllu)</small></p>
+<p>Границите на възможното в мобилния изкуствен интелект бяха окончателно пренаписани. Независимият изследователски екип зад проекта <em>Anemll</em> публикува техническа демонстрация, показваща напълно автономно изпълнение на масивния 27-милиарден езиков модел <a href="/pages/qwen.html">Qwen</a>3.8-27B директно върху смартфона iPhone 18 на <a href="/pages/apple.html">Apple</a> [1].</p>
+<p>Най-впечатляващото постижение е постигнатата скорост: благодарение на дълбока оптимизация за <a href="/pages/neural-engine.html">Apple Neural Engine (ANE)</a> и новаторско екстремно компресиране до 1.5 бита на параметър (1.5 bpw), системата генерира между 15 и 70 токена в секунда – скорост, напълно съпоставима с най-бързите облачни интерфейси.</p>
+<h2>Магията на екстремното квантуване: Как се побират 27 милиарда параметъра в 6 GB RAM</h2>
+<p>В оригинален 16-битов формат (FP16) модел от ранга на Qwen3.8-27B изисква над 54 гигабайта оперативна памет – обем, който доскоро бе достъпен само за специализирани работни станции или сървъри с професионални графични карти.</p>
+<p>За да преодолеят този хардуерен лимит, инженерите са приложили революционни техники за <a href="/pages/quantization.html">квантуване (quantization)</a>:</p>
+<ul>
+<li><strong>Смесено суб-2-битово кодиране (1.5 bpw):</strong> Най-критичните слоеве от механизмите за внимание (attention layers) се запазват с 2 или 3 бита прецизност, докато по-малко чувствителните матрици се компресират до 1 бит на тегло;</li>
+<li><strong>Свиване на размера до под 6 GB:</strong> Целият модел заема едва около 5.8 GB в унифицираната памет на iPhone 18, оставяйки достатъчно ресурс за нормалното функциониране на операционната система iOS;</li>
+<li><strong>Минимална загуба на перплексити:</strong> Тестовете показват, че въпреки драстичната компресия, моделът запазва над 92% от своите логически способности, знания и умения за писане на код в сравнение с пълния оригинал.</li>
+</ul>
+<h2>Хардуерна симбиоза с Neural Engine</h2>
+<p>Ключът към светкавичната скорост се корени в специфичната архитектура на чипа на Apple. Вместо да натоварват графичния процесор (GPU), което би довело до моментално прегряване и изтощаване на батерията за минути, изследователите са прекомпилирали изчислителния граф директно за невропроцесора ANE.</p>
+<p>Neural Engine е проектиран за масивни паралелни матрични умножения с минимална консумация на мощност. При генериране на текст устройството консумира под 3 вата енергия, запазвайки корпуса на смартфона хладен дори при продължителни разговорни сесии.</p>
+<h2>Системни и макроикономически последици: Сривът на облачния монопол</h2>
+<p>Успехът на Qwen3.8 на iPhone 18 маркира началото на нов етап в <a href="/pages/edge-computing.html">граничните изчисления (edge-computing)</a>:</p>
+<ul>
+<li><strong>Абсолютна поверителност на личните данни:</strong> Потребителите вече не е необходимо да изпращат своите интимни въпроси, медицински документи или служебни тайни към сървърите на OpenAI или Google; цялото мислене се случва локално в джоба им, без връзка с интернет.</li>
+<li><strong>Елиминиране на абонаментните такси:</strong> Възможността за безплатно локално използване на авангардни модели обезсмисля плащането на месечни такси от $20 за базови потребителски задачи.</li>
+<li><strong>Нова ера за мобилния софтуер:</strong> Разработчиците на приложения могат да вграждат пълноценен 27-милиарден когнитивен двигател директно в своите програми без текущи сметки за API заявки.</li>
+</ul>
+<p>Демонстрацията на Anemll доказва, че бъдещето на изкуствения интелект не принадлежи само на свръхмощните облачни мегацентрове, а на децентрализирания интелект, вграден във всяко лично устройство на планетата.</p>
+<p><img src="/articles/2026/10/18/qwen-3-8-27b-iphone-18-neural-engine-quantization/infographic.png" alt="Инфографика: Qwen3.8-27B на Neural Engine на iPhone 18"><br><small>Четири стълба на анализа: локалният пробив със скорост до 70 токена/сек, технологията на 1.5 bpw компресиране, хардуерната ефективност на Neural Engine и бъдещето на частния граничен AI</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Hacker News / Anemll Project, &quot;Qwen3.8-27B on the iPhone 18 Neural Engine at 15–70 tok/s (1.5 bpw)&quot; (2026-10-17).</li>
+<li>Apple Machine Learning Research, &quot;Deploying Large Language Models on Apple Silicon Neural Engine via CoreML&quot; (2026).</li>
+<li>Alibaba Qwen Team Technical Report, &quot;Qwen3.8 Model Family: Extreme Quantization and Mobile Inference&quot; (October 2026).</li>
+<li>Forest Aggregator Feed Item #315153, Tech News Stream (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/quantization.html">Квантуване (Quantization)</a><p>Квантуването (Quantization) е ключов метод за компресиране на модели в областта на дълбокото обучение, който преобразува теглата и активиранията на не...</p></li><li><a href="/pages/neural-engine.html">Apple Neural Engine (ANE)</a><p>Apple Neural Engine (ANE) е специализиран копроцесор, интегриран във всички съвременни чипове на Apple за мобилни телефони, таблети и компютри Mac.</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Niklas Veenhuis niklasveenhuis
+За разработчиците и изследователите, които искат да изпълняват модерни езикови модели локално, изборът на хардуер често бе съпроводен с фи..."><title>Llmspeed и Mac LLM Calculator: Измерване на локалната пропускателна способност при Apple Silicon - Светни.ме</title><meta property="og:title" content="Llmspeed и Mac LLM Calculator: Измерване на локалната пропускателна способност при Apple Silicon - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Niklas Veenhuis niklasveenhuis
+За разработчиците и изследователите, които искат да изпълняват модерни езикови модели локално, изборът на хардуер често бе съпроводен с фи..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/18/mac-llm-calculator-llmspeed-apple-silicon-memory-bandwidth/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/18/mac-llm-calculator-llmspeed-apple-silicon-memory-bandwidth/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Llmspeed и Mac LLM Calculator: Измерване на локалната пропускателна способност при Apple Silicon</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 октомври 2026 г.</p><div><p><img src="/articles/2026/10/18/mac-llm-calculator-llmspeed-apple-silicon-memory-bandwidth/hero.png" alt="Llmspeed и Mac LLM Calculator: Измерване на локалната пропускателна способност при Apple Silicon"><br><small>Снимка: Wikimedia Commons / Niklas Veenhuis niklasveenhuis</small></p>
+<p>За разработчиците и изследователите, които искат да изпълняват модерни езикови модели локално, изборът на хардуер често бе съпроводен с финансово скъпи грешки. Появата на два нови интерактивни бенчмарк инструмента с отворен код в Hacker News – <em>Mac LLM Calculator</em> и <em>Llmspeed</em> – сложи край на догадките, разкривайки суровата физическа формула зад скоростта на изкуствения интелект върху <a href="/pages/apple-silicon.html">Apple Silicon</a> [1].</p>
+<p>Инструментите позволяват на потребителите да изберат всяка възможна конфигурация от чипове Mac (от базовите M1/M2/M3/M4 до свръхмощните Max и Ultra модификации), желан модел (Llama 3, Qwen 2.5, Mistral, DeepSeek) и ниво на квантуване, симулирайки точната скорост на генериране в токени за секунда още преди покупката на машината.</p>
+<h2>Физическото тесно гърло: Защо процесорните ядра нямат значение</h2>
+<p>Основният извод от бенчмарковете оборва широко разпространен пазарен мит. Докато при традиционните софтуерни задачи по-големият брой процесорни и графични ядра гарантира правопропорционален ръст на производителността, при авторегресивния инференс на <a href="/pages/local-llm.html">локален изкуствен интелект (local-llm)</a> ядрата прекарват 80% от времето си в изчакване.</p>
+<p>Лимитиращият фактор номер едно е <a href="/pages/memory-bandwidth.html">пропускателната способност на паметта (memory-bandwidth)</a>:</p>
+<ul>
+<li><strong>Принципът на авторегресивното четене:</strong> За генерирането на всяка една отделна дума (токен), чипът трябва да прочете цялото тегло на модела от оперативната памет.</li>
+<li><strong>Математиката на скоростта:</strong> Ако изпълнявате модел с размер 30 гигабайта върху базов чип M4 с пропускателна способност от 150 GB/s, абсолютният теоретичен максимум е точно 5 токена в секунда (150 / 30 = 5).</li>
+<li><strong>Предимството на Max и Ultra:</strong> При чип M4 Max с неговата 546 GB/s шина същият модел генерира комфортните 18 токена/сек, а при Ultra конфигурация с 800+ GB/s скоростта надхвърля 25 токена/сек.</li>
+</ul>
+<h2>Унифицираната памет (UMA) срещу дискретните видеокарти</h2>
+<p>Инструментът Llmspeed нагледно демонстрира защо компютрите Mac Studio се превърнаха в неочаквания златен стандарт за AI инженерите по света. При класическите PC системи с графични карти NVIDIA потребителят е ограничен от обема на видеопаметта (VRAM) – дори най-скъпата потребителска карта RTX 4090 разполага само с 24 GB VRAM.</p>
+<p>За сметка на това архитектурата на Apple обединява системната памет (до 192 GB или 512 GB при следващите генерации) в общ пул с нулева латентност между CPU, GPU и Neural Engine благодарение на <a href="/pages/hardware-acceleration.html">хардуерното ускорение (hardware-acceleration)</a>. Това позволява зареждането на колосални 70-милиардни и 120-милиардни модели, които иначе изискват специализиран сървър за десетки хиляди долари.</p>
+<h2>Системни и макроикономически последици: Пренареждане на пазара на работни станции</h2>
+<p>Публикуването на прецизни симулатори като Llmspeed и Mac LLM Calculator има директно пазарно въздействие:</p>
+<ul>
+<li><strong>Рационален избор на хардуер:</strong> Програмистите престават да плащат за скъпи CPU надстройки и насочват бюджетите си изключително към чипове с максимално широка шина на паметта (Max/Ultra сериите).</li>
+<li><strong>Срив на търсенето на облачен инференс за разработка:</strong> Възможността за локално изпълнение на модели с качеството на GPT-4 при нулева латентност намалява драматично сметките за облачни API на технологичните компании.</li>
+<li><strong>Натиск върху производителите на x86 чипове:</strong> Intel и AMD са принудени спешно да въведат унифицирана високоскоростна памет в своите нови мобилни и десктоп платформи, за да не загубят напълно сектора на професионалните работни станции.</li>
+</ul>
+<p>Тези инструменти доказват, че бъдещето на персоналния изкуствен интелект не зависи от абстрактни маркетингови обещания, а от точните физически закони на полупроводниковата пропускателна способност.</p>
+<p><img src="/articles/2026/10/18/mac-llm-calculator-llmspeed-apple-silicon-memory-bandwidth/infographic.png" alt="Инфографика: Бенчмаркинг на локален AI върху Apple Silicon"><br><small>Четири стълба на анализа: симулаторите Llmspeed и Mac LLM Calculator, физическото тесно гърло на скоростта на паметта, превъзходството на архитектурата UMA и пренареждането на пазара на работни станции</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Hacker News Show HN, &quot;Which Mac runs which LLM, and how fast&quot; (2026-10-17).</li>
+<li>Llmspeed Interactive Benchmark Suite Documentation and Scaling Formulas (October 2026).</li>
+<li>AnandTech Semiconductor Architecture Deep-Dive, &quot;Memory Bandwidth Saturation in Modern Neural Processing&quot; (2026).</li>
+<li>Forest Aggregator Feed Item #314846 &amp; #314234, Tech News Stream (2026-10-17).</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/memory-bandwidth.html">Пропускателна способност на паметта</a><p>Пропускателната способност на паметта (Memory Bandwidth) е най-критичният хардуерен параметър за производителността при извеждане на резултати (infere...</p></li><li><a href="/pages/local-llm.html">Локални големи езикови модели (Local LLMs)</a><p>Локалните големи езикови модели са AI модели, изпълнявани изцяло на локалния хардуер на потребителя (работна станция, лаптоп или локален сървър) без и...</p></li><li><a href="/pages/hardware-acceleration.html">Хардуерно ускорение (Hardware Acceleration)</a><p>Хардуерното ускорение (Hardware Acceleration) е използването на специализиран силиций (GPU, TPU, NPU, FPGA) за изпълнение на конкретни изчислителни за...</p></li><li><a href="/pages/apple-silicon.html">Apple Silicon</a><p>Apple Silicon е семейството системни чипове (SoC) на Apple от серията M и A, изградени върху ARM архитектура с унифицирана памет (Unified Memory Archi...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
