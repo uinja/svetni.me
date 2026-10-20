@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / OpenCode Security
+Популярният проект за програмиране с отворен код OpenCode уведоми своите потребители за сериозен инцидент на киберсигурност, при който злонамерени акт..."><title>Пробивът в OpenCode излага API ключове в контекста на атаки за моделна дестилация - Светни.ме</title><meta property="og:title" content="Пробивът в OpenCode излага API ключове в контекста на атаки за моделна дестилация - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / OpenCode Security
+Популярният проект за програмиране с отворен код OpenCode уведоми своите потребители за сериозен инцидент на киберсигурност, при който злонамерени акт..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/20/opencode-hack-api-key-exposure-distillation-attacks/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/20/opencode-hack-api-key-exposure-distillation-attacks/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Пробивът в OpenCode излага API ключове в контекста на атаки за моделна дестилация</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 октомври 2026 г.</p><div><p><img src="/articles/2026/10/20/opencode-hack-api-key-exposure-distillation-attacks/hero.png" alt="Пробивът в OpenCode компрометира API ключове за разработка"><br><small>Източник: BleepingComputer / OpenCode Security</small></p>
+<p>Популярният проект за програмиране с отворен код OpenCode уведоми своите потребители за сериозен инцидент на <a href="/pages/cybersecurity.html">киберсигурност</a>, при който злонамерени актьори са компрометирали облачния сървър за телеметрия и синхронизация, излагайки на риск хиляди външни API ключове за платени платформи за изкуствен интелект [1].</p>
+<p>Разследването разкрива, че откраднатите ключове за достъп до водещи комерсиални модели (включително Claude 3.5 Sonnet и GPT-4o) не са били просто препродадени в тъмната мрежа, а са били използвани директно в мащабни автоматизирани атаки за <a href="/pages/knowledge-distillation.html">моделна дестилация</a>.</p>
+<h2>Механизъм на експлоатацията и дестилационният конвейер</h2>
+<p>OpenCode предлага локален софтуер за разработка, подобен на VS Code, който позволява на програмистите да свързват свои собствени платени ключове (BYOK – Bring Your Own Key) за различни доставчици на модели. Поради уязвимост в незащитена база данни за синхронизация на потребителски сесии, нападателите са успели да извлекат незащитени конфигурационни файлове, съдържащи валидни <a href="/pages/api-security.html">API ключове</a> с високи финансови лимити.</p>
+<p>В рамките на броени часове след изтичането, засегнатите ключове са били включени в паралелни ботнет мрежи, генериращи десетки милиони специфични заявки към моделите на Anthropic и OpenAI. Заявките не са били произволни текстове, а структурирани пакети за състезателно програмиране, дебъгване на компилатори и архитектурен анализ. Чрез записване на пълните отговори и веригите от разсъждения (chain-of-thought) на най-мощните комерсиални модели, нападателите са събрали гигантски масиви от синтетични данни, използвани за евтино обучение на по-малки локални модели чрез <a href="/pages/knowledge-distillation.html">моделна дестилация</a>.</p>
+<h2>Новата икономика на моделния шпионаж и кражбата на изчислителни ресурси</h2>
+<p>Инцидентът с OpenCode бележи опасна еволюция в природата на киберпрестъпленията в ерата на изкуствения интелект. В миналото откраднатите идентификационни данни са били използвани за кражба на финансови средства или спам кампании. Днес изчислителният капацитет и интелектуалната собственост, заложена в претеглените параметри на моделите, са се превърнали в най-ценната плячка за хакерите.</p>
+<p><a href="/pages/knowledge-distillation.html">Моделната дестилация</a> позволява на стартъпи или държавно спонсорирани групи да спестят стотици милиони долари за първично обучение и подравняване (RLHF), като просто „издоят“ знанията на водещите западни модели. Когато това се финансира чрез откраднати чужди API сметки, разходът за нападателите става буквално нулев. Жертвите от своя страна се събуждат с фактури за десетки хиляди долари за изразходвани токъни, докато техните корпоративни акаунти биват блокирани от доставчиците заради нарушаване на правилата за ползване.</p>
+<p>Този инцидент налага спешна промяна в парадигмата за <a href="/pages/api-security.html">API сигурност</a> при AI инструментите. Традиционното споделяне на дългосрочни тайни ключове в конфигурационни файлове е фатално остаряло. Индустрията трябва да премине към краткосрочни токъни с динамично делегиране, ограничаване на заявките по IP адрес и криптографски защитени хардуерни енклави. Без тези мерки всяко локално приложение за програмиране рискува да се превърне в троянски кон, захранващ нелегалната дестилация на интелектуална собственост.</p>
+<p><img src="/articles/2026/10/20/opencode-hack-api-key-exposure-distillation-attacks/infographic.png" alt="Инфографика: Пробивът в OpenCode и дестилацията на модели"><br><small>Четири ключови стълба на анализа на пробива в OpenCode и атаките за дестилация.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>BleepingComputer. (2026-10-20). <em>OpenCode hack exposes API keys amid AI distillation attacks</em>. BleepingComputer Incident Analysis. <a href="https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/">https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/</a></li>
+<li>OpenCode Project Advisory. (2026-10-20). <em>Security Incident Notification: Revocation of Compromised Developer Tokens</em>. OpenCode GitHub Security.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/opencode.html">OpenCode</a><p>OpenCode е софтуерна рамка с отворен код за изграждане на автономни кодиращи ИИ агенти.</p></li><li><a href="/pages/knowledge-distillation.html">Моделна дестилация (Knowledge Distillation)</a><p>Моделната дестилация е метод в дълбокото обучение, при който компактен модел (student) се обучава да възпроизвежда поведението, представянето и вероят...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/api-security.html">Сигурност на приложно-програмни интерфейси</a><p>Сигурността на приложно-програмни интерфейси (API Security) е ключов отрасъл на киберсигурността, защитаващ каналите за комуникация между софтуерни си...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

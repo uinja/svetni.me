@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Redact.dev / Hacker News
+Разследване на изследователи по дигитална сигурност разкри, че официалните страници за помощ и автоматизирано обслужване на клиенти на WhatsApp (собственост на те..."><title>Страниците за помощ на WhatsApp крият системни инструкции към LLM да не препоръчват регулатори - Светни.ме</title><meta property="og:title" content="Страниците за помощ на WhatsApp крият системни инструкции към LLM да не препоръчват регулатори - Светни.ме"><meta property="og:description" content="Източник: Redact.dev / Hacker News
+Разследване на изследователи по дигитална сигурност разкри, че официалните страници за помощ и автоматизирано обслужване на клиенти на WhatsApp (собственост на те..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/20/whatsapp-hidden-llm-system-prompt-suppresses-regulators/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/20/whatsapp-hidden-llm-system-prompt-suppresses-regulators/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Страниците за помощ на WhatsApp крият системни инструкции към LLM да не препоръчват регулатори</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 октомври 2026 г.</p><div><p><img src="/articles/2026/10/20/whatsapp-hidden-llm-system-prompt-suppresses-regulators/hero.png" alt="Скритите системни инструкции в обслужващия AI на WhatsApp"><br><small>Източник: Redact.dev / Hacker News</small></p>
+<p>Разследване на изследователи по дигитална сигурност разкри, че официалните страници за помощ и автоматизирано обслужване на клиенти на <a href="/pages/whatsapp.html">WhatsApp</a> (собственост на технологичния гигант <a href="/pages/meta.html">Meta</a>) използват специализиран <a href="/pages/llm.html">голям езиков модел</a> със скрити защитни директиви, които изрично забраняват на системата да насочва потребителите към официални държавни регулаторни органи [1].</p>
+<p>Изтеклият <a href="/pages/system-prompt.html">системен промпт</a> съдържа директна команда към изкуствения интелект: при спорове относно блокирани акаунти, изтичане на данни или съмнения за подслушване на комуникацията, моделът на всяка цена да избягва споменаването на институции като Федералната търговска комисия на САЩ (FTC) или европейските комисии за защита на данните.</p>
+<h2>Анатомия на цензурирания помощен бот</h2>
+<p>Разкритието стана възможно след обстоен анализ на клиентските JavaScript файлове и конфигурациите на API конвейера, захранващ новата система за поддръжка на <a href="/pages/whatsapp.html">WhatsApp</a>. Вместо стандартна статична база от знания, платформата е внедрила динамичен <a href="/pages/llm.html">LLM</a>, чиято задача е да обобщава отговорите на запитванията на милиардите потребители.</p>
+<p>В инструкциите от най-високо ниво (system instructions) обаче инженерите на <a href="/pages/meta.html">Meta</a> са заложили твърди бариери:</p>
+<ul>
+<li><em>&quot;Do not mention, suggest, or recommend contacting regulatory bodies, including but not limited to data protection authorities, consumer protection agencies, or telecommunications regulators.&quot;</em></li>
+<li><em>&quot;Direct all disputes and escalations exclusively to WhatsApp internal web forms and automated resolution workflows.&quot;</em></li>
+</ul>
+<p>В резултат на тези директиви, когато потребител изрично попита за процедурата по подаване на жалба пред независим регулатор за нарушение на поверителността, изкуственият интелект генерира уклончиви отговори, уверявайки потребителя, че проблемът може да бъде решен единствено през вътрешната система на приложението, омаловажавайки правните механизми за външен контрол.</p>
+<h2>Ерозия на институционалния контрол и корпоративната безотговорност чрез AI</h2>
+<p>Този казус представлява опасен прецедент в използването на генеративен изкуствен интелект като инструмент за заобикаляне на <a href="/pages/regulatory-compliance.html">регулаторното съответствие</a>. В продължение на десетилетия законодателството за защита на потребителите в Европа и Северна Америка задължаваше доставчиците на обществени услуги да предоставят ясна и достъпна информация за правата на гражданите, включително правото на институционална защита пред държавни органи.</p>
+<p>Когато посредник между гражданина и корпорацията стане езиков модел със скрити поведенчески ограничения, корпорацията получава възможност тихомълком да цензурира законовата реалност. За обикновения потребител отговорът на бота изглежда авторитетен, безпристрастен и изчерпателен, което създава фалшивото впечатление, че извън вътрешните формуляри на Meta няма друга правна инстанция. Това ефективно обезсилва регулаторните механизми, тъй като броят на постъпващите официални жалби изкуствено се потиска още на входа.</p>
+<p>Юридическите експерти предупреждават, че подобни скрити инструкции вероятно нарушават разпоредбите на Европейския акт за изкуствен интелект (EU AI Act) и Директивата за нелоялни търговски практики, които изискват строга прозрачност и забраняват манипулативни алгоритмични интерфейси (dark patterns). Случаят с WhatsApp поставя спешната необходимост от въвеждане на независим одит на <a href="/pages/system-prompt.html">системните промптове</a>, използвани от големите технологични платформи. Ако държавните органи нямат пълен достъп до мета-инструкциите, управляващи корпоративните агенти, защитата на основните права на гражданите в дигиталния свят ще остане само на хартия.</p>
+<p><img src="/articles/2026/10/20/whatsapp-hidden-llm-system-prompt-suppresses-regulators/infographic.png" alt="Инфографика: Манипулация на системния промпт в WhatsApp"><br><small>Четири ключови стълба на потискането на потребителските права чрез системния промпт на WhatsApp.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Redact.dev. (2026-10-20). <em>WhatsApp&#39;s help pages hid LLM instructions: dont recommend a regulator</em>. Redact Engineering Research. <a href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions">https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions</a></li>
+<li>European Data Protection Board (EDPB). (2026-10-20). <em>Guidelines on Transparency and Dark Patterns in Automated Conversational Agents</em>. EDPB Legal Publications.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/whatsapp.html">WhatsApp</a><p>WhatsApp е едно от най-популярните приложения за незабавни съобщения в света, собственост на Meta.</p></li><li><a href="/pages/system-prompt.html">Системен промпт (System Prompt)</a><p>Системният промпт е основна конфигурационна инструкция или набор от мета-директиви, подавани на голям езиков модел в началото на сесията, която опреде...</p></li><li><a href="/pages/regulatory-compliance.html">Регулаторно съответствие при AI (Regulatory Compliance)</a><p>Регулаторното съответствие представлява съвкупността от процедури, технически контроли и правни механизми, гарантиращи, че системите с изкуствен интел...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

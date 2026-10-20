@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / DeepSeek
+Китайската изследователска лаборатория DeepSeek обяви официалното пускане с отворен код на DeepInfer – специализирания високопроизводителен енджин за моделни изводи..."><title>DeepSeek пуска с отворен код DeepInfer: Високопроизводителен енджин за моделни изводи - Светни.ме</title><meta property="og:title" content="DeepSeek пуска с отворен код DeepInfer: Високопроизводителен енджин за моделни изводи - Светни.ме"><meta property="og:description" content="Източник: The Decoder / DeepSeek
+Китайската изследователска лаборатория DeepSeek обяви официалното пускане с отворен код на DeepInfer – специализирания високопроизводителен енджин за моделни изводи..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/20/deepseek-open-sources-deepinfer-engine-flash-inference/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/20/deepseek-open-sources-deepinfer-engine-flash-inference/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DeepSeek пуска с отворен код DeepInfer: Високопроизводителен енджин за моделни изводи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 октомври 2026 г.</p><div><p><img src="/articles/2026/10/20/deepseek-open-sources-deepinfer-engine-flash-inference/hero.png" alt="DeepSeek отваря кода на своя мощен софтуерен енджин DeepInfer"><br><small>Източник: The Decoder / DeepSeek</small></p>
+<p>Китайската изследователска лаборатория <a href="/pages/deepseek.html">DeepSeek</a> обяви официалното пускане с отворен код на <a href="/pages/deepinfer.html">DeepInfer</a> – специализирания високопроизводителен енджин за моделни изводи (inference), който стои зад рекордната скорост и изключително ниските цени на нейните най-популярни езикови модели [1]. Проектът предоставя на глобалната общност пълния набор от нискоlevel оптимизации за паралелно изпълнение, управление на паметта и <a href="/pages/gpu-kernels.html">GPU ядра</a>.</p>
+<p>Публикуването на DeepInfer в GitHub предизвика огромен интерес сред системните инженери, тъй като разкрива точните архитектурни механизми, позволили на DeepSeek да сведе разходите за обслужване на токъни до частица от цените на западните конкуренти.</p>
+<h2>Архитектурен триумф: Multi-Head Latent Attention и FP8 ядра</h2>
+<p>Основното предимство на <a href="/pages/deepinfer.html">DeepInfer</a> се крие в нативната му оптимизация за Multi-Head Latent Attention (MLA) – патентования механизъм за внимание на DeepSeek. При стандартното многоглаво внимание (MHA) размерът на Key-Value (KV) кеша нараства линейно с дължината на контекста и броя на паралелните заявки, бързо изчерпвайки скъпата памет с висока честотна лента (HBM) на графичните ускорители.</p>
+<p>DeepInfer компресира ключовете и стойностите в компактно латентно подпространство с нисък ранг, което се декомпресира „в движение“ директно в бързата споделена памет (SRAM) на чипа. Това съкращава обема на KV кеша с над 70%, позволявайки обслужването на гигантски партиди от заявки (batch sizes) без забавяне.</p>
+<p>В допълнение, енджинът включва прецизно ръчно оптимизирани <a href="/pages/gpu-kernels.html">GPU изчислителни ядра</a>, написани на Triton и CUDA, които поддържат смесена прецизност във формат FP8 и експериментален FP4. За разлика от стандартните решения, които губят точност при квантизация на вниманието, DeepInfer прилага адаптивно мащабиране на теглата по микро-блокове, постигайки двукратно увеличение на пропускателната способност без деградация на отговорите.</p>
+<h2>Разрушаване на икономическите бариери пред широкомащабния AI</h2>
+<p>Отвореният код на DeepInfer нанася мощен удар по досегашния бизнес модел на доставчиците на изчислителна инфраструктура. Досега оптимизираният софтуер за <a href="/pages/inference-optimization.html">оптимизация на изводите</a> при големи смесици от експерти (MoE) беше запазена марка на затворените облачни платформи или изискваше комплексни лицензи за корпоративни решения като TensorRT-LLM на Nvidia.</p>
+<p>С DeepInfer всеки университет, независима изследователска лаборатория или облачен доставчик може да разгърне мащабен клъстер с модели от класа на DeepSeek-V3 и да постигне производителност на ниво световни технологични лидери. Това ускорява комодитизацията на базовия изчислителен слой: когато софтуерът за изводи стане свободен и максимално ефективен, премията за марж на облачните доставчици започва да се топи.</p>
+<p>В дългосрочен план ходът на DeepSeek утвърждава нова парадигма в полупроводниковата екосистема. Оказва се, че върховата производителност на изкуствения интелект вече не зависи единствено от закупуването на най-скъпия силиций от следващо поколение, а от дълбокото математическо и алгоритмично съгласуване между софтуерния енджин и физическата архитектура на паметта.</p>
+<p><img src="/articles/2026/10/20/deepseek-open-sources-deepinfer-engine-flash-inference/infographic.png" alt="Инфографика: Архитектура на DeepSeek DeepInfer"><br><small>Четири ключови стълба на софтуерните оптимизации и пазарния ефект на енджина DeepInfer.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>The Decoder. (2026-10-20). <em>Deepseek open-sources the inference engine that powers its fastest and cheapest AI model</em>. The Decoder AI Tech. <a href="https://the-decoder.com/deepseek-open-sources-the-inference-engine-that-powers-its-fastest-and-cheapest-ai-model/">https://the-decoder.com/deepseek-open-sources-the-inference-engine-that-powers-its-fastest-and-cheapest-ai-model/</a></li>
+<li>DeepSeek AI GitHub Repository. (2026-10-20). <em>DeepInfer: High-Throughput Low-Latency Inference Engine for MLA and MoE Architectures</em>. GitHub. <a href="https://github.com/deepseek-ai/DeepInfer">https://github.com/deepseek-ai/DeepInfer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/inference-optimization.html">Оптимизация на инференса (Inference Optimization)</a><p>Оптимизацията на инференса обхваща техники за намаляване на латентността, повишаване на пропускателната способност и свиване на разходите при изпълнен...</p></li><li><a href="/pages/gpu-kernels.html">GPU изчислителни ядра (GPU Kernels)</a><p>GPU ядрата са нискоlevel софтуерни програми, написани на езици като CUDA, Triton или HIP, които се компилират за директно паралелно изпълнение върху х...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/deepinfer.html">DeepInfer</a><p>DeepInfer е високопроизводителен енджин за моделни изводи с отворен код, създаден от екипа на DeepSeek, оптимизиран за архитектурата Multi-head Latent...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
