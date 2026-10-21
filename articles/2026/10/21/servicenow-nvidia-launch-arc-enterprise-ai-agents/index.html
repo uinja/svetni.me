@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: ZDNET / Getty Images
+В рамките на ексклузивно съвместно събитие гигантът в автоматизацията на корпоративни работни процеси ServiceNow и технологичният лидер Nvidia представиха официално A..."><title>ServiceNow и Nvidia представиха Arc: Платформа за корпоративни автономни AI агенти - Светни.ме</title><meta property="og:title" content="ServiceNow и Nvidia представиха Arc: Платформа за корпоративни автономни AI агенти - Светни.ме"><meta property="og:description" content="Източник: ZDNET / Getty Images
+В рамките на ексклузивно съвместно събитие гигантът в автоматизацията на корпоративни работни процеси ServiceNow и технологичният лидер Nvidia представиха официално A..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>ServiceNow и Nvidia представиха Arc: Платформа за корпоративни автономни AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/hero.png" alt="Сътрудничество между водещи технологични ръководители в корпоративния сектор на изкуствения интелект"><br><small>Източник: ZDNET / Getty Images</small></p>
+<p>В рамките на ексклузивно съвместно събитие гигантът в автоматизацията на корпоративни работни процеси <a href="/pages/servicenow.html">ServiceNow</a> и технологичният лидер <a href="/pages/nvidia.html">Nvidia</a> представиха официално <strong>Arc</strong> – новаторска платформа за автономни <a href="/pages/ai-agents.html">AI агенти</a>, създадена специално за нуждите на най-големите световни корпорации [1].</p>
+<p>Платформата Arc има за цел да разреши най-болезнения проблем, възпиращ масовото навлизане на изкуствения интелект в бизнеса: непредсказуемостта и рисковете за сигурността при делегиране на реални права за действие на автономни софтуерни агенти.</p>
+<h2>Архитектура на сигурността в реално време</h2>
+<p>Много компании експериментираха с езикови модели за чатботове, но се въздържаха да им поверят достъп до бази данни с чувствителна информация или правомощия за промяна на конфигурации в производствени IT системи. Един грешен халюциниран SQL скрипт или незащитена промпт инжекция може да доведе до милионни загуби или спиране на дейността.</p>
+<p>Arc адресира тези рискове чрез внедряване на многослойна защитна архитектура, задвижвана от софтуерния стек Nvidia NeMo Guardrails и микроуслугите Nvidia NIM [1]:</p>
+<ul>
+<li><strong>Входяща верификация на намеренията:</strong> Всеки входящ потребителски въпрос или системен сигнал се сканира за опити за социално инженерство, затворнически пробиви (jailbreaks) и зловреден код още преди да достигне до базовия модел.</li>
+<li><strong>Контекстуален контрол на достъпа:</strong> Агентът получава само тези данни от корпоративната мрежа на ServiceNow, до които служителят, инициирал заявката, има легитимен достъп според ролевите политики (RBAC).</li>
+<li><strong>Изходящ одит на транзакциите:</strong> Преди агентът да изпълни промяна (например нулиране на парола, одобряване на фактура или модификация на firewall правило), действието се валидира от детерминистичен защитен модул. При рискови операции системата автоматично изисква човешко потвърждение (Human-in-the-Loop, HITL).</li>
+</ul>
+<h2>Трансформация на IT поддръжката и оперативния мениджмънт</h2>
+<p>В платформата Arc агентите не са универсални монолити, а мрежа от тесни специалисти, координирани от главен оркестратор:</p>
+<ul>
+<li><strong>IT Service Desk агент:</strong> Автономно диагностицира мрежови сривове, проверява логове на сървъри и прилага пачове за минути, намалявайки средното време за отстраняване на проблеми (MTTR) със 70%.</li>
+<li><strong>HR агент:</strong> Обработва заявки за отпуски, администрира здравни планове и отговаря на въпроси относно корпоративните политики с безупречна правна точност.</li>
+<li><strong>Финансов одит агент:</strong> Автоматично сверява фактури с договори и транзакции в ERP системи, идентифицирайки аномалии и опити за измами.</li>
+</ul>
+<h2>Бъдещето на софтуера като услуга: От SaaS към Agentic Services</h2>
+<p>Партньорството между ServiceNow и Nvidia отразява тектонична промяна в целия софтуерен отрасъл. Традиционният модел на SaaS (софтуер като услуга), при който компаниите плащат лиценз на работно място за служители, които да кликат по екрана, бързо остарява.</p>
+<p>Новият модел се базира на резултати и автономни процеси: софтуерът вече не е просто пасивен инструмент, а активен дигитален колега. Като съчетават оперативната дълбочина на ServiceNow с изчислителната мощ и специализираните защитни модели на Nvidia, двете компании поставят индустриалния златен стандарт за това как ще функционират предприятията през следващото десетилетие – бързо, защитено и напълно автономно.</p>
+<p><img src="/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/infographic.png" alt="Инфографика: Архитектура на платформата за корпоративни агенти ServiceNow Arc"><br><small>Четирите стълба на архитектурата за сигурност и автономност на платформата Arc на ServiceNow и Nvidia.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>ZDNET. (2026-10-21). <em>Exclusive: ServiceNow and Nvidia launch Arc, a new AI agent for enterprise</em>. <a href="https://www.zdnet.com/innovation/exclusive-servicenow-and-nvidia-launch-arc-a-new-ai-agent-for-enterprise/">https://www.zdnet.com/innovation/exclusive-servicenow-and-nvidia-launch-arc-a-new-ai-agent-for-enterprise/</a></li>
+<li>ServiceNow Press Releases. (2026-10-21). <em>ServiceNow and NVIDIA Expand Partnership to Deliver Secure, Autonomous Enterprise AI Agents with Arc Platform</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/servicenow.html">ServiceNow</a><p>ServiceNow е американска софтуерна компания, която предоставя облачна платформа за управление на цифрови работни процеси (digital workflows) в корпора...</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/enterprise-ai.html">Enterprise AI</a><p>Enterprise AI (Корпоративен изкуствен интелект) се отнася до внедряването на AI технологии в мащабни бизнес организации с фокус върху сигурността, пов...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

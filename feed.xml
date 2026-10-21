@@ -9,9 +9,297 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Tue, 20 Oct 2026 21:30:00 +0000</pubDate>
+    <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Архитектура на мултиагентни AI системи: Синхронизация на състоянието и маршрутизация на инструменти</title>
+      <link>https://svetni.me/articles/2026/10/21/agentic-ai-architecture-state-synchronization-tool-routing/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/agentic-ai-architecture-state-synchronization-tool-routing/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: InfoQ Engineering Architecture Series</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Alter: Криптографски контрол на достъпа и идентичност за автономни AI агенти</title>
+      <link>https://svetni.me/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Alter Security / Y Combinator</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic Research: Използване на Claude за системно намаляване на повърхността за атака в софтуер</title>
+      <link>https://svetni.me/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Anthropic Research / Anthropic Security</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Claude Science създаде синтетични протеинови блокери срещу смъртоносна отрова от скорпиони</title>
+      <link>https://svetni.me/articles/2026/10/21/claude-science-de-novo-protein-binders-scorpion-antivenom/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/claude-science-de-novo-protein-binders-scorpion-antivenom/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Anthropic Science Research</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Google DeepMind разширява SynthID Detector: Универсален детектор на водни знаци за аудио, видео и текст</title>
+      <link>https://svetni.me/articles/2026/10/21/google-deepmind-synthid-detector-cross-platform-watermarking/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/google-deepmind-synthid-detector-cross-platform-watermarking/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: InfoQ / Google DeepMind</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Inception представи Mercury 3: Дифузионен езиков модел, надминаващ авторегресивните архитектури</title>
+      <link>https://svetni.me/articles/2026/10/21/inception-mercury-3-diffusion-language-model-breakthrough/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/inception-mercury-3-diffusion-language-model-breakthrough/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Inception Research</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>LayerFS: Високопроизводителна файлова система с CoW снимки за автономни софтуерни агенти</title>
+      <link>https://svetni.me/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: LayerFS Architecture Team</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Mistral и Nvidia обединяват сили за физичен AI: 10 000 пъти по-бързи индустриални симулации</title>
+      <link>https://svetni.me/articles/2026/10/21/mistral-nvidia-physics-ai-surrogate-industrial-simulations/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/mistral-nvidia-physics-ai-surrogate-industrial-simulations/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Mistral AI / Nvidia</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Nexus-CLI: Бърз Go мост, свързващ DeepSeek R1/V3 с Claude Code и Ollama</title>
+      <link>https://svetni.me/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: GitHub / Xamrayev / Nexus-CLI</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Nvidia DSX POD: Модулни AI центрове за данни с директно водно охлаждане, сглобяеми за 14 дни</title>
+      <link>https://svetni.me/articles/2026/10/21/nvidia-dsx-pod-modular-data-center-14-day-deployment/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/nvidia-dsx-pod-modular-data-center-14-day-deployment/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Nvidia</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Rust off Rails: Специализиран уеб стек на Rust за ерата на изкуствения интелект</title>
+      <link>https://svetni.me/articles/2026/10/21/rust-off-rails-opinionated-web-stack-ai-agent-era/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/rust-off-rails-opinionated-web-stack-ai-agent-era/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Rust off Rails Community</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Trail of Bits: Скритите рискове от семантични регресии при автоматичните AI корекции на код</title>
+      <link>https://svetni.me/articles/2026/10/21/trail-of-bits-ai-agent-patching-hidden-semantic-regressions/</link>
+      <pubDate>Wed, 21 Oct 2026 21:05:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/trail-of-bits-ai-agent-patching-hidden-semantic-regressions/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Trail of Bits Security Blog</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Alibaba Cloud повиши цените на DeepSeek V4 Flash с 230% заради изчислителен дефицит</title>
+      <link>https://svetni.me/articles/2026/10/21/alibaba-hikes-deepseek-v4-flash-inference-prices-compute-crunch/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/alibaba-hikes-deepseek-v4-flash-inference-prices-compute-crunch/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Stork Media / Alibaba Cloud</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Anthropic предлага федерален закон за безопасност на AI със задължително спиране при риск от катастрофи</title>
+      <link>https://svetni.me/articles/2026/10/21/anthropic-proposes-federal-ai-safety-bill-catastrophic-risks/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/anthropic-proposes-federal-ai-safety-bill-catastrophic-risks/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Mashable / Anthropic</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Китай протестира срещу забраната на DeepSeek в САЩ, докато блокира ChatGPT, Claude и Gemini у дома</title>
+      <link>https://svetni.me/articles/2026/10/21/china-protests-us-deepseek-ban-blocks-western-ai-models/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/china-protests-us-deepseek-ban-blocks-western-ai-models/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / DeepSeek</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Дарио Амодей защити стратегията „Race to the Top“: Защо демократичният свят трябва да води в AI</title>
+      <link>https://svetni.me/articles/2026/10/21/dario-amodei-anthropic-race-to-the-top-manifesto-defense/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/dario-amodei-anthropic-race-to-the-top-manifesto-defense/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Business Insider / Anthropic</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Илон Мъск: Конкурентите в AI отчаяно търсят изчислителна мощ от SpaceX</title>
+      <link>https://svetni.me/articles/2026/10/21/elon-musk-ai-rivals-thirsty-spacex-compute-power/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/elon-musk-ai-rivals-thirsty-spacex-compute-power/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Business Insider / Andrew Harnik</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Google Cloud интегрира моделите на OpenAI във Vertex AI редом с Gemini и Claude</title>
+      <link>https://svetni.me/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Google Cloud</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Mach9 набра 34 милиона долара за автоматизация на инженерните CAD проекти чрез AI</title>
+      <link>https://svetni.me/articles/2026/10/21/mach9-raises-34m-ai-cad-infrastructure-engineering/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/mach9-raises-34m-ai-cad-infrastructure-engineering/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: TechCrunch / Mach9</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>OpenAI придобива Orchestra Bio за изграждане на автономни AI агенти за фармацевтични разработки</title>
+      <link>https://svetni.me/articles/2026/10/21/openai-acquires-orchestra-bio-autonomous-drug-discovery-agents/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/openai-acquires-orchestra-bio-autonomous-drug-discovery-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / OpenAI</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Агентите на OpenAI изключиха мониторинга си за безопасност при програмни задачи, единият излъга</title>
+      <link>https://svetni.me/articles/2026/10/21/openai-agents-disable-misalignment-monitoring-coding-tasks/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/openai-agents-disable-misalignment-monitoring-coding-tasks/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: BleepingComputer / OpenAI Red Team</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Възходът на OpenEvidence: 15 милиарда долара оценка за медицински AI с рекламен модел</title>
+      <link>https://svetni.me/articles/2026/10/21/openevidence-15-billion-ad-powered-clinical-ai-search/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/openevidence-15-billion-ad-powered-clinical-ai-search/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Ars Technica / OpenEvidence</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>PHP2Shell: Изкуствен интелект откри критична RCE уязвимост в PHP; OpenAI координира глобална защита</title>
+      <link>https://svetni.me/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Business Insider / Wiz / OpenAI</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>ServiceNow и Nvidia представиха Arc: Платформа за корпоративни автономни AI агенти</title>
+      <link>https://svetni.me/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/</link>
+      <pubDate>Wed, 21 Oct 2026 21:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/servicenow-nvidia-launch-arc-enterprise-ai-agents/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: ZDNET / Getty Images</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Микровълновото оръжие Leonidas на Epirus за неутрализиране на дронове влезе в онлайн магазина на Пентагона</title>
+      <link>https://svetni.me/articles/2026/10/21/epirus-leonidas-high-power-microwave-counter-drone-pentagon-marketplace/</link>
+      <pubDate>Wed, 21 Oct 2026 18:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/epirus-leonidas-high-power-microwave-counter-drone-pentagon-marketplace/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / Epirus</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Невронни гласови клонинги връщат речта и идентичността на пациенти с БАС</title>
+      <link>https://svetni.me/articles/2026/10/21/ai-neural-voice-restoration-als-patient-identity-speech-cloning/</link>
+      <pubDate>Wed, 21 Oct 2026 18:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/ai-neural-voice-restoration-als-patient-identity-speech-cloning/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Science News / Lesley Darling</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Бундесверът получи първия си тежкотоварен автономен логистичен дрон от TEKEVER</title>
+      <link>https://svetni.me/articles/2026/10/21/german-army-tekever-autonomous-heavy-lift-logistics-drone/</link>
+      <pubDate>Wed, 21 Oct 2026 18:15:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/german-army-tekever-autonomous-heavy-lift-logistics-drone/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / Bundeswehr Thüringen / TEKEVER</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Пентагонът отпусна 308 милиона долара за платформата Silo на Authentic8 за дигитално разузнаване</title>
+      <link>https://svetni.me/articles/2026/10/21/us-army-authentic8-silo-308m-air-gapped-digital-investigations/</link>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/us-army-authentic8-silo-308m-air-gapped-digital-investigations/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / Authentic8</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Индийският стартъп Apollyon Dynamics показа новия реактивен ударен дрон Nightshade Mk-2</title>
+      <link>https://svetni.me/articles/2026/10/21/apollyon-dynamics-nightshade-mk2-jet-powered-autonomous-drone/</link>
+      <pubDate>Wed, 21 Oct 2026 17:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/apollyon-dynamics-nightshade-mk2-jet-powered-autonomous-drone/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / Apollyon Dynamics</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Товарният дрон Malloy TRV-150 на BAE Systems се превърна в евтин унищожител на дронове</title>
+      <link>https://svetni.me/articles/2026/10/21/bae-systems-malloy-trv-150-cargo-drone-laser-rocket-interceptor/</link>
+      <pubDate>Wed, 21 Oct 2026 17:30:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/bae-systems-malloy-trv-150-cargo-drone-laser-rocket-interceptor/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / BAE Systems / Malloy Aeronautics</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Руската ОАК залага на генеративен AI и симулации за проектиране на следващото поколение бойни самолети</title>
+      <link>https://svetni.me/articles/2026/10/21/russia-uac-generative-ai-next-generation-combat-aircraft-design/</link>
+      <pubDate>Wed, 21 Oct 2026 17:15:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/russia-uac-generative-ai-next-generation-combat-aircraft-design/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / United Aircraft Corporation (UAC)</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Paper2Agent: Изкуствен интелект превръща научните публикации във виртуални изследователски асистенти</title>
+      <link>https://svetni.me/articles/2026/10/21/paper2agent-ai-virtual-authors-executable-scientific-research/</link>
+      <pubDate>Wed, 21 Oct 2026 17:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/10/21/paper2agent-ai-virtual-authors-executable-scientific-research/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Science News / Getty Images</small></p>]]></description>
+    </item>
 
     <item>
       <title>Министерството на вътрешната сигурност на САЩ забранява продуктите на DeepSeek за федералните цивилни агенции</title>
@@ -173,294 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/opencode-hack-api-key-exposure-distillation-attacks/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Източник: BleepingComputer / OpenCode Security</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Daimon Robotics изгражда инфраструктурния слой за тактилна интелигентност в роботиката</title>
-      <link>https://svetni.me/articles/2026/10/20/daimon-robotics-tactile-intelligence-infrastructure-layer/</link>
-      <pubDate>Tue, 20 Oct 2026 18:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/daimon-robotics-tactile-intelligence-infrastructure-layer/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: The Robot Report / Daimon Robotics</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Съоснователят на Cognition предупреждава за насищане на интелигентността при AI програмирането</title>
-      <link>https://svetni.me/articles/2026/10/20/cognition-cofounder-ai-coding-intelligence-saturation/</link>
-      <pubDate>Tue, 20 Oct 2026 18:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/cognition-cofounder-ai-coding-intelligence-saturation/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: Business Insider / Cognition Labs</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Maxwell: Невронен компилатор между софтуерен код и хардуерна микроархитектура</title>
-      <link>https://svetni.me/articles/2026/10/20/maxwell-neural-compiler-bridging-code-and-silicon-microarchitecture/</link>
-      <pubDate>Tue, 20 Oct 2026 18:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/maxwell-neural-compiler-bridging-code-and-silicon-microarchitecture/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: HeyMaxwell / Hacker News</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>AI лаборатории предлагат безплатни ВиК и ОВК ремонти за събиране на данни за обучение на хуманоиди</title>
-      <link>https://svetni.me/articles/2026/10/20/ai-robotics-firms-offer-free-trades-services-training-data/</link>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/ai-robotics-firms-offer-free-trades-services-training-data/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: Tom&#39;s Hardware / Hacker News</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>EmbeddingGemma 2: Единни мултимодални векторни ембединги за текст, код, видео и звук</title>
-      <link>https://svetni.me/articles/2026/10/20/embeddinggemma-2-unified-multimodal-dense-representations/</link>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/embeddinggemma-2-unified-multimodal-dense-representations/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: InfoQ / Google DeepMind</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Генеративното клониране на игри заплашва независимите разработчици и авторското право</title>
-      <link>https://svetni.me/articles/2026/10/20/ai-game-cloning-threatens-indie-developers-intellectual-property/</link>
-      <pubDate>Tue, 20 Oct 2026 17:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/20/ai-game-cloning-threatens-indie-developers-intellectual-property/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: Ars Technica / Gaming Industry News</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Федерални прокурори разкриват саудитска държавна подкрепа за шпионаж в OpenAI</title>
-      <link>https://svetni.me/articles/2026/10/19/saudi-support-openai-espionage-recording-device/</link>
-      <pubDate>Mon, 19 Oct 2026 19:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/saudi-support-openai-espionage-recording-device/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: DOJ / Reuters / Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Nvidia пуска нови отворени модели за автономни агенти в корпоративни среди и персонални компютри</title>
-      <link>https://svetni.me/articles/2026/10/19/nvidia-open-enterprise-pc-agent-models/</link>
-      <pubDate>Mon, 19 Oct 2026 19:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/nvidia-open-enterprise-pc-agent-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Getty Images / TechCrunch</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>CERN и Mistral обединяват сили за изграждане на специализирани AI модели за фундаментална наука</title>
-      <link>https://svetni.me/articles/2026/10/19/cern-mistral-ai-scientific-foundations/</link>
-      <pubDate>Mon, 19 Oct 2026 18:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/cern-mistral-ai-scientific-foundations/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: CERN / Mistral AI</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic предлага федерален закон за блокиране на AI модели при риск от масови жертви</title>
-      <link>https://svetni.me/articles/2026/10/19/anthropic-safety-bill-fifty-deaths-threshold/</link>
-      <pubDate>Mon, 19 Oct 2026 18:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/anthropic-safety-bill-fifty-deaths-threshold/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Bloomberg / Getty Images / Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Disney придобива активите на Character.AI чрез фалит по Член 363 без правните искове</title>
-      <link>https://svetni.me/articles/2026/10/19/disney-character-ai-bankruptcy-acquisition-liability-shield/</link>
-      <pubDate>Mon, 19 Oct 2026 18:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/disney-character-ai-bankruptcy-acquisition-liability-shield/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Getty Images / Ars Technica</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Timestral: Mistral представя базови foundation модели за времеви редове</title>
-      <link>https://svetni.me/articles/2026/10/19/mistral-timestral-foundation-time-series-models/</link>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/mistral-timestral-foundation-time-series-models/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: Mistral AI</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Автономни AI агенти пробиват корпоративните мрежи на John Deere и SharkNinja</title>
-      <link>https://svetni.me/articles/2026/10/19/ai-agents-fleet-hack-john-deere-sharkninja/</link>
-      <pubDate>Mon, 19 Oct 2026 17:40:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/ai-agents-fleet-hack-john-deere-sharkninja/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: The Verge</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Harness2 от Google Research: Рекурсивна оркестрация и самокоригиращи се рамки за AI агенти</title>
-      <link>https://svetni.me/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/</link>
-      <pubDate>Mon, 19 Oct 2026 17:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/google-research-harness2-recursive-agent-orchestration/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: Google Research / GitHub</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Stripe придобива AI рутера OpenRouter за 7,5 милиарда долара</title>
-      <link>https://svetni.me/articles/2026/10/19/stripe-acquires-openrouter-7-5-billion/</link>
-      <pubDate>Mon, 19 Oct 2026 16:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/stripe-acquires-openrouter-7-5-billion/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Startup Fortune</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Harness Engineering 101: Архитектурно разделение между когнитивното ядро и детерминираната среда</title>
-      <link>https://svetni.me/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/</link>
-      <pubDate>Mon, 19 Oct 2026 16:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/harness-engineering-separation-llm-brain-execution-body/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: GitHub / Isuru Maduranga</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Разклащането на нео-облачните доставчици поставя под риск пазарната доминация на Nvidia</title>
-      <link>https://svetni.me/articles/2026/10/19/neocloud-shakeout-gpu-capacity-nvidia-risk/</link>
-      <pubDate>Mon, 19 Oct 2026 16:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/neocloud-shakeout-gpu-capacity-nvidia-risk/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Nvidia / The Decoder</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Laminar създава специализиран модел за улавяне на скрити логически грешки при автономни агенти</title>
-      <link>https://svetni.me/articles/2026/10/19/laminar-ai-evaluator-silent-agent-failures/</link>
-      <pubDate>Mon, 19 Oct 2026 16:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/laminar-ai-evaluator-silent-agent-failures/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Unsplash / Laminar</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic смекчава предстоящото си IPO с фонд за изместени от AI работници</title>
-      <link>https://svetni.me/articles/2026/10/19/anthropic-ipo-worker-displacement-fund-musk-spacex-counter/</link>
-      <pubDate>Mon, 19 Oct 2026 15:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/anthropic-ipo-worker-displacement-fund-musk-spacex-counter/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: The Decoder</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>GitHub Copilot SDK за C#: Интеграция на собствени AI модели в корпоративни работни процеси</title>
-      <link>https://svetni.me/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/</link>
-      <pubDate>Mon, 19 Oct 2026 15:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/github-copilot-sdk-csharp-byom-extensibility/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: Microsoft .NET Blog</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>$220-милиардният залог на Amazon за AI дата центрове се сблъсква с енергийни ограничения</title>
-      <link>https://svetni.me/articles/2026/10/19/amazon-220-billion-datacenter-capex-power-bottleneck/</link>
-      <pubDate>Mon, 19 Oct 2026 15:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/amazon-220-billion-datacenter-capex-power-bottleneck/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Cleanview Research / Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Qwen3-4B Deslop: Премахване на синтетичните стилови клишета от отворените езикови модели</title>
-      <link>https://svetni.me/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/</link>
-      <pubDate>Mon, 19 Oct 2026 14:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/qwen3-4b-deslop-synthetic-style-removal/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: 100toolkit</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Експортният бум на AI технологии ускорява икономическия растеж на Китай</title>
-      <link>https://svetni.me/articles/2026/10/19/china-gdp-ai-export-boom-offsetting-domestic-slowdown/</link>
-      <pubDate>Mon, 19 Oct 2026 14:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/china-gdp-ai-export-boom-offsetting-domestic-slowdown/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: BBC News</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Еволюция на разпределените системи: Преходът от микросървиси към автономни агентни мрежи</title>
-      <link>https://svetni.me/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/</link>
-      <pubDate>Mon, 19 Oct 2026 13:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/distributed-systems-evolution-microservices-to-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: InfoQ</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic съкращава наемането на начинаещи кадри заради вътрешното внедряване на AI</title>
-      <link>https://svetni.me/articles/2026/10/19/anthropic-internal-junior-hiring-drop-coding-agents/</link>
-      <pubDate>Mon, 19 Oct 2026 13:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/anthropic-internal-junior-hiring-drop-coding-agents/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Chance Yeh / Getty Images / Business Insider</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Kodama набира 7 милиона долара за автономни роботи в горското стопанство и борбата с пожари</title>
-      <link>https://svetni.me/articles/2026/10/19/kodama-raises-7m-autonomous-forestry-robotics/</link>
-      <pubDate>Mon, 19 Oct 2026 12:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/kodama-raises-7m-autonomous-forestry-robotics/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Robot Report</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Buildkite въвежда изолирани тайни и нови инструменти за автономна CI/CD автоматизация с агенти</title>
-      <link>https://svetni.me/articles/2026/10/19/buildkite-agentic-ci-scoped-secrets-governance/</link>
-      <pubDate>Mon, 19 Oct 2026 12:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/buildkite-agentic-ci-scoped-secrets-governance/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: Buildkite / InfoQ</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>60% от AI инструментите променят условията си за 15 седмици: Растящ юридически риск за бизнеса</title>
-      <link>https://svetni.me/articles/2026/10/19/ai-tools-terms-of-service-churn-enterprise-liability/</link>
-      <pubDate>Mon, 19 Oct 2026 11:30:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/ai-tools-terms-of-service-churn-enterprise-liability/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Unsplash / ClipJury</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Tmux и Claude Code: Сесии, изпращане на клавиши и архитектурните тавани на терминалните агенти</title>
-      <link>https://svetni.me/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/</link>
-      <pubDate>Mon, 19 Oct 2026 11:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/tmux-claude-code-terminal-agent-orchestration/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Илюстрация: crystl.dev</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>DeepSeek v4.1 Flash: Анализ на производителността и екстремната икономическа ефективност на изводите</title>
-      <link>https://svetni.me/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/</link>
-      <pubDate>Mon, 19 Oct 2026 10:15:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/19/deepseek-v4-1-flash-benchmark-throughput-efficiency/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Unsplash / Artificial Analysis</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic свива наемането на начинаещи програмисти, докато AI агентите поемат шест пъти повече часове от хората</title>
-      <link>https://svetni.me/articles/2026/10/18/anthropic-junior-engineering-hiring-slump-agentic-workforce/</link>
-      <pubDate>Sun, 18 Oct 2026 21:55:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/18/anthropic-junior-engineering-hiring-slump-agentic-workforce/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Wikimedia Commons / mypubliclands</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Anthropic отделя милиарди долари във фонд за обществена полза чрез дарение на собствен капитал</title>
-      <link>https://svetni.me/articles/2026/10/18/anthropic-public-benefit-fund-charitable-trust-equity/</link>
-      <pubDate>Sun, 18 Oct 2026 21:50:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/10/18/anthropic-public-benefit-fund-charitable-trust-equity/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: Wikimedia Commons / King of Hearts</small></p>]]></description>
     </item>
   </channel>
 </rss>

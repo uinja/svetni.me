@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Anthropic Research / Anthropic Security
+Изследователският екип по сигурност на Anthropic публикува основополагащ технически доклад, озаглавен „Using Claude to reduce the attack surface of..."><title>Anthropic Research: Използване на Claude за системно намаляване на повърхността за атака в софтуер - Светни.ме</title><meta property="og:title" content="Anthropic Research: Използване на Claude за системно намаляване на повърхността за атака в софтуер - Светни.ме"><meta property="og:description" content="Източник: Anthropic Research / Anthropic Security
+Изследователският екип по сигурност на Anthropic публикува основополагащ технически доклад, озаглавен „Using Claude to reduce the attack surface of..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic Research: Използване на Claude за системно намаляване на повърхността за атака в софтуер</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/hero.png" alt="Официална визуализация на изследователския доклад на Anthropic за софтуерна сигурност"><br><small>Източник: Anthropic Research / Anthropic Security</small></p>
+<p>Изследователският екип по сигурност на <a href="/pages/anthropic.html">Anthropic</a> публикува основополагащ технически доклад, озаглавен <em>„Using Claude to reduce the attack surface of code“</em> [1]. В него компанията детайлизира цялостна методология и практическа рамка за използване на усъвършенствани агенти за кодиране (<a href="/pages/claude-code.html">Claude Code</a>) с цел проактивно, мащабно и автоматизирано елиминиране на излишен код, опасни системни интерфейси и скрити архитектурни дефекти в производствени софтуерни хранилища.</p>
+<p>Докладът предлага кардинална промяна в парадигмата на <a href="/pages/cybersecurity.html">киберсигурността</a>: преминаване от пасивно чакане на доклади за уязвимости към безпощадно хирургическо изрязване на софтуерното „затлъстяване“ (Software Bloat).</p>
+<h2>Проблемът: Наследеният код като отворена врата за хакери</h2>
+<p>Повечето съвременни корпоративни системи съдържат милиони редове код, трупани в продължение на десетилетия. Според проучването на Anthropic, между 25% и 45% от кода в типичното корпоративно приложение представлява „мъртъв код“: отдавна изоставени експериментални функции, тестови администраторски панели, неподдържани API крайни точки и остарели библиотеки [1].</p>
+<p>Всеки един от тези неизползвани компоненти остава достъпен за компилатора и паметта на сървъра, превръщайки се в перфектна мишена за зловредни актьори, търсещи вериги от експлойти (ROP gadget chains) или неподдържани зависимости. Ръчното премахване на този код от човешки инженери досега беше табу – никой програмист не искаше да пипа стар код от страх да не счупи скрита производствена функционалност.</p>
+<h2>Методологията на Claude: Графи на контролния поток и математическо саниране</h2>
+<p>Anthropic демонстрира как <a href="/pages/claude.html">Claude</a> решава този проблем чрез комбиниране на дълбоко семантично разбиране с техники за <a href="/pages/formal-verification.html">формална верификация</a>:</p>
+<ol>
+<li><strong>Изграждане на пълни графи на зависимостите:</strong> Агентът анализира цялата кодова база и входни точки, изграждайки точен граф на извикванията (Call Graph) и контролния поток.</li>
+<li><strong>Изолиране на повърхността за атака:</strong> Системата маркира всяка функция, която приема външни потребителски данни, но не се използва в активните потребителски пътеки.</li>
+<li><strong>Генериране на тестови инварианти:</strong> Преди да изтрие или рефакторира каквото и да било, Claude автоматично синтезира изчерпателен пакет от модулни и интеграционни тестове, които валидират съществуващото легитимно поведение на системата.</li>
+<li><strong>Хирургическо премахване:</strong> Агентът изтрива мъртвия код, заменя опасни C/C++ функции (като <code>strcpy</code> или несигурни десериализации) с безопасни алтернативи и пуска тестовия пакет, за да гарантира 100% обратна съвместимост.</li>
+</ol>
+<p>При тестове върху реални софтуерни пакети с отворен код, Claude Code е успял да редуцира общия обем на изходния код с до 34%, като същевременно е затворил десетки потенциални вектори за компрометиране без нито една функционална регресия.</p>
+<h2>Стратегическо предимство за корпоративната устойчивост</h2>
+<p>Това проучване има огромни дългосрочни последици за <a href="/pages/code-modernization.html">модернизацията на кода</a>. За първи път компаниите разполагат с надежден инструмент за непрекъснато самопочистване на своите софтуерни активи.</p>
+<p>Вместо да харчат милиони за скъпи защитни стени и системи за откриване на прониквания, които се опитват да блокират атаки срещу уязвим софтуер, организациите могат просто да свият атакуемата си повърхност до абсолютния минимум. Кодът, който не съществува, не може да бъде хакнат. Този принцип на радикално софтуерно опростяване, задвижван от автономни невронни агенти, ще се превърне в крайъгълен камък на дигиталната защита през следващото десетилетие.</p>
+<p><img src="/articles/2026/10/21/anthropic-research-claude-attack-surface-reduction-software/infographic.png" alt="Инфографика: Архитектурна методология на Anthropic за намаляване на повърхността за атака"><br><small>Четири ключови стълба на методологията на Anthropic за автономно саниране на софтуер чрез Claude.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Anthropic Research. (2026-10-21). <em>Using Claude to reduce the attack surface of code</em>. Anthropic Engineering &amp; Alignment Publications. <a href="https://www.anthropic.com/research/attack-surface-reduction">https://www.anthropic.com/research/attack-surface-reduction</a></li>
+<li>Hacker News Discussion. (2026-10-21). <em>Discussion: Anthropic on automated attack surface reduction and dead code elimination</em>. <a href="https://news.ycombinator.com/item?id=50175779">https://news.ycombinator.com/item?id=50175779</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/formal-verification.html">Формална верификация (Formal Verification)</a><p>Формалната верификация (Formal Verification) е математически метод за строго доказване на коректността на алгоритми, софтуерни програми или хардуерни ...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/code-modernization.html">Модернизация на код (Code Modernization)</a><p>Модернизацията на код (Code Modernization) обхваща процесите по трансформиране, оптимизиране и пренаписване на наследени (legacy) софтуерни системи къ...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

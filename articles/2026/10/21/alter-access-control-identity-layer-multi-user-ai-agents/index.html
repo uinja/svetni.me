@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Alter Security / Y Combinator
+В рамките на демонстрационния ден на Y Combinator стартъпът Alter (YC S25) представи официално своята специализирана платформа за управление на идентичността..."><title>Alter: Криптографски контрол на достъпа и идентичност за автономни AI агенти - Светни.ме</title><meta property="og:title" content="Alter: Криптографски контрол на достъпа и идентичност за автономни AI агенти - Светни.ме"><meta property="og:description" content="Източник: Alter Security / Y Combinator
+В рамките на демонстрационния ден на Y Combinator стартъпът Alter (YC S25) представи официално своята специализирана платформа за управление на идентичността..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Alter: Криптографски контрол на достъпа и идентичност за автономни AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/hero.png" alt="Официално графично представяне на платформата за сигурност и идентичност на Alter"><br><small>Източник: Alter Security / Y Combinator</small></p>
+<p>В рамките на демонстрационния ден на Y Combinator стартъпът <a href="/pages/alter.html">Alter</a> (YC S25) представи официално своята специализирана платформа за управление на идентичността и <a href="/pages/access-control.html">контрол на достъпа</a> (IAM), проектирана специално за света на мултипотребителските <a href="/pages/ai-agents.html">AI агенти</a> [1].</p>
+<p>Платформата разрешава един от най-критичните проблеми в корпоративната сигурност: как да позволим на автономен софтуерен агент да действа от името на хиляди различни служители или клиенти, без да му даваме опасен универсален администраторски достъп до корпоративните бази данни.</p>
+<h2>Агентната криза в корпоративната автентикация</h2>
+<p>Досега повечето разработчици на агентни системи разчитаха на изключително примитивен подход: агентът получаваше глобален API ключ или сервизен акаунт с широки права за достъп до корпоративната CRM система, пощенския сървър или базата данни [1].</p>
+<p>Това пораждаше катастрофални рискове:</p>
+<ul>
+<li><strong>Ескалация на привилегии през промпт инжекция:</strong> Ако външен потребител манипулира входа към агента (Prompt Injection), ботът можеше да бъде подведен да използва глобалния си ключ, за да източи финансовите отчети на компанията или личните данни на други клиенти.</li>
+<li><strong>Липса на одитна следа:</strong> В логовете на базата данни всички действия изглеждаха така, сякаш са извършени от един и същи служебен потребител, правейки невъзможно установяването на това кой реален служител е инициирал операцията.</li>
+</ul>
+<h2>Архитектурата на Alter: Делегирани права с нулево доверие (Zero-Trust)</h2>
+<p><a href="/pages/alter.html">Alter</a> въвежда модел за сигурност от типа <a href="/pages/zero-trust.html">Zero-Trust</a>, адаптиран за агентни конвейери [1]:</p>
+<ol>
+<li><strong>Динамично делегиране на идентичност:</strong> Когато потребител помоли агента: „Провери фактурите ми за септември“, Alter генерира краткотраен криптографски токън, който съдържа единствено и само права за четене на фактурите на <em>този конкретен потребител</em>.</li>
+<li><strong>Ефемерен живот на удостоверенията:</strong> Токъните на Alter са валидни само за броени секунди и за точно определен брой мрежови заявки. Дори агентът да бъде компрометиран или неговата оперативна памет да бъде източена, откраднатият токън вече е невалиден.</li>
+<li><strong>Криптографски обвързани доказателства:</strong> Всяко действие на агента се подписва с цифров сертификат, създавайки неизменяем одит лог, който доказва: кой потребител е дал инструкцията, кой модел я е обработил и какви точно параметри са изпратени към външния API.</li>
+</ol>
+<h2>Дългосрочно значение за регулаторното съответствие</h2>
+<p>Въвеждането на стриктен контрол на достъпа за автономни агенти е предпоставка за оцеляването на корпоративния изкуствен интелект в регулирани сектори като здравеопазване, банково дело и застраховане.</p>
+<p>Законодателните рамки като GDPR в Европа и HIPAA в САЩ изискват стриктно спазване на принципа за минимални привилегии (Least Privilege). Платформи като Alter осигуряват технологичния мост, който позволява на бизнесите да внедряват мощни мултиагентни работни процеси, без да рискуват милионни глоби за нарушаване на сигурността на личните данни. В следващите години управлението на агентната идентичност ще стане толкова фундаментално за корпоративната сигурност, колкото бяха Okta и Active Directory в ерата на облачните приложения.</p>
+<p><img src="/articles/2026/10/21/alter-access-control-identity-layer-multi-user-ai-agents/infographic.png" alt="Инфографика: Архитектура на управление на идентичността за AI агенти на Alter"><br><small>Четири ключови стълба на криптографския контрол на достъпа с нулево доверие в платформата Alter.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Alter Official Announcement / Hacker News. (2026-10-21). <em>Launch HN: Alter (YC S25) – Access control and identity for multi-user AI agents</em>. <a href="https://alterauth.com/">https://alterauth.com/</a></li>
+<li>Y Combinator Launch Directory. (2026-10-21). <em>Alter: Cryptographic Least-Privilege IAM for the Agentic Web</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-trust.html">Zero Trust (Нулево доверие)</a><p>Zero Trust („Нулево доверие“) е архитектура за киберсигурност, базирана на принципа „никога не се доверявай, винаги проверявай“.</p></li><li><a href="/pages/alter.html">Alter</a><p>Alter (YC S25) е специализирана платформа за управление на идентичността и контрол на достъпа (IAM), проектирана специално за автономни мултипотребите...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/access-control.html">Контрол на достъпа</a><p>Контролът на достъпа е фундаментален принцип на киберсигурността, който гарантира, че само оторизирани лица и субекти имат достъп до конкретна информа...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / Xamrayev / Nexus-CLI
+В общността на софтуерните инженери с отворен код се появи инструмент, който бързо се превръща в хит сред програмистите: Nexus-CLI [1]. Разработен на компили..."><title>Nexus-CLI: Бърз Go мост, свързващ DeepSeek R1/V3 с Claude Code и Ollama - Светни.ме</title><meta property="og:title" content="Nexus-CLI: Бърз Go мост, свързващ DeepSeek R1/V3 с Claude Code и Ollama - Светни.ме"><meta property="og:description" content="Източник: GitHub / Xamrayev / Nexus-CLI
+В общността на софтуерните инженери с отворен код се появи инструмент, който бързо се превръща в хит сред програмистите: Nexus-CLI [1]. Разработен на компили..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Nexus-CLI: Бърз Go мост, свързващ DeepSeek R1/V3 с Claude Code и Ollama</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/hero.png" alt="Официална заглавна илюстрация на GitHub хранилището на проекта с отворен код Nexus-CLI"><br><small>Източник: GitHub / Xamrayev / Nexus-CLI</small></p>
+<p>В общността на софтуерните инженери с отворен код се появи инструмент, който бързо се превръща в хит сред програмистите: <a href="/pages/nexus-cli.html">Nexus-CLI</a> [1]. Разработен на компилирания език Go от независимия инженер Xamrayev, инструментът представлява светкавичен локален мост и прокси, който позволява на авангардния инструмент за кодиране <a href="/pages/claude-code.html">Claude Code</a> на Anthropic да работи безпроблемно с алтернативни модели за разсъждение – особено китайския шампион <a href="/pages/deepseek.html">DeepSeek</a> R1/V3 и локални инференс двигатели като Ollama.</p>
+<p>Nexus-CLI решава наболял практически проблем за стотици хиляди разработчици по света: как да използват най-добрите съвременни агентни CLI интерфейси, без да плащат скъпи облачни сметки или да изпращат своя чувствителен софтуерен код към чуждестранни сървъри.</p>
+<h2>Проблемът със затворените интерфейсни протоколи</h2>
+<p>Инструментът <a href="/pages/claude-code.html">Claude Code</a> на Anthropic спечели огромна популярност благодарение на безупречната си способност за планиране, четене на сорс код, изпълнение на тестове и редактиране на файлове директно в терминала [1]. По подразбиране обаче Claude Code е тясно обвързан с официалния комерсиален API на Anthropic, използвайки специфичен JSON формат за стрийминг на съобщения и структури за извикване на функции (Tool Calling).</p>
+<p>За разработчици в развиващи се държави, студенти или компании със строги изисквания за конфиденциалност, разходите за консумация на токъни през Claude 3.5 Sonnet при мащабни рефакторинги могат бързо да достигнат стотици долари на ден. От друга страна, евтините или отворени модели за разсъждение като <a href="/pages/deepseek.html">DeepSeek</a> R1 предлагат сходна интелигентност при част от цената, но не бяха съвместими с интерфейса на Claude Code.</p>
+<h2>Как Nexus-CLI превежда агентния диалог в реално време?</h2>
+<p>Написан изцяло на чист Go без външни runtime зависимости, <a href="/pages/nexus-cli.html">Nexus-CLI</a> работи като свръхлеко междинно прокси на машината на разработчика [1]:</p>
+<ul>
+<li><strong>Двупосочна нормализация на протокола:</strong> Инструментът прихваща изходящите заявки от Claude Code, трансформира структурата на системните промптове и дефинициите на инструментите в стандартен OpenAI-съвместим формат и ги препраща към избрания бекенд (напр. DeepSeek API или локален Ollama сървър).</li>
+<li><strong>Стрийминг на разсъжденията (Reasoning Tokens):</strong> Nexus-CLI прецизно разделя вътрешните вериги на разсъждение (мисловните процеси <code>&lt;think&gt;...&lt;/think&gt;</code>) от финалните кодови промени, предавайки ги обратно към потребителския интерфейс с нулева латентност.</li>
+<li><strong>Ефективност на ресурсите:</strong> Тъй като е компилиран на Go, Nexus-CLI консумира под 15 мегабайта оперативна памет и добавя по-малко от една милисекунда забавяне към мрежовия трафик.</li>
+</ul>
+<h2>Демократизация на инструментите за програмиране</h2>
+<p>Успехът на Nexus-CLI отразява по-дълбока тенденция в екосистемата на изкуствения интелект: разделянето на клиентските инструменти за взаимодействие от самите базови модели.</p>
+<p>В миналото софтуерните гиганти се опитваха да продават пълен вертикален монопол – proprietary интерфейс, работещ единствено с техния собствен облачен модел. Проекти с <a href="/pages/open-source.html">отворен код</a> като Nexus-CLI разбиват тези изкуствени бариери. Те дават на програмиста пълна свобода на избор: сутрин може да използва свръхмощния Claude Sonnet за проектиране на системната архитектура, следобед да превключи към DeepSeek R1 за масово генериране на рутинни тестове при минимална цена, а вечер да работи върху секретен личен проект напълно офлайн през Ollama на собствения си лаптоп.</p>
+<p>Тази гъвкавост ускорява навлизането на автономното програмиране и гарантира, че иновациите остават достъпни за цялата глобална инженерна общност.</p>
+<p><img src="/articles/2026/10/21/nexus-cli-pure-go-bridge-deepseek-claude-code-ollama/infographic.png" alt="Инфографика: Архитектурна схема на моста Nexus-CLI между Claude Code и DeepSeek"><br><small>Четирите стълба на архитектурата, протоколния превод и локалната автономност на проекта Nexus-CLI.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>GitHub Repository. (2026-10-21). <em>Nexus-CLI: Pure Go Bridge to DeepSeek R1/V3 with Claude Code and Ollama Support</em>. <a href="https://github.com/xamrayev/nexus-cli">https://github.com/xamrayev/nexus-cli</a></li>
+<li>Hacker News Developer Community. (2026-10-21). <em>Show HN: Nexus-CLI – Run Claude Code with DeepSeek R1 and Local Models</em>. <a href="https://news.ycombinator.com/item?id=50176129">https://news.ycombinator.com/item?id=50176129</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/nexus-cli.html">Nexus-CLI</a><p>Nexus-CLI е проект с отворен код, написан на езика Go, който предоставя високопроизводителен мост и прокси между съвременни агентни инструменти (като ...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

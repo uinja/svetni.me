@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: LayerFS Architecture Team
+С навлизането на автономните AI агенти в разработката на софтуер традиционните операционни системи започнаха да показват своите исторически лимити. За да отговор..."><title>LayerFS: Високопроизводителна файлова система с CoW снимки за автономни софтуерни агенти - Светни.ме</title><meta property="og:title" content="LayerFS: Високопроизводителна файлова система с CoW снимки за автономни софтуерни агенти - Светни.ме"><meta property="og:description" content="Източник: LayerFS Architecture Team
+С навлизането на автономните AI агенти в разработката на софтуер традиционните операционни системи започнаха да показват своите исторически лимити. За да отговор..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>LayerFS: Високопроизводителна файлова система с CoW снимки за автономни софтуерни агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/hero.png" alt="Официална графична визуализация на архитектурата на LayerFS"><br><small>Източник: LayerFS Architecture Team</small></p>
+<p>С навлизането на автономните <a href="/pages/ai-agents.html">AI агенти</a> в разработката на софтуер традиционните операционни системи започнаха да показват своите исторически лимити. За да отговори на тези предизвикателства, проектът с отворен код <a href="/pages/layerfs.html">LayerFS</a> пусна своята първа публична версия – специализирана файлова система за <a href="/pages/operating-systems.html">операционни системи</a>, проектирана от нулата за нуждите на кодиращи агенти като Claude Code, Devin и Cursor [1].</p>
+<p>LayerFS използва техники за копиране при запис (Copy-on-Write, CoW) и дървовидни снимки (Tree Snapshots), позволявайки на един агент да създава хиляди изолирани клонинги на мащабни софтуерни проекти за части от милисекундата.</p>
+<h2>Защо стандартните файлови системи блокират изкуствения интелект?</h2>
+<p>Традиционните файлови системи като ext4, APFS или NTFS са създадени за хора, които работят върху един файл в даден момент и правят ръчни запазвания и Git комити [1]. Автономният агент обаче работи по коренно различен начин:</p>
+<ul>
+<li>Той иска да пробва десетки алтернативни редакции на код паралелно (спекулативно кодиране).</li>
+<li>Той изпълнява разрушителни команди за преконфигуриране на среди, инсталиране на пакети и компилация.</li>
+<li>Ако агентът сгреши или повреди системна библиотека, връщането на състоянието чрез стандартен <code>git checkout</code> или рестартиране на Docker контейнер отнема десетки секунди и генерира гигабайти излишен дисков вход/изход (I/O).</li>
+</ul>
+<h2>Архитектурата на LayerFS: Виртуални слоеве в потребителското пространство</h2>
+<p><a href="/pages/layerfs.html">LayerFS</a> решава този конфликт чрез елегантна архитектура, базирана на FUSE/eBPF и високоефективни структури от данни [1]:</p>
+<ol>
+<li><strong>Нулево копиране на състоянието (Instant CoW Branching):</strong> Когато агентът стартира нова експериментална хипотеза за отстраняване на бъг, LayerFS не копира файловете. Тя просто създава нов указател към метаданните за по-малко от 800 микросекунди.</li>
+<li><strong>Изолация на модификациите:</strong> Всички промени, компилационни артефакти и временни файлове се записват в динамичен слой в оперативната памет. Ако тестът се провали, слоят се изтрива мигновено.</li>
+<li><strong>Паралелен консенсус между под-агенти:</strong> Един главен агент може да създаде 20 изолирани пространства и да пусне 20 специализирани под-агента да пишат код паралелно. Агентът с най-бърз и преминаващ всички тестове код се слива с главния клон с една атомарна операция.</li>
+<li><strong>Хардуерно ускорение с io_uring:</strong> LayerFS използва съвременните асинхронни Linux интерфейси <code>io_uring</code>, минимизирайки превключването на контекста между ядрото и потребителското пространство.</li>
+</ol>
+<h2>Дългосрочно значение за агентната софтуерна разработка</h2>
+<p>LayerFS маркира началото на важна еволюция: пренаписването на фундаменталния системен софтуер, за да обслужва машини вместо хора. Досега разработчиците на AI агенти се опитваха да ги напъхат в стари Unix абстракции от 70-те години на миналия век.</p>
+<p>С появата на специализирани файлови системи като LayerFS, производителността на агентните конвейери скача с порядъци. Агентите вече не са ограничени от страха да не счупят работната среда – те могат да изследват огромни пространства от възможни програмни решения с пълна безопасност и светкавична скорост. В бъдеще LayerFS и подобни CoW технологии ще станат стандартен компонент от всяка съвременна облачна среда за разработка (Cloud IDE).</p>
+<p><img src="/articles/2026/10/21/layerfs-copy-on-write-filesystem-ai-coding-agents/infographic.png" alt="Инфографика: Архитектурни слоеве и механизми на файловата система LayerFS"><br><small>Четири ключови стълба на високоефективната Copy-on-Write архитектура на LayerFS.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>LayerFS Documentation. (2026-10-21). <em>LayerFS: The High-Throughput Copy-on-Write Filesystem for Autonomous Coding Agents</em>. <a href="https://layerfs.ai/">https://layerfs.ai/</a></li>
+<li>Hacker News Community. (2026-10-21). <em>Discussion: LayerFS – Why AI coding agents need a new filesystem paradigm</em>. <a href="https://news.ycombinator.com/item?id=50179857">https://news.ycombinator.com/item?id=50179857</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/operating-systems.html">Операционни системи (Operating Systems)</a><p>Операционните системи (Operating Systems) управляват компютърния хардуер и предоставят стандартизирани услуги за софтуерните приложения чрез системни ...</p></li><li><a href="/pages/layerfs.html">LayerFS</a><p>LayerFS е специализирана файлова система, оптимизирана за нуждите на автономните софтуерни агенти (Coding Agents).</p></li><li><a href="/pages/developer-tools.html">Инструменти за разработка (Developer Tools)</a><p>Инструментите за разработка (DevTools) обхващат програмните средства, среди за разработка (IDE), дебъгери, компилатори, системи за контрол на версиите...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

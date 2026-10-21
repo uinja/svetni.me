@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Google Cloud
+В исторически стратегически ход, който пренарежда баланса на силите в облачния сектор, Google Cloud обяви официалното интегриране на моделите на OpenAI в своята..."><title>Google Cloud интегрира моделите на OpenAI във Vertex AI редом с Gemini и Claude - Светни.ме</title><meta property="og:title" content="Google Cloud интегрира моделите на OpenAI във Vertex AI редом с Gemini и Claude - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Google Cloud
+В исторически стратегически ход, който пренарежда баланса на силите в облачния сектор, Google Cloud обяви официалното интегриране на моделите на OpenAI в своята..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google Cloud интегрира моделите на OpenAI във Vertex AI редом с Gemini и Claude</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/hero.png" alt="Google Cloud добавя моделите на OpenAI към своя каталог Model Garden"><br><small>Източник: The Decoder / Google Cloud</small></p>
+<p>В исторически стратегически ход, който пренарежда баланса на силите в облачния сектор, <a href="/pages/google-cloud.html">Google Cloud</a> обяви официалното интегриране на моделите на <a href="/pages/openai.html">OpenAI</a> в своята водеща платформа за машинно обучение <a href="/pages/vertex-ai.html">Vertex AI</a> [1]. С това технологичният гигант става първият и единствен голям хиперскейлър в света, който предоставя на корпоративните клиенти едновременен, нативен достъп до трите водещи семейства базови модели в индустрията: собствената линия <a href="/pages/gemini.html">Gemini</a>, моделите <a href="/pages/claude.html">Claude</a> на <a href="/pages/anthropic.html">Anthropic</a> и системите на OpenAI.</p>
+<p>Това партньорство слага край на някогашната желязна ексклузивност, с която Microsoft Azure разполагаше спрямо API услугите на OpenAI, и бележи прехода на облачния пазар към ерата на отворените мултимоделни платформи.</p>
+<h2>Архитектура на интеграцията във Vertex AI Model Garden</h2>
+<p>Включването на флагманските модели на OpenAI – включително сериите GPT-4o, o1 и o3-mini – във <a href="/pages/vertex-ai.html">Vertex AI</a> Model Garden се реализира чрез директни управлявани крайни точки (Managed Endpoints) [1]. За корпоративните инженери това елиминира необходимостта от поддържане на отделни договори, API ключове и мрежови тунели към външни доставчици.</p>
+<p>Всички извиквания към моделите на OpenAI преминават през защитената вътрешна мрежова магистрала на Google, като се възползват от стандартизираните механизми за сигурност на Google Cloud:</p>
+<ul>
+<li><strong>Private Service Connect (PSC):</strong> Трафикът между потребителските виртуални частни облаци (VPC) и инференс клъстерите на OpenAI остава изцяло изолиран от публичния интернет.</li>
+<li><strong>Интегрирано управление на идентичността (IAM):</strong> Ролеви контрол на достъпа с детайлни политики за одит, позволяващи прецизно ограничаване на потребителите и агентите, които могат да извикват конкретни модели.</li>
+<li><strong>Единно корпоративно фактуриране:</strong> Разходите за токъни се приспадат директно от съществуващите ангажименти за потребление (Committed Use Discounts) в Google Cloud.</li>
+</ul>
+<h2>Динамична мултиагентна оркестрация на една ръка разстояние</h2>
+<p>Най-голямото техническо предимство за софтуерните инженери е възможността за безпроблемна хибридна оркестрация. Досега изграждането на сложни агентни конвейери, съчетаващи силата на Claude за писане на код, огромния контекстен прозорец на Gemini 1.5/2.0 Pro за обработка на документи и аналитичните вериги на o1 за логическо разсъждение, изискваше сложна инфраструктура за агрегация с множество междинни закъснения.</p>
+<p>Във Vertex AI тези модели вече съжителстват в една и съща мрежова зона с ниска латентност. Един главен агент може да разпредели задача по семантичен анализ на 2-милионен контекст към Gemini, след което да препрати резюмето към OpenAI o1 за формална математическа верификация, и накрая да извика Claude за автоматично генериране на тестов пакет – всичко това в рамките на секунди и без напускане на защитения периметър.</p>
+<h2>Дългосрочни стратегически и макроикономически последици за облачния пазар</h2>
+<p>Пазарната трансформация, породена от този ход, се простира далеч отвъд простото добавяне на нови API крайни точки. В продължение на години пазарът на изкуствен интелект беше разделен на затворени лагери: Microsoft залагаше всичко на OpenAI, Amazon Web Services (AWS) инвестира милиарди в Anthropic, а Google развиваше единствено вътрешната си екосистема DeepMind.</p>
+<p>Фактът, че Google Cloud успя да привлече както Anthropic, така и OpenAI на своята платформа, е признание, че корпоративните клиенти категорично отказват да бъдат заключени в монокултура от един-единствен доставчик на модели. Инженерните екипи във Fortune 500 настояват за свобода на избора: моделите се развиват с такава скорост, че всяка фирма, обвързана с ексклузивен договор, рискува да изостане с месеци при следващия скок в архитектурите.</p>
+<p>За Microsoft този ход представлява сериозен стратегически удар. Макар Azure да запазва правата си върху част от инфраструктурата за обучение на OpenAI, компанията губи статута си на единствен корпоративен шлюз към GPT моделите. В резултат на това ще станем свидетели на агресивна ценова война при корпоративните отстъпки за инференс и състезание по предоставяне на по-надеждни инструменти за мониторинг, квантуване и защита срещу софтуерни регресии.</p>
+<p><img src="/articles/2026/10/21/google-cloud-offers-openai-models-vertex-ai-gemini-claude/infographic.png" alt="Инфографика: Мултимоделна архитектура на Google Vertex AI"><br><small>Четири ключови измерения на интеграцията на OpenAI в каталога на Google Cloud Vertex AI.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>The Decoder. (2026-10-21). <em>Google Cloud now offers OpenAI models alongside Gemini and Claude, becoming the only major provider with all three</em>. <a href="https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three/">https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three/</a></li>
+<li>OpenAI Announcements. (2026-10-21). <em>OpenAI models are coming to Google Cloud Vertex AI</em>. OpenAI Research &amp; Platform. <a href="https://openai.com/index/openai-models-google-cloud/">https://openai.com/index/openai-models-google-cloud/</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vertex-ai.html">Google Cloud Vertex AI</a><p>Vertex AI е цялостната платформа за машинно обучение и генеративен изкуствен интелект на Google Cloud.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/google-cloud.html">Google Cloud</a><p>Google Cloud (известна още като Google Cloud Platform или GCP) е пакет от облачни услуги, предлагани от Google, които се изпълняват на същата инфрастр...</p></li><li><a href="/pages/gemini.html">Серията Gemini</a><p>Gemini е най-мощната фамилия модели на Google DeepMind, създадена да бъде „мултимодална по рождение“ (natively multimodal).</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

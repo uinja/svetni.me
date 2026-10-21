@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Business Insider / Wiz / OpenAI
+Глобалната общност по киберсигурност се намира в състояние на повишена тревога след съвместното разкритие на компанията за облачна сигурност Wiz и лаборато..."><title>PHP2Shell: Изкуствен интелект откри критична RCE уязвимост в PHP; OpenAI координира глобална защита - Светни.ме</title><meta property="og:title" content="PHP2Shell: Изкуствен интелект откри критична RCE уязвимост в PHP; OpenAI координира глобална защита - Светни.ме"><meta property="og:description" content="Източник: Business Insider / Wiz / OpenAI
+Глобалната общност по киберсигурност се намира в състояние на повишена тревога след съвместното разкритие на компанията за облачна сигурност Wiz и лаборато..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>PHP2Shell: Изкуствен интелект откри критична RCE уязвимост в PHP; OpenAI координира глобална защита</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 октомври 2026 г.</p><div><p><img src="/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/hero.png" alt="Специалисти по киберсигурност анализират уязвимостта PHP2Shell на множество монитори"><br><small>Източник: Business Insider / Wiz / OpenAI</small></p>
+<p>Глобалната общност по <a href="/pages/cybersecurity.html">киберсигурност</a> се намира в състояние на повишена тревога след съвместното разкритие на компанията за облачна сигурност <a href="/pages/wiz.html">Wiz</a> и лабораторията <a href="/pages/openai.html">OpenAI</a>: изкуствен интелект е открил самостоятелно критична уязвимост за <a href="/pages/rce.html">отдалечено изпълнение на код (RCE)</a> в ядрото на езика PHP, кръстена <strong>PHP2Shell</strong> [1].</p>
+<p>Уязвимостта, която е присъствала незабелязана в сорс кода на PHP повече от десетилетие, засяга основни библиотеки за обработка на HTTP заявки и потенциално излага на компрометиране милиони уебсайтове и корпоративни приложения по целия свят.</p>
+<h2>Как невронните модели на OpenAI откриха пробива</h2>
+<p>Исторически откриването на сложни <a href="/pages/vulnerability-research.html">уязвимости</a> в софтуер от ниво операционна система и програмни езици изискваше месеци ръчен анализ от високоплатени специалисти по обратен инженеринг. В случая с PHP2Shell, пробивът е идентифициран по време на експериментален одит на софтуер с отворен код, проведен от специализирани reasoning агенти на <a href="/pages/openai.html">OpenAI</a>.</p>
+<p>Моделът е анализирал милиони редове C код в ядрото на PHP, проследявайки атипични пътища за разпределение на паметта при обработка на мултипарт форми. Агентът е открил фина логическа грешка тип „използване след освобождаване“ (Use-After-Free) в комбинация с препълване на буфера при специфични гранични условия. Нещо повече – изкуственият интелект не просто е маркирал потенциалния бъг, но и самостоятелно е генерирал минимален концептуален експлойт (Proof of Concept, PoC), доказващ пълно превземане на системната обвивка (shell) на отдалечения сървър.</p>
+<h2>Проектът „Patch the Planet“: Безпрецедентна глобална координация</h2>
+<p>Осъзнавайки катастрофалния разрушителен потенциал на подобна уязвимост, ако попадне в ръцете на киберпрестъпници, <a href="/pages/openai.html">OpenAI</a> и <a href="/pages/wiz.html">Wiz</a> задействаха кодовото споразумение „Patch the Planet“ [1]:</p>
+<ul>
+<li><strong>Конфиденциално ембарго:</strong> В продължение на 14 дни екипът на PHP Core, водещите облачни хиперскейлъри (AWS, Azure, Google Cloud, Cloudflare) и основните Linux дистрибуции (Red Hat, Ubuntu, Debian) разработваха съвместно официален пач под строга тайна.</li>
+<li><strong>Глобално едновременно обновяване:</strong> На 21 октомври 2026 г. бяха публикувани обновени пакети за всички поддържани версии на PHP, придружени от виртуални защитни пачове в най-популярните защитни стени за уеб приложения (WAF).</li>
+<li><strong>Автоматизирано валидиране:</strong> Моделите на OpenAI бяха използвани за регресионно тестване на самия пач, гарантирайки, че коригираният C код не чупи съвместимостта на съществуващите PHP екосистеми като WordPress, Laravel и Drupal.</li>
+</ul>
+<h2>Системни последствия: Асиметричната война между атака и защита</h2>
+<p>Откриването на PHP2Shell бележи преломна точка в историята на информационната сигурност. За първи път публично се доказва, че автономните езикови модели притежават свръхчовешка способност за откриване на нулев ден (0-day) уязвимости в фундаментални градивни елементи на глобалния интернет.</p>
+<p>Това поражда драматична асиметрия. Докато днес отговорните лаборатории координират защитата с автори на софтуер, държавни хакерски групи и картели за киберпрестъпност скоро ще разполагат с аналогични невронни модели без филтри за безопасност. Всеки ред наследен софтуерен код на C и C++, писан през последните 30 години, сега е уязвим за светкавичен автономен одит от машини. Единственият дългосрочен изход за индустрията е ускорената <a href="/pages/code-modernization.html">модернизация на кода</a> и масовият преход към езици с гарантирана безопасност на паметта като <a href="/pages/rust.html">Rust</a>.</p>
+<p><img src="/articles/2026/10/21/php2shell-ai-uncovers-critical-rce-php-openai-coordinated-disclosure/infographic.png" alt="Инфографика: Хронология и последици от уязвимостта PHP2Shell"><br><small>Четири ключови аспекта на операцията по откриване и координирана защита от уязвимостта PHP2Shell.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Business Insider. (2026-10-21). <em>A major security flaw found using an OpenAI model is causing internet chaos</em>. <a href="https://www.businessinsider.com/php-vulnerability-cybersecurity-ai-patch-openai-gpt-calif-wiz-hacking-2026-10">https://www.businessinsider.com/php-vulnerability-cybersecurity-ai-patch-openai-gpt-calif-wiz-hacking-2026-10</a></li>
+<li>Wiz Research. (2026-10-21). <em>PHP2Shell: AI Uncovers Critical Remote Code Execution in Core PHP</em>. Wiz Security Blog. <a href="https://www.wiz.io/blog/php2shell-php-rce">https://www.wiz.io/blog/php2shell-php-rce</a></li>
+<li>OpenAI Security. (2026-10-21). <em>Coordinated Disclosure of Critical Vulnerabilities: Patching the Planet with AI</em>. OpenAI Safety &amp; Security Releases. <a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/">https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/wiz.html">Wiz</a><p>Wiz е водеща компания за облачна сигурност, специализирана в откриване на уязвимости, анализ на архитектурни рискове и защита на мултиоблачни среди.</p></li><li><a href="/pages/vulnerability-research.html">Изследване на уязвимости (Vulnerability Research)</a><p>Изследването на уязвимости (Vulnerability Research) е дисциплина в киберсигурността, насочена към откриване, анализ и документация на дефекти в софтуе...</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/rce.html">RCE</a><p>Remote Code Execution (RCE) или отдалечено изпълнение на код е една от най-критичните уязвимости в киберсигурността.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/code-modernization.html">Модернизация на код (Code Modernization)</a><p>Модернизацията на код (Code Modernization) обхваща процесите по трансформиране, оптимизиране и пренаписване на наследени (legacy) софтуерни системи къ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
