@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / OpenAI
+Водещата лаборатория за изкуствен интелект OpenAI обяви фундаментален обрат в своята инженерна методология, заявявайки, че окончателно прекратява обучението на следващ..."><title>OpenAI спира обучението на гранични модели върху жив интернет заради критични рискове - Светни.ме</title><meta property="og:title" content="OpenAI спира обучението на гранични модели върху жив интернет заради критични рискове - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / OpenAI
+Водещата лаборатория за изкуствен интелект OpenAI обяви фундаментален обрат в своята инженерна методология, заявявайки, че окончателно прекратява обучението на следващ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/23/openai-ends-live-internet-training-significant-risks/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/23/openai-ends-live-internet-training-significant-risks/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI спира обучението на гранични модели върху жив интернет заради критични рискове</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 октомври 2026 г.</p><div><p><img src="/articles/2026/10/23/openai-ends-live-internet-training-significant-risks/hero.png" alt="Логото на OpenAI на фона на програмен код и данни"><br><small>Източник: TechCrunch / OpenAI</small></p>
+<p>Водещата лаборатория за изкуствен интелект <a href="/pages/openai.html">OpenAI</a> обяви фундаментален обрат в своята инженерна методология, заявявайки, че окончателно прекратява обучението на следващото поколение <a href="/pages/frontier-models.html">гранични модели</a> директно върху съдържание от активната глобална мрежа [1]. Решението идва броени седмици след като вътрешни експерти признаха, че традиционните евристични филтри вече не са в състояние да предпазят невронните мрежи от целенасочени атаки тип <a href="/pages/data-poisoning.html">отравяне на данни</a>.</p>
+<p>Преминаването към напълно изолирана среда за предварително обучение бележи края на ерата на безразборното уеб събиране на информация (web scraping), върху което бе изграден успехът на генеративния AI от 2022 до 2025 година. Вместо това изследователите ще разчитат на стриктно курирани трезори от лицензирани текстове, проверени научни бази и синтетично генерирани доказателствени данни.</p>
+<h2>Анатомия на заплахата: Отравяне и автофагична деградация</h2>
+<p>Инженерният доклад на компанията очертава три критични уязвимости, възникнали от практиката на постоянно обхождане на интернет:</p>
+<ol>
+<li><strong>Злонамерени лингвистични капани:</strong> Киберпрестъпници и държавни субекти създават милиони динамични домейни, съдържащи невидими за човешкото око промпт инжекции, които карат моделите да запазват тайни уязвимости в базовите си слоеве.</li>
+<li><strong>Замърсяване със синтетичен шум:</strong> Огромното количество машинно генерирано съдържание в интернет води до явлението &quot;моделен срив&quot; (Model Collapse), при което изкуственият интелект започва да деградира, обучавайки се върху софтуерни халюцинации на своите предшественици.</li>
+<li><strong>Липса на авторски контрол:</strong> Правните сътресения и авторските искове правят неконтролираното теглене на отворени страници прекалено висок финансов и съдебен риск.</li>
+</ol>
+<p>В рамките на инициативите за <a href="/pages/ai-safety.html">безопасност на изкуствения интелект</a>, OpenAI въвежда строга политика на криптографски одит на всеки набор от данни, допускан в графичните клъстери.</p>
+<h2>Системни, макроикономически и архитектурни последици</h2>
+<p>Отказът на OpenAI от обучението на жив интернет има тектонични последици за цялата технологична екосистема. От архитектурна гледна точка този ход утвърждава принципа на <a href="/pages/sandboxing.html">софтуерна изолация (sandboxing)</a> още на ниво сурови данни. Граничните модели вече няма да бъдат пасивни отражения на текущото състояние на обществения уеб, а херметически затворени когнитивни двигатели, обучени върху проверени реалности.</p>
+<p>В макроикономически план стойността на качествените, човешки проверени данни нараства експоненциално. Издателските къщи, научните списания и корпоративните информационни масиви придобиват статут на стратегически енергийни ресурси. Безплатен достъп до качествено знание за трети страни практически спира да съществува.</p>
+<p>В същото време тази промяна задълбочава бариерата за навлизане на нови участници на пазара. Докато стартъпите исторически разчитаха на отворената мрежа за изграждане на базови модели, новите стандарти на OpenAI изискват милиардни бюджети за лицензиране на частни архиви и генериране на формални синтетични симулации. Интернет, някога свободна библиотека за AI, официално се превръща в токсична среда, от която най-напредналите системи трябва да бъдат изолирани.</p>
+<p><img src="/articles/2026/10/23/openai-ends-live-internet-training-significant-risks/infographic.png" alt="Инфографика: Ключови стълбове на новата стратегия на OpenAI за данните"><br><small>Четири ключови стълба на архитектурната изолация на данните и спирането на обучението на жив интернет в OpenAI.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>TechCrunch Newsroom. (2026-10-23). <em>OpenAI says it will no longer train its AI models on the live internet, citing &quot;significant risks&quot;</em>. TechCrunch AI Infrastructure. <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/">https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/</a></li>
+<li>OpenAI Frontier Safety Team. (2026-10-23). <em>Securing our frontier model training environment: Data sanitization and isolation standards</em>. OpenAI Research Index. <a href="https://openai.com/index/securing-our-frontier-model-training-environment/">https://openai.com/index/securing-our-frontier-model-training-environment/</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sandboxing.html">Изолирана среда за изпълнение (Sandboxing)</a><p>Изолираната среда (Sandboxing) е механизъм за сигурност, който ограничава правата на дадена софтуерна програма само до строго определени ресурси на оп...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/frontier-models.html">Гранични модели (Frontier Models)</a><p>Граничните модели (Frontier Models) са най-усъвършенстваните и мащабни системи за изкуствен интелект, които разширяват границите на изчислителните въз...</p></li><li><a href="/pages/data-poisoning.html">Отравяне на данни (Data Poisoning)</a><p>Отравянето на данни (Data Poisoning) е атака срещу веригата за доставки на изкуствен интелект, при която нападатели умишлено вмъкват манипулирани, фал...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

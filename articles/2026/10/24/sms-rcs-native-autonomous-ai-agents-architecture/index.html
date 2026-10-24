@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / Getty Images
+Интересът към изкуствения интелект в потребителския сектор преживява тиха революция, ориентирайки се към нов клас софтуерни решения: SMS и RCS агентите, които оп..."><title>Архитектура на SMS и RCS-базираните AI агенти: Автономност без инсталиране на приложения - Светни.ме</title><meta property="og:title" content="Архитектура на SMS и RCS-базираните AI агенти: Автономност без инсталиране на приложения - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / Getty Images
+Интересът към изкуствения интелект в потребителския сектор преживява тиха революция, ориентирайки се към нов клас софтуерни решения: SMS и RCS агентите, които оп..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/sms-rcs-native-autonomous-ai-agents-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/sms-rcs-native-autonomous-ai-agents-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Архитектура на SMS и RCS-базираните AI агенти: Автономност без инсталиране на приложения</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/sms-rcs-native-autonomous-ai-agents-architecture/hero.png" alt="Потребител комуникира с текстов асистент директно през стандартното приложение за съобщения"><br><small>Източник: TechCrunch / Getty Images</small></p>
+<p>Интересът към изкуствения интелект в потребителския сектор преживява тиха революция, ориентирайки се към нов клас софтуерни решения: <a href="/pages/sms-agents.html">SMS и RCS агентите</a>, които оперират напълно самостоятелно вътре в базовото приложение за съобщения на телефона на потребителя, без да изискват сваляне на специални приложения или създаване на нови акаунти [1]. Архитектурният обзор на водещите системи разкрива сложен инженерен конвейер, комбиниращ телекомуникационни шлюзове със сървърлес микроуслуги и дългосрочна контекстуална памет.</p>
+<p>Парадоксът на мобилния пазар е, че докато потребителите прекарват по-голямата част от времето си в чат приложения, бариерата за инсталиране на нови отделни AI програми остава изключително висока. Чрез директна интеграция с модерния протокол <a href="/pages/rcs-protocol.html">RCS (Rich Communication Services)</a> и класическите SMS канали, разработчиците на <a href="/pages/conversational-ai.html">диалогов AI (Conversational AI)</a> осигуряват мигновена достъпност за милиарди смартфони по целия свят.</p>
+<h2>Инженерен стек: От телеком събитие до изпълнение на инструмент</h2>
+<p>Предизвикателството при телекомуникационните протоколи е тяхната строга асинхронност и ниска толерантност към латентност:</p>
+<ul>
+<li><strong>Разделяне на входящия шлюз:</strong> Телекомуникационният доставчик изисква потвърждение за получаване на SMS за под половин секунда. <a href="/pages/serverless.html">Сървърлес (Serverless)</a> архитектурата незабавно записва събитието в опашка (SQS/Kafka) и освобождава връзката, докато езиковият модел генерира отговора във фонов режим.</li>
+<li><strong>Идентификация и персистентност по MSISDN:</strong> Телефонният номер служи като уникален криптографски ключ, към който се прикачва граф от данни за предпочитанията, календара и предишните поръчки на потребителя, съхранявани във високоскоростни векторни бази.</li>
+<li><strong>Интерактивни Rich Cards:</strong> При телефони с поддръжка на RCS агентът връща не просто сух текст, а визуални карусели от опции с бутони за потвърждение, резервация и транзакции с един клик.</li>
+</ul>
+<h2>Дългосрочни телекомуникационни и пазарни последици</h2>
+<p>Успехът на нативните текстови агенти бележи реабилитацията на мобилните оператори в битката за дигиталната стойност. В продължение на петнадесет години телекомите бяха сведени до ролята на „тъпи тръби“, докато технологичните платформи монополизираха магазина за приложения (App Store / Google Play). Чрез стандартизирането на RCS и предоставянето на интелигентни агентни услуги операторите отново стават централен портал за електронна търговия.</p>
+<p>За бизнеса това означава драматично съкращаване на разходите за привличане на клиенти (CAC). Вместо да харчат милиони за реклами, подканващи потребителите да инсталират поредното мобилно приложение, компаниите могат просто да предоставят телефонен номер, с който потребителят започва диалог мигновено. Този модел превръща SMS/RCS канала в най-ефективната среда за широко разпространение на <a href="/pages/autonomous-agents.html">автономни агенти</a> сред масовата аудитория.</p>
+<p><img src="/articles/2026/10/24/sms-rcs-native-autonomous-ai-agents-architecture/infographic.png" alt="Инфографика: Архитектура на SMS/RCS AI агентите"><br><small>Основни компоненти на комуникацията без клиентско приложение</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/">Here are the top AI agents that can live in your text messages – TechCrunch</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sms-agents.html">SMS и съобщителни AI агенти</a><p>SMS агентите предоставят достъп до изкуствен интелект през най-универсалния и достъпен канал за мобилна комуникация.</p></li><li><a href="/pages/serverless.html">Безсървърни изчисления (Serverless Computing)</a><p>Безсървърните изчисления (Serverless Computing) са облачен модел за изпълнение на код при поискване (FaaS), при който доставчикът динамично управлява ...</p></li><li><a href="/pages/rcs-protocol.html">RCS протокол (Rich Communication Services)</a><p>RCS (Rich Communication Services) е модерен телекомуникационен стандарт, надграждащ класическите SMS съобщения с мултимедийно съдържание, интерактивни...</p></li><li><a href="/pages/conversational-ai.html">Диалогов изкуствен интелект</a><p>Диалоговият изкуствен интелект еволюира от примитивни базирани на правила дървета към многомодални невронни агенти.</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

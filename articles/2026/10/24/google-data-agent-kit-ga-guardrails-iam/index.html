@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Google Cloud
+Корпоративното подразделение на Google Cloud обяви официалното пускане в обща наличност (General Availability, GA) на своя пакет Data Agent Kit – модерен набор от инс..."><title>Data Agent Kit на Google излезе в GA: Разделяне на защитните прегради между умения и IAM роли - Светни.ме</title><meta property="og:title" content="Data Agent Kit на Google излезе в GA: Разделяне на защитните прегради между умения и IAM роли - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Google Cloud
+Корпоративното подразделение на Google Cloud обяви официалното пускане в обща наличност (General Availability, GA) на своя пакет Data Agent Kit – модерен набор от инс..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/google-data-agent-kit-ga-guardrails-iam/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/google-data-agent-kit-ga-guardrails-iam/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Data Agent Kit на Google излезе в GA: Разделяне на защитните прегради между умения и IAM роли</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/google-data-agent-kit-ga-guardrails-iam/hero.png" alt="Архитектурна схема на новия софтуерен пакет Google Data Agent Kit за интеграция с корпоративни бази данни"><br><small>Източник: InfoQ / Google Cloud</small></p>
+<p>Корпоративното подразделение на <a href="/pages/google.html">Google Cloud</a> обяви официалното пускане в обща наличност (General Availability, GA) на своя пакет <a href="/pages/data-agent-kit.html">Data Agent Kit</a> – модерен набор от инструменти и сървъри по отворения стандарт <a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a>, създаден да реши един от най-трудните проблеми в корпоративния AI: осигуряването на сигурен достъп на автономни агенти до критични бази данни [1].</p>
+<p>Основната архитектурна иновация в Data Agent Kit е категоричното разграничаване между дефиницията на „уменията“ (skills) на агента и неговите права за достъп чрез <a href="/pages/iam.html">Identity and Access Management (IAM)</a>. В досегашните практики агентът често получаваше споделена връзка с широки привилегии, което носеше колосален риск от случайно изтриване на таблици или нерегламентирано извличане на конфиденциална финансова информация при халюцинация на модела.</p>
+<h2>Двойна защита: Как работят новите агентни предпазни прегради</h2>
+<p><a href="/pages/data-agent-kit.html">Data Agent Kit</a> въвежда модел на минимални привилегии чрез специализирани <a href="/pages/agent-guardrails.html">предпазни бариери за агенти (Agent Guardrails)</a>:</p>
+<ul>
+<li><strong>Стриктен семантичен шлюз:</strong> Агентът заявява абстрактно намерение (например „покажи приходите за тримесечието по региони“), което се валидира от MCP сървъра и се преобразува в параметризирана SQL заявка, елиминирайки възможността за SQL инжекция.</li>
+<li><strong>Временни делегирани токени:</strong> Вместо статичен сервизен акаунт, всяка транзакция се изпълнява с динамичен криптографски токен, издаден единствено за конкретната сесия и обвързан с самоличността на потребителя, инициирал заявката.</li>
+<li><strong>Автоматична маскировка на лични данни (PII):</strong> Всички резултати от BigQuery или Spanner преминават през слой за динамична анонимизация преди да бъдат върнати в контекстния прозорец на езиковия модел.</li>
+</ul>
+<h2>Дългосрочни корпоративни и индустриални последици</h2>
+<p>Пускането на Data Agent Kit в GA ознаменува края на експерименталния период за корпоративните агенти и началото на тяхната масова промишлена интеграция. Досега финансовите институции, здравеопазването и държавните агенции се въздържаха от широкомащабно внедряване на LLM асистенти върху своите данни именно поради липсата на строг криптографски и одитен контрол.</p>
+<p>Утвърждаването на стандарта MCP от технологичен гигант като Google циментира отворения протокол като универсалното есперанто за свързване на модели и корпоративни инструменти. Това ще маргинализира затворените патентовани рамки и ще даде възможност на организациите свободно да сменят доставчиците на базови модели, запазвайки непокътнати своята база данни, IAM политики и каталог от агентни умения.</p>
+<p><img src="/articles/2026/10/24/google-data-agent-kit-ga-guardrails-iam/infographic.png" alt="Инфографика: Архитектура на Google Data Agent Kit"><br><small>Разделение на отговорностите между умения и права за достъп</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/data-agent-kit-ga/">Google’s Data Agent Kit Hits GA, Splitting Agent Guardrails Between Skills and IAM – InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/iam.html">IAM</a><p>Identity and Access Management (IAM) или „Управление на идентичността и достъпа“ е рамка от политики и технологии, която гарантира, че правилните потр...</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/data-agent-kit.html">Data Agent Kit</a><p>Data Agent Kit е корпоративен софтуерен пакет от инструменти на Google за сигурна интеграция на AI агенти с корпоративни бази данни и аналитични платф...</p></li><li><a href="/pages/agent-guardrails.html">Предпазни рамки за AI агенти (Agent Guardrails)</a><p>Предпазните рамки за AI агенти са архитектурни и алгоритмични механизми, които ограничават поведението на автономните модели в рамките на предварителн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

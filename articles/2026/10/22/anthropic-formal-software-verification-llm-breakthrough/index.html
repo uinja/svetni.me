@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Anthropic Research / Systems Verification Team
+В нова фундаментална научна монография изследователският отдел на Anthropic демонстрира, че големите езикови модели от семейството Claude пр..."><title>Anthropic Research: Големите езикови модели правят формалната софтуерна верификация мащабируема - Светни.ме</title><meta property="og:title" content="Anthropic Research: Големите езикови модели правят формалната софтуерна верификация мащабируема - Светни.ме"><meta property="og:description" content="Източник: Anthropic Research / Systems Verification Team
+В нова фундаментална научна монография изследователският отдел на Anthropic демонстрира, че големите езикови модели от семейството Claude пр..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/anthropic-formal-software-verification-llm-breakthrough/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/anthropic-formal-software-verification-llm-breakthrough/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic Research: Големите езикови модели правят формалната софтуерна верификация мащабируема</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/anthropic-formal-software-verification-llm-breakthrough/hero.png" alt="Диаграма на формално доказателство и интерактивен синтез на софтуерни спецификации"><br><small>Източник: Anthropic Research / Systems Verification Team</small></p>
+<p>В нова фундаментална научна монография изследователският отдел на <a href="/pages/anthropic.html">Anthropic</a> демонстрира, че големите езикови модели от семейството <a href="/pages/claude-ai.html">Claude</a> правят <a href="/pages/formal-verification.html">формалната верификация</a> на софтуер икономически и практически приложима в масов индустриален мащаб [1]. Исторически математическото доказване на програмна коректност бе ограничено до свръхкритични проекти с огромен бюджет (като ракети на НАСА или ядрени реактори) поради колосалния човешки труд за ръчно разписване на логически инварианти и леми.</p>
+<p>Чрез комбиниране на Claude с интерактивни инструменти за автоматично доказване на теореми (SMT Solvers като Z3) и верификационни езици (Dafny, Lean, Coq), екипът успява да автоматизира най-тежката част от процеса – формулирането на спецификациите.</p>
+<h2>Разрешаване на парадокса на спецификацията</h2>
+<p>Най-голямата пречка пред формалната верификация никога не е била компютърната мощност за проверка на формулите, а липсата на инженери, способни да преведат сложни изисквания в математически строг код. Ако софтуерната спецификация е непълна, верификаторът не може да докаже липсата на дефекти.</p>
+<p>Изследването на Anthropic описва затворен евристичен конвейер:</p>
+<ol>
+<li><strong>Синтез на инварианти:</strong> Моделът анализира изходния код и генерира хипотези за циклични инварианти и гранични условия.</li>
+<li><strong>Верификация чрез SMT прувър:</strong> Външен компилатор (Dafny) проверява математическата коректност на доказателството.</li>
+<li><strong>Итеративна рефлексия:</strong> Ако прувърът открие контрапример, грешката се подава обратно на модела като нов контекст, който коригира логиката си до постигане на безупречно доказателство.</li>
+</ol>
+<p>Този подход повишава <a href="/pages/software-security.html">софтуерната сигурност</a> на безпрецедентно ниво, гарантирайки нулево наличие на препълване на буфера, състезания за памет (race conditions) или невалидни типови конверсии.</p>
+<h2>Дългосрочни последици за софтуерното инженерство</h2>
+<p>Интеграцията на LLM във формалната верификация бележи залеза на традиционното стохастично тестване (Unit Testing, Fuzzing). В бъдеще софтуерните инженери няма да пишат десетки примерни тестови сценарии, надявайки се да уловят скрити грешки – те ще дефинират високостепенни математически контракти, а кодовите агенти ще синтезират едновременно кода и неговото формално доказателство.</p>
+<p>Този метод обещава да елиминира цели класове уязвимости в операционните ядра, банковите клирингови системи и криптографските библиотеки. Софтуерът на XXI век постепенно преминава от „вероятно работещ“ към „математически доказано безупречен“.</p>
+<p><img src="/articles/2026/10/22/anthropic-formal-software-verification-llm-breakthrough/infographic.png" alt="Инфографика: Четири ключови компонента на мащабируемата формална верификация"><br><small>Архитектура на затворения цикъл между езиков модел и автоматичен математически прувър.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>Anthropic Research. (2026-10-22). <em>LLMs are making formal software verification feasible at a much larger scale</em>. Anthropic Frontier Systems Group. <a href="https://www.anthropic.com/research/formal-verification">https://www.anthropic.com/research/formal-verification</a></li>
+<li>ACM SIGPLAN Conference on Programming Language Design. (2026-10-22). <em>Automated Invariant Generation in Dafny via Recursive Frontier Reasoners</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/software-security.html">Софтуерна сигурност (Software Security)</a><p>Софтуерната сигурност обхваща инженерните практики за проектиране, кодиране и валидиране на софтуерни приложения така, че те да останат защитени от не...</p></li><li><a href="/pages/formal-verification.html">Формална верификация (Formal Verification)</a><p>Формалната верификация (Formal Verification) е математически метод за строго доказване на коректността на алгоритми, софтуерни програми или хардуерни ...</p></li><li><a href="/pages/claude-ai.html">Claude AI</a><p>Claude AI е водещото семейство от фундаментални езикови и мултимодални модели, разработени от изследователската компания Anthropic с фокус върху безоп...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

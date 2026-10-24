@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / Microsoft Security
+В отговор на експлозията от генеративни кибератаки, имитиращи висши корпоративни мениджъри, Microsoft обяви внедряването на изцяло нов конвейер за ко..."><title>Microsoft внедрява контекстуален невронен анализ в Teams за разпознаване на фишинг в реално време - Светни.ме</title><meta property="og:title" content="Microsoft внедрява контекстуален невронен анализ в Teams за разпознаване на фишинг в реално време - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / Microsoft Security
+В отговор на експлозията от генеративни кибератаки, имитиращи висши корпоративни мениджъри, Microsoft обяви внедряването на изцяло нов конвейер за ко..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/23/microsoft-teams-context-aware-ai-phishing-detection-pipeline/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/23/microsoft-teams-context-aware-ai-phishing-detection-pipeline/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Microsoft внедрява контекстуален невронен анализ в Teams за разпознаване на фишинг в реално време</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 октомври 2026 г.</p><div><p><img src="/articles/2026/10/23/microsoft-teams-context-aware-ai-phishing-detection-pipeline/hero.png" alt="Интерфейс на Microsoft Teams с предупредителен банер за фишинг атака"><br><small>Източник: BleepingComputer / Microsoft Security</small></p>
+<p>В отговор на експлозията от генеративни кибератаки, имитиращи висши корпоративни мениджъри, <a href="/pages/microsoft.html">Microsoft</a> обяви внедряването на изцяло нов конвейер за <a href="/pages/phishing-detection.html">контекстуално разпознаване на фишинг (AI Phishing Detection)</a> в платформата за колаборация Microsoft Teams [1]. Системата, която ще бъде активирана за всички корпоративни абонати през ноември 2026 г., използва специализирани малки езикови модели (SLM) и анализ на социалните графи за откриване на опити за измама още преди съобщението да бъде прочетено от потребителя.</p>
+<p>Нововъведението бележи окончателния преход от статични филтри за забранени уеб адреси към дълбоко поведенческо и лингвистично профилиране на входящата комуникация в реално време.</p>
+<h2>Как работи поведенческата защита: Отвъд класическите линкове</h2>
+<p>Новата защитна архитектура на Microsoft се фокусира върху най-коварния съвременен вектор — фишинг без зловреден софтуер (pure social engineering):</p>
+<ul>
+<li><strong>Сравнение със стилистичния отпечатък:</strong> Когато от акаунта на финансов директор постъпи съобщение с нареждане за спешен паричен превод, моделът сравнява синтаксиса, пунктуацията и фразеологията с историческия корпус на лицето. Ако стилът съвпада с характерните особености на генеративен бот, се активира предупреждение.</li>
+<li><strong>Анализ на спешността и психологическия натиск:</strong> Невронната мрежа сканира текста за техники на социално инженерство — изкуствено създаване на паника, заплахи с дисциплинарни наказания или искане за заобикаляне на установените процедури.</li>
+<li><strong>Оценка на социалния граф:</strong> Проверява се дали двамата участници са общували някога в миналото, дали се намират в един и същи организационен отдел и дали е нормално подобно нареждане да се дава през бърз чат.</li>
+</ul>
+<p>Всичко това се извършва в рамките на под 40 милисекунди в защитените анклави на облака Azure.</p>
+<h2>Системни и пазарни последици за киберзащитата</h2>
+<p>Интеграцията на контекстуален AI директно в комуникационните инструменти на Microsoft променя конкурентната динамика в сектора на корпоративната сигурност. Специализирани компании за имейл защита като Proofpoint и Mimecast ще бъдат поставени под огромен натиск, тъй като вградените възможности на операционната система и офис пакета стават достатъчно интелигентни, за да обезсмислят външните филтри.</p>
+<p>В същото време обаче новата функционалност повдига деликатни въпроси относно защитата на личното пространство на служителите. Непрекъснатото семантично сканиране на всяко чат съобщение от невронни алгоритми поставя границата между сигурност и масово следене на работното място под сериозно изпитание, особено в рамките на Европейския съюз. Microsoft ще трябва да гарантира абсолютна прозрачност, доказвайки, че събраните лингвистични телеметрии не се използват за оценка на лоялността или производителността на персонала, а единствено за предотвратяване на дигитални измами.</p>
+<p><img src="/articles/2026/10/23/microsoft-teams-context-aware-ai-phishing-detection-pipeline/infographic.png" alt="Инфографика: Архитектура на фишинг защитата в Microsoft Teams"><br><small>Четири ключови стълба на новата невронна система за фишинг детекция в Microsoft Teams.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>BleepingComputer Enterprise News. (2026-10-23). <em>Microsoft Teams to get AI-powered, context-aware phishing detection starting early November</em>. BleepingComputer Collaboration Defense. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/</a></li>
+<li>Microsoft Security Operations Center. (2026-10-23). <em>Contextual Graph Embeddings and Stylometric Verification for Real-Time Threat Interception</em>. Redmond Technical Whitepapers.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/phishing-detection.html">Контекстуално разпознаване на фишинг (AI Phishing Detection)</a><p>Контекстуалното разпознаване на фишинг (AI Phishing Detection) представлява киберзащитна технология от следващо поколение, която използва големи езико...</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

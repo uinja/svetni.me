@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Anthropic Product Showcase
+Изследователската компания Anthropic направи решаващ ход в битката за пазара на автономни лични асистенти, представяйки официално своето ново деск..."><title>Anthropic представи Claude Duet: Постоянно активен агент за фонова автономна работа - Светни.ме</title><meta property="og:title" content="Anthropic представи Claude Duet: Постоянно активен агент за фонова автономна работа - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Anthropic Product Showcase
+Изследователската компания Anthropic направи решаващ ход в битката за пазара на автономни лични асистенти, представяйки официално своето ново деск..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/anthropic-claude-duet-always-on-proactive-agent/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/anthropic-claude-duet-always-on-proactive-agent/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic представи Claude Duet: Постоянно активен агент за фонова автономна работа</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/anthropic-claude-duet-always-on-proactive-agent/hero.png" alt="Интерфейс на Claude Duet, показващ фонови задачи и активни работни проекти"><br><small>Източник: The Decoder / Anthropic Product Showcase</small></p>
+<p>Изследователската компания <a href="/pages/anthropic.html">Anthropic</a> направи решаващ ход в битката за пазара на автономни лични асистенти, представяйки официално своето ново десктоп и облачно приложение <a href="/pages/claude-duet.html">Claude Duet</a> [1]. Задвижван от най-способния флагмански модел на лабораторията – <a href="/pages/claude-opus-5-5.html">Claude Opus 5.5</a>, Claude Duet е проектиран да бъде постоянно активен сътрудник, който не просто чака въпроси в чат прозорец, а проактивно управлява проекти във фонов режим, дори когато компютърът на потребителя е изключен.</p>
+<p>Това бележи категоричен преход от реактивен изкуствен интелект към истински <a href="/pages/proactive-ai.html">проактивен AI</a>, влизайки в директна конкуренция с подобни предложения от Meta (Muse), xAI (Grok Bot) и OpenAI (Dots).</p>
+<h2>Как работи концепцията за фонова автономия?</h2>
+<p>Разликата между стандартния езиков модел и Claude Duet се състои в неговата архитектура за непрекъснат цикъл на наблюдение и действие (Perception-Action Loop). Агентът се свързва към работните инструменти на потребителя чрез отворения протокол Model Context Protocol (MCP):</p>
+<ul>
+<li><strong>Мониторинг на потока от събития:</strong> Duet наблюдава разговорите в екипния Slack канал, входящите имейли и новите задачи в Jira, без да прекъсва потребителя за дреболии.</li>
+<li><strong>Подготовка на контекст:</strong> Когато шефът изпрати съобщение за спешен анализ на тримесечните продажби, Duet веднага извлича нужните таблици от Google Drive, генерира графики и подготвя готова чернова на отговора, очакваща единствено финално одобрение.</li>
+<li><strong>Офлайн изпълнение на дълги задачи:</strong> Потребителят може да затвори лаптопа и да си легне, докато Duet продължава да извършва нощна компилация, да пуска тестове и да пренаписва документация в GitHub хранилището.</li>
+</ul>
+<h2>Проблемът с доверието и контрола</h2>
+<p>С преминаването към постоянно активни агенти на дневен ред излиза критичният въпрос за границите на автономията. Ако на софтуерен агент бъде дадено правото да изпраща имейли или да коригира код сам, една халюцинация може да нанесе сериозни финансови или репутационни щети.</p>
+<p>Anthropic адресира това предизвикателство чрез концепцията за „гранулирани спирачки“ (Granular Approval Gates). Потребителят дефинира прагове на риск: рутинните действия (като сортиране на файлове или писане на чернови) се изпълняват автоматично, докато действия с външно въздействие (изпращане на имейл извън организацията или промяна на бази данни) изискват изрично потвърждение чрез нотификация.</p>
+<p>Този хибриден модел осигурява спокойствие за корпоративните потребители и чертае пътя напред за бъдещето на дигиталния труд.</p>
+<p><img src="/articles/2026/10/22/anthropic-claude-duet-always-on-proactive-agent/infographic.png" alt="Инфографика: Четири архитектурни стълба на Claude Duet"><br><small>Основни модули и интеграции на постоянно активния проактивен агент на Anthropic.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>The Decoder AI &amp; Society. (2026-10-22). <em>Anthropic takes on Grok Bot, Meta&#39;s Muse, and OpenAI&#39;s Dots with its always-on agent &quot;Claude Duet&quot;</em>. The Decoder Products. <a href="https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet/">https://the-decoder.com/anthropic-takes-on-grok-bot-metas-muse-and-openais-dots-with-its-always-on-agent-claude-duet/</a></li>
+<li>Anthropic Product Announcement. (2026-10-22). <em>Introducing Claude Duet: Always-On Autonomous Workflows Built on Claude Opus 5.5</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/proactive-ai.html">Проактивен изкуствен интелект (Proactive AI)</a><p>Проактивният изкуствен интелект представлява парадигма в разработката на AI асистенти, при която системата не изчаква потребителска команда, а самосто...</p></li><li><a href="/pages/claude-duet.html">Claude Duet</a><p>Claude Duet е специализирано софтуерно приложение и автономен агент на Anthropic, базиран на Claude Opus 5.</p></li><li><a href="/pages/claude-opus-5-5.html">Claude Opus 5.5</a><p>Claude Opus 5.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

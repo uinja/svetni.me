@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Docker Engineering Blog
+В критична стъпка към стандартизирането на софтуерните тестове за изкуствен интелект създателите на отворения фреймуърк Harbor обявиха пълна интеграция с D..."><title>Harbor и Docker Sandboxes осигуряват възпроизводими бенчмаркове за AI агенти в изолирани микро-VM - Светни.ме</title><meta property="og:title" content="Harbor и Docker Sandboxes осигуряват възпроизводими бенчмаркове за AI агенти в изолирани микро-VM - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Docker Engineering Blog
+В критична стъпка към стандартизирането на софтуерните тестове за изкуствен интелект създателите на отворения фреймуърк Harbor обявиха пълна интеграция с D..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/harbor-docker-sandboxes-reproducible-agent-evals/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/harbor-docker-sandboxes-reproducible-agent-evals/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Harbor и Docker Sandboxes осигуряват възпроизводими бенчмаркове за AI агенти в изолирани микро-VM</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/harbor-docker-sandboxes-reproducible-agent-evals/hero.png" alt="Илюстрация на контейнерна архитектура за тестване на AI агенти в Docker Sandboxes"><br><small>Източник: InfoQ / Docker Engineering Blog</small></p>
+<p>В критична стъпка към стандартизирането на софтуерните тестове за изкуствен интелект създателите на отворения фреймуърк Harbor обявиха пълна интеграция с Docker Sandboxes [1]. Това технологично партньорство решава един от най-хроничните проблеми в сектора на <a href="/pages/ai-evaluations.html">AI оценките и бенчмарковете</a>: липсата на херметичност и възпроизводимост при тестване на агенти по комплексни задачи за кодиране и системна администрация.</p>
+<p>Чрез използването на <a href="/pages/docker.html">Docker</a> Sandboxes всяка отделна задача от бенчмаркове като SWE-bench или WebArena се изпълнява в независима <a href="/pages/microvms.html">микровиртуална машина</a>, която се инициализира за секунди и се изтрива напълно след края на теста.</p>
+<h2>Край на замърсяването на тестовата среда</h2>
+<p>Когато автономен агент тества своите умения по софтуерен инженеринг, той създава файлове, инсталира пакети чрез <code>pip</code> или <code>npm</code>, променя мрежови портове и стартира фонови процеси. При традиционното последователно тестване в общ контейнер тези странични ефекти замърсяват средата, водейки до грешни заключения при следващите тестове:</p>
+<ul>
+<li><strong>Фалшиво положителни резултати:</strong> Агентът успява да реши задача 5 само защото задача 4 случайно е инсталирала необходима библиотека.</li>
+<li><strong>Скрити дефекти:</strong> Предишен процес заема порт 8080, водейки до провал на напълно коректен код.</li>
+<li><strong>Риск от разрушаване на средата:</strong> Неопитен или халюциниращ модел може да изпълни деструктивна команда (<code>rm -rf /</code>), сривайки целия тестов сървър.</li>
+</ul>
+<p>Новата архитектура на Harbor гарантира, че всяка оценка започва от безупречно дефиниран базов образ (Base Image). Всички мрежови повиквания към външния интернет могат да бъдат симулирани детерминистично, което прави <a href="/pages/benchmarking.html">бенчмарк оценките</a> напълно независими от външни фактори.</p>
+<h2>Институционално значение за доверието в AI бенчмарковете</h2>
+<p>Проблемът с манипулираните или невъзпроизводими резултати от тестове е широко разпространен сред маркетинговите съобщения на големите технологични лаборатории. Интеграцията между Harbor и Docker създава независим, проверим стандарт, който всеки изследовател може да стартира локално на лаптопа си и да провери дали нов модел наистина превъзхожда предшествениците си.</p>
+<p>Тази стандартизация е ключова и за корпоративното внедряване: преди дадена компания да повери кодовата си база на нов агент, нейните ИТ екипи могат да пуснат Harbor в рамките на вътрешния си CI/CD конвейер и да измерят точното ниво на реална надеждност в защитена пясъчна среда.</p>
+<p><img src="/articles/2026/10/22/harbor-docker-sandboxes-reproducible-agent-evals/infographic.png" alt="Инфографика: Четири ключови стълба на възпроизводимото тестване с Harbor и Docker"><br><small>Архитектура на изолираните микро-VM тестови среди за оценка на автономни софтуерни агенти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ Software Engineering &amp; DevOps. (2026-10-22). <em>Harbor Adds Docker Sandboxes to Run Reproducible AI Agent Evals in Isolated MicroVMs</em>. InfoQ News. <a href="https://www.infoq.com/news/2026/10/ai-agents-harbor-docker/">https://www.infoq.com/news/2026/10/ai-agents-harbor-docker/</a></li>
+<li>Docker Engineering Technical Bulletin. (2026-10-22). <em>Architecting Ephemeral MicroVM Sandboxes for Deterministic Autonomous Agent Benchmarking</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microvms.html">Микро-виртуални машини (MicroVMs)</a><p>Микро-виртуалните машини (MicroVMs) са минималистични виртуални машини (като Firecracker или Cloud-Hypervisor), стартиращи се за броени милисекунди с ...</p></li><li><a href="/pages/docker.html">Docker</a><p>Docker е водеща платформа за контейнеризация с отворен код, която позволява на разработчиците да пакетират, доставят и стартират приложения в изолиран...</p></li><li><a href="/pages/benchmarking.html">Бенчмаркинг на изкуствен интелект (AI Benchmarking)</a><p>Бенчмаркингът на изкуствен интелект (AI Benchmarking) е стандартизиран процес за измерване, сравнение и количествена оценка на точността, скоростта и ...</p></li><li><a href="/pages/ai-evaluations.html">AI оценки и бенчмаркове (AI Evaluations)</a><p>AI оценките (AI Evals) са систематични процеси, методологии и софтуерни платформи за количествено и качествено измерване на способностите, точността, ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

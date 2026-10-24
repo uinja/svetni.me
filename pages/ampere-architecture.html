@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Nvidia Ampere е микроархитектура за графични процесори (GPU), представена от Nvidia през 2020 г., захранваща видеокартите от сериите GeForce RTX 3000 и центровете за данни с ускорителите A100. Архи..."><title>Nvidia Ampere архитектура - Светни.ме</title><meta property="og:title" content="Nvidia Ampere архитектура - Светни.ме"><meta property="og:description" content="Nvidia Ampere е микроархитектура за графични процесори (GPU), представена от Nvidia през 2020 г., захранваща видеокартите от сериите GeForce RTX 3000 и центровете за данни с ускорителите A100. Архи..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/ampere-architecture.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Nvidia Ampere архитектура</h1><section class="content"><p>Nvidia Ampere е микроархитектура за графични процесори (GPU), представена от Nvidia през 2020 г., захранваща видеокартите от сериите GeForce RTX 3000 и центровете за данни с ускорителите A100. Архитектурата въвежда второ поколение RT ядра и трето поколение тензорни ядра с хардуерна поддръжка за BF16 и TF32 формати на изчисления.</p>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/10/24/gpu-unlock-nvidia-rtx-3000-fp-bf16-throughput/">GPU-Unlock: Премахване на изкуствените лимити за FP/BF16 инструкции в графичните карти Nvidia RTX 3000</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/us-department-of-commerce.html">Министерство на търговията на САЩ</a></li><li><a href="/pages/iag.html">Insurance Australia Group (IAG)</a></li><li><a href="/pages/fuli-luo.html">Фули Луо</a></li><li><a href="/pages/crewai.html">CrewAI</a></li><li><a href="/pages/amazon-bedrock-agentcore.html">Amazon Bedrock AgentCore</a></li><li><a href="/pages/ai-policy.html">Политика за изкуствен интелект (AI Policy)</a></li><li><a href="/pages/howard-lutnick.html">Хауърд Лутник</a></li><li><a href="/pages/bun.html">Bun</a></li><li><a href="/pages/ajeya-cotra.html">Аджейя Котра (Ajeya Cotra)</a></li><li><a href="/pages/heterogeneous-computing.html">Хетерогенни изчисления (Heterogeneous Computing)</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

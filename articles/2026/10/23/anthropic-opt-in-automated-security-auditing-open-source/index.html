@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Anthropic Security Initiative
+В мащабен жест към глобалната технологична общност, лабораторията за изкуствен интелект Anthropic обяви старта на програма за безплатен, автономен од..."><title>Anthropic пуска безплатен автономен скенер за сигурност на критични проекти с отворен код - Светни.ме</title><meta property="og:title" content="Anthropic пуска безплатен автономен скенер за сигурност на критични проекти с отворен код - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Anthropic Security Initiative
+В мащабен жест към глобалната технологична общност, лабораторията за изкуствен интелект Anthropic обяви старта на програма за безплатен, автономен од..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/23/anthropic-opt-in-automated-security-auditing-open-source/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/23/anthropic-opt-in-automated-security-auditing-open-source/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic пуска безплатен автономен скенер за сигурност на критични проекти с отворен код</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 октомври 2026 г.</p><div><p><img src="/articles/2026/10/23/anthropic-opt-in-automated-security-auditing-open-source/hero.png" alt="Илюстрация на автономен софтуерен одит и проверка на програмен код"><br><small>Източник: InfoQ / Anthropic Security Initiative</small></p>
+<p>В мащабен жест към глобалната технологична общност, лабораторията за изкуствен интелект <a href="/pages/anthropic.html">Anthropic</a> обяви старта на програма за безплатен, автономен одит на <a href="/pages/open-source-security.html">сигурността на софтуера с отворен код (Open-Source Security)</a> [1]. Инициативата предоставя на поддържащите ключови публични проекти (maintainers) достъп до специализирана версия на Claude, фино настроена за откриване на уязвими архитектурни конструкции в езици за системно програмиране като C, C++, Rust и Go.</p>
+<p>Програмата действа на принципа на доброволно включване (opt-in) и цели да защити гръбнака на глобалната дигитална икономика — от ядрото на Linux до криптографските библиотеки — от сложни субтилни атаки и неволни грешки в паметта.</p>
+<h2>От статичен анализ към семантична формална верификация</h2>
+<p>Традиционните скенери за уязвимости (SAST) страдат от два вродени дефекта: заливат разработчиците с хиляди фалшиво положителни сигнали или пропускат сложни логически дефекти, възникващи при взаимодействието на множество модули. Инструментът на Anthropic променя тази парадигма:</p>
+<ul>
+<li><strong>Семантично разбиране на архитектурата:</strong> Моделът не просто търси познати текстови шаблони, а конструира цялостен граф на изпълнението, проследявайки потока на данните от мрежовия сокет до регистрите на процесора.</li>
+<li><strong>Генериране на математически доказателства:</strong> Чрез интеграция с методи за <a href="/pages/formal-verification.html">формална софтуерна верификация</a>, Claude генерира формални тестове за валидация (Proof-of-Concept), доказващи наличието на бъг, и паралелно предлага коригиран код, който не нарушава съвместимостта.</li>
+<li><strong>Пълна изолация на кода:</strong> В съответствие с най-високите стандарти за поверителност, анализираният код не се запазва на сървърите и не се използва за обучение на следващи поколения модели.</li>
+</ul>
+<p>Тази инициатива е ключова за дългосрочната <a href="/pages/ai-safety.html">безопасност на изкуствения интелект</a>.</p>
+<h2>Стратегически и макроикономически последици</h2>
+<p>Значението на този ход не може да бъде надценено. Катастрофални инциденти от миналото, като уязвимостите Heartbleed, Log4Shell или опитът за саботаж на XZ Utils, показаха колко крехка е дигиталната цивилизация, разчитаща на библиотеки с отворен код, поддържани доброволно от шепа претоварени ентусиасти. Предоставяйки безплатен автономен AI одитор с възможности на водещ експерт по сигурността, Anthropic премахва това структурно неравенство.</p>
+<p>В геополитически план инициативата укрепва защитата на западния софтуерен стек срещу финансирани от държави хакерски групи, които инвестират милиони в автоматизирано търсене наゼロ-day пробиви. За самата компания Anthropic това е блестящ стратегически ход, който циментира репутацията ѝ на лидер в етичния изкуствен интелект и създава огромен резервоар от доброжелателност сред глобалната общност на разработчиците точно преди планираното първично публично предлагане на борсата.</p>
+<p><img src="/articles/2026/10/23/anthropic-opt-in-automated-security-auditing-open-source/infographic.png" alt="Инфографика: Структура на безплатната програма на Anthropic за одит на отворен код"><br><small>Четири ключови стълба на инициативата на Anthropic за укрепване на софтуера с отворен код.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ Software Architecture &amp; Security. (2026-10-23). <em>Anthropic Adds Opt-In Security Scanning for Critical Open-Source Projects</em>. InfoQ Enterprise Engineering. <a href="https://www.infoq.com/news/2026/10/anthropic-oss-security-scanner/">https://www.infoq.com/news/2026/10/anthropic-oss-security-scanner/</a></li>
+<li>Open Source Security Foundation (OpenSSF). (2026-10-23). <em>Automating Vulnerability Discovery in Critical Infrastructure: The Role of Frontier Model Code Evaluators</em>. OpenSSF Policy Reports.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source-security.html">Сигурност на софтуера с отворен код (Open-Source Security)</a><p>Сигурността на софтуера с отворен код (Open-Source Security) обхваща практиките, автоматизираните инструменти и институционалните процеси за откриване...</p></li><li><a href="/pages/formal-verification.html">Формална верификация (Formal Verification)</a><p>Формалната верификация (Formal Verification) е математически метод за строго доказване на коректността на алгоритми, софтуерни програми или хардуерни ...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

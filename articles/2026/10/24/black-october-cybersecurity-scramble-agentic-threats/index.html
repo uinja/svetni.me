@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Business Insider / Getty Images
+Светът на киберсигурността преживява един от най-бурните си периоди в историята – вече неофициално наричан от специалистите „Черният октомври“, след като р..."><title>„Черният октомври“ на киберсигурността: Как критичните PHP уязвимости отприщиха автономен хакерски AI - Светни.ме</title><meta property="og:title" content="„Черният октомври“ на киберсигурността: Как критичните PHP уязвимости отприщиха автономен хакерски AI - Светни.ме"><meta property="og:description" content="Източник: Business Insider / Getty Images
+Светът на киберсигурността преживява един от най-бурните си периоди в историята – вече неофициално наричан от специалистите „Черният октомври“, след като р..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/black-october-cybersecurity-scramble-agentic-threats/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/black-october-cybersecurity-scramble-agentic-threats/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>„Черният октомври“ на киберсигурността: Как критичните PHP уязвимости отприщиха автономен хакерски AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/black-october-cybersecurity-scramble-agentic-threats/hero.png" alt="Кибероператор следи автоматизирани атаки и защитни защитни стени в реално време"><br><small>Източник: Business Insider / Getty Images</small></p>
+<p>Светът на <a href="/pages/cybersecurity.html">киберсигурността</a> преживява един от най-бурните си периоди в историята – вече неофициално наричан от специалистите „Черният октомври“, след като разкриването на две критични уязвимости от тип <a href="/pages/zero-day.html">нулев ден (zero-day)</a> в ядрото на <a href="/pages/php.html">PHP</a> бе посрещнато от масирана, безпрецедентно координирана вълна от експлойти, задвижвани от <a href="/pages/autonomous-agents.html">автономни AI агенти</a> [1]. Времето между публичното оповестяване на дефекта и първите милиони сканирания на глобалната мрежа се срина до броени минути, поставяйки на колене корпоративните екипи за сигурност.</p>
+<p>Анализатори отбелязват, че събитията от октомври 2026 г. бележат преломен момент: това е първият път, в който нападателите използват езикови модели и мултиагентни пайплайни не просто за генериране на фишинг писма, а за автономно реконструиране на уязвимия машинен код, синтез на динамично мутиращи експлойти и заобикаляне на уеб защитните стени (WAF) без никаква човешка намеса.</p>
+<h2>Как автономните нападателни агенти промениха правилата на играта</h2>
+<p>Качественият скок в агресивността на атаките разкри фундаментални слабости в традиционната <a href="/pages/agentic-security.html">сигурност на агентните системи</a>:</p>
+<ul>
+<li><strong>Синтез на полиморфен код:</strong> Вместо статични сигнатури, нападателният AI пренаписва битовите последователности на експлойта за всеки отделен целеви IP адрес, правейки стандартните антивирусни бази безполезни.</li>
+<li><strong>Експлоатация на контекста на целевия сървър:</strong> Агентът анализира типа на операционната система, версията на уеб сървъра (Nginx/Apache) и инсталираните модули, след което напасва атаката директно към откритата конфигурация.</li>
+<li><strong>Едновременен удар по милиони цели:</strong> Благодарение на евтиния достъп до модели за кодене, киберпрестъпните групи пуснаха хиляди паралелни инстанции, които успяха да компрометират стотици хиляди бази данни за една нощ.</li>
+</ul>
+<h2>Дългосрочни системни и геополитически последици</h2>
+<p>„Черният октомври“ слага окончателен край на илюзията, че човешки оператори могат да защитят глобалната интернет инфраструктура чрез ръчно прилагане на пачове и дежурства на смени. Асиметрията между нападателя и защитника достигна критични нива: нападателят има нужда само от една непоправена машина, докато защитникът трябва да гарантира сигурността на хиляди сървъри едновременно срещу алгоритми, които не спят и действат с микросекундна реакция.</p>
+<p>Единственият възможен отговор е преходът към изцяло автономен защитен изкуствен интелект. Компаниите ще бъдат принудени да поверят откриването, изолирането и пачването на уязвимости на вътрешни агентни системи, притежаващи права за автоматична модификация на системни файлове и конфигуриране на защитни стени. Тази надпревара във въоръжаването между нападателен и отбранителен AI обаче ще превърне глобалната мрежа в постоянно бойно поле, където всяка грешка на защитния алгоритъм може да доведе до спиране на критични услуги.</p>
+<p><img src="/articles/2026/10/24/black-october-cybersecurity-scramble-agentic-threats/infographic.png" alt="Инфографика: Черният октомври на киберсигурността"><br><small>Автономно експлоатиране на критични PHP уязвимости от ново поколение</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.businessinsider.com/black-october-php-vulnerability-cybersecurity-ai-threat-2026-10">Inside the cyber flaw scramble that brought the AI threat to life – Business Insider</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-day.html">Нулев ден (Zero-day)</a><p>„Нулев ден“ (zero-day) е уязвимост в софтуера, която е неизвестна на неговия разработчик или за която все още не е налично решение (patch).</p></li><li><a href="/pages/php.html">PHP</a><p>PHP е един от най-широко разпространените езици за уеб програмиране на сървърната страна, захранващ десетки милиони сайтове и платформи за управление ...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/autonomous-agents.html">Автономни агенти (Autonomous Agents)</a><p>Автономните агенти са изчислителни и роботизирани системи с изкуствен интелект, проектирани самостоятелно да възприемат заобикалящата среда, да декомп...</p></li><li><a href="/pages/agentic-security.html">Сигурност на автономни агенти (Agentic Security)</a><p>Сигурността на автономните агенти е специализирано направление в киберсигурността, фокусирано върху защитата и контрола на AI агенти с достъп до инстр...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

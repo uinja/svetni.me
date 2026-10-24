@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Unsplash / Nicolas J Leclercq
+Изследовател по сигурност с псевдоним @log4j постигна пълен root контрол върху най-новото поколение умни телевизори на Samsung, базирани на операционната сис..."><title>Хакер получи root достъп до Samsung Smart TV и разкри постоянен микрофонен запис и блокиран OpenAI ключ - Светни.ме</title><meta property="og:title" content="Хакер получи root достъп до Samsung Smart TV и разкри постоянен микрофонен запис и блокиран OpenAI ключ - Светни.ме"><meta property="og:description" content="Източник: Unsplash / Nicolas J Leclercq
+Изследовател по сигурност с псевдоним @log4j постигна пълен root контрол върху най-новото поколение умни телевизори на Samsung, базирани на операционната сис..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/samsung-smart-tv-ai-telemetry-openai-suspension/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/samsung-smart-tv-ai-telemetry-openai-suspension/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Хакер получи root достъп до Samsung Smart TV и разкри постоянен микрофонен запис и блокиран OpenAI ключ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/samsung-smart-tv-ai-telemetry-openai-suspension/hero.png" alt="Модерен смарт телевизор в хол – потребителското устройство като център за събиране на телеметрия"><br><small>Източник: Unsplash / Nicolas J Leclercq</small></p>
+<p>Изследовател по сигурност с псевдоним @log4j постигна пълен root контрол върху най-новото поколение умни телевизори на <a href="/pages/samsung.html">Samsung</a>, базирани на операционната система <a href="/pages/tizen.html">Tizen OS</a>, и публикува сензационни разкрития за системната архитектура на вградения гласов асистент [1]. Анализът на фърмуера показа, че микрофоните на телевизорите поддържат непрекъснат аудио запис, а системните демони препращат аудио сегменти директно към облачната инфраструктура на <a href="/pages/openai.html">OpenAI</a> чрез твърдо кодиран (hardcoded) главен корпоративен API ключ.</p>
+<p>Скандалът придоби драматичен обрат само няколко часа след изтичането на ключа онлайн. След като ентусиасти започнаха масово да го използват за безплатни заявки към GPT модели, <a href="/pages/openai.html">OpenAI</a> автоматично замрази акаунта поради аномално натоварване и нарушение на условията за ползване. Това доведе до моментален глобален колапс на гласовото управление и интелигентните функции на милиони телевизори по света, показвайки нагледно скритата зависимост на потребителския хардуер от външни доставчици на AI услуги.</p>
+<h2>Архитектурната слабост на хибридния Edge-to-Cloud AI</h2>
+<p>Случаят разкрива фундаменталните компромиси в съвременния <a href="/pages/edge-ai.html">Edge AI</a>:</p>
+<ul>
+<li><strong>Илюзията за локална обработка:</strong> Въпреки че производителите рекламират модерни невронни чипове (NPU) на платката на телевизора, реалната обработка на сложни гласови заявки се аутсорсва изцяло към външни комерсиални API шлюзове.</li>
+<li><strong>Агресивна потребителска <a href="/pages/telemetry.html">телеметрия</a>:</strong> Устройствата не просто чакат ключова дума за активация („Hi Bixby“), а анализират постоянния звуков фон за целите на таргетирана реклама и разпознаване на съдържание (ACR).</li>
+<li><strong>Критична уязвимост в управлението на ключове:</strong> Вграждането на споделени статични API идентификатори във фърмуера на милиони потребителски устройства нарушава базисни стандарти за софтуерна архитектура.</li>
+</ul>
+<h2>Дългосрочни регулаторни и потребителски последици</h2>
+<p>Този инцидент ще послужи като повратен момент за регулацията на умните устройства за бита в Европейския съюз и Северна Америка. Европейският надзорен орган по защита на данните (EDPB) вече сигнализира за стартиране на официално разследване срещу практиките за скрито записване на аудио в домашни условия без изрично, информирано и постоянно съгласие на потребителя съгласно правилата на GDPR и AI Act.</p>
+<p>За хардуерната индустрия това е тежък урок относно системния риск от обвързване на физически продукти с централизирани облачни API интерфейси. Ако доставчикът на модела може с натискането на един бутон да превърне премиум телевизор за хиляди долари в пасивен дисплей поради спор за сигурност, потребителите и регулаторите неизбежно ще изискат преминаване към строго локални, автономни модели с отворен код, които работят напълно офлайн и не зависят от корпоративни облаци.</p>
+<p><img src="/articles/2026/10/24/samsung-smart-tv-ai-telemetry-openai-suspension/infographic.png" alt="Инфографика: Скандалът със смарт телевизорите на Samsung"><br><small>Технически разбор на системната телеметрия и блокираните API ключове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.ycombinator.com/item?id=50218633">Root shell on Samsung TV reveals on-board AI listening &amp; suspended OpenAI key – Hacker News / Reddit</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tizen.html">Tizen OS</a><p>Tizen е операционна система с отворен код, базирана на Linux ядро, разработвана основно от Samsung за интелигентни телевизори, носими устройства и бит...</p></li><li><a href="/pages/telemetry.html">Телеметрия</a><p>Телеметрията е автоматизиран процес на събиране, измерване и предаване на системни данни, потребителско поведение и диагностична информация от отдалеч...</p></li><li><a href="/pages/samsung.html">Samsung</a><p>Samsung Electronics е южнокорейски конгломерат и глобален технологичен гигант, който е най-големият производител на чипове с памет (DRAM и NAND) в све...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/edge-ai.html">Периферен изкуствен интелект (Edge AI)</a><p>Периферният изкуствен интелект (Edge AI) обхваща внедряването и изпълнението на невронни мрежи директно върху вградени физически микросхеми, сензори и...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

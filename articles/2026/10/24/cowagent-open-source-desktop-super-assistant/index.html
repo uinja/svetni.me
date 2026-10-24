@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Unsplash / Ilya Pavlov
+В общността за изкуствен интелект с отворен код (Open Source AI) дебютира проектът CowAgent – цялостна архитектура за автономен супер асистент, способен да поеме пъ..."><title>CowAgent: Отворена архитектура за супер асистент с визуален контрол върху десктоп операционната система - Светни.ме</title><meta property="og:title" content="CowAgent: Отворена архитектура за супер асистент с визуален контрол върху десктоп операционната система - Светни.ме"><meta property="og:description" content="Източник: Unsplash / Ilya Pavlov
+В общността за изкуствен интелект с отворен код (Open Source AI) дебютира проектът CowAgent – цялостна архитектура за автономен супер асистент, способен да поеме пъ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/cowagent-open-source-desktop-super-assistant/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/cowagent-open-source-desktop-super-assistant/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>CowAgent: Отворена архитектура за супер асистент с визуален контрол върху десктоп операционната система</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/cowagent-open-source-desktop-super-assistant/hero.png" alt="Работен плот на програмист с множество отворени прозорци – тестова среда за компютърно управление"><br><small>Източник: Unsplash / Ilya Pavlov</small></p>
+<p>В общността за <a href="/pages/open-source-ai.html">изкуствен интелект с отворен код (Open Source AI)</a> дебютира проектът <a href="/pages/cowagent.html">CowAgent</a> – цялостна архитектура за автономен супер асистент, способен да поеме пълен контрол върху десктоп операционната система (Windows, macOS, Linux) чрез директно визуално взаимодействие с графичния интерфейс [1]. Докато повечето комерсиални решения за <a href="/pages/computer-use.html">компютърно управление (Computer Use)</a> работят като затворени облачни абонаменти с висока латентност, CowAgent предлага напълно открит, модулен стек, който може да се изпълнява върху локален хардуер.</p>
+<p>Основната философия на CowAgent е отказът от зависимост към специфични програмни API интерфейси за всяко отделно приложение. Вместо да разчита, че софтуерът разполага с интеграция, агентът подхожда към компютъра по същия начин като човешки оператор: анализира пикселите от екрана чрез <a href="/pages/vision-language-models.html">визуално-езикови модели (VLM)</a>, открива нужните интерактивни бутони и изпраща нативни команди за движение на мишката и натискане на клавиши.</p>
+<h2>Механизъм на визуалното позициониране и контролния цикъл</h2>
+<p><a href="/pages/cowagent.html">CowAgent</a> реализира трислоен процес за изпълнение на сложни задачи в операционната система:</p>
+<ul>
+<li><strong>Vision Grounding и сегментация на пиксели:</strong> Специализирана мултимодална невронна мрежа приема скрийншот на десктопа и картографира координатите $(x, y)$ на всички активни бутони, падащи менюта и текстови полета с точност до няколко пиксела.</li>
+<li><strong>Динамично състояние и самокорекция:</strong> След всяко щракване с мишката агентът прави нов скрийншот, сравнява визуалната промяна с очаквания резултат и коригира следващото действие при поява на изскачащи диалогови прозорци или съобщения за грешка.</li>
+<li><strong>Хибриден модел за изпълнение:</strong> Когато задачата може да се реши по-бързо и надеждно през терминала (например конвертиране на видео с ffmpeg), <a href="/pages/gui-agents.html">графичният агент (GUI Agent)</a> превключва към фоново изпълнение на системни команди, спестявайки време и изчислителни ресурси.</li>
+</ul>
+<h2>Дългосрочни технологични и обществени последици</h2>
+<p>Появата на високофункционални агенти за графично управление с отворен код като CowAgent бележи началото на края на традиционните софтуерни бариери. В продължение на десетилетия монополни софтуерни гиганти заключваха корпоративните потребители в своите екосистеми, налагайки сложни и скъпи абонаменти. Когато отворен агент може да прехвърля данни, да форматира таблици и да управлява остарели ERP системи чрез визуално разпознаване, стойността на затворените интерфейси се срива.</p>
+<p>Същевременно това повдига сериозни въпроси за локалната киберсигурност. Агент, притежаващ права за четене на екрана и емулация на периферни устройства, има пълен достъп до пароли, лична кореспонденция и банкови портали. Защитата на тези системи срещу злонамерени манипулации ще изисква нови операционни механизми за криптографска изолация и физическо потвърждение на критични действия от страна на човека.</p>
+<p><img src="/articles/2026/10/24/cowagent-open-source-desktop-super-assistant/infographic.png" alt="Инфографика: Архитектура на CowAgent за десктоп контрол"><br><small>Основни етапи при визуалното управление на графичния интерфейс</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://cowagent.ai/en/">CowAgent – Open-Source Super AI Assistant – CowAgent Project</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/vision-language-models.html">Визуално-езикови модели (VLM)</a><p>Визуално-езиковите модели (Vision-Language Models, VLM) са мултимодални невронни мрежи, които съвместно обработват изображения и текст.</p></li><li><a href="/pages/open-source-ai.html">ИИ с отворен код (Open Source AI)</a><p>ИИ с отворен код (Open Source AI) е термин, който описва системи за изкуствен интелект, които отговарят на стандартите за прозрачност и свобода, дефин...</p></li><li><a href="/pages/gui-agents.html">Графични AI агенти (GUI Agents)</a><p>Графичните AI агенти (GUI Agents) са интелигентни системи, способни да управляват софтуер по същия начин като човешки потребител – чрез възприемане на...</p></li><li><a href="/pages/cowagent.html">CowAgent</a><p>CowAgent е иновативен проект с отворен код за създаване на автономен супер асистент за настолни компютри.</p></li><li><a href="/pages/computer-use.html">Компютърна употреба (Computer use)</a><p>Компютърна употреба (Computer use) е концепция в изкуствения интелект, при която ИИ моделът взаимодейства директно с операционната система или приложе...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

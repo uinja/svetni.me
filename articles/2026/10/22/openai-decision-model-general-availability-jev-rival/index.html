@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / OpenAI Technical Interface
+В стремежа си да запази технологичното си превъзходство в най-взискателните корпоративни сегменти, лабораторията OpenAI обяви широката обща налично..."><title>OpenAI пусна за масова употреба новия си модел за комплексни решения в отговор на Jev - Светни.ме</title><meta property="og:title" content="OpenAI пусна за масова употреба новия си модел за комплексни решения в отговор на Jev - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / OpenAI Technical Interface
+В стремежа си да запази технологичното си превъзходство в най-взискателните корпоративни сегменти, лабораторията OpenAI обяви широката обща налично..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/openai-decision-model-general-availability-jev-rival/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/openai-decision-model-general-availability-jev-rival/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI пусна за масова употреба новия си модел за комплексни решения в отговор на Jev</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/openai-decision-model-general-availability-jev-rival/hero.png" alt="Графичен потребителски интерфейс за визуализация на дървовидното планиране на новия модел на OpenAI"><br><small>Източник: TechCrunch / OpenAI Technical Interface</small></p>
+<p>В стремежа си да запази технологичното си превъзходство в най-взискателните корпоративни сегменти, лабораторията <a href="/pages/openai.html">OpenAI</a> обяви широката обща наличност (General Availability) на своя специализиран нов модел за комплексни решения [1]. Премиерата идва в момент на ожесточена надпревара в сектора на <a href="/pages/decision-models.html">моделите за вземане на решения</a>, където пионерната архитектура Jev успя да завоюва значителен пазарен дял сред финансови анализатори и логистични гиганти.</p>
+<p>За разлика от традиционните езикови модели, които генерират текст токен по токен на базата на вероятностни предположения, новата система на OpenAI е проектирана специално за многостъпково дедуктивно планиране и стратегически симулации.</p>
+<h2>Архитектура на System 2: Синтез на език и дървовидно търсене</h2>
+<p>Фундаменталният пробив в новия модел се корени в изоставянето на чистата авторегресия в полза на алгоритми за евристично обхождане на пространства от състояния, сходни с тези в AlphaZero. Моделът интегрира усъвършенствано <a href="/pages/monte-carlo-tree-search.html">търсене по дърво на Монте Карло</a> (MCTS):</p>
+<ol>
+<li><strong>Генериране на алтернативни хипотези:</strong> При получаване на сложен бизнес или логистичен казус моделът генерира десетки потенциални стратегии за действие.</li>
+<li><strong>Симулиране на бъдещи последици:</strong> За всяка стратегия системата проиграва мислени стъпки напред, оценявайки вероятните рискове, регулаторни пречки и финансови разходи.</li>
+<li><strong>Обучение с подсилване (Reinforcement Learning):</strong> Чрез масирано <a href="/pages/reinforcement-learning.html">подсилващо самообучение</a> моделът е обучен да открива скрити задънени улици и да се връща назад (backtracking), избирайки само най-надеждния глобален оптимум.</li>
+</ol>
+<p>Този механизъм позволява решаването на казуси с над 50 последователни стъпки, при които стандартните модели се провалят поради натрупване на грешки.</p>
+<h2>Промяна в парадигмата на ценообразуване на изчисленията</h2>
+<p>Широкото навлизане на модели за решения поставя началото на нова икономика на изчисленията по време на инференция (Test-Time Compute). Докато досега цената на заявка зависеше единствено от дължината на текста, при новия модел потребителите плащат за „време за размисъл“:</p>
+<ul>
+<li>Бърз предварителен преглед (10 секунди търсене) за рутинни управленски дилеми.</li>
+<li>Дълбока аналитична симулация (15 минути паралелно обхождане на хиляди клонове) за многомилионни инвестиционни сделки и планиране на вериги за доставки.</li>
+</ul>
+<p>Тази гъвкавост позиционира OpenAI като незаменим инструмент в заседателните зали на най-големите корпорации по света.</p>
+<p><img src="/articles/2026/10/22/openai-decision-model-general-availability-jev-rival/infographic.png" alt="Инфографика: Четири ключови принципа на новия модел за решения на OpenAI"><br><small>Сравнение на механизмите на дървовидното планиране и дълбоките симулации при сложни казуси.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>TechCrunch AI Systems. (2026-10-22). <em>OpenAI makes its Jev competitor widely available as decision model competition heats up</em>. TechCrunch Enterprise AI. <a href="https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/">https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/</a></li>
+<li>Journal of Artificial Intelligence Research. (2026-10-22). <em>Test-Time Search vs Pre-Training Scale: The Architectural Convergence of Modern Decision Transformers</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/monte-carlo-tree-search.html">Търсене по дърво на Монте Карло (MCTS)</a><p>Търсенето по дърво на Монте Карло (Monte Carlo Tree Search - MCTS) е алгоритъм за евристично търсене в комплексни дървовидни пространства от решения, ...</p></li><li><a href="/pages/decision-models.html">Модели за решения (Decision Models)</a><p>Моделите за решения (известни още като „System One модели“) са нов клас архитектури за изкуствен интелект, проектирани за директно вграждане в програм...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

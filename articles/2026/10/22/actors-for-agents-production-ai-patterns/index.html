@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ Enterprise Architecture Presentations
+В рамките на престижната инженерна поредица на InfoQ водещи системни архитекти представиха мащабен доклад за това как десетилетният акторен мод..."><title>Акторният модел за AI агенти: Инженерни шаблони за надеждни мултиагентни системи в продукция - Светни.ме</title><meta property="og:title" content="Акторният модел за AI агенти: Инженерни шаблони за надеждни мултиагентни системи в продукция - Светни.ме"><meta property="og:description" content="Източник: InfoQ Enterprise Architecture Presentations
+В рамките на престижната инженерна поредица на InfoQ водещи системни архитекти представиха мащабен доклад за това как десетилетният акторен мод..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/actors-for-agents-production-ai-patterns/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/actors-for-agents-production-ai-patterns/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Акторният модел за AI агенти: Инженерни шаблони за надеждни мултиагентни системи в продукция</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/actors-for-agents-production-ai-patterns/hero.png" alt="Слайд от инженерна презентация за акторния модел и разпределените агентни системи"><br><small>Източник: InfoQ Enterprise Architecture Presentations</small></p>
+<p>В рамките на престижната инженерна поредица на InfoQ водещи системни архитекти представиха мащабен доклад за това как десетилетният <a href="/pages/actor-model.html">акторен модел</a> (Actor Model) се превръща в най-надеждния архитектурен спасителен пояс за експлоатацията на <a href="/pages/production-ai.html">продукционен изкуствен интелект</a> [1].</p>
+<p>С прехода от прости единични разговори към комплексни екосистеми от десетки и стотици взаимодействащи си софтуерни асистенти, разработчиците се сблъскаха с класическите кошмари на паралелното програмиране: задънени улици (deadlocks), корупция на споделената памет и неконтролируемо лавинообразно разпространение на грешки.</p>
+<h2>Възраждане на принципите на Erlang и Akka в ерата на невронните мрежи</h2>
+<p>Акторният модел, формулиран първоначално от Карл Хюит и доказан в практиката от телекомуникационната платформа Erlang/OTP, предлага идеална математическа рамка за организиране на <a href="/pages/distributed-systems.html">разпределени системи</a> от вероятностни модели:</p>
+<ol>
+<li><strong>Строга капсулация на състоянието:</strong> Всеки AI агент оперира като самостоятелен актьор. Той не позволява на друг агент да чете или променя директно неговия контекст, промпт или междинни променливи.</li>
+<li><strong>Асинхронна опашка от съобщения (Mailbox):</strong> Всички инструкции и въпроси постъпват в типизирана опашка. Ако доставчикът на модела наложи лимит на заявките (Rate Limiting), актьорът просто забавя четенето от опашката (Backpressure), без да блокира подателя.</li>
+<li><strong>Йерархични дървета на надзор (Supervision Trees):</strong> Ако даден агент започне да генерира невалиден JSON, изпадне в рекурсивен цикъл от грешки или тайм-аутне, неговият надзорен актьор (Supervisor) се задейства, унищожава повредената инстанция и я рестартира в чисто състояние.</li>
+</ol>
+<p>Това осигурява безупречна <a href="/pages/fault-tolerance.html">толерантност към грешки</a>, изолирайки локалните провали преди те да компрометират цялостната бизнес транзакция.</p>
+<h2>Бъдещето на автономните софтуерни предприятия</h2>
+<p>Интеграцията на акторния модел доказва, че мащабирането на мултиагентни системи не е проблем на машинното обучение, а класически проблем на разпределените компютърни системи. Инженерите, които се опитват да синхронизират агенти чрез обикновени споделени релационни бази или глобални променливи в паметта, неизбежно стигат до архитектурен колапс при натоварване.</p>
+<p>Прилагайки принципите на прозрачност на местоположението (Location Transparency), акторните системи позволяват агентите да работят на една машина или да бъдат разпределени върху хиляди сървъри по целия свят без промяна в кода. Този модел ще формира гръбнака на бъдещите напълно автономни дигитални компании.</p>
+<p><img src="/articles/2026/10/22/actors-for-agents-production-ai-patterns/infographic.png" alt="Инфографика: Четири ключови стълба на акторния модел за мултиагентни системи"><br><small>Архитектурни принципи за изолация на състоянието и надзор при продукционни AI агенти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>InfoQ Enterprise Architecture Presentations. (2026-10-22). <em>Presentation: Actors for Agents: Patterns for Production AI</em>. InfoQ Systems Concurrency. <a href="https://www.infoq.com/presentations/actors-for-production-ai-agents/">https://www.infoq.com/presentations/actors-for-production-ai-agents/</a></li>
+<li>ACM Computing Surveys. (2026-10-22). <em>Fault-Tolerant Actor Topologies for Stochastic and Non-Deterministic Distributed Agent Runtimes</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/production-ai.html">Продукционен AI (Production AI)</a><p>Продукционният AI обхваща инженерните практики, архитектури и инфраструктура, необходими за надеждна, високочестотна и мащабируема експлоатация на изк...</p></li><li><a href="/pages/fault-tolerance.html">Толерантност към грешки (Fault Tolerance)</a><p>Толерантността към грешки е системно инженерно свойство, позволяващо на софтуерна или хардуерна архитектура да запази пълна или частична работоспособн...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li><li><a href="/pages/actor-model.html">Акторен модел (Actor Model)</a><p>Акторният модел е математически и софтуерен модел за паралелни и разпределени изчисления, при който фундаменталната единица на изпълнение е „актьорът“...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

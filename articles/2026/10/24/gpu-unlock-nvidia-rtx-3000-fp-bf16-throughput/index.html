@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / Zagitta
+В общността на нискоlevel хардуерните хакери и изследователите по отворен AI избухна истинска сензация след публикуването на проекта с отворен код GPU-Unlock, разработен ..."><title>GPU-Unlock: Премахване на изкуствените лимити за FP/BF16 инструкции в графичните карти Nvidia RTX 3000 - Светни.ме</title><meta property="og:title" content="GPU-Unlock: Премахване на изкуствените лимити за FP/BF16 инструкции в графичните карти Nvidia RTX 3000 - Светни.ме"><meta property="og:description" content="Източник: GitHub / Zagitta
+В общността на нискоlevel хардуерните хакери и изследователите по отворен AI избухна истинска сензация след публикуването на проекта с отворен код GPU-Unlock, разработен ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/24/gpu-unlock-nvidia-rtx-3000-fp-bf16-throughput/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/24/gpu-unlock-nvidia-rtx-3000-fp-bf16-throughput/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GPU-Unlock: Премахване на изкуствените лимити за FP/BF16 инструкции в графичните карти Nvidia RTX 3000</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 октомври 2026 г.</p><div><p><img src="/articles/2026/10/24/gpu-unlock-nvidia-rtx-3000-fp-bf16-throughput/hero.png" alt="Проектът с отворен код GPU-Unlock за оптимизация на Nvidia карти в GitHub"><br><small>Източник: GitHub / Zagitta</small></p>
+<p>В общността на нискоlevel хардуерните хакери и изследователите по отворен AI избухна истинска сензация след публикуването на проекта с отворен код <strong>GPU-Unlock</strong>, разработен от програмиста Zagitta: инструментът успешно премахва изкуствените софтуерни ограничения върху темпа на издаване на инструкции за плаваща запетая с половин прецизност (FP16 и BF16) в потребителските графични карти от серията <a href="/pages/nvidia.html">Nvidia</a> GeForce RTX 3000, базирани на <a href="/pages/ampere-architecture.html">архитектурата Ampere</a> [1].</p>
+<p>В резултат на модификацията потребителите отчитат скок в пропускателната способност на изчисленията до 2.5 пъти при изпълнение на съвременни големи езикови модели и матрични умножения в <a href="/pages/cuda.html">CUDA</a>. Разкритието потвърди дългогодишните подозрения на хардуерните инженери, че Nvidia съзнателно скопява изчислителния капацитет на достъпните потребителски карти чрез фърмуера и драйверите, за да принуди бизнеса да купува десетократно по-скъпите професионални ускорители от серията A100.</p>
+<h2>Микроархитектурната дисекция: Как работи отключването</h2>
+<p>Проектът атакува нискоlevel планировчика на инструкции (Instruction Issue Scheduler) в графичните клъстери:</p>
+<ul>
+<li><strong>Премахване на изкуствените забавяния (Clamping):</strong> В официалните драйвери изпълнението на FP16/BF16 инструкции без използване на Tensor Cores беше изкуствено ограничено до 1 инструкция на всеки 2 или 4 такта за даден SM (Streaming Multiprocessor), въпреки че физическите ALUs могат да поемат пълен темп на всеки такт.</li>
+<li><strong>Патчване на JIT компилатора:</strong> Инструментът пренаписва междинния код (PTX) в момента на компилация, заменяйки забавящите инструкции с оптимизирани машинни последователности (SASS).</li>
+<li><strong>Масивен скок при <a href="/pages/gpu-optimization.html">GPU оптимизацията</a>:</strong> Локалните потребителски системи за квантуване, LoRA обучение и извличане на ембединги работят със забележимо по-ниска латентност и по-пълноценно натоварване на силициевия кристал.</li>
+</ul>
+<h2>Дългосрочни пазарни и индустриални последици</h2>
+<p>Успехът на GPU-Unlock има огромно практическо и морално значение за екосистемата на независимия изкуствен интелект. Милиони потребители по света притежават карти от серията RTX 3080 и 3090 (които разполагат с 24 GB VRAM), но се сблъскваха с изкуствено забавяне при работа с модерни формати като BF16. Вдъхването на нов живот на този съществуващ хардуерен парк намалява зависимостта на изследователите от скъпи облачни инстанции.</p>
+<p>За <a href="/pages/nvidia.html">Nvidia</a> случаят е тежък PR гаф, напомнящ за скандалите около софтуерното ограничаване на криптомайнинга (LHR) преди няколко години. Той поставя под светлината на прожекторите практиката за пазарна сегментация чрез изкуствено влошаване на потребителските продукти. Това ще даде нов мощен тласък на движението за <a href="/pages/open-source-hardware.html">хардуер с отворен код (Open-Source Hardware)</a> и алтернативни драйверни стекове, доказвайки, че истинският потенциал на полупроводниците принадлежи на хората, които са ги закупили.</p>
+<p><img src="/articles/2026/10/24/gpu-unlock-nvidia-rtx-3000-fp-bf16-throughput/infographic.png" alt="Инфографика: Проектът GPU-Unlock за Nvidia Ampere"><br><small>Отключване на скрития FP/BF16 потенциал на потребителските видеокарти</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/Zagitta/gpu-unlock">GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000&#39;s cards – GitHub / Hacker News</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/open-source-hardware.html">Хардуер с отворен код (Open-Source Hardware)</a><p>Хардуерът с отворен код е движение за свободно споделяне на схеми, чертежи, фърмуер и инструкции за производство на физически устройства и полупроводн...</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/gpu-optimization.html">GPU оптимизация</a><p>GPU оптимизацията обхваща набор от нискоlevel инженерни техники за максимално оползотворяване на паралелната изчислителна мощ на графичните ускорители...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li><li><a href="/pages/ampere-architecture.html">Nvidia Ampere архитектура</a><p>Nvidia Ampere е микроархитектура за графични процесори (GPU), представена от Nvidia през 2020 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

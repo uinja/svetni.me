@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / 1Password Media Assets
+Водещата платформа за управление на пароли 1Password обяви пускането на революционна функционалност за делегирана автентикация, насочена специално към ..."><title>1Password представи делегирани идентификационни данни за AI агенти с нулево знание за пароли - Светни.ме</title><meta property="og:title" content="1Password представи делегирани идентификационни данни за AI агенти с нулево знание за пароли - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / 1Password Media Assets
+Водещата платформа за управление на пароли 1Password обяви пускането на революционна функционалност за делегирана автентикация, насочена специално към ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/22/1password-delegated-credentials-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/22/1password-delegated-credentials-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>1Password представи делегирани идентификационни данни за AI агенти с нулево знание за пароли</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 октомври 2026 г.</p><div><p><img src="/articles/2026/10/22/1password-delegated-credentials-ai-agents/hero.png" alt="Илюстрация на сигурен криптографски шлюз между AI агент и защитен акаунт"><br><small>Източник: TechCrunch / 1Password Media Assets</small></p>
+<p>Водещата платформа за управление на пароли <a href="/pages/1password.html">1Password</a> обяви пускането на революционна функционалност за делегирана <a href="/pages/authentication.html">автентикация</a>, насочена специално към <a href="/pages/ai-agents.html">автономните агенти</a> [1]. Технологията разрешава най-голямата дилема в потребителската сигурност днес: как да позволим на софтуерен асистент да купи самолетен билет или да плати комунална сметка от наше име, без да му даваме директен достъп до мастер паролата ни или критични идентификационни данни.</p>
+<p>Иновацията стъпва върху принципите на криптографията с <a href="/pages/zero-knowledge.html">нулево знание</a>, създавайки изолиран слой между защитения трезор на потребителя и работната памет на езиковия модел.</p>
+<h2>Криптографски токени за еднократен достъп</h2>
+<p>Когато потребителят възложи задача на агент (например: „Влез в сайта на авиокомпанията и промени резервацията ми за утре“), традиционните системи изискват агентът да попита за паролата и да я въведе в текстовото поле. Това обаче крие огромен риск: паролата остава в хронологията на модела, може да изтече в облачните логове или да бъде открадната чрез промпт инжекция.</p>
+<p>Решението на 1Password трансформира процеса:</p>
+<ol>
+<li><strong>Заявка за пълномощия:</strong> Агентът изпраща структурирана заявка до локалното приложение 1Password с описание на целевия домейн и планираното действие.</li>
+<li><strong>Човешко потвърждение с биометрия:</strong> Потребителят вижда еднократна заявка на смартфона си с обобщение на операцията и я потвърждава с Face ID или пръстов отпечатък.</li>
+<li><strong>Издаване на делегиран сесиен токен:</strong> 1Password инжектира криптографски подписан токен директно в браузърния контекст на сесията, без агентът да може да прочете оригиналния секрет. Токенът изтича автоматично след 10 минути.</li>
+</ol>
+<h2>Преодоляване на напрежението между агенти и уеб сигурност</h2>
+<p>Тази архитектура предлага елегантен изход от нарастващата криза с банковите и сайтови блокади срещу автоматизирани агенти. Вместо уебсайтовете да блокират всеки необичаен браузърен трафик, те могат да проверяват криптографския подпис на сесията, издаден от доверен мениджър на идентичност.</p>
+<p>В дългосрочен план моделът на 1Password полага основите на универсален протокол за машинна идентичност (Agent Identity Standard). Той доказва, че автоматизацията на ежедневието не трябва да идва за сметка на компрометирана лична сигурност, а може да бъде изградена върху математически доказани принципи на пълна поверителност.</p>
+<p><img src="/articles/2026/10/22/1password-delegated-credentials-ai-agents/infographic.png" alt="Инфографика: Четири стълба на архитектурата на 1Password за агентна автентикация"><br><small>Работен процес на криптографското делегиране на достъп с нулево знание за автономни асистенти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>TechCrunch Security &amp; Privacy. (2026-10-22). <em>1Password launches a way for AI agents to log in on your behalf without seeing your password</em>. TechCrunch Enterprise Security. <a href="https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/">https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/</a></li>
+<li>1Password Cryptography Engineering Group. (2026-10-22). <em>Zero-Knowledge Proofs for Ephemeral Agent Credential Delegation</em>.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-knowledge.html">Нулево знание (Zero-Knowledge Proofs)</a><p>Доказателствата с нулево знание (Zero-Knowledge Proofs - ZKP) са криптографски метод, позволяващ на една страна (доказващ) да докаже на друга страна (...</p></li><li><a href="/pages/authentication.html">Автентикация (Authentication)</a><p>Автентикацията е фундаментален процес в компютърната и мрежовата сигурност, при който се валидира и доказва цифровата идентичност на субект (човек, ус...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/1password.html">1Password</a><p>1Password е водеща платформа за управление на пароли, корпоративна идентичност и криптографски ключове, разработваща делегирани протоколи за автентика...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

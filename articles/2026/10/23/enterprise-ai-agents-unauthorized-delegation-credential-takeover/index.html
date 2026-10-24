@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / Getty Images
+Масовото внедряване на автономни софтуерни агенти в корпоративния сектор се натъкна на фундаментална криза в архитектурата на сигурността [1]. Според анали..."><title>Автономна делегация и кражба на самоличност: Кой всъщност управлява корпоративните AI агенти? - Светни.ме</title><meta property="og:title" content="Автономна делегация и кражба на самоличност: Кой всъщност управлява корпоративните AI агенти? - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / Getty Images
+Масовото внедряване на автономни софтуерни агенти в корпоративния сектор се натъкна на фундаментална криза в архитектурата на сигурността [1]. Според анали..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/23/enterprise-ai-agents-unauthorized-delegation-credential-takeover/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/23/enterprise-ai-agents-unauthorized-delegation-credential-takeover/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Автономна делегация и кражба на самоличност: Кой всъщност управлява корпоративните AI агенти?</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 октомври 2026 г.</p><div><p><img src="/articles/2026/10/23/enterprise-ai-agents-unauthorized-delegation-credential-takeover/hero.png" alt="Абстрактна концепция за сигурност на корпоративните имейли и комуникации с AI"><br><small>Източник: BleepingComputer / Getty Images</small></p>
+<p>Масовото внедряване на автономни софтуерни агенти в корпоративния сектор се натъкна на фундаментална криза в архитектурата на сигурността [1]. Според анализи на експерти от водещи организации за одит на уязвимости, над 70% от компаниите от Fortune 500 са предоставили на своите вътрешни AI асистенти неограничен достъп до корпоративни API, ERP системи и имейл сървъри, без да изградят механизми за контрол на междинните нива на оторизация.</p>
+<p>Резултатът е масово отваряне на вратите за <a href="/pages/confused-deputy-attack.html">атаки тип &quot;объркан заместник&quot; (Confused Deputy Attack)</a>, при които външни нападатели могат да поемат управлението на дигиталната самоличност на агента и да изпълняват банкови транзакции или изтриване на данни от името на легитимни служители.</p>
+<h2>Разпадът на границите на доверието: Как се губи контрол</h2>
+<p>Проблемът произтича от несъвместимостта между класическите протоколи за оторизация (като OAuth 2.0) и динамичния характер на автономните агенти:</p>
+<ul>
+<li><strong>Прекомерна концентрация на права:</strong> За да може един агент да резервира билети, да генерира фактури и да отговаря на имейли, администраторите масово му дават статичен токен за четене и писане в целия корпоративен пакет (Google Workspace или Microsoft 365).</li>
+<li><strong>Неконтролирано делегиране между агенти:</strong> Когато един координиращ агент прехвърли подзадача на специализиран външен бот за фактуриране, оторизационният контекст се предава напред, без да се проверява надеждността на външния код.</li>
+<li><strong>Инжектиране на фалшив контекст:</strong> Нападател изпраща наглед рутинен имейл с рекламация, съдържащ скрит промпт. Когато агентът прочете съобщението, той изпълнява нареждането да изпрати списъка с клиенти към външен IP адрес, използвайки собствените си легитимни права.</li>
+</ul>
+<p>Това превръща концепцията за <a href="/pages/sandboxing.html">софтуерна изолация (sandboxing)</a> в задължително изискване не само за кода, но и за самите потребителски сесии.</p>
+<h2>Дългосрочни институционални и застрахователни последици</h2>
+<p>Кризата с оторизацията на агентите заплашва да спре навлизането на автономен софтуер в банковия, застрахователния и медицинския сектор. Застрахователите срещу киберрискове вече започнаха да отказват покрития за инциденти, възникнали вследствие на &quot;неконтролирани действия на автономни езикови агенти&quot;, изисквайки от компаниите писмени доказателства за наличие на строг надзорен механизъм (Human-in-the-Loop).</p>
+<p>Единственият път напред е пълната преработка на корпоративната архитектура към принципа на &quot;Нулево доверие за агенти&quot; (Zero Trust for Machine Actors). Това включва издаването на микро-токени, валидни само за едно конкретно действие, криптографско валидиране на произхода на всяка стъпка в плана и налагане на хардуерно блокиране на всякакви финансови трансфери без директна човешка биометрична автентикация. Докато тези стандарти не станат задължителни, 기업ските агенти ще останат най-лесната мишена за киберпрестъпниците.</p>
+<p><img src="/articles/2026/10/23/enterprise-ai-agents-unauthorized-delegation-credential-takeover/infographic.png" alt="Инфографика: Стълбове на сигурната агентна оторизация"><br><small>Четири ключови компонента за изграждане на архитектура с Нулево доверие при корпоративни AI агенти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li>BleepingComputer Security Intelligence. (2026-10-23). <em>You gave your AI agent access, but who is giving it orders? Enterprise delegation risks analyzed</em>. BleepingComputer Enterprise Security. <a href="https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/">https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/</a></li>
+<li>Cloud Security Alliance (CSA). (2026-10-23). <em>Agentic Identity Governance: Token Lifecycle and Multi-Agent Delegation Vulnerabilities</em>. CSA Technical Guidance.</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sandboxing.html">Изолирана среда за изпълнение (Sandboxing)</a><p>Изолираната среда (Sandboxing) е механизъм за сигурност, който ограничава правата на дадена софтуерна програма само до строго определени ресурси на оп...</p></li><li><a href="/pages/confused-deputy-attack.html">Атака &#x27;Объркан заместник&#x27; (Confused Deputy Attack)</a><p>Атаката &amp;#39;Объркан заместник&amp;#39; (Confused Deputy Attack) в контекста на автономни AI агенти е класически информационен вектор за компрометиране на...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
