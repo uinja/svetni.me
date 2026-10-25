@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Anthropic Research
+Изследователският екип на Anthropic публикува фундаментален архитектурен доклад, оспорващ популярната тенденция за изграждане на сложни мрежи от десетки с..."><title>Anthropic: Един координиран агент превъзхожда мултиагентните мрежи при сложни задачи - Светни.ме</title><meta property="og:title" content="Anthropic: Един координиран агент превъзхожда мултиагентните мрежи при сложни задачи - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Anthropic Research
+Изследователският екип на Anthropic публикува фундаментален архитектурен доклад, оспорващ популярната тенденция за изграждане на сложни мрежи от десетки с..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/25/anthropic-single-agent-beats-multi-agent-architectures/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/25/anthropic-single-agent-beats-multi-agent-architectures/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic: Един координиран агент превъзхожда мултиагентните мрежи при сложни задачи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->25 октомври 2026 г.</p><div><p><img src="/articles/2026/10/25/anthropic-single-agent-beats-multi-agent-architectures/hero.png" alt="Сравнение между монолитен агент и сложни мултиагентни йерархии в изследването на Anthropic"><br><small>Източник: The Decoder / Anthropic Research</small></p>
+<p>Изследователският екип на <a href="/pages/anthropic.html">Anthropic</a> публикува фундаментален архитектурен доклад, оспорващ популярната тенденция за изграждане на сложни мрежи от десетки специализирани субагенти. Според емпиричните данни на лабораторията, една добре проектирана <a href="/pages/single-agent-architecture.html">монолитна агентна архитектура (Single-Agent Architecture)</a> постига значително по-висока точност, по-ниска латентност и драстично по-малко грешки в сравнение с <a href="/pages/multi-agent-systems.html">мултиагентните системи (Multi-Agent Systems)</a> при сложни реални задачи [1].</p>
+<p>В продължение на последните две години индустрията инвестира сериозни усилия в рамки като AutoGen, CrewAI и сложни ролеви взаимодействия, вярвайки, че разделението на труда между „мениджър“, „кодер“ и „тестер“ повишава качеството. Инженерите на Anthropic обаче доказват, че с нарастването на капацитета на водещите модели, това раздробяване всъщност влошава резултатите заради неизбежното натрупване на комуникационен шум и деградация на контекста.</p>
+<h2>Проблемът с разваления телефон в агентните йерархии</h2>
+<p>Докладът детайлно анализира източниците на грешки при мултиагентните системи. Основният недостатък е феноменът „развален телефон“: когато първият агент генерира спецификация, вторият я предава на трети, а четвъртият валидира резултата, фините семантични детайли и първоначалните ограничения на потребителя прогресивно се размиват.</p>
+<p>Освен това, благодарение на огромния скок в <a href="/pages/context-window-efficiency.html">ефективността на контекстния прозорец (Context Window Efficiency)</a> и способността на Claude да поддържа дълбоки вериги на разсъждение, един модел може самостоятелно да планира, изпълнява и критикува собствените си действия в рамките на една непрекъсната сесия. Това премахва необходимостта от тежки координационни протоколи и съкращава консумацията на токени с над 60%.</p>
+<h2>Дългосрочни последствия за софтуерната архитектура на ИИ</h2>
+<p>Изследването на Anthropic предизвиква преосмисляне на <a href="/pages/cognitive-architectures.html">когнитивните архитектури (Cognitive Architectures)</a> в цялата софтуерна екосистема. Сложните библиотеки за мултиагентна оркестрация, които създадоха слоеве от ненужни абстракции и виртуални „бюра за управление“, губят своето практическо предимство пред изчистените цикли на изпълнение с директен достъп до инструменти.</p>
+<p>В дългосрочен план парадигмата се измества към усъвършенстване на интерфейса между един интелигентен агент и неговата операционна среда. Вместо да умножават броя на агентите, инженерите ще се фокусират върху детерминистични пясъчни среди, високоскоростни инструменти за търсене и дългосрочна йерархична памет. Интелигентността на бъдещето няма да бъде сложна бюрокрация от малки ботове, а един координиран когнитивен център с пълен поглед върху целия проблем.</p>
+<p><img src="/articles/2026/10/25/anthropic-single-agent-beats-multi-agent-architectures/infographic.png" alt="Инфографика: Защо един агент побеждава мултиагентните системи"><br><small>Четири причини за превъзходството на монолитната агентна архитектура според Anthropic</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/">Anthropic says one AI agent beats many subagents now that models can handle complexity alone – The Decoder</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/single-agent-architecture.html">Монолитна агентна архитектура (Single-Agent Architecture)</a><p>Монолитната или едноагентна архитектура разчита на един мощен базов модел с широк контекстен прозорец за декомпозиране, планиране и изпълнение на комп...</p></li><li><a href="/pages/multi-agent-systems.html">Мултиагентни системи</a><p>Мултиагентните системи (Multi-Agent Systems - MAS) са архитектури в изкуствения интелект, при които множество специализирани AI агенти си взаимодейств...</p></li><li><a href="/pages/context-window-efficiency.html">Ефективност на контекстния прозорец</a><p>Ефективността на контекстния прозорец измерва способността на езиков модел да извлича, синтезира и разсъждава върху дълги поредици от токени без загуб...</p></li><li><a href="/pages/cognitive-architectures.html">Когнитивни архитектури (Cognitive Architectures)</a><p>Когнитивните архитектури са цялостни софтуерни и теоретични модели на човешкия ум и интелигентно поведение, обединяващи възприятие, работна памет, дъл...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

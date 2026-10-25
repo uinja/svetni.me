@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Capobussi / Wikimedia Commons
+Задълбочено клинично проучване, проведено от изследователската лаборатория LynchLab, разтърси общността по изкуствен интелект с неочакван резултат: класическ..."><title>Десетгодишна конволюционна невронна мрежа победи съвременните мултимодални LLM при дерматологична диагностика - Светни.ме</title><meta property="og:title" content="Десетгодишна конволюционна невронна мрежа победи съвременните мултимодални LLM при дерматологична диагностика - Светни.ме"><meta property="og:description" content="Източник: Capobussi / Wikimedia Commons
+Задълбочено клинично проучване, проведено от изследователската лаборатория LynchLab, разтърси общността по изкуствен интелект с неочакван резултат: класическ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/25/ten-year-old-cnn-outperforms-frontier-llms-skin-cancer/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/25/ten-year-old-cnn-outperforms-frontier-llms-skin-cancer/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Десетгодишна конволюционна невронна мрежа победи съвременните мултимодални LLM при дерматологична диагностика</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->25 октомври 2026 г.</p><div><p><img src="/articles/2026/10/25/ten-year-old-cnn-outperforms-frontier-llms-skin-cancer/hero.png" alt="Дерматоскопски оптичен инструмент за клинична диагностика на кожни лезии"><br><small>Източник: Capobussi / Wikimedia Commons</small></p>
+<p>Задълбочено клинично проучване, проведено от изследователската лаборатория LynchLab, разтърси общността по изкуствен интелект с неочакван резултат: класическа <a href="/pages/convolutional-neural-networks.html">конволюционна невронна мрежа (Convolutional Neural Networks, CNN)</a> с 10-годишна архитектура (модифициран ResNet от 2016 г.) категорично надмина най-новите мултимодални гранични езикови модели при ранна <a href="/pages/dermatology-diagnosis.html">дерматологична диагностика с ИИ</a> на рак на кожата [1].</p>
+<p>В експеримента са тествани над 15 000 дерматоскопски изображения на пигментни лезии и ранен меланом. Докато флагманските мултимодални модели от 2026 г. генерират красноречиви и убедителни медицински описания, тяхната диагностична чувствителност (способност да открият реално болен пациент) се оказа с 14% по-ниска от тази на старата, строго профилирана CNN архитектура. Нещо по-лошо – големите модели показаха опасен процент на халюциниране на фалшиво отрицателни резултати при атипични лезии.</p>
+<h2>Причините: Пространствена локализация срещу глобална семантика</h2>
+<p>Научният анализ обяснява защо модерните визуални трансформатори изостават в тази специфична област на <a href="/pages/medical-ai.html">медицинския ИИ (Medical AI)</a>:</p>
+<ul>
+<li><strong>Липса на индуктивно отклонение (Inductive Bias):</strong> Конволюционните слоеве са математически оптимизирани за локална пространствена транслация – те улавят микроскопични пикселни текстури, неравности в ръбовете и фини пигментни мрежи, които са решаващи за откриване на рак.</li>
+<li><strong>Прекомерно обобщаване на трансформаторите:</strong> Мултимодалните LLM разчитат на глобално внимание (self-attention), което често „изглажда“ дребните аномалии, опитвайки се да съгласува изображението с преобладаващите концепции от общия обучителен масив.</li>
+<li><strong>Подвеждаща увереност в отговора:</strong> При <a href="/pages/model-evaluation.html">оценката на модели (Model Evaluation)</a> най-големият риск е, че генеративните модели формулират грешната диагноза с авторитетен медицински тон, който може лесно да подведе неопитен лекар.</li>
+</ul>
+<h2>Дългосрочни последствия за медицинския софтуерен инженеринг</h2>
+<p>Резултатите от изследването поставят остро фундаменталния въпрос за <a href="/pages/specialized-models.html">специализираните модели срещу генералните LLM</a>. През последните две години технологичната индустрия масово се опита да замени вертикалните, доказани софтуерни алгоритми с универсални генеративни модели, водена от убеждението, че по-големият мащаб на параметрите автоматично гарантира по-висока точност във всяка сфера.</p>
+<p>В дългосрочен план медицината ще наложи хибриден архитектурен стандарт. Критичната фаза на откриване на патологии, радиологични аномалии и микроструктурен анализ ще остане запазена територия за компактни, строго проверени конволюционни класификатори, които не халюцинират и имат математически доказуеми граници на грешка. Ролята на големите езикови модели ще се сведе до структуриране на финалния епикризен доклад и обясняване на резултатите на достъпен език за пациента.</p>
+<p><img src="/articles/2026/10/25/ten-year-old-cnn-outperforms-frontier-llms-skin-cancer/infographic.png" alt="Инфографика: Защо класическите CNN превъзхождат генеративните LLM в дерматологията"><br><small>Четири фактора, обуславящи победата на ResNet архитектурата при откриване на меланом</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://lynchlab.net/llm-skin-cancer">A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis – LynchLab</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/specialized-models.html">Специализирани модели срещу генерални LLM</a><p>Дебатът между специализирани модели и универсални генерални LLM засяга архитектурния избор в софтуерното инженерство.</p></li><li><a href="/pages/model-evaluation.html">Оценяване на модели (Model Evaluation)</a><p>Оценяване на модели (Model Evaluation) е систематичната инженерна дисциплина по тестване, верификация и бенчмаркинг на възможностите, фактологическата...</p></li><li><a href="/pages/medical-ai.html">Медицински изкуствен интелект (Medical AI)</a><p>Медицинският изкуствен интелект (Medical AI) представлява специализирани алгоритми за дълбоко обучение, обучени за анализ на рентгенографии, ЯМР, гено...</p></li><li><a href="/pages/dermatology-diagnosis.html">Дерматологична диагностика с ИИ</a><p>Дерматологичната диагностика с изкуствен интелект използва невронни мрежи за класификация на кожни лезии, меланоми и възпалителни дерматози от дермато...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

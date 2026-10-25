@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / PyTorch Conference 2026
+По време на годишната конференция PyTorch Conference 2026 инженерните екипи на Google и Meta обявиха съвместното пускане с отворен код на TorchTPU – дългоо..."><title>Google и Meta пуснаха с отворен код TorchTPU за нативна поддръжка на PyTorch върху Google TPU чипове - Светни.ме</title><meta property="og:title" content="Google и Meta пуснаха с отворен код TorchTPU за нативна поддръжка на PyTorch върху Google TPU чипове - Светни.ме"><meta property="og:description" content="Източник: InfoQ / PyTorch Conference 2026
+По време на годишната конференция PyTorch Conference 2026 инженерните екипи на Google и Meta обявиха съвместното пускане с отворен код на TorchTPU – дългоо..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/25/google-meta-torchtpu-native-pytorch-tpu-open-source/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/25/google-meta-torchtpu-native-pytorch-tpu-open-source/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google и Meta пуснаха с отворен код TorchTPU за нативна поддръжка на PyTorch върху Google TPU чипове</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->25 октомври 2026 г.</p><div><p><img src="/articles/2026/10/25/google-meta-torchtpu-native-pytorch-tpu-open-source/hero.png" alt="Официална презентация на TorchTPU по време на PyTorch Conference 2026 от инженерите на Google и Meta"><br><small>Източник: InfoQ / PyTorch Conference 2026</small></p>
+<p>По време на годишната конференция PyTorch Conference 2026 инженерните екипи на Google и Meta обявиха съвместното пускане с отворен код на <a href="/pages/torchtpu.html">TorchTPU</a> – дългоочакван компилаторен и софтуерен стек, осигуряващ директна, първокласна съвместимост на <a href="/pages/pytorch.html">PyTorch</a> с хардуерните тензорни процесори <a href="/pages/tpu.html">TPU</a> на Google [1]. Проектът премахва десетилетната изолация между доминиращия софтуерен фреймуърк за изследвания и специализираните ASIC ускорители.</p>
+<p>Исторически разгръщането на PyTorch върху TPU клъстери изискваше сложни междинни преобразуватели чрез Torch-XLA, което водеше до непредвидими спадове в производителността, затруднено профилиране на оперативната памет и чести прекъсвания при <a href="/pages/distributed-training.html">разпределено обучение (Distributed Training)</a>. TorchTPU интегрира директен хардуерен бекенд в ядрото на PyTorch 2.x, позволявайки динамично разпределяне на графи и автоматично сливане на кърнели без модификация на потребителския код.</p>
+<h2>Архитектурни подобрения и интеграция с OpenXLA</h2>
+<p>Сърцевината на TorchTPU стъпва върху обновения междинен компилаторен слой <a href="/pages/open-xla.html">OpenXLA</a>. За разлика от класическите статични компилации, новата библиотека поддържа пълна съвместимост с механизма <code>torch.compile</code>, компилирайки операции в движение директно към микрокода на TPU v5p и TPU v6e.</p>
+<p>Основните инженерни оптимизации включват:</p>
+<ul>
+<li><strong>Zero-Copy споделяне на тензори:</strong> Директен трансфер на тегла между HBM (High Bandwidth Memory) чиповете без ненужна сериализация в хост паметта.</li>
+<li><strong>Оптимизирано разпределение на комуникационните примитиви:</strong> Нативно използване на вътрешната оптична мрежова топология (Optical Circuit Switches) на Google за паралелизъм на модела.</li>
+<li><strong>Еднакъв интерфейс за разработка:</strong> Инженерите могат да прототипират код локално на NVIDIA GPU и да го стартират на TPU мегаклъстери само с промяна на целевото устройство <code>device = &#39;tpu&#39;</code>.</li>
+</ul>
+<h2>Дългосрочни индустриални и системни последици</h2>
+<p>Пускането на TorchTPU с отворен код представлява стратегически удар срещу почти пълния монопол на софтуерната екосистема CUDA на NVIDIA. Докато досега стартъпите и изследователските центрове избираха графични процесори на NVIDIA най-вече заради безпроблемната поддръжка в PyTorch, сега бариерата за преминаване към облачните TPU клъстери на Google на практика пада.</p>
+<p>В дългосрочен план това партньорство между Google и Meta ще ускори хардуерната диверсификация в цялата индустрия за изкуствен интелект. Meta получава втори мащабен доставчик на изчислителна мощност за обучение на своите модели от семейството Llama, намалявайки капиталовата си зависимост от ценовата политика на NVIDIA. За облачния пазар това означава по-висока конкуренция, по-ниски цени на изчислителния токен и ускорено навлизане на отворени стандарти за компилация на невронни мрежи.</p>
+<p><img src="/articles/2026/10/25/google-meta-torchtpu-native-pytorch-tpu-open-source/infographic.png" alt="Инфографика: Архитектурен стек на TorchTPU за интеграция на PyTorch с хардуера на Google"><br><small>Четири ключови слоя на отворения компилаторен интерфейс TorchTPU</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/google-meta-torchtpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs – InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/tpu.html">TPU (Tensor Processing Unit)</a><p>TPU (Tensor Processing Unit) е специализиран интегрален модул (ASIC), разработен от Google специално за ускоряване на натоварвания с изкуствен интелек...</p></li><li><a href="/pages/torchtpu.html">TorchTPU</a><p>TorchTPU е софтуерна библиотека с отворен код, разработена съвместно от Google и Meta, която осигурява нативна съвместимост и оптимизирано изпълнение ...</p></li><li><a href="/pages/pytorch.html">PyTorch</a><p>PyTorch е водеща софтуерна библиотека с отворен код за машинно обучение и дълбоки невронни мрежи, първоначално създадена от Meta AI и понастоящем упра...</p></li><li><a href="/pages/open-xla.html">OpenXLA</a><p>OpenXLA е модулен компилатор за машинно обучение с отворен код, създаден да ускорява изпълнението на невронни мрежи върху широк спектър от хардуерни б...</p></li><li><a href="/pages/distributed-training.html">Разпределено обучение (Distributed Training)</a><p>Разпределеното обучение е техника за паралелно трениране на масивни невронни мрежи върху клъстери от хиляди изчислителни ускорители.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

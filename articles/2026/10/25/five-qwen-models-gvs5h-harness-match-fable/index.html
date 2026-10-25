@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Rama / Wikimedia Commons
+В изследователската общност с отворен код беше представен сензационен експеримент, доказващ, че стратегическата оркестрация на компактни невронни мрежи може напъл..."><title>Ансамбъл от пет модела Qwen3.8-27B достига резултатите на гигантския Fable 5 чрез спекулативна верификация - Светни.ме</title><meta property="og:title" content="Ансамбъл от пет модела Qwen3.8-27B достига резултатите на гигантския Fable 5 чрез спекулативна верификация - Светни.ме"><meta property="og:description" content="Източник: Rama / Wikimedia Commons
+В изследователската общност с отворен код беше представен сензационен експеримент, доказващ, че стратегическата оркестрация на компактни невронни мрежи може напъл..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/25/five-qwen-models-gvs5h-harness-match-fable/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/25/five-qwen-models-gvs5h-harness-match-fable/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Ансамбъл от пет модела Qwen3.8-27B достига резултатите на гигантския Fable 5 чрез спекулативна верификация</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->25 октомври 2026 г.</p><div><p><img src="/articles/2026/10/25/five-qwen-models-gvs5h-harness-match-fable/hero.png" alt="Суперкомпютърен изчислителен клъстер за разпределено паралелно обучение"><br><small>Източник: Rama / Wikimedia Commons</small></p>
+<p>В изследователската общност с отворен код беше представен сензационен експеримент, доказващ, че стратегическата оркестрация на компактни невронни мрежи може напълно да обезсмисли монолитните супермодели [1]. Чрез използване на специализирания софтуерен харнес <a href="/pages/gvs5h-harness.html">GVS5H Harness</a>, ансамбъл от пет успоредно работещи модела <a href="/pages/qwen-3-8.html">Qwen 3.8</a> с 27 милиарда параметри успя да изравни и на места да надмине резултатите на флагманския гигант Fable 5 (над 700 милиарда параметри) в най-трудните математически и софтуерни тестове.</p>
+<p>Ключът към този пробив е парадигмата на <a href="/pages/speculative-verification.html">спекулативната верификация (Speculative Verification)</a>. Вместо да разчита на един колосален модел, който мисли бавно и струва цяло състояние за инференс, харнесът GVS5H стартира пет независими копия на по-малкия модел с леко вариращи начални параметри (температура и промпт вариации). Моделите генерират паралелни разсъждения, след което консенсусен алгоритъм филтрира грешките и синтезира финалния отговор.</p>
+<h2>Механизъм на паралелното гласуване и изолиране на халюцинации</h2>
+<p>Математическата основа на <a href="/pages/ensemble-reasoning.html">ансамбловите логически разсъждения (Ensemble Reasoning)</a> стъпва върху теоремата на Кондорсе за журито. Тъй като вероятността един модел да допусне случайна халюцинация е независима от останалите, вероятността три от петте независими екземпляра да направят абсолютно една и съща грешка в изчисленията клони към нула:</p>
+<ul>
+<li><strong>Етап на генериране на хипотези:</strong> Петте агента паралелно генерират пълни вериги на разсъждение (Chain-of-Thought) за решаване на задачата.</li>
+<li><strong>Кръстосана верификация:</strong> Всеки модел получава решенията на останалите четири и извършва стъпка по стъпка логически одит, маркирайки некоректни математически преходи.</li>
+<li><strong>Мнозинствен вот за консенсус:</strong> Системата автоматично отхвърля крайните отклонения и сглобява финалния отговор само от верифицираните логически блокове.</li>
+</ul>
+<h2>Дългосрочни системни и икономически последици</h2>
+<p>Резултатите от проекта GVS5H представляват тежък удар върху икономическия наратив за непрекъснато уголемяване на моделите. Докато обучението и хостването на гиганти от класа на Fable 5 изисква клъстери за стотици милиони долари, пет модела Qwen-27B могат да се изпълняват едновременно на стандартни потребителски сървъри с <a href="/pages/inference-efficiency.html">ефективност на инференса (Inference Efficiency)</a>, съкращаваща общите оперативни разходи с 85%.</p>
+<p>В дългосрочен план софтуерното инженерство ще прегърне ансамбловите парадигми за всички критични приложения. В банковия сектор, автопилотите и медицинската диагностика никой няма да се доверява на един единствен гигантски модел, независимо колко висок е неговият бенчмарк. Бъдещето принадлежи на децентрализирани ансамбли от бързи, специализирани модели, които непрекъснато се контролират и верифицират взаимно в реално време.</p>
+<p><img src="/articles/2026/10/25/five-qwen-models-gvs5h-harness-match-fable/infographic.png" alt="Инфографика: Спекулативна верификация с харнеса GVS5H"><br><small>Четири стъпки за изравняване на резултатите на гигантските модели чрез ансамбъл от пет Qwen модела</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/slee-persis/GVS5H">Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness – GitHub</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/speculative-verification.html">Спекулативна верификация (Speculative Verification)</a><p>Спекулативната верификация е изчислителна методология, при която множество паралелни компактни модели генерират кандидат-решения, които се валидират ч...</p></li><li><a href="/pages/qwen-3-8.html">Qwen 3.8</a><p>Qwen 3.</p></li><li><a href="/pages/inference-efficiency.html">Ефективност на изводите (Inference Efficiency)</a><p>Ефективността на изводите (Inference Efficiency) определя способността на обучен модел за изкуствен интелект да генерира отговори и прогнози с минимал...</p></li><li><a href="/pages/gvs5h-harness.html">GVS5H Harness</a><p>GVS5H е отворен софтуерен харнес за ансамблово паралелно изпълнение и спекулативна верификация на средни по размер езикови модели.</p></li><li><a href="/pages/ensemble-reasoning.html">Ансамблови логически разсъждения (Ensemble Reasoning)</a><p>Ансамбловите логически разсъждения представляват стратегия, при която изводите на няколко независими невронни модела се комбинират за решаване на труд...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
