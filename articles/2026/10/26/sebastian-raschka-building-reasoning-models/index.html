@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Peellden / Wikimedia Commons
+Признатият изследовател и педагог д-р Себастиан Рашка публикува дългоочаквания си отворен практически курс за изграждане на модели за разсъждение (Reasoning M..."><title>Себастиан Рашка представи цялостен технически наръчник за изграждане на reasoning модели от нулата - Светни.ме</title><meta property="og:title" content="Себастиан Рашка представи цялостен технически наръчник за изграждане на reasoning модели от нулата - Светни.ме"><meta property="og:description" content="Източник: Peellden / Wikimedia Commons
+Признатият изследовател и педагог д-р Себастиан Рашка публикува дългоочаквания си отворен практически курс за изграждане на модели за разсъждение (Reasoning M..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/26/sebastian-raschka-building-reasoning-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/26/sebastian-raschka-building-reasoning-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Себастиан Рашка представи цялостен технически наръчник за изграждане на reasoning модели от нулата</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 октомври 2026 г.</p><div><p><img src="/articles/2026/10/26/sebastian-raschka-building-reasoning-models/hero.png" alt="Силициева полупроводникова пластина за производство на високопроизводителни изчислителни чипове"><br><small>Източник: Peellden / Wikimedia Commons</small></p>
+<p>Признатият изследовател и педагог д-р <a href="/pages/sebastian-raschka.html">Себастиан Рашка</a> публикува дългоочаквания си отворен практически курс за изграждане на модели за разсъждение (Reasoning Models) от нулата [1]. Материалът демистифицира технологичните основи зад пробивите на системи като OpenAI o1 и разкрива математическите и инженерните тънкости при мащабиране на изчисленията по време на тестване (Test-Time Compute).</p>
+<h2>Механика на изчисленията по време на тест (Test-Time Compute)</h2>
+<p>Основният принос на курса на Рашка е детайлното разглеждане на прехода от класическо предварително обучение (Pre-training) към оптимизация на времето за инференс. Вместо просто да се увеличава размерът на невронната мрежа, reasoning моделите генерират скрити вериги от разсъждения (Chain-of-Thought), използват алгоритми за търсене в дърво като Monte Carlo Tree Search (MCTS) и оценяват междинните стъпки чрез специални модели за оценка (Process Reward Models - PRM).</p>
+<p>Рашка предоставя чиста Python и PyTorch имплементация, показваща как малък модел с 3 милиарда параметъра може да надмине многократно по-големи базови модели в математиката и логиката, ако му се позволи да изследва множество хипотези преди да върне окончателен отговор.</p>
+<h2>Алгоритъмът GRPO и групово подсилване</h2>
+<p>Курсът обяснява алгоритмични иновации като Group Relative Policy Optimization (GRPO), които елиминират нуждата от отделен модел критик (Critic Model) при обучение с подсилване, правейки тренировъчния процес значително по-стабилен и достъпен за индивидуални изследователи.</p>
+<h2>Демократизация на когнитивните архитектури в отворената наука</h2>
+<p>Образователният принос на Себастиан Рашка играе решаваща роля за намаляване на информационната асиметрия между затворените комерсиални лаборатории и глобалната академична общност. Докато технологичните гиганти пазят в тайна спецификите на своите конвейери за разсъждение, откритите наръчници позволяват на хиляди независими разработчици да експериментират с нови методи за валидация и самокорекция.</p>
+<p>Това ще доведе до вълна от специализирани, леки reasoning модели, персонализирани за научни изследвания, биоинформатика и формална верификация на код.</p>
+<p><img src="/articles/2026/10/26/sebastian-raschka-building-reasoning-models/infographic.png" alt="Инфографика: Изграждане на Reasoning модели от нулата"><br><small>Четири стълба на архитектурата за разсъждение по време на тест</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://magazine.sebastianraschka.com/p/building-reasoning-models">Sebastian Raschka&#39;s from-scratch video course on building reasoning models – Sebastian Raschka / Hacker News</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sebastian-raschka.html">Себастиан Рашка</a><p>Д-р Себастиан Рашка (Sebastian Raschka) е признат изследовател в областта на машинното обучение, автор на фундаментални технически книги и водещ педаг...</p></li><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/reasoning-models.html">Разсъждаващи модели (Reasoning Models)</a><p>Разсъждаващите модели (Reasoning Models) са ново поколение изкуствени невронни мрежи, обучени да отделят значителен изчислителен ресурс по време на из...</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

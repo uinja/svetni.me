@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / Rod Castler
+Софтуерната общност посрещна с огромен интерес проекта PaperPilot – модерен, изцяло написан на езика Rust софтуерен енджин за обработка и синтактичен анали..."><title>PaperPilot: Изцяло написан на Rust PDF енджин с нулева облачна зависимост, WASM и нативен MCP сървър - Светни.ме</title><meta property="og:title" content="PaperPilot: Изцяло написан на Rust PDF енджин с нулева облачна зависимост, WASM и нативен MCP сървър - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / Rod Castler
+Софтуерната общност посрещна с огромен интерес проекта PaperPilot – модерен, изцяло написан на езика Rust софтуерен енджин за обработка и синтактичен анали..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/26/paperpilot-pure-rust-pdf-engine-wasm-mcp/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/26/paperpilot-pure-rust-pdf-engine-wasm-mcp/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>PaperPilot: Изцяло написан на Rust PDF енджин с нулева облачна зависимост, WASM и нативен MCP сървър</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 октомври 2026 г.</p><div><p><img src="/articles/2026/10/26/paperpilot-pure-rust-pdf-engine-wasm-mcp/hero.png" alt="Микропроцесорна памет и високоскоростна обработка на данни в сигурна среда"><br><small>Източник: Wikimedia Commons / Rod Castler</small></p>
+<p>Софтуерната общност посрещна с огромен интерес проекта <a href="/pages/rust.html">PaperPilot</a> – модерен, изцяло написан на езика <a href="/pages/rust.html">Rust</a> софтуерен енджин за обработка и синтактичен анализ на сложни PDF документи [1]. Проектът предлага пълна независимост от външни облачни услуги, компилация към <a href="/pages/webassembly.html">WebAssembly</a> и вграден сървър по стандарта <a href="/pages/model-context-protocol.html">Model Context Protocol</a> за директно свързване с <a href="/pages/ai-agents.html">автономни агенти</a>.</p>
+<h2>Сигурна памет и светкавичен анализ без C/C++ зависимости</h2>
+<p>Традиционните библиотеки за четене на PDF формати (като Poppler или PDFium) съдържат милиони редове наследен C/C++ код, известен с честите си уязвимости за препълване на буфера и риск от отдалечено изпълнение на зловреден код. PaperPilot пренаписва целия стек за парсване на Rust, гарантирайки абсолютна безопасност на паметта (Memory Safety).</p>
+<p>Библиотеката е способна да обработва хиляди страници в секунда на стандартен хардуер, запазвайки табличната структура, многоколонното форматиране и йерархията на заглавията. Благодарение на компилацията към WebAssembly, PaperPilot може да се изпълнява директно в уеб браузъра на клиента или в изолиран крайпътен възел.</p>
+<h2>Нативна интеграция с MCP протокола</h2>
+<p>Вместо да кара разработчиците да пишат ръчни обвивки за свързване с езикови модели, PaperPilot идва с готов вграден MCP сървър. Агентите могат да извикват структурирани команди за семантично търсене в документ, извличане на таблици и филтриране по глави без да препълват контекстния си прозорец с необработен текст.</p>
+<h2>Преходът към местна обработка на корпоративни знания</h2>
+<p>Успехът на PaperPilot илюстрира нарастващото търсене на сигурни, леки и локални инструменти за подготовка на данни за изкуствен интелект. Финансовите институции, правните кантори и медицинските центрове не могат да си позволят да изпращат чувствителни документи към външни OCR облаци за анализ.</p>
+<p>Проекти като PaperPilot доказват, че съчетанието между езика Rust, стандарти като MCP и отворените локални модели позволява изграждането на напълно изолирани и сигурни интелигентни системи, които не правят компромис с производителността.</p>
+<p><img src="/articles/2026/10/26/paperpilot-pure-rust-pdf-engine-wasm-mcp/infographic.png" alt="Инфографика: Архитектура на PaperPilot Rust PDF"><br><small>Четири стълба на локалния енджин с нулев облачен отпечатък</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/KrushnaVardhanReddy/PaperPilot">PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP – GitHub / Hacker News</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

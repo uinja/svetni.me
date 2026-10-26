@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ
+Корпорацията Microsoft обяви официалното пускане на версия 2.0 на официалния софтуерен пакет за разработка (SDK) за C# на протокола за модел контекст (Model Context Protocol) [1]. Н..."><title>Официалният MCP C# SDK 2.0 преминава към безсъстояние по HTTP и добавя многоходови заявки - Светни.ме</title><meta property="og:title" content="Официалният MCP C# SDK 2.0 преминава към безсъстояние по HTTP и добавя многоходови заявки - Светни.ме"><meta property="og:description" content="Източник: InfoQ
+Корпорацията Microsoft обяви официалното пускане на версия 2.0 на официалния софтуерен пакет за разработка (SDK) за C# на протокола за модел контекст (Model Context Protocol) [1]. Н..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/26/mcp-csharp-sdk-stateless-http-version-2/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/26/mcp-csharp-sdk-stateless-http-version-2/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Официалният MCP C# SDK 2.0 преминава към безсъстояние по HTTP и добавя многоходови заявки</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 октомври 2026 г.</p><div><p><img src="/articles/2026/10/26/mcp-csharp-sdk-stateless-http-version-2/hero.png" alt="Техническа илюстрация на архитектурата на безсъстояние в облачни протоколи"><br><small>Източник: InfoQ</small></p>
+<p>Корпорацията <a href="/pages/microsoft.html">Microsoft</a> обяви официалното пускане на версия 2.0 на официалния софтуерен пакет за разработка (SDK) за <a href="/pages/c-sharp.html">C#</a> на протокола за модел контекст (<a href="/pages/model-context-protocol.html">Model Context Protocol</a>) [1]. Новата версия въвежда фундаментални архитектурни промени, включително преминаване към напълно безсъстояние (Stateless) при HTTP комуникация и поддръжка на многоходови транзакции в рамките на една сесия.</p>
+<h2>Безсъстояние по HTTP и елиминиране на лепнещите сесии</h2>
+<p>В първоначалната реализация на MCP поддържането на постоянни SSE (Server-Sent Events) връзки изискваше съхраняване на състоянието на агента в паметта на конкретния бекенд сървър. Това създаваше огромни трудности при хоризонтално мащабиране в облачни среди като Kubernetes и Azure Container Apps, налагайки използване на тромави &#39;sticky sessions&#39;.</p>
+<p>С версия 2.0 всяка входяща HTTP заявка пренася необходимия криптографски токен за контекст в заглавната част, което позволява заявките на един и същ агент да се обслужват от различни бекенд инстанции без загуба на данни. Това отключва пълния потенциал на сървърлес архитектурите за изпълнение на MCP инструменти.</p>
+<h2>Многоходови заявки и асинхронно потвърждение</h2>
+<p>Другото ключово подобрение е въвеждането на многоходови диалози (Multi Round-Trip Requests) директно на протоколно ниво. Вместо да изчаква пълен цикъл за всяко извикване на инструмент, сървърът може да изпраща междинни въпроси за потвърждение към клиента преди да изпълни критични операции.</p>
+<h2>Утвърждаване на MCP като универсален промишлен стандарт</h2>
+<p>Пускането на версия 2.0 на C# SDK бележи окончателното интегриране на Model Context Protocol в корпоративния стек на .NET. За милионите корпоративни разработчици, поддържащи съществуващи бекенд системи на C#, това предоставя директен и сертифициран път за превръщане на вътрешните бази данни и микроуслуги в стандартизирани инструменти за изкуствен интелект.</p>
+<p>Премахването на състоянието превръща MCP в зрял протокол, готов да поеме натоварвания от милиарди транзакции дневно, циментирайки ролята му на де факто стандарт за свързване на модели с корпоративни ресурси.</p>
+<p><img src="/articles/2026/10/26/mcp-csharp-sdk-stateless-http-version-2/infographic.png" alt="Инфографика: Архитектурни нововъведения в MCP C# SDK 2.0"><br><small>Четири фундаментални подобрения в новата версия на протокола</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/MCP-CSharp-SDK-Stateless/">MCP C# SDK 2.0 Makes HTTP Stateless by Default and Adds Multi Round-Trip Requests – InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/api-design.html">API дизайн</a><p>API дизайнът е процесът на планиране, структуриране и дефиниране на архитектурата на един приложен програмен интерфейс (API).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

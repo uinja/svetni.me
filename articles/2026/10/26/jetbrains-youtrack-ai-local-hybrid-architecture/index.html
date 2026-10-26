@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: JetBrains Blog
+Компанията JetBrains публикува официалната си стратегическа визия за внедряване на изкуствен интелект в системата за управление на проекти и проследяване на грешки YouTrack..."><title>JetBrains представи стратегията „AI on Your Terms“ в YouTrack с хибридна и напълно локална архитектура - Светни.ме</title><meta property="og:title" content="JetBrains представи стратегията „AI on Your Terms“ в YouTrack с хибридна и напълно локална архитектура - Светни.ме"><meta property="og:description" content="Източник: JetBrains Blog
+Компанията JetBrains публикува официалната си стратегическа визия за внедряване на изкуствен интелект в системата за управление на проекти и проследяване на грешки YouTrack..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/26/jetbrains-youtrack-ai-local-hybrid-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/26/jetbrains-youtrack-ai-local-hybrid-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>JetBrains представи стратегията „AI on Your Terms“ в YouTrack с хибридна и напълно локална архитектура</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 октомври 2026 г.</p><div><p><img src="/articles/2026/10/26/jetbrains-youtrack-ai-local-hybrid-architecture/hero.png" alt="Официален банер на JetBrains за интеграцията на изкуствен интелект в YouTrack"><br><small>Източник: JetBrains Blog</small></p>
+<p>Компанията <a href="/pages/jetbrains.html">JetBrains</a> публикува официалната си стратегическа визия за внедряване на изкуствен интелект в системата за управление на проекти и проследяване на грешки YouTrack, озаглавена „AI on Your Terms“ [1]. Платформата въвежда хибридна архитектура, която позволява на всяка организация сама да избира къде се обработват данните: през външни облачни доставчици, частни сървъри или напълно изолирани локални модели.</p>
+<h2>Гъвкав избор на моделния стек и защита на интелектуалната собственост</h2>
+<p>За разлика от конкурентни платформи, които принуждават клиентите си да използват предварително избран облачен чатбот, YouTrack позволява свързване с локални инференс сървъри като Ollama, vLLM или корпоративни инстанции на Azure OpenAI. Инженерните екипи могат да конфигурират различни нива на достъп: например локален лек модел за автоматично категоризиране на вътрешни бъгове и облачен модел за резюмиране на публични клиентски отчети.</p>
+<p>JetBrains гарантира, че нито един ред код или описание на задача от потребителските хранилища не се използва за обучение на базови модели, което е от решаващо значение за спазване на европейските регулации за защита на личните данни.</p>
+<h2>Автономни работни потоци за триаж на грешки</h2>
+<p>Интеграцията надхвърля обикновения помощен чат. YouTrack AI може автоматично да открива дублиращи се тикети, да предлага релевантни Pull Requests и да генерира обобщения на дълги дискусии между инженери.</p>
+<h2>Бъдещето на софтуерните инструменти: Неутралност спрямо моделите</h2>
+<p>Подходът на JetBrains отразява нарастващото нежелание на европейския и международен бизнес да се обвързва с един технологичен гигант. В ера, в която производителността и цените на езиковите модели се променят с всяка седмица, способността за динамична смяна на бекенда без промяна в работния процес е огромно стратегическо предимство.</p>
+<p>Неутралните софтуерни платформи, които поставят контрола и поверителността в ръцете на потребителя, ще спечелят доверието на предприятията пред затворените монополни екосистеми.</p>
+<p><img src="/articles/2026/10/26/jetbrains-youtrack-ai-local-hybrid-architecture/infographic.png" alt="Инфографика: AI on Your Terms в JetBrains YouTrack"><br><small>Четири стълба на отворения подход за ИИ интеграция</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.jetbrains.com/youtrack/2026/10/ai-on-your-terms-how-we-see-ai-in-youtrack/">AI on Your Terms: How We See AI in YouTrack – The JetBrains Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/privacy.html">Поверителност (Privacy)</a><p>Поверителността (privacy) е фундаменталното право на индивида да контролира достъпа до своята лична информация и да бъде защитен от неоправдано наблюд...</p></li><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/enterprise-software.html">Корпоративен софтуер (Enterprise Software)</a><p>Корпоративният софтуер (Enterprise Software) обхваща мащабните информационни системи (ERP, CRM, SCM), поддържащи критичните бизнес операции на големи ...</p></li><li><a href="/pages/developer-tools.html">Инструменти за разработка (Developer Tools)</a><p>Инструментите за разработка (DevTools) обхващат програмните средства, среди за разработка (IDE), дебъгери, компилатори, системи за контрол на версиите...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
