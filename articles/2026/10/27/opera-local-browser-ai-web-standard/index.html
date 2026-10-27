@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Opera Software / TechCrunch
+Европейската софтуерна компания Opera внесе официално предложение до W3C и Web Incubator Community Group за нов отворен уеб стандарт, целящ да стандартизира ло..."><title>Opera предложи нов отворен уеб стандарт за локално изпълнение на AI модели в браузъра - Светни.ме</title><meta property="og:title" content="Opera предложи нов отворен уеб стандарт за локално изпълнение на AI модели в браузъра - Светни.ме"><meta property="og:description" content="Източник: Opera Software / TechCrunch
+Европейската софтуерна компания Opera внесе официално предложение до W3C и Web Incubator Community Group за нов отворен уеб стандарт, целящ да стандартизира ло..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/27/opera-local-browser-ai-web-standard/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/27/opera-local-browser-ai-web-standard/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Opera предложи нов отворен уеб стандарт за локално изпълнение на AI модели в браузъра</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 октомври 2026 г.</p><div><p><img src="/articles/2026/10/27/opera-local-browser-ai-web-standard/hero.png" alt="Интерфейс на модерен браузър с активирани WebGPU хардуерни ускорители"><br><small>Източник: Opera Software / TechCrunch</small></p>
+<p>Европейската софтуерна компания <a href="/pages/opera.html">Opera</a> внесе официално предложение до W3C и Web Incubator Community Group за нов отворен уеб стандарт, целящ да стандартизира локалното изпълнение на базови невронни модели директно в средата на уеб браузъра [1]. Стандартът осигурява унифициран JavaScript API интерфейс за достъп до специализирани хардуерни ускорители чрез <a href="/pages/webgpu.html">WebGPU</a> и <a href="/pages/webnn.html">WebNN</a>, проправяйки път към истински децентрализиран <a href="/pages/browser-ai.html">браузърен изкуствен интелект</a>.</p>
+<h2>Архитектура на браузърния локален инференс без инсталация</h2>
+<p>Досега изпълнението на локални модели (Local LLMs) изискваше сложна потребителска инсталация на тежък софтуер (като Ollama или LM Studio) или теглене на гигабайти Wasm модули при всяко посещение на уебсайт. Предложението на Opera въвежда концепцията за споделено локално хранилище за базови модели и стандартизиран драйверен мост към клиентския чип (Apple Neural Engine, Qualcomm Snapdragon NPU, Intel NPU, Nvidia RTX).</p>
+<p>Уеб сайтовете могат да изискват изпълнение на стандартни задачи – като резюмиране, граматична корекция, превод или семантично търсене – само с едно извикване на API функтора: <code>navigator.ai.languageModel.generate()</code>. Браузърът изолира изпълнението в сигурен sandbox, гарантирайки, че личните данни на потребителя никога не напускат устройството и не се изпращат към облачни сървъри.</p>
+<h2>Икономическа независимост от облачните провайдъри</h2>
+<p>За независимите уеб разработчици този стандарт е спасителен пояс срещу смазващите сметки за облачен инференс. Чрез делегиране на изчисленията към хардуера на крайния потребител сайтовете могат да предлагат богата интелигентна функционалност при практически нулев сървърен разход за изчислителна мощ.</p>
+<h2>Преразпределение на изчислителната мощ от облака към крайния клиент</h2>
+<p>Инициативата на Opera маркира началото на нов етап в развитието на световната мрежа. През последното десетилетие облачните хиперскейлъри монополизираха изчислителните иновации, превръщайки браузърите в пасивни терминали за рендериране на сървърно генериран трафик.</p>
+<p>Масовото навлизане на свръхмощни невронни процесори (NPU) във всеки модерен лаптоп и смартфон прави тази централизация икономически и екологично нерационална. Стандартизирането на локалния браузърен интелект възстановява първоначалната философия на уеб мрежата като равнопоставена (peer-to-peer) разпределена среда, връщайки контрола върху данните и изчисленията в ръцете на самите потребители.</p>
+<p><img src="/articles/2026/10/27/opera-local-browser-ai-web-standard/infographic.png" alt="Инфографика: Уеб стандартът на Opera за локален браузърен ИИ"><br><small>Четири стълба на локалната браузърна интелигентност</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/">Opera introduces a new web standard to let users deploy AI locally in their browser – TechCrunch</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/webnn.html">Web Neural Network (WebNN)</a><p>Web Neural Network (WebNN) е възникващ международен уеб стандарт, разработван от W3C, който осигурява директен браузърен достъп до специализирани хард...</p></li><li><a href="/pages/webgpu.html">WebGPU</a><p>WebGPU е модерен стандарт и API за графични и паралелни изчисления в уеб браузъри, наследник на WebGL.</p></li><li><a href="/pages/opera.html">Opera</a><p>Opera е европейска технологична компания и разработчик на едноименния уеб браузър.</p></li><li><a href="/pages/browser-ai.html">Браузърен изкуствен интелект (Browser AI)</a><p>Браузърният изкуствен интелект обхваща изпълнението на модели за машинно обучение директно в уеб клиента чрез технологии като WebGPU и WebAssembly (Wa...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

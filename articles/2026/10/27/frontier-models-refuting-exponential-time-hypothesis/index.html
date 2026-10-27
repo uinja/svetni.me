@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / Complexity Theory Forum
+Поредица от съвместни експерименти, проведени от водещи изследователски екипи в областта на изкуствения интелект, предизвика буря в академичните среди..."><title>Водещи AI лаборатории твърдят, че новите модели опровергават хипотезата за експоненциалното време (ETH) - Светни.ме</title><meta property="og:title" content="Водещи AI лаборатории твърдят, че новите модели опровергават хипотезата за експоненциалното време (ETH) - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / Complexity Theory Forum
+Поредица от съвместни експерименти, проведени от водещи изследователски екипи в областта на изкуствения интелект, предизвика буря в академичните среди..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/27/frontier-models-refuting-exponential-time-hypothesis/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/27/frontier-models-refuting-exponential-time-hypothesis/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Водещи AI лаборатории твърдят, че новите модели опровергават хипотезата за експоненциалното време (ETH)</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 октомври 2026 г.</p><div><p><img src="/articles/2026/10/27/frontier-models-refuting-exponential-time-hypothesis/hero.png" alt="Дъска с математически уравнения и графи на алгоритмична сложност"><br><small>Източник: TechCrunch / Complexity Theory Forum</small></p>
+<p>Поредица от съвместни експерименти, проведени от водещи изследователски екипи в областта на изкуствения интелект, предизвика буря в академичните среди по теоретична информатика, след като авторите публикуваха резултати, демонстриращи устойчиво субекспоненциално решаване на класически трудни инстанции на задачата 3-SAT [1]. Ако изводите бъдат потвърдени, това би представлявало емпирично оспорване на <a href="/pages/exponential-time-hypothesis.html">хипотезата за експоненциалното време (ETH)</a> – един от стълбовете на модерната <a href="/pages/computational-complexity.html">теория на изчислителната сложност</a>.</p>
+<h2>Механизъм на невронно-направляваното съкращаване на пространства от решения</h2>
+<p>Хипотезата за експоненциалното време постулира, че за най-лошите инстанции на NP-пълни проблеми времето за намиране на точно решение расте експоненциално с броя на променливите: $O(2^{\delta n})$. Традиционните алгоритми за търсене (като DPLL и CDCL солвъри) се сблъскват с експоненциална комбинаторна експлозия при преминаване през критичните фазови преходи (phase transitions).</p>
+<p>Новото поколение reasoning модели обаче използва топологичен анализ на графа на зависимостите между булевите променливи. Чрез извличане на скрити геометрични симетрии в клаузите невронната мрежа успява да елиминира гигантски клонове от дървото на търсене още преди тяхното разгръщане, постигайки мащабиране, което при огромни масиви от променливи показва полиномиално или квазиполиномиално поведение.</p>
+<h2>Академичен скептицизъм: Най-лош случай срещу случайно разпределение</h2>
+<p>Теоретичните математици посрещнаха твърденията със сдържан скептицизъм. Основният аргумент на критиците е, че бенчмарковете, използвани от AI лабораториите, макар и генерирани при критичния коефициент на клаузи спрямо променливи ($m/n \approx 4.26$), все пак представляват случайни разпределения. Доказването на опровержение на ETH изисква решаване на конструирани инстанции за най-лошия възможен случай (worst-case), а не само средностатистически успехи върху милиони тестови примери.</p>
+<h2>Преосмисляне на границите на изчислимото</h2>
+<p>Независимо дали формалното математическо опровержение на ETH ще издържи стриктната проверка на академичната общност, практическите последици от тези резултати са революционни. За индустрията разликата между теоретичен най-лош случай и емпирично решим случай е фундаментална: ако 99.99% от реалните проблеми за оптимизация, разписание, логистика и протеинов дизайн могат да бъдат решени в полиномиално време от невронни системи, практическото значение на експоненциалната бариера изчезва.</p>
+<p>Това развитие бележи сближаването на чистата математика с приложната мощ на мащабните изчислителни клъстери. Изкуственият интелект вече не е просто инструмент за статистическа интерполация, а се превръща в автономна изследователска сила, способна да открива невиждани алгоритмични преки пътища през вековни интелектуални лабиринти.</p>
+<p><img src="/articles/2026/10/27/frontier-models-refuting-exponential-time-hypothesis/infographic.png" alt="Инфографика: AI срещу хипотезата за експоненциалното време"><br><small>Четири стълба на дебата около алгоритмичната сложност и 3-SAT</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/">Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean? – TechCrunch</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/exponential-time-hypothesis.html">Хипотеза за експоненциалното време (ETH)</a><p>Хипотезата за експоненциалното време (Exponential Time Hypothesis - ETH) е фундаментална концепция в теоретичните компютърни науки и изчислителната сл...</p></li><li><a href="/pages/computational-complexity.html">Изчислителна сложност</a><p>Изчислителната сложност поставя строги математически граници пред възможностите на алгоритмите.</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Anthropic / InfoQ
+Инженерният екип на Anthropic публикува подробен технически доклад, описващ радикална преработка на вътрешните системи за контрол на версиите (Source Control), пригодена..."><title>Как Anthropic препроектира контрола на версиите за автономна софтуерна разработка с AI агенти - Светни.ме</title><meta property="og:title" content="Как Anthropic препроектира контрола на версиите за автономна софтуерна разработка с AI агенти - Светни.ме"><meta property="og:description" content="Източник: Anthropic / InfoQ
+Инженерният екип на Anthropic публикува подробен технически доклад, описващ радикална преработка на вътрешните системи за контрол на версиите (Source Control), пригодена..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/27/anthropic-redesigns-source-control-ai-development/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/27/anthropic-redesigns-source-control-ai-development/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как Anthropic препроектира контрола на версиите за автономна софтуерна разработка с AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 октомври 2026 г.</p><div><p><img src="/articles/2026/10/27/anthropic-redesigns-source-control-ai-development/hero.png" alt="Интерфейс за визуализация на нелинейни дървета от версии и автоматизирани клонове"><br><small>Източник: Anthropic / InfoQ</small></p>
+<p>Инженерният екип на <a href="/pages/anthropic.html">Anthropic</a> публикува подробен технически доклад, описващ радикална преработка на вътрешните системи за <a href="/pages/source-control.html">контрол на версиите (Source Control)</a>, пригодена специално за високоскоростна работа с десетки паралелни <a href="/pages/ai-agents.html">автономни агенти за кодиране</a> [1]. Традиционната парадигма на <a href="/pages/git.html">Git</a>, създадена преди две десетилетия за човешки програмисти, се оказва тесен bottleneck в ерата на машинната разработка.</p>
+<h2>Ограниченията на Git в многоагентна среда</h2>
+<p>Класическият модел на Git разчита на човешки темпове: разработчик създава клон (branch), прави няколко комита, отваря pull request и чака преглед. Когато обаче стотици автономни агенти работят едновременно върху една и съща кодова база, генерирайки хиляди микро-промени в секунда, се получава постоянен сблъсък на конфликти при сливане (merge conflicts) и блокиране на главното стебло (main trunk).</p>
+<p>За да реши този проблем, Anthropic създава протокол за спекулативен семантичен контрол на версиите. Системата поддържа дървовиден ориентиран ацикличен граф (DAG), в който промените се оценяват не на ниво символни дифове (diffs), а като абстрактни синтактични трансформации (AST). Конфликтите се разрешават автоматично на семантично ниво чрез верификация на типизацията и тестовите инварианти.</p>
+<h2>Спекулативно паралелно изпълнение и автоматичен rollback</h2>
+<p>Новата архитектура позволява на агентите да изпробват стотици алтернативни имплементации на дадена функционалност в изолирани виртуални клонове. Всеки клон се тества в реално време срещу компилатор и автоматизиран хамут за верификация; неуспешните опити се отхвърлят мигновено без оставяне на ненужни следи в историята на проекта, осигурявайки абсолютно чиста и верифицирана кодова база.</p>
+<h2>Преход от човешки ориентирани инструменти към машинен софтуерен инженеринг</h2>
+<p>Инициативата на Anthropic отразява назряващата необходимост от тотална подмяна на софтуерния инструментариум. През последните четиридесет години операционните системи, файловите мениджъри, редакторите на код и системите за контрол на версиите бяха оптимизирани за ограниченията на човешката биология – линеен фокус, ограничена работна памет и бавна скорост на писане.</p>
+<p>Когато основният производител на код стане машинният модел, целият софтуерен стек трябва да бъде препроектиран за хиперпаралелизъм, формална верификация и безконфликтни семантични сливания. Този нов фундамент ще позволи на автономните инженерни екипи да изграждат и поддържат софтуерни системи с мащаб и сложност, далеч надхвърлящи възможностите за ментално обхващане от отделен човешки ум.</p>
+<p><img src="/articles/2026/10/27/anthropic-redesigns-source-control-ai-development/infographic.png" alt="Инфографика: Агентно-ориентираният контрол на версиите в Anthropic"><br><small>Четири стълба на безконфликтната разработка с хиляди паралелни ИИ агенти</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/anthropic-source-control/">How Anthropic Redesigned Source Control for AI-Driven Development – InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/source-control.html">Системи за контрол на версиите (Source Control &amp; Monorepo)</a><p>Системите за контрол на версиите (като Git и Jujutsu) управляват промените в изходния код и осигуряват възможност за паралелна съвместна работа.</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/git.html">Git</a><p>Git
+Git е стандартната в софтуерната индустрия разпределена система за контрол на версиите (DVCS), създадена първоначално от Линус Торвалдс за разрабо...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

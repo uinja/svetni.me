@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Cloudflare / VoidZero / InfoQ
+Облачният лидер Cloudflare и инженерната компания VoidZero обявиха публичното пускане на tsrs – високопроизводителен компилатор и пълен порт на системата за ..."><title>Cloudflare и VoidZero представиха tsrs: AI-генериран компилатор и порт на TypeScript на езика Rust - Светни.ме</title><meta property="og:title" content="Cloudflare и VoidZero представиха tsrs: AI-генериран компилатор и порт на TypeScript на езика Rust - Светни.ме"><meta property="og:description" content="Източник: Cloudflare / VoidZero / InfoQ
+Облачният лидер Cloudflare и инженерната компания VoidZero обявиха публичното пускане на tsrs – високопроизводителен компилатор и пълен порт на системата за ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/27/cloudflare-voidzero-tsrs-rust-typescript-port/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/27/cloudflare-voidzero-tsrs-rust-typescript-port/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare и VoidZero представиха tsrs: AI-генериран компилатор и порт на TypeScript на езика Rust</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 октомври 2026 г.</p><div><p><img src="/articles/2026/10/27/cloudflare-voidzero-tsrs-rust-typescript-port/hero.png" alt="Код на Rust и терминали за компилация на софтуерни модули"><br><small>Източник: Cloudflare / VoidZero / InfoQ</small></p>
+<p>Облачният лидер <a href="/pages/cloudflare.html">Cloudflare</a> и инженерната компания <a href="/pages/voidzero.html">VoidZero</a> обявиха публичното пускане на <a href="/pages/tsrs.html">tsrs</a> – високопроизводителен компилатор и пълен порт на системата за проверка на типове на <a href="/pages/typescript.html">TypeScript</a>, пренаписан изцяло на системния език <a href="/pages/rust.html">Rust</a> [1]. Забележителното при проекта е, че близо 80% от милионите редове сложна логика са преведени и валидирани с помощта на специализирани модели за автоматична транспилация и верификация.</p>
+<h2>Преодоляване на десетилетния проблем с бавния tsc</h2>
+<p>Оригиналният компилатор на TypeScript (tsc), поддържан от Microsoft, е написан на самия TypeScript и се изпълнява върху виртуалната машина Node.js. В големи корпоративни монорепозитори проверките на типовете често отнемат десетки минути, консумират гигабайти оперативна памет и бавят CI/CD пайплайните.</p>
+<p>Проектът tsrs постига над 10-кратен скок в производителността благодарение на агресивен мултитрединг (Rayon), оптимизирани структури от арени за памет и липса на овърхед от Garbage Collector. В същото време се гарантира 100% семантична съвместимост с официалните тестови комплекти на Microsoft.</p>
+<h2>Ролята на генеративния AI в мащабната транспилация</h2>
+<p>Ръчното пренаписване на такъв монументален компилатор традиционно би отнело години на цял екип от старши инженери. Партньорите използват фронтиерни модели за разсъждение, обучени върху семантиката на Rust borrow-checker-а, които автономно конвертират JavaScript обектите в безопасни Rust структури, разрешавайки сложни цикли от референции и валидирайки типовата еквивалентност стъпка по стъпка.</p>
+<h2>Нова ера за компилаторното инженерство и безопасността на паметта</h2>
+<p>Пускането на tsrs бележи преломен момент за глобалната екосистема на уеб разработката. TypeScript се утвърди като де факто lingua franca на модерния интернет софтуер, но неговите ограничения в производителността отдавна спъваха мащабирането на съвременните облачни платформи.</p>
+<p>Успехът на този AI-асистиран проект доказва, че най-трудните задачи в компютърните науки – пренаписването на фундаментални компилатори и инфраструктурен софтуер на езици с гарантирана памет като Rust – вече не изискват десетилетия ръчен труд. Това ще отприщи масова вълна от модернизация на застаряващи системни инструменти, повишавайки скоростта и сигурността на глобалната цифрова инфраструктура.</p>
+<p><img src="/articles/2026/10/27/cloudflare-voidzero-tsrs-rust-typescript-port/infographic.png" alt="Инфографика: Компилаторът tsrs: TypeScript върху Rust"><br><small>Четири стълба на следващото поколение инструменти за проверка на типове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/cloudflare-tsrs-ai-typescript/">Cloudflare and VoidZero Introduce tsrs: An AI-Generated Rust Port of TypeScript – InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/voidzero.html">VoidZero</a><p>VoidZero е технологична компания, създадена от създателя на Vue.</p></li><li><a href="/pages/typescript.html">TypeScript</a><p>TypeScript е строго типизиран език за програмиране, създаден от Microsoft, който надгражда JavaScript чрез добавяне на статични типове и интерфейси.</p></li><li><a href="/pages/tsrs.html">tsrs</a><p>tsrs е експериментален софтуерен компилатор и порт на системата за проверка на типове на TypeScript, пренаписан изцяло на езика Rust.</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li><li><a href="/pages/compilers.html">Компилатори (Compilers)</a><p>Компилаторите (Compilers) са софтуерни програми, превеждащи изходен програмен код, написан на език от високо ниво, в машинен код или асемблерни инстру...</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

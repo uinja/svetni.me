@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: ZDNet / ORISA Security Research
+Екип от експерти по мобилна сигурност и дигитална криминалистика представи инструмента с отворен код ORISA, способен да реконструира напълно изтрити чат се..."><title>Инструментът ORISA възстановява изтрити разговори с AI директно от паметта на смартфони - Светни.ме</title><meta property="og:title" content="Инструментът ORISA възстановява изтрити разговори с AI директно от паметта на смартфони - Светни.ме"><meta property="og:description" content="Източник: ZDNet / ORISA Security Research
+Екип от експерти по мобилна сигурност и дигитална криминалистика представи инструмента с отворен код ORISA, способен да реконструира напълно изтрити чат се..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/27/orisa-forensic-recovery-deleted-ai-chats/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/27/orisa-forensic-recovery-deleted-ai-chats/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инструментът ORISA възстановява изтрити разговори с AI директно от паметта на смартфони</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 октомври 2026 г.</p><div><p><img src="/articles/2026/10/27/orisa-forensic-recovery-deleted-ai-chats/hero.png" alt="Лабораторен стенд за криминалистичен анализ на мобилни устройства и флаш памет"><br><small>Източник: ZDNet / ORISA Security Research</small></p>
+<p>Екип от експерти по мобилна сигурност и <a href="/pages/digital-forensics.html">дигитална криминалистика</a> представи инструмента с отворен код <a href="/pages/orisa.html">ORISA</a>, способен да реконструира напълно изтрити чат сесии и промптове от популярни AI асистенти на устройства с Android и iOS [1]. Разработката категорично развенчава широко разпространеното потребителско схващане, че бутонът „Изтрий разговор“ премахва окончателно чувствителните данни от физическата памет на смартфона.</p>
+<h2>Технически механизъм: SQLite WAL журнали и флаш Garbage Collection</h2>
+<p>Повечето мобилни приложения за генеративен изкуствен интелект (включително официалните клиенти на водещи лаборатории) използват вградени релационни бази данни SQLite с активиран механизъм за журналиране на предварителни записи (Write-Ahead Logging - WAL). Когато потребителят изтрие чат от интерфейса, приложението просто маркира съответните записи като свободни в заглавната част на таблицата, но действителните текстови низове остават недокоснати в WAL файла.</p>
+<p>Освен това чиповете с флаш памет (NAND UFS/NVMe) използват алгоритми за изравняване на износването (wear leveling). Физическите блокове памет не се изтриват мигновено, а чакат фонов цикъл на пречистване (Garbage Collection / TRIM). ORISA сканира неразпределеното пространство на дяла за данни, извлича фрагментирани JSON структури и реконструира пълния диалог с точно времево клеймо.</p>
+<h2>Последици за корпоративната сигурност и личната сфера</h2>
+<p>Откритието има огромно значение за корпоративната сигурност при сценарии „Донеси собствено устройство“ (BYOD). Служители, които са копирали поверителен фирмен код или финансови данни в чатове на личните си телефони и след това са ги изтрили, остават уязвими за експлоатация при загуба или физически криминалистичен одит на устройството.</p>
+<h2>Илюзията за ефимерност в мобилните AI платформи</h2>
+<p>Публикуването на ORISA трябва да послужи като катализатор за радикална промяна в стандартите за проектиране на клиентски мобилни приложения. Десетилетия наред индустрията третираше локалните бази данни като достатъчно сигурни, разчитайки на системното криптиране на устройството.</p>
+<p>В ерата на автономните агенти обаче, когато разговорите съдържат най-интимните мисли, пароли, медицински запитвания и интелектуална собственост на потребителите, обикновеното софтуерно изтриване е крайно недостатъчно. Разработчиците трябва незабавно да внедрят задължително криптиране на ниво поле (Field-Level Encryption) с ефимерни сесийни ключове, както и протоколи за криптографско унищожаване на данните (crypto-shredding), гарантиращи, че изтритото наистина изчезва завинаги.</p>
+<p><img src="/articles/2026/10/27/orisa-forensic-recovery-deleted-ai-chats/infographic.png" alt="Инфографика: Възстановяване на изтрити AI чатове с ORISA"><br><small>Четири етапа на извличане на привидно изтрити диалози</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.zdnet.com/innovation/orisa-tool-recovers-deleted-local-ai-chats-android-phones/">This tool can recover deleted AI chats from your phone – how it works – ZDNet</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/orisa.html">ORISA</a><p>ORISA е специализиран инструмент за дигитална криминалистика и възстановяване на данни от мобилни устройства.</p></li><li><a href="/pages/digital-forensics.html">Дигитална криминалистика</a><p>Дигиталната криминалистика е ключов защитен вал срещу разпространението на синтетични манипулации.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/artificial-intelligence.html">Изкуствен интелект</a><p>Изкуственият интелект (AI) е широка област от компютърните науки, занимаваща се със създаването на системи, способни да изпълняват задачи, които обикн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
