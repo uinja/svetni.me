@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / Nvidia
+Лидерът в полупроводниковата индустрия Nvidia пусна с напълно отворен код за комерсиална употреба модела Nemotron 3.5 Transcribe – новаторска невронна архитектура за г..."><title>Nvidia пусна с отворен код Nemotron 3.5 Transcribe: Обединяване на транскрипция, превод и разпознаване на глас - Светни.ме</title><meta property="og:title" content="Nvidia пусна с отворен код Nemotron 3.5 Transcribe: Обединяване на транскрипция, превод и разпознаване на глас - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / Nvidia
+Лидерът в полупроводниковата индустрия Nvidia пусна с напълно отворен код за комерсиална употреба модела Nemotron 3.5 Transcribe – новаторска невронна архитектура за г..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/28/nvidia-open-nemotron-3-5-transcribe-audio-foundation/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/28/nvidia-open-nemotron-3-5-transcribe-audio-foundation/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Nvidia пусна с отворен код Nemotron 3.5 Transcribe: Обединяване на транскрипция, превод и разпознаване на глас</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 октомври 2026 г.</p><div><p><img src="/articles/2026/10/28/nvidia-open-nemotron-3-5-transcribe-audio-foundation/hero.png" alt="Аудио вълни и визуализация на гласов изкуствен интелект"><br><small>Източник: TechCrunch / Nvidia</small></p>
+<p>Лидерът в полупроводниковата индустрия <a href="/pages/nvidia.html">Nvidia</a> пусна с напълно отворен код за комерсиална употреба модела Nemotron 3.5 Transcribe – новаторска невронна архитектура за <a href="/pages/speech-ai.html">гласов изкуствен интелект (speech AI)</a>, която обединява в единен модел разпознаването на реч, автоматичния многоезичен превод и идентификацията на отделни събеседници (диаризация) [1]. С този ход компанията отправя директно предизвикателство към доминацията на затворените аудио API и модела Whisper на OpenAI.</p>
+<h2>Единна акустична архитектура без междинно забавяне</h2>
+<p>Традиционните системи за обработка на разговори обикновено разчитат на тромав конвейер от три отделни модела: един софтуер засича кога говори нов човек, втори транскрибира думите, а трети превежда текста. Този каскаден подход натрупва латентност и умножава грешките.</p>
+<p>Nemotron 3.5 Transcribe решава проблема чрез хибриден акустичен енкодер FastConformer, обучен върху стотици хиляди часове мултиезично аудио. Моделът директно генерира структуриран текст с маркери за време, индикация за идентичността на говорителя и симултанен превод на целевия език. При това параметрите му са оптимизирани да се вместват в под 4 GB памет, което позволява изпълнението му на стандартни потребителски видеокарти GeForce RTX и вградени платформи Nvidia Jetson.</p>
+<h2>Силата на отворените тегла за бизнеса и суверенитета</h2>
+<p>Пускането на модела под лиценз с <a href="/pages/open-weights.html">отворени тегла (open weights)</a> има огромно стратегическо значение за индустрията. Досега банки, болници и правителствени структури се въздържаха от използване на най-добрите облачни модели за транскрипция поради страх от изтичане на поверителни разговори към чужди сървъри.</p>
+<p>С <a href="/pages/nemotron.html">Nemotron</a> организациите могат да разположат авангардно аудио разпознаване изцяло вътре в защитените си частни центрове за данни. Моделът демонстрира изключителна устойчивост на акустичен шум, силни диалекти и фонова музика, постигайки процент на грешка в думите (WER) под 3.2% в международните тестове, превъзхождайки Whisper Large v3.</p>
+<h2>Преходът към речево-центриран компютинг и реално време</h2>
+<p>Дебютът на Nemotron 3.5 Transcribe бележи важна крачка в еволюцията на компютърните интерфейси от клавиатура и екран към директен гласов диалог. Когато прецизната транскрипция и диаризацията станат безплатни и достъпни за локално вграждане, всеки софтуер – от медицински картони до операционни системи за автомобили – ще може да поддържа непрекъснато пространствено аудио слушане без компромис с поверителността.</p>
+<p>Освен това ходът на Nvidia е класически пример за защита на собствения хардуерен бизнес: чрез предоставяне на най-добрите в класа си софтуерни модели с отворен код, оптимизирани ексклузивно за нейния софтуерен стек TensorRT-LLM, компанията гарантира, че разработчиците по света ще продължат да купуват нейните графични ускорители за изпълнение на аудио натоварвания.</p>
+<p><img src="/articles/2026/10/28/nvidia-open-nemotron-3-5-transcribe-audio-foundation/infographic.png" alt="Инфографика: АУДИО АРХИТЕКТУРА: NVIDIA NEMOTRON 3.5 TRANSCRIBE"><br><small>Четири функционални стълба на отворения аудио модел на Nvidia.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/">TechCrunch: Voice AI in vogue: Nvidia releases new open transcription model</a></p>
+</li>
+<li><p><a href="https://developer.nvidia.com/blog">Nvidia Developer Blog: Open Sourcing Nemotron 3.5 Transcribe on HuggingFace and NGC</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/speech-ai.html">Гласов изкуствен интелект (Speech AI)</a><p>Гласов изкуствен интелект (Speech AI)
+Гласовият изкуствен интелект (Speech AI) обхваща набор от технологии и архитектури на дълбоко машинно обучение, ...</p></li><li><a href="/pages/open-weights.html">Отворени тегла (Open Weights)</a><p>Терминът „отворени тегла“ (open weights) се отнася до модели на изкуствен интелект, чиито вътрешни параметри (тегла) са публично достъпни.</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/nemotron.html">Nemotron</a><p>Nemotron е фамилия от усъвършенствани модели с отворен код, разработени от NVIDIA за научни изследвания, генериране на синтетични данни и агентни рабо...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

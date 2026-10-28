@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Cloud Native Computing Foundation (CNCF)
+В рамките на инициативата за устойчива облачно-ориентирана архитектура (cloud native), консорциумът CNCF публикува задълбочено инженерно ръководст..."><title>Мултитенантни GPU клъстери в Kubernetes: CNCF архитектура с Kamaji и HAMi за симулация и споделяне на ускорители - Светни.ме</title><meta property="og:title" content="Мултитенантни GPU клъстери в Kubernetes: CNCF архитектура с Kamaji и HAMi за симулация и споделяне на ускорители - Светни.ме"><meta property="og:description" content="Източник: Cloud Native Computing Foundation (CNCF)
+В рамките на инициативата за устойчива облачно-ориентирана архитектура (cloud native), консорциумът CNCF публикува задълбочено инженерно ръководст..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/28/cncf-multi-tenant-gpu-kubernetes-kamaji-hami/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/28/cncf-multi-tenant-gpu-kubernetes-kamaji-hami/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Мултитенантни GPU клъстери в Kubernetes: CNCF архитектура с Kamaji и HAMi за симулация и споделяне на ускорители</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 октомври 2026 г.</p><div><p><img src="/articles/2026/10/28/cncf-multi-tenant-gpu-kubernetes-kamaji-hami/hero.png" alt="Сървърен център с графични ускорители и логото на CNCF"><br><small>Източник: Cloud Native Computing Foundation (CNCF)</small></p>
+<p>В рамките на инициативата за устойчива <a href="/pages/cloud-native.html">облачно-ориентирана архитектура (cloud native)</a>, консорциумът <a href="/pages/cncf.html">CNCF</a> публикува задълбочено инженерно ръководство за изграждане на мултитенантни GPU клъстери под управлението на <a href="/pages/kubernetes.html">Kubernetes</a> [1]. Комбинирайки оператора Kamaji за изолирани контролни панели с иновативния плъгин HAMi, проектът решава най-скъпия проблем в съвременните центрове за данни – хроничното под-натоварване на скъпите графични ускорители.</p>
+<h2>Парадоксът на 20-процентната използваемост на суперкомпютрите</h2>
+<p>Въпреки глобалния недостиг на графични процесори, реалните статистики в корпоративния сектор показват парадоксална картина: средният коефициент на полезно действие на корпоративните GPU клъстери рядко надхвърля 20-25%. Причината се крие в досегашната архитектура на Kubernetes, при която на даден контейнер се зачислява цял физически чип (или грубо разделен MIG дял), дори когато моделът се нуждае от едва 2 GB видеопамет за обслужване на редки заявки.</p>
+<p>Това води до колосално разхищение на капитал и енергия. Малките инженерни екипи остават без достъп до хардуер за тестове, докато скъпите чипове H100 стоят в режим на изчакване през по-голямата част от денонощието.</p>
+<h2>Сливането на Kamaji и HAMi за фино нарязване на силиция</h2>
+<p>Новата архитектура постига пробив чрез синергията на два отворени проекта. HAMi (Heterogeneous AI Computing Virtualization) действа на ниво драйверен слой, прихващайки CUDA библиотеките и позволявайки на Kubernetes да третира паметта на GPU като обикновен ресурс, който може да се дели на части (например заделяне на точно 3.5 GB vRAM за даден под).</p>
+<p>От своя страна Kamaji отделя контролния панел на Kubernetes (Control Plane) в независими контейнери за всеки отделен клиент или екип. В съчетание със софтуерни симулатори на хардуера, разработчиците могат да компилират, тестват и оптимизират своите модели в напълно реалистична среда, без да блокират реални физически ускорители преди финалното внедряване.</p>
+<h2>Преходът към комунална икономика на изчислителните ресурси</h2>
+<p>Успешното внедряване на <a href="/pages/gpu-virtualization.html">виртуализация на GPU (GPU virtualization)</a> от ново поколение има стратегически последици за цялата AI екосистема. То превръща суровия силиций от скъп монолитен актив в гъвкава, разделяема комунална услуга, наподобяваща начина, по който виртуалните машини трансформираха сървърната индустрия преди две десетилетия.</p>
+<p>За корпорациите това означава възможност да обслужват тройно повече потребители със същия наличен хардуерен капацитет, съкращавайки капиталовите разходи и въглеродния си отпечатък. Това ще ускори интеграцията на локални AI модели в стотици малки вътрешни услуги, където досега заделянето на отделен графичен процесор беше икономически неоправдано.</p>
+<p><img src="/articles/2026/10/28/cncf-multi-tenant-gpu-kubernetes-kamaji-hami/infographic.png" alt="Инфографика: GPU ВИРТУАЛИЗАЦИЯ: KUBERNETES С KAMAJI И HAMI"><br><small>Четири стълба на архитектурата за мултитенантно споделяне на графични ускорители.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.cncf.io/blog/2026/10/23/multi-tenant-gpu-kubernetes-on-simulated-hardware-with-kamaji-and-hami/">Cloud Native Computing Foundation: Multi-tenant GPU Kubernetes on simulated hardware with Kamaji and HAMi</a></p>
+</li>
+<li><p><a href="https://tag-env-sustainability.cncf.io">CNCF Environmental Sustainability Technical Advisory Group Report</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/kubernetes.html">Kubernetes</a><p>Kubernetes (често съкращаван като K8s) е водеща платформа с отворен код за автоматизиране на разгръщането, мащабирането и управлението на контейнеризи...</p></li><li><a href="/pages/gpu-virtualization.html">Виртуализация на GPU (GPU Virtualization)</a><p>Виртуализация на GPU (GPU Virtualization)
+Виртуализацията на GPU (GPU Virtualization) е набор от хардуерни и софтуерни технологии, позволяващи физичес...</p></li><li><a href="/pages/cncf.html">Cloud Native Computing Foundation (CNCF)</a><p>Cloud Native Computing Foundation (CNCF) е проект на Linux Foundation, който обединява водещи технологични компании с цел подпомагане и стандартизиран...</p></li><li><a href="/pages/cloud-native.html">Облачно-ориентирана архитектура (Cloud Native)</a><p>Облачно-ориентирана архитектура (Cloud Native)
+Облачно-ориентираната архитектура (Cloud Native) е съвременна софтуерна парадигма за изграждане и изпъл...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

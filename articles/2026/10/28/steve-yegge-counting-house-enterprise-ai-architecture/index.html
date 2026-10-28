@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Steve Yegge on Medium
+В широко обсъждан програмен есей, легендарният софтуерен инженер Стив Йеги (ветеран от Amazon и Google) формулира нов концептуален архитектурен модел за модернизация..."><title>The Counting House: Стив Йеги дефинира нов архитектурен модел за интеграция на AI в корпоративния софтуер - Светни.ме</title><meta property="og:title" content="The Counting House: Стив Йеги дефинира нов архитектурен модел за интеграция на AI в корпоративния софтуер - Светни.ме"><meta property="og:description" content="Източник: Steve Yegge on Medium
+В широко обсъждан програмен есей, легендарният софтуерен инженер Стив Йеги (ветеран от Amazon и Google) формулира нов концептуален архитектурен модел за модернизация..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/28/steve-yegge-counting-house-enterprise-ai-architecture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/28/steve-yegge-counting-house-enterprise-ai-architecture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>The Counting House: Стив Йеги дефинира нов архитектурен модел за интеграция на AI в корпоративния софтуер</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 октомври 2026 г.</p><div><p><img src="/articles/2026/10/28/steve-yegge-counting-house-enterprise-ai-architecture/hero.png" alt="Илюстрация на концепциите Wheelhouse и Counting House"><br><small>Източник: Steve Yegge on Medium</small></p>
+<p>В широко обсъждан програмен есей, легендарният софтуерен инженер <a href="/pages/steve-yegge.html">Стив Йеги</a> (ветеран от Amazon и Google) формулира нов концептуален архитектурен модел за модернизация на <a href="/pages/enterprise-ai.html">корпоративния изкуствен интелект (enterprise AI)</a>, наречен от него &#39;The Counting House&#39; [1]. Анализът поставя ясна граница между недетерминистичната природа на съвременните невронни мрежи и изискването за абсолютна финансова и трансакционна математическа строгост в бизнеса.</p>
+<h2>Противопоставянето: Wheelhouse срещу Counting House</h2>
+<p>Йеги илюстрира фундаменталния конфликт в съвременната <a href="/pages/software-architecture.html">софтуерна архитектура (software architecture)</a> чрез две метафори. От една страна е &#39;The Wheelhouse&#39; – капитанският мостик, където AI моделите превъзхождат в генерирането на идеи, писането на свободен текст, евристичното планиране и синтеза на информация. От друга страна стои &#39;The Counting House&#39; – счетоводната кантора, където всяка трансакция трябва да балансира точно до последния цент, спазвайки законите на математиката и счетоводната отчетност.</p>
+<p>Според Йеги най-голямата грешка на съвременните корпоративни проекти е опитът директно да се замени традиционният счетоводен софтуер с езикови модели. Невронните мрежи оперират с вероятности, а не с абсолютна истина. Доверяването на LLM директно да модифицира салда по банкови сметки или складови наличности без междинна формална верификация неизбежно води до катастрофални сривове.</p>
+<h2>Архитектурата на филтъра за инварианти</h2>
+<p>В модела &#39;Counting House&#39;, изкуственият интелект се позиционира единствено като генератор на хипотези или &#39;предложения за трансакции&#39;. Тези предложения преминават през твърд, недетерминистичен софтуерен слой за проверка на бизнес инварианти, написан на строго типизиран език и изпълняващ формални математически проверки.</p>
+<p>Ако предложението на модела наруши дори едно правило (например създаване на пари от нищото или отрицателна наличност), трансакцията незабавно се отхвърля, а контекстът се връща към <a href="/pages/llm-orchestration.html">оркестратора на LLM (LLM orchestration)</a> за корекция. По този начин бизнесът получава интелигентността и гъвкавостта на AI, без да жертва математическата сигурност на своите релационни бази данни.</p>
+<h2>Дългосрочното значение за софтуерната индустрия и съдбата на корпоративните системи</h2>
+<p>Архитектурното прозрение на Стив Йеги маркира прехода на индустрията от първоначалния ентусиазъм и &#39;демо ефекта&#39; към истинската инженерна зрялост. В продължение на три години технологичните компании се опитваха да продават генеративния AI като универсален заместител на всички софтуерни слоеве. Реалността на корпоративния свят обаче доказа, че надеждността на една финансова или логистична система не търпи вероятностни грешки.</p>
+<p>Внедряването на шаблона &#39;Counting House&#39; ще позволи на традиционните консервативни сектори – банки, застрахователи, авиолинии и държавни институции – най-накрая да отключат потенциала на автономните агенти. Вместо да се страхуват от халюцинации, архитектите ще изграждат детерминистични предпазни клетки, превръщайки моделите в мощни дигитални асистенти, подчинени на непоклатими софтуерни закони.</p>
+<p><img src="/articles/2026/10/28/steve-yegge-counting-house-enterprise-ai-architecture/infographic.png" alt="Инфографика: КОРПОРАТИВЕН АРХИТЕКТУРЕН МОДЕЛ: THE COUNTING HOUSE"><br><small>Четири стълба на архитектурния модел на Стив Йеги за надежден корпоративен изкуствен интелект.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://steve-yegge.medium.com/the-counting-house-e11125c60ce1">Steve Yegge on Medium: The Counting House</a></p>
+</li>
+<li><p><a href="https://queue.acm.org">ACM Queue: Deterministic Verification Patterns for Non-Deterministic Language Models</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/steve-yegge.html">Стив Йеги (Steve Yegge)</a><p>Стив Йеги е легендарен софтуерен инженер, известен със своята работа в Amazon и Google.</p></li><li><a href="/pages/software-architecture.html">Софтуерна архитектура</a><p>Софтуерната архитектура представлява съвкупността от най-значимите решения за дизайна на една софтуерна система.</p></li><li><a href="/pages/llm-orchestration.html">Оркестрация на езикови модели (LLM Orchestration)</a><p>Оркестрация на езикови модели (LLM Orchestration)
+Оркестрацията на езикови модели (LLM Orchestration) е софтуерна архитектурна дисциплина, управляваща...</p></li><li><a href="/pages/enterprise-ai.html">Enterprise AI</a><p>Enterprise AI (Корпоративен изкуствен интелект) се отнася до внедряването на AI технологии в мащабни бизнес организации с фокус върху сигурността, пов...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
