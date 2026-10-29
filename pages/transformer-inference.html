@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Инференция на трансформатори (Transformer Inference)
+Инференцията на трансформатори (Transformer Inference) е процесът на изпълнение на обучен трансформаторен модел за генериране на отговори, прогн..."><title>Инференция на трансформатори (Transformer Inference) - Светни.ме</title><meta property="og:title" content="Инференция на трансформатори (Transformer Inference) - Светни.ме"><meta property="og:description" content="Инференция на трансформатори (Transformer Inference)
+Инференцията на трансформатори (Transformer Inference) е процесът на изпълнение на обучен трансформаторен модел за генериране на отговори, прогн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/pages/transformer-inference.html"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="page-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="page"><h1>Инференция на трансформатори (Transformer Inference)</h1><section class="content"><h1>Инференция на трансформатори (Transformer Inference)</h1>
+<p><strong>Инференцията на трансформатори (Transformer Inference)</strong> е процесът на изпълнение на обучен трансформаторен модел за генериране на отговори, прогнози или класификации въз основа на входни данни.</p>
+<h2>Ключови оптимизации</h2>
+<ol>
+<li><strong>KV-Cache мениджмънт:</strong> Оптимизирано съхранение на векторите Key и Value в GPU паметта чрез техники като PagedAttention (vLLM) за предотвратяване на фрагментацията.</li>
+<li><strong>Спекулативно декодиране (Speculative Decoding):</strong> Използване на малък спомагателен модел за паралелно предлагане на токени, които се валидират наведнъж от големия модел.</li>
+<li><strong>Квантуване (Quantization):</strong> Редуциране на точността на теглата (FP8, INT4, AWQ) за двойно ускоряване на изчисленията и свиване на изискванията за памет без загуба на качество.</li>
+<li><strong>Пакетна обработка (Continuous Batching):</strong> Динамично комбиниране на заявки с различна дължина за максимално натоварване на изчислителните ядра.</li>
+</ol>
+<h2>Значение за индустрията</h2>
+<p>Усъвършенстването на инференцията прави възможно обслужването на милиарди потребители в реално време при устойчива икономическа себестойност на токен.</p>
+</section><section class="mentions" style="margin-top:3rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem"><h3 style="font-size:1.2rem;margin-bottom:1rem;color:var(--foreground)">Споменавания в статии</h3><ul class="listing"><li style="margin-bottom:0.5rem"><a href="/articles/2026/10/29/qwenputer-deterministic-riscv-cpu-virtualization-qwen35/">Qwenputer: Напълно функциониращ и детерминистичен RISC-V процесор вътре в авторегресивните тегла на Qwen3.5</a></li></ul></section></article><nav class="nav"><div><a href="/">« Начало</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Още знания</h3><ul class="related-entities"><li><a href="/pages/conversational-ai.html">Диалогов изкуствен интелект</a></li><li><a href="/pages/agent-commerce.html">Агентна търговия (Agent Commerce)</a></li><li><a href="/pages/tool-calling.html">Извикване на инструменти (Tool Calling)</a></li><li><a href="/pages/josh-comeau.html">Josh Comeau</a></li><li><a href="/pages/andrew-stellman.html">Андрю Стелман</a></li><li><a href="/pages/top500.html">Top500</a></li><li><a href="/pages/boris-cherny.html">Борис Черни (Boris Cherny)</a></li><li><a href="/pages/anybotics.html">ANYbotics</a></li><li><a href="/pages/alex-atallah.html">Алекс Атала (Alex Atallah)</a></li><li><a href="/pages/langchain.html">LangChain</a></li></ul><div class="more"><a href="/pages/">пълен списък »</a></div></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

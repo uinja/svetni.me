@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Bernstein Run / Hacker News
+С навлизането на автономните софтуерни агенти в критични производствени и финансови среди, изследователски екип по киберсигурност пусна с отворен код платформа..."><title>Bernstein представи отворен слой за управление и изолация на привилегии при автономни AI агенти - Светни.ме</title><meta property="og:title" content="Bernstein представи отворен слой за управление и изолация на привилегии при автономни AI агенти - Светни.ме"><meta property="og:description" content="Източник: Bernstein Run / Hacker News
+С навлизането на автономните софтуерни агенти в критични производствени и финансови среди, изследователски екип по киберсигурност пусна с отворен код платформа..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/bernstein-open-source-governance-capability-isolation-ai-agents/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/bernstein-open-source-governance-capability-isolation-ai-agents/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Bernstein представи отворен слой за управление и изолация на привилегии при автономни AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/bernstein-open-source-governance-capability-isolation-ai-agents/hero.png" alt="Архитектурна диаграма на сигурността в Bernstein"><br><small>Източник: Bernstein Run / Hacker News</small></p>
+<p>С навлизането на автономните софтуерни агенти в критични производствени и финансови среди, изследователски екип по киберсигурност пусна с отворен код платформата <a href="/pages/bernstein.html">Bernstein</a> – детерминистичен слой за управление, контрол на достъпа и изолация на привилегии за езикови модели [1]. Проектът директно адресира най-големия страх на системните администратори: опасността автономен агент с права за писане в конзолата да изпълни деструктивна команда, да изтрие производствена база данни или да източи фирмени тайни под въздействието на зловредна подкана.</p>
+<h2>Архитектурният принцип на Bernstein: Детерминистичен надзор над стохастичен код</h2>
+<p>Фундаменталният проблем на съвременните агентни рамки е тяхната стохастична природа. Дори най-интелигентният езиков модел може да халюцинира или да бъде подведен чрез скрит текст на компрометирана уеб страница (Indirect Prompt Injection). Ако на такъв агент са предоставени неограничени системни привилегии, последствията за корпоративната мрежа могат да бъдат фатални.</p>
+<p><a href="/pages/bernstein.html">Bernstein</a> решава този казус чрез въвеждане на стриктно разделение между &#39;желанието&#39; на агента и неговото &#39;физическо изпълнение&#39;. Агентът никога няма директен достъп до операционната система или платежните API. Вместо това всяка предложена стъпка се изпраща към политическия енджин на Bernstein, който проверява командата срещу предварително дефинирани декларативни правила за <a href="/pages/agent-governance.html">агентно управление (agent governance)</a>. Ако командата нарушава политиката за сигурност, тя се блокира на системно ниво, а агентът получава структурирана грешка.</p>
+<h2>Криптографски одитни следи и пълна съвместимост</h2>
+<p>В допълнение към блокирането на опасни действия, платформата записва цялостната логическа верига на агента в неизменен журнал, защитен чрез <a href="/pages/cryptographic-security.html">криптографска сигурност (cryptographic security)</a>. Всяка подкана, междинна мисъл и резултат от инструмент се хешират в криптографско дърво на Меркъл. Това дава възможност на одиторите да проверят с математическа сигурност защо даден агент е предприел определено действие преди седмици.</p>
+<p>Рамката е разработена като лек прокси слой, който може да се интегрира пред всяка популярна агентна библиотека като LangChain, LlamaIndex или Claude Code само с няколко реда конфигурационен код.</p>
+<h2>Дългосрочното институционално значение на софтуерните бариери за безопасност</h2>
+<p>Появата на стандарти като Bernstein бележи прехода на агентните технологии от фазата на &#39;академични демонстрации&#39; към фазата на &#39;промишлена експлоатация&#39;. В класическото програмиране концепции като потребителски роли, защитни стени и политики за минимални привилегии бяха изградени в продължение на десетилетия на болезнени проби и грешки. С навлизането на изкуствения интелект тези принципи трябва да бъдат спешно пренаписани за свят, в който софтуерът сам решава какви команди да изпълнява.</p>
+<p>Без детерминистичен слой за контрол нито една корпорация с отговорност пред акционерите не може да си позволи да пусне автономни агенти да оперират с реални пари или критични сървъри. Регулаторните органи по целия свят неизбежно ще задължат бизнеса да внедри подобни одитни механизми, превръщайки платформите за агентно управление в задължителен елемент от дигиталната хигиена.</p>
+<p>В дългосрочен план отворените решения ще имат решаващо предимство пред затворените корпоративни алтернативи. Когато става дума за сигурност и одит, прозрачността на кода е единствената гаранция, че защитната стена не съдържа скрити задни врати. Bernstein поставя основите на универсален протокол за безопасност, който ще позволи на човечеството да се възползва от автономността на изкуствения интелект, без да жертва контрола върху критичните си системи.</p>
+<p><img src="/articles/2026/10/29/bernstein-open-source-governance-capability-isolation-ai-agents/infographic.png" alt="Инфографика: АГЕНТНО УПРАВЛЕНИЕ: ОТВОРЕНАТА РАМКА BERNSTEIN"><br><small>Четири защитни слоя за безопасна интеграция на автономни агенти в предприятията.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://bernstein.run">Bernstein Run: The Open-Source Governance Layer for AI Agents</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50291116">Hacker News Discussion: Deterministic Policy Enforcement and Tool Sandboxing for LLMs</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cryptographic-security.html">Криптографска сигурност (Cryptographic Security)</a><p>Криптографска сигурност (Cryptographic Security)
+Криптографската сигурност (Cryptographic Security) обхваща математическите методи, протоколи и алгори...</p></li><li><a href="/pages/bernstein.html">Bernstein</a><p>Bernstein
+Bernstein е софтуерна платформа с отворен код, предоставяща слой за управление, сигурност и детерминистичен контрол върху автономни агенти с...</p></li><li><a href="/pages/authorization.html">Оторизация (Authorization)</a><p>Оторизацията е процесът на определяне на правата за достъп на идентифициран потребител или система до конкретни ресурси.</p></li><li><a href="/pages/agent-governance.html">Управление и контрол на AI агенти (Agent Governance)</a><p>Управлението и контролът на AI агенти (Agent Governance) е набор от инженерни рамки, политики за сигурност и протоколи за надзор, предназначени да рег...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

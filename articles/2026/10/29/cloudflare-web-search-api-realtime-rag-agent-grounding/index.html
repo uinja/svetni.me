@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Cloudflare
+Мрежовият и облачен гигант Cloudflare обяви официалното пускане на своя нов глобален продукт – Cloudflare Web Search API, предоставящ на разработчиците директен, високо..."><title>Cloudflare пусна Web Search API за директно семантично заземяване на AI приложения с ниска латентност - Светни.ме</title><meta property="og:title" content="Cloudflare пусна Web Search API за директно семантично заземяване на AI приложения с ниска латентност - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Cloudflare
+Мрежовият и облачен гигант Cloudflare обяви официалното пускане на своя нов глобален продукт – Cloudflare Web Search API, предоставящ на разработчиците директен, високо..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/cloudflare-web-search-api-realtime-rag-agent-grounding/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/cloudflare-web-search-api-realtime-rag-agent-grounding/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare пусна Web Search API за директно семантично заземяване на AI приложения с ниска латентност</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/cloudflare-web-search-api-realtime-rag-agent-grounding/hero.png" alt="Диаграма на архитектурата на Cloudflare Web Search API"><br><small>Източник: InfoQ / Cloudflare</small></p>
+<p>Мрежовият и облачен гигант <a href="/pages/cloudflare.html">Cloudflare</a> обяви официалното пускане на своя нов глобален продукт – Cloudflare Web Search API, предоставящ на разработчиците директен, високоскоростен достъп до индексирано уеб съдържание, специално форматирано за заземяване на езикови модели в реално време [1]. Услугата е проектирана да елиминира тромавите междинни скрапери и да се превърне в де факто стандарт за захранване на модерни <a href="/pages/rag.html">RAG (Retrieval-Augmented Generation)</a> конвейери и автономни AI агенти.</p>
+<h2>Защо класическото уеб търсене не работи за съвременните AI агенти</h2>
+<p>Досега разработчиците на автономни AI агенти бяха изправени пред тежък компромис при търсене на актуална информация в интернет. Традиционните търсачки като Google и Bing връщат резултати, форматирани за човешки очи – претрупани с HTML тагове, рекламни тракери, скриптове и навигационни менюта. За да извлекат същината на статията, агентите трябваше да използват външни библиотеки за скрапване (като Playwright или BeautifulSoup), което отнемаше ценни секунди и консумираше огромни изчислителни ресурси.</p>
+<p>Cloudflare Web Search API преобръща тази парадигма. Използвайки своята колосална глобална мрежа от периферни сървъри, компанията индексира съдържанието директно в чист, семантично компресиран Markdown формат. Когато агент изпрати заявка, той получава най-важните фактологични пасажи с минимална латентност под 50 милисекунди, готови за директно инжектиране в контекстния прозорец на модела.</p>
+<h2>Периферни изчисления и безпроблемна интеграция с Workers AI</h2>
+<p>Услугата е дълбоко интегрирана с екосистемата за <a href="/pages/edge-computing.html">периферни изчисления (edge computing)</a> на Cloudflare. Разработчиците могат да стартират езикови модели с отворени тегла (като Llama 3 или Mistral) директно върху платформата Workers AI и да ги заземяват с уеб търсене в рамките на една и съща физическа локация без трафик през публичния интернет.</p>
+<p>Новият API включва и усъвършенствани алгоритми за прекласиране (Reranking), които анализират надеждността на първоизточника, филтрират нискокачествените генерирани от спам-ботове текстове и предоставят верифицирани метаданни за цитиране, свеждайки халюцинациите при RAG системи до минимум.</p>
+<h2>Дългосрочната трансформация на уеб индексацията в ерата на машинните потребители</h2>
+<p>Инициативата на Cloudflare е първият ясен знак за фундаменталната трансформация на интернет от мрежа за хора към мрежа за автономни агенти. В продължение на тридесет години уеб страниците се проектираха с оглед на визуалното възприятие – цветове, анимации, банери и интерактивни бутони. Днес нарастваща част от уеб трафика се генерира от софтуерни асистенти, които търсят чиста фактология и сурови структурирани данни.</p>
+<p>Като компания, която обслужва и защитава близо 20% от целия световен интернет трафик, Cloudflare заема уникална стратегическа позиция. Тя може да индексира съдържанието в момента на неговото обновяване, заобикаляйки необходимостта от периодично претърсване на мрежата от външни роботи. Това превръща компанията в директен съперник на търсачки като Google в най-важния бъдещ пазарен сегмент: захранването на изкуствения интелект с жива информация.</p>
+<p>В дългосрочен план появата на подобни API интерфейси ще ускори смъртта на традиционния уеб браузър. Потребителите все по-рядко ще отварят търсачки и ще преглеждат страници ръчно. Вместо това техните лични агенти ще комуникират с периферни информационни индекси като този на Cloudflare, синтезирайки финалния отговор за части от секундата и оставяйки класическия уеб дизайн като реликвия от отминала епоха.</p>
+<p><img src="/articles/2026/10/29/cloudflare-web-search-api-realtime-rag-agent-grounding/infographic.png" alt="Инфографика: RAG ИНФРАСТРУКТУРА: CLOUDFLARE WEB SEARCH API"><br><small>Четири технологични стълба на новото решение за директно семантично заземяване.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.infoq.com/news/2026/10/cloudflare-web-search-api/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ: Cloudflare Introduces Web Search API for AI Applications</a></p>
+</li>
+<li><p><a href="https://blog.cloudflare.com">Cloudflare Blog: Real-Time Web Grounding for Workers AI and Autonomous Agents</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/api-design.html">API дизайн</a><p>API дизайнът е процесът на планиране, структуриране и дефиниране на архитектурата на един приложен програмен интерфейс (API).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Datadog
+Лидерът в областта на облачното наблюдение и мониторинга Datadog направи революционен скок в индустрията за осигуряване на системна надеждност (SRE - Site Reliability Engi..."><title>Datadog представи Scout: Специализиран базов AI модел за SRE разследвания и анализ на инциденти - Светни.ме</title><meta property="og:title" content="Datadog представи Scout: Специализиран базов AI модел за SRE разследвания и анализ на инциденти - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Datadog
+Лидерът в областта на облачното наблюдение и мониторинга Datadog направи революционен скок в индустрията за осигуряване на системна надеждност (SRE - Site Reliability Engi..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/datadog-scout-specialized-sre-telemetry-foundation-model/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/datadog-scout-specialized-sre-telemetry-foundation-model/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Datadog представи Scout: Специализиран базов AI модел за SRE разследвания и анализ на инциденти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/datadog-scout-specialized-sre-telemetry-foundation-model/hero.png" alt="Потребителски интерфейс и архитектура на модела Datadog Scout"><br><small>Източник: InfoQ / Datadog</small></p>
+<p>Лидерът в областта на облачното наблюдение и мониторинга <a href="/pages/datadog.html">Datadog</a> направи революционен скок в индустрията за осигуряване на системна надеждност (<a href="/pages/site-reliability-engineering.html">SRE - Site Reliability Engineering</a>), представяйки Scout – първия специализиран базов модел с изкуствен интелект, обучен директно върху масивни потоци от системна телеметрия, разпределени следи (APM traces) и инфраструктурни логове [1]. Моделът е проектиран да автоматизира изцяло <a href="/pages/root-cause-analysis.html">анализа на първопричината (Root Cause Analysis - RCA)</a> по време на сложни технологични аварии.</p>
+<h2>Защо общите езикови модели се провалят при диагностика на сривове</h2>
+<p>Когато сложна корпоративна облачна система с хиляди микросървиси претърпи срив, тя генерира стотици гигабайти сурови данни за секунди: милиони редове грешки в логовете, графики с пикове в процесорното натоварване и прекъснати мрежови връзки. Досегашните опити за подаване на тези данни към общи модели като GPT-4 завършваха с провал: общите модели бързо препълват контекстния си прозорец с повтарящ се шум, не разбират сложната архитектурна взаимовръзка между услугите и често халюцинират несъществуващи грешки.</p>
+<p>Datadog Scout е изграден върху съвършено различна философия за <a href="/pages/telemetry-ai.html">телеметричен изкуствен интелект (telemetry AI)</a>. Моделът използва специализиран енкодер, който компресира телеметричните сигнали в компактни векторни репрезентации, филтрирайки 99.9% от фоновия шум. Той притежава вродено разбиране за мрежови графи и може моментално да проследи как забавяне в единична база данни на хиляди километри предизвиква каскаден срив в потребителския интерфейс.</p>
+<h2>От пасивен мониторинг към автономно отстраняване на инциденти</h2>
+<p>Най-голямото предимство на Scout е способността му да съкрати средното време за възстановяване на услугите (MTTR) от часове до секунди. Вместо десетки инженери да се събират в спешни виртуални стаи и ръчно да преглеждат графики посред нощ, Scout анализира инцидента за части от секундата и предоставя ясен отговор: &#39;Грешката е причинена от комит #8f4b в микросървис Checkout, който е препълнил пула от връзки към PostgreSQL&#39;.</p>
+<p>В среда с активирани правила за автоматизация моделът може самостоятелно да инициира връщане на дефектната версия (rollback) или да мащабира капацитета на засегнатите клъстери, възстановявайки нормалното функциониране на бизнеса преди крайните потребители да усетят проблема.</p>
+<h2>Дългосрочното бъдеще на автономните облачни инфраструктури (Self-Healing Cloud)</h2>
+<p>Премиерата на Datadog Scout е ключов крайъгълен камък по пътя към създаването на напълно &#39;самолекуващи се&#39; облачни среди (Self-Healing Cloud). В продължение на десетилетия поддържането на висока надеждност в ИТ сектора изискваше колосални човешки ресурси и денонощни дежурства на скъпоплатени инженери. Днес сложността на модерните микросървизни архитектури отдавна е надхвърлила капацитета на човешкия ум за цялостно възприятие в реално време.</p>
+<p>Интеграцията на специализирани модели директно в телеметричния гръбнак трансформира ролята на SRE специалистите. Те престават да бъдат пожарникари, които гасят аварии под стрес, и се превръщат в архитекти на политики за безопасност, задаващи глобалните параметри за стабилност на системата.</p>
+<p>В дългосрочен план корпорациите, които внедрят специализиран телеметричен интелект, ще постигнат практически абсолютна наличност на услугите (пет деветки – 99.999%), минимизирайки финансовите загуби от непредвидени прекъсвания. Това ще превърне автономната телеметрия в задължително изискване за всеки критичен дигитален бизнес в модерната икономика.</p>
+<p><img src="/articles/2026/10/29/datadog-scout-specialized-sre-telemetry-foundation-model/infographic.png" alt="Инфографика: АВТОНОМНО SRE: СПЕЦИАЛИЗИРАНИЯТ МОДЕЛ DATADOG SCOUT"><br><small>Четири фази на обработката на телеметрични данни и разрешаването на критични инфраструктурни инциденти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.infoq.com/news/2026/10/datadog-scout-sre-model/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ: Datadog Builds a Specialist AI Model for SRE Investigations</a></p>
+</li>
+<li><p><a href="https://www.datadoghq.com/blog">Datadog Engineering Blog: Architecting Scout: Foundation Models for High-Cardinality Distributed Telemetry</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/telemetry-ai.html">Телеметричен изкуствен интелект (Telemetry AI)</a><p>Телеметричен изкуствен интелект (Telemetry AI)
+Телеметричният изкуствен интелект (Telemetry AI) е клон на приложния изкуствен интелект, насочен към не...</p></li><li><a href="/pages/site-reliability-engineering.html">Инженерство по надеждност на сайтове (SRE)</a><p>Инженерството по надеждност на сайтове (SRE) съчетава разработката на софтуер с управлението на IT операциите.</p></li><li><a href="/pages/root-cause-analysis.html">Анализ на първопричината (Root Cause Analysis - RCA)</a><p>Анализ на първопричината (Root Cause Analysis - RCA)
+Анализът на първопричината (Root Cause Analysis - RCA) е структуриран инженерен процес за идентиф...</p></li><li><a href="/pages/datadog.html">Datadog</a><p>Datadog е водеща платформа за наблюдаемост (observability) и сигурност за облачни приложения.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

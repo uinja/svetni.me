@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: DivaGR / Hacker News
+В революционен инженерен експеримент, разпространен сред изследователската общност, разработчици демонстрираха проекта Qwenputer – напълно функционален, архитектурно ..."><title>Qwenputer: Напълно функциониращ и детерминистичен RISC-V процесор вътре в авторегресивните тегла на Qwen3.5 - Светни.ме</title><meta property="og:title" content="Qwenputer: Напълно функциониращ и детерминистичен RISC-V процесор вътре в авторегресивните тегла на Qwen3.5 - Светни.ме"><meta property="og:description" content="Източник: DivaGR / Hacker News
+В революционен инженерен експеримент, разпространен сред изследователската общност, разработчици демонстрираха проекта Qwenputer – напълно функционален, архитектурно ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/qwenputer-deterministic-riscv-cpu-virtualization-qwen35/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/qwenputer-deterministic-riscv-cpu-virtualization-qwen35/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Qwenputer: Напълно функциониращ и детерминистичен RISC-V процесор вътре в авторегресивните тегла на Qwen3.5</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/qwenputer-deterministic-riscv-cpu-virtualization-qwen35/hero.png" alt="Архитектурна диаграма на симулатора Qwenputer и RISC-V регистрите"><br><small>Източник: DivaGR / Hacker News</small></p>
+<p>В революционен инженерен експеримент, разпространен сред изследователската общност, разработчици демонстрираха проекта <a href="/pages/qwenputer.html">Qwenputer</a> – напълно функционален, архитектурно детерминистичен <a href="/pages/risc-v.html">RISC-V</a> централен процесор, изпълняван изцяло в авторегресивните тегла на езиковия модел <a href="/pages/qwen.html">Qwen</a> 3.5 без използване на какъвто и да е външен виртуализационен софтуер или интерпретатор [1]. Постижението е фундаментално научно доказателство, че трансформаторните невронни мрежи могат да моделират произволни машини на Тюринг с абсолютна математическа точност.</p>
+<h2>Как работи невронната хардуерна емулация стъпка по стъпка</h2>
+<p>В класическото компютърно инженерство процесорът е физическа силициева схема, която декодира бинарни инструкции, променя състоянието на регистрите и записва стойности в оперативната памет съобразно тактовия генератор. Проектът Qwenputer пресъздава тази механика изцяло чрез <a href="/pages/transformer-inference.html">инференция на трансформатори (transformer inference)</a>.</p>
+<p>Моделът получава като входна подкана началното състояние на паметта с компилиран машинен код и състоянието на регистровия файл (x0 до x31). При всяка итерация невронната мрежа прочита стойността на програмния брояч (PC), декодира съответната RISC-V инструкция (например ADDI, LW, SW, JAL), извършва необходимата аритметична операция вътре в слоевете на вниманието и генерира актуализираното състояние на регистрите като следващ токен. Процесът се повтаря циклично, изпълнявайки цялостни програми, написани на езика C.</p>
+<h2>Преодоляване на халюцинациите и гарантиране на 100% детерминизъм</h2>
+<p>Най-голямото препятствие при опитите за емулация на хардуер чрез невронни мрежи винаги е била стохастичната природа на езиковите модели – дори малка грешка от 0.01% в стойността на един бит чупи цялата програма. Екипът зад Qwenputer постига съвършена прецизност чрез специално форматиране на контекстния прозорец и избор на температура 0 при квантуване, използвайки вродените силни математически способности на семейството Qwen 3.5.</p>
+<p>В тестовете невронният процесор успешно изпълнява алгоритми за сортиране на масиви, изчисляване на редицата на Фибоначи и базови цикли за управление на виртуални периферни устройства, запазвайки пълна битова съвместимост с реални хардуерни чипове.</p>
+<h2>Дългосрочните теоретични и практически последици за сливането на софтуер и невронни мрежи</h2>
+<p>Успехът на Qwenputer хвърля нова светлина върху фундаменталния спор за когнитивните възможности на трансформаторите. Дълго време критиците твърдяха, че големите езикови модели са просто &#39;стохастични папагали&#39;, които напасват статистически вероятности на думи без реално вътрешно разбиране на причинно-следствените връзки. Демонстрацията на безупречна <a href="/pages/cpu-virtualization.html">виртуализация на процесори (CPU virtualization)</a> доказва, че при достатъчен мащаб вниманиевите механизми изграждат точни вътрешни алгоритмични симулатори на физически и логически системи.</p>
+<p>В практическо отношение това отваря вратата към нов клас автономен инженеринг. Вместо да се изграждат тромави външни среди за тестване на софтуер, езиковият модел може сам да симулира средата за изпълнение на кода, който сам пише. Той може да стартира фърмуер за микроконтролери в собствената си памет, да наблюдава промените в регистрите при възникване на срив и мигновено да коригира кода на ниско ниво.</p>
+<p>В дългосрочен план границата между &#39;софтуер&#39; и &#39;модел&#39; ще се размие напълно. Бъдещите операционни системи няма да бъдат статични компилирани файлове, изпълнявани върху физически силиций, а динамични невронни тъкани, които симулират каквато и да е желана изчислителна архитектура по заявка, обединявайки универсалността на компютъра със семантичния интелект на мозъка.</p>
+<p><img src="/articles/2026/10/29/qwenputer-deterministic-riscv-cpu-virtualization-qwen35/infographic.png" alt="Инфографика: НЕВРОННА ВИРТУАЛИЗАЦИЯ: ПРОЦЕСОРЪТ QWENPUTER"><br><small>Четири компонента на невронната емулация на процесорни цикли без външен интерпретатор.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://divagr.com/blog/qwenputer">DivaGR Blog: Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50291116">Hacker News Discussion: Emulating hardware architectures entirely within LLM forward passes</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/transformer-inference.html">Инференция на трансформатори (Transformer Inference)</a><p>Инференция на трансформатори (Transformer Inference)
+Инференцията на трансформатори (Transformer Inference) е процесът на изпълнение на обучен трансфо...</p></li><li><a href="/pages/risc-v.html">RISC-V</a><p>RISC-V е отворена процесорна архитектура (ISA), разработена първоначално в Калифорнийския университет в Бъркли.</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/cpu-virtualization.html">Виртуализация на централни процесори (CPU Virtualization)</a><p>Виртуализация на централни процесори (CPU Virtualization)
+Виртуализацията на централни процесори (CPU Virtualization) представлява симулация на хардуе...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

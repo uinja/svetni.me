@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: SkyPilot AI / UC Berkeley
+Инженерен доклад на изследователския екип зад популярната облачна платформа с отворен код SkyPilot (разработвана в Калифорнийския университет в Бъркли) разкри се..."><title>SkyPilot доказа, че шкафовете Grace Blackwell изискват нов топологичен шедулър за 27% повече полезен GPU капацитет - Светни.ме</title><meta property="og:title" content="SkyPilot доказа, че шкафовете Grace Blackwell изискват нов топологичен шедулър за 27% повече полезен GPU капацитет - Светни.ме"><meta property="og:description" content="Източник: SkyPilot AI / UC Berkeley
+Инженерен доклад на изследователския екип зад популярната облачна платформа с отворен код SkyPilot (разработвана в Калифорнийския университет в Бъркли) разкри се..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/skypilot-grace-blackwell-gb200-topology-aware-gpu-scheduling/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/skypilot-grace-blackwell-gb200-topology-aware-gpu-scheduling/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>SkyPilot доказа, че шкафовете Grace Blackwell изискват нов топологичен шедулър за 27% повече полезен GPU капацитет</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/skypilot-grace-blackwell-gb200-topology-aware-gpu-scheduling/hero.png" alt="Сравнителна графика на пропускателната способност на GB200 NVL72 клъстери"><br><small>Източник: SkyPilot AI / UC Berkeley</small></p>
+<p>Инженерен доклад на изследователския екип зад популярната облачна платформа с отворен код <a href="/pages/skypilot.html">SkyPilot</a> (разработвана в Калифорнийския университет в Бъркли) разкри сериозен структурен проблем в управлението на най-мощните хардуерни суперклъстери на пазара – системите <a href="/pages/nvidia-blackwell.html">Nvidia Blackwell</a> GB200 NVL72 [1]. Изследването доказва, че стандартните оркестратори като Kubernetes страдат от тежка мрежова фрагментация, а внедряването на нов топологично-съобразен алгоритъм за <a href="/pages/gpu-scheduling.html">планиране на GPU изчисления (GPU scheduling)</a> осигурява 27% повече използваеми изчислителни ресурси от същите физически шкафове без допълнителни инвестиции в хардуер.</p>
+<h2>Анатомия на архитектурния капан в шкафовете GB200 NVL72</h2>
+<p>Шкафът GB200 NVL72 представлява архитектурен триумф: той обединява 72 графични процесора Blackwell и 36 централни процесора Grace в единен гигантски виртуален ускорител чрез девет комутационни трея с <a href="/pages/nvlink.html">NVLink</a> от пето поколение, осигурявайки колосална обща двупосочна пропускателна способност от 130 терабайта в секунда.</p>
+<p>Проблемът възниква от начина, по който облачните центрове за данни разпределят натоварванията. Традиционните шедулъри третират графичните ускорители като взаимозаменяеми бройки (подобно на обикновени CPU ядра). Когато потребител поиска например 8 или 16 графични процесора за фина настройка на модел, шедулърът ги алокира на случайни свободни позиции в шкафа. Това прекъсва директната топологична последователност на NVLink шината, принуждавайки останалите по-големи задачи да чакат или да работят с драматично деградирала скорост на комуникация.</p>
+<h2>Иновацията на SkyPilot: 2D топологично уплътняване и ко-локация</h2>
+<p>Новият планиращ механизъм на SkyPilot решава този проблем чрез моделиране на физическата мрежа като граф с тегла. Алгоритъмът гарантира, че всяка разпределена задача се настанява в строго непрекъснат поддомейн на NVLink шината, запазвайки пълната скорост на обмен на тензорни градиенти.</p>
+<p>За да не остават празни &#39;парчета&#39; от шкафа, SkyPilot въвежда динамична ко-локация: малките остатъчни слотове се запълват автоматично с фонови задачи за спекулативно декодиране при инференция или задачи за синтез на данни с нисък приоритет. В реални тестове с обучение на 70-милиардни модели това повишава полезната пропускателна способност на клъстера от 64% до зашеметяващите 91%.</p>
+<h2>Дългосрочният икономически императив за софтуерна оптимизация на мегаклъстерите</h2>
+<p>Изследването на SkyPilot поставя пръст в най-болезнената рана на съвременната индустрия за изкуствен интелект: кризата с ефективността на използване на капитала (Capex Efficiency). Когато един изчислителен шкаф GB200 струва над 3 милиона долара, оставянето на близо 30% от капацитета му неизползван поради неадекватен софтуерен шедулинг е колосално финансово разхищение, струващо милиарди долари на големите облачни доставчици.</p>
+<p>Това бележи преминаването на фокуса от простото закупуване на суров хардуер към дълбока алгоритмична оптимизация на системния софтуер. В ерата, когато физическите лимити на полупроводниците забавят закона на Мур, следващите големи скокове в производителността няма да дойдат от по-малки транзистори, а от интелигентно картографиране на комуникационните протоколи върху сложни физически топологии.</p>
+<p>В дългосрочен план софтуерните слоеве като SkyPilot ще се превърнат в критичния междинен слой на корпоративния изкуствен интелект. Компаниите, които внедрят топологично управление, ще могат да тренират моделите си с една трета по-бързо и с милиони долари по-евтино от конкурентите си, доказвайки, че истинското надмощие в изчислителната ера се крие в математическата елегантност на софтуерния контрол.</p>
+<p><img src="/articles/2026/10/29/skypilot-grace-blackwell-gb200-topology-aware-gpu-scheduling/infographic.png" alt="Инфографика: GPU ОРКЕСТРАЦИЯ: ТОПОЛОГИЧНИЯТ ШЕДУЛЪР НА SKYPILOT"><br><small>Четири стъпки за постигане на 27% по-висока ефективност в изчислителните центрове за данни.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler">SkyPilot AI Blog: Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks</a></p>
+</li>
+<li><p><a href="https://rise.cs.berkeley.edu">UC Berkeley RISELab: Distributed Cluster Topology Mapping for Ultra-High-Bandwidth Interconnects</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/skypilot.html">SkyPilot</a><p>SkyPilot
+SkyPilot е платформа с отворен код, разработена в Университета Бъркли (UC Berkeley), предназначена за безпроблемно изпълнение и оптимизиране ...</p></li><li><a href="/pages/nvlink.html">NVLink</a><p>NVLink е високоскоростна кабелна комуникационна технология за графични процесори (GPU), разработена от NVIDIA.</p></li><li><a href="/pages/nvidia-blackwell.html">NVIDIA Blackwell (GB200)</a><p>NVIDIA Blackwell (GB200) е най-мощната изчислителна архитектура на NVIDIA към 2026 г.</p></li><li><a href="/pages/gpu-scheduling.html">Планиране на GPU изчисления (GPU Scheduling)</a><p>Планиране на GPU изчисления (GPU Scheduling)
+Планирането на GPU изчисления (GPU Scheduling) е системен инженерен процес за оптимално разпределяне на г...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

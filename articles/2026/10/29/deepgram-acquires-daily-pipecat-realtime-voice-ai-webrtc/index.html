@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / Deepgram
+В мащабна консолидационна сделка в сектора на речевите технологии, водещият разработчик на модели за разпознаване и синтез на реч Deepgram обяви официалното придобив..."><title>Deepgram придоби създателя на Pipecat компанията Daily за обединяване на гласов AI и WebRTC инфраструктура - Светни.ме</title><meta property="og:title" content="Deepgram придоби създателя на Pipecat компанията Daily за обединяване на гласов AI и WebRTC инфраструктура - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / Deepgram
+В мащабна консолидационна сделка в сектора на речевите технологии, водещият разработчик на модели за разпознаване и синтез на реч Deepgram обяви официалното придобив..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/29/deepgram-acquires-daily-pipecat-realtime-voice-ai-webrtc/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/29/deepgram-acquires-daily-pipecat-realtime-voice-ai-webrtc/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Deepgram придоби създателя на Pipecat компанията Daily за обединяване на гласов AI и WebRTC инфраструктура</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->29 октомври 2026 г.</p><div><p><img src="/articles/2026/10/29/deepgram-acquires-daily-pipecat-realtime-voice-ai-webrtc/hero.png" alt="Прес материал за придобиването на Daily от Deepgram"><br><small>Източник: TechCrunch / Deepgram</small></p>
+<p>В мащабна консолидационна сделка в сектора на речевите технологии, водещият разработчик на модели за разпознаване и синтез на реч <a href="/pages/deepgram.html">Deepgram</a> обяви официалното придобиване на компанията Daily – създател на водещата глобална <a href="/pages/webrtc.html">WebRTC</a> инфраструктура и популярната отворена рамка за гласови агенти <a href="/pages/pipecat.html">Pipecat</a> [1]. Обединението създава първия цялостен вертикално интегриран стек за ултрабърз <a href="/pages/voice-ai.html">гласов изкуствен интелект (voice AI)</a>, способен да поддържа двупосочен разговор между човек и машина с естествено закъснение под 300 милисекунди.</p>
+<h2>Защо гласовите агенти изискват обединение на медия и невронни модели</h2>
+<p>Досега изграждането на работещ гласов асистент в реално време бе изключително сложно инженерно предизвикателство. Разработчиците трябваше да комбинират компоненти от различни доставчици: медиен транспорт през WebRTC (за предаване на звука от браузъра), външен доставчик за транскрипция (STT), езиков модел за разсъждение (LLM) и отделен сървър за гласов синтез (TTS).</p>
+<p>Всяко прехвърляне на аудио пакети между тези изолирани облаци добавяше десетки милисекунди закъснение. В резултат на това общата латентност често надхвърляше една секунда – праг, при който разговорът спира да бъде естествен и се превръща в изнервяща размяна на реплики като по радиостанция. Освен това координацията на &#39;прекъсването&#39; (Barge-in – способността на робота незабавно да млъкне, когато човекът проговори) изискваше сложна локална логика.</p>
+<h2>Синергията между Deepgram, Daily и екосистемата Pipecat</h2>
+<p>С придобиването на Daily Deepgram събира целия този конвейер под един покрив. Компанията вече контролира както суровия мрежов транспорт през глобалните WebRTC сървъри на Daily, така и високооптимизираните речеви модели от сериите Nova и Aura.</p>
+<p>Сърцето на новата обща платформа остава отворената рамка <a href="/pages/pipecat.html">Pipecat</a>. Тя позволява на разработчиците лесно да навързват различни модели и бизнес логика, предоставяйки пълен контрол върху поведението на гласовия агент. За разлика от &#39;черната кутия&#39; на OpenAI Realtime API, решението на Deepgram и Daily дава свобода на инженерите да избират какъв езиков модел да използват (включително локални модели с отворени тегла) и да оптимизират разходите си за всяка минута разговор.</p>
+<h2>Дългосрочната революция в гласовото общуване и бъдещето на кол центровете</h2>
+<p>Обединението между Deepgram и Daily бележи навлизането на гласовия изкуствен интелект в неговата зряла индустриална фаза. В продължение на десетилетия автоматизираните гласови менюта (IVR системи) бяха обект на всеобща омраза от страна на потребителите заради тяхната неспособност да разберат нормална реч и изискването за натискане на бутони.</p>
+<p>Появата на суб-секундни гласови агенти с естествена човешка интонация и способност за моментална реакция ще доведе до пълното преструктуриране на глобалната индустрия за обслужване на клиенти, в която днес работят милиони хора. Агентите могат да обслужват милиони обаждания едновременно, да говорят на десетки езици с перфектен акцент и мигновено да проверяват данни в корпоративните бази.</p>
+<p>В дългосрочен план гласът ще се превърне в основния интерфейс за взаимодействия с технологиите. Когато машината може да чува, разбира и отговаря по-бързо от човешки събеседник, необходимостта от екрани, мишки и клавиатури ще отпадне при голяма част от ежедневните задачи. Това сливане на медийни протоколи и речеви невронни мрежи полага инфраструктурните релси на един свят, в който диалогът с изкуствения интелект е толкова органичен и невидим, колкото разговорът с приятел на живо.</p>
+<p><img src="/articles/2026/10/29/deepgram-acquires-daily-pipecat-realtime-voice-ai-webrtc/infographic.png" alt="Инфографика: ГЛАСОВА ИНФРАСТРУКТУРА: СЛИВАНЕТО DEEPGRAM &amp; DAILY"><br><small>Четири компонента на завършения стек за свръхбързи мултимодални разговорни агенти.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/">TechCrunch: Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure</a></p>
+</li>
+<li><p><a href="https://deepgram.com/news">Deepgram Press Announcement: Unifying Real-Time Voice Models with Enterprise WebRTC</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/webrtc.html">WebRTC</a><p>WebRTC
+WebRTC (Web Real-Time Communication) е комуникационен стандарт и технология с отворен код, позволяваща директен обмен на глас, видео и данни ме...</p></li><li><a href="/pages/voice-ai.html">Гласов изкуствен интелект (Voice AI)</a><p>Гласовият изкуствен интелект (Voice AI) обхваща технологии за синтез на реч (Text-to-Speech - TTS), гласово клониране, разпознаване на реч и вокална е...</p></li><li><a href="/pages/pipecat.html">Pipecat</a><p>Pipecat
+Pipecat е отворена рамка (framework) на Python за изграждане на мултимодални разговорни агенти с глас в реално време, поддържаща ниско закъсне...</p></li><li><a href="/pages/deepgram.html">Deepgram</a><p>Deepgram е специализирана платформа за разпознаване на реч (ASR), базирана на дълбоко обучение (Deep Learning).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
