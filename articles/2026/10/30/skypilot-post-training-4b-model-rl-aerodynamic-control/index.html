@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: SkyPilot AI / Technical Research
+Инженерният екип на SkyPilot публикува впечатляващо проучване в областта на физическия контрол в реално време, демонстрирайки как компактен модел с едва 4..."><title>SkyPilot обучава 4B модел с RL за аеродинамичен полет, надминавайки GPT-6 Astra с 21% - Светни.ме</title><meta property="og:title" content="SkyPilot обучава 4B модел с RL за аеродинамичен полет, надминавайки GPT-6 Astra с 21% - Светни.ме"><meta property="og:description" content="Източник: SkyPilot AI / Technical Research
+Инженерният екип на SkyPilot публикува впечатляващо проучване в областта на физическия контрол в реално време, демонстрирайки как компактен модел с едва 4..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/skypilot-post-training-4b-model-rl-aerodynamic-control/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/skypilot-post-training-4b-model-rl-aerodynamic-control/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>SkyPilot обучава 4B модел с RL за аеродинамичен полет, надминавайки GPT-6 Astra с 21%</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/skypilot-post-training-4b-model-rl-aerodynamic-control/hero.png" alt="Телеметрична симулация на летящо превозно средство и графики за контрол на траекторията"><br><small>Източник: SkyPilot AI / Technical Research</small></p>
+<p>Инженерният екип на <a href="/pages/skypilot.html">SkyPilot</a> публикува впечатляващо проучване в областта на физическия контрол в реално време, демонстрирайки как компактен модел с едва 4 милиарда параметри (<a href="/pages/slm.html">SLM</a>), преминал през специализирано последващо обучение (post-training) с <a href="/pages/reinforcement-learning.html">обучение с подсилване</a>, побеждава водещия многомодален масивен модел GPT-6 Astra с цели 21% по прецизност при управление на аеродинамична симулация на полет [1]. Пробивът доказва, че за контрол на динамични системи архитектурната специализация побеждава брутния параметричен мащаб.</p>
+<h2>Физически информиран PPO алгоритъм и микросекундна реакция</h2>
+<p>За обучението на 4B модела изследователите са интегрирали оптимизация на проксимална политика (<a href="/pages/ppo.html">PPO</a>) директно с високоскоростен симулатор на флуидната динамика. Моделът е оптимизиран да минимизира грешката в траекторията при внезапни атмосферни турбуленции и промени в налягането. Докато гигантските базови модели страдат от висока латентност при инференция (често над 800 милисекунди на токън), компактният 4B модел генерира коригиращи вектори за под 12 милисекунди, което е критично за физическото оцеляване на апарата.</p>
+<h2>Ограниченията на общите езикови модели при бърза физическа реакция</h2>
+<p>Тестовете срещу GPT-6 Astra разкриха фундаментален дефект в опитите големи общи модели да се използват за контролни контури в реално време. Въпреки че Astra притежава енциклопедични знания за <a href="/pages/aerodynamics.html">аеродинамиката</a> и уравненията на Навие-Стокс, процесът на прекомерно обмисляне (overthinking) и дългите вериги от разсъждения водят до катастрофално забавяне при резки промени в обстановката, водейки до загуба на стабилност на виртуалния апарат.</p>
+<h2>Архитектурният триумф на малките специализирани модели в роботиката</h2>
+<p>Резултатите на SkyPilot ознаменуват края на заблудата, че един единствен монолитен облачен супермодел ще управлява всички аспекти на реалния свят. В роботиката, автономните дронове и автомобилостроенето предимствата на крайните (edge) компактни невронни мрежи са непреодолими: те не изискват интернет връзка, консумират десетки ватове вместо киловати и реагират с физическа скорост. Бъдещето принадлежи на двустепенна архитектура: гигантски базови модели в облака, които планират стратегическите цели на високо ниво, и свръхоптимизирани с RL малки модели на борда, които изпълняват физическите движения с математическа безупречност.</p>
+<p><img src="/articles/2026/10/30/skypilot-post-training-4b-model-rl-aerodynamic-control/infographic.png" alt="Инфографика: СПЕЦИАЛИЗАЦИЯ СРЕЩУ МАЩАБ: SKYPILOT 4B ПОБЕЖДАВА GPT-6"><br><small>Сравнителен анализ на латентността, физическото моделиране, PPO оптимизацията и разхода на енергия.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://skypilot.ai/blog/flying-roadster-rl">SkyPilot Blog: Post-training 4B model with RL to fly Tesla Roadster 21% better than GPT-6 Astra</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/slm.html">Малоразмерни езикови модели (SLM)</a><p>Малоразмерните езикови модели (Small Language Models - SLM) са невронни мрежи с по-малък брой параметри (обикновено под 10-15 милиарда), които са прое...</p></li><li><a href="/pages/skypilot.html">SkyPilot</a><p>SkyPilot
+SkyPilot е платформа с отворен код, разработена в Университета Бъркли (UC Berkeley), предназначена за безпроблемно изпълнение и оптимизиране ...</p></li><li><a href="/pages/reinforcement-learning.html">Обучение чрез подкрепление (Reinforcement Learning)</a><p>Обучението чрез подкрепление (Reinforcement Learning - RL) е дял от машинното обучение, при който интелигентен агент се учи да взема решения чрез взаи...</p></li><li><a href="/pages/ppo.html">Оптимизация на проксимална политика (PPO)</a><p>Proximal Policy Optimization (PPO) е алгоритъм за обучение с подсилване (reinforcement learning), разработен от OpenAI през 2017 г.</p></li><li><a href="/pages/aerodynamics.html">Изчислителна аеродинамика (Computational Aerodynamics)</a><p>Изчислителната аеродинамика изучава движението на въздушните потоци около твърди тела чрез числени симулации на уравненията на Навие-Стокс.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

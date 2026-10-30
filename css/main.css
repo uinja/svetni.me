@@ -189,6 +189,7 @@ h4 a,
 .site-name a,
 .related-entities a,
 .header-nav a,
+.category-nav a,
 .footer-nav a,
 .content ul a,
 .content ol a,
@@ -209,6 +210,7 @@ h4 a:hover,
 .site-name a:hover,
 .related-entities a:hover,
 .header-nav a:hover,
+.category-nav a:hover,
 .footer-nav a:hover,
 .content ul a:hover,
 .content ol a:hover,
@@ -225,6 +227,7 @@ h4 a:hover::before,
 .site-name a:hover::before,
 .related-entities a:hover::before,
 .header-nav a:hover::before,
+.category-nav a:hover::before,
 .footer-nav a:hover::before,
 .content ul a:hover::before,
 .content ol a:hover::before,
@@ -306,6 +309,48 @@ h4 {
   align-items: flex-end;
   gap: var(--spacing-s);
   flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem var(--spacing-s);
+  margin-top: 0.5rem;
+}
+
+.category-nav a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.category-nav a:hover {
+  color: var(--red);
+}
+
+.category-nav a.active {
+  color: var(--foreground);
+  font-weight: 800;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 1px;
+}
+
+.category-nav a.active:hover {
+  color: var(--red);
 }
 
 .logo .site-name {
@@ -683,6 +728,88 @@ pre code {
   text-align: right;
 }
 
+.pagination-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pagination-btn:hover {
+  color: var(--red);
+}
+
+.pagination-info {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: none;
+  align-self: center;
+}
+
+/* Category header & views */
+.category-header {
+  border-bottom: 2px solid var(--border-subtle);
+  padding-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing);
+}
+
+.category-badge-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted-soft);
+  margin-bottom: 0.25rem;
+}
+
+.category-header h1 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.category-description {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.category-count {
+  font-size: 0.85rem;
+  color: var(--muted-soft);
+}
+
+.category-pill {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-soft);
+  text-decoration: none;
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+
+.category-pill::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: var(--muted-faint);
+  font-weight: 400;
+}
+
+.category-pill:hover {
+  color: var(--red);
+}
+
 /* -----------------------------------------------
    Footer
    ----------------------------------------------- */
@@ -737,6 +864,7 @@ pre code {
     --muted-faint: #475569;
     --border-subtle: #222838;
     --blue: #9ec2ff;
+    --blue-light: #507cc0;
     --red: #ff6e68;
     --yellow: #ffd56a;
     --logo-color: var(--yellow);

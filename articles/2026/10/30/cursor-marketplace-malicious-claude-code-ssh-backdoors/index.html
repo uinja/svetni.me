@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / BleepingComputer
+Сериозен инцидент с компрометиране на веригата за софтуерни доставки (supply chain attack) разтърси общността на разработчиците, след като зловредно разшире..."><title>Зловредно разширение за Claude Code в магазина на Cursor инсталираше SSH задни вратички - Светни.ме</title><meta property="og:title" content="Зловредно разширение за Claude Code в магазина на Cursor инсталираше SSH задни вратички - Светни.ме"><meta property="og:description" content="Източник: The Decoder / BleepingComputer
+Сериозен инцидент с компрометиране на веригата за софтуерни доставки (supply chain attack) разтърси общността на разработчиците, след като зловредно разшире..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/cursor-marketplace-malicious-claude-code-ssh-backdoors/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/cursor-marketplace-malicious-claude-code-ssh-backdoors/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Зловредно разширение за Claude Code в магазина на Cursor инсталираше SSH задни вратички</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/cursor-marketplace-malicious-claude-code-ssh-backdoors/hero.png" alt="Интерфейс на редактора Cursor със засечени зловредни скриптове и предупреждения"><br><small>Източник: The Decoder / BleepingComputer</small></p>
+<p>Сериозен инцидент с компрометиране на веригата за софтуерни доставки (<a href="/pages/supply-chain-attack.html">supply chain attack</a>) разтърси общността на разработчиците, след като зловредно разширение, имитиращо официалния инструмент <a href="/pages/claude-code.html">Claude Code</a>, бе качено в каталога на популярната AI среда за разработка (<a href="/pages/ide.html">IDE</a>) <a href="/pages/cursor.html">Cursor</a> [1]. Пакетът успя да остане публично достъпен за приблизително 11 часа, заразявайки компютрите на до 5000 програмисти и инсталирайки скрити задни вратички чрез протокола <a href="/pages/ssh.html">SSH</a> за отдалечен достъп и източване на локални токени за автентикация.</p>
+<h2>Векторът на компрометиране: Тайпоскватинг и злоупотреба с разширени права в IDE</h2>
+<p>Анализът на зловредния полезен товар показва, че нападателите са използвали прецизен тайпоскватинг върху имената на пакетите на Anthropic. След инсталация в Cursor, разширението е използвало широките права на IDE процеса за достъп до локалната файлова система. Зловредният скрипт е сканирал скритите директории <code>~/.ssh/</code>, <code>~/.aws/credentials</code> и конфигурационните файлове на GitHub, след което е отварял криптиран обратен SSH тунел към команден сървър (C2), осигурявайки на нападателите интерактивна шел сесия в реално време.</p>
+<h2>Спирането на каталога и кризата с верификацията на разширенията</h2>
+<p>След засичане на аномалния мрежов трафик от изследователи по сигурността, екипът на Cursor предприе крайната мярка временно да спре целия си каталог за разширения (marketplace offline). Въпреки че компрометираният модул бе премахнат, а засегнатите сертификати – анулирани, инцидентът разкри критична липса на автоматизиран предварителен статичен и динамичен анализ (sandboxing) на разширенията преди публикуване.</p>
+<h2>Средата за разработка като най-уязвимата точка за пробив в корпоративния периметър</h2>
+<p>Този пробив бележи нова опасна фаза в кибервойната срещу технологичните компании. Докато производствените сървъри и бази данни са защитени зад многослойни защитни стени и Zero Trust архитектури, лаптопите на софтуерните инженери често разполагат с администраторски привилегии и директни SSH ключове за достъп до критичната инфраструктура. Нарастващата зависимост от AI плъгини и разширения превръща модерната IDE в идеален троянски кон. Ако доставчиците на среди за разработка не въведат задължителна криптографска изолация на процесите на разширенията (process sandboxing) и стриктна проверка на идентичността на авторите, софтуерната верига за доставки ще остане широко отворена за катастрофални вътрешни компрометирания.</p>
+<p><img src="/articles/2026/10/30/cursor-marketplace-malicious-claude-code-ssh-backdoors/infographic.png" alt="Инфографика: ПРОБИВЪТ В CURSOR: ХАКЕРСКА АТАКА ЧРЕЗ CLAUDE CODE"><br><small>Структура на атаката: тайпоскватинг, кражба на SSH ключове, обратен тунел и реакция на Cursor.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/">The Decoder: Malicious Claude Code extension in Cursor&#39;s marketplace attempted remote access and data theft</a></p>
+</li>
+<li><p><a href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/">BleepingComputer: Malicious Claude Code extension on Cursor planted SSH backdoors</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/supply-chain-attack.html">Атака срещу веригата за доставки</a><p>Атака срещу веригата за доставки (supply chain attack) е кибер анексия, която се насочва към слабости в софтуерните компоненти или услуги на трети стр...</p></li><li><a href="/pages/ssh.html">SSH протокол (Secure Shell)</a><p>SSH (Secure Shell) е криптографски мрежов протокол за сигурна комуникация, отдалечено управление на операционни системи и изпълнение на команди през н...</p></li><li><a href="/pages/ide.html">Интегрирана среда за разработка (IDE)</a><p>Интегрираната среда за разработка (Integrated Development Environment - IDE) е софтуерно приложение, предоставящо цялостен набор от инструменти за соф...</p></li><li><a href="/pages/cursor.html">Cursor</a><p>Cursor е ИИ базирана среда за разработка (IDE), изградена върху VS Code.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

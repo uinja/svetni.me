@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / DoorDash Engineering
+В детайлен технически доклад, публикуван в платформата InfoQ, инженерният екип на DoorDash разкри мащабна архитектурна оптимизация, довела до намаляване на ла..."><title>DoorDash съкращава латентността на AI агентите при поръчки от 16 на 2 секунди - Светни.ме</title><meta property="og:title" content="DoorDash съкращава латентността на AI агентите при поръчки от 16 на 2 секунди - Светни.ме"><meta property="og:description" content="Източник: InfoQ / DoorDash Engineering
+В детайлен технически доклад, публикуван в платформата InfoQ, инженерният екип на DoorDash разкри мащабна архитектурна оптимизация, довела до намаляване на ла..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/doordash-ai-agents-grocery-reorder-latency-optimization/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/doordash-ai-agents-grocery-reorder-latency-optimization/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>DoorDash съкращава латентността на AI агентите при поръчки от 16 на 2 секунди</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/doordash-ai-agents-grocery-reorder-latency-optimization/hero.png" alt="Инженерна системна архитектурна диаграма на конвейера за поръчки на DoorDash"><br><small>Източник: InfoQ / DoorDash Engineering</small></p>
+<p>В детайлен технически доклад, публикуван в платформата InfoQ, инженерният екип на <a href="/pages/doordash.html">DoorDash</a> разкри мащабна архитектурна оптимизация, довела до намаляване на латентността при автоматизирано повторно поръчване на хранителни стоки чрез <a href="/pages/ai-agents.html">AI агенти</a> от 16 на едва 2 секунди – впечатляващ спад от 87% [1]. Успехът е постигнат без загуба на точност при заместването на изчерпани продукти, превръщайки бавния лабораторен прототип в готов за милиони потребители производствен механизъм.</p>
+<h2>Анатомия на забавянето: Защо първото поколение агенти беше неизползваемо</h2>
+<p>Първоначалната имплементация на DoorDash разчиташе на последователни извиквания към LLM модел: потребителската заявка се парсваше, след което агентът изпълняваше последователни търсения в каталога, извличаше наличности от бази данни на отделни супермаркети и пресмяташе сходства в хранителните стойности. Този каскаден цикъл генерираше множество мрежови преходи и прекомерен токън разход, принуждавайки клиентите да чакат повече от четвърт минута на екран за финализиране на кошницата.</p>
+<h2>Спекулативен семантичен граф и предварително извличане</h2>
+<p>Новата архитектура елиминира последователните заявки чрез въвеждане на специализиран <a href="/pages/graph-rag.html">GraphRAG</a> слой. Продуктите в каталога са предварително индексирани в граф на взаимозаменяемост, отчитащ марки, грамажи и диетични ограничения. Когато агентът идентифицира липсващ артикул, системата извършва паралелно <a href="/pages/semantic-search.html">семантично търсене</a> сред топ кандидатите, докато локален малък модел спекулативно подготвя структурата на JSON отговора.</p>
+<h2>Латентността като основна бариера пред комерсиализацията на агентите</h2>
+<p>Инженерният казус на DoorDash илюстрира най-критичния урок за корпоративното внедряване на изкуствен интелект през 2026 г.: умният агент е безполезен, ако е бавен. В електронната търговия всяка секунда допълнително забавяне намалява конверсията с до 10%. Докато демонстрациите на изследователите впечатляват с комплексно мислене, реалният потребителски софтуер изисква подсекундна реакция. Постигането на <a href="/pages/latency-optimization.html">оптимизация на латентността</a> изисква дълбоко връщане към основите на разпределените системи: кеширане в паметта, редуциране на контекстните прозорци и паралелизъм. Агентите, които ще доминират пазара, няма да бъдат онези с най-големи параметри, а онези, които могат да доставят точен резултат преди потребителят да е загубил търпение.</p>
+<p><img src="/articles/2026/10/30/doordash-ai-agents-grocery-reorder-latency-optimization/infographic.png" alt="Инфографика: СКОРОСТ НА ПОРЪЧКИТЕ: КАК DOORDASH СМАЛИ ВРЕМЕТО ОТ 16S НА 2S"><br><small>Сравнение между стария каскаден подход и новия паралелен GraphRAG конвейер на DoorDash.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/">InfoQ: DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/semantic-search.html">Семантично търсене</a><p>Семантичното търсене (Semantic Search) е технология за извличане на информация, която се фокусира върху значението и контекста на запитването, вместо ...</p></li><li><a href="/pages/latency-optimization.html">Оптимизация на латентността</a><p>Оптимизацията на латентността е критична за интерактивни приложения, финансова търговия и гласови асистенти.</p></li><li><a href="/pages/graph-rag.html">Графово RAG извличане (GraphRAG)</a><p>GraphRAG е авангардна архитектура за генериране, подсилено с извличане (Retrieval-Augmented Generation), която съчетава векторно търсене с графове на ...</p></li><li><a href="/pages/doordash.html">DoorDash</a><p>DoorDash е водеща американска технологична компания, която оперира онлайн платформа за доставка на храна, хранителни стоки и местни логистични услуги.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

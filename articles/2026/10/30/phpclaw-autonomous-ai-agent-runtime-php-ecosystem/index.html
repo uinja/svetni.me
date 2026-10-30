@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / phpClaw Community
+В значимо събитие за най-широко разпространения език за уеб бекенд в света, група независими разработчици представиха phpClaw – завършена, високопроизводителна ..."><title>phpClaw: Олекотена среда за автономни AI агенти в PHP с памет, инструменти и предпазни механизми - Светни.ме</title><meta property="og:title" content="phpClaw: Олекотена среда за автономни AI агенти в PHP с памет, инструменти и предпазни механизми - Светни.ме"><meta property="og:description" content="Източник: GitHub / phpClaw Community
+В значимо събитие за най-широко разпространения език за уеб бекенд в света, група независими разработчици представиха phpClaw – завършена, високопроизводителна ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/phpclaw-autonomous-ai-agent-runtime-php-ecosystem/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/phpclaw-autonomous-ai-agent-runtime-php-ecosystem/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>phpClaw: Олекотена среда за автономни AI агенти в PHP с памет, инструменти и предпазни механизми</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/phpclaw-autonomous-ai-agent-runtime-php-ecosystem/hero.png" alt="Лого на проекта phpClaw и архитектурна схема на агентен цикъл в PHP среда"><br><small>Източник: GitHub / phpClaw Community</small></p>
+<p>В значимо събитие за най-широко разпространения език за уеб бекенд в света, група независими разработчици представиха <a href="/pages/phpclaw.html">phpClaw</a> – завършена, високопроизводителна <a href="/pages/agent-runtime.html">среда за изпълнение на агенти</a> с отворен код за екосистемата на <a href="/pages/php.html">PHP</a> [1]. Проектът предлага нативен отговор на Python доминацията в изкуствения интелект, предоставяйки на милиони корпоративни системи, базирани на Laravel, Symfony и WordPress, инструменти за типизирано <a href="/pages/function-calling.html">извикване на функции</a>, семантична памет и детерминистични предпазни филтри.</p>
+<h2>Преодоляване на stateless природата на PHP чрез модерна памет</h2>
+<p>Традиционният жизнен цикъл на заявка-отговор в PHP исторически затрудняваше изграждането на дългоживеещи автономни процеси. phpClaw решава този проблем чрез модулна <a href="/pages/memory-architecture.html">архитектура на паметта</a>, която поддържа както епизодична памет чрез векторни бази данни (като Qdrant и pgvector), така и кратковременна работна памет в Redis. Агентът може да изпълнява многостъпкови цикли на разсъждение (ReAct loops), запазвайки контекста на сесията през множество асинхронни HTTP събития.</p>
+<h2>Типизирана безопасност и строги предпазни механизми (Guardrails)</h2>
+<p>Едно от най-силните предимства на phpClaw е използването на съвременната строга типова система на PHP 8.x. Инструментите, които агентът може да извиква, се дефинират чрез DTO обекти и PHP атрибути, елиминирайки грешки при форматиране на JSON схеми. Платформата включва вградени механизми срещу безкрайни цикли на изпълнение, строги квоти за разход на токени и политики за потвърждение от човешки администратор при чувствителни действия като промени в бази данни или финансови трансакции.</p>
+<h2>Демократизация на изкуствения интелект в съществуващия корпоративен уеб</h2>
+<p>Появата на проекти като phpClaw е ключова стъпка към прагматичната зрялост на изкуствения интелект. Докато академичните изследвания и прототипите се развиват предимно в Python среда, реалният бизнес софтуер, управляващ световната електронна търговия, CRM системи и медийни портали, оперира върху наложили се езици като PHP, Java и C#. Принуждаването на компаниите да изграждат паралелна микросървисна Python инфраструктура само за да внедрят прост агент е скъпо и рисково начинание. Чрез осигуряване на нативни, безопасни и елегантни инструменти за агентно оркестриране директно в съществуващия кодов масив, phpClaw сваля бариерите за милиони разработчици, ускорявайки навлизането на интелигентни работни потоци в реалната уеб икономика.</p>
+<p><img src="/articles/2026/10/30/phpclaw-autonomous-ai-agent-runtime-php-ecosystem/infographic.png" alt="Инфографика: PHPCLAW: АВТОНОМНИ AI АГЕНТИ В PHP ЕКОСИСТЕМАТА"><br><small>Основни модули: асинхронен цикъл ReAct, векторна памет, типизирани функции и guardrails.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/phpclaw-php/phpclaw-monorepo">GitHub: phpclaw-php/phpclaw-monorepo - AI agent runtime for PHP</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/php.html">PHP</a><p>PHP е един от най-широко разпространените езици за уеб програмиране на сървърната страна, захранващ десетки милиони сайтове и платформи за управление ...</p></li><li><a href="/pages/phpclaw.html">phpClaw</a><p>phpClaw е специализирана софтуерна библиотека и изпълнима среда (runtime) с отворен код за изграждане на автономни AI агенти в PHP екосистемата.</p></li><li><a href="/pages/memory-architecture.html">Архитектура на паметта в AI агенти (Agent Memory Architecture)</a><p>Архитектурата на паметта определя как една автономна агентна система съхранява, организира и извлича информация през множество последователни взаимоде...</p></li><li><a href="/pages/function-calling.html">Извикване на функции / Инструменти (Function Calling)</a><p>Извикването на функции (Function Calling / Tool Use) е способност на съвременните езикови модели да генерират структурирани входни данни (най-често ва...</p></li><li><a href="/pages/agent-runtime.html">Среда за изпълнение на агенти (Agent Runtime)</a><p>Средата за изпълнение на агенти (Agent Runtime) е софтуерна платформа, управляваща жизнения цикъл, паметта, достъпа до инструменти и изпълнението на з...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: SigNoz / SRE Research
+В провокативен анализ, публикуван в бюлетина на SigNoz и предизвикал разгорещени дискусии сред инженерната общност, изследователи по системна надеждност поставят под..."><title>Изкуственият интелект не заменя SRE инженерите – той отнема тяхната експертиза и интуиция - Светни.ме</title><meta property="og:title" content="Изкуственият интелект не заменя SRE инженерите – той отнема тяхната експертиза и интуиция - Светни.ме"><meta property="og:description" content="Източник: SigNoz / SRE Research
+В провокативен анализ, публикуван в бюлетина на SigNoz и предизвикал разгорещени дискусии сред инженерната общност, изследователи по системна надеждност поставят под..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/ai-deskilling-software-reliability-engineers-sre/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/ai-deskilling-software-reliability-engineers-sre/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изкуственият интелект не заменя SRE инженерите – той отнема тяхната експертиза и интуиция</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/ai-deskilling-software-reliability-engineers-sre/hero.png" alt="Инженер по надеждност на системите анализира сложни логове и графики на прекъсване"><br><small>Източник: SigNoz / SRE Research</small></p>
+<p>В провокативен анализ, публикуван в бюлетина на SigNoz и предизвикал разгорещени дискусии сред инженерната общност, изследователи по системна надеждност поставят под въпрос масовото възприятие, че изкуственият интелект просто ще замени инженерите по надеждност на системите (<a href="/pages/sre.html">SRE</a>) [1]. Истинската опасност е далеч по-коварна: масовото делегиране на първоначалния анализ на аномалии към езикови модели води до системна деквалификация (deskilling) на човешките специалисти, унищожавайки дълбоката интуиция, необходима за <a href="/pages/root-cause-analysis.html">анализ на първопричините</a> при безпрецедентни системни сривове.</p>
+<h2>Загубата на когнитивната мускулна памет при дежурства (On-Call)</h2>
+<p>В продължение на години майсторството в дисциплините <a href="/pages/devops.html">DevOps</a> и SRE се изграждаше в „огъня на битката“: нощни дежурства, ръчно филтриране на хиляди редове логове, проследяване на TCP пакети и разплитане на комплексни разпределени зависимости. Днес, когато интелигентен бот незабавно сервира готово резюме от рода на „проблемът вероятно е в изчерпан пул от връзки към базата данни“, младите инженери приемат отговора на готово, без да преминат през мисловния процес на логическо изключване.</p>
+<h2>Опасността от каскадни непознати повреди (Black Swan Incidents)</h2>
+<p>Проблемът настъпва, когато сложна разпределена система се сблъска с аномалия, която никога не е присъствала в обучителните данни на модела – например скрит race condition между микроуслуги при неочакван мрежов дял. В такива моменти AI асистентите генерират правдоподобни, но напълно грешни хипотези (халюцинации), насочвайки дежурния екип в задънена улица, докато реалният срив спира критични услуги за часове.</p>
+<h2>Парадоксът на автоматизацията и бъдещето на инженерната устойчивост</h2>
+<p>Този феномен е класическа илюстрация на парадокса на автоматизацията на Лисън: колкото по-надеждна е автоматичната система при 99% от рутинните проблеми, толкова по-неподготвен е човешкият оператор да поеме ръчния контрол при останалия 1% от екстремни кризи. В съвременното <a href="/pages/incident-management.html">управление на инциденти</a> и платформите за <a href="/pages/observability.html">наблюдаемост</a> изкуственият интелект трябва да се третира като асистент за ускоряване на търсенето, а не като окончателен съдия. Инженерните организации трябва активно да провеждат учения по хаос-инженерство с изключен AI, за да поддържат жива аналитичната способност на своите екипи. В противен случай индустрията рискува да се окаже управлявана от крехки черни кутии, които никой човек вече не разбира напълно.</p>
+<p><img src="/articles/2026/10/30/ai-deskilling-software-reliability-engineers-sre/infographic.png" alt="Инфографика: ПАРАДОКСЪТ НА SRE: ЗАЩО AI ДЕКВАЛИФИЦИРА ИНЖЕНЕРИТЕ"><br><small>Структурен анализ: загуба на мисловни навици, халюцинации при черни лебеди и хаос-инженерство.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling">SigNoz Newsletter: AI Isn&#39;t Replacing SREs. It&#39;s Deskilling Them</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sre.html">SRE (Site Reliability Engineering)</a><p>Site Reliability Engineering (SRE) е методология и дисциплина, която прилага софтуерното инженерство за решаване на проблеми в инфраструктурата и сист...</p></li><li><a href="/pages/root-cause-analysis.html">Анализ на първопричината (Root Cause Analysis - RCA)</a><p>Анализ на първопричината (Root Cause Analysis - RCA)
+Анализът на първопричината (Root Cause Analysis - RCA) е структуриран инженерен процес за идентиф...</p></li><li><a href="/pages/observability.html">Наблюдаемост (Observability)</a><p>Наблюдаемостта (Observability) е способността за разбиране на вътрешното състояние на една сложна система чрез анализ на нейните външни сигнали (телем...</p></li><li><a href="/pages/incident-management.html">Управление на инциденти (Incident Management)</a><p>Управлението на инциденти е структуриран процес в IT организациите за бързо възстановяване на нормалното функциониране на услугите след неочаквано пре...</p></li><li><a href="/pages/devops.html">DevOps</a><p>DevOps е методология и култура, която обединява разработката на софтуер (Dev) и ИТ операциите (Ops).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

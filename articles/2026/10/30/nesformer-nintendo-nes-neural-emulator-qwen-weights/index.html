@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / Dan Breunig / Qwen
+В един от най-впечатляващите компютърни експерименти на годината, независимият изследовател Дан Бройниг представи проекта Nesformer – пълнофункционален емулато..."><title>Nesformer: Пълноценен Nintendo NES емулатор, заучен в 1GB невронни тегла на Qwen - Светни.ме</title><meta property="og:title" content="Nesformer: Пълноценен Nintendo NES емулатор, заучен в 1GB невронни тегла на Qwen - Светни.ме"><meta property="og:description" content="Източник: GitHub / Dan Breunig / Qwen
+В един от най-впечатляващите компютърни експерименти на годината, независимият изследовател Дан Бройниг представи проекта Nesformer – пълнофункционален емулато..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/30/nesformer-nintendo-nes-neural-emulator-qwen-weights/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/30/nesformer-nintendo-nes-neural-emulator-qwen-weights/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Nesformer: Пълноценен Nintendo NES емулатор, заучен в 1GB невронни тегла на Qwen</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->30 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/30/nesformer-nintendo-nes-neural-emulator-qwen-weights/hero.png" alt="Схематично представяне на трансформърна архитектура, изпълняваща ретро игра от Nintendo NES"><br><small>Източник: GitHub / Dan Breunig / Qwen</small></p>
+<p>В един от най-впечатляващите компютърни експерименти на годината, независимият изследовател Дан Бройниг представи проекта <a href="/pages/nesformer.html">Nesformer</a> – пълнофункционален емулатор на легендарната 8-битова конзола <a href="/pages/nintendo.html">Nintendo NES</a>, компилиран и изпълняван изцяло в рамките на приблизително 1 гигабайт матрични <a href="/pages/weights.html">тегла</a> на базовия модел <a href="/pages/qwen.html">Qwen</a> [1]. За разлика от класическите емулатори, които разчитат на твърдо кодирани интерпретатори на езика C или асемблер, Nesformer предвижда следващото хардуерно състояние на конзолата като авторегресивен поток от токени.</p>
+<h2>Цикъл-точна авторегресия: Симулация на MOS 6502 и графичния чип PPU</h2>
+<p>Архитектурата на Nesformer превръща състоянието на процесорните регистри (A, X, Y, PC, SP), оперативната памет от 2KB и регистрите на видеоконтролера Picture Processing Unit (PPU) в структурирани вектори на състоянието. Чрез обучение върху милиони цикли на изпълнение на класически игри като Super Mario Bros. и Tetris, моделът се е научил да изчислява адресирането, прекъсванията (NMI, IRQ) и пикселния изход на екрана директно през слоевете на <a href="/pages/transformers.html">трансформърния</a> механизъм за внимание (Self-Attention).</p>
+<h2>Дискретна математика срещу вероятностни халюцинации</h2>
+<p>Най-голямото постижение на проекта е постигането на 100% детерминистична прецизност при изпълнение на логически инструкции. Докато езиковите модели са известни със своята вероятностна природа и склонност към грешки, чрез прецизна квантизация и специфично структурирани токени за паметта, Nesformer изпълнява циклично точни преходи без нито един дефектирал бит, запазвайки логиката на играта стабилна в продължение на часове геймплей.</p>
+<h2>Невронните мрежи като универсални машини на Тюринг от ново поколение</h2>
+<p>Успехът на Nesformer преминава далеч отвъд носталгията по 8-битовите игри; той предлага фундаментално научно доказателство за изчислителния капацитет на невронните мрежи. Експериментът доказва, че <a href="/pages/neural-emulation.html">невронната емулация</a> може да заучи произволна дискретна архитектура на фон Нойман директно от наблюдение на нейното изпълнение, без необходимост от ръчно писане на компилатор или логически правила. Това открива пътя към автоматизирана миграция на стар софтуер от отдавна изчезнали мейнфрейм компютри и военни чипове към съвременни невронни ускорители. В бъдеще процесорите може да не се емулират ред по ред, а да се „сънуват“ и изпълняват паралелно в тензорните ядра на базови невронни модели.</p>
+<p><img src="/articles/2026/10/30/nesformer-nintendo-nes-neural-emulator-qwen-weights/infographic.png" alt="Инфографика: NESFORMER: КОНЗОЛА ВЪТРЕ В НЕВРОННИТЕ ТЕГЛА НА QWEN"><br><small>Архитектурни компоненти: състояния на паметта, видео генериране, премахване на халюцинации и бъдеще.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/dbreunig/nesformer">GitHub: Dan Breunig - nesformer: A Working Nintendo in ~1GB of Qwen Weights</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/weights.html">Тегла (Weights)</a><p>Теглата са числените параметри вътре в невронната мрежа, които определят силата на връзката между два неврона.</p></li><li><a href="/pages/transformers.html">Трансформъри</a><p>Трансформърите (Transformers) са клас архитектури за дълбоки невронни мрежи, представени за първи път в научната статия „Attention Is All You Need“ от...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/nintendo.html">Nintendo NES / Famicom архитектура</a><p>Nintendo Entertainment System (NES) е 8-битова конзола за видеоигри от трето поколение, пусната от Nintendo през 1983 г.</p></li><li><a href="/pages/neural-emulation.html">Невронна емулация (Neural Emulation)</a><p>Невронната емулация е изчислителен подход, при който физическото поведение и цикъл-по-цикъл логиката на даден процесор или хардуерна архитектура се си...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
