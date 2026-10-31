@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: CERN Computing Centre / Wikimedia Commons
+Лидерът в мрежовата сигурност и инфраструктура Cloudflare обяви, че неговата иновативна услуга Private Origins вече е напълно достъпна за обща уп..."><title>Cloudflare пуска Private Origins за обща употреба: Архитектура за сигурна връзка към частни AI модели - Светни.ме</title><meta property="og:title" content="Cloudflare пуска Private Origins за обща употреба: Архитектура за сигурна връзка към частни AI модели - Светни.ме"><meta property="og:description" content="Източник: CERN Computing Centre / Wikimedia Commons
+Лидерът в мрежовата сигурност и инфраструктура Cloudflare обяви, че неговата иновативна услуга Private Origins вече е напълно достъпна за обща уп..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/31/cloudflare-private-origins-zero-trust-ai-gateways/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/31/cloudflare-private-origins-zero-trust-ai-gateways/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare пуска Private Origins за обща употреба: Архитектура за сигурна връзка към частни AI модели</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->31 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/31/cloudflare-private-origins-zero-trust-ai-gateways/hero.png" alt="Мрежова архитектурна диаграма на сигурен трафик през глобалната мрежа на Cloudflare"><br><small>Източник: CERN Computing Centre / Wikimedia Commons</small></p>
+<p>Лидерът в мрежовата сигурност и инфраструктура <a href="/pages/cloudflare.html">Cloudflare</a> обяви, че неговата иновативна услуга Private Origins вече е напълно достъпна за обща употреба (General Availability) в световен мащаб [1]. Решението предоставя на бизнеса високопроизводителна рамка от тип <a href="/pages/zero-trust.html">нулево доверие</a> за безопасно свързване на чувствителни вътрешни центрове за данни и частни AI клъстери към глобалната мрежа без необходимост от публични IP адреси.</p>
+<h2>Елиминиране на повърхността за външни кибератаки</h2>
+<p>Когато компаниите разгръщат собствени фино настроени езикови модели върху локален хардуер, те често са принудени да конфигурират сложни VPN тунели или да излагат API крайни точки на публични адреси, което ги прави уязвими за DDoS атаки и опити за проникване. С Private Origins трафикът от корпоративните потребители и партньори се маршрутизира директно през глобалния Anycast бекбоун на Cloudflare, преминавайки през криптирани тунели Cloudflare Tunnel директно към изолираната виртуална частна мрежа (VPC) на клиента.</p>
+<h2>Интеграция с AI Gateway за динамичен одит и кеширане</h2>
+<p>Новата функционалност се интегрира безупречно с платформата Cloudflare AI Gateway. Това позволява на мрежовите администратори да прилагат стриктни защитни политики на границата (edge): ограничаване на заявките (rate limiting), динамично семантично кеширане за пестене на изчислителен капацитет и автоматично маскиране на чувствителни лични данни (PII), преди те да достигнат до модела.</p>
+<h2>Преходът към криптографски защитена периметрова AI архитектура</h2>
+<p>Пускането на Private Origins маркира важна крачка в изграждането на безопасна мрежова среда за ерата на корпоративния изкуствен интелект. Досега финансовите институции, здравеопазването и отбранителните изпълнители се колебаеха да внедряват генеративни модели поради риска от прехващане на обучителни данни или вътрешни подсказки (prompts). Чрез комбиниране на принципите на Zero Trust с глобална оптична свързаност, Cloudflare премахва концепцията за уязвим публичен сървър. В новата архитектура границите на корпоративната мрежа се разпростират до най-близката периферна точка, осигурявайки микросекундна скорост и криптографска изолация за най-критичните изчислителни активи на модерния бизнес.</p>
+<p><img src="/articles/2026/10/31/cloudflare-private-origins-zero-trust-ai-gateways/infographic.png" alt="Инфографика: НУЛЕВО ДОВЕРИЕ: CLOUDFLARE PRIVATE ORIGINS ЗА AI"><br><small>Структурен анализ на Cloudflare Tunnel, Anycast защитата и семантичното кеширане.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.cloudflare.com/private-origins-public-to-private/">Cloudflare Blog: Cloudflare services for private origins is now generally available</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/zero-trust.html">Zero Trust (Нулево доверие)</a><p>Zero Trust („Нулево доверие“) е архитектура за киберсигурност, базирана на принципа „никога не се доверявай, винаги проверявай“.</p></li><li><a href="/pages/networking.html">Мрежови технологии и свързаност</a><p>Мрежовите технологии осигуряват преноса на данни, свързвайки разпределени изчислителни центрове, облачни платформи и крайни устройства.</p></li><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

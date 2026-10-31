@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Netflix Systems Architecture / GPU Infrastructure
+Инженерното подразделение на Netflix представи революционен архитектурен подход за управление на мащабни изчислителни клъстери, при който..."><title>Netflix третира хардуерната надеждност на графичните процесори като проблем на разпределените системи - Светни.ме</title><meta property="og:title" content="Netflix третира хардуерната надеждност на графичните процесори като проблем на разпределените системи - Светни.ме"><meta property="og:description" content="Източник: Netflix Systems Architecture / GPU Infrastructure
+Инженерното подразделение на Netflix представи революционен архитектурен подход за управление на мащабни изчислителни клъстери, при който..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/10/31/netflix-gpu-reliability-distributed-systems-engineering/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/10/31/netflix-gpu-reliability-distributed-systems-engineering/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Netflix третира хардуерната надеждност на графичните процесори като проблем на разпределените системи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->31 октомври 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/10/31/netflix-gpu-reliability-distributed-systems-engineering/hero.png" alt="Сървърен рак с течно охлаждани GPU ускорители и мониторинг на системните логове"><br><small>Източник: Netflix Systems Architecture / GPU Infrastructure</small></p>
+<p>Инженерното подразделение на <a href="/pages/netflix.html">Netflix</a> представи революционен архитектурен подход за управление на мащабни изчислителни клъстери, при който хардуерната ненадеждност на съвременните графични ускорители (<a href="/pages/gpu.html">GPU</a>) се третира като фундаментално свойство на <a href="/pages/distributed-systems.html">разпределените системи</a>, а не като фатална физическа авария [1]. Новата система елиминира спирането на дълги обучителни сесии при поява на единични дефекти в чиповете.</p>
+<h2>Реалността на тихите грешки (Silent Data Corruption) и дефектите в HBM паметта</h2>
+<p>С нарастването на плътността на полупроводниците и въвеждането на многослойна HBM3e памет, графичните карти страдат от чести преходни сривове – космически лъчи предизвикват единични битови обръщания, а термичното напрежение води до временни спадове в пропускателната способност на шината NVLink. В традиционните клъстери дори една такава грешка караше цялото разпределено обучение да крашне, водейки до загуба на часове скъпо изчислително време.</p>
+<h2>Динамично изолиране и протокол за консенсус без прекъсване</h2>
+<p>Рамката на Netflix въвежда непрекъснати микропроверки на математическата коректност на междинните тензорни изчисления. Когато се засече аномалия в работата на даден възел, оркестраторът автоматично изолира проблемния GPU, прехвърля теглата му към резервен чип чрез високоскоростен P2P трансфер и възобновява синхронизацията на градиентите за под 3 секунди без рестартиране на останалата част от клъстера.</p>
+<h2>Устойчивост на софтуерния слой като спасение за хардуерните лимити</h2>
+<p>Опитът на Netflix показва бъдещето на високопроизводителните изчисления: невъзможността на физическия силиций да поддържа перфектна надеждност трябва да бъде компенсирана от интелигентен разпределен софтуерен слой. Точно както преди две десетилетия Google създаде MapReduce и Bigtable, за да изгради надеждни търсачки върху евтини, чупливи потребителски твърди дискове, днес AI инженерите трябва да проектират софтуерни архитектури, които приемат дефектите в свръхскъпите GPU клъстери като даденост. Преминаването към динамично възстановяване на ниво разпределен консенсус спестява милиони долари от похабена електроенергия и скъсява времето за обучение на сложни мултимодални модели.</p>
+<p><img src="/articles/2026/10/31/netflix-gpu-reliability-distributed-systems-engineering/infographic.png" alt="Инфографика: GPU НАДЕЖДНОСТ КАТО РАЗПРЕДЕЛЕНА СИСТЕМА: NETFLIX"><br><small>Анализ на HBM грешките, тензорните микропроверки и динамичната P2P миграция.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/10/netflix-gpu-distributed-systems/">InfoQ: Netflix Treats GPU Reliability as a Distributed Systems Problem</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/netflix.html">Netflix</a><p>Netflix е водещата световна платформа за стрийминг на видео съдържание.</p></li><li><a href="/pages/gpu.html">GPU</a><p>GPU (Graphics Processing Unit – графичен процесор) е специализирана електронна верига, проектирана за бързо манипулиране и промяна на паметта, за да с...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
