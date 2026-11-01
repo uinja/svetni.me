@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / Btrs
+Инженерите от DoorDash разкриха архитектурната трансформация на своята система за разпространение на системни конфигурации, изоставяйки традиционните релационни б..."><title>Преструктуриране на конфигурационната дистрибуция в DoorDash чрез SquashFS в свръхголям мащаб - Светни.ме</title><meta property="og:title" content="Преструктуриране на конфигурационната дистрибуция в DoorDash чрез SquashFS в свръхголям мащаб - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / Btrs
+Инженерите от DoorDash разкриха архитектурната трансформация на своята система за разпространение на системни конфигурации, изоставяйки традиционните релационни б..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/01/doordash-squashfs-runtime-configuration-distribution-scale/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/01/doordash-squashfs-runtime-configuration-distribution-scale/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Преструктуриране на конфигурационната дистрибуция в DoorDash чрез SquashFS в свръхголям мащаб</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/01/doordash-squashfs-runtime-configuration-distribution-scale/hero.png" alt="Високопроизводителен Linux клъстер със SquashFS сторидж"><br><small>Източник: Wikimedia Commons / Btrs</small></p>
+<p>Инженерите от <a href="/pages/doordash.html">DoorDash</a> разкриха архитектурната трансформация на своята система за разпространение на системни конфигурации, изоставяйки традиционните релационни бази и кешове в полза на компресирани Linux файлови системи <a href="/pages/squashfs.html">SquashFS</a> [1]. Новото решение обслужва милиарди проверки на динамични правила и машинни параметри в секунда с нулева деградация на мрежовия трафик.</p>
+<h2>Проблемът с мрежовия шум и каскадните сривове</h2>
+<p>При десетки хиляди микроуслуги, обслужващи алгоритми за ценообразуване, класиране на ресторанти и диспечерски AI модели, постоянните мрежови заявки към централизирани Consul или ZooKeeper клъстери предизвикваха задръствания и отказ на услуги при рестарт на сървъри.</p>
+<h2>Локално монтиране на компресирани SquashFS образи с Zstandard</h2>
+<p>В новата архитектура централен билдер компресира цялото конфигурационно дърво в малък SquashFS файл с алгоритъма Zstandard и го дистрибутира чрез peer-to-peer протокол до всеки физически възел. Микроуслугите четат конфигурацията директно от ядрото на Linux чрез паметта (page cache), постигайки суб-микросекундна латентност без мрежов трафик.</p>
+<h2>Завръщането към минимализма на операционната система за мащабни AI инфраструктури</h2>
+<p>Инженерният избор на DoorDash е прекрасен урок за цялата индустрия за облачни технологии. В стремежа си към модерност разработчиците често натрупват слоеве от сложни разпределени бази данни и междинни мрежови проксита за решаване на проблеми, които ядрото на операционната система Linux решава отлично от десетилетия. Използването на SquashFS — технология, първоначално създадена за вградени рутери и LiveCD дистрибуции — за захранване на една от най-натоварените логистични мрежи в света, доказва, че детерминистичната простота и локалността на данните в паметта остават непобедим стандарт за високопроизводителни изчисления.</p>
+<p><img src="/articles/2026/11/01/doordash-squashfs-runtime-configuration-distribution-scale/infographic.png" alt="Инфографика: SQUASHFS КОНФИГУРАЦИЯ В DOORDASH"><br><small>Анализ на P2P дистрибуцията, локалното кеширане в паметта и елиминирането на мрежовия шум.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://careersatdoordash.com/blog/overhauling-doordashs-runtime-configuration-value-distribution-with-squashfs/">DoorDash Careers: Overhauling DoorDash&#39;s Runtime Configuration Value Distribution with SquashFS</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/doordash.html">DoorDash</a><p>DoorDash е водеща американска технологична компания, която оперира онлайн платформа за доставка на храна, хранителни стоки и местни логистични услуги.</p></li><li><a href="/pages/squashfs.html">SquashFS</a><p>SquashFS е файлова система за ядрото на Linux, оптимизирана за компресиране на блоково ниво и достъп само за четене.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

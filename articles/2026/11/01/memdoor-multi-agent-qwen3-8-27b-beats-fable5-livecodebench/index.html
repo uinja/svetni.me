@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / Memdoor Project
+С отворената софтуерна рамка Memdoor независими изследователи постигнаха исторически резултат на престижния тест за програмни алгоритми LiveCodeBench Hard, където..."><title>Memdoor: Отбор от пет компактни модела Qwen3.8-27B победи водещи монолитни гиганти на LiveCodeBench Hard - Светни.ме</title><meta property="og:title" content="Memdoor: Отбор от пет компактни модела Qwen3.8-27B победи водещи монолитни гиганти на LiveCodeBench Hard - Светни.ме"><meta property="og:description" content="Източник: GitHub / Memdoor Project
+С отворената софтуерна рамка Memdoor независими изследователи постигнаха исторически резултат на престижния тест за програмни алгоритми LiveCodeBench Hard, където..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/01/memdoor-multi-agent-qwen3-8-27b-beats-fable5-livecodebench/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/01/memdoor-multi-agent-qwen3-8-27b-beats-fable5-livecodebench/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Memdoor: Отбор от пет компактни модела Qwen3.8-27B победи водещи монолитни гиганти на LiveCodeBench Hard</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/01/memdoor-multi-agent-qwen3-8-27b-beats-fable5-livecodebench/hero.png" alt="Работна станция с множество екрани и отворени програмни редактори"><br><small>Източник: GitHub / Memdoor Project</small></p>
+<p>С отворената софтуерна рамка <a href="/pages/memdoor.html">Memdoor</a> независими изследователи постигнаха исторически резултат на престижния тест за програмни алгоритми LiveCodeBench Hard, където екип от пет координирани модела <a href="/pages/qwen.html">Qwen</a>-27B изпревари затворените мега-модели [1]. Успехът доказва, че структурираният дебат и специализираното разпределение на ролите превъзхождат бруталното скалиране на параметри.</p>
+<h2>Архитектура на дебата: Генератор, Критик, Тестер и Оптимизатор</h2>
+<p>Вместо да разчита на единичен отговор, Memdoor разделя процеса на решаване на код между пет агента. Първият генерира първоначалния алгоритъм, вторият конструира крайни случаи и стрес-тестове, третият извършва формална верификация на сложността по памет и време, а четвъртият и петият синтезират финалното решение на база на откритите слабости.</p>
+<h2>Ценова и изчислителна ефективност на 27-милиардния клас</h2>
+<p>Изпълнението на пет паралелни сесии на компактен 27B модел изисква едва част от хардуерните ресурси (и памет на графичния процесор), необходими за стартирането на затворен модел с над 1 трилион параметри. Това позволява на малки инженерни екипи да постигнат елитни резултати върху локални GPU работни станции.</p>
+<h2>Смяната на парадигмата от монолитни оракули към ансамбли от специалисти</h2>
+<p>Триумфът на Memdoor е ясен сигнал за архитектурната трансформация, която предстои в софтуерното инженерство. Досега индустрията бе доминирана от вярата, че един гигантски модел от общ тип трябва да знае и може всичко. В действителност човешките екипи постигат комплексни цели не чрез един всезнаещ гений, а чрез специализация, взаимен контрол и преглед на кода (code review). Мулти-агентните системи пренасят тези доказани инженерни принципи в машинния интелект. В бъдеще enterprise софтуерът ще бъде изграждан и поддържан не от отделни свръхскъпи API точки, а от оркестрирани рояци от евтини, квантувани локални модели, дебатиращи помежду си за всеки ред код.</p>
+<p><img src="/articles/2026/11/01/memdoor-multi-agent-qwen3-8-27b-beats-fable5-livecodebench/infographic.png" alt="Инфографика: МУЛТИ-АГЕНТЕН ТРИУМФ: MEMDOOR И QWEN"><br><small>Структурен анализ на ролевото разпределение, дебата и локалната изчислителна ефективност.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve">GitHub: Memdoor - Multi-agent Qwen3.8-27B team beats Fable 5 on LiveCodeBench</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/memdoor.html">Memdoor</a><p>Memdoor е софтуерна рамка за координация на отбори от специализирани езикови модели (като Qwen), които симулират екип от софтуерни инженери за решаван...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

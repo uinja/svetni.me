@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Mashable / Keyvan
+Лабораторията Anthropic обяви, че разширява технологията си за вградено криптографско и статистическо водно маркиране на текст към по-стари версии на Claude [1]. Мярката..."><title>Anthropic разширява водното маркиране на текст към по-стари модели: Цената върху ентропията и качеството - Светни.ме</title><meta property="og:title" content="Anthropic разширява водното маркиране на текст към по-стари модели: Цената върху ентропията и качеството - Светни.ме"><meta property="og:description" content="Източник: Mashable / Keyvan
+Лабораторията Anthropic обяви, че разширява технологията си за вградено криптографско и статистическо водно маркиране на текст към по-стари версии на Claude [1]. Мярката..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/01/anthropic-expands-text-watermarking-entropy-tradeoffs/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/01/anthropic-expands-text-watermarking-entropy-tradeoffs/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic разширява водното маркиране на текст към по-стари модели: Цената върху ентропията и качеството</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/01/anthropic-expands-text-watermarking-entropy-tradeoffs/hero.png" alt="Светещи редове компютърен код и статистически анализ на текст"><br><small>Източник: Mashable / Keyvan</small></p>
+<p>Лабораторията <a href="/pages/anthropic.html">Anthropic</a> обяви, че разширява технологията си за вградено криптографско и статистическо водно маркиране на текст към по-стари версии на Claude [1]. Мярката цели да отговори на регулаторните изисквания в ЕС и САЩ, но независими анализи показват, че изкуственото манипулиране на вероятностите за следващ токен води до измерим спад в ентропията и креативното качество на изхода.</p>
+<h2>Механика на статистическото разделяне на зелени и червени списъци</h2>
+<p>Технологията за <a href="/pages/watermarking.html">водно маркиране</a> използва псевдослучайна хеш функция, базирана на предходния n-грам, за да раздели речника на модела на „зелен“ и „червен“ списък. При генерация моделът добавя математическо отклонение (bias) към лоджитите на токените от зеления списък, оставяйки статистически невидим за човека, но лесно откриваем от верификационни алгоритми шаблон.</p>
+<h2>Деградация на ентропията при задачи с висока сложност</h2>
+<p>Когато моделът решава прецизни математически или софтуерни задачи, където верният токен е строго детерминиран, изкуственото фаворизиране на „зелени“ токени води до грешки при компилация и логически халюцинации. Авторите на изследването документират до 4.2% спад в точността при бенчмаркове за синтез на алгоритми.</p>
+<h2>Дълбокият конфликт между регулаторен контрол и моделиерна производителност</h2>
+<p>Разширяването на водното маркиране към базовите модели илюстрира фундаменталната дилема пред създателите на изкуствен интелект: как да изпълнят правителствените изисквания за отчетност без да осакатят интелектуалния капацитет на мрежите. Всяка намеса в свободното разпределение на вероятностите ограничава способността на модела да избира най-точния възможен израз. Ако комерсиалните лаборатории продължат да налагат задължителни водни знаци, най-взискателните корпоративни потребители — инженери, учени и финансови анализатори — бързо ще мигрират към чисти отворени архитектури, които не компрометират логическата си строгост в името на държавния надзор.</p>
+<p><img src="/articles/2026/11/01/anthropic-expands-text-watermarking-entropy-tradeoffs/infographic.png" alt="Инфографика: ВОДНО МАРКИРАНЕ НА ТЕКСТ: ЕНТРОПИЯ СРЕЩУ КОНТРОЛ"><br><small>Анализ на зелените списъци, ентропийния колапс и спада в математическата точност.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://mashable.com/tech/anthropic-expands-text-watermarking-to-older-claude-versions">Mashable: Anthropic expands text watermarking to older Claude versions</a></p>
+</li>
+<li><p><a href="https://blog.keyvan.net/p/ai-text-watermarking-and-quality">Keyvan Blog: AI text watermarking and quality loss</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/watermarking.html">Водно маркиране на AI съдържание (Watermarking)</a><p>Водното маркиране на AI съдържание е криптографска и статистическа техника за вграждане на невидими метаданни или статистически сигнали в генериран те...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

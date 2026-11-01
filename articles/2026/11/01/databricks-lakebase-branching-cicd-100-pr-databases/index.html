@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks Engineering
+Инженерният екип на Databricks публикува задълбочен технически доклад за въвеждането на Lakebase Branching в цикъла за непрекъсната интеграция (CI/CD), позволяващ п..."><title>Разклоняване на Lakebase за CI/CD: Уроците на Databricks от управлението на 100 бази данни на ниво Pull Request - Светни.ме</title><meta property="og:title" content="Разклоняване на Lakebase за CI/CD: Уроците на Databricks от управлението на 100 бази данни на ниво Pull Request - Светни.ме"><meta property="og:description" content="Източник: Databricks Engineering
+Инженерният екип на Databricks публикува задълбочен технически доклад за въвеждането на Lakebase Branching в цикъла за непрекъсната интеграция (CI/CD), позволяващ п..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/01/databricks-lakebase-branching-cicd-100-pr-databases/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/01/databricks-lakebase-branching-cicd-100-pr-databases/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Разклоняване на Lakebase за CI/CD: Уроците на Databricks от управлението на 100 бази данни на ниво Pull Request</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->1 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/01/databricks-lakebase-branching-cicd-100-pr-databases/hero.png" alt="Сървърни стелажи в модерен център за данни с оптимизиран сторидж"><br><small>Източник: Databricks Engineering</small></p>
+<p>Инженерният екип на <a href="/pages/databricks.html">Databricks</a> публикува задълбочен технически доклад за въвеждането на Lakebase Branching в цикъла за непрекъсната интеграция (CI/CD), позволяващ паралелното стартиране на над 100 изолирани бази данни за всеки отделен Pull Request [1]. Решението елиминира тестовите задръствания и гарантира пълно съответствие с производствената среда без колосални разходи за съхранение.</p>
+<h2>Метаданни с Copy-on-Write и виртуализация на сториджа</h2>
+<p>Вместо да копира терабайти сурови файлове от производствените таблици, Lakebase използва COW (Copy-on-Write) механизъм върху каталога с метаданни на Delta Lake. Създаването на нов клон на базата отнема под 2 секунди, тъй като първоначално чете споделените Parquet файлове, а записва само новите модификации, генерирани от тестовия скрипт.</p>
+<h2>Автоматизирано валидиране на миграции на схеми</h2>
+<p>Архитектурата решава най-болезнения проблем на модерните RAG и AI тръбопроводи: чупенето на съвместимостта при промяна на базата данни. Всеки Pull Request тества реални заявки, вектори и индекси върху актуални данни в пълна изолация преди сливане в главния клон.</p>
+<h2>Еволюцията на данните към гъвкавостта на изходния код</h2>
+<p>Иновацията на Databricks илюстрира фундаменталната конвергенция между софтуерната разработка и инженерството на данни. Години наред софтуерните разработчици се радваха на гъвкавостта на Git разклоненията, докато инженерите по данни бяха заложници на бавни, скъпи и статични бази данни, където тестовете се правеха върху синтетични макети. Чрез превръщането на самите бази данни в евтини, ефимерни обекти, които се раждат и умират заедно с един Pull Request, индустрията премахва основната спирачка пред бързото внедряване на AI модели в реални производствени системи.</p>
+<p><img src="/articles/2026/11/01/databricks-lakebase-branching-cicd-100-pr-databases/infographic.png" alt="Инфографика: LAKEBASE РАЗКЛОНЯВАНЕ: CI/CD ЗА ДАННИ"><br><small>Анализ на Copy-on-Write метаданните, ефимерните клонове и автоматичните тестове.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.databricks.com/blog/lakebase-branching-cicd-lessons-100-pr-databases">Databricks: Lakebase branching for CI/CD: lessons from 100 PR databases</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
