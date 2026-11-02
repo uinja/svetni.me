@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Uber Engineering
+Инженерното подразделение на Uber публикува детайли за новата си вътрешна платформа MCP Gateway, проектирана да управлява комуникацията между десетки автономни AI..."><title>Uber създаде MCP Gateway за централизиран контрол над 800+ сървъра и 5 000+ AI агентни инструмента - Светни.ме</title><meta property="og:title" content="Uber създаде MCP Gateway за централизиран контрол над 800+ сървъра и 5 000+ AI агентни инструмента - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Uber Engineering
+Инженерното подразделение на Uber публикува детайли за новата си вътрешна платформа MCP Gateway, проектирана да управлява комуникацията между десетки автономни AI..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/02/uber-mcp-gateway-governs-800-servers-5000-agent-tools/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/02/uber-mcp-gateway-governs-800-servers-5000-agent-tools/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Uber създаде MCP Gateway за централизиран контрол над 800+ сървъра и 5 000+ AI агентни инструмента</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/02/uber-mcp-gateway-governs-800-servers-5000-agent-tools/hero.png" alt="Сървърни шкафове и мрежови комутатори в център за данни"><br><small>Източник: InfoQ / Uber Engineering</small></p>
+<p>Инженерното подразделение на <a href="/pages/uber.html">Uber</a> публикува детайли за новата си вътрешна платформа MCP Gateway, проектирана да управлява комуникацията между десетки автономни AI агенти и над 800 сървъра в корпоративната мрежа [1]. Решението се базира на отворения стандарт <a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a> и управлява над 5000 специализирани софтуерни инструмента.</p>
+<h2>Централизирана автентикация и йерархичен контрол на достъпа (RBAC)</h2>
+<p>Вместо всеки отделен агент да получава директни API ключове или административни права до микроуслугите, MCP Gateway действа като междинен инспекционен слой. Той превежда заявките на агентите в стандартизирани JSON-RPC съобщения, верифицира правата за достъп спрямо криптографски токени и налага стриктни лимити върху опасни операции като изтриване на бази данни или масови парични преводи.</p>
+<h2>Телеметрия в реално време и детерминистичен одит на извикванията</h2>
+<p>Шлюзът записва всяко единично извикване на инструмент (tool call), входящите параметри и генерирания системен отговор в структурирана база данни за одит. Това позволява на инженерите по сигурността мигновено да прекъснат работата на компрометиран или халюциниращ агент и да възстановят предишното състояние на системата без прекъсване на общите услуги.</p>
+<h2>Стандартизацията на контекста като предпоставка за индустриална агентна зрялост</h2>
+<p>Внедряването на MCP Gateway в инфраструктурата на Uber бележи критична фаза в еволюцията на автономните софтуерни системи. През първите години на генеративната вълна разработчиците използваха ad-hoc свързване на модели с външни функции, което водеше до уязвимости от инжектиране на зловреден код и неконтролируемо поведение. Чрез приемането на унифициран контекстен протокол и шлюзова архитектура, големите технологични платформи доказват, че агентният изкуствен интелект може да бъде интегриран безопасно в критични високопроизводителни системи с нулева толерантност към прекъсвания.</p>
+<p><img src="/articles/2026/11/02/uber-mcp-gateway-governs-800-servers-5000-agent-tools/infographic.png" alt="Инфографика: Как се оркестрират 5000+ инструмента над 800 сървъра с Model Context Protocol"><br><small>Анализ на JSON-RPC шлюза, RBAC политиките за сигурност и одитната телеметрия.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/">InfoQ: Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/uber.html">Uber</a><p>Uber е глобална технологична платформа, водеща в услугите за споделено пътуване и доставка на храна.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/agentic-ai.html">Агентен ИИ (Agentic AI)</a><p>Агентният ИИ (Agentic AI) се отнася до системи с изкуствен интелект, които не само генерират съдържание, но и могат самостоятелно да планират и изпълн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

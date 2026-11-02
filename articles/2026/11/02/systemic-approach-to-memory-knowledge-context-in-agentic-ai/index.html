@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / AI Systems Research
+В задълбочен технически доклад водещи системни инженери представиха нова унифицирана парадигма за организация на когнитивните слоеве в автономните AI агенти [1..."><title>Системен подход към архитектурата на паметта, знанието и контекста в автономните AI агенти - Светни.ме</title><meta property="og:title" content="Системен подход към архитектурата на паметта, знанието и контекста в автономните AI агенти - Светни.ме"><meta property="og:description" content="Източник: InfoQ / AI Systems Research
+В задълбочен технически доклад водещи системни инженери представиха нова унифицирана парадигма за организация на когнитивните слоеве в автономните AI агенти [1..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/02/systemic-approach-to-memory-knowledge-context-in-agentic-ai/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/02/systemic-approach-to-memory-knowledge-context-in-agentic-ai/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Системен подход към архитектурата на паметта, знанието и контекста в автономните AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/02/systemic-approach-to-memory-knowledge-context-in-agentic-ai/hero.png" alt="Абстрактна визуализация на сложна мрежа от знание и логически възли"><br><small>Източник: InfoQ / AI Systems Research</small></p>
+<p>В задълбочен технически доклад водещи системни инженери представиха нова унифицирана парадигма за организация на когнитивните слоеве в <a href="/pages/agentic-ai.html">автономните AI агенти</a> [1]. Изследването разглежда фундаменталните недостатъци на разчитането единствено на разширени контекстни прозорци и предлага трикомпонентна йерархия: работна памет, епизодично хранилище и структуриран граф на знанието.</p>
+<h2>Лимитите на простия RAG и феноменът „изгубен по средата“</h2>
+<p>Скалирането на контекстните прозорци до милиони токени не решава проблема с прецизността на извличане. Моделите системно пропускат критични факти, разположени в средата на обемисти текстови блокове (Lost in the Middle). Освен това, векторното сходство чрез ембединги често групира семантично близки, но фактически противоречиви твърдения, водещи до халюцинации при сложни многостъпкови разсъждения.</p>
+<h2>Тристепенна памет: Работен KV кеш, Епизодичен лог и Семантичен граф</h2>
+<p>Предложената архитектура разделя когнитивния поток на три отделни структури: 1) Високоскоростна работна памет за непосредствения контекст; 2) Епизодична памет, запазваща хронологията на минали действия и резултати; 3) Динамичен граф на знанието (Knowledge Graph), който дестилира верифицирани факти и релации между обекти с прецизна математическа валидация.</p>
+<h2>Преходът от чисти вектори към детерминистични онтологии в софтуерната архитектура</h2>
+<p>Системният подход към паметта бележи отрезвяването на инженерната общност от чисто вероятностните методи за управление на данни. Докато през първата фаза на генеративния бум векторните бази данни се представяха като универсален отговор на всяка нужда, реалният опит в критични индустрии доказа, че без детерминистична структура и валидирани онтологии агентите не могат да поддържат дългосрочна кохерентност. Бъдещето принадлежи на хибридните системи, които комбинират гъвкавостта на невронните мрежи със строгия формализъм на графовите бази данни и релационните схеми.</p>
+<p><img src="/articles/2026/11/02/systemic-approach-to-memory-knowledge-context-in-agentic-ai/infographic.png" alt="Инфографика: Как се комбинират контекст, епизодични логове и семантични графи"><br><small>Анализ на работната памет, векторната епизодичност и детерминистичните онтологии.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/articles/agentic-ai-context-memory-knowledge/">InfoQ: Systemic Approach to Memory, Knowledge, and Context in Agentic AI Architectures</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/agentic-ai.html">Агентен ИИ (Agentic AI)</a><p>Агентният ИИ (Agentic AI) се отнася до системи с изкуствен интелект, които не само генерират съдържание, но и могат самостоятелно да планират и изпълн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

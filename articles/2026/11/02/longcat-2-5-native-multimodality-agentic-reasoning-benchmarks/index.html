@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Hacker News / LongCat AI Research
+Изследователският консорциум зад проекта LongCat представи версия 2.5 на своя водещ модел, постигайки върхови резултати в престижните тестове за агентно ..."><title>Моделът LongCat-2.5 въвежда нативна мултимодалност и разбива рекордите при агентни задачи - Светни.ме</title><meta property="og:title" content="Моделът LongCat-2.5 въвежда нативна мултимодалност и разбива рекордите при агентни задачи - Светни.ме"><meta property="og:description" content="Източник: Hacker News / LongCat AI Research
+Изследователският консорциум зад проекта LongCat представи версия 2.5 на своя водещ модел, постигайки върхови резултати в престижните тестове за агентно ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/02/longcat-2-5-native-multimodality-agentic-reasoning-benchmarks/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/02/longcat-2-5-native-multimodality-agentic-reasoning-benchmarks/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Моделът LongCat-2.5 въвежда нативна мултимодалност и разбива рекордите при агентни задачи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/02/longcat-2-5-native-multimodality-agentic-reasoning-benchmarks/hero.png" alt="Абстрактна визуализация на мултимодални информационни вълни и светлинни потоци"><br><small>Източник: <a href="https://news.ycombinator.com/item?id=43000000" target="_blank" rel="noopener">Hacker News / LongCat AI Research</a></small></p>
+<p>Изследователският консорциум зад проекта <a href="/pages/longcat.html">LongCat</a> представи версия 2.5 на своя водещ модел, постигайки върхови резултати в престижните тестове за агентно програмиране и визуална навигация [1]. Основният пробив се крие в пълната нативна мултимодалност, елиминираща нуждата от отделни междинни модели за разпознаване на реч или оптично четене на символи.</p>
+<h2>Единно векторно пространство за аудио, кадри и токенизиран код</h2>
+<p>При конвенционалните системи видеопотоците се разделят на отделни кадри, които се описват текстово от малък модел преди предаването им към централния LLM. LongCat-2.5 премахва тази латентност чрез директна крос-модална токенизация. Моделът „чува“, „вижда“ и „пише“ в рамките на общ транслационен слой, което позволява реагиране на събития на екрана със закъснение под 50 милисекунди.</p>
+<h2>Оптимизирано разредено внимание за милионен контекст</h2>
+<p>За да поддържа обработката на часове непрекъснато видео при висока резолюция, моделът използва патентован механизъм за разредено внимание (sparse attention). Той динамично концентрира изчислителната мощ само върху променящите се зони на екрана или съществените реплики в аудиозаписа, драстично намалявайки разхода на VRAM памет в графичните процесори.</p>
+<h2>Премахването на транскрипционните бариери като скок към истинска агентна реактивност</h2>
+<p>Успехът на LongCat-2.5 показва в коя посока се движи фронтът на изкуствения интелект. Досегашният подход за навързване на отделни специализирани модели в тромави конвейери страдаше от натрупване на грешки на всяко междинно ниво. Истинската автономност, независимо дали в софтуерната среда или при физическите роботи, изисква непрекъснато, холографско възприятие на реалността. Моделите, които могат да възприемат звукови интонации, микрожестове и визуален код като единна симфония от данни, ще формират ядрото на следващото поколение интелигентни системи.</p>
+<p><img src="/articles/2026/11/02/longcat-2-5-native-multimodality-agentic-reasoning-benchmarks/infographic.png" alt="Инфографика: Как паралелната обработка на звук, видео и код свали латентността под 50ms"><br><small>Анализ на крос-модалната токенизация, разреденото внимание и агентната ефективност.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.ycombinator.com/item?id=43000000">Hacker News: LongCat-2.5: Native Multimodality for Agentic Tasks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/longcat.html">LongCat</a><p>LongCat е генеративен мултимодален модел, създаден за решаване на сложни агентни задачи с екстремно широк контекстен прозорец.</p></li><li><a href="/pages/agentic-ai.html">Агентен ИИ (Agentic AI)</a><p>Агентният ИИ (Agentic AI) се отнася до системи с изкуствен интелект, които не само генерират съдържание, но и могат самостоятелно да планират и изпълн...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

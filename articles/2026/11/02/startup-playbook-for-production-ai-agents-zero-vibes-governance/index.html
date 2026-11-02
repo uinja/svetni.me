@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Business Insider / Getty Images
+Основателите на бързоразвиващ се технологичен стартъп от едва осем души публикуваха подробен инженерен наръчник, описващ как оперират с продуктова ефективн..."><title>Без работа по усет: Инженерният наръчник за управление на AI агенти в малки технологични екипи - Светни.ме</title><meta property="og:title" content="Без работа по усет: Инженерният наръчник за управление на AI агенти в малки технологични екипи - Светни.ме"><meta property="og:description" content="Източник: Business Insider / Getty Images
+Основателите на бързоразвиващ се технологичен стартъп от едва осем души публикуваха подробен инженерен наръчник, описващ как оперират с продуктова ефективн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/02/startup-playbook-for-production-ai-agents-zero-vibes-governance/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/02/startup-playbook-for-production-ai-agents-zero-vibes-governance/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Без работа по усет: Инженерният наръчник за управление на AI агенти в малки технологични екипи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->2 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/02/startup-playbook-for-production-ai-agents-zero-vibes-governance/hero.png" alt="Малък технологичен инженерен екип пред бяла дъска с архитектурен план"><br><small>Източник: Business Insider / Getty Images</small></p>
+<p>Основателите на бързоразвиващ се технологичен стартъп от едва осем души публикуваха подробен инженерен наръчник, описващ как оперират с продуктова ефективност на 50-членна компания чрез автономни <a href="/pages/agentic-ai.html">AI агенти</a> [1]. Тяхната философия, наречена „Zero Vibes Governance“, отхвърля разчитането на неясен <a href="/pages/prompt-engineering.html">промпт инженеринг</a> в полза на строга програмна валидация.</p>
+<h2>Смъртта на промптинга по интуиция: Детерминистични схеми и JSON Schema</h2>
+<p>Основната грешка на повечето екипи според наръчника е третирането на моделите като колеги, с които се води разговор на естествен език. В продукционна среда всяка комуникация с агент трябва да се подчинява на твърда спецификация чрез JSON Schema със структурирани типове данни, задължителни полета и строга регулация на типовете, гарантираща 100% програмна предвидимост на отговора.</p>
+<h2>Изолация на грешките и автоматизиран rollback при компрометирани стъпки</h2>
+<p>Вместо да се позволява на един агент да изпълнява комплексна 10-минутна задача от край до край, работният процес се разделя на независими, трансакционни стъпки. Всяка стъпка се валидира от независим код за проверка (linter/test runner). Ако агентът допусне синтактична грешка или наруши бизнес логиката, състоянието се връща назад и задачата се пренасочва с прецизен дебъг контекст.</p>
+<h2>Инженерната зрялост като разделителна линия между играчките и продуктивността</h2>
+<p>Публикуваният наръчник е показателен за фундаменталната трансформация на технологичния сектор. Времето, когато компаниите можеха да се впечатляват от спорадични проблясъци на чатботове, отмина. Реалната икономическа стойност се създава само тогава, когато вероятностните модели са дисциплинирани от класически софтуерни практики — типови системи, автоматизирани тестове, идемпотентност и наблюдение в реално време. Малките, дисциплинирани екипи, които овладеят тези принципи, ще пренапишат конкурентния пейзаж, демонстрирайки невиждана досега капиталова ефективност.</p>
+<p><img src="/articles/2026/11/02/startup-playbook-for-production-ai-agents-zero-vibes-governance/infographic.png" alt="Инфографика: Как екип от 8 души работи като 50 чрез строга инженерна дисциплина"><br><small>Анализ на JSON Schema контрола, трансакционната изолация и автоматизирания rollback.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.businessinsider.com/8-person-company-uses-ai-agents-to-avoid-doubling-team-2026-11">Business Insider: I run an 8-person startup that uses AI agents. We don&#39;t let our agents run on vibes — here&#39;s the playbook system we created</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/agentic-ai.html">Агентен ИИ (Agentic AI)</a><p>Агентният ИИ (Agentic AI) се отнася до системи с изкуствен интелект, които не само генерират съдържание, но и могат самостоятелно да планират и изпълн...</p></li><li><a href="/pages/prompt-engineering.html">Промпт инженеринг (Prompt Engineering)</a><p>Промпт инженерингът е изкуството и науката за структуриране на входните данни (подкани), така че да се извлече максимално качествен и точен резултат о...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
