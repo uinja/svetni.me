@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Hacker News / Kiri Project
+Разработчици представиха в мрежата проекта Kiri – революционен контейнерен runtime с отворен код, изграден изцяло на Rust, който успява да стартира напълно изол..."><title>Kiri: Олекотен контейнерен runtime на Rust стартира микросървиси за 18 милисекунди - Светни.ме</title><meta property="og:title" content="Kiri: Олекотен контейнерен runtime на Rust стартира микросървиси за 18 милисекунди - Светни.ме"><meta property="og:description" content="Източник: Hacker News / Kiri Project
+Разработчици представиха в мрежата проекта Kiri – революционен контейнерен runtime с отворен код, изграден изцяло на Rust, който успява да стартира напълно изол..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/03/kiri-open-source-rust-container-runtime-18ms-startup/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/03/kiri-open-source-rust-container-runtime-18ms-startup/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Kiri: Олекотен контейнерен runtime на Rust стартира микросървиси за 18 милисекунди</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/03/kiri-open-source-rust-container-runtime-18ms-startup/hero.png" alt="Сървърни модули в облачен център за мигновено стартиране на микросървиси"><br><small>Източник: Hacker News / Kiri Project</small></p>
+<p>Разработчици представиха в мрежата проекта <a href="/pages/kiri.html">Kiri</a> – революционен контейнерен runtime с отворен код, изграден изцяло на <a href="/pages/rust.html">Rust</a>, който успява да стартира напълно изолиран OCI-съвместим контейнер за едва 18 милисекунди [1]. Проектът е специално оптимизиран за посрещане на изискванията на съвременните сървърлес архитектури и краткотрайните задачи, изпълнявани от AI агенти.</p>
+<h2>Елиминиране на мудността на демоните</h2>
+<p>Класическият софтуерен стек за контейнеризация (Docker, containerd, runc) носи със себе си историческо наследство от тежки демони, бавни сокетни комуникации и сложни файлови слоеве, водещи до студен старт от 500 до 1500 милисекунди. Kiri премахва фоновия демон, стартирайки директно Linux namespaces и cgroups чрез олекотени директни системни повиквания на Rust.</p>
+<h2>Идеалната пясъчна среда за ненадежден генериран код</h2>
+<p>Когато AI агент генерира и изпълнява Python или Bash скриптове, сигурността изисква кодът да бъде изолиран в чиста среда. Скоростта от 18 милисекунди позволява на агентите да създават нов изолиран контейнер за всяка отделна операция и да го унищожават веднага след получаване на резултата, гарантирайки абсолютна хигиена на хост машината.</p>
+<h2>Новият стандарт за лека виртуализация в епохата на автономните програми</h2>
+<p>Kiri демонстрира как навлизането на автономни AI агенти пренаписва базовите системни инструменти на операционните системи. Когато компютрите вече не се управляват бавно от хора, а от софтуерни процеси, изискващи хиляди паралелни среди в секунда, старите архитектурни компромиси стават недопустими. Бързи, компилирани на Rust микро-контейнери като Kiri ще формират невидимата основа на бъдещите облачни платформи.</p>
+<p><img src="/articles/2026/11/03/kiri-open-source-rust-container-runtime-18ms-startup/infographic.png" alt="Инфографика: Как 18-милисекундният старт трансформира изпълнението на AI код"><br><small>Анализ на премахването на демоните, системните извиквания на Rust и защитната изолация.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.ycombinator.com/item?id=50353261">Hacker News: Show HN: Kiri – an open-source container runtime in Rust, Docker run in 18 ms</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/kiri.html">Kiri</a><p>Kiri е специализиран софтуер за управление и изпълнение на контейнери на езика Rust, разработен като алтернатива на традиционните тежки демони runc и ...</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

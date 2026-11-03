@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: arXiv / ByteDance AI Lab
+Научноизследователското звено на ByteDance публикува детайлна бяла книга за вътрешната си система за съхранение USDB (Universal Sparse Database), проектирана да р..."><title>USDB на ByteDance: Специализирана архитектура за съхранение на параметри за милиардни AI системи - Светни.ме</title><meta property="og:title" content="USDB на ByteDance: Специализирана архитектура за съхранение на параметри за милиардни AI системи - Светни.ме"><meta property="og:description" content="Източник: arXiv / ByteDance AI Lab
+Научноизследователското звено на ByteDance публикува детайлна бяла книга за вътрешната си система за съхранение USDB (Universal Sparse Database), проектирана да р..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/03/bytedance-usdb-scaling-storage-next-gen-recsys-llm/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/03/bytedance-usdb-scaling-storage-next-gen-recsys-llm/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>USDB на ByteDance: Специализирана архитектура за съхранение на параметри за милиардни AI системи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/03/bytedance-usdb-scaling-storage-next-gen-recsys-llm/hero.png" alt="Сървърен масив за високоскоростно разпределено съхранение на корпоративни данни"><br><small>Източник: arXiv / ByteDance AI Lab</small></p>
+<p>Научноизследователското звено на <a href="/pages/bytedance.html">ByteDance</a> публикува детайлна бяла книга за вътрешната си система за съхранение <a href="/pages/usdb.html">USDB</a> (Universal Sparse Database), проектирана да реши най-тежкия инфраструктурен проблем на компанията – съхранението и светкавичното извличане на трилиони параметри за препоръчителните алгоритми на TikTok [1].</p>
+<h2>Преодоляване на лимитите на DRAM паметта</h2>
+<p>Традиционните препоръчителни системи изискват съхраняване на огромни таблици с вектори (embeddings) изцяло в оперативната памет на сървърите, което води до главозамайващи разходи за хардуер. USDB въвежда интелигентно многостепенно йерархично кеширане, съчетаващо малък DRAM буфер с масиви от NVMe SSD дискове, намалявайки хардуерните разходи с над 60% без загуба на производителност.</p>
+<h2>Паралелна синхронизация при непрекъснато онлайн обучение</h2>
+<p>За разлика от стандартните LLM, които се обучават периодично, алгоритмите на ByteDance се обучават непрекъснато върху всяко харесване или превъртане на видеоклип. USDB използва персонализиран протокол за съгласуваност без заключвания (lock-free concurrency), позволяващ милиони паралелни записи в реално време без деградация на скоростта на четене.</p>
+<h2>Инженерните основи на свръхмащабния дигитален капитализъм</h2>
+<p>Разработката на USDB разкрива невидимата за масовия потребител инфраструктурна машина, която движи най-пристрастяващите алгоритми на планетата. Мащабът, при който оперира ByteDance, изисква пренаписване на базовите концепции за бази данни и файлови системи. Уроците от USDB за ефективно управление на разредени матрици вече започват да се пренасят и към гигантските Mixture-of-Experts (MoE) модели, проправяйки път към ново поколение изчислителни архитектури.</p>
+<p><img src="/articles/2026/11/03/bytedance-usdb-scaling-storage-next-gen-recsys-llm/infographic.png" alt="Инфографика: Как ByteDance управлява трилиони параметри за алгоритмите на TikTok"><br><small>Анализ на многостепенното кеширане, NVMe интеграцията и онлайн обучението.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://arxiv.org/abs/2611.02618">arXiv: USDB: Scaling Storage for Next-Generation Recommender Systems at ByteDance</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/bytedance.html">ByteDance</a><p>ByteDance е една от най-големите технологични компании в света, оперираща платформата TikTok и китайския аналог Douyin, известна със своите алгоритми ...</p></li><li><a href="/pages/usdb.html">USDB</a><p>USDB е специализирана разпределена база данни, създадена от изследователския екип на ByteDance за преодоляване на ограниченията в пропускателната спос...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

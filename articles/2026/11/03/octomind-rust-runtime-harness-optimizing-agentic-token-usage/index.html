@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: GitHub / Octomind Project
+В хранилището GitHub дебютира проектът с отворен код Octomind – свръхбърз оркестрационен runtime, написан на системния език Rust, създаден специално за справяне ..."><title>Octomind: Rust-базирана среда за оркестрация на AI агенти с драстично редуциране на контекстните токени - Светни.ме</title><meta property="og:title" content="Octomind: Rust-базирана среда за оркестрация на AI агенти с драстично редуциране на контекстните токени - Светни.ме"><meta property="og:description" content="Източник: GitHub / Octomind Project
+В хранилището GitHub дебютира проектът с отворен код Octomind – свръхбърз оркестрационен runtime, написан на системния език Rust, създаден специално за справяне ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/03/octomind-rust-runtime-harness-optimizing-agentic-token-usage/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/03/octomind-rust-runtime-harness-optimizing-agentic-token-usage/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Octomind: Rust-базирана среда за оркестрация на AI агенти с драстично редуциране на контекстните токени</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->3 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/03/octomind-rust-runtime-harness-optimizing-agentic-token-usage/hero.png" alt="Инженерен терминал с изпълнение на оптимизирани системни команди на Rust"><br><small>Източник: <a href="https://github.com/Muvon/octomind" target="_blank" rel="noopener">GitHub / Octomind Project</a></small></p>
+<p>В хранилището GitHub дебютира проектът с отворен код <a href="/pages/octomind.html">Octomind</a> – свръхбърз оркестрационен runtime, написан на системния език <a href="/pages/rust.html">Rust</a>, създаден специално за справяне с експлозията от разходи при дълготрайни автономни сесии на AI агенти [1]. Инструментът прилага интелигентно филтриране на промпт хронологията, спестявайки до 45% от платените токени без загуба на контекст.</p>
+<h2>Нулев системен овърхед и статична компилация</h2>
+<p>Докато повечето съвременни агентни рамки като LangChain и AutoGen са написани на Python и добавят осезаемо забавяне, Octomind е компилиран до един статичен бинарен файл на Rust. Той обработва хиляди извиквания на инструменти и отговори за микросекунди, гарантирайки абсолютна безопасност на паметта без прекъсвания за сбор на боклука.</p>
+<h2>Алгоритмично компресиране на контекстния прозорец</h2>
+<p>В основата на проекта лежи алгоритъм за семантично резюмиране на междинните стъпки. Когато агентът изпълнява десетки поредни bash команди или SQL заявки, Octomind автоматично свива подробните логове до кратки структурни дифове (diffs), предотвратявайки задръстването на контекстния прозорец с повтаряща се информация.</p>
+<h2>Преходът към високоефективен системен софтуер в агентната ера</h2>
+<p>Появата на инструменти като Octomind маркира края на ерата на наивните прототипи на Python в областта на автономните агенти. Когато корпоративните агенти работят денонощно и изпълняват милиони трансакции, системната ефективност, латентността и оптимизацията на токените се превръщат във въпрос на оцеляване за бизнеса. Системни езици като Rust ще доминират в изграждането на критичния фундамент на бъдещата агентна икономика.</p>
+<p><img src="/articles/2026/11/03/octomind-rust-runtime-harness-optimizing-agentic-token-usage/infographic.png" alt="Инфографика: Как компилираният Rust софтуер намалява разходите за агентен контекст"><br><small>Анализ на компресията на логове, статичната компилация и икономията на API бюджети.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/Muvon/octomind">GitHub: Octomind – open-source AI harness that saves your tokens, static rust</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/octomind.html">Octomind</a><p>Octomind е олекотена софтуерна библиотека на езика Rust, разработена за наблюдение, филтриране и компресиране на контекстните прозорци при работа с ав...</p></li><li><a href="/pages/rust.html">Rust (Език за програмиране)</a><p>Rust е модерен системен език за програмиране, фокусиран върху безопасността на паметта, производителността и паралелизма.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
