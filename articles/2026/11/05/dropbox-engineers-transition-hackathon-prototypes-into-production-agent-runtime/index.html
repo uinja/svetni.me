@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Dropbox Tech Blog / Dropbox
+В подробен пост в инженерния си блог екипът на Dropbox разкри детайли за трансформацията на два експериментални вътрешни проекта от хакатон в ядрото на новата ..."><title>Инженерите на Dropbox превърнаха вътрешни хакатон проекти в производствена агентна платформа - Светни.ме</title><meta property="og:title" content="Инженерите на Dropbox превърнаха вътрешни хакатон проекти в производствена агентна платформа - Светни.ме"><meta property="og:description" content="Източник: Dropbox Tech Blog / Dropbox
+В подробен пост в инженерния си блог екипът на Dropbox разкри детайли за трансформацията на два експериментални вътрешни проекта от хакатон в ядрото на новата ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/05/dropbox-engineers-transition-hackathon-prototypes-into-production-agent-runtime/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/05/dropbox-engineers-transition-hackathon-prototypes-into-production-agent-runtime/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерите на Dropbox превърнаха вътрешни хакатон проекти в производствена агентна платформа</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/05/dropbox-engineers-transition-hackathon-prototypes-into-production-agent-runtime/hero.png" alt="Инженерен екип пред бяла дъска по време на планиране на софтуер"><br><small>Източник: Dropbox Tech Blog / Dropbox</small></p>
+<p>В подробен пост в инженерния си блог екипът на <a href="/pages/dropbox.html">Dropbox</a> разкри детайли за трансформацията на два експериментални вътрешни проекта от хакатон в ядрото на новата производствена среда за автономни агенти [1]. Статията илюстрира комплексните предизвикателства при мащабирането на семантично търсене и <a href="/pages/rag.html">RAG</a> архитектури, когато става въпрос за милиарди частни клиентски файлове с най-високи изисквания за поверителност и <a href="/pages/software-architecture.html">софтуерна архитектура</a>.</p>
+<h2>От прости скриптове към надежден агентен оркестратор</h2>
+<p>Първоначалните прототипи са използвали стандартни извиквания към API на езикови модели, комбинирани с векторни бази данни. В реални условия обаче тази схема се проваля поради неконсистентни отговори, халюцинации и прекъсвания на връзката. Инженерите изграждат нов слой за оркестрация с крайни автомати (state machines), който проверява валидността на всяко междинно действие на агента и може безопасно да възстанови състоянието при срив.</p>
+<h2>Мултитенантност и спазване на правата за достъп (ACL)</h2>
+<p>Най-критичният елемент при внедряването на агенти в Dropbox е гарантирането, че агентът никога няма да извлече или цитира информация от файл, до който текущият потребител няма изрични права за достъп. Системата въвежда динамично филтриране на векторите още на ниво индекс, изключвайки всяка възможност за изтичане на данни между различни корпоративни акаунти.</p>
+<h2>Уроците от прехода от демо играчки към надеждна корпоративна инфраструктура</h2>
+<p>Опитът на Dropbox предоставя безценен практически урок за цялата софтуерна индустрия. Създаването на ефектно AI демо за 48 часа по време на хакатон днес е тривиална задача. Истинското инженерно майсторство се крие в осигуряването на 99.99% надеждност, стриктна защита на личните данни и милисекундна реакция при мащаб от стотици милиони активни потребители.</p>
+<p><img src="/articles/2026/11/05/dropbox-engineers-transition-hackathon-prototypes-into-production-agent-runtime/infographic.png" alt="Инфографика: Как инженерният екип изгради надеждна агентична среда"><br><small>Анализ на оркестрацията с крайни автомати, мултитенантността и строгия контрол на правата.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://dropbox.tech/machine-learning/how-two-engineer-side-projects-became-the-agent-taking-action-inside-dropbox">Dropbox Tech Blog: How two engineer side projects became the agent taking action inside Dropbox</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50361110">Hacker News: From hackathon to production agent at Dropbox</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/dropbox.html">Dropbox</a><p>Dropbox е американска технологична компания, осигуряваща облачно съхранение, синхронизация на файлове и интелигентно търсене за стотици милиони потреб...</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li><li><a href="/pages/software-architecture.html">Софтуерна архитектура</a><p>Софтуерната архитектура представлява съвкупността от най-значимите решения за дизайна на една софтуерна система.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

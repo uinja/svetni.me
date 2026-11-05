@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks Blog / Databricks
+В стремежа си да елиминира границата между транзакционните бази данни и аналитичните масиви за машинно обучение Databricks представи революционна push-базиран..."><title>Databricks внедри push-базиран CDC в Unity Catalog чрез Zerobus Ingest и Debezium - Светни.ме</title><meta property="og:title" content="Databricks внедри push-базиран CDC в Unity Catalog чрез Zerobus Ingest и Debezium - Светни.ме"><meta property="og:description" content="Източник: Databricks Blog / Databricks
+В стремежа си да елиминира границата между транзакционните бази данни и аналитичните масиви за машинно обучение Databricks представи революционна push-базиран..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/05/databricks-engineers-push-based-cdc-into-unity-catalog-via-zerobus-and-debezium/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/05/databricks-engineers-push-based-cdc-into-unity-catalog-via-zerobus-and-debezium/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Databricks внедри push-базиран CDC в Unity Catalog чрез Zerobus Ingest и Debezium</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/05/databricks-engineers-push-based-cdc-into-unity-catalog-via-zerobus-and-debezium/hero.png" alt="Контролна зала с екрани за наблюдение на информационни потоци"><br><small>Източник: Databricks Blog / Databricks</small></p>
+<p>В стремежа си да елиминира границата между транзакционните бази данни и аналитичните масиви за машинно обучение <a href="/pages/databricks.html">Databricks</a> представи революционна push-базирана архитектура за улавяне на промените (Change Data Capture) в <a href="/pages/unity-catalog.html">Unity Catalog</a> [1]. Чрез комбиниране на платформата с отворен код <a href="/pages/debezium.html">Debezium</a> със собствения високоскоростен транспортен протокол Zerobus Ingest компанията постига непрекъсната репликация на данни с подсекундна латентност.</p>
+<h2>Край на тромавите пакетни ETL процеси</h2>
+<p>В традиционните корпоративни среди актуализирането на езерото от данни се извършваше чрез периодични нощни пакетни задачи (batch ETL), което означаваше, че моделите за прогнозиране винаги работеха с остаряла с 24 часа информация. Новата разработка чете директно журнала за транзакции (WAL) на релационните бази и изтласква всяка промяна директно в табличния формат Delta Lake без натоварване на основната система.</p>
+<h2>Интеграция с корпоративната сигурност и одит</h2>
+<p>Използването на Unity Catalog като крайна точка гарантира, че всички строги политики за сигурност, маскиране на чувствителни данни (GDPR) и проследимост на произхода (lineage) се прилагат автоматично в момента на запис. Това спестява седмици ръчно конфигуриране на права от инженерите по данни.</p>
+<h2>Непрекъснато актуалните данни като предпоставка за автономния бизнес</h2>
+<p>Въвеждането на непрекъснат push-базиран CDC бележи окончателната победа на поточната обработка на данни над остарелите пакетни методи. За автономните AI агенти, които вземат решения за ценообразуване, управление на складови наличности и финансови транзакции, достъпът до информация, актуална към текущата секунда, е разликата между успешен бизнес и фатална грешка.</p>
+<p><img src="/articles/2026/11/05/databricks-engineers-push-based-cdc-into-unity-catalog-via-zerobus-and-debezium/infographic.png" alt="Инфографика: Как Zerobus Ingest и Debezium осигуряват подсекундна актуалност на данните"><br><small>Анализ на репликацията на транзакции, Delta Lake таблиците и сигурността в Unity Catalog.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.databricks.com/blog/push-based-cdc-unity-catalog-zerobus-ingest-and-debezium">Databricks: Push-based CDC into Unity Catalog with Zerobus Ingest and Debezium</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50360120">Hacker News: Push CDC in Databricks Unity Catalog</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li><li><a href="/pages/unity-catalog.html">Unity Catalog</a><p>Unity Catalog е решение на Databricks за управление на данните и изкуствения интелект в Lakehouse платформата.</p></li><li><a href="/pages/debezium.html">Debezium</a><p>Debezium е водещо решение за улавяне на промени в релационни бази данни (PostgreSQL, MySQL, Oracle) директно от транзакционните им логове.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

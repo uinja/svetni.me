@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Amit Merchant / Personal Blog
+В провокативен технически анализ софтуерният изследовател Амит Мерчант освети нарастващата уязвимост в корпоративната киберсигурност, породена от използванет..."><title>Амит Мерчант анализира риска от неконтролирани зависимости и пробиви в AI агентите - Светни.ме</title><meta property="og:title" content="Амит Мерчант анализира риска от неконтролирани зависимости и пробиви в AI агентите - Светни.ме"><meta property="og:description" content="Източник: Amit Merchant / Personal Blog
+В провокативен технически анализ софтуерният изследовател Амит Мерчант освети нарастващата уязвимост в корпоративната киберсигурност, породена от използванет..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/05/amit-merchant-analyzes-agentic-dependency-drift-and-supply-chain-fragility/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/05/amit-merchant-analyzes-agentic-dependency-drift-and-supply-chain-fragility/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Амит Мерчант анализира риска от неконтролирани зависимости и пробиви в AI агентите</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/05/amit-merchant-analyzes-agentic-dependency-drift-and-supply-chain-fragility/hero.png" alt="Системна конзола с текстови команди и одит на софтуерни пакети"><br><small>Източник: Amit Merchant / Personal Blog</small></p>
+<p>В провокативен технически анализ софтуерният изследовател <a href="/pages/amit-merchant.html">Амит Мерчант</a> освети нарастващата уязвимост в корпоративната <a href="/pages/cybersecurity.html">киберсигурност</a>, породена от използването на <a href="/pages/agent-dependencies.html">агентични зависимости</a> (agent dependencies) [1]. Мерчант доказва, че когато автономните софтуерни агенти разполагат със свободата да инсталират външни пакети от npm или PyPI и да извикват динамични API плъгини по време на изпълнение, традиционният контрол върху веригата за доставки на софтуер напълно се разпада.</p>
+<h2>Динамичен дрейф на поведението и скрито заразяване</h2>
+<p>За разлика от традиционния софтуер, където зависимостите са фиксирани в lockfile файлове и се проверяват от автоматизирани скенери, съвременните агенти избират инструменти динамично в зависимост от подадената подкана. Нападател може да извърши атака чрез &#39;отравяне на имена&#39; (typosquatting) или манипулация на документацията на публични пакети, карайки агента сам да изтегли компрометиран скрипт директно в производствената среда.</p>
+<h2>Изолация в еднократни пясъчници (Micro-sandboxes)</h2>
+<p>За да се противодейства на тази заплаха, Мерчант препоръчва строга архитектурна изолация: агентите никога не трябва да оперират върху споделени хостове. Всяко изпълнение на генериран код или динамичен инструмент трябва да протича в еднократен микро-контейнер с нулев достъп до вътрешната корпоративна мрежа и стриктен одит на изходящия мрежов трафик.</p>
+<h2>Необходимостта от нов клас инструменти за сигурност в ерата на автономния код</h2>
+<p>Анализът на Амит Мерчант разкрива фундаментално несъответствие между съществуващите инструменти за сигурност и новите реалности на автономния софтуер. Проверката на статичен код е напълно неспособна да защити системи, чиято логика се генерира и модифицира в реално време от стохастични агенти. Индустрията е изправена пред спешната необходимост да разработи стандарти за динамично криптографско валидиране на всяко действие на агентите преди то да бъде приложено.</p>
+<p><img src="/articles/2026/11/05/amit-merchant-analyzes-agentic-dependency-drift-and-supply-chain-fragility/infographic.png" alt="Инфографика: Как динамичният избор на софтуерни пакети отваря врати за хакери"><br><small>Анализ на веригата за доставки, типосквотинга и изолацията в микро-пясъчници.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.amitmerchant.com/ai-agent-dependencies-management/">Amit Merchant: The Next Dependency Problem Is Inside Your AI Agent</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50361950">Hacker News: Dependency management for AI agents</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/amit-merchant.html">Амит Мерчант (Amit Merchant)</a><p>Амит Мерчант е популярен технологичен автор и инженер, анализиращ скритите системни рискове при навлизането на автономни софтуерни агенти.</p></li><li><a href="/pages/agent-dependencies.html">Агентични зависимости (Agent Dependencies)</a><p>Агентичните зависимости представляват софтуерния стек и външните услуги, които автономните агенти извикват динамично за изпълнение на възложените зада...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

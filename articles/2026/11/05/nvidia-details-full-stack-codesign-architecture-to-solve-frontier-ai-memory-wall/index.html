@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / Samtoucan
+В задълбочен технически доклад инженерите на Nvidia представиха архитектурната си визия за справяне с най-голямата пречка пред мащабирането на следващото пок..."><title>Nvidia детайлизира цялостна стратегия за ко-дизайн за преодоляване на паметната бариера в ИИ - Светни.ме</title><meta property="og:title" content="Nvidia детайлизира цялостна стратегия за ко-дизайн за преодоляване на паметната бариера в ИИ - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / Samtoucan
+В задълбочен технически доклад инженерите на Nvidia представиха архитектурната си визия за справяне с най-голямата пречка пред мащабирането на следващото пок..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/05/nvidia-details-full-stack-codesign-architecture-to-solve-frontier-ai-memory-wall/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/05/nvidia-details-full-stack-codesign-architecture-to-solve-frontier-ai-memory-wall/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Nvidia детайлизира цялостна стратегия за ко-дизайн за преодоляване на паметната бариера в ИИ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->5 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/05/nvidia-details-full-stack-codesign-architecture-to-solve-frontier-ai-memory-wall/hero.png" alt="Микроелектронен чип с висока плътност на свързващите пътечки"><br><small>Източник: Wikimedia Commons / Samtoucan</small></p>
+<p>В задълбочен технически доклад инженерите на <a href="/pages/nvidia.html">Nvidia</a> представиха архитектурната си визия за справяне с най-голямата пречка пред мащабирането на следващото поколение модели: <a href="/pages/memory-wall.html">паметната бариера</a> (memory wall) [1]. Според компанията класическото увеличаване на изчислителните TFLOPS на кристала вече не води до реален скок в производителността, освен ако не се приложи радикален пълен софтуерно-хардуерен ко-дизайн, обединяващ <a href="/pages/hbm.html">HBM</a> стекове, оптимизирани компилатори TensorRT и оптични NVLink комутатори.</p>
+<h2>Проблемът: Изчислителните ядра гладуват за данни</h2>
+<p>При големите езикови модели с над един трилион параметри съотношението между аритметичните операции и трансфера на данни към паметта (arithmetic intensity) рязко намалява, особено във фазата на генерация на токени (inference). Графичните процесори прекарват до 70% от изчислителния си цикъл в пасивно изчакване на данни, които бавно пътуват през шината на паметта, превръщайки скъпия изчислителен хардуер в неефективен консуматор на енергия.</p>
+<h2>Решението: Сливане на ядра, FP4 формати и мащабирани NVLink клъстери</h2>
+<p>Стратегията на Nvidia атакува проблема на всяко ниво на софтуерния стек: компилаторите агресивно сливат съседни операции (kernel fusion), за да задържат данните в бързия SRAM кеш на кристала; новите FP4 квантовани формати съкращават обема на теглата наполовина без загуба на точност; а NVLink шината с пропускателна способност от 1.8 TB/s превръща хиляди отделни ускорители в един гигантски кохерентен виртуален GPU с общ масив от памет.</p>
+<h2>Преходът от чипове към системи като новата дефиниция за компютърна архитектура</h2>
+<p>Анализът на Nvidia бетонира фундаментална промяна в парадигмата на компютърното инженерство. Времето, когато производителността се измерваше с тактовата честота на отделния процесор, отдавна е минало. Днес състезанието се решава на системно ниво – колко бързо и енергийно ефективно терабайти информация могат да циркулират между хиляди изчислителни възли. Компаниите, които се опитват да изградят AI ускорители без цялостен компилаторен стек и свръхбърз интерконект, са обречени да се сблъскат с паметната бариера.</p>
+<p><img src="/articles/2026/11/05/nvidia-details-full-stack-codesign-architecture-to-solve-frontier-ai-memory-wall/infographic.png" alt="Инфографика: Как хардуерно-софтуерният ко-дизайн на Nvidia отключва производителност"><br><small>Анализ на HBM архитектурата, сливането на ядра и кохерентната мрежа NVLink.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://blogs.nvidia.com/blog/memory-full-stack-codesign/">NVIDIA Blog: More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge</a></p>
+</li>
+<li><p><a href="https://news.ycombinator.com/item?id=50364310">Hacker News: NVIDIA on Full-Stack Codesign for AI Memory Wall</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/memory-wall.html">Паметна бариера в ИИ (Memory Wall)</a><p>Паметната бариера (Memory Wall) е критичното инженерно предизвикателство пред съвременните суперкомпютри за изкуствен интелект, където GPU ядрата чест...</p></li><li><a href="/pages/hbm.html">HBM (High Bandwidth Memory)</a><p>High Bandwidth Memory (HBM) е високопроизводителен интерфейс за RAM памет, използващ вертикално подреждане (stacking) на чипове.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
