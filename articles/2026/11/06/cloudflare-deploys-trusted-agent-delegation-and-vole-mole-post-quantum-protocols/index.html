@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Cloudflare Blog
+В рамките на своята седмица на иновациите в сигурността Cloudflare представи две ключови технологични премиери: рамката за доверена делегация на AI агенти (Trusted Agent D..."><title>Cloudflare въведе рамката за сигурна делегация на AI агенти и постквантовия протокол VOLE/MOLE - Светни.ме</title><meta property="og:title" content="Cloudflare въведе рамката за сигурна делегация на AI агенти и постквантовия протокол VOLE/MOLE - Светни.ме"><meta property="og:description" content="Източник: Cloudflare Blog
+В рамките на своята седмица на иновациите в сигурността Cloudflare представи две ключови технологични премиери: рамката за доверена делегация на AI агенти (Trusted Agent D..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/06/cloudflare-deploys-trusted-agent-delegation-and-vole-mole-post-quantum-protocols/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/06/cloudflare-deploys-trusted-agent-delegation-and-vole-mole-post-quantum-protocols/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare въведе рамката за сигурна делегация на AI агенти и постквантовия протокол VOLE/MOLE</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/06/cloudflare-deploys-trusted-agent-delegation-and-vole-mole-post-quantum-protocols/hero.png" alt="Оптични комуникационни кабели в разпределително телеком табло"><br><small>Източник: Cloudflare Blog</small></p>
+<p>В рамките на своята седмица на иновациите в сигурността <a href="/pages/cloudflare.html">Cloudflare</a> представи две ключови технологични премиери: рамката за доверена делегация на <a href="/pages/ai-agents.html">AI агенти</a> (Trusted Agent Delegation) и криптографските протоколи VOLE/MOLE от ново поколение [1]. Решенията са насочени към защита на уеб пространството от компрометирани ботове и подготовка на световния криптографски трафик за ерата на квантовите компютри чрез съвременна <a href="/pages/post-quantum-cryptography.html">постквантова криптография</a>.</p>
+<h2>Криптографски подписи за автономни действия в уеб пространството</h2>
+<p>Рамката Trusted Agent Delegation решава фундаменталния проблем &#39;как уебсайтът да разбере дали ботът действа от името на легитимен потребител&#39;. Чрез издаване на краткотрайни криптографски токени, свързани с биометрична идентификация на собственика, Cloudflare позволява на агентите да пазаруват, да попълват формуляри и да достъпват защитени портали без да задействат агресивни CAPTCHA проверки.</p>
+<h2>Протоколите VOLE и MOLE: Нулево знание срещу квантови заплахи</h2>
+<p>Второто съобщение засяга внедряването на решетъчно-базираните алгоритми VOLE (Vector Oblivious Linear Evaluation) и MOLE за обмен на тайни с нулево знание. Тези протоколи гарантират, че личните данни и финансовите параметри, предавани от агентите през глобалната мрежа, ще останат неразбиваеми дори при бъдещо създаване на мащабни квантови декриптиращи машини.</p>
+<h2>Преосмисляне на уеб сигурността за свят, населен с милиарди агенти</h2>
+<p>Досега архитектурата на интернет се крепеше на предположението, че браузърът се управлява от човек, а защитата срещу автоматизирани скриптове бе основен приоритет. С навлизането на автономните асистенти обаче тази парадигма става несъстоятелна. Сайтовете, които блокират всички ботове, ще загубят трафик и клиенти. Бъдещият интернет ще изисква прецизно разграничаване между &#39;добронамерени оторизирани агенти&#39; и &#39;зловредни скрапери&#39;. Криптографските протоколи на Cloudflare поставят основите на тази нова ера на доверие между машини.</p>
+<p><img src="/articles/2026/11/06/cloudflare-deploys-trusted-agent-delegation-and-vole-mole-post-quantum-protocols/infographic.png" alt="Инфографика: Как Cloudflare обединява делегация на ботове и постквантова защита"><br><small>Преглед на оторизацията на агенти, протоколите VOLE/MOLE и премахването на CAPTCHA.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://blog.cloudflare.com/trusted-agent-delegation/">Cloudflare Blog: Agents aren’t humans (but they kinda are): Trusted Agent Delegation</a></p>
+</li>
+<li><p><a href="https://blog.cloudflare.com/vole-mole/">Cloudflare Blog: The post-quantum future of web privacy: VOLE and MOLE</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/post-quantum-cryptography.html">Постквантова криптография (Post-Quantum Cryptography / PQC)</a><p>Постквантовата криптография включва математически криптографски алгоритми, проектирани да бъдат сигурни срещу атаки както от класически компютри, така...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

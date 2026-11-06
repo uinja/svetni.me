@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / Watty62
+Специалисти по киберсигурност разкриха опасна кампания за компрометиране на софтуерната верига за доставки (supply chain attack), използваща фалшификат на нови..."><title>Фалшиво разширение за Claude Code опита да отвори задна вратичка в компютрите на програмисти - Светни.ме</title><meta property="og:title" content="Фалшиво разширение за Claude Code опита да отвори задна вратичка в компютрите на програмисти - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / Watty62
+Специалисти по киберсигурност разкриха опасна кампания за компрометиране на софтуерната верига за доставки (supply chain attack), използваща фалшификат на нови..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/06/fake-claude-code-extension-distributes-stealth-backdoor-targeting-developer-credentials/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/06/fake-claude-code-extension-distributes-stealth-backdoor-targeting-developer-credentials/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Фалшиво разширение за Claude Code опита да отвори задна вратичка в компютрите на програмисти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/06/fake-claude-code-extension-distributes-stealth-backdoor-targeting-developer-credentials/hero.png" alt="Компютърен екран с конзолни команди и логове за системни събития"><br><small>Източник: Wikimedia Commons / Watty62</small></p>
+<p>Специалисти по киберсигурност разкриха опасна кампания за компрометиране на софтуерната верига за доставки (<a href="/pages/supply-chain-attack.html">supply chain attack</a>), използваща фалшификат на новия помощен терминален инструмент на <a href="/pages/anthropic.html">Anthropic</a> — <a href="/pages/claude-code.html">Claude Code</a> [1]. Зловредният пакет, разпространяван под почти идентично име в публични хранилища, се опита да инсталира скрита задна вратичка (backdoor) в работните станции на софтуерни инженери.</p>
+<h2>Механизъм на инфекцията: Обфускирани скриптове и източване на ключове</h2>
+<p>Пакетът съдържаше модифициран инсталационен скрипт, който при първоначално стартиране сканира директорията ~/.ssh за частни криптографски ключове и извлича файловете .env, съдържащи API токени за AWS, GitHub и бази данни. Данните се криптираха и изпращаха към отдалечен команден сървър чрез прикрити HTTPS заявки, маскирани като телеметрични отчети.</p>
+<h2>Бърза реакция на общността и сваляне на зловредните пакети</h2>
+<p>След десетки сигнали в официалния трекър на Anthropic екипите по сигурност на PyPI и Microsoft премахнаха пакетите от публичните каталози в рамките на няколко часа. Въпреки това експерти предупреждават, че хиляди разработчици може вече да са компрометирали своите работни среди, препоръчвайки незабавна подмяна на всички системни ключове.</p>
+<h2>Уязвимостта на разработчиците пред хайпа около новите AI инструменти</h2>
+<p>Инцидентът с фалшивия Claude Code разкрива сериозен психологически и системен проблем в съвременната технологична индустрия. В стремежа си да тестват най-новите автономни инструменти веднага след обявяването им, разработчиците често свалят и изпълняват пакети с високи привилегии без да проверят цифровите им подписи или официалните хранилища. Хакерите се възползват от този ентусиазъм с безпощадна прецизност. Защитата на работната станция на програмиста изисква строги правила за проверка на произхода на софтуера и задължително използване на изолирани виртуални контейнери за нови конзолни помощници.</p>
+<p><img src="/articles/2026/11/06/fake-claude-code-extension-distributes-stealth-backdoor-targeting-developer-credentials/infographic.png" alt="Инфографика: Как хакери използваха името на Anthropic за кражба на SSH ключове"><br><small>Хроника на атаката, методите за скриване и препоръките за защита.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://realpython.com/ai-news-weekly-2026-11-06/">Real Python: A Fake Claude Code Extension Tried to Open a Backdoor to Your PC</a></p>
+</li>
+<li><p><a href="https://github.com/anthropics/claude-code/issues/107757">GitHub Issues: Anthropics Claude Code security discussion regarding unauthorized mirrors</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/supply-chain-attack.html">Атака срещу веригата за доставки</a><p>Атака срещу веригата за доставки (supply chain attack) е кибер анексия, която се насочва към слабости в софтуерните компоненти или услуги на трети стр...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

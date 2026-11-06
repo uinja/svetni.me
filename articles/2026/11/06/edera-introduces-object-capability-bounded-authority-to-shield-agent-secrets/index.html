@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Edera
+Стартъпът за инфраструктурна сигурност Edera представи революционна рамка за изолиране на идентификационни данни при изпълнение на задачи от изкуствен интелект, базирана на ..."><title>Edera представи архитектура за ограничена власт чрез обектни възможности за защита на тайни при AI агенти - Светни.ме</title><meta property="og:title" content="Edera представи архитектура за ограничена власт чрез обектни възможности за защита на тайни при AI агенти - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Edera
+Стартъпът за инфраструктурна сигурност Edera представи революционна рамка за изолиране на идентификационни данни при изпълнение на задачи от изкуствен интелект, базирана на ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/06/edera-introduces-object-capability-bounded-authority-to-shield-agent-secrets/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/06/edera-introduces-object-capability-bounded-authority-to-shield-agent-secrets/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Edera представи архитектура за ограничена власт чрез обектни възможности за защита на тайни при AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/06/edera-introduces-object-capability-bounded-authority-to-shield-agent-secrets/hero.png" alt="Концептуално представяне на криптографски ключове и дигитална защита"><br><small>Източник: InfoQ / Edera</small></p>
+<p>Стартъпът за инфраструктурна сигурност <a href="/pages/edera.html">Edera</a> представи революционна рамка за изолиране на идентификационни данни при изпълнение на задачи от изкуствен интелект, базирана на принципа на <a href="/pages/object-capabilities.html">обектните възможности</a> (Object Capabilities - ocap) [1]. Технологията за ограничена власт (Bounded Authority) цели да премахне системния риск от изтичане на дълготрайни пароли и служебни ключове чрез спазване на абсолютен <a href="/pages/least-privilege.html">минимум на привилегиите</a>.</p>
+<h2>Премахване на амбиентната власт при автономни работни потоци</h2>
+<p>В традиционните софтуерни системи програмите наследяват широк набор от права само въз основа на самоличността на потребителя, който ги е стартирал. Когато автономен агент попадне под влияние на зловредна инструкция (prompt injection), той може да злоупотреби с тези невидими права. Архитектурата на Edera изисква всяко действие да разполага с изрично криптографско пълномощно, дефиниращо точния файл, валидността в секунди и разрешения метод за четене или запис.</p>
+<h2>Неподправени дескриптори вместо статични тайни</h2>
+<p>Вместо да предава истински API ключове към контекста на езиковия модел, Edera подава непрозрачни обектови указатели. Моделът може да инструктира системата да извърши операция чрез този указател, но няма техническа възможност да види базовия таен ключ или да го изпрати към трети страни.</p>
+<h2>Преосмисляне на компютърната сигурност за нечовешки събеседници</h2>
+<p>Моделът на обектните възможности, измислен още през 70-те години на миналия век, намира своето истинско предназначение едва днес в ерата на изкуствения интелект. Докато хората могат да проявяват здрав разум при боравене с пароли, езиковите модели са статистически механизми, уязвими на манипулации. Прилагането на математически доказуеми граници на властта гарантира, че дори един агент да бъде напълно хакнат или заблуден, потенциалните щети ще бъдат ограничени до минималното действие, за което му е било издадено конкретно пълномощно.</p>
+<p><img src="/articles/2026/11/06/edera-introduces-object-capability-bounded-authority-to-shield-agent-secrets/infographic.png" alt="Инфографика: Как обектните възможности изолират тайните от автономните модели"><br><small>Преглед на премахването на амбиентната власт, непрозрачните указатели и сигурността.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.infoq.com/news/2026/11/ai-credentials-isolation/">InfoQ: Edera&#39;s Object Capability Bounded Authority Promises to Isolate Credentials From AI Agent Workloads</a></p>
+</li>
+<li><p><a href="https://edera.dev/blog/bounded-authority-agents/">Edera Engineering: Eliminating Ambient Authority in the Age of Agentic Computing</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/edera.html">Edera</a><p>Edera разработва иновативни решения за защита на облачни среди и AI работни потоци, фокусирани върху изолацията на тайни и ограничаването на привилеги...</p></li><li><a href="/pages/object-capabilities.html">Обектни възможности (Object Capabilities)</a><p>Моделът на обектните възможности (Object Capabilities - ocap) заменя списъците за контрол на достъпа (ACL) с неподправени криптографски или езикови ре...</p></li><li><a href="/pages/least-privilege.html">Принцип на минималните привилегии (Principle of Least Privilege)</a><p>Принципът на минималните привилегии е фундаментална концепция в информационната сигурност, изискваща всеки потребител, процес или програма да разполаг...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

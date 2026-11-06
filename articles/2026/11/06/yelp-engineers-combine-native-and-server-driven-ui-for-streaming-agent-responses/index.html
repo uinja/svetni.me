@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Yelp Engineering
+В детайлен архитектурен доклад инженерният екип на Yelp представи решение за едно от най-трудните предизвикателства при внедряването на AI асистенти в мобилни при..."><title>Инженерите на Yelp съчетаха нативен и сървърно управляван интерфейс за стрийминг на отговори от AI асистенти - Светни.ме</title><meta property="og:title" content="Инженерите на Yelp съчетаха нативен и сървърно управляван интерфейс за стрийминг на отговори от AI асистенти - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Yelp Engineering
+В детайлен архитектурен доклад инженерният екип на Yelp представи решение за едно от най-трудните предизвикателства при внедряването на AI асистенти в мобилни при..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/06/yelp-engineers-combine-native-and-server-driven-ui-for-streaming-agent-responses/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/06/yelp-engineers-combine-native-and-server-driven-ui-for-streaming-agent-responses/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерите на Yelp съчетаха нативен и сървърно управляван интерфейс за стрийминг на отговори от AI асистенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->6 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/06/yelp-engineers-combine-native-and-server-driven-ui-for-streaming-agent-responses/hero.png" alt="Потребител управлява мобилно приложение с интерактивни карти на смартфон"><br><small>Източник: InfoQ / Yelp Engineering</small></p>
+<p>В детайлен архитектурен доклад инженерният екип на <a href="/pages/yelp.html">Yelp</a> представи решение за едно от най-трудните предизвикателства при внедряването на AI асистенти в мобилни приложения: как да се съчетае плавният стрийминг на текст с интерактивни нативни компоненти като карти, бутони за резервация и галерии [1]. Решението комбинира <a href="/pages/server-driven-ui.html">сървърно управляван потребителски интерфейс</a> (Server-Driven UI) с оптимизирана <a href="/pages/mobile-architecture.html">мобилна архитектура</a>.</p>
+<h2>Паралелно синтактично анализиране на JSON потоци и нативно рендериране</h2>
+<p>Традиционните чатботове показват бавен текстов курсор, след което зареждат тежки статични карти. Yelp разработи стрийминг парсер, който идентифицира предварително дефинирани UI схеми в суровия изход на модела. Докато текстът се изписва на екрана, приложението нативно конструира интерактивни бутони за поръчка и рейтингови звезди без трептене на екрана и без повторно прерисуване.</p>
+<h2>Оптимизация на мрежовия трафик и офлайн устойчивост</h2>
+<p>Хибридният подход позволява на сървъра да управлява визуалното оформление според намерението на потребителя, докато клиентското приложение използва кеширани нативни библиотеки за рисуване. Това спестява над 60% от обема на мобилния трафик и осигурява безупречна плавност от 120 кадъра в секунда на съвременни смартфони.</p>
+<h2>Преходът от чист текст към богати мултимодални работни пространства</h2>
+<p>Първата вълна на потребителски AI бе доминирана от обикновени текстови кутии, имитиращи SMS чатове. За сложни потребителски сценарии като избор на ресторант, планиране на ремонт или наемане на майстор обаче текстът е неефективен. Потребителите се нуждаят от визуални сравнения, бутони за действие с един клик и локационни филтри. Архитектурата на Yelp задава посоката за цялата мобилна индустрия: AI асистентът трябва да бъде композитор на потребителски интерфейси в реално време, адаптиращ екрана спрямо конкретната задача на човека.</p>
+<p><img src="/articles/2026/11/06/yelp-engineers-combine-native-and-server-driven-ui-for-streaming-agent-responses/infographic.png" alt="Инфографика: Как паралелният стрийминг съчетава текст и нативни компоненти"><br><small>Анализ на стрийминг JSON парсера, Server-Driven UI и производителността.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><p><a href="https://www.infoq.com/news/2026/11/yelp-assistant-hybrid-ui/">InfoQ: Yelp Combines Native and Server-Driven UI for Its AI Assistant</a></p>
+</li>
+<li><p><a href="https://engineering.yelp.com/2026/11/streaming-hybrid-ui-architecture.html">Yelp Engineering Blog: Building Responsive AI Interfaces on iOS and Android</a></p>
+</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/yelp.html">Yelp</a><p>.</p></li><li><a href="/pages/server-driven-ui.html">Сървърно управляван потребителски интерфейс (Server-Driven UI)</a><p>При подхода Server-Driven UI (SDUI) клиентските мобилни приложения функционират като универсални интерпретатори на JSON или protobuf схеми, изпратени ...</p></li><li><a href="/pages/mobile-architecture.html">Мобилна софтуерна архитектура (Mobile Architecture)</a><p>Мобилната софтуерна архитектура балансира локалната производителност на смартфона с гъвкавостта на облачните бекенд услуги.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
