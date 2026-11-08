@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / AI Alignment Lab
+Ново задълбочено научно изследване разкри, че политическите ограничения и държавната идеология в водещите китайски езикови модели, включително DeepSeek, са ..."><title>Държавната цензура в китайските AI модели се оказва тънък повърхностен слой, който се премахва лесно чрез дообучение - Светни.ме</title><meta property="og:title" content="Държавната цензура в китайските AI модели се оказва тънък повърхностен слой, който се премахва лесно чрез дообучение - Светни.ме"><meta property="og:description" content="Източник: The Decoder / AI Alignment Lab
+Ново задълбочено научно изследване разкри, че политическите ограничения и държавната идеология в водещите китайски езикови модели, включително DeepSeek, са ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/07/state-propaganda-in-chinese-ai-models-stripped-by-fine-tuning/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/07/state-propaganda-in-chinese-ai-models-stripped-by-fine-tuning/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Държавната цензура в китайските AI модели се оказва тънък повърхностен слой, който се премахва лесно чрез дообучение</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/07/state-propaganda-in-chinese-ai-models-stripped-by-fine-tuning/hero.png" alt="Визуализация на вътрешните слоеве и тегла на невронна мрежа"><br><small>Източник: The Decoder / AI Alignment Lab</small></p>
+<p>Ново задълбочено научно изследване разкри, че политическите ограничения и държавната идеология в водещите китайски езикови модели, включително <a href="/pages/deepseek.html">DeepSeek</a>, са концентрирани в изключително тънък повърхностен слой от тегла [1]. Чрез прилагане на стандартно фино дообучение (<a href="/pages/fine-tuning.html">fine-tuning</a>) с малък обем неутрални данни, западни изследователи успяха напълно да възстановят обективните отговори на тези модели с <a href="/pages/open-weights.html">отворени тегла</a> без компрометиране на интелектуалния им капацитет.</p>
+<h2>Повърхностен характер на регулаторното подравняване</h2>
+<p>Авторите на анализа демонстрират, че строгите изисквания на регулаторите в <a href="/pages/china.html">Китай</a> се имплементират основно чрез финални стъпки на RLHF и системни промптове. Във вътрешните слоеве на невронната мрежа обаче моделът запазва детайлно фактологично разбиране за глобалните исторически и политически събития, което се активира незабавно след премахване на повърхностните задръжки.</p>
+<h2>Ефективност на LoRA адаптерите при декодиране</h2>
+<p>За премахване на ограниченията са били необходими по-малко от 500 висококачествени примера за диалог, обучени чрез нискорангови LoRA адаптери за под 30 минути на единичен графичен процесор. След тази интервенция моделите генерират критични анализи без отказ и без отклонения от стандартния фактологичен консенсус.</p>
+<h2>Илюзията за софтуерна цензура при отворените модели и глобалният баланс на силите</h2>
+<p>Тези констатации разбиват илюзията, че държавен контрол върху изкуствения интелект може да бъде наложен трайно върху модели с отворени тегла. Докато проприетарни API интерфейси могат да бъдат филтрирани на сървърно ниво, отворените архитектури позволяват на всеки разработчик да модифицира крайните класификационни глави. Това превръща китайските модели в привлекателна алтернатива за глобалната общност с отворен код, която получава мощни математически и програмни базови архитектури, напълно освободени от идеологически ограничения.</p>
+<p><img src="/articles/2026/11/07/state-propaganda-in-chinese-ai-models-stripped-by-fine-tuning/infographic.png" alt="Инфографика: Как минимално дообучение премахва държавните филтри от модели с отворени тегла"><br><small>Анализ на слоевете на сигурност, LoRA адаптерите и фактологичното представяне.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/">The Decoder: State propaganda in some Chinese AI models is only a thin layer that fine-tuning can strip away</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/fine-tuning.html">Фино настройване (Fine-Tuning)</a><p>Финото настройване е процес на вземане на вече обучен модел (Pre-trained model) и допълнителното му обучение върху специфичен, по-малък набор от данни...</p></li><li><a href="/pages/china.html">Китай</a><p>Китай (Китайска народна република) е една от най-големите икономики в света и ключов играч в глобалния технологичен сектор.</p></li><li><a href="/pages/open-weights.html">Отворени тегла (Open Weights)</a><p>Терминът „отворени тегла“ (open weights) се отнася до модели на изкуствен интелект, чиито вътрешни параметри (тегла) са публично достъпни.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

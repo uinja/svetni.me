@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Trique303 / Wikimedia Commons
+След като технологичните лидери публикуваха концептуалните си проекти за защитени среди за изпълнение, софтуерният инженер Антон Ау публикува детайлно изслед..."><title>Инженерен експеримент: Защо Firecracker MicroVM превъзхожда Docker при изолация на ненадеждни AI агенти - Светни.ме</title><meta property="og:title" content="Инженерен експеримент: Защо Firecracker MicroVM превъзхожда Docker при изолация на ненадеждни AI агенти - Светни.ме"><meta property="og:description" content="Източник: Trique303 / Wikimedia Commons
+След като технологичните лидери публикуваха концептуалните си проекти за защитени среди за изпълнение, софтуерният инженер Антон Ау публикува детайлно изслед..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/07/firecracker-microvm-sandboxing-for-untrusted-agentic-workloads/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/07/firecracker-microvm-sandboxing-for-untrusted-agentic-workloads/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерен експеримент: Защо Firecracker MicroVM превъзхожда Docker при изолация на ненадеждни AI агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->7 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/07/firecracker-microvm-sandboxing-for-untrusted-agentic-workloads/hero.png" alt="Индустриален сървърен модул за хардуерна виртуализация"><br><small>Източник: Trique303 / Wikimedia Commons</small></p>
+<p>След като технологичните лидери публикуваха концептуалните си проекти за защитени среди за изпълнение, софтуерният инженер Антон Ау публикува детайлно изследване на микровиртуализацията [1]. Тестовете в реална среда доказват категоричното превъзходство на <a href="/pages/firecracker.html">Firecracker MicroVM</a> спрямо стандартните контейнери при изолиране на ненадежден код, изпълняван от автономни <a href="/pages/ai-agents.html">AI агенти</a> чрез строг <a href="/pages/sandboxing.html">пясъчник</a>.</p>
+<h2>Уязвимостите на споделеното ядро при стандартния Docker</h2>
+<p>Изследването демонстрира колко лесно автономен агент с права за изпълнение на терминални команди може да експлоатира уязвимост в Linux ядрото, за да излезе от контейнера (Container Escape). Дори при използване на seccomp профили и apparmor правила, общото системно ядро остава критичен вектор за компрометиране на хост машината.</p>
+<h2>Хардуерна KVM виртуализация с бързината на контейнер</h2>
+<p>Чрез използване на технологията Firecracker, разработена първоначално от AWS за безсървърни функции, всяка агентна сесия получава собствено миниатюрно ядро. Зареждането на новата виртуална машина отнема едва 4.8 милисекунди и изразходва под 5 MB базова памет, осигурявайки непробиваема граница срещу опити за достъп до мрежовите адаптери или съседни потребителски данни.</p>
+<h2>Новият индустриален стандарт за безопасно изпълнение на агентски код</h2>
+<p>Преходът към Firecracker MicroVM като де факто стандарт за агентни пясъчници маркира края на ерата на наивното контейнеризиране. В свят, където изкуственият интелект ежедневно генерира и тества произволен код, свален от интернет, всяко допускане за доверие към средата е фатално. Хардуерно поддържаната микровиртуализация предоставя идеалния компромис: нулева латентност за потребителя в комбинация с военен клас защита на инфраструктурата на хоста.</p>
+<p><img src="/articles/2026/11/07/firecracker-microvm-sandboxing-for-untrusted-agentic-workloads/infographic.png" alt="Инфографика: Защо хардуерната микровиртуализация е задължителна за автономния софтуер"><br><small>Сравнение на времето за стартиране, сигурността на ядрото и консумацията на RAM.</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://antonau.tech/posts/2026/11/agents-microvm-firecracker/">Antonau Tech: Google Described Its Agent Sandbox. I Built One with Firecracker and Measured It</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microvm.html">MicroVM (Микро виртуална машина)</a><p>MicroVM е свръхолекотена технология за виртуализация, съчетаваща бързината на стартиране на софтуерни контейнери с непробиваемата хардуерна изолация н...</p></li><li><a href="/pages/firecracker.html">Firecracker MicroVM</a><p>Firecracker MicroVM използва KVM модула в Linux ядрото, за да осигури сигурността на класическата хардуерна виртуализация с бързината на леките контей...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/sandboxing.html">Изолирана среда за изпълнение (Sandboxing)</a><p>Изолираната среда (Sandboxing) е механизъм за сигурност, който ограничава правата на дадена софтуерна програма само до строго определени ресурси на оп...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
