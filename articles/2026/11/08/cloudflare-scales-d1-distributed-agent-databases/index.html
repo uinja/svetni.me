@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Cloudflare Architecture
+Глобалният мрежов доставчик Cloudflare обяви мащабно обновяване на архитектурата на своята безсървърна релационна база от данни D1, позволяващо създаването..."><title>Cloudflare мащабира контролната равнина на D1 за обслужване на милиони разпределени агентни бази данни - Светни.ме</title><meta property="og:title" content="Cloudflare мащабира контролната равнина на D1 за обслужване на милиони разпределени агентни бази данни - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Cloudflare Architecture
+Глобалният мрежов доставчик Cloudflare обяви мащабно обновяване на архитектурата на своята безсървърна релационна база от данни D1, позволяващо създаването..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/08/cloudflare-scales-d1-distributed-agent-databases/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/08/cloudflare-scales-d1-distributed-agent-databases/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare мащабира контролната равнина на D1 за обслужване на милиони разпределени агентни бази данни</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/08/cloudflare-scales-d1-distributed-agent-databases/hero.png" alt="Инфографика на глобалната мрежа на Cloudflare и разпределението на D1 бази данни"><br><small>Източник: InfoQ / Cloudflare Architecture</small></p>
+<p>Глобалният мрежов доставчик <a href="/pages/cloudflare.html">Cloudflare</a> обяви мащабно обновяване на архитектурата на своята безсървърна релационна база от данни D1, позволяващо създаването и управлението на милиони независими <a href="/pages/databases.html">бази данни</a> в реално време [1]. Подобрението е специално проектирано за новата вълна от софтуерни агенти, които изискват изолирано състояние и свръхниска латентност в рамките на <a href="/pages/edge-computing.html">edge computing</a>.</p>
+<h2>Парадигмата „База данни на агент“ и изолация на състоянието</h2>
+<p>В традиционната софтуерна архитектура хиляди потребители споделят обща масивна релационна база, което поражда сложни проблеми с правата, блокирането на транзакции и претоварването на пула от връзки. С новата контролна равнина на Cloudflare всеки отделен агент или потребителска сесия получава собствена лека SQLite база, репликирана на ръба на мрежата в над 300 града по света.</p>
+<h2>Оптимизация на метаданните и паралелна синхронизация</h2>
+<p>За да управлява милиони бази данни без срив в производителността, Cloudflare разработи нова разпределена контролна равнина, базирана на консенсусния протокол Raft и дистрибутирани лог регистри. Времето за създаване на нова база данни падна под 50 милисекунди, а прочитането на записи се извършва директно от локалната памет на най-близкия edge център в рамките на <a href="/pages/cloud-computing.html">облачните изчисления</a>.</p>
+<p><img src="/articles/2026/11/08/cloudflare-scales-d1-distributed-agent-databases/infographic.png" alt="МАЩАБИРАНЕТО НА CLOUDFLARE D1"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Предефиниране на бекенда в ерата на автономните софтуерни същности</h2>
+<p>Мащабирането на D1 маркира края на ерата на централизираните монолитни бази данни за приложения с висока динамика. Когато софтуерните агенти могат да създават, модифицират и архивират собствени бази данни за секунди, концепцията за постоянна инфраструктура отстъпва пред ефимерни, събитийни среди. Това дава на разработчиците инструменти за изграждане на глобално мащабируеми мултиагентни платформи с нулев овърхед за поддръжка.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/cloudflare-scales-d1-distributed-databases/">InfoQ: Cloudflare Scales D1 Control Plane to Millions of Distributed Agent Databases</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/cloud-computing.html">Cloud Computing (Облачни изчисления)</a><p>Облачните изчисления (Cloud Computing) представляват предоставяне на изчислителни услуги — включително сървъри, съхранение, бази данни, мрежи, софтуер...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

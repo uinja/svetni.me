@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: OMPIRE / Wikimedia Commons
+Развойните екипи на проекта Alpine Linux и OpenSSH публикуваха спешни актуализации на пакетите, отстраняващи критична уязвимост за локална ескалация на привилег..."><title>Alpine Linux и OpenSSH пуснаха спешни корекции срещу критична уязвимост за ескалация на привилегии - Светни.ме</title><meta property="og:title" content="Alpine Linux и OpenSSH пуснаха спешни корекции срещу критична уязвимост за ескалация на привилегии - Светни.ме"><meta property="og:description" content="Източник: OMPIRE / Wikimedia Commons
+Развойните екипи на проекта Alpine Linux и OpenSSH публикуваха спешни актуализации на пакетите, отстраняващи критична уязвимост за локална ескалация на привилег..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/08/alpine-linux-openssh-critical-privilege-escalation-fix/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/08/alpine-linux-openssh-critical-privilege-escalation-fix/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Alpine Linux и OpenSSH пуснаха спешни корекции срещу критична уязвимост за ескалация на привилегии</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->8 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/08/alpine-linux-openssh-critical-privilege-escalation-fix/hero.png" alt="Конзолен терминал показва актуализация на пач за сигурност в дистрибуцията Alpine Linux"><br><small>Източник: OMPIRE / Wikimedia Commons</small></p>
+<p>Развойните екипи на проекта <a href="/pages/linux.html">Alpine Linux</a> и OpenSSH публикуваха спешни актуализации на пакетите, отстраняващи критична уязвимост за локална ескалация на привилегии и потенциално отдалечено изпълнение на код [1]. Проблемът предизвика тревога в глобалната <a href="/pages/devops.html">DevOps</a> общност, тъй като свръхлеката дистрибуция се използва като базов образ за десетки милиони Docker и Kubernetes контейнери по целия свят.</p>
+<h2>Спецификата на дефекта в управлението на сигнали и права в sshd</h2>
+<p>Уязвимостта възниква от състезателно състояние (race condition) в начина, по който демонът sshd управлява системните прекъсвания и сигнали по време на автентикационната фаза. При специфично форматирани повторни връзки нападател с ниски привилегии може да предизвика освобождаване на памет и пренаписване на указатели, получавайки пълен root достъп вътре в средата с <a href="/pages/open-source.html">отворен код</a>.</p>
+<h2>Опасността от бягство от контейнера в споделени клъстери</h2>
+<p>Въпреки че Alpine традиционно се смята за силно защитена благодарение на библиотеката musl libc и минималния си размер, присъствието на компрометиран SSH демон в контейнери с прекомерни привилегии (privileged mode) създава пряк риск от „бягство от контейнера“ (container escape). Нападателят може да овладее хост машината в облака и да получи достъп до съседни микроуслуги, застрашавайки корпоративната <a href="/pages/cybersecurity.html">киберсигурност</a>.</p>
+<p><img src="/articles/2026/11/08/alpine-linux-openssh-critical-privilege-escalation-fix/infographic.png" alt="ПАТЧЪТ ЗА СИГУРНОСТ В ALPINE И OPENSSH"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Преосмисляне на практиките за отдалечен достъп в микроуслужната архитектура</h2>
+<p>Инцидентът отново постави въпроса защо SSH сървъри въобще биват включвани в леки контейнерни изображения. Съвременните DevOps стандарти препоръчват директно премахване на sshd от производствените образи в полза на инструменти за сесиен мениджмънт като Kubernetes exec или AWS Systems Manager. Екипите по поддръжка се призовават незабавно да преизградят образите си с новите пачове и да премахнат излишните мрежови демони.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.zdnet.com/article/alpine-linux-openssh-critical-privilege-escalation-flaw-patch/">ZDNet: Alpine Linux and OpenSSH patch critical privilege escalation flaw</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/devops.html">DevOps</a><p>DevOps е методология и култура, която обединява разработката на софтуер (Dev) и ИТ операциите (Ops).</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
