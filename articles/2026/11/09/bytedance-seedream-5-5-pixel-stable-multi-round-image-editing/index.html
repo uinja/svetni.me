@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Yintan / Wikimedia Commons
+Екипът по компютърно зрение на ByteDance представи най-новата версия на своя визуален генеративен модел — Seedream 5.5 [1]. Новият модел решава един от най-упор..."><title>Seedream 5.5 на ByteDance постига пикселна стабилност при 100 последователни редакции - Светни.ме</title><meta property="og:title" content="Seedream 5.5 на ByteDance постига пикселна стабилност при 100 последователни редакции - Светни.ме"><meta property="og:description" content="Източник: Yintan / Wikimedia Commons
+Екипът по компютърно зрение на ByteDance представи най-новата версия на своя визуален генеративен модел — Seedream 5.5 [1]. Новият модел решава един от най-упор..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/09/bytedance-seedream-5-5-pixel-stable-multi-round-image-editing/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/09/bytedance-seedream-5-5-pixel-stable-multi-round-image-editing/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Seedream 5.5 на ByteDance постига пикселна стабилност при 100 последователни редакции</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/09/bytedance-seedream-5-5-pixel-stable-multi-round-image-editing/hero.png" alt="Професионално дигитално студио за обработка на изображения и видео"><br><small>Източник: Yintan / Wikimedia Commons</small></p>
+<p>Екипът по компютърно зрение на <a href="/pages/bytedance.html">ByteDance</a> представи най-новата версия на своя визуален генеративен модел — <a href="/pages/seedream.html">Seedream</a> 5.5 <code>[1]</code>. Новият модел решава един от най-упоритите проблеми в генеративния дизайн: кумулативната деградация на пикселите, размиването на фона и промяната на цветовата гама при многократно последователно редактиране на една и съща сцена.</p>
+<h2>Архитектура за задържане на визуалната памет в латентното пространство</h2>
+<p>Докато конвенционалните дифузионни модели прекодират цялото изображение във вариационен автоенкодер (VAE) при всяка промяна, Seedream 5.5 въвежда механизма &#39;Frozen Latent Anchoring&#39;.</p>
+<p>При всяка редакция моделът изолира единствено целевия обект, определен от семантичната маска, докато фоновите координати се заключват с диференциален консистентен тензор. В резултат на това при тест със 100 последователни заявки (добавяне, премахване и промяна на осветлението на обекти) стойностите на Peak Signal-to-Noise Ratio (PSNR) остават над 38.4 dB.</p>
+<h2>Интеграция във видео продукционни вериги и рекламни автоматизации</h2>
+<p>Стабилността на изображението отключва директно приложение във филмовия постпродукционен процес. Seedream 5.5 позволява на художниците и режисьорите да променят детайли по костюми или декори в цели последователности от кадри, без да се появява неприятното &#39;трептене&#39; (visual jittering), типично за предишните AI видео модели.</p>
+<p><img src="/articles/2026/11/09/bytedance-seedream-5-5-pixel-stable-multi-round-image-editing/infographic.png" alt="Seedream 5.5: Пикселна консистентност"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Пренареждане на пазара на цифрово съдържание и софтуерните инструменти</h2>
+<p>Успехът на ByteDance със Seedream 5.5 подчертава нарастващата пропаст между чисто потребителските чатботове за генериране на картинки и индустриалните софтуерни решения за дигитално студио. Традиционните пакети за графичен дизайн са изправени пред необходимостта спешно да вградят пикселно-стабилни невронни слоеве, за да не загубят корпоративната си база.</p>
+<p>В геополитически план разработката доказва, че китайските технологични лидери продължават да поддържат челни позиции в областта на дифузионните модели и видео генерацията, компенсирайки ограниченията в доставките на хардуер чрез алгоритмична оптимизация на изчислителните конвейери.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/bytedances-seedream-5-5-promises-pixel-stable-image-editing-across-100-rounds-without-color-drift/">Bytedance&#39;s Seedream 5.5 promises pixel-stable image editing - The Decoder</a></li>
+<li><a href="https://seedream.bytedance.net/paper-5-5">ByteDance Multimodal AI Lab Publications</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/bytedance.html">ByteDance</a><p>ByteDance е една от най-големите технологични компании в света, оперираща платформата TikTok и китайския аналог Douyin, известна със своите алгоритми ...</p></li><li><a href="/pages/seedream.html">Seedream</a><p>Seedream е графичен генеративен модел от ByteDance, създаден за решаване на проблема с деградацията на изображението при многократни последователни ре...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

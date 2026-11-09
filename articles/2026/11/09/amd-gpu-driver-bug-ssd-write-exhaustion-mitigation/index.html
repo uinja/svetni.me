@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: ATI_Radeon_HD_4770_Graphics_Card-top_view.jpg: Advanced Micro Devices, Inc. (AMD)derivative work: Carlosdevivo (talk) / Wikimedia Commons
+Хардуерният производител AMD официално призна нал..."><title>AMD потвърди критичен бъг в GPU драйвера, износващ SSD дисковете при AI инференс - Светни.ме</title><meta property="og:title" content="AMD потвърди критичен бъг в GPU драйвера, износващ SSD дисковете при AI инференс - Светни.ме"><meta property="og:description" content="Източник: ATI_Radeon_HD_4770_Graphics_Card-top_view.jpg: Advanced Micro Devices, Inc. (AMD)derivative work: Carlosdevivo (talk) / Wikimedia Commons
+Хардуерният производител AMD официално призна нал..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/09/amd-gpu-driver-bug-ssd-write-exhaustion-mitigation/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/09/amd-gpu-driver-bug-ssd-write-exhaustion-mitigation/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>AMD потвърди критичен бъг в GPU драйвера, износващ SSD дисковете при AI инференс</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->9 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/09/amd-gpu-driver-bug-ssd-write-exhaustion-mitigation/hero.png" alt="Видеокарта Sapphire Radeon с графичен процесор на AMD"><br><small>Източник: ATI_Radeon_HD_4770_Graphics_Card-top_view.jpg: Advanced Micro Devices, Inc. (AMD)<br>derivative work: Carlosdevivo (talk) / Wikimedia Commons</small></p>
+<p>Хардуерният производител <a href="/pages/amd.html">AMD</a> официално призна наличието на сериозен дефект в последната версия на софтуерния пакет ROCm и графичните драйвери за Windows и Linux <code>[1]</code>. При изпълнение на тежки задачи за машинно самообучение и локален AI инференс драйверът влиза в непрекъснат цикъл на презаписване на виртуалната памет, генерирайки десетки терабайти излишни записи на ден и драстично съкращавайки експлоатационния живот на NVMe SSD дисковете.</p>
+<h2>Механизъм на уязвимостта: Дефект в страничната деалокация на VRAM</h2>
+<p>Проблемът възниква, когато изкуственият интелект запълни над 90% от наличната видеопамет на картата. Вместо да управлява опашката от заявки през стандартния механизъм за обратно задържане (backpressure), мениджърът на паметта непрекъснато разтоварва тензорни блокове във файла за виртуална памет (swap/pagefile) и веднага ги презаписва обратно.</p>
+<p>В рамките на едно денонощие разработчици са отчели между 15 и 40 TB записани данни върху системните дискове, което бързо изчерпва гарантирания ресурс на флаш клетките (TBW).</p>
+<h2>Временни мерки за защита и предстоящо спешно обновяване</h2>
+<p>От AMD препоръчват незабавно ограничаване на максималния контекстен прозорец при използване на софтуер като Ollama и vLLM, както и деактивиране на автоматичния swap файл върху системния NVMe диск до появата на поправка 26.11.2.</p>
+<p><img src="/articles/2026/11/09/amd-gpu-driver-bug-ssd-write-exhaustion-mitigation/infographic.png" alt="AMD ROCm Бъг: Износване на SSD"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Надеждност на софтуерните стекове в ерата на потребителския AI</h2>
+<p>Инцидентът с драйверите на AMD осветява един от скритите рискове на бурната надпревара за локален AI: непрекъснатото натоварване на потребителски хардуер с профили на работа, характерни за специализирани сървъри. Докато корпоративните SSD дискове разполагат с високи нива на защита и огромен TBW капацитет, стандартните клиентски носители бързо деградират.</p>
+<p>За AMD този проблем идва в деликатен момент, когато компанията се опитва да разшири пазарния си дял в разработката на софтуер за машинно самообучение срещу хегемонията на Nvidia CUDA. Доверието в стабилността на драйверния стек остава критичен фактор за привличане на лоялни разработчици.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.zdnet.com/article/amd-confirms-gpu-driver-bug-wearing-out-ssd-how-to-stop/">AMD confirms GPU driver bug is wearing out your SSD - ZDNet</a></li>
+<li><a href="https://community.amd.com/t5/drivers-software/rocm-pagefile-write-advisory/td-p/682910">AMD Community Advisory on ROCm Memory Allocator</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/amd.html">AMD</a><p>Advanced Micro Devices (AMD) е американска мултинационална компания за полупроводници, която проектира компютърни процесори и графични технологии.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
