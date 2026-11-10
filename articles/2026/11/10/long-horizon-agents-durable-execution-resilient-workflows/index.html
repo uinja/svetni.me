@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Martin Fowler / Unsplash
+В задълбочен технически доклад софтуерният архитект Мартин Фаулър и експерти по разпределени системи анализират конвергенцията между автономните AI агенти и парад..."><title>Дългосрочни агенти и устойчиво изпълнение: Как архитектурата на разпределените системи решава сривовете в изкуствения интелект - Светни.ме</title><meta property="og:title" content="Дългосрочни агенти и устойчиво изпълнение: Как архитектурата на разпределените системи решава сривовете в изкуствения интелект - Светни.ме"><meta property="og:description" content="Източник: Martin Fowler / Unsplash
+В задълбочен технически доклад софтуерният архитект Мартин Фаулър и експерти по разпределени системи анализират конвергенцията между автономните AI агенти и парад..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/10/long-horizon-agents-durable-execution-resilient-workflows/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/10/long-horizon-agents-durable-execution-resilient-workflows/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Дългосрочни агенти и устойчиво изпълнение: Как архитектурата на разпределените системи решава сривовете в изкуствения интелект</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/10/long-horizon-agents-durable-execution-resilient-workflows/hero.png" alt="Сървърни рафтове с оптично окабеляване в модерен разпределен център за данни"><br><small>Източник: Martin Fowler / Unsplash</small></p>
+<p>В задълбочен технически доклад софтуерният архитект Мартин Фаулър и експерти по <a href="/pages/distributed-systems.html">разпределени системи</a> анализират конвергенцията между <a href="/pages/ai-agents.html">автономните AI агенти</a> и парадигмата на <a href="/pages/durable-execution.html">устойчивото изпълнение (Durable Execution)</a> <code>[1]</code>. Анализът показва, че чистите невронни архитектури са фундаментално неспособни да управляват многодневни бизнес трансакции без подлежащ детерминистичен слой, който да гарантира съхранение на системното състояние при мрежови сривове и рестарти.</p>
+<h2>Проблемът с преходните сривове в автономните конвейери</h2>
+<p>Когато автономен агент изпълнява сложна миграция на база данни или координира верига за доставки, процесът може да отнеме десетки часове и хиляди междинни API повиквания. При конвенционалните софтуерни архитектури всяко прекъсване на интернет връзката или изчерпване на паметта води до фатална грешка, принуждаваща агента да започне всичко отначало.</p>
+<p>Платформите за устойчиво изпълнение (като Temporal и DBOS) записват всяка успешно завършена стъпка в неизменяем журнал за събития (event journal). При възникване на срив, виртуалната машина просто преиграва журнала и възстановява агента точно в състоянието преди аварията.</p>
+<h2>Разделение на отговорностите: Вероятностно срещу детерминистично</h2>
+<p>Архитектурният модел препоръчва строго разделение: големият езиков модел отговаря за „вероятностните решения“ (какво действие да се предприеме), докато системата за устойчиво изпълнение поема „детерминистичните гаранции“ (повторни опити, таймаути и компенсаторни трансакции).</p>
+<p><img src="/articles/2026/11/10/long-horizon-agents-durable-execution-resilient-workflows/infographic.png" alt="Устойчиво изпълнение за AI агенти: Архитектура"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Инженерният фундамент на надеждния промишлен изкуствен интелект</h2>
+<p>Осъзнаването на необходимостта от устойчиво изпълнение маркира прехода на генеративния AI от фазата на демонстрационни прототипи към зряло корпоративно инженерство. Магическите обещания за „всемогъщи автономни агенти“ се сблъскват с суровите реалности на разпределените мрежи, където мрежовите дялове и хардуерните дефекти са ежедневие.</p>
+<p>Компаниите, които успеят да интегрират когнитивните способности на невронните мрежи с математически доказаните принципи на разпределените трансакции, ще изградят следващото поколение неуязвими дигитални предприятия.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://martinfowler.com/articles/2026/long-horizon-agents-durable-execution.html">Long-horizon agents and durable execution - Martin Fowler</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/durable-execution.html">Durable Execution</a><p>Durable Execution (Устойчиво изпълнение)
+Durable Execution (Устойчиво изпълнение) е парадигма за разработка на разпределени системи, при която изпълне...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

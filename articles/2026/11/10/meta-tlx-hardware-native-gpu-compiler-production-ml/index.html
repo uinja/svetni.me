@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Engineering at Meta / Meta AI
+Инженерният екип на Meta публикува детайлно изследване за разработката на TLX — специализиран хардуерно-нативен компилатор за графични процесори (GPU), създа..."><title>Инженерите на Meta създадоха TLX: Хардуерно-нативен GPU компилатор за мащабно машинно обучение - Светни.ме</title><meta property="og:title" content="Инженерите на Meta създадоха TLX: Хардуерно-нативен GPU компилатор за мащабно машинно обучение - Светни.ме"><meta property="og:description" content="Източник: Engineering at Meta / Meta AI
+Инженерният екип на Meta публикува детайлно изследване за разработката на TLX — специализиран хардуерно-нативен компилатор за графични процесори (GPU), създа..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/10/meta-tlx-hardware-native-gpu-compiler-production-ml/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/10/meta-tlx-hardware-native-gpu-compiler-production-ml/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерите на Meta създадоха TLX: Хардуерно-нативен GPU компилатор за мащабно машинно обучение</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->10 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/10/meta-tlx-hardware-native-gpu-compiler-production-ml/hero.png" alt="Микропроцесорна архитектура и кремниеви шини на високопроизводителен графичен чип"><br><small>Източник: Engineering at Meta / Meta AI</small></p>
+<p>Инженерният екип на <a href="/pages/meta.html">Meta</a> публикува детайлно изследване за разработката на TLX — специализиран хардуерно-нативен <a href="/pages/compiler.html">компилатор</a> за графични процесори (<a href="/pages/gpu.html">GPU</a>), създаден за преодоляване на ограниченията на традиционните <a href="/pages/cuda.html">CUDA</a> оптимизатори при мащабни невронни мрежи <code>[1]</code>. Новият софтуерен слой позволява постигане на до 3.2 пъти по-висока изчислителна плътност при обучение и инференция на хиляди паралелни клъстери.</p>
+<h2>Директно адресиране на микроархитектурните кешове (SRAM и HBM)</h2>
+<p>Основното тясно гърло при съвременните трансформатори е латентността при пренос на данни между бързата локална статична памет (SRAM) и основната широколентова памет (HBM). Традиционните компилатори като Triton и стандартният NVCC компилатор често генерират неоптимални шаблони за достъп до паметта.</p>
+<p>TLX въвежда автоматично изчисление на потоците от данни на ниво междинно представяне (IR), следейки за перфектно съвпадение на тензорните операции с физическите размери на изчислителните блокове (warp scheduling). Това елиминира излишното презаписване на данни и гарантира максимално натоварване на матричните ядра.</p>
+<h2>Внедряване в инфраструктурата на Llama и препоръчителните системи</h2>
+<p>Meta вече е прехвърлила 70% от своите производствени инференционни мощности за препоръчителните алгоритми на Instagram и моделите Llama към TLX компилатора. Това е довело до икономия на стотици мегаватчаса електроенергия дневно.</p>
+<p><img src="/articles/2026/11/10/meta-tlx-hardware-native-gpu-compiler-production-ml/infographic.png" alt="Meta TLX: Хардуерно-нативна компилация"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Компилаторните иновации като алтернатива на закупуването на нов хардуер</h2>
+<p>Публикуването на TLX подчертава нарастващата роля на нисконивовия системен софтуер в управлението на разходите за изкуствен интелект. Тъй като физическите закони на силициевото производство (краят на закона на Дънард и забавянето на закона на Мур) оскъпяват всеки нов хардуерен скок, компаниите трябва да извличат скритата производителност от съществуващите чипове.</p>
+<p>Чрез дълбока компилаторна оптимизация, технологичните гиганти могат да удължат жизнения цикъл на своите скъпи сървърни клъстери, спестявайки милиарди долари за капиталови разходи.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://engineering.fb.com/2026/11/10/developer-tools/tlx-hardware-native-gpu-compiler-production/">How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale - Engineering at Meta</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/compiler.html">Компилатор (Compiler)</a><p>Компилаторът е специализирана компютърна програма, която транслира софтуерен код, написан на език от високо ниво, в машинен код, байткод или междинно ...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li><li><a href="/pages/gpu.html">GPU</a><p>GPU (Graphics Processing Unit – графичен процесор) е специализирана електронна верига, проектирана за бързо манипулиране и промяна на паметта, за да с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
