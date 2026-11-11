@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Hacker News / Hardware Hacking
+В общността за обратен инженеринг на хардуер беше публикуван сензационен доклад, описващ успешното използване на прецизно манипулиране на захранващото напре..."><title>Хардуерен трик с напрежението (voltage glitching) отключва пълната производителност на чип A100 в крипто карта - Светни.ме</title><meta property="og:title" content="Хардуерен трик с напрежението (voltage glitching) отключва пълната производителност на чип A100 в крипто карта - Светни.ме"><meta property="og:description" content="Източник: Hacker News / Hardware Hacking
+В общността за обратен инженеринг на хардуер беше публикуван сензационен доклад, описващ успешното използване на прецизно манипулиране на захранващото напре..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/11/hardware-voltage-glitching-unlocks-nvidia-a100-mining-silicon/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/11/hardware-voltage-glitching-unlocks-nvidia-a100-mining-silicon/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Хардуерен трик с напрежението (voltage glitching) отключва пълната производителност на чип A100 в крипто карта</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/11/hardware-voltage-glitching-unlocks-nvidia-a100-mining-silicon/hero.png" alt="Печатна платка на графичен ускорител под електронен микроскоп с прецизни тестови сонди за напрежение"><br><small>Източник: Hacker News / Hardware Hacking</small></p>
+<p>В общността за обратен инженеринг на хардуер беше публикуван сензационен доклад, описващ успешното използване на прецизно манипулиране на захранващото напрежение (voltage glitching) за заобикаляне на фабричните защити на <a href="/pages/nvidia.html">NVIDIA</a> в специализирани криптодобивни карти <code>[1]</code>. Методът позволява на изследователите да отключат пълния изчислителен капацитет на мощните <a href="/pages/gpus.html">графични процесори</a> A100, превръщайки бракувани модули за копаене в пълноценни ускорители за изкуствен интелект на малка част от цената им.</p>
+<h2>Анатомия на атаката: Манипулация на напрежението по време на инициализация</h2>
+<p>Производителите на чипове използват електронни предпазители (eFuses), за да деактивират завинаги определени функционални блокове — например високопрецизните FP64 изчисления или тензорните ядра за дълбоко обучение, преди картата да бъде продадена за нишови цели.</p>
+<p>Чрез подаване на микросекунден спад на напрежението към шината за сигурно зареждане точно в момента, когато микроконтролерът чете състоянието на предпазителите, защитата влиза в състояние на неопределеност (race condition) и инициализира чипа с пълен набор от привилегии.</p>
+<h2>Последици за хардуерната сигурност на съвременните ускорители</h2>
+<p>Експериментът повдига сериозни въпроси относно <a href="/pages/hardware-security.html">хардуерната сигурност</a> на полупроводниците. Макар че целта в случая е любителска оптимизация, същият тип физически атаки с инжектиране на грешки (fault injection) може да се използва за извличане на вградени криптографски ключове или разбиване на защитени анклави (enclaves) в облачни центрове за данни.</p>
+<p>Производителите вече разработват чипове с вътрешни сензори за напрежение и часовников сигнал, които предизвикват незабавно рестартиране при засичане на аномалии.</p>
+<p><img src="/articles/2026/11/11/hardware-voltage-glitching-unlocks-nvidia-a100-mining-silicon/infographic.png" alt="Хардуерен отключващ трик: Voltage Glitching на A100"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Демократизация на изчисленията за независими изследователи</h2>
+<p>За академичната общност и независимите изследователи, които са изправени пред хроничен недостиг на достъпен AI хардуер, хакът отваря врата за създаване на евтини домашни изчислителни клъстери от преоценени платки от вторичния пазар. Макар и труден за масово повторение, той демонстрира изобретателността на хакерската общност пред лицето на изкуствено наложените пазарни ограничения.</p>
+<p>В същото време казусът подчертава, че границата между потребителския, крипто и корпоративния хардуер често е изкуствена линия, наложена чрез софтуерни и предпазни бариери върху един и същ силициев кристал.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.ycombinator.com/item?id=348981">Using voltage glitching to unleash the A100 in my mining card - Hacker News</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/gpus.html">Графични процесори (GPU)</a><p>Графичните процесори (Graphics Processing Units - GPU) са високопаралелни чипове, проектирани първоначално за 3D визуализация, но превърнали се в стан...</p></li><li><a href="/pages/hardware-security.html">Хардуерна сигурност в роботиката</a><p>Хардуерната сигурност в роботиката обхваща мерките и архитектурите за защита на физическите компоненти, сензорите, контролерите и комуникационните мод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

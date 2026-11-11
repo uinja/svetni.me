@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Cloudflare Blog / Systems
+Cloudflare публикува задълбочен инженерен анализ на причините зад избора на новаторския консенсусен алгоритъм QuePaxa за управление на глобалното състояние в..."><title>Cloudflare интегрира консенсусния алгоритъм QuePaxa за ултрабърза BFT координация в edge мрежи - Светни.ме</title><meta property="og:title" content="Cloudflare интегрира консенсусния алгоритъм QuePaxa за ултрабърза BFT координация в edge мрежи - Светни.ме"><meta property="og:description" content="Източник: The Cloudflare Blog / Systems
+Cloudflare публикува задълбочен инженерен анализ на причините зад избора на новаторския консенсусен алгоритъм QuePaxa за управление на глобалното състояние в..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/11/cloudflare-adopts-quepaxa-byzantine-consensus-distributed-systems/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/11/cloudflare-adopts-quepaxa-byzantine-consensus-distributed-systems/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare интегрира консенсусния алгоритъм QuePaxa за ултрабърза BFT координация в edge мрежи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/11/cloudflare-adopts-quepaxa-byzantine-consensus-distributed-systems/hero.png" alt="Глобална мрежова карта на разпределени edge възли с оптични трасета"><br><small>Източник: The Cloudflare Blog / Systems</small></p>
+<p><a href="/pages/cloudflare.html">Cloudflare</a> публикува задълбочен инженерен анализ на причините зад избора на новаторския консенсусен алгоритъм QuePaxa за управление на глобалното състояние в своите <a href="/pages/distributed-systems.html">разпределени системи</a> <code>[1]</code>. Протоколът, разработен от академични изследователи в Швейцария, осигурява византийска устойчивост на грешки (BFT) при рекордно ниска латентност, преодолявайки хроничните забавяния на класическите алгоритми като Raft и Paxos в глобален мащаб.</p>
+<h2>Ограниченията на традиционния лидерски консенсус в Wide-Area Networks</h2>
+<p>Протоколи като Raft разчитат на единен лидер, през който преминават всички записи. Когато възлите са разпръснати из стотици градове по целия свят, забавянето от комуникацията между отдалечени континенти и рискът от временни мрежови прекъсвания (network partitions) драстично влошават производителността.</p>
+<p>QuePaxa елиминира твърдата зависимост от единствен лидер в спокойни периоди, използвайки авангардна <a href="/pages/cryptography.html">криптография</a> с прагови подписи (threshold signatures) за паралелно гласуване.</p>
+<h2>Асинхронен напредък и нулева латентност при оптимистични условия</h2>
+<p>Алгоритъмът разделя фазата на разпространение на данните от фазата на тяхното подреждане в глобалния журнал. В нормални оперативни условия транзакциите се потвърждават само с два комуникационни цикъла (two message round-trips).</p>
+<p>При възникване на византийски срив или целенасочена атака от компрометиран възел, протоколът автоматично преминава в защитен асинхронен режим, гарантирайки абсолютна цялост на състоянието без спиране на услугата.</p>
+<p><img src="/articles/2026/11/11/cloudflare-adopts-quepaxa-byzantine-consensus-distributed-systems/infographic.png" alt="QuePaxa консенсус: Еволюция в разпределените системи"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Фундамент за надеждността на периферните изчисления (Edge AI)</h2>
+<p>Внедряването на QuePaxa е критичен етап от подготовката на мрежата на Cloudflare за новата вълна от периферни автономни приложения. Агентите, работещи на edge устройства, се нуждаят от консистентни бази данни с мигновена синхронизация за координация на ключове, сесии и конфигурации.</p>
+<p>Чрез прехода към модерна BFT координация, компанията създава надеждна основа за следващото десетилетие на високоскоростни и отказоустойчиви облачни технологии.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.cloudflare.com/choosing-quepaxa-consensus-algorithm/">Choosing QuePaxa, an unusual consensus algorithm - The Cloudflare Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/distributed-systems.html">Разпределени системи</a><p>Разпределените системи (Distributed Systems) са мрежа от независими компютри (възли), които си сътрудничат, за да изпълнят обща задача, като изглеждат...</p></li><li><a href="/pages/cryptography.html">Криптография (Cryptography)</a><p>Криптографията е наука за сигурната комуникация и защитата на информация чрез математически протоколи, шифри и дигитални подписи.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks Blog / Analytics
+По време на глобална конференция в Сан Франциско, Databricks обяви фундаментална реорганизация на своята аналитична екосистема с пускането на новото поколение ..."><title>Databricks представи автономните агенти Genie и онтологичен слой за корпоративни анализи - Светни.ме</title><meta property="og:title" content="Databricks представи автономните агенти Genie и онтологичен слой за корпоративни анализи - Светни.ме"><meta property="og:description" content="Източник: Databricks Blog / Analytics
+По време на глобална конференция в Сан Франциско, Databricks обяви фундаментална реорганизация на своята аналитична екосистема с пускането на новото поколение ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/11/databricks-genie-autonomous-enterprise-agents-ontology/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/11/databricks-genie-autonomous-enterprise-agents-ontology/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Databricks представи автономните агенти Genie и онтологичен слой за корпоративни анализи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->11 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/11/databricks-genie-autonomous-enterprise-agents-ontology/hero.png" alt="Интерактивно табло за управление на данни с визуализиран корпоративен семантичен граф"><br><small>Източник: Databricks Blog / Analytics</small></p>
+<p>По време на глобална конференция в Сан Франциско, <a href="/pages/databricks.html">Databricks</a> обяви фундаментална реорганизация на своята аналитична екосистема с пускането на новото поколение автономни агенти Genie и семантичния слой Genie Ontology <code>[1]</code>. Новата архитектура съчетава <a href="/pages/enterprise-ai.html">корпоративен изкуствен интелект</a> със специализирани <a href="/pages/knowledge-graph.html">графи на знанието</a>, постигайки 1.6 пъти по-висока аналитична точност при използване на по-малко от половината токени спрямо стандартните RAG подходи.</p>
+<h2>Проблемът със семантичния хаос в корпоративните бази данни</h2>
+<p>В големите корпорации терминологията рядко е еднозначна: показател като „клиентски приход“ (ARR) може да се изчислява по пет различни начина в зависимост от отдела (счетоводство, продажби, маркетинг). Обикновените езикови модели лесно халюцинират или генерират некоректен SQL код, когато се сблъскат с подобно несъответствие.</p>
+<p>Genie Ontology решава този проблем, като изгражда строга семантична рамка в каталога Unity Catalog, описваща точните математически формули, релации и правила за достъп.</p>
+<h2>Агентно разсъждение и експедитивно изпълнение на SQL заявки</h2>
+<p>Когато потребител зададе сложен въпрос на естествен език, агентът Genie първо консултира онтологията, за да изясни контекста. Вместо да подава масивни схеми на таблици в прозореца на контекста на модела, системата извлича само минималния структуриран подграф.</p>
+<p>След това агентът генерира оптимизирана SQL заявка, изпълнява я върху разпределения енджин Photon и синтезира отговор с интерактивни графики и обяснение на използваните дефиниции.</p>
+<p><img src="/articles/2026/11/11/databricks-genie-autonomous-enterprise-agents-ontology/infographic.png" alt="Databricks Genie: Онтологичен интелект за данни"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Интеграция с водещите платформи за бизнес интелигентност</h2>
+<p>Стратегическият ход на Databricks е насочен към превръщането на Genie в универсален когнитивен интерфейс за целия бизнес софтуер. Онтологията вече се интегрира директно с Microsoft Power BI, Tableau, както и с популярни чат системи като Slack и Microsoft Teams.</p>
+<p>Това дава възможност на финансовите анализатори, маркетолозите и оперативните мениджъри да получават мигновени, проверени отчети без да чакат седмици за намесата на специализирани инженери по данни.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.databricks.com/blog/new-genie-autonomous-ai-enterprise-work-2026">The new Genie: autonomous AI for complex enterprise work - Databricks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li><li><a href="/pages/enterprise-ai.html">Enterprise AI</a><p>Enterprise AI (Корпоративен изкуствен интелект) се отнася до внедряването на AI технологии в мащабни бизнес организации с фокус върху сигурността, пов...</p></li><li><a href="/pages/knowledge-graph.html">Графи на знанието</a><p>Графите на знанието (Knowledge Graphs) представляват графово-базирани структури от данни, описващи реални обекти и техните взаимни зависимости.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
