@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks Blog / Block
+Финансовата технологична корпорация Block (компанията майка на Square и Cash App), в сътрудничество с Databricks, публикува архитектурен обзор на своята нова платф..."><title>Как Block изгражда колаборативни AI агенти с платформите Buzz и Unity Gateway - Светни.ме</title><meta property="og:title" content="Как Block изгражда колаборативни AI агенти с платформите Buzz и Unity Gateway - Светни.ме"><meta property="og:description" content="Източник: Databricks Blog / Block
+Финансовата технологична корпорация Block (компанията майка на Square и Cash App), в сътрудничество с Databricks, публикува архитектурен обзор на своята нова платф..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/12/block-powers-collaborative-ai-agents-buzz-unity-gateway/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/12/block-powers-collaborative-ai-agents-buzz-unity-gateway/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как Block изгражда колаборативни AI агенти с платформите Buzz и Unity Gateway</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/12/block-powers-collaborative-ai-agents-buzz-unity-gateway/hero.png" alt="Схема на мрежа от комуникиращи агенти и корпоративен шлюз за данни"><br><small>Източник: Databricks Blog / Block</small></p>
+<p>Финансовата технологична корпорация <a href="/pages/block.html">Block</a> (компанията майка на Square и Cash App), в сътрудничество с <a href="/pages/databricks.html">Databricks</a>, публикува архитектурен обзор на своята нова платформа Buzz, задвижваща екосистема от колаборативни <a href="/pages/ai-agents.html">AI агенти</a> <code>[1]</code>. Чрез интеграцията на Unity Gateway системата решава фундаменталния проблем за сигурно споделяне на корпоративни метаданни и строго разграничаване на правата за достъп между автономни софтуерни единици.</p>
+<h2>Архитектура на Buzz и оркестрация на ролите</h2>
+<p>Buzz функционира като разпределена шина за съобщения, в която специализирани агенти поемат конкретни фази от комплексни финансови процеси: верификация на трансакции, анализ на кредитен риск и генериране на регулаторни отчети. Вместо един модел да изпълнява цялата задача, агентите комуникират чрез типизирани протоколи, валидирайки междинните резултати на останалите.</p>
+<p>Това разделение на отговорностите намалява риска от кумулативни грешки и позволява използването на по-малки и икономични модели за рутинните етапи от обработката.</p>
+<h2>Ролята на Unity Gateway за управление на данните</h2>
+<p>Критичен компонент в стека е Unity Gateway, който играе ролята на семантичен пазач. Той гарантира, че нито един агент не може да чете или променя таблици в езерото от данни (Lakehouse) без валиден криптографски сертификат и проверка на контекста на заявката в съответствие със стандартите PCI-DSS.</p>
+<p>Платформата поддържа пълен одит на всяко действие, записвайки точния път на разсъжденията и използваните инструменти от всеки участващ агент.</p>
+<p><img src="/articles/2026/11/12/block-powers-collaborative-ai-agents-buzz-unity-gateway/infographic.png" alt="Мултиагентната платформа Buzz в Block"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Бъдещето на мултиагентните мрежи във финансовия сектор</h2>
+<p>Моделът на Block бележи прехода от изолирани експерименти с асистенти към индустриални мултиагентни мрежи, способни да поемат автономно цели бек-офис операции. Когато агентите могат надеждно да си сътрудничат през защитени шлюзове, производителността на финансовите институции нараства с порядъци.</p>
+<p>Същевременно това поставя нови изисквания към инженерните екипи: управлението на мултиагентни deadlock състояния и защитата от каскадни грешки се превръщат в ключови дисциплини на софтуерното инженерство.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.databricks.com/blog/block-powers-collaborative-ai-agents-buzz-unity-gateway">How Block powers collaborative AI agents with Buzz and Unity Gateway - Databricks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/block.html">Block</a><p>Block, Inc.</p></li><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / Apify
+Облачната платформа за събиране на уеб данни и автоматизация на браузъри Apify предприе мащабни извънредни мерки, след като откри неоторизиран достъп до вътрешни ..."><title>Apify подмени всички API токени и наложи нулиране на 2FA след пробив в сигурността - Светни.ме</title><meta property="og:title" content="Apify подмени всички API токени и наложи нулиране на 2FA след пробив в сигурността - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / Apify
+Облачната платформа за събиране на уеб данни и автоматизация на браузъри Apify предприе мащабни извънредни мерки, след като откри неоторизиран достъп до вътрешни ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/12/apify-rotates-api-tokens-2fa-reset-after-breach/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/12/apify-rotates-api-tokens-2fa-reset-after-breach/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Apify подмени всички API токени и наложи нулиране на 2FA след пробив в сигурността</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/12/apify-rotates-api-tokens-2fa-reset-after-breach/hero.png" alt="Сървърни коридори и криптирани дискови масиви за облачна автоматизация"><br><small>Източник: BleepingComputer / Apify</small></p>
+<p>Облачната платформа за събиране на уеб данни и автоматизация на браузъри <a href="/pages/apify.html">Apify</a> предприе мащабни извънредни мерки, след като откри неоторизиран достъп до вътрешни системни бази данни <code>[1]</code>. Компанията автоматично обезсили всички съществуващи <a href="/pages/api.html">API</a> токени на своите потребители и изиска принудително нулиране на двуфакторната автентикация (2FA) за предотвратяване на компрометиране на автоматизираните процеси.</p>
+<h2>Технически параметри на защитната реакция</h2>
+<p>Инцидентът е засегнал изолиран сегмент от инфраструктурата, управляващ съхранението на потребителски променливи на средата и системни интеграционни тайни. Екипите по сигурността са приложили протокол за пълно замразяване на подозрителните инстанции и са въвели нови криптографски ключове за подписване на вътрешния трафик.</p>
+<p>Потребителите, използващи платформата за захранване на RAG тръбопроводи и AI агенти, бяха призовани да актуализират своите скриптове с новогенерирани идентификатори за достъп.</p>
+<h2>Въздействие върху автоматизираните информационни потоци</h2>
+<p>Масовото анулиране на токени доведе до временни смущения в хиляди уеб скрапинг задачи и автоматизирани ETL процеси по целия свят. Много компании, разчитащи на Apify за следене на цени, агрегиране на новини и събиране на пазарни данни, регистрираха паузи в информационните си потоци.</p>
+<p>Експертите отбелязват, че бързата и открита реакция на компанията е предотвратила потенциална злоупотреба с ботнет мрежи и източване на корпоративни данни от крайни сайтове.</p>
+<p><img src="/articles/2026/11/12/apify-rotates-api-tokens-2fa-reset-after-breach/infographic.png" alt="Инцидентът в сигурността на Apify: Действия и защита"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Сигурността на инструментите за извличане на данни в ерата на агентите</h2>
+<p>С нарастващата роля на автономните агенти, платформи като Apify се превръщат в критичен посредник между отворения интернет и вътрешните бази данни на корпорациите. Чрез тях агентите изпълняват код, навигират в защитени уебсайтове и събират ценно знание в реално време. Компрометирането на подобен шлюз дава възможност за инжектиране на зловреден код и манипулиране на резултатите от търсенето.</p>
+<p>Бъдещето на уеб автоматизацията изисква внедряване на строги принципи на нулево доверие (Zero Trust), при които всеки индивидуален бот или процес работи в напълно изолиран еднократен контейнер без достъп до глобални споделени тайни.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/">Apify rotates API tokens, prompts 2FA resets after breach - BleepingComputer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/apify.html">Apify</a><p>Apify е облачна платформа за автоматизирано извличане на уеб данни (web scraping), автоматизация на браузъри и разработка на софтуерни агенти (Actors)...</p></li><li><a href="/pages/api.html">API</a><p>API (Application Programming Interface или приложно-програмен интерфейс) е набор от дефинирани правила, протоколи и инструменти, които позволяват на р...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

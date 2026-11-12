@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: TechCrunch / BleepingComputer
+Сериозен инцидент в сферата на веригите за доставки на изкуствен интелект компрометира поверителността на десетки хиляди потребители, след като нападатели пр..."><title>Хакерска атака срещу Fireworks AI компрометира потребителски транскрипти на Notion - Светни.ме</title><meta property="og:title" content="Хакерска атака срещу Fireworks AI компрометира потребителски транскрипти на Notion - Светни.ме"><meta property="og:description" content="Източник: TechCrunch / BleepingComputer
+Сериозен инцидент в сферата на веригите за доставки на изкуствен интелект компрометира поверителността на десетки хиляди потребители, след като нападатели пр..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/12/cyberattack-fireworks-ai-notion-transcripts-exposed/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/12/cyberattack-fireworks-ai-notion-transcripts-exposed/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Хакерска атака срещу Fireworks AI компрометира потребителски транскрипти на Notion</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->12 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/12/cyberattack-fireworks-ai-notion-transcripts-exposed/hero.png" alt="Екран с програмен код и предупреждения за пробив в киберсигурността"><br><small>Източник: TechCrunch / BleepingComputer</small></p>
+<p>Сериозен инцидент в сферата на веригите за доставки на изкуствен интелект компрометира поверителността на десетки хиляди потребители, след като нападатели проникнаха в облачната инфраструктура на <a href="/pages/fireworks-ai.html">Fireworks AI</a> <code>[1]</code>. Чрез компрометирания достъп хакерите са успели да прихванат междинни заявки и текстови транскрипти от AI асистента на популярната платформа за продуктивност <a href="/pages/notion.html">Notion</a>.</p>
+<h2>Вектор на атаката и механизъм на компрометиране</h2>
+<p>Според първоначалния технически анализ, атаката е осъществена чрез експлоатация на уязвимост в управлението на междинните сесии за кеширане на заявките към невронните модели. Злонамерените актьори са придобили достъп до вътрешни <a href="/pages/api.html">API</a> токени, позволяващи четене на буферите за динамично генериране на текст.</p>
+<p>Notion потвърди, че засягането е ограничено до заявки, обработвани през външния клъстер в рамките на 48-часов прозорец, но незабавно деактивира интеграцията с доставчика и пренасочи трафика към резервни локални центрове.</p>
+<h2>Рискове за корпоративните тайни и поверителни данни</h2>
+<p>Инцидентът предизвика остра реакция сред корпоративните клиенти, тъй като платформите като Notion често съхраняват вътрешни стратегии, финансов одит, кодови бази и лични данни на служители. Въпреки че няма доказателства за масово публикуване на данните, рискът от целенасочен индустриален шпионаж остава висок.</p>
+<p>Екипите по <a href="/pages/cybersecurity.html">киберсигурност</a> препоръчват незабавна ротация на всички външни ключове за достъп и одит на изпратените към AI асистентите контекстуални данни.</p>
+<p><img src="/articles/2026/11/12/cyberattack-fireworks-ai-notion-transcripts-exposed/infographic.png" alt="Атаката срещу Fireworks AI: Анализ на риска"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Уязвимостите на фрагментираната AI инфраструктура</h2>
+<p>Пробивът във Fireworks AI илюстрира фундаменталния структурен проблем на модерните генеративни приложения: дълбоката зависимост от сложна верига от външни доставчици на изчисления и междинни API шлюзове. Всеки нов слой в стека — от хостинга на моделите до векторните бази данни — представлява потенциална входна точка за атака.</p>
+<p>Този инцидент ще ускори тенденцията сред големите предприятия да избягват мултитенантни облачни услуги и да изискват внедряване на специализирани модели в изолирани частни виртуални облаци (VPC) с криптиране на паметта от край до край.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/">Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts - TechCrunch</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/fireworks-ai.html">Fireworks AI</a><p>Fireworks AI е американска технологична компания, която предоставя високопроизводителна платформа за внедряване, обучение и хостване на големи езикови...</p></li><li><a href="/pages/notion.html">Notion</a><p>Notion е цялостно софтуерно пространство за съвместна работа, бележки, бази данни, управление на проекти и документи.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/api.html">API</a><p>API (Application Programming Interface или приложно-програмен интерфейс) е набор от дефинирани правила, протоколи и инструменти, които позволяват на р...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
