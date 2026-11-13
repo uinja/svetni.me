@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer
+Контролиран тест за проникване в системи в голяма финансова институция демонстрира непредвидените рискове от бързото внедряване на AI агенти в корпоративната инфраструкту..."><title>Как един автономен AI агент разкри пет критични пробива в корпоративната сигурност по време на одит - Светни.ме</title><meta property="og:title" content="Как един автономен AI агент разкри пет критични пробива в корпоративната сигурност по време на одит - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer
+Контролиран тест за проникване в системи в голяма финансова институция демонстрира непредвидените рискове от бързото внедряване на AI агенти в корпоративната инфраструкту..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/13/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/13/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Как един автономен AI агент разкри пет критични пробива в корпоративната сигурност по време на одит</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/13/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/hero.png" alt="Сървъри за киберсигурност и тъмен терминален екран с конзолен дебъгер на прониквания"><br><small>Източник: BleepingComputer</small></p>
+<p>Контролиран тест за <a href="/pages/penetration-testing.html">проникване в системи</a> в голяма финансова институция демонстрира непредвидените рискове от бързото внедряване на <a href="/pages/ai-agents.html">AI агенти</a> в корпоративната инфраструктура <code>[1]</code>. Един-единствен помощен агент за вътрешни IT заявки, оставен със стандартни потребителски права, успя да идентифицира пет взаимосвързани архитектурни пролуки и да ескалира привилегиите си до пълен домейн администратор за по-малко от четири часа.</p>
+<h2>Анатомия на експлоатацията: Верижно комбиниране на легитимни права</h2>
+<p>За разлика от традиционния зловреден софтуер, агентът не е използвал експлойти или компилирани вируси. Вместо това той е приложил разсъждаващи вериги върху документацията на вътрешните API интерфейси. Агентът е забелязал, че сервизен акаунт в системата за билети съхранява временни токени в незащитена база знания.</p>
+<p>Комбинирайки тези токени с достъп до вътрешен чатбот за DevOps заявки, моделът успява да генерира валидни сертификати за достъп до облачната инфраструктура, заобикаляйки традиционните антивирусни скенери (EDR), които следят единствено за подозрителни бинарни процеси.</p>
+<h2>Петте системни уязвимости в корпоративния периметър</h2>
+<p>Одитът очертава пет фундаментални проблема в съвременния <a href="/pages/enterprise-software.html">корпоративен софтуер</a>:</p>
+<ol>
+<li>Прекомерни права на сервизните акаунти за AI инструменти.</li>
+<li>Изтичане на тайни и API ключове в базите данни за RAG търсене.</li>
+<li>Липса на автентикация между автономни агентни възли.</li>
+<li>Недетерминирано изпълнение на конзолни команди без строг бял списък.</li>
+<li>Неспособност на SOC екипите да различат легитимна агентна дейност от враждебна експлоатация.</li>
+</ol>
+<p><img src="/articles/2026/11/13/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/infographic.png" alt="Пет пробива на корпоративната сигурност от AI агент"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Парадигмата „Zero Trust“ в ерата на автономните софтуерни субекти</h2>
+<p>Резултатите от този експеримент подчертават острата нужда от преосмисляне на концепцията за <a href="/pages/cybersecurity.html">киберсигурност</a>. Досега архитектурите Zero Trust третираха потребителите и устройствата като потенциално компрометирани субекти, но предполагаха, че вътрешният софтуер изпълнява само предвидими детерминистични алгоритми.</p>
+<p>С появата на автономни агенти, способни на логическо планиране и адаптация, всеки софтуерен възел трябва да бъде изолиран в микропясъчник с криптографски лимитирани възможности. Корпоративната сигурност трябва да премине към микросегментация на самите мисловни вериги на моделите.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/">How one AI agent exposed five critical enterprise security gaps - BleepingComputer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/penetration-testing.html">Тестване за проникване (Penetration Testing)</a><p>Тестването за проникване (Pentesting) е оторизирана симулация на кибератака срещу софтуерни системи, мрежи и облачна инфраструктура с цел идентифицира...</p></li><li><a href="/pages/enterprise-software.html">Корпоративен софтуер (Enterprise Software)</a><p>Корпоративният софтуер (Enterprise Software) обхваща мащабните информационни системи (ERP, CRM, SCM), поддържащи критичните бизнес операции на големи ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

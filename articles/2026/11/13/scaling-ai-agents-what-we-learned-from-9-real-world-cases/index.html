@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The JetBrains Blog
+В задълбочен технически доклад, базиран на едногодишна експлоатация на автономни помощници в своите среди за разработка (IDE), JetBrains представи девет ключови архитек..."><title>Мащабиране на AI агенти в продукция: JetBrains обобщи девет ключови инженерни урока от реалната практика - Светни.ме</title><meta property="og:title" content="Мащабиране на AI агенти в продукция: JetBrains обобщи девет ключови инженерни урока от реалната практика - Светни.ме"><meta property="og:description" content="Източник: The JetBrains Blog
+В задълбочен технически доклад, базиран на едногодишна експлоатация на автономни помощници в своите среди за разработка (IDE), JetBrains представи девет ключови архитек..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/13/scaling-ai-agents-what-we-learned-from-9-real-world-cases/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/13/scaling-ai-agents-what-we-learned-from-9-real-world-cases/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Мащабиране на AI агенти в продукция: JetBrains обобщи девет ключови инженерни урока от реалната практика</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->13 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/13/scaling-ai-agents-what-we-learned-from-9-real-world-cases/hero.png" alt="Инженерен интерфейс на развойна среда с множество прозорци за анализ на код и логове"><br><small>Източник: The JetBrains Blog</small></p>
+<p>В задълбочен технически доклад, базиран на едногодишна експлоатация на автономни помощници в своите среди за разработка (IDE), <a href="/pages/jetbrains.html">JetBrains</a> представи девет ключови архитектурни урока за мащабиране на <a href="/pages/ai-agents.html">AI агенти</a> в продукционни условия <code>[1]</code>. Докладът развенчава редица илюзии относно автономността на големите езикови модели и предлага конкретни инженерни модели за предотвратяване на латентност и финансови загуби.</p>
+<h2>Основни предизвикателства: Препълване на контекста и деградация на вниманието</h2>
+<p>Според данните на JetBrains, най-честата причина за провал на сложни агентни задачи не е липсата на интелигентност на модела, а натрупването на излишен контекст (context rot). Когато агентът изпълнява десетки последователни извиквания на инструменти, промптът се запълва с необработени логове, което води до спад в способността за следване на първоначалните инструкции.</p>
+<p>Инженерите препоръчват въвеждането на строга модулна архитектура със специализирани под-агенти, които обобщават резултатите си в компактни междинни състояния, преди да ги предадат на централния координатор.</p>
+<h2>Край на слепия ентусиазъм по автономността: Детерминистични предпазни огради</h2>
+<p>Вторият критичен извод е необходимостта от хибриден контрол. Напълно автономните агенти, оставени без строги детерминистични ограничения (guardrails), често генерират ненужни повтарящи се повиквания към скъпи API интерфейси, генерирайки огромни сметки за изчисления.</p>
+<p>JetBrains въвежда концепцията за „когнитивен бюджет“ — предварително зададен таван на токените и повикванията, при чието доближаване агентът задължително спира и изисква обратна връзка от програмиста.</p>
+<p><img src="/articles/2026/11/13/scaling-ai-agents-what-we-learned-from-9-real-world-cases/infographic.png" alt="Мащабиране на AI агенти: Уроците на JetBrains"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Зрелостта на агентното програмиране и системния дизайн</h2>
+<p>Докладът на JetBrains отбелязва прехода на индустрията от експериментални прототипи към зряло <a href="/pages/software-development.html">софтуерно инженерство</a> в ерата на изкуствения интелект. Времето, когато разработчиците просто свързваха езиков модел с безкраен цикъл от инструменти, отминава.</p>
+<p>Модерният <a href="/pages/system-architecture.html">системен дизайн</a> на агентни мрежи изисква същите строги принципи, познати от разпределените системи: идемпотентност, тайм-аути, изолация на грешките и детерминистични интерфейси за валидация на данните. Тези принципи ще бъдат основата на софтуерната архитектура през следващото десетилетие.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.jetbrains.com/blog/2026/11/13/scaling-ai-agents-what-we-learned-from-9-real-world-cases/">Scaling AI Agents: What We Learned From 9 Real-World Cases - The JetBrains Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/jetbrains.html">JetBrains</a><p>JetBrains е водеща софтуерна компания, специализирана в разработването на инструменти за програмиране и среди за разработка (IDEs) като IntelliJ IDEA,...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/software-development.html">Софтуерна разработка (Software Development)</a><p>Софтуерната разработка (Software Development) е процес на проектиране, създаване, тестване, внедряване и поддръжка на софтуерни приложения, системи и ...</p></li><li><a href="/pages/system-architecture.html">Системна архитектура</a><p>Системната архитектура определя как хардуерът, операционната система и приложният софтуер си взаимодействат за постигане на надеждност и мащабируемост...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
