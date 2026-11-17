@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Airbnb Tech Blog / Medium
+Инженерният екип на глобалната туристическа платформа Airbnb разкри архитектурата на своята мащабна система за автоматизирана деидентификация на текст, която..."><title>Деидентификация в голям мащаб: Как Airbnb защитава личните данни на милиони потребители при обучение на AI - Светни.ме</title><meta property="og:title" content="Деидентификация в голям мащаб: Как Airbnb защитава личните данни на милиони потребители при обучение на AI - Светни.ме"><meta property="og:description" content="Източник: The Airbnb Tech Blog / Medium
+Инженерният екип на глобалната туристическа платформа Airbnb разкри архитектурата на своята мащабна система за автоматизирана деидентификация на текст, която..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/17/airbnb-de-identifying-text-at-scale-protect-personal-data-ai-training/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/17/airbnb-de-identifying-text-at-scale-protect-personal-data-ai-training/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Деидентификация в голям мащаб: Как Airbnb защитава личните данни на милиони потребители при обучение на AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/17/airbnb-de-identifying-text-at-scale-protect-personal-data-ai-training/hero.png" alt="Инженерна схема на конвейер за анонимизиране и защита на лични данни в облачна среда"><br><small>Източник: The Airbnb Tech Blog / Medium</small></p>
+<p>Инженерният екип на глобалната туристическа платформа Airbnb разкри архитектурата на своята мащабна система за <strong>автоматизирана деидентификация на текст</strong>, която пречиства милиони неструктурирани разговори, потребителски отзиви и тикети за поддръжка преди използването им за обучение на модели за <a href="/pages/machine-learning.html">машинно обучение</a> <code>[1]</code>. Според публикацията в The Airbnb Tech Blog системата гарантира стриктна <a href="/pages/data-privacy.html">защита на личните данни</a> без да разрушава семантичния контекст, необходим на невронните мрежи.</p>
+<h2>Хибридно разпознаване на именувани обекти (NER) на десетки езици</h2>
+<p>В платформа като Airbnb чувствителната информация (PII) рядко следва стандартен шаблон: потребителите споделят имена, телефонни номера, кодове за врати, пароли за Wi-Fi и точни адреси на десетки различни езици, често с правописни грешки или съкращения. Обикновените регулярни изрази (regex) пропускат контекстните данни или маскират твърде агресивно обикновени думи.</p>
+<p>За да постигне висока чувствителност (recall), Airbnb комбинира детерминистични правила за структурирани идентификатори (кредитни карти, имейли, телефони) с фино настроени многоезични трансформър модели за <a href="/pages/natural-language-processing.html">обработка на естествен език</a> (NLP), които разпознават имена и локации в контекст.</p>
+<h2>Интелигентно заместване със семантични токени</h2>
+<p>Вместо да заменя всички чувствителни данни с един и същ блок <code>[REDACTED]</code>, което обърква <a href="/pages/llm.html">големите езикови модели</a> за това кой говори на кого в дълъг диалог, конвейерът на Airbnb прилага консистентни типови заместители като <code>[GUEST_NAME_1]</code>, <code>[HOST_NAME_1]</code> или <code>[DOOR_CODE]</code>.</p>
+<p>Системата се изпълнява разпределено в инфраструктурата за <a href="/pages/cloud-computing.html">облачни изчисления</a> на компанията, обработвайки милиарди токени дневно с ниска латентност както за пакетно обучение, така и за RAG потоци в реално време.</p>
+<h2>Приватността на данните като фундаментален слой на корпоративните AI фабрики</h2>
+<p>Опитът на Airbnb демонстрира, че най-ценният актив на всяка голяма потребителска платформа — нейните собствени исторически комуникации — не може да бъде използван безопасно за обучение на генеративен AI без индустриален клас деидентификация. При известен риск езиковите модели да запаметяват и възпроизвеждат дословно лични данни от тренировъчния корпус, предварителното саниране на текста е единствената надеждна защита срещу регулаторни глоби по GDPR и загуба на потребителско доверие.</p>
+<p><img src="/articles/2026/11/17/airbnb-de-identifying-text-at-scale-protect-personal-data-ai-training/infographic.png" alt="Airbnb: Деидентификация на текст в петабайтов мащаб"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0">De-identifying text at scale: How Airbnb protects personal data in AI training - The Airbnb Tech Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/data-privacy.html">Защита на данните (Data Privacy)</a><p>Защитата на данните (Data Privacy) гарантира правото на потребителите и организациите да контролират как се събират, обработват, съхраняват и споделят...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/natural-language-processing.html">Обработка на естествен език (NLP)</a><p>Обработката на естествен език (Natural Language Processing - NLP) е интердисциплинарна област от компютърните науки и изкуствения интелект, изучаваща ...</p></li><li><a href="/pages/cloud-computing.html">Cloud Computing (Облачни изчисления)</a><p>Облачните изчисления (Cloud Computing) представляват предоставяне на изчислителни услуги — включително сървъри, съхранение, бази данни, мрежи, софтуер...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

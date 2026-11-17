@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / Security Research
+Изследователи по киберсигурност демонстрираха колко крехка е глобалната верига за доставки на изкуствен интелект, след като успяха да превземат официа..."><title>Изследователи по сигурността превзеха акаунта в Hugging Face на популярния гласов модел Kokoro AI - Светни.ме</title><meta property="og:title" content="Изследователи по сигурността превзеха акаунта в Hugging Face на популярния гласов модел Kokoro AI - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / Security Research
+Изследователи по киберсигурност демонстрираха колко крехка е глобалната верига за доставки на изкуствен интелект, след като успяха да превземат официа..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/17/researchers-hijack-hugging-face-account-popular-kokoro-ai-model/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/17/researchers-hijack-hugging-face-account-popular-kokoro-ai-model/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изследователи по сигурността превзеха акаунта в Hugging Face на популярния гласов модел Kokoro AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/17/researchers-hijack-hugging-face-account-popular-kokoro-ai-model/hero.png" alt="Анализ на сигурността на веригата за доставки при хранилища за модели с отворен код"><br><small>Източник: BleepingComputer / Security Research</small></p>
+<p>Изследователи по <a href="/pages/cybersecurity.html">киберсигурност</a> демонстрираха колко крехка е глобалната верига за доставки на изкуствен интелект, след като успяха да превземат официалното именовано пространство в <a href="/pages/hugging-face.html">Hugging Face</a> на <strong>Kokoro</strong> — един от най-популярните модели с <a href="/pages/open-source.html">отворен код</a> за <a href="/pages/speech-synthesis.html">синтез на реч</a> <code>[1]</code>. Според репортажа на BleepingComputer моделът има милиони изтегляния месечно и е директно референциран в документация и контейнери на технологични гиганти като Google, NVIDIA, AMD, Intel и AWS.</p>
+<h2>Механизмът на превземане на осиротели именовани пространства</h2>
+<p>Пробивът е осъществен чрез класическа уязвимост в <a href="/pages/supply-chain-security.html">сигурността на веригата за доставки</a> (account/namespace takeover). Когато оригиналният автор на модела е променил потребителското си име или е реорганизирал хранилището, старото име на акаунта е останало свободно за регистрация, докато хиляди автоматизирани скриптове, Docker образи и Python пакети по целия свят са продължили да теглят тегла и конфигурационен код от стария URL път.</p>
+<p>Изследователите са регистрирали освободеното име като демонстрация на концепцията (PoC), доказвайки, че реален нападател е можел безпрепятствено да подмени файловете на модела със злонамерен код за отдалечено изпълнение.</p>
+<h2>Рискът от автоматично изтегляне на модели в продукция</h2>
+<p>Много съвременни AI конвейери извикват функцията <code>from_pretrained()</code> по време на стартиране на контейнера в продукция, често с активиран флаг за изпълнение на отдалечен код без фиксиране на криптографския хеш (commit SHA) на конкретната ревизия.</p>
+<p>След отговорното разкриване на проблема екипът на Hugging Face е блокирал уязвимото пространство и е въвел нови защити срещу повторно регистриране на популярни потребителски имена.</p>
+<h2>Криптографското фиксиране на версиите като императив за AI инфраструктурата</h2>
+<p>Инцидентът с Kokoro AI е поредното доказателство, че хранилищата за невронни модели са изправени пред същите системни рискове, през които преминаха пакетните мениджъри npm и PyPI през последното десетилетие. Разликата е, че AI моделите често се изпълняват на сървъри с достъп до чувствителни корпоративни данни и скъпи GPU клъстери.</p>
+<p>За да предотвратят катастрофални пробиви, инженерните организации трябва незабавно да забранят директното теглене на модели от публични хъбове по време на работа и да преминат към вътрешни верифицирани регистри с фиксирани SHA-256 хешове и формат Safetensors.</p>
+<p><img src="/articles/2026/11/17/researchers-hijack-hugging-face-account-popular-kokoro-ai-model/infographic.png" alt="Превземане на Kokoro AI в платформата Hugging Face"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/">Researchers hijack Hugging Face account for popular Kokoro AI model - BleepingComputer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/supply-chain-security.html">Сигурност на веригата за доставки (Supply Chain Security)</a><p>Сигурността на софтуерната верига за доставки обхваща защитата на всички външни библиотеки, компилатори, контейнери, хранилища за код и предварително ...</p></li><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/speech-synthesis.html">Синтез на реч (Text-to-Speech — TTS)</a><p>Синтезът на реч (Speech Synthesis / Text-to-Speech) е технологията за преобразуване на писмен текст в естествено звучащ човешки глас чрез невронни аку...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

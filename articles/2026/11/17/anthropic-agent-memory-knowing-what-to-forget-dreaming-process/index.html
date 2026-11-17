@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Anthropic Research
+Нов научен доклад на Anthropic относно дългосрочната памет на автономните AI агенти доказва, че ключът към успешното изпълнение на многочасови задачи не е..."><title>Anthropic разкрива тайната на агентната памет: Умението да забравяш и процесът „Сънуване“ - Светни.ме</title><meta property="og:title" content="Anthropic разкрива тайната на агентната памет: Умението да забравяш и процесът „Сънуване“ - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Anthropic Research
+Нов научен доклад на Anthropic относно дългосрочната памет на автономните AI агенти доказва, че ключът към успешното изпълнение на многочасови задачи не е..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/17/anthropic-agent-memory-knowing-what-to-forget-dreaming-process/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/17/anthropic-agent-memory-knowing-what-to-forget-dreaming-process/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic разкрива тайната на агентната памет: Умението да забравяш и процесът „Сънуване“</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/17/anthropic-agent-memory-knowing-what-to-forget-dreaming-process/hero.png" alt="Концептуална визуализация на когнитивна памет и структуриране на знания при автономни агенти"><br><small>Източник: The Decoder / Anthropic Research</small></p>
+<p>Нов научен доклад на <a href="/pages/anthropic.html">Anthropic</a> относно дългосрочната памет на автономните <a href="/pages/ai-agents.html">AI агенти</a> доказва, че ключът към успешното изпълнение на многочасови задачи не е в съхраняването на огромни архиви от минали събития, а в <strong>активното селективно забравяне</strong> <code>[1]</code>. Според изследването, цитирано от The Decoder, натрупването на нефилтрирани бележки отравя контекста и блокира вземането на правилни решения от моделите <a href="/pages/claude.html">Claude</a>.</p>
+<h2>Експериментът Pokémon Red: Малко бележки бият 400 архивни файла</h2>
+<p>Изследователите на Anthropic демонстрират ефекта чрез бенчмарка за дългосрочно планиране в играта Pokémon Red. Когато по-старият модел Sonnet 3.7 е бил оставен да записва всичко в паметта си, той е създал над 400 отделни файла с бележки, пълни с остарели хипотези и противоречиви инструкции, които в крайна сметка са парализирали прогреса му.</p>
+<p>Обратно, новата архитектура на паметта поддържа само няколко компактни стратегически файла, като агресивно изтрива неактуалните детайли. Този подход в <a href="/pages/context-engineering.html">контекстното инженерство</a> позволява на агента да напредне четири пъти по-далеч в сложната среда <code>[2]</code>.</p>
+<h2>Механизмът „Сънуване“ (Dreaming) за ретроактивна корекция</h2>
+<p>Втората ключова иновация в доклада е процесът, наречен от екипа „сънуване“ (Dreaming). В периоди на пауза между активните действия агентът преглежда натрупаната си епизодична памет, идентифицира грешни предположения, които вече са били опровергани от опита, и презаписва обобщените си знания.</p>
+<p>По този начин <a href="/pages/llm.html">големият езиков модел</a> не просто добавя нови редове в края на лога, а непрекъснато рефакторира собствения си модел за света.</p>
+<h2>Край на наивните RAG архиви при дългосрочните автономни системи</h2>
+<p>Откритията на Anthropic опровергават разпространената в индустрията теза, че неограниченият контекстен прозорец и векторните бази данни решават проблема с паметта на агентите. Точно както човешкият мозък консолидира спомените по време на сън и изчиства шума, софтуерните агенти се нуждаят от активна хигиена на паметта.</p>
+<p>През следващата година системите за управление на агентна памет ще преминат от пасивно векторно търсене към автономни фонови процеси за забравяне, дедупликация и семантична ревизия.</p>
+<p><img src="/articles/2026/11/17/anthropic-agent-memory-knowing-what-to-forget-dreaming-process/infographic.png" alt="Anthropic: Агентната памет изисква активно забравяне"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-forget-not-how-much-to-store/">Anthropic says the key to agent memory is knowing what to forget, not how much to store - The Decoder</a></li>
+<li><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory - Anthropic Research</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/context-engineering.html">Контекстно инженерство (Context Engineering)</a><p>Контекстното инженерство (Context Engineering) е научно-приложна дисциплина за оптимизиране, компресиране и йерархично структуриране на информацията, ...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

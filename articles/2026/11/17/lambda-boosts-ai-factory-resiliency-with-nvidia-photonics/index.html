@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Lambda / NVIDIA Blog (снимка от мрежова инсталация в клъстера на Lambda)
+Според публикация в блога на NVIDIA [1] облачният доставчик Lambda използва комутатори NVIDIA Photonics със съвмес..."><title>Lambda внедрява оптика със съвместно опаковане на NVIDIA в AI клъстер с над 10 000 GPU - Светни.ме</title><meta property="og:title" content="Lambda внедрява оптика със съвместно опаковане на NVIDIA в AI клъстер с над 10 000 GPU - Светни.ме"><meta property="og:description" content="Източник: Lambda / NVIDIA Blog (снимка от мрежова инсталация в клъстера на Lambda)
+Според публикация в блога на NVIDIA [1] облачният доставчик Lambda използва комутатори NVIDIA Photonics със съвмес..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/17/lambda-boosts-ai-factory-resiliency-with-nvidia-photonics/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/17/lambda-boosts-ai-factory-resiliency-with-nvidia-photonics/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="active">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Lambda внедрява оптика със съвместно опаковане на NVIDIA в AI клъстер с над 10 000 GPU</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->17 ноември 2026 г.<!-- --> в <a href="/category/energy.html" class="category-pill">Енергетика</a></p><div><p><img src="/articles/2026/11/17/lambda-boosts-ai-factory-resiliency-with-nvidia-photonics/hero.png" alt="Оптични кабели в жълто и оранжево, свързани към комутатори в сървърен шкаф на Lambda"><br><small>Източник: Lambda / NVIDIA Blog (снимка от мрежова инсталация в клъстера на Lambda)</small></p>
+<p>Според публикация в блога на <a href="/pages/nvidia.html">NVIDIA</a> [1] облачният доставчик <a href="/pages/lambda.html">Lambda</a> използва комутатори NVIDIA Photonics със <a href="/pages/co-packaged-optics.html">съвместно опакована оптика</a> (CPO) за свързване на стелажи <a href="/pages/nvidia-gb300-nvl72.html">NVIDIA GB300 NVL72</a> с над 10 000 GPU. Целта са по-малък разход на енергия, по-висока устойчивост и по-дълго средно време между прекъсвания (MTBI) в <a href="/pages/ai-factory.html">AI фабрика</a> от такъв мащаб. Lambda обявява внедряването като първото мащабно в света, а в собственото си съобщение уточнява, че GPU са Blackwell Ultra, а площадката е в Квебек [2].</p>
+<h2>Защо мрежата е ключова за енергийната ефективност</h2>
+<p>Обучението на AI модел изисква хиляди GPU да работят заедно през бърза, ефективна и устойчива мрежа. Според NVIDIA при голямо обучение една прекъсната връзка може да спре хиляди графични процесори, а при агентен инференс едно мрежово прекъсване води до каскадни закъснения при много агенти. Всяко прекъсване струва време, а всеки ват, похарчен за мрежа, е ват, който не е наличен за изчисления [1].</p>
+<h2>Как работи съвместно опакованата оптика</h2>
+<p>Технологията, свързана със <a href="/pages/silicon-photonics.html">силициевата фотоника</a>, замества класическите щекерни (pluggable) трансиъвъри с оптични двигатели, монтирани директно в корпуса на комутатора. Според NVIDIA това дава до 5 пъти по-добра енергийна ефективност и до 15 пъти по-висока надеждност спрямо конвенционалната щекерна оптика, като се ползват и 4 пъти по-малко лазери, т.е. по-малко компоненти, които могат да откажат [1].</p>
+<p>Електрическият път се скъсява от инчове на милиметри, което намалява загубите на сигнал. Отпадат и ретаймер чиповете, което намалява както потреблението, така и броя на частите по сигналния път [2].</p>
+<h2>Конфигурацията на Lambda</h2>
+<p>Внедряването използва комутатори NVIDIA Photonics със 144 порта по 800 Gb/s всеки. <a href="/pages/liquid-cooling.html">Течно охлаждане</a> отвежда топлината от чипа на комутатора и оптичните двигатели. Всеки комутатор има 18 сменяеми външни източника на светлина, които захранват оптичните двигатели. Техници могат да сменят светлинните модули на място, докато при традиционната щекерна оптика при отказ на лазер трябва да се подмени целият модул [1].</p>
+<h2>Измерените резултати</h2>
+<p>При тестове на Lambda мрежовата латентност намалява с около 4% на ниво стелаж и с до около 10% на ниво под (pod). По-точните стойности от съобщението на компанията са 3,8% при стелаж и 10,1% при под, като разликата расте с мащаба. Пропускателната способност остава същата като при конвенционалната оптика във всички конфигурации (стелаж, мащабируема единица и под) [2].</p>
+<p>Компанията отчита медианна температура на оптиката 36°C срещу 51°C при конвенционалните щекерни модули и по-стабилна целост на сигнала. NVIDIA свързва по-хладната и по-стабилна оптика с до 15 пъти по-висока надеждност, която помага обученията да не се прекъсват [2].</p>
+<h2>Енергийно ефективен кампус</h2>
+<p>Според съобщението на Lambda кампусът в Квебек работи със 142 MW осигурен капацитет от почти 100% възобновяема енергия, позволява безплатно (свободно) охлаждане до 80% от годината и има гарантиран PUE 1,2 без потребление на технологична вода за охлаждане на сървърите. Внедряването ще бъде представено в специалното обръщение на NVIDIA на SC26 [2].</p>
+<h2>Анализ: мрежата като фактор в енергийния баланс на AI инфраструктурата</h2>
+<p>Този раздел съдържа редакционна интерпретация на публикуваните данни. Изводите са на редакцията и не са твърдения на NVIDIA или Lambda.</p>
+<h3>Фиксиран бюджет на мощността</h3>
+<p>Кампус с 142 MW е ограничен от осигурения си капацитет. В такава рамка ватовете, които мрежата не използва, не изчезват, а остават налични за изчисления; точно това твърди и NVIDIA с фразата за ват, който не е наличен за изчисления. Затова ефективността на мрежовия слой е енергиен въпрос на ниво кампус, а не само на ниво комутатор. Приложената в материала цифра „до 5 пъти“ е обща заявка на NVIDIA за технологията, а не резултат, измерен от Lambda в този клъстер. Lambda публикува измервания за латентност, температура и пропускателна способност, но не и за потребление на ток.</p>
+<h3>Надеждността като производителност</h3>
+<p>Лазерите са сред компонентите, които отказват. Подходът с 4 пъти по-малко лазери и с 18 сменяеми светлинни източника на комутатор променя сервизния модел: вместо подмяна на цял модул при отказ се сменя само източникът на светлина. При обучение върху над 10 000 GPU, където по думите на NVIDIA една прекъсната връзка спира много процесори, всеки избегнат инцидент превръща мрежовата надеждност в повече полезни GPU часове. Именно това е аргументът в цитата на Гилад Шайнер от NVIDIA.</p>
+<h3>Топлинна архитектура</h3>
+<p>Разликата от 15°C в медианната температура на оптиката (36°C срещу 51°C) показва, че разместването на оптиката към корпуса на комутатора е свързано с топлинния дизайн. В конфигурацията на Lambda течното охлаждане обхваща и чипа, и оптичните двигатели. Така мрежовото оборудване не е периферия към охлаждането на изчислителните стелажи, а част от същата топлинна система. Съчетанието с кампус със свободно охлаждане до 80% от годината и PUE 1,2 показва, че ефективността се търси на няколко нива едновременно: чип, комутатор, стелаж и сграда.</p>
+<h3>Мащабът на доказателствата</h3>
+<p>Данните идват от тестове на самия доставчик и от материал на производителя на технологията. Става дума за едно внедряване на един кампус, а в източниците няма цени, разходи на ват или сравнение с други производители. Колко от ползите ще се запазят при други топологии и по-големи клъстери, предстои да се види. Затова днешният резултат е най-добре да се чете като доказателство за осъществимост в голям мащаб, а не като окончателна оценка на технологията.</p>
+<h3>Системният извод</h3>
+<p>Ако мрежата се приема за енергиен ресурс, а не само за комуникационен, оптимизацията на AI инфраструктурата излиза извън чиповете. Конкуренцията между доставчиците на AI облак ще се води и по това колко полезна изчислителна работа получават от всеки мегават и от всеки час без прекъсване, а не само по броя GPU. Съобщението на Lambda показва, че оптиката, охлаждането и избраният кампус се оптимизират заедно.</p>
+<p><img src="/articles/2026/11/17/lambda-boosts-ai-factory-resiliency-with-nvidia-photonics/infographic.png" alt="Инфографика: ключови стълбове на внедряването на NVIDIA Photonics в клъстера на Lambda"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blogs.nvidia.com/blog/lambda-photonics/">Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics - NVIDIA Blog</a></li>
+<li><a href="https://lambda.com/blog/worlds-first-large-scale-deployment-of-nvidia-photonics-switches-with-cpo">Lambda announces the world&#39;s first large-scale CPO deployment of NVIDIA Photonics switches - Lambda</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/lambda.html">Lambda (Lambda Labs)</a><p>Lambda е специализиран американски доставчик на облачна GPU инфраструктура и „AI фабрики“, проектирани за обучение и инференс на големи невронни модел...</p></li><li><a href="/pages/co-packaged-optics.html">Съвместно опакована оптика (Co-Packaged Optics — CPO)</a><p>Съвместно опакованата оптика (Co-Packaged Optics — CPO) е напреднала полупроводникова и мрежова технология, при която силициевите фотонни оптични двиг...</p></li><li><a href="/pages/silicon-photonics.html">Силициева фотоника (Silicon Photonics)</a><p>Силициевата фотоника (Silicon Photonics) интегрира лазери и оптични компоненти директно върху стандартни силициеви микрочипове за пренос на данни със ...</p></li><li><a href="/pages/nvidia-gb300-nvl72.html">NVIDIA GB300 NVL72</a><p>NVIDIA GB300 NVL72 е сървърна система в единичен шкаф с течно охлаждане от архитектурата Blackwell Ultra, която обединява 36 процесора Grace и 72 граф...</p></li><li><a href="/pages/ai-factory.html">AI фабрика (AI Factory)</a><p>AI фабриката (AI Factory) е специализиран хипермащабен център за данни, проектиран като единна изчислителна машина за непрекъснато преобразуване на су...</p></li><li><a href="/pages/liquid-cooling.html">Течно охлаждане</a><p>Течно охлаждане (Liquid Cooling) е метод за отстраняване на топлина от компютърни компоненти, при който се използва циркулиращ флуид (обикновено смес ...</p></li><li><a href="/pages/ai-infrastructure.html">Инфраструктура за изкуствен интелект (AI Infrastructure)</a><p>Инфраструктурата за изкуствен интелект (AI Infrastructure) обхваща хардуерните съоръжения, мрежовата топология и софтуерните платформи, необходими за ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
