@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / OpenAI
+OpenAI и AMD разкриха резултатите от съвместна инженерна програма, при която специализирани модели за разсъждение на OpenAI са оптимизирали хардуерния дизайн на флагм..."><title>OpenAI обяви, че моделите ѝ са постигнали едногодишна оптимизация на чиповете на AMD за под пет месеца - Светни.ме</title><meta property="og:title" content="OpenAI обяви, че моделите ѝ са постигнали едногодишна оптимизация на чиповете на AMD за под пет месеца - Светни.ме"><meta property="og:description" content="Източник: The Decoder / OpenAI
+OpenAI и AMD разкриха резултатите от съвместна инженерна програма, при която специализирани модели за разсъждение на OpenAI са оптимизирали хардуерния дизайн на флагм..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/18/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/18/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI обяви, че моделите ѝ са постигнали едногодишна оптимизация на чиповете на AMD за под пет месеца</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/18/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/hero.png" alt="Инженерна схема на силициев графичен процесор на AMD и алгоритмична оптимизация на регистри"><br><small>Източник: The Decoder / OpenAI</small></p>
+<p><a href="/pages/openai.html">OpenAI</a> и <a href="/pages/amd.html">AMD</a> разкриха резултатите от съвместна инженерна програма, при която специализирани модели за разсъждение на OpenAI са оптимизирали хардуерния дизайн на флагмански графичен ускорител на AMD след приключване на работата на човешките инженери <code>[1]</code>. За по-малко от пет месеца изкуственият интелект е открил структурни подобрения в <a href="/pages/rtl-design.html">проектирането на ниво регистрови трансфери (RTL)</a>, равняващи се на цяла година традиционен инженерен труд, които вече са включени във финалния производствен силиций (tape-out).</p>
+<h2>До 14% подобрение в PPA метриките върху вече оптимизиран код</h2>
+<p>Експериментът е бил насочен към критични изчислителни блокове от следващото поколение <a href="/pages/gpu.html">графични процесори (GPU)</a> на AMD, които вече са били преминали през пълния цикъл на ръчна оптимизация от старшите хардуерни архитекти на компанията. Моделите на OpenAI, свързани в затворен цикъл с индустриални компилатори за <a href="/pages/eda.html">електронна автоматизация на дизайна (EDA)</a>, са изследвали хиляди алтернативни трансформации на SystemVerilog кода.</p>
+<p>Резултатът е намаляване на силициевата площ и консумацията на енергия (Power-Performance-Area — PPA) с до 14% в ключовите модули, при 100% формално верифицирана математическа еквивалентност със спецификацията.</p>
+<h2>Формална верификация като гаранция срещу хардуерни бъгове</h2>
+<p>Едно от най-големите препятствия пред използването на генеративен AI в индустрията за <a href="/pages/semiconductors.html">полупроводници</a> е огромната цена на грешката — един дефектен логически вентил във финалната фотомаска струва десетки милиони долари и месеци забавяне във фабриките на TSMC.</p>
+<p>За да елиминират този риск, инженерите на AMD и OpenAI са изградили агентна архитектура, в която всяко предложено от модела пренареждане на конвейерните регистри автоматично се проверява от математически солвъри за формална еквивалентност и времеви ограничения (timing closure) преди да бъде прието.</p>
+<h2>Затваряне на рекурсивния цикъл: AI проектира по-бързи чипове за AI</h2>
+<p>Успешното внедряване на оптимизирания от OpenAI RTL код в реален производствен чип на AMD представлява исторически вододел за закона на Мур. Когато физическото смаляване на транзисторите се доближава до атомните граници, архитектурната микрооптимизация на логическите схеми се превръща в основен резерв за производителност.</p>
+<p>Това поставя началото на положителна обратна връзка (recursive hardware self-improvement): всяко ново поколение модели за разсъждение ще проектира по-ефективни силициеви ускорители за по-кратко време, които от своя страна ще обучават следващото поколение модели.</p>
+<p><img src="/articles/2026/11/18/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/infographic.png" alt="Моделите на OpenAI ускоряват чип дизайна на AMD с една година"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/">OpenAI says its models delivered a year&#39;s worth of chip optimization on top of AMD&#39;s own engineering - The Decoder</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/rtl-design.html">Проектиране на ниво регистрови трансфери (RTL)</a><p>Проектирането на ниво регистрови трансфери (Register-Transfer Level — RTL) е ключова абстракция в инженерството на интегрални схеми, чрез която на ези...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/amd.html">AMD</a><p>Advanced Micro Devices (AMD) е американска мултинационална компания за полупроводници, която проектира компютърни процесори и графични технологии.</p></li><li><a href="/pages/semiconductors.html">Полупроводници за изкуствен интелект</a><p>Полупроводниците за изкуствен интелект са специализирани микроелектронни интегрални схеми (GPU, TPU, NPU), оптимизирани за паралелни тензорни изчислен...</p></li><li><a href="/pages/eda.html">Автоматизация на електронното проектиране (EDA)</a><p>Автоматизацията на електронното проектиране (Electronic Design Automation - EDA) е категория софтуерни инструменти за проектиране, симулация и верифик...</p></li><li><a href="/pages/gpu.html">GPU</a><p>GPU (Graphics Processing Unit – графичен процесор) е специализирана електронна верига, проектирана за бързо манипулиране и промяна на паметта, за да с...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

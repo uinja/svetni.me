@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Engineering at Meta
+Инженерното подразделение на Meta публикува детайлен архитектурен преглед на своята вътрешна автономна система Ranking Engineer Agent (REA), която автоматизира цикъла ..."><title>Meta автоматизира разработката на рекламните си модели чрез автономния Ranking Engineer Agent - Светни.ме</title><meta property="og:title" content="Meta автоматизира разработката на рекламните си модели чрез автономния Ranking Engineer Agent - Светни.ме"><meta property="og:description" content="Източник: Engineering at Meta
+Инженерното подразделение на Meta публикува детайлен архитектурен преглед на своята вътрешна автономна система Ranking Engineer Agent (REA), която автоматизира цикъла ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/18/how-meta-uses-ai-agents-to-scale-ml-innovations-across-ads-ranking-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/18/how-meta-uses-ai-agents-to-scale-ml-innovations-across-ads-ranking-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Meta автоматизира разработката на рекламните си модели чрез автономния Ranking Engineer Agent</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/18/how-meta-uses-ai-agents-to-scale-ml-innovations-across-ads-ranking-models/hero.png" alt="Инженерен център за машинно обучение и граф на невронни модели за класиране в Meta"><br><small>Източник: Engineering at Meta</small></p>
+<p>Инженерното подразделение на <a href="/pages/meta.html">Meta</a> публикува детайлен архитектурен преглед на своята вътрешна автономна система <a href="/pages/ranking-engineer-agent.html">Ranking Engineer Agent (REA)</a>, която автоматизира цикъла на иновации в огромната инфраструктура от <a href="/pages/recommendation-systems.html">системи за препоръки</a> и рекламно класиране на компанията <code>[1]</code>. Специализираният <a href="/pages/ai-agents.html">AI агент</a> самостоятелно пренася и адаптира нови открития в <a href="/pages/machine-learning.html">машинното обучение</a> върху стотици продукционни модели в екосистемата на Facebook, Instagram и WhatsApp.</p>
+<h2>От изолиран експеримент към мащабиране върху стотици модели</h2>
+<p>Рекламната система на Meta не се състои от един-единствен модел, а от стотици специализирани невронни архитектури, обслужващи различни фази на търга, формати и потребителски сегменти. Традиционно, когато изследователски екип открие по-ефективен слой за внимание, метод за нормализация или схема за квантизация в един модел, ръчното адаптиране и тестване на тази иновация в останалите стотици модели отнема месеци инженерен труд.</p>
+<p>Ranking Engineer Agent решава това тясно място чрез алгоритмична оптимизация на промптовете и кодовите трансформации в стила на декларативните рамки като <a href="/pages/dspy.html">DSPy</a>. Агентът анализира изходния код на целевия модел, формулира конкретна архитектурна хипотеза и генерира необходимите промени в PyTorch конфигурацията.</p>
+<h2>Автономна експериментална верификация и предпазни прагове</h2>
+<p>След като генерира кандидат-архитектурата, REA автоматично стартира офлайн тренировъчни задачи върху исторически данни, следи кривите на загубата (loss curves) и изчислява метриките за нормализирана кръстосана ентропия (NE) и изчислителна цена (FLOPs).</p>
+<p>Ако агентът засече нестабилност на градиентите или превишаване на бюджета за памет, той анализира телеметрията, коригира хиперпараметрите и стартира нова итерация без човешка намеса. До човешките ML инженери достигат само готови, емпирично доказани промени в кода (pull requests), които вече са преминали всички регресионни тестове.</p>
+<h2>Автоматизираното ML инженерство като двигател на рекламната рентабилност</h2>
+<p>Внедряването на Ranking Engineer Agent в сърцето на рекламната машина на Meta показва реалната икономическа стойност на автономните изследователски агенти. В мащаба на Meta дори 0,1% подобрение в точността на предсказване на клик или конверсия се трансформира в стотици милиони долари допълнителни годишни приходи без увеличаване на рекламното натоварване.</p>
+<p>По-широкият извод за софтуерната индустрия е, че ролята на инженера по машинно обучение се измества от ръчно писане на моделни слоеве към проектиране на автономни експериментални фабрики, в които агентите извършват денонощна еволюционна оптимизация на продукционните мрежи.</p>
+<p><img src="/articles/2026/11/18/how-meta-uses-ai-agents-to-scale-ml-innovations-across-ads-ranking-models/infographic.png" alt="Meta мащабира рекламните си AI модели чрез автономния агент REA"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/">How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models - Engineering at Meta</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/ranking-engineer-agent.html">Ranking Engineer Agent (Meta REA)</a><p>Ranking Engineer Agent (REA) е вътрешна автономна агентна система за машинно обучение, разработена от инженерните екипи на Meta за автоматизирано прое...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/recommendation-systems.html">Системи за препоръки (Recommendation Systems)</a><p>Системите за препоръки са класове от алгоритми за машинно обучение и информационно извличане, които прогнозират интереса на потребителя към определено...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/dspy.html">DSPy</a><p>DSPy е програмна рамка (framework), разработена от Станфордския университет, която има за цел да замени ръчния промпт инженеринг с алгоритмична оптими...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Docker Blog
+Docker представи Docker AI Governance — специализиран инфраструктурен слой за управление на AI и агентна сигурност, който използва механизмите на контейнерната изолация, за да..."><title>Docker представя Docker AI Governance: Контейнерен слой за сигурност и контрол на автономни агенти - Светни.ме</title><meta property="og:title" content="Docker представя Docker AI Governance: Контейнерен слой за сигурност и контрол на автономни агенти - Светни.ме"><meta property="og:description" content="Източник: Docker Blog
+Docker представи Docker AI Governance — специализиран инфраструктурен слой за управление на AI и агентна сигурност, който използва механизмите на контейнерната изолация, за да..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/18/the-trust-layer-securing-agentic-ai-with-docker-ai-governance/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/18/the-trust-layer-securing-agentic-ai-with-docker-ai-governance/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Docker представя Docker AI Governance: Контейнерен слой за сигурност и контрол на автономни агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/18/the-trust-layer-securing-agentic-ai-with-docker-ai-governance/hero.png" alt="Контейнерна инфраструктура на Docker и защитен шлюз за контрол на софтуерни агенти"><br><small>Източник: Docker Blog</small></p>
+<p><a href="/pages/docker.html">Docker</a> представи <strong>Docker AI Governance</strong> — специализиран инфраструктурен слой за <a href="/pages/ai-governance.html">управление на AI</a> и <a href="/pages/agentic-security.html">агентна сигурност</a>, който използва механизмите на <a href="/pages/container-isolation.html">контейнерната изолация</a>, за да ограничи и одитира действията на автономните софтуерни агенти в продукционна среда <code>[1]</code>. Платформата действа като детерминистичен защитен шлюз между недетерминистичните езикови модели и критичните корпоративни системи.</p>
+<h2>Политики за минимални привилегии на ниво контейнер и MCP сървър</h2>
+<p>Когато предприятията дават на AI агенти достъп до инструменти за изпълнение на bash команди, четене на файлове и заявки към бази данни чрез протокола MCP (Model Context Protocol), всяка успешна промпт инжекция може да се превърне в пълно компрометиране на хост машината. Docker AI Governance решава това, като опакова всеки агентен инструмент в ефемерен, строго ограничен контейнер със собствена политика за сигурност.</p>
+<p>Администраторите дефинират декларативни правила кои директории са достъпни само за четене, към кои външни домейни е разрешен мрежов трафик (egress filtering) и кои системни извиквания на ядрото са блокирани.</p>
+<h2>Криптографска атестация и преосмисляне на принципа на Постел</h2>
+<p>В класическото мрежово инженерство <a href="/pages/postels-law.html">законът на Постел (Postel&#39;s Law)</a> гласи да бъдеш консервативен в това, което изпращаш, и либерален в това, което приемаш. При автономните агенти обаче либералното приемане на неструктуриран вход води директно до инжектиране на зловредни команди. Затова <a href="/pages/docker-ai-governance.html">Docker AI Governance</a> налага строга валидация на схемите и криптографска проверка на произхода (provenance) на всеки образ с агентен инструмент.</p>
+<p>Всяко действие на агента — от подадения промпт до конкретната мрежова заявка и променения файл — се записва в неизменяем одитен журнал за целите на регулаторното съответствие (SOC2, ISO 42001 и EU AI Act).</p>
+<h2>Контейнеризацията като естествен фундамент за агентната икономика</h2>
+<p>Както преди десетилетие Docker стандартизира опаковането и изолирането на облачните микроуслуги, днес компанията позиционира контейнерния си стек като задължителния „слой на доверие“ за автономните агенти. Нито един директор по информационна сигурност (CISO) няма да разреши масово разгръщане на агенти директно върху голи виртуални машини или работни станции без хардуерно и ядрено ограничаване на щетите (blast radius).</p>
+<p>Превръщането на политиките за безопасност от меки текстови инструкции в системния промпт в твърди правила на ниво операционна система и контейнер е единственият надежден път към индустриална агентна сигурност.</p>
+<p><img src="/articles/2026/11/18/the-trust-layer-securing-agentic-ai-with-docker-ai-governance/infographic.png" alt="Docker AI Governance изолира и защитава автономните агенти"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.docker.com/blog/agentic-ai-security-docker-governance/">The Trust Layer: Securing Agentic AI with Docker AI Governance - Docker Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/docker-ai-governance.html">Docker AI Governance</a><p>Docker AI Governance е специализиран слой за сигурност, контрол на достъпа и криптографска верификация в екосистемата на Docker, проектиран за изолира...</p></li><li><a href="/pages/docker.html">Docker</a><p>Docker е водеща платформа за контейнеризация с отворен код, която позволява на разработчиците да пакетират, доставят и стартират приложения в изолиран...</p></li><li><a href="/pages/container-isolation.html">Контейнерна изолация (Container Isolation)</a><p>Контейнерната изолация е технология за виртуализация на ниво операционна система, използваща механизми като Linux cgroups, namespaces и seccomp профил...</p></li><li><a href="/pages/agentic-security.html">Сигурност на автономни агенти (Agentic Security)</a><p>Сигурността на автономните агенти е специализирано направление в киберсигурността, фокусирано върху защитата и контрола на AI агенти с достъп до инстр...</p></li><li><a href="/pages/ai-governance.html">Управление и регулиране на изкуствения интелект (AI Governance)</a><p>AI Governance е мултидисциплинарна рамка от политики, правни стандарти и институционални процеси, насочени към гарантиране на етичното, сигурно и отго...</p></li><li><a href="/pages/postels-law.html">Закон на Постел (Postel’s Law)</a><p>Бъдете либерални в това, което приемате, и консервативни в това, което изпращате.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

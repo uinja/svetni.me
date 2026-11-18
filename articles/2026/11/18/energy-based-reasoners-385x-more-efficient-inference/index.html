@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Hacker News / Energy-Based Reasoners Research
+Екип от изследователи в областта на машинното обучение публикува фундаментална разработка за Energy-Based Reasoners (EBR) — нов клас рекурент..."><title>Energy-Based Reasoners: Латентното енергийно разсъждение постига до 385 пъти по-ефективен инференс - Светни.ме</title><meta property="og:title" content="Energy-Based Reasoners: Латентното енергийно разсъждение постига до 385 пъти по-ефективен инференс - Светни.ме"><meta property="og:description" content="Източник: Hacker News / Energy-Based Reasoners Research
+Екип от изследователи в областта на машинното обучение публикува фундаментална разработка за Energy-Based Reasoners (EBR) — нов клас рекурент..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/18/energy-based-reasoners-385x-more-efficient-inference/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/18/energy-based-reasoners-385x-more-efficient-inference/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Energy-Based Reasoners: Латентното енергийно разсъждение постига до 385 пъти по-ефективен инференс</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->18 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/18/energy-based-reasoners-385x-more-efficient-inference/hero.png" alt="Триизмерна визуализация на енергиен ландшафт и градиентно спускане в латентното пространство на невронна мрежа"><br><small>Източник: Hacker News / Energy-Based Reasoners Research</small></p>
+<p>Екип от изследователи в областта на <a href="/pages/machine-learning.html">машинното обучение</a> публикува фундаментална разработка за <strong>Energy-Based Reasoners (EBR)</strong> — нов клас рекурентни <a href="/pages/reasoning-models.html">модели за разсъждение</a>, базирани на <a href="/pages/energy-based-models.html">енергийно-базирани модели</a>, които постигат до 385 пъти по-висока изчислителна ефективност при <a href="/pages/inference.html">инференс</a> в сравнение със стандартните авторегресивни системи <code>[1]</code>. Вместо да изписват хиляди междинни думи при търсене на решение, EBR моделите оптимизират компактна латентна <a href="/pages/working-memory.html">работна памет</a> чрез директно градиентно спускане.</p>
+<h2>Енергийната функция като компас и критерий за спиране</h2>
+<p>Съвременните модели за разсъждение разчитат или на дълги текстови вериги на мисълта (Chain-of-Thought), или на циклични рекурентни слоеве (looped transformers). Основният дефект на досегашните циклични модели е, че те обновяват вътрешното си състояние „на сляпо“, без ясна метрика дали всяка следваща итерация ги приближава до вярното решение или кога трябва да спрат.</p>
+<p>Архитектурата EBR решава това в духа на принципа за изчислителна пестеливост (<a href="/pages/occams-razor.html">бръснач на Окам</a>), като обучава скаларна енергийна функция $E(x, z)$, която оценява съвместимостта между входния проблем $x$ и латентното състояние на разсъждение $z$. Всяка стъпка от цикъла е насочено градиентно спускане по този енергиен релеф, а достигането на локален минимум служи като точен математически сигнал за спиране на изчисленията.</p>
+<h2>99,9% точност в Sudoku-Extreme при стотици пъти по-малко изчисления</h2>
+<p>Чрез ефективно <a href="/pages/chunking.html">групиране на информацията (Chunking)</a> в непрекъснати латентни вектори и нов метод за изследователско обучение (exploration-based training), EBR оформя гладък енергиен ландшафт, който улавя множество валидни решения на сложни комбинаторни задачи.</p>
+<p>В четири строги бенчмарка за алгоритмично разсъждение и удовлетворяване на ограничения EBR постига 99,9% точност на теста Sudoku-Extreme, използвайки до 345–385 пъти по-малко инференс изчисления от следващия най-добър рекурентен модел при идентичен бюджет за обучение.</p>
+<h2>Преходът от вербализирано мислене към непрекъснато латентно разсъждение</h2>
+<p>Разработката на Energy-Based Reasoners атакува една от най-големите неефективности в съвременния изкуствен интелект — принуждаването на невронните мрежи да „мислят на глас“ чрез дискретни човешки думи. Човешкият език е създаден за комуникация с ниска пропускателна способност, а не за паралелно решаване на многомерни логически ограничения.</p>
+<p>Пренасянето на разсъждението в непрекъснато латентно пространство, управлявано от енергийни градиенти (концепция, дълго защитавана от пионери като Ян Лекун), отваря пътя към ново поколение компактни модели, способни да решават сложни математически и инженерни задачи за милисекунди.</p>
+<p><img src="/articles/2026/11/18/energy-based-reasoners-385x-more-efficient-inference/infographic.png" alt="Energy-Based Reasoners: 385x по-ефективно латентно разсъждение"><br><small>Инфографика: Аналитичен преглед на Svetni.me</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://energy-based-reasoners.github.io/">Energy-Based Reasoners: 385x more efficient inference - Project Page</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/energy-based-models.html">Енергийно-базирани модели (Energy-Based Models)</a><p>Енергийно-базираните модели (Energy-Based Models — EBMs) са клас вероятностни и невронни архитектури в машинното обучение, които оценяват съвместимост...</p></li><li><a href="/pages/reasoning-models.html">Разсъждаващи модели (Reasoning Models)</a><p>Разсъждаващите модели (Reasoning Models) са ново поколение изкуствени невронни мрежи, обучени да отделят значителен изчислителен ресурс по време на из...</p></li><li><a href="/pages/inference.html">Инференция</a><p>Инференция (Inference) е процесът на използване на вече обучен модел с изкуствен интелект за генериране на прогнози или извеждане на заключения от нов...</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/occams-razor.html">Бръснач на Окам (Occam’s Razor)</a><p>Сред конкуриращи се хипотези, които предвиждат еднакво добре, трябва да се избере тази с най-малко предположения.</p></li><li><a href="/pages/working-memory.html">Работна памет (Working Memory)</a><p>Когнитивна система, която временно съхранява и манипулира информация, необходима за изпълнение на задачи.</p></li><li><a href="/pages/chunking.html">Групиране на информацията (Chunking)</a><p>Процес, при който отделни части от набор информация се разделят и след това се групират в смислено цяло.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
