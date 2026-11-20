@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Amit Merchant
+Капанът на Polling модела: Загуба на ресурси и изчерпани API квоти
+В съвременния софтуерен процес ИИ агентите за програмиране поемат все по-голям дял от работата: те клонира..."><title>GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване - Светни.ме</title><meta property="og:title" content="GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване - Светни.ме"><meta property="og:description" content="Източник: Amit Merchant
+Капанът на Polling модела: Загуба на ресурси и изчерпани API квоти
+В съвременния софтуерен процес ИИ агентите за програмиране поемат все по-голям дял от работата: те клонира..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/19/event-driven-github-webhooks-agent-orchestration-pull-requests/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/19/event-driven-github-webhooks-agent-orchestration-pull-requests/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->19 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/19/event-driven-github-webhooks-agent-orchestration-pull-requests/hero.png" alt="Събитийно-ориентирана комуникация чрез GitHub Event Streams за реактивно събуждане на ИИ агенти"><br><small>Източник: Amit Merchant</small></p>
+<h2>Капанът на Polling модела: Загуба на ресурси и изчерпани API квоти</h2>
+<p>В съвременния софтуерен процес <a href="/pages/ai-agents.html">ИИ агентите</a> за програмиране поемат все по-голям дял от работата: те клонират хранилища, правят промени, отварят изтеглящи заявки (Pull Requests) и реагират на забележки [1]. Но какво се случва, след като агентът качи заявката в <a href="/pages/github.html">GitHub</a> и чака човешки преглед или изпълнение на автоматизираните тестове? Софтуерният инженер Амит Мърчант описва фундаменталния архитектурен преход от неефективно циклично запитване (polling) към реактивни потоци от събития (GitHub Event Streams).</p>
+<p>Масовият подход при досегашните агентни рамки беше да питат GitHub през редовни интервали: на всеки няколко секунди или минути агентът изпраща HTTP заявка, за да провери дали някой е оставил коментар, дали тестовете са приключили успешно или дали кодът е одобрен.</p>
+<p>Този механизъм е силно неефективен:</p>
+<ul>
+<li>Агентът изразходва квотите за заявки към GitHub API (rate limits) за напълно празни проверки.</li>
+<li>Процесът на агента остава активен в паметта, консумирайки изчислителни ресурси на машината.</li>
+<li>Всяка проверка поддържа контекста активен, водейки до скрити разходи за инфраструктура.</li>
+</ul>
+<p><img src="/articles/2026/11/19/event-driven-github-webhooks-agent-orchestration-pull-requests/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>GitHub Event Streams и магията на Server-Sent Events (SSE)</h2>
+<p>Новата функционалност GitHub Event Streams решава този проблем, като позволява на външни приложения да се абонират за конкретни събития в даден Pull Request. </p>
+<p>Вместо да разчита на класическите <a href="/pages/webhooks.html">уебкуки</a> — които изискват публично видим HTTP сървър с валиден URL адрес (трудно приложимо при локално стартирани агенти на лаптопа на програмиста) — Event Streams използва технологията <a href="/pages/server-sent-events.html">Server-Sent Events</a> (SSE).</p>
+<p>При този модел агентът прави изходяща дълготрайна HTTP връзка към GitHub, регистрира се за събития (нов коментар, преглед, push на нов коммит) и мигновено преминава в спящо състояние. Когато събитието настъпи, GitHub го изпраща директно през отворения поток, събуждайки агента за незабавна реакция.</p>
+<h2>Архитектурният скок: Реактивна и събитийно-ориентирана екосистема за изкуствен интелект</h2>
+<p>Преминаването към <a href="/pages/event-driven-architecture.html">събитийно-ориентирана архитектура</a> при оркестрацията на агенти бележи съзряването на автономното програмиране. Докато досега агентите бяха изолирани скриптове, въртящи цикли в терминала, чрез Event Streams те се превръщат в пълноправни, интелигентни граждани на събитийния поток.</p>
+<p>Възможността агентът да спи безплатно часове или дни, докато чака рецензия от старши инженер, премахва финансовата бариера пред паралелното изпълнение.</p>
+<p>Една компания може да управлява стотици специализирани агенти за документация, сигурност и тестове едновременно, като нито един от тях не изразходва ресурси, докато не бъде повикан чрез конкретно събитие. Това прави събитийното събуждане новия златен стандарт за надеждна интеграция между хора и софтуерни агенти.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.amitmerchant.com/github-event-streams-for-agents/">Let the Pull Request Wake Your Agent Up - Amit Merchant</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/event-driven-architecture.html">Събитийно-ориентирана архитектура (Event-Driven Architecture)</a><p>Събитийно-ориентираната архитектура (Event-Driven Architecture - EDA) е шаблон за софтуерен дизайн, при който състоянието на системата се управлява чр...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/webhooks.html">Уебкуки (Webhooks)</a><p>Уебкуките (Webhooks) са метод за комуникация между уеб приложения чрез дефинирани от потребителя HTTP обратни извиквания (callbacks).</p></li><li><a href="/pages/server-sent-events.html">Server-Sent Events (SSE)</a><p>Server-Sent Events (SSE) е уеб технология, която позволява на сървъра да изпраща актуализации в реално време към клиентите по стандартна HTTP връзка.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
