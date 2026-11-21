@@ -434,6 +434,7 @@ h4 {
 }
 
 .article h1 {
+  font-size: 1.6rem;
   margin-top: 0;
   margin-bottom: var(--spacing-xs);
 }

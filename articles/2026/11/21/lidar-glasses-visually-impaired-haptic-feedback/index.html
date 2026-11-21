@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Hackaday / DebackTech
+Човешкият мозък притежава изключителната способност да пренасочва и преобразува сензорни сигнали от една сетивна система в друга при загуба на основен информационен ка..."><title>Очила с LiDAR и тактилна жилетка преобразуват триизмерното пространство във вибрации за незрящи чрез кръстосано-модална невропластичност - Светни.ме</title><meta property="og:title" content="Очила с LiDAR и тактилна жилетка преобразуват триизмерното пространство във вибрации за незрящи чрез кръстосано-модална невропластичност - Светни.ме"><meta property="og:description" content="Снимка: Hackaday / DebackTech
+Човешкият мозък притежава изключителната способност да пренасочва и преобразува сензорни сигнали от една сетивна система в друга при загуба на основен информационен ка..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Очила с LiDAR и тактилна жилетка преобразуват триизмерното пространство във вибрации за незрящи чрез кръстосано-модална невропластичност</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/hero.png" alt="Прототип на очила с вградени LiDAR сензори за пространствено сканиране и тактилна навигация"><br><small>Снимка: Hackaday / DebackTech</small></p>
+<p>Човешкият мозък притежава изключителната способност да пренасочва и преобразува сензорни сигнали от една сетивна система в друга при загуба на основен информационен канал. Според репортаж на <a href="/pages/hackaday.html">Hackaday</a>, инженерният създател <code>DebackTech</code> е разработил носима система за хора със зрителни увреждания, която комбинира очила с вградени <a href="/pages/lidar.html">LiDAR</a> сензори и облекло с матрица от вибрационни мотори за тактилно картографиране на околната среда в реално време [1].</p>
+<p>Докато класическите системи за сензорно заместване често преобразуват визуалната сцена в звукови сигнали, използването на осезанието освобождава слуховия канал на незрящите хора, който е критичен за ориентация в градска среда. Прототипът на <code>DebackTech</code> демонстрира толкова ниска латентност, че позволява не само свободно ходене, но и управление на електрическа тротинетка и улавяне на движеща се топка [1, 2].</p>
+<p><img src="/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/infographic.png" alt="Четиристълбова инфографика на LiDAR сканирането, тактилната обработка, кръстосано-модалната невропластичност и полевите тестове"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Хардуерна архитектура: От лазерно измерване на дистанция до вибротактилна матрица</h2>
+<p>Технологичната верига на системата се състои от три функционални компонента, интегрирани като <a href="/pages/wearables.html">носими технологии</a>: оптичен сензорен модул, изчислителен блок и тактилен изпълнителен интерфейс [1].</p>
+<p>В рамката на очилата са монтирани <code>LiDAR</code> сензори, които непрекъснато сканират пространството пред потребителя в посоката на насочване на главата. Сензорите подават поток от данни за разстоянието и посоката до околните обекти към преносим компютърен модул. Изчислителният блок обработва пространствените координати мигновено и ги преобразува в управляващи сигнали към риза, в която е вшита матрица от вибрационни мотори [1, 2].</p>
+<p>Всеки мотор в облеклото съответства на определен пространствен сектор от зрителното поле. При приближаване към препятствие системата активира съответните вибромотори върху торса, което позволява на потребителя след кратка практика да разпознава местоположението, дистанцията и движението на обектите единствено чрез усещането за вибрация върху кожата [1].</p>
+<h2>Невробиологичен механизъм: Кръстосано-модална пластичност</h2>
+<p>Способността на централната нервна система да интерпретира тактилни вибрации като пространствена картина се основава на феномена <strong>кръстосано-модална пластичност</strong> (<code>cross-modal plasticity</code>). Това е адаптивна реорганизация на невронните мрежи, при която мозъчната кора интегрира функциите на две или повече сетивни системи след дългосрочна сензорна депривация [1, 3].</p>
+<p>Невроизобразителни изследвания върху незрящи хора показват, че макар обемът на сивото вещество в първичната зрителна кора да намалява поради липсата на входящи сигнали от зрителния тракт, аксоните на бялото вещество запазват способността си за структурно ремоделиране. Соматосензорната кора, която обработва допира и вибрациите, действа като централен хъб и активно привлича ресурсите на зрителната кора за обработка на тактилни стимули [3].</p>
+<p>Ключова роля в този процес играе дорзалният зрителен поток (<code>dorsal visual stream</code>), който при зрящи хора отговаря за визуалната пространствена локализация на обектите. При незрящи индивиди кръстосано-модалната пластичност пренасочва дорзалния поток да работи директно със сетивото за допир при триизмерно възприятие на пространството. Експериментални данни сочат, че тази връзка зависи от опита и тренировката – при използване на тактилни устройства за предаване на пространствена информация незрящи участници развиват измерима активация на зрителната кора само след една седмица обучение [3].</p>
+<h2>Емпирична валидация в динамична среда</h2>
+<p>Основното предизвикателство пред съвременните <a href="/pages/assistive-technology.html">помощни технологии</a> за незрящи е скоростта на опресняване при динамично движение. Повечето ултразвукови бастуни или гласови асистенти с камери имат времезакъснение, което ги прави подходящи само за бавно пешеходно придвижване [1].</p>
+<p>В демонстрационното видео на проекта <code>DebackTech</code> подлага прототипа на три теста с нарастваща пространствено-времева сложност [1, 2]:</p>
+<ul>
+<li><p><strong>Свободна пешеходна навигация:</strong> Заобикаляне на статични препятствия и ориентация по коридори и открити пространства без физически контакт с обектите [1].</p>
+</li>
+<li><p><strong>Управление на електрическа тротинетка:</strong> Навигация при по-висока скорост, където времето за реакция между засичането на обекта от <code>LiDAR</code> сензорите и моторния отговор на тялото трябва да бъде в рамките на части от секундата [1, 2].</p>
+</li>
+<li><p><strong>Улавяне на движещ се обект:</strong> Игра на подаване с голяма, бавно движеща се топка, което доказва, че вибротактилната матрица предава достатъчно точен вектор на траекторията и дистанцията в реално време [1, 2].</p>
+</li>
+</ul>
+<h2>Архитектурни и социално-икономически перспективи пред неинвазивните сензорни интерфейси</h2>
+<p>Макар настоящият прототип на <code>DebackTech</code> да е все още обемист заради външното окабеляване и изчислителния модул, неговата архитектура очертава важна посока в развитието на неинвазивните невро-компютърни интерфейси. Свиването на размера и цената на твърдотелните <code>LiDAR</code> сензори (<code>Time-of-Flight</code> матрици), първоначално ускорено от смартфон индустрията и автономната роботика, вече позволява интегрирането на прецизни 3D скенери директно в стандартни рамки за очила [1].</p>
+<p>От архитектурна гледна точка директното свързване на <code>LiDAR</code> телеметрия с тактилна матрица притежава фундаментално предимство пред системите, базирани на тежки визуално-езикови модели (<code>VLM</code>), които описват сцената с глас. Гласовият синтез е сериен и бавен информационен канал, който претоварва когнитивното внимание и блокира естествения слух на незрящия човек – включително способността за пасивна или активна човешка ехолокация [1]. Обратно, соматосензорната кора обработва паралелно десетки тактилни точки върху кожата без съзнателно декодиране на думи [3].</p>
+<p>В дългосрочен план миниатюризацията на подобни системи с отворен или достъпен хардуер има потенциала драстично да понижи икономическата бариера пред специализираните помощни устройства. Вместо скъпи медицински импланти или сложни оптични системи, комбинацията от нискобюджетни лазерни далекомери и програмируеми хаптични текстилни матрици използва собствената биологична невропластичност на мозъка като най-мощния адаптивен процесор за пространствено възприятие [1, 3].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://hackaday.com/2026/11/21/lidar-glasses-for-the-visually-impaired/">LiDAR Glasses For the Visually Impaired - Hackaday</a><br>[2]: <a href="https://www.youtube.com/watch?v=OBxCrNqxiQE">LiDAR Glasses and Haptic Shirt for the Visually Impaired - DebackTech (YouTube)</a><br>[3]: <a href="https://en.wikipedia.org/wiki/Cross_modal_plasticity">Cross modal plasticity - Wikipedia</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/hackaday.html">Hackaday</a><p>Hackaday е водещо международно онлайн издание и инженерна общност, посветени на хардуерния дизайн с отворен код, вградените системи, електрониката и о...</p></li><li><a href="/pages/lidar.html">LiDAR</a><p>LiDAR (Light Detection and Ranging) е оптична технология за дистанционно измерване, която определя разстоянието до обекти чрез осветяването им с лазер...</p></li><li><a href="/pages/assistive-technology.html">Помощни технологии (Assistive Technology)</a><p>Помощните технологии обхващат хардуерни системи, сензорни интерфейси и софтуерни решения, създадени да подпомагат, поддържат или възстановяват функцио...</p></li><li><a href="/pages/wearables.html">Носима електроника с AI (AI Wearables)</a><p>Носимата електроника с AI (AI Wearables) обхваща интелигентни очила, значки, пръстени и слушалки, снабдени с микрофони, камери и биометрични сензори, ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

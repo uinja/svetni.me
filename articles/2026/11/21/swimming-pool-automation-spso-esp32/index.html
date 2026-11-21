@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Hackaday / Andrea Tacchelli (CC BY-SA 4.0)
+Поддръжката на химичния и хидравличния баланс в плувните басейни изисква непрекъснат мониторинг на киселинността, дезинфекцията и филтрацията, за ..."><title>SPSO: Отворена система с два микроконтролера ESP32-S3 и 13 защитни блокировки за индустриална автоматизация на басейни - Светни.ме</title><meta property="og:title" content="SPSO: Отворена система с два микроконтролера ESP32-S3 и 13 защитни блокировки за индустриална автоматизация на басейни - Светни.ме"><meta property="og:description" content="Снимка: Hackaday / Andrea Tacchelli (CC BY-SA 4.0)
+Поддръжката на химичния и хидравличния баланс в плувните басейни изисква непрекъснат мониторинг на киселинността, дезинфекцията и филтрацията, за ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/swimming-pool-automation-spso-esp32/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/swimming-pool-automation-spso-esp32/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>SPSO: Отворена система с два микроконтролера ESP32-S3 и 13 защитни блокировки за индустриална автоматизация на басейни</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/swimming-pool-automation-spso-esp32/hero.png" alt="Потребителският интерфейс на отворената система за автоматизация на басейни SPSO върху 7-инчов сензорен дисплей"><br><small>Снимка: Hackaday / Andrea Tacchelli (CC BY-SA 4.0)</small></p>
+<p>Поддръжката на химичния и хидравличния баланс в плувните басейни изисква непрекъснат мониторинг на киселинността, дезинфекцията и филтрацията, за да се предотврати развитието на патогенни микроорганизми. Според публикация на <a href="/pages/hackaday.html">Hackaday</a>, инженерът Андреа Такели (<code>ingTacchelli</code>) е разработил проекта <strong>Swimming Pool System Open (SPSO)</strong> – изцяло отворена хардуерна и софтуерна платформа за автоматизирано управление на басейни, базирана на микроконтролери <a href="/pages/esp32.html">ESP32</a> и интеграция с <a href="/pages/home-assistant.html">Home Assistant</a> [1].</p>
+<p>Търговските системи за автоматизация на басейни традиционно представляват скъпи, затворени решения („черни кутии“), обвързани със собствени мобилни приложения и специализиран сервиз. Проектът SPSO, чиито схеми, файлове за печатни платки и фърмуер са публикувани с <a href="/pages/open-source.html">отворен код</a> в платформата <a href="/pages/github.html">GitHub</a>, предлага прозрачна и достъпна алтернатива с индустриални сензорни интерфейси и многослойна хардуерна защита [2, 3].</p>
+<p><img src="/articles/2026/11/21/swimming-pool-automation-spso-esp32/infographic.png" alt="Четиристълбова инфографика на архитектурата, телеметрията, управлението и защитните механизми на SPSO"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Двумодулна архитектура с ESP32-S3 и локална автономност</h2>
+<p>В основата на SPSO стои разделена архитектура от два модула с микроконтролери <code>ESP32-S3</code>, свързани помежду си чрез трипроводен сериен кабел (<code>TX</code>, <code>RX</code> и <code>GND</code>). Това инженерно разделение гарантира, че критичната логика за управление на помпите и химикалите остава изолирана от графичния потребителски интерфейс [2].</p>
+<p>Първият компонент е специализирана двуслойна печатна платка за събиране на данни и управление (<code>PSI Pool System Integrated, Acquisition Card Rev 0.A</code>) с размери <code>165 × 94 mm</code>, изградена около модула <code>ESP32-S3-DevKitC-1 N16R8</code>. Тя чете всички сензори, управлява релейните изходи и взема всяко решение за дозиране, като работи с фърмуер <code>ESPHome</code> и запазва пълна функционалност дори при липса на мрежова свързаност [2, 3].</p>
+<p>Вторият модул представлява 7-инчов сензорен панел <code>Waveshare ESP32-S3-Touch-LCD-7B</code>, монтиран на предния панел на електрическото табло. Дисплеят визуализира състоянието на инсталацията в реално време чрез 16 отделни екрана – включително синоптична схема, графици за филтрация, химични параметри, аларми, графики на тенденциите и защитени с ПИН код настройки за двуточково калибриране на сондите [1, 3]. Когато потребителят подаде команда от екрана, управляващата платка проверява условията за безопасност и може да откаже изпълнението, връщайки конкретната причина за отказа [2].</p>
+<h2>Дублирана сензорна телеметрия и индустриално управление</h2>
+<p>За разлика от базовите любителски проекти в сферата на <a href="/pages/iot.html">интернет на нещата</a>, SPSO интегрира дублирани измервателни вериги за водната химия. Първичните сонди за киселинност (<code>pH</code>) и окислително-редукционен потенциал (<code>ORP</code> за нивото на хлор) се свързват чрез <code>BNC</code> конектори към високоимпедансен аналогов входен тракт с операционен усилвател <code>OPA2338</code> и 16-битов аналогово-цифров преобразувател <code>ADS1115</code> [2].</p>
+<p>За кръстосана верификация на показанията платката поддържа шест индустриални токови контура (<code>4–20 mA</code>) и 16 сухи контакта. Чрез тях системата следи вторични сонди за <code>pH</code> и <code>ORP</code>, както и диференциалното налягане преди и след филтъра, за да генерира автоматично известие за необходимост от обратна промивка (<code>backwash advised</code>) [2, 3]. Допълнителната телеметрия обхваща:</p>
+<ul>
+<li><p>Цифров температурен сензор <code>DS18B20</code> за следене на температурата на водата [2].</p>
+</li>
+<li><p>Два импулсни разходомера, измерващи реалния дебит както в главния тръбопровод, така и в измервателната клетка със сондите [2, 3].</p>
+</li>
+<li><p>Ултразвукови сензори и поплавъчни превключватели за минимално ниво в резервоарите за химикали [2].</p>
+</li>
+</ul>
+<p>Изпълнителният блок управлява четири релета за три дозиращи помпи (киселина, хлор и резервен реагент) и главната филтрационна помпа, както и четири соленоидни клапана за водни ефекти, хидроджетове, мъглообразуватели и подводно осветление. Освен директно релейно превключване, платката разполага с интерфейс <code>RS-485 Modbus RTU</code> за плавно регулиране на оборотите на филтрационната помпа чрез честотен инвертор <code>Toshiba VF-S15</code> [2, 3].</p>
+<h2>Многослойна защита: 13 софтуерни блокировки и хардуерна аварийна верига</h2>
+<p>Автоматизираното дозиране на киселина и хлор крие сериозни рискове при повреда на сензор или спиране на циркулацията. Поради тази причина Андреа Такели залага строга йерархия на безопасност, в която фърмуерът изисква едновременното изпълнение на 13 разрешаващи условия (<code>dosing permissives</code>), преди да активира дозираща помпа [2, 3]:</p>
+<ul>
+<li><p>Активна работа на филтрационната помпа и реален дебит в главния кръг и измервателната клетка [2].</p>
+</li>
+<li><p>Валидни показания и съвпадение между първичните и вторичните сонди за <code>pH</code> и <code>ORP</code>, както и валидна двуточкова калибрация с пресни буферни разтвори [2].</p>
+</li>
+<li><p>Наличие на реагент в съответния резервоар, липса на активни аларми, неактивен цикъл на обратна промивка и поставен селектор в режим <code>AUTO</code> [2].</p>
+</li>
+</ul>
+<p>Всяко ръчно дозиране е ограничено софтуерно до кратък импулс с твърд времеви лимит, което елиминира риска от забравена включена помпа. Всички изходи стартират в изключено състояние при подаване на захранване, подсигурени от хардуерни <code>pull-down</code> резистори като втори защитен слой. Над целия софтуерен стек действа независима хардуерна аварийна верига (<code>emergency chain</code>), която прекъсва захранването към силовите товари физически, независимо от състоянието на микроконтролера [2, 3].</p>
+<h2>Системни, архитектурни и макроикономически измерения на отворения индустриален хардуер</h2>
+<p>Появата на проекти като SPSO очертава по-широка структурна трансформация в автоматизацията на сградната и водната инфраструктура. В продължение на десетилетия пазарът на контролери за басейни и малки пречиствателни съоръжения разчиташе на информационна асиметрия – базови микроконтролерни платки със затворен фърмуер се продаваха с висока надценка, принуждавайки собствениците и инсталаторите да плащат за скъпи подмени при повреда на единичен елемент [2, 3].</p>
+<p>Архитектурният подход на Андреа Такели демонстрира как зрялата екосистема около <code>ESP32-S3</code> и <code>ESPHome</code> позволява изграждането на хибридни системи, които съчетават индустриална надеждност с гъвкавостта на съвременния умен дом. Използването на стандартни индустриални интерфейси като токови контури <code>4–20 mA</code> и <code>RS-485 Modbus RTU</code> за управление на честотни инвертори премахва зависимостта от конкретен производител на сензори или помпи. Същевременно вграденият Python симулатор (<code>spb_simulator.py</code>) позволява пълно тестване на интерфейса и логиката през сериен адаптер без физическо свързване към инсталацията [2, 3].</p>
+<p>От гледна точка на правата върху интелектуалната собственост и устойчивостта, проектът прилага трикомпонентен отворен лицензионен модел: хардуерният дизайн е защитен със силно реципрочния лиценз на ЦЕРН за отворен хардуер (<code>CERN-OHL-S v2</code>), фърмуерът и симулаторът са под <code>GPL-3.0-or-later</code>, а документацията е под <code>CC BY-SA 4.0</code> [3]. Този модел позволява на техници, инсталатори и инженери свободно да произвеждат, модифицират и внедряват търговски системи на базата на Gerber файловете и списъка с компоненти (<code>BOM</code> с <code>LCSC</code> номера), стига подобренията да останат публично достъпни, докато паралелно се подготвя и сертифицирана комерсиална версия за клиенти, търсещи готово решение до ключ [2, 3].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://hackaday.com/2026/11/21/automation-for-the-swimming-pool/">Automation For The Swimming Pool - Hackaday</a><br>[2]: <a href="https://hackaday.io/project/207110-spso-swimming-pool-system-open">SPSO Swimming Pool System Open - Hackaday.io</a><br>[3]: <a href="https://github.com/ingTacchelli/swimming-pool-system-open">ingTacchelli/swimming-pool-system-open: ESP32-S3 pool control system - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/hackaday.html">Hackaday</a><p>Hackaday е водещо международно онлайн издание и инженерна общност, посветени на хардуерния дизайн с отворен код, вградените системи, електрониката и о...</p></li><li><a href="/pages/esp32.html">ESP32</a><p>ESP32 е нискобюджетен, високоефективен микроконтролер с вградени Wi-Fi и Bluetooth модули, произведен от Espressif Systems.</p></li><li><a href="/pages/home-assistant.html">Home Assistant</a><p>Home Assistant е водеща платформа с отворен код за домашна автоматизация, която поставя фокус върху локалното управление, поверителността на данните и...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/open-source.html">Отворен код (Open Source)</a><p>Софтуерът с отворен код (Open Source) е модел на разработка, при който изходният код е достъпен за всеки за преглед, модификация и разпространение.</p></li><li><a href="/pages/iot.html">Интернет на нещата (Internet of Things - IoT)</a><p>Интернет на нещата (Internet of Things - IoT) е мрежа от физически обекти, снабдени със сензори, софтуер и комуникационни интерфейси за обмен на телем...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

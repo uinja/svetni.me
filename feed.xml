@@ -9,9 +9,27 @@
     <atom:link href="https://svetni.me/feed.xml" rel="self" type="application/rss+xml" />
     <link>https://svetni.me</link>
     <description>Технологии и наука</description>
-    <pubDate>Sat, 21 Nov 2026 21:52:00 +0000</pubDate>
+    <pubDate>Sat, 21 Nov 2026 22:50:00 +0000</pubDate>
     <generator>Susuma</generator>
     <language>en</language>
+
+    <item>
+      <title>Очила с LiDAR и тактилна жилетка преобразуват триизмерното пространство във вибрации за незрящи чрез кръстосано-модална невропластичност</title>
+      <link>https://svetni.me/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/</link>
+      <pubDate>Sat, 21 Nov 2026 22:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/lidar-glasses-visually-impaired-haptic-feedback/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: Hackaday / DebackTech</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>SPSO: Отворена система с два микроконтролера ESP32-S3 и 13 защитни блокировки за индустриална автоматизация на басейни</title>
+      <link>https://svetni.me/articles/2026/11/21/swimming-pool-automation-spso-esp32/</link>
+      <pubDate>Sat, 21 Nov 2026 22:50:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/swimming-pool-automation-spso-esp32/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Снимка: Hackaday / Andrea Tacchelli (CC BY-SA 4.0)</small></p>]]></description>
+    </item>
 
     <item>
       <title>Hugging Face представя Harness Adapters: обучение с подсилване директно в агентни среди за по-висока точност и до 73% по-малко извиквания на инструменти</title>
@@ -149,21 +167,21 @@
     </item>
 
     <item>
-      <title>Армията на САЩ търси наследник на ракетата Stinger с цена под 200 000 долара</title>
-      <link>https://svetni.me/articles/2026/11/21/us-army-ngsri-stinger-successor-200k-missile/</link>
-      <pubDate>Sat, 21 Nov 2026 19:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/us-army-ngsri-stinger-successor-200k-missile/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: The Defence Blog / U.S. Army (Военнослужещ от Сухопътните войски на САЩ с преносим зенитно-ракетен комплекс FIM-92 Stinger)</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Автономни кодиращи агенти написаха 3 милиона реда C++ и Verilog RTL код, ускорявайки FPGA инференс чип 33 пъти</title>
       <link>https://svetni.me/articles/2026/11/21/vibecoding-inference-chip-fpga-autonomous-agents-rtl/</link>
       <pubDate>Sat, 21 Nov 2026 19:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/vibecoding-inference-chip-fpga-autonomous-agents-rtl/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Източник: Ankit Gupta (ankitg.me) / Развойна FPGA платка за хардуерно ускоряване на инференс при тернарни езикови модели</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Армията на САЩ търси наследник на ракетата Stinger с цена под 200 000 долара</title>
+      <link>https://svetni.me/articles/2026/11/21/us-army-ngsri-stinger-successor-200k-missile/</link>
+      <pubDate>Sat, 21 Nov 2026 19:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/us-army-ngsri-stinger-successor-200k-missile/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Defence Blog / U.S. Army (Военнослужещ от Сухопътните войски на САЩ с преносим зенитно-ракетен комплекс FIM-92 Stinger)</small></p>]]></description>
     </item>
 
     <item>
@@ -221,15 +239,6 @@
     </item>
 
     <item>
-      <title>ByteDance доказва, че повечето фази при обучението на ИИ агенти са излишни, и пуска конкурентния отворен модел Axion 1.0</title>
-      <link>https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/</link>
-      <pubDate>Sat, 21 Nov 2026 18:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: The Decoder / Оптимизиран трифазен тренировъчен пайплайн на ByteDance Axion 1.0</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Анализ на Bloomberg върху 10 милиона обяви за работа показва, че изложените на ИИ позиции в Китай са спаднали с 10 процентни пункта по-бързо</title>
       <link>https://svetni.me/articles/2026/11/21/bloomberg-china-ai-exposed-job-postings-decline/</link>
       <pubDate>Sat, 21 Nov 2026 18:52:00 +0000</pubDate>
@@ -239,12 +248,12 @@
     </item>
 
     <item>
-      <title>Thinking Machines пусна отворения цикличен трансформър Inkling 2 Mini, който разсъждава във вътрешни цикли и работи на лаптоп</title>
-      <link>https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/</link>
+      <title>ByteDance доказва, че повечето фази при обучението на ИИ агенти са излишни, и пуска конкурентния отворен модел Axion 1.0</title>
+      <link>https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/</link>
       <pubDate>Sat, 21 Nov 2026 18:52:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/</guid>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/</guid>
       <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: The Decoder / Thinking Machines Lab – Илюстрация на цикличната трансформър архитектура</small></p>]]></description>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Оптимизиран трифазен тренировъчен пайплайн на ByteDance Axion 1.0</small></p>]]></description>
     </item>
 
     <item>
@@ -254,6 +263,15 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/language-models-rewrite-their-own-weights-self-modifying-ai/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Източник: arXiv:2611.21885 / Експериментална визуализация на самомодифициране и възстановяване на теглата при 27B модел</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Thinking Machines пусна отворения цикличен трансформър Inkling 2 Mini, който разсъждава във вътрешни цикли и работи на лаптоп</title>
+      <link>https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/</link>
+      <pubDate>Sat, 21 Nov 2026 18:52:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: The Decoder / Thinking Machines Lab – Илюстрация на цикличната трансформър архитектура</small></p>]]></description>
     </item>
 
     <item>
@@ -311,21 +329,21 @@
     </item>
 
     <item>
-      <title>Експеримент с 2 милиона дигитални капана разкри масово изтичане на секретни данни във веригата за доставки на ИИ</title>
-      <link>https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/</link>
-      <pubDate>Sat, 21 Nov 2026 18:45:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: Ars Technica</small></p>]]></description>
-    </item>
-
-    <item>
       <title>Signal блокира екранните снимки в iOS 27 и Android, за да спре ИИ агентите да четат лични чатове</title>
       <link>https://svetni.me/articles/2026/11/21/signal-blocks-screenshots-ios-27-android-ai-agents/</link>
       <pubDate>Sat, 21 Nov 2026 18:45:00 +0000</pubDate>
       <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/signal-blocks-screenshots-ios-27-android-ai-agents/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Източник: The Decoder / Signal</small></p>]]></description>
+    </item>
+
+    <item>
+      <title>Експеримент с 2 милиона дигитални капана разкри масово изтичане на секретни данни във веригата за доставки на ИИ</title>
+      <link>https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/</link>
+      <pubDate>Sat, 21 Nov 2026 18:45:00 +0000</pubDate>
+      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/</guid>
+      <author>Svetni.me Editorial</author>
+      <description><![CDATA[<p><br><small>Източник: Ars Technica</small></p>]]></description>
     </item>
 
     <item>
@@ -443,24 +461,6 @@
       <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/epic-games-unreal-engine-neural-code-synthesis-agents-cpp-optimization/</guid>
       <author>Svetni.me Editorial</author>
       <description><![CDATA[<p><br><small>Снимка: IEEE Spectrum / Epic Games</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Роботиката навлиза в своята ера след Дженсън Хуанг: преход към отворени физични симулатори и неутрални Edge чипове</title>
-      <link>https://svetni.me/articles/2026/11/21/robotics-enters-post-jensen-huang-era/</link>
-      <pubDate>Sat, 21 Nov 2026 09:47:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/robotics-enters-post-jensen-huang-era/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Източник: The Robot Report</small></p>]]></description>
-    </item>
-
-    <item>
-      <title>Функцията Collective Wisdom в Hermes Agent превръща уменията на един служител в споделен актив за цялата компания</title>
-      <link>https://svetni.me/articles/2026/11/21/hermes-agent-collective-wisdom-cross-agent-skill-propagation/</link>
-      <pubDate>Sat, 21 Nov 2026 09:46:00 +0000</pubDate>
-      <guid isPermaLink="true">https://svetni.me/articles/2026/11/21/hermes-agent-collective-wisdom-cross-agent-skill-propagation/</guid>
-      <author>Svetni.me Editorial</author>
-      <description><![CDATA[<p><br><small>Снимка: The Decoder / Nous Research</small></p>]]></description>
     </item>
   </channel>
 </rss>
