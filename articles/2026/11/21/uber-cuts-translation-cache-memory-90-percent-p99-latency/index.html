@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / BalticServers
+Инженерният екип на Uber представи подробен архитектурен доклад за мащабна оптимизация на своята глобална инфраструктура за машинен превод в реално време..."><title>Uber съкрати паметта за кеширане на преводи с до 90% при запазване на P99 латентност под 1 милисекунда - Светни.ме</title><meta property="og:title" content="Uber съкрати паметта за кеширане на преводи с до 90% при запазване на P99 латентност под 1 милисекунда - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / BalticServers
+Инженерният екип на Uber представи подробен архитектурен доклад за мащабна оптимизация на своята глобална инфраструктура за машинен превод в реално време..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/uber-cuts-translation-cache-memory-90-percent-p99-latency/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/uber-cuts-translation-cache-memory-90-percent-p99-latency/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Uber съкрати паметта за кеширане на преводи с до 90% при запазване на P99 латентност под 1 милисекунда</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/uber-cuts-translation-cache-memory-90-percent-p99-latency/hero.png" alt="Сървърна инфраструктура и клъстери за разпределено кеширане на невронни вектори"><br><small>Източник: Wikimedia Commons / BalticServers</small></p>
+<p>Инженерният екип на <a href="/pages/uber.html">Uber</a> представи подробен архитектурен доклад за мащабна оптимизация на своята глобална инфраструктура за машинен превод в реално време, съкращавайки заеманата оперативна памет с над 90% чрез въвеждане на йерархично <a href="/pages/semantic-caching.html">семантично кеширане</a> и компресия на векторни ембединги <code>[1]</code>. Новата система гарантира, че над 85% от милиардите многоезични текстови съобщения между пътници, шофьори и куриери се обслужват без повторно преизчисляване на тежки <a href="/pages/neural-networks.html">невронни мрежи</a>, като същевременно запазва критичната P99 латентност на заявките под 1 милисекунда.</p>
+<p><img src="/articles/2026/11/21/uber-cuts-translation-cache-memory-90-percent-p99-latency/infographic.png" alt="Инфографика: Векторна компресия и йерархичен кеш в Uber"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Архитектура на векторната компресия: Продуктово квантуване без семантични загуби</h2>
+<p>В конвенционалните производствени системи за <a href="/pages/embedding-models.html">модели на ембединги</a>, векторните репрезентации се съхраняват в 32-битова или 16-битова плаваща запетая, което изисква десетки терабайти скъпа RAM памет при глобален мащаб <code>[1]</code>. Инженерите на Uber са имплементирали специализирано продуктово квантуване (Product Quantization - PQ), което разделя високоразмерното векторно пространство на ортогонални подпространства и ги представя чрез компактни центроидни байтови индекси.</p>
+<p>Този математически подход постига над десетократно компресиране на векторната база данни, като същевременно запазва над 99.2% косинусно сходство при операциите за <a href="/pages/vector-search.html">векторно търсене</a>. Чрез съхраняването на квантуваните вектори в оптимизирани структури от данни, системата елиминира нуждата от скъпоструващо разширяване на сървърните клъстери, запазвайки способността за мигновено откриване на смислово сходни фрази между различни езици.</p>
+<h2>Йерархичен двуслоен кеш: L1 оперативна памет и L2 разпределена NVMe мрежа</h2>
+<p>За да гарантира изпълнението на строгите споразумения за ниво на обслужване (SLA) под 1 милисекунда при пикови натоварвания, Uber разделя кеш слоя на две тясно координирани нива <code>[1]</code>. Първото ниво (L1) представлява локален in-process буфер с нулев овърхед при копиране, който обслужва свръхчестотните преводни токени за по-малко от 50 микросекунди.</p>
+<p>Второто ниво (L2) е изградено като разпределена мрежа от key-value бази, базирани на ултрабързи NVMe SSD памети, които съхраняват средната и дългата опашка от потребителски фрази. Адаптивен алгоритъм за предсказващо изтласкване на кеша (predictive cache eviction) непрекъснато анализира контекста на текущите активни пътувания и чат сесии, зареждайки предварително потенциалните реплики в локалната памет на най-близкия дейта център.</p>
+<h2>Системни архитектурни и макроикономически последици: Ерата на инференс ефективността в мащабни платформи</h2>
+<p>Инженерният пробив на <a href="/pages/uber.html">Uber</a> бележи преминаването на световната софтуерна индустрия от фазата на безразборно харчене за изчислителен капацитет към етап на стриктна финансова и енергийна оптимизация. В продължение на години хиперскейлърите решаваха проблемите с нарастващия обем на невронни изчисления чрез просто добавяне на нови хардуерни клъстери. Превръщането на машинния инференс в постоянен оперативен разход обаче налага фундаментално преструктуриране на системния стек.</p>
+<p>Спестяването на 90% от паметта при глобален превод трансформира балансовите отчети на компанията, намалявайки разходите за облачна инфраструктура с милиони долари годишно и директно понижавайки въглеродния отпечатък от денонощната експлоатация на сървъри. За разработчиците на мащабни дистрибутирани системи този архитектурен казус служи като стандартен наръчник за това как математическата компресия и класическото кеширане могат да осигурят хипермащабиране без загуба на потребителско качество.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/uber-translation-cache-memory-optimization/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Uber Cuts Translation Cache Memory by up to 90% While Keeping P99 Latency Below 1 MS - InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/uber.html">Uber</a><p>Uber е глобална технологична платформа, водеща в услугите за споделено пътуване и доставка на храна.</p></li><li><a href="/pages/semantic-caching.html">Семантично кеширане (Semantic Caching)</a><p>Семантичното кеширане е софтуерен механизъм, който съхранява отговорите на LLM запитвания на база сходство във векторното пространство, а не просто то...</p></li><li><a href="/pages/vector-search.html">Векторно търсене</a><p>Векторното търсене (Vector Search) е метод за търсене, при който данните (текст, изображения) се превръщат в математически вектори.</p></li><li><a href="/pages/embedding-models.html">Модели за вграждане (Embedding Models)</a><p>Моделите за вграждане са тип алгоритми за машинно обучение, които превръщат текст, изображения или аудио в цифрови вектори (масиви от числа).</p></li><li><a href="/pages/neural-networks.html">Невронни мрежи (Neural Networks)</a><p>Изкуствените невронни мрежи са изчислителни модели, вдъхновени от структурата на биологичния мозък, изградени от слоеве свързани възли (неврони) с обу...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

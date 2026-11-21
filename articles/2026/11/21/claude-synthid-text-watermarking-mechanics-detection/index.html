@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: O&amp;#39;Reilly Radar – Интерактивен симулатор „Be the Watermark“, демонстриращ изчисляването на детерминирани хвърляния на монета върху прозорец от 5 токена и секретен ключ за откриване на ..."><title>Скритите водни знаци на Claude: Как работи SynthID-Text и защо публичната проверка остава заключена - Светни.ме</title><meta property="og:title" content="Скритите водни знаци на Claude: Как работи SynthID-Text и защо публичната проверка остава заключена - Светни.ме"><meta property="og:description" content="Източник: O&amp;#39;Reilly Radar – Интерактивен симулатор „Be the Watermark“, демонстриращ изчисляването на детерминирани хвърляния на монета върху прозорец от 5 токена и секретен ключ за откриване на ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/claude-synthid-text-watermarking-mechanics-detection/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/claude-synthid-text-watermarking-mechanics-detection/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Скритите водни знаци на Claude: Как работи SynthID-Text и защо публичната проверка остава заключена</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/claude-synthid-text-watermarking-mechanics-detection/hero.png" alt="Интерактивна симулация Be the Watermark за проверка на криптографски воден знак в текст чрез токен идентификатори и секретен ключ"><br><small>Източник: O&#39;Reilly Radar – Интерактивен симулатор „Be the Watermark“, демонстриращ изчисляването на детерминирани хвърляния на монета върху прозорец от 5 токена и секретен ключ за откриване на воден знак</small></p>
+<p>Според технически анализ, публикуван в O&#39;Reilly Radar, почти всеки текст, генериран днес от моделите <a href="/pages/claude.html">Claude</a> на компанията <a href="/pages/anthropic.html">Anthropic</a>, съдържа невидим машинночетим воден знак, който обаче не може да бъде проверен свободно от крайните потребители [1]. Въвеждането на криптографско маркиране на синтетичен текст цели да ограничи неконтролираното наводняване на интернет с нискокачествено автоматизирано съдържание („slop“), но официалният регулаторен двигател зад мярката е <a href="/pages/eu-ai-act.html">Законът за изкуствения интелект на ЕС (EU AI Act)</a>, който задължава доставчиците да маркират генерираното от ИИ съдържание по машинно разпознаваем начин.</p>
+<p>Според официалната документация за поддръжка на Anthropic всички най-нови модели на компанията, както и част от по-старите версии, вече вграждат текстови водни знаци във всяка платформа и интерфейс, където се използва Claude, в световен мащаб. Докато Google прилага текстов воден знак в приложението Gemini още от 2024 г., а през октомври 2026 г. <a href="/pages/openai.html">OpenAI</a> обяви добавянето на подобен механизъм за текстовете от ChatGPT и Codex на територията на Европейския съюз, нито една от водещите лаборатории не предоставя публичен детектор за проверка на текст – дори порталът synthid.com на Google проверява единствено изображения, видео и аудио, но не и текстови пасажи [1].</p>
+<h2>Архитектура на генерацията: Токени, вероятности и ролята на изпълнителната среда (Runner)</h2>
+<p>За да се разбере как един воден знак се вгражда в изхода на <a href="/pages/large-language-models.html">големите езикови модели (LLM)</a>, не е необходимо да се анализират вътрешните трансформаторни блокове, а само входно-изходният конвейер и неговият последен етап [1]. Моделите никога не обработват директно азбучни букви, а работят изцяло с числови идентификатори на токени (token IDs) от фиксиран предварително дефиниран речник:</p>
+<ul>
+<li><p><strong>Токенизация и числови речници:</strong> Всеки модел разполага с фиксиран речник от думи и части от думи. Например ранният модел GPT-2 на OpenAI от 2019 г. има речник от точно 50 257 токена. Когато входният текст съдържа думата <code>&quot; strawberry&quot;</code> с водещ интервал, токенизаторът я преобразува в един-единствен токен с номер <code>41236</code>. Ако обаче <code>&quot;strawberry&quot;</code> стои в самото начало на текста без интервал пред нея, токенизаторът я разделя на три отделни части от речника: <code>st</code>, <code>raw</code> и <code>berry</code>.</p>
+</li>
+<li><p><strong>Контекстен прозорец и вероятностно разпределение:</strong> Масивът от числови идентификатори на токени постъпва в контекстния прозорец на модела. Работата на самата невронна мрежа приключва с изчисляването на вероятност за всеки отделен токен от речника да бъде следващата дума в текста, като сумата от всички вероятности е точно 100%. При един и същ контекстен прозорец моделът винаги връща едни и същи детерминирани вероятности.</p>
+</li>
+<li><p><strong>Изпълнителната среда (Inference Runtime / Runner):</strong> Самият модел никога не избира конкретна дума. Изборът на следващ токен се извършва от отделна програма – изпълнителната среда за инференция (runner). Именно тя хвърля „заровете“ и избира токен на случаен принцип пропорционално на изчислените вероятности, след което го добавя към контекстния прозорец за следващата стъпка. Всяко вграждане на текстов воден знак се осъществява изцяло вътре в този runner модул [1].</p>
+</li>
+</ul>
+<h2>Класическият метод със „зелен списък“ (Green List) и модифициране на вероятностите</h2>
+<p>Най-интуитивният подход за скриване на статистически сигнал в работата на изпълнителната среда е разделянето на речника на две групи и лекото повишаване на вероятностите за едната група преди хвърлянето на заровете. Този механизъм е известен като метода на „зеления списък“ (green list), формулиран през 2023 г. от Джон Кирхенбауер и неговите колеги от Университета на Мериленд в научния труд „A Watermark for Large Language Models“ [1, 2].</p>
+<p>Преди да избере следващата дума, изпълнителната среда дава числен тласък (boost) на вероятностите на всички токени от фаворизирания „зелен списък“, докато останалите токени в „червения списък“ намаляват своя относителен дял, за да се запази общата сума от 100%. В анализа на O&#39;Reilly Radar този ефект се илюстрира чрез миниатюрен модел с речник от пет думи (<em>cat</em>, <em>tree</em>, <em>the</em>, <em>by</em> и <em>sat</em>), който предсказва следващия токен след думата <em>the</em>, когато <em>tree</em> и <em>by</em> попадат в зеления списък за тази позиция [1]:</p>
+<ul>
+<li><p><strong>cat (червен списък):</strong> Първоначалната вероятност от 56.3% спада на 37.9% след пренормализирането.</p>
+</li>
+<li><p><strong>tree (зелен списък):</strong> Първоначалната вероятност от 20.7% се повишава след тласъка до 37.9%, изравнявайки се с водещия кандидат <em>cat</em>.</p>
+</li>
+<li><p><strong>the (червен списък):</strong> Вероятността намалява от 12.6% на 8.4%.</p>
+</li>
+<li><p><strong>by (зелен списък):</strong> Вероятността се увеличава от 7.6% на 13.9%.</p>
+</li>
+<li><p><strong>sat (червен списък):</strong> Вероятността спада от 2.8% на 1.9%.</p>
+</li>
+</ul>
+<p>Тъй като фиксиран зелен списък би довел до забележимо повторение на едни и същи думи, изпълнителната среда генерира нов зелен списък за всяка следваща позиция, като комбинира секретен криптографски ключ с идентификатора на непосредствено предхождащия токен. При проверка детекторът не се нуждае от самия езиков модел, а само от токенизатора и секретния ключ: ако зеленият списък обхваща половината речник, в обикновен човешки текст около 50% от токените ще бъдат „зелени“ по случайност, докато в маркиран текст техният дял е статистически значимо по-висок [1, 2].</p>
+<h2>Какво всъщност използва Claude: Алгоритъмът SynthID-Text и турнирното хвърляне на монета</h2>
+<p>От Anthropic официално потвърждават, че водният знак в Claude представлява адаптация на <a href="/pages/synthid.html">SynthID</a>-Text – метод, разработен от <a href="/pages/google-deepmind.html">Google DeepMind</a>, публикуван в списание <em>Nature</em> през 2024 г. и използван в приложението Gemini [3, 4]. Подобно на зеления списък, SynthID-Text работи изцяло в изпълнителната среда (runner), но вместо да изкривява вероятностите на модела, той променя единствено източника на псевдослучайност, използван за избор между думите кандидати [1, 4].</p>
+<p>Вместо да модифицира вероятностното разпределение, изпълнителната среда хвърля заровете няколко пъти, извличайки малък набор от думи кандидати за следващата позиция. За всеки кандидат системата извършва детерминирано „хвърляне на монета“ (ези или тура), чийто резултат зависи от секретния ключ, самия кандидат и няколкото думи непосредствено преди него. Runner модулът избира кандидат, чиято монета е показала „ези“ (heads). Ако контекстът е толкова еднозначен, че всички изтеглени кандидати са една и съща дума, реална алтернатива няма и водният знак не променя текста – сигналът се записва само в позициите, където моделът е имал реален избор между синоними или близки конструкции [1, 3].</p>
+<p>За да онагледи математиката зад този процес, авторът на предстоящата книга на O&#39;Reilly <em>Be the Model</em> представя интерактивната симулация „Be the Watermark“, базирана на речник от 75 думи (където номерът на токена е неговата азбучна позиция от 0 до 74) и 5-цифрен секретен ключ <code>3 1 4 1 5</code>. За всяка дума след първите четири в текста системата умножава идентификаторите на текущата дума и четирите предходни думи по петте цифри на ключа:</p>
+<ul>
+<li><p>При проверка на думата <em>creek</em> в края на петсловния прозорец <code>tabby, rested, by, the, creek</code>, съответните идентификатори на токени са <code>62</code>, <code>48</code>, <code>8</code>, <code>63</code> и <code>11</code>.</p>
+</li>
+<li><p>Умножени по цифрите на секретния ключ (<code>3</code>, <code>1</code>, <code>4</code>, <code>1</code>, <code>5</code>), произведенията дават сумата <code>186 + 48 + 32 + 63 + 55 = 384</code>.</p>
+</li>
+<li><p>Правилото на детектора определя последна цифра от <code>0</code> до <code>4</code> като „тура“ (tails), а от <code>5</code> до <code>9</code> като „ези“ (heads); тъй като <code>384</code> завършва на <code>4</code>, думата <em>creek</em> дава „тура“.</p>
+</li>
+<li><p>В началния разказ от 32 проверяеми позиции (първите четири думи „On a sunny day“ нямат четири предходни токена и не се проверяват) само 14 хвърляния са „ези“, което отговаря на случаен немаркиран текст, докато при замяна на синоними от падащите менюта до достигане на поне 60% „ези“ (20 от 32) детекторът активира индикатора „Watermark detected“ [1].</p>
+</li>
+</ul>
+<p><img src="/articles/2026/11/21/claude-synthid-text-watermarking-mechanics-detection/infographic.png" alt="Инфографика: Ключови стълбове и архитектурен анализ на водните знаци SynthID-Text в Claude"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Криптографска асиметрия, уязвимости към заличаване и регулаторната дилема около детекторите</h2>
+<p>Докато учебната симулация използва азбучни индекси и проста аритметична сума, реалната производствена имплементация на SynthID-Text в Claude и Gemini оперира с много по-голям секретен ключ, смесва ключа и токените чрез криптографска хеш функция, провежда няколко рунда на турнирни хвърляния на монета за всяка дума и използва специализирани детектори, обучени върху маркиран и обикновен текст за конкретния ключ [1, 3]. Въпреки тази математическа устойчивост аналитичният разбор разкрива фундаментална структурна причина защо Anthropic, OpenAI и Google държат както ключовете, така и текстовите си детектори заключени за широката публика:</p>
+<ul>
+<li><p><strong>Ефектът на каскадния прозорец при редактиране:</strong> Тъй като всяко хвърляне на монета зависи от текущата дума и четирите токена преди нея, замяната на една-единствена дума променя автоматично сумите и резултатите за следващите четири думи в изречението. В посока от ляво надясно единственият начин да се коригира нежелана „тура“ върху фиксирана функционална дума без синоним (като <em>the</em> или <em>water</em>) е да се промени някоя от предхождащите я думи в прозореца.</p>
+</li>
+<li><p><strong>Статистическа зависимост от дължината на текста:</strong> При кратък пасаж от едва 32 независими хвърляния на монета вероятността да се паднат поне 60% „ези“ по чиста случайност е около 1 към 9, което прави късите текстове ненадеждни за категорична атрибуция. Едва при стотици последователни думи вероятността подобно отклонение да възникне случайно спада до пренебрежимо малки стойности.</p>
+</li>
+<li><p><strong>Уязвимост към автоматизирано изчистване (Watermark Stripping):</strong> Ако компаниите направят своите секретни ключове публични или предоставят неограничен детектор, всеки разработчик би могъл да създаде добавка за текстов редактор, която идентифицира кои думи носят „ези“ и автоматично ги заменя със синоними, връщащи „тура“, заличавайки напълно водния знак от генерирания от ИИ текст.</p>
+</li>
+<li><p><strong>Риск от фалшифициране и компрометиране на човешки текст (Spoofing):</strong> Същата симетрия работи и в обратна посока – злонамерен участник, разполагащ с ключа или с отворен оракул за проверка, може умишлено да подбере думи с висок дял на „ези“ в изцяло написан от човек текст, за да го представи фалшиво като генериран от Claude. Именно този нерешен баланс между изискванията на EU AI Act за машинночетима проследимост и криптографската защита срещу манипулация оставя проверката на текстови водни знаци привилегия само на големите ИИ лаборатории и тесен кръг одобрени от тях организации [1].</p>
+</li>
+</ul>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.oreilly.com/radar/claude-watermarks-your-words-and-you-cant-check-them-yet/">Claude Watermarks Your Words, and You Can’t Check Them (Yet) - O&#39;Reilly Radar</a><br>[2]: <a href="https://arxiv.org/abs/2301.10226">A Watermark for Large Language Models - arXiv (University of Maryland)</a><br>[3]: <a href="https://www.nature.com/articles/s41586-024-08025-4">Scalable watermarking for identifying large language model outputs - Nature (Google DeepMind)</a><br>[4]: <a href="https://www.anthropic.com/news/claude-text-watermark">Claude Text Watermark Announcement - Anthropic</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/eu-ai-act.html">Закон за изкуствения интелект на ЕС (EU AI Act)</a><p>Законът за изкуствения интелект на ЕС е първата в света всеобхватна правна рамка за регулиране на изкуствения интелект.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/google-deepmind.html">Google DeepMind</a><p>Google DeepMind е подразделението за изкуствен интелект на Google (Alphabet), създадено след сливането на лондонската лаборатория DeepMind и Google Br...</p></li><li><a href="/pages/synthid.html">Google DeepMind SynthID</a><p>SynthID е технология за вграждане на водни знаци в съдържание, генерирано от модели с изкуствен интелект.</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

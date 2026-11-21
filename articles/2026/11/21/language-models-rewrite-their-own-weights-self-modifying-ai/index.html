@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: arXiv:2611.21885 / Експериментална визуализация на самомодифициране и възстановяване на теглата при 27B модел
+Ново фундаментално изследване, публикувано в научното хранилище arXiv (arXiv:..."><title>Езиковите модели вече могат сами да презаписват собствените си тегла чрез разсъждение без градиенти и повторно обучение - Светни.ме</title><meta property="og:title" content="Езиковите модели вече могат сами да презаписват собствените си тегла чрез разсъждение без градиенти и повторно обучение - Светни.ме"><meta property="og:description" content="Източник: arXiv:2611.21885 / Експериментална визуализация на самомодифициране и възстановяване на теглата при 27B модел
+Ново фундаментално изследване, публикувано в научното хранилище arXiv (arXiv:..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/language-models-rewrite-their-own-weights-self-modifying-ai/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/language-models-rewrite-their-own-weights-self-modifying-ai/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Езиковите модели вече могат сами да презаписват собствените си тегла чрез разсъждение без градиенти и повторно обучение</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/language-models-rewrite-their-own-weights-self-modifying-ai/hero.png" alt="Експериментални резултати и схема на процеса на самопрезаписване и възстановяване на теглата при 27-милиарден езиков модел"><br><small>Източник: arXiv:2611.21885 / Експериментална визуализация на самомодифициране и възстановяване на теглата при 27B модел</small></p>
+<p>Ново фундаментално изследване, публикувано в научното хранилище <a href="/pages/arxiv.html">arXiv</a> (arXiv:2611.21885) от екип учени с водещи автори Дзядзюн Фан, Нийл Хе, Чанги Янг и Ге Лю, демонстрира за първи път как отворен езиков модел с 27 милиарда параметъра може самостоятелно да диагностицира грешките си и директно да презаписва собствените си параметрични тегла единствено чрез логическо разсъждение — без изчисляване на градиенти, без обратно разпространение на грешката (backpropagation) и без външен тренировъчен цикъл [1]. Авторите наричат тази трета парадигма „самопрезаписване“ (self-rewriting), при която самият модел действа като свой собствен оптимизатор по време на инференс [1, 2].</p>
+<p><img src="/articles/2026/11/21/language-models-rewrite-their-own-weights-self-modifying-ai/infographic.png" alt="Инфографика: Парадигмата на самопрезаписващите се езикови модели (arXiv:2611.21885) без градиенти и външно обучение"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Отвъд замразените тегла: Моделът като собствен оптимизатор в Python сесия</h2>
+<p>Традиционно всички <a href="/pages/large-language-models.html">големи езикови модели</a> се обучават веднъж върху огромни изчислителни клъстери, след което техните параметри се замразяват преди внедряване [1]. Досега подобряването на вече пуснат модел изискваше или нов скъп тренировъчен цикъл с градиентни оптимизатори, или временни надстройки по време на инференс (промпт инженерство, външни скелети и допълнително време за разсъждение), чийто ефект изчезва веднага след края на сесията. Макар в предходни експерименти голям фронтиерен модел да е успявал да редактира теглата на много по-малък модел отвън, тук за първи път моделът редактира самия себе си [2].</p>
+<p>В експерименталната постановка на <a href="/pages/self-rewriting-models.html">самопрезаписващите се модели</a> на един отворен 27-милиарден модел се предоставя достъп до собствените му теглови тензори в интерактивна Python среда, заедно с оценените му отговори върху тренировъчни задачи и възможността да стартира самия себе си [1, 2]. Всички градиенти и външни оптимизатори са строго блокирани. Моделът инспектира скритите си състояния (hidden states) и изходните матрици на блоковете за внимание и MLP слоевете, формулира хипотеза за причината за грешките си, записва нови числени стойности директно в тензорите си и провежда т.нар. „сдвоен тест“ (paired test) върху едни и същи генераторни семена (seeds), за да потвърди обективно дали редакцията подобрява работата му, преди да я запази [2].</p>
+<h2>+6,6 процентни пункта по-висока точност и самовъзстановяване на повредено копие</h2>
+<p>Емпиричните резултати показват, че моделът реално надминава първоначалната си версия: собствената му редакция на теглата повишава точността му с 6,6 процентни пункта върху 490 напълно непознати тестови задачи в предварително фиксиран сдвоен тест [1, 2]. Още по-впечатляваща е устойчивостта на процеса във времето — тъй като моделът валидира всяка промяна върху практически задачи и записва само редакциите, които доказано работят, в рамките на осем последователни сесии на самопрезаписване неговата точност расте монотонно от сесия към сесия [1].</p>
+<p>Изследователите подлагат 27-милиардния модел и на екстремен тест за самовъзстановяване, аналогичен на повреден робот, който трябва да се поправи сам без резервни чертежи [1]. На модела се подава увредено копие на собствените му тегла, което не може да реши почти нито една задача, като му се казва единствено, че някои стойности са компрометирани, без да му се позволява да чете оригиналните здрави тегла. Чрез анализ на аномалиите в активациите си моделът самостоятелно локализира повредата в матриците, презаписва дефектните параметри и възстановява над 80 процента от оригиналната си точност върху шест визуални бенчмарка с изображения, които никога не е виждал по време на ремонта [1, 2].</p>
+<h2>Емерджентно свойство на мащаба: Прагът при 27 милиарда параметъра</h2>
+<p>Ключово научно откритие в труда е, че способността за самопрезаписване възниква рязко с увеличаването на мащаба на невронната мрежа [1, 2]. Екипът провежда идентични експерименти със същите инструменти и задачи върху четири модела от една и съща архитектурна фамилия с размер 2 милиарда (2B), 4 милиарда (4B), 9 милиарда (9B) и 27 милиарда (27B) параметъра [2].</p>
+<p>Резултатите очертават ясен фазов преход: най-малкият 2B модел не успява да извърши никаква редакция, докато моделите с 4B и 9B параметъра правят неточни промени, които разрушават собствената им функционалност [1, 2]. Единствено 27-милиардният модел притежава достатъчно дълбока мета-когнитивна способност и управление на токенния си бюджет, за да диагностицира прецизно параметричните си дефекти, да проведе серия от верификационни тестове и успешно да подобри както собствените си тегла, така и повреденото си копие.</p>
+<h2>Заличаване на стената между обучение и инференс: Пътят към рекурсивното самоусъвършенстване</h2>
+<p>Изследването в <a href="/pages/arxiv.html">arXiv</a> поставя под въпрос една от най-дълбоките догми в съвременното машинно обучение — че разделението между фазата на обучение (training) и фазата на изпълнение (inference) е фундаментално свойство на изкуствения интелект. Както подчертават авторите, „стената между обучението и инференса е ограничение на нашите инструменти, а не свойство на интелигентността“ [1]. За разлика от скалирането на изчисленията по време на тест (test-time scaling), което изисква допълнителен разход на енергия и време при всеки отделен въпрос, <a href="/pages/self-rewriting-models.html">самопрезаписващите се модели</a> записват наученото директно в теглата си чрез обикновени прави пасове (forward passes), правейки подобрението перманентно и без никакъв допълнителен разход при последващи отговори — пробив с огромно значение за <a href="/pages/inference-optimization.html">оптимизацията на инференса</a>.</p>
+<p>В дългосрочен архитектурен и системен план тази демонстрация представлява първата емпирична стъпка към истинско <a href="/pages/recursive-self-improvement.html">рекурсивно самоусъвършенстване</a>. Модел, който подобно на човешкия мозък не разделя ученето от практическото мислене, може да продължи да се модернизира през целия си експлоатационен живот директно в продукционна среда, без нужда от по-голям модел-учител, без промпт инженерство и без скъпи цикли на претрениране. Същевременно способността на <a href="/pages/large-language-models.html">големите езикови модели</a> сами да модифицират теглата си поставя изцяло нови изисквания пред киберсигурността и управлението на ИИ: бъдещите автономни системи ще се нуждаят от строги криптографски одити на тегловите версии и изолирани верификационни среди, за да се гарантира, че самопрезаписването винаги остава в границите на зададените правила за безопасност.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://arxiv.org/abs/2611.21885">Language Models Can Rewrite Their Own Weights (arXiv:2611.21885) - Jiajun Fan, Neil He, Changyi Yang et al.</a></li>
+<li><a href="https://arxiv.org/html/2611.21885v1">Language Models Can Rewrite Their Own Weights (Full HTML Experimental Paper) - arXiv</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/self-rewriting-models.html">Самопрезаписващи се модели (Self-Rewriting Models)</a><p>Самопрезаписващите се модели (Self-Rewriting Models) представляват нова парадигма в изкуствения интелект, при която голям езиков модел директно анализ...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/recursive-self-improvement.html">Рекурсивно самоусъвършенстване (Recursive Self-Improvement)</a><p>Рекурсивното самоусъвършенстване е теоретичен процес, при който система с изкуствен интелект автономно анализира, пренаписва и оптимизира собствения с...</p></li><li><a href="/pages/arxiv.html">arXiv</a><p>arXiv е хранилище за електронен предпечат (preprint) на научни статии в областите на физиката, математиката, компютърните науки и други.</p></li><li><a href="/pages/inference-optimization.html">Оптимизация на инференса (Inference Optimization)</a><p>Оптимизацията на инференса обхваща техники за намаляване на латентността, повишаване на пропускателната способност и свиване на разходите при изпълнен...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

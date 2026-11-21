@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Cloudflare Blog / Cloudflare
+Трансформацията в „неолаборатория“: Собствени базови модели в периферията
+Мрежовият гигант Cloudflare направи важна стратегическа стъпка, обявявайки официал..."><title>Cloudflare пусна моделите с отворени тегла Clairic и Clairic-flash чрез новото звено Workers AI Superintelligence - Светни.ме</title><meta property="og:title" content="Cloudflare пусна моделите с отворени тегла Clairic и Clairic-flash чрез новото звено Workers AI Superintelligence - Светни.ме"><meta property="og:description" content="Снимка: The Cloudflare Blog / Cloudflare
+Трансформацията в „неолаборатория“: Собствени базови модели в периферията
+Мрежовият гигант Cloudflare направи важна стратегическа стъпка, обявявайки официал..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/20/cloudflare-workers-ai-open-clairic-models/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/20/cloudflare-workers-ai-open-clairic-models/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Cloudflare пусна моделите с отворени тегла Clairic и Clairic-flash чрез новото звено Workers AI Superintelligence</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/20/cloudflare-workers-ai-open-clairic-models/hero.png" alt="Обявяване на отворените модели Clairic и Clairic-flash от Cloudflare Workers AI Superintelligence"><br><small>Снимка: The Cloudflare Blog / Cloudflare</small></p>
+<h2>Трансформацията в „неолаборатория“: Собствени базови модели в периферията</h2>
+<p>Мрежовият гигант <a href="/pages/cloudflare.html">Cloudflare</a> направи важна стратегическа стъпка, обявявайки официалното си превръщане в изследователска „неолаборатория“ за изкуствен интелект [1]. Компанията представи нова генерация модели с напълно отворени тегла – Clairic и Clairic-flash, разработени от новосформираното научно звено <a href="/pages/workers-ai.html">Workers AI</a> Superintelligence.</p>
+<p>Двата модела се разпространяват свободно в хранилището Hugging Face и са напълно оптимизирани за безевървърно изпълнение в глобалната мрежа от периферни центрове за данни на компанията.</p>
+<p>Тази инициатива бележи прехода на Cloudflare от обикновен доставчик на облачна инфраструктура към създател на авангардни мултимодални невронни мрежи, директно конкуриращи комерсиалните решения на традиционните хиперскейлъри.</p>
+<p><img src="/articles/2026/11/20/cloudflare-workers-ai-open-clairic-models/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Архитектурна прецизност: Мултимодално извличане с абсолютна координатна проследимост</h2>
+<p>Семейството модели <a href="/pages/clairic.html">Clairic</a> представлява специализирани <a href="/pages/vision-language-models.html">визуално-езикови модели</a>, проектирани специално за структурирано извличане на информация от сложни документи [1]. За разлика от конвенционалните чатботове, Clairic е оптимизиран за анализиране на фактури, митнически декларации, медицински досиета и многоколонни таблици с нулева толерантност към халюцинации.</p>
+<p>Архитектурата въвежда концепцията за стриктно пространствено заземяване (strict source grounding). </p>
+<p>Всеки извлечен факт, числова стойност или семантично поле задължително се картографира към точните координати на пикселите в оригиналното изображение. Това позволява на корпоративните одитори и софтуерните агенти мигновено да верифицират произхода на всяка стойност, премахвайки риска от незабелязани грешки.</p>
+<h2>Clairic-flash и ултраниската латентност в глобалната периферия</h2>
+<p>За сценарии с висока честота на заявките екипът представи ултракомпактния вариант Clairic-flash [1]. Моделът е оптимизиран за инференция директно в <a href="/pages/edge-computing.html">периферните изчисления</a> на Cloudflare, разположени в над 330 града в цял свят.</p>
+<p>Благодарение на прецизна дигитална квантизация и минимален отпечатък в паметта, Clairic-flash постига студен старт (cold start) под 10 милисекунди. </p>
+<p>Това позволява на разработчиците да вграждат разпознаване на сложни изображения директно в уеб форми, мобилни приложения и разпределени микроуслуги, без да се налага трафикът да прекосява континенти до централизирани сървърни ферми във Вирджиния или Франкфурт.</p>
+<h2>Системни архитектурни последици: Периферният интелект и краят на облачната монополна зависимост</h2>
+<p>Пускането на Clairic с отворени тегла има дълбоки последици за суверенитета на корпоративните данни и архитектурата на глобалната мрежа. Досега компаниите бяха принудени да изпращат чувствителни финансови и лични документи към централизираните API на технологичните гиганти, плащайки високи такси и поемайки рискове за поверителността.</p>
+<p>Чрез пренасянето на отворени, високоточни модели директно в периферните възли на мрежата обработката на данни става локална, съобразена с регулаторните изисквания на ЕС и многократно по-евтина. </p>
+<p>Този модел на децентрализиран периферен интелект разрушава икономическата бариера пред малките и средни предприятия. Когато авангардното разбиране на документи се превърне в безплатна, отворена и вездесъща функционалност на самата мрежа, икономическата стойност се премества от монополните API към приложенията, които предоставят реална бизнес стойност.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blog.cloudflare.com/open-clairic/">An updated Clairic and Clairic-flash are now open-weight, from the new Workers AI Superintelligence team - The Cloudflare Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cloudflare.html">Cloudflare</a><p>Cloudflare е водеща глобална платформа за облачни услуги, сигурност и производителност на уебсайтове.</p></li><li><a href="/pages/workers-ai.html">Cloudflare Workers AI</a><p>Cloudflare Workers AI е глобална безевървърна платформа за изпълнение на невронни мрежи и изкуствен интелект на периферните сървъри на Cloudflare.</p></li><li><a href="/pages/clairic.html">Clairic</a><p>Clairic е специализиран софтуерен енджин, разработен от Cloudflare, предназначен за светкавично и икономично извличане на структурирани данни от нестр...</p></li><li><a href="/pages/edge-computing.html">Периферни изчисления (Edge Computing)</a><p>Периферните изчисления представляват разпределена изчислителна парадигма, при която обработката на данни и изпълнението на невронни мрежи се извършват...</p></li><li><a href="/pages/vision-language-models.html">Визуално-езикови модели (VLM)</a><p>Визуално-езиковите модели (Vision-Language Models, VLM) са мултимодални невронни мрежи, които съвместно обработват изображения и текст.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

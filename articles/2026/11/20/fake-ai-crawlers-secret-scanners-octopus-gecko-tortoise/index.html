@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Tin Computer / Honeypot Telemetry Research
+Координираният лов на корпоративни тайни под прикритието на ИИ ботове
+С масовото навлизане на генеративния изкуствен интелект в съвременния уеб,..."><title>Трите сканера Octopus, Gecko и Tortoise маскират извличането на AI ключове като легитимен трафик на изкуствен интелект - Светни.ме</title><meta property="og:title" content="Трите сканера Octopus, Gecko и Tortoise маскират извличането на AI ключове като легитимен трафик на изкуствен интелект - Светни.ме"><meta property="og:description" content="Източник: Tin Computer / Honeypot Telemetry Research
+Координираният лов на корпоративни тайни под прикритието на ИИ ботове
+С масовото навлизане на генеративния изкуствен интелект в съвременния уеб,..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/20/fake-ai-crawlers-secret-scanners-octopus-gecko-tortoise/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/20/fake-ai-crawlers-secret-scanners-octopus-gecko-tortoise/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Трите сканера Octopus, Gecko и Tortoise маскират извличането на AI ключове като легитимен трафик на изкуствен интелект</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/20/fake-ai-crawlers-secret-scanners-octopus-gecko-tortoise/hero.png" alt="Илюстрация на автоматизирано сканиране и лов на API ключове в облачни среди"><br><small>Източник: Tin Computer / Honeypot Telemetry Research</small></p>
+<h2>Координираният лов на корпоративни тайни под прикритието на ИИ ботове</h2>
+<p>С масовото навлизане на генеративния изкуствен интелект в съвременния уеб, разработчиците и системните администратори свикнаха с постоянен наплив от уеб роботи (<a href="/pages/crawlers.html">crawlers</a>), индексиращи съдържание за обучение на езикови модели [1]. Тази нормализация обаче отвори перфектната маскировка за киберпрестъпници. Анализ на глобална мрежа от ханипоти (honeypots), публикуван от изследователския екип на Tin Computer, разкри три координирани и високоспециализирани операции за сканиране — наречени <strong>Octopus</strong>, <strong>Gecko</strong> и <strong>Tortoise</strong> — които умишлено фалшифицират идентификаторите на легитимни търсачки и ИИ ботове, за да претърсват интернет за забравени и изложени <a href="/pages/api-keys.html">API ключове</a>.</p>
+<p>Злонамерените сканери изпращат HTTP заглавки с фалшиви <code>User-Agent</code> низове, имитиращи официалните роботи на <a href="/pages/openai.html">OpenAI</a> (<code>GPTBot</code>), <a href="/pages/anthropic.html">Anthropic</a> (<code>ClaudeBot</code>), Perplexity (<code>PerplexityBot</code>) и Google (<code>Google-Extended</code>). Тъй като много организации умишлено отварят защитните си стени или премахват рейт-лимитите за тези ботове с цел по-добра видимост и SEO оптимизация, нападателите използват тази привилегия, за да извършват агресивно разузнаване с минимален риск от блокиране от традиционните WAF (Web Application Firewall) защити.</p>
+<h2>Анатомия на трите сканера: От облачни рояци до скрита ротация на проксита</h2>
+<p>Телеметричният анализ на Tin Computer очертава три различни оперативни модела, разделящи задачите между масирана сила, стелт проникване и дълбоко разузнаване:</p>
+<h3>1. Octopus: Масираният облачен хищник</h3>
+<p>Операцията Octopus залага на чиста изчислителна мощност и агресивен обем. Тя оперира от стотици виртуални машини, разположени основно в подмрежи на <a href="/pages/google-cloud.html">Google Cloud</a> и DigitalOcean. Octopus изпраща десетки милиони заявки на денонощие, целенасочено атакувайки стандартни пътища за конфигурационни файлове: <code>/.env</code>, <code>/.git/config</code>, <code>/config.json</code>, <code>/wp-config.php.bak</code>, както и архиви на локални бази данни. Целта е бързо засичане на неправилно конфигурирани уеб сървъри (като Nginx или Apache), които сервират скрити системни файлове като публичен статичен текст.</p>
+<h3>2. Gecko: Гъвкавият стелт наблюдател</h3>
+<p>За разлика от Octopus, операцията Gecko действа изключително внимателно, използвайки ротация през хиляди домашни и комерсиални IP адреси. Gecko не търси очевидни файлове. Вместо това тя атакува популярни съвременни фреймуърци като Next.js, Django, FastAPI и Laravel, търсейки умишлено предизвикани грешки (Debug Mode), които генерират трасировки (stack traces) с изтекли променливи на средата. Gecko изпраща само по 2-3 заявки на час към даден домейн, оставайки напълно под радара на автоматизираните системи за блокиране на прагове (threshold rate-limiting).</p>
+<h3>3. Tortoise: Бавният анализатор на документация</h3>
+<p>Tortoise прилага най-методичния и сложен подход. Този сканер претърсва публично достъпни Swagger/OpenAPI спецификации, тестови страници на Postman, публични Git хранилища и вътрешни документационни портали, оставени без автентикация. Сканерът парсва JavaScript пакети и фронтенд билдове, търсейки твърдо кодирани API ключове, които небрежни разработчици са внедрили директно в клиентския код при интеграция на чатботове.</p>
+<h2>Защо API ключовете за ИИ са новата златна мина: Икономиката на LLMjacking</h2>
+<p>В йерархията на <a href="/pages/cybersecurity.html">киберсигурността</a> компрометирането на API ключ за OpenAI или Anthropic се превърна в много по-доходоносна цел от кражбата на пароли за бази данни или потребителски профили. Появата на феномена <strong>LLMjacking</strong> (кражба на изчислителни ресурси за изкуствен интелект) създаде процъфтяващ черен пазар:</p>
+<ol>
+<li><strong>Моментална валидация и монетизация:</strong> Веднага щом Octopus или Gecko засекат валиден API ключ, автоматизиран скрипт прави тестова заявка към платежния API интерфейс на доставчика, за да провери кредитния лимит и активните нива (Tiers). Ключове с неограничени корпоративни кредитни линии се продават в тъмната мрежа в рамките на минути.</li>
+<li><strong>Анонимна разработка и зловреден софтуер:</strong> Киберпрестъпниците използват чуждите API ключове, за да захранват автономни атаки, генерация на персонализиран фишинг и сканиране на уязвимости, прехвърляйки астрономическите сметки за токени върху жертвата.</li>
+<li><strong>Обучение на конкурентни модели:</strong> Извлечените ключове се използват за масирано синтетично генериране на данни (data distillation), позволявайки на сенчести организации да извличат знания от модели от най-висок клас (frontier models), без да плащат за инфраструктурата.</li>
+</ol>
+<p>Жертвите често разбират за компрометирането едва когато получат шокова фактура за десетки хиляди долари от доставчика на модела, или когато акаунтът им бъде внезапно блокиран поради превишаване на лимитите за злоупотреба.</p>
+<h2>Системни архитектурни и макроикономически последици: Краят на доверието в User-Agent</h2>
+<p>Разкритията за Octopus, Gecko и Tortoise поставят точка на дългогодишната наивност в управлението на уеб трафика и налагат спешна пренастройка на корпоративните защитни модели.</p>
+<ul>
+<li><strong>Смъртта на периметърната сигурност, базирана на хедъри:</strong> Всеки HTTP хедър може да бъде фалшифициран с един ред код. Практиката компаниите да добавят изключения в защитните си стени само въз основа на заявен <code>User-Agent: GPTBot</code> е фатална уязвимост. Инфраструктурната защита трябва да премине към криптографска верификация — проверка на обратни DNS записи (Reverse DNS lookup) за потвърждаване, че IP адресът наистина принадлежи на ASN мрежите на OpenAI или Google, съчетана с TLS fingerprinting (JA4) за разпознаване на реалния стек на клиента.</li>
+<li><strong>Преход към нулево доверие за тайни (Ephemeral Workload Identity):</strong> Използването на дълготрайни, статични API ключове, записани в <code>.env</code> файлове или системни променливи, е фундаментален технически дълг. Индустрията е длъжна да премине към кратковременни токени чрез протоколи като OAuth2, AWS IAM Roles Anywhere или Workload Identity Federation, където всяко извикване на модел изисква динамична оторизация с валидност от броени минути.</li>
+<li><strong>Автоматизирано анулиране и мониторинг на изходящия трафик:</strong> Организациите трябва да внедрят строг контрол на изходящия трафик (egress filtering) и специализирани honeypot ключове (canary tokens). Ако подобен токен бъде използван за заявка от непознат IP адрес, централизираната система за сигурност може мигновено да изолира засегнатата среда и да блокира компрометирания акаунт.</li>
+</ul>
+<p>Ерата, в която изкуственият интелект беше просто помощен софтуерен инструмент, приключи. Днес ИИ ключовете са еквивалент на директен достъп до корпоративната банкова сметка, а защитата им изисква същата безкомпромисна строгост, както защитата на ядрени тайни и криптографски сертификати.</p>
+<p><img src="/articles/2026/11/20/fake-ai-crawlers-secret-scanners-octopus-gecko-tortoise/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://tin.computer/blog/fake-ai-crawler-secrets-scanners">Octopus, Gecko and Tortoise: the 3 scanners hunting your AI keys - Tin Computer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/crawlers.html">Уеб роботи и сканери (Crawlers &amp; Scanners)</a><p>Уеб роботите (Crawlers, Spiders) и мрежовите сканери са автоматизирани софтуерни програми, които систематично посещават и анализират интернет страници...</p></li><li><a href="/pages/api-keys.html">API ключове (API Keys)</a><p>API ключът (API Key) е уникален символен низ, който служи за удостоверяване на автентичността (authentication) и оторизация на клиентски приложения пр...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/google-cloud.html">Google Cloud</a><p>Google Cloud (известна още като Google Cloud Platform или GCP) е пакет от облачни услуги, предлагани от Google, които се изпълняват на същата инфрастр...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Ars Technica
+Според разследване на Ars Technica мащабен експеримент по киберсигурност, при който в мрежата от облачни услуги за изкуствен интелект са били инжектирани близо 2 милиона уник..."><title>Експеримент с 2 милиона дигитални капана разкри масово изтичане на секретни данни във веригата за доставки на ИИ - Светни.ме</title><meta property="og:title" content="Експеримент с 2 милиона дигитални капана разкри масово изтичане на секретни данни във веригата за доставки на ИИ - Светни.ме"><meta property="og:description" content="Източник: Ars Technica
+Според разследване на Ars Technica мащабен експеримент по киберсигурност, при който в мрежата от облачни услуги за изкуствен интелект са били инжектирани близо 2 милиона уник..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Експеримент с 2 милиона дигитални капана разкри масово изтичане на секретни данни във веригата за доставки на ИИ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/hero.png" alt="Концептуална илюстрация на изтичащи секретни данни и дигитални капани в ИИ инфраструктурата"><br><small>Източник: Ars Technica</small></p>
+<p>Според разследване на Ars Technica мащабен експеримент по киберсигурност, при който в мрежата от облачни услуги за изкуствен интелект са били инжектирани близо 2 милиона уникални дигитални примамки („канарчета“), разкри системни пробиви, кражба на потребителски заявки и масово нарушаване на политиките за поверителност [1]. Проучването е проведено от <a href="/pages/hd-moore.html">Х. Д. Мур</a>, главен изследователски директор на компанията за индустриална сигурност <a href="/pages/dragos.html">Dragos</a>, който е проследил как чувствителната информация преминава през посредническите ИИ рутери и хостинг доставчици.</p>
+<p>Съвременните ИИ приложения рядко се свързват директно само с една лаборатория, а често използват брокери и шлюзове (AI routers) като <a href="/pages/openrouter.html">OpenRouter</a> или <a href="/pages/vercel.html">Vercel</a>, които разпределят потребителските промптове към най-евтиния или най-подходящия инференционен сървър. Макар заявките да са криптирани при пренос, те се декриптират в чист текст на всеки междинен възел във веригата от прекупвачи, където често биват записвани или прихващани [1].</p>
+<p><img src="/articles/2026/11/21/researcher-2m-canaries-ai-supply-chain-privacy-leakage/infographic.png" alt="Инфографика: Резултати от експеримента с 2 милиона дигитални канарчета във веригата за доставки на ИИ услуги"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Методология на капаните и три пробити хостинг доставчика</h2>
+<p>За да картографира точно точките на изтичане, Х. Д. Мур е генерирал милиони никога непубликувани до момента работещи ключове за достъп до празни акаунти в <a href="/pages/aws.html">AWS</a>, SSH пароли, уникални DNS имена, секретни уеб адреси и референции към частни Git хранилища под негов контрол [1]. Всеки отделен ключ е бил поставен в точно един промпт, изпратен към конкретен доставчик, което позволява безпогрешно идентифициране на виновното звено при всяко последващо използване на примамката.</p>
+<p>Най-тревожното откритие от експеримента е установяването на активни хакерски пробиви в три отделни хостинг доставчика на ИИ модели [1]:</p>
+<ul>
+<li><p>Нападателите, компрометирали един от доставчиците в края на октомври, са откраднали и използвали повторно няколкостотин AWS ключа, включително от заявки, които самият доставчик е отхвърлил преди изобщо да стартира ИИ модел — доказателство, че трафикът е бил копиран още на входния шлюз („на входната врата“).</p>
+</li>
+<li><p>При другите два пробити доставчика са били откраднати заявки, изрично маркирани с флага за нулево задържане на данни (<a href="/pages/zero-data-retention.html">Zero Data Retention</a> – ZDR), тъй като настройката за поверителност не предпазва данните, когато атакуващият вече е проникнал вътре в инфраструктурата.</p>
+</li>
+<li><p>В рамките на часове след инжектирането откраднатите ключове са били използвани в десетки хиляди API извиквания към AWS за претърсване на S3 хранилища, мениджъри на секрети, създаване на нови IAM потребители и опити за активиране на хоствани модели в <a href="/pages/amazon-bedrock.html">Amazon Bedrock</a>.</p>
+</li>
+</ul>
+<p>Поне два от компрометираните доставчици са били атакувани от един и същ злонамерен оператор, тъй като примамките от тях са били задействани едновременно от един и същ нает сървър.</p>
+<h2>Недобросъвестни прекупвачи и игнориране на ZDR от китайска лаборатория</h2>
+<p>Освен външните хакерски пробиви експериментът доказва, че самите прекупвачи на изчислителна мощност (inference resellers) умишлено събират данни от потребителските промптове [1]. Привличайки трафик чрез дъмпингови цени, някои брокери тайно включват пълно логване на заявките; Мур ги е разобличил, като е изпращал идентични заявки към един и същ модел през различни търговци и е проследил през кой канал ключовете биват компрометирани.</p>
+<p>Изследването разкрива и систематично индексиране на секретни URL адреси и частни хранилища в пряко нарушение на договорните условия [1]:</p>
+<ul>
+<li><p>Неназована китайска ИИ лаборатория е извличала автоматично секретните URL адреси от над половината промптове, изпратени към нейните модели между юли и октомври, включително от близо две трети от заявките, маркирани с флага Zero Data Retention (ZDR).</p>
+</li>
+<li><p>Същият скрейпър се е активирал два до три дни след заявката дори когато американски клиенти са използвали базираните в САЩ хостинг доставчици, препродаващи моделите на тази лаборатория — което означава, че американските промптове са били препращани обратно към Китай, а по-късно Git клиент от друг облак се е опитал да клонира частните Git хранилища, споменати в тези заявки.</p>
+</li>
+<li><p>Един американски хостинг доставчик е обходил секретен URL адрес повече от два месеца след еднократно извикване към неговия ендпойнт за търсене.</p>
+</li>
+</ul>
+<p>В заключение Мур предупреждава, че единствената надеждна защита за търговски тайни е локалното хостване на модели върху собствени сървъри (on-premises) или директният договор с доставчик от първо ниво без използване на автоматични пулове от прекупвачи.</p>
+<h2>Архитектурна криза на доверието в посредническата икономика на ИИ инференцията</h2>
+<p>Разкритията на Х. Д. Мур осветяват фундаментален архитектурен дефект в начина, по който се мащабира съвременната софтуерна индустрия за изкуствен интелект. През последните две години хиляди стартъпи и корпоративни разработчици възприеха модела на агрегираните ИИ рутери и динамичния арбитраж на инференция, третирайки езиковите модели като взаимозаменяема стока, която може да се купува на спот пазара от най-евтиния наличен хост. Експериментът с двата милиона канарчета доказва, че за разлика от традиционните телекомуникационни мрежи, където пакетите остават криптирани от край до край (TLS до крайния сървър), веригата от ИИ брокери функционира като поредица от посредници, четящи чистия текст на всяка заявка. Когато един промпт премине през два шлюза и попадне в непроверен подизпълнител, корпоративният периметър на сигурност на практика престава да съществува.</p>
+<p>Още по-сериозни са правните и регулаторните последици от доказаната неефективност на флаговете за нулево задържане на данни (Zero Data Retention) и нарушаването на географския суверенитет. Много предприятия в САЩ и Европа разчитат на ZDR параметъра в API заявките си като на техническа гаранция за съответствие с режими като HIPAA, GDPR и SOC 2. Фактът, че заявки към американски хостинг доставчици са изтичали обратно към инфраструктурата на китайска ИИ лаборатория и са задействали опити за клониране на частни Git хранилища, превръща ZDR от криптографски контрол в обикновено пожелателно обещание, което лесно се заобикаля от недобросъвестни прекупвачи или от хакери, стоящи на входния обратен прокси сървър.</p>
+<p>В макроикономически план това изследване ще ускори консолидацията на пазара на облачен ИИ и ще удари тежко сивия сектор на евтините инференционни брокери. За корпоративните директори по информационна сигурност (CISO) изводът е категоричен: икономията от няколко цента на милион токена чрез анонимни пулове от прекупвачи носи неприемлив риск от компрометиране на облачни ключове, изходен код и индустриална собственост. В резултат на това пазарът ще се поляризира между локални (on-premises) внедрявания на отворени модели зад корпоративната защитна стена и директни, строго одитирани договори с хиперскейлъри от първо ниво, докато веригите за препродажба на инференция ще бъдат принудени да внедрят хардуерно базирани поверителни изчисления (Confidential Computing и TEE анклави), за да докажат, че не могат да четат клиентския трафик.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/">Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced. - Ars Technica</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/hd-moore.html">HD Moore</a><p>Х.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/vercel.html">Vercel</a><p>Vercel е облачна платформа за разработка, проектирана за фронтенд инженери и екипи.</p></li><li><a href="/pages/aws.html">AWS (Amazon Web Services)</a><p>Amazon Web Services (AWS) е най-всеобхватната и широко приета облачна платформа в света, предлагаща над 200 напълно функционални услуги от центрове за...</p></li><li><a href="/pages/amazon-bedrock.html">Amazon Bedrock</a><p>Amazon Bedrock е напълно управлявана услуга от Amazon Web Services (AWS), която предоставя достъп до водещи базови модели (Foundation Models) чрез при...</p></li><li><a href="/pages/zero-data-retention.html">Zero Data Retention (ZDR)</a><p>Zero Data Retention (ZDR) е строга политика за поверителност и сигурност при облачните API услуги, при която входните потребителски данни (промптове) ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

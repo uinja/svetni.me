@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks
+Нови технически бенчмаркове, публикувани от изследователския екип на Databricks, разкриват непреодолимия таван на точност при самостоятелните езикови модели и доказват, че инте..."><title>Genie One Accuracy: Защо корпоративните агенти за данни се нуждаят от строго управляван контекст, за да скочат от 58% на 94% точност - Светни.ме</title><meta property="og:title" content="Genie One Accuracy: Защо корпоративните агенти за данни се нуждаят от строго управляван контекст, за да скочат от 58% на 94% точност - Светни.ме"><meta property="og:description" content="Източник: Databricks
+Нови технически бенчмаркове, публикувани от изследователския екип на Databricks, разкриват непреодолимия таван на точност при самостоятелните езикови модели и доказват, че инте..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/databricks-genie-one-accuracy-curated-agents-governed-context/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/databricks-genie-one-accuracy-curated-agents-governed-context/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Genie One Accuracy: Защо корпоративните агенти за данни се нуждаят от строго управляван контекст, за да скочат от 58% на 94% точност</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/databricks-genie-one-accuracy-curated-agents-governed-context/hero.png" alt="Корпоративно управление на семантични данни и архитектура за бизнес анализи"><br><small>Източник: Databricks</small></p>
+<p>Нови технически бенчмаркове, публикувани от изследователския екип на <a href="/pages/databricks.html">Databricks</a>, разкриват непреодолимия таван на точност при самостоятелните езикови модели и доказват, че интеграцията с корпоративни каталози за <a href="/pages/data-governance.html">управление на данните</a> е единственият път за превръщане на <a href="/pages/ai-agents.html">AI агентите</a> в надеждни аналитични инструменти <code>[1]</code>. Тестовете демонстрират, че докато базовите LLM агенти, пуснати върху необработени релационни бази, постигат едва 58% точност на сложните бизнес заявки, свързването им с верифициран семантичен контекст и проследимост на колоните (lineage) катапултира надеждността до рекордните 94.3%.</p>
+<p><img src="/articles/2026/11/21/databricks-genie-one-accuracy-curated-agents-governed-context/infographic.png" alt="Инфографика: Влиянието на семантичния контекст върху точността на корпоративните AI агенти"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Капанът на 58-те процента: Халюцинирани обединения и семантичен хаос</h2>
+<p>Публикуваните данни от тестовете илюстрират фундаменталния дефект на класическите Text-to-SQL подходи <code>[1]</code>. Когато водещ езиков модел получи достъп единствено до суровите имена на таблици и типове колони, той генерира синтактично перфектен, но фактологично напълно безсмислен SQL код. Моделът не притежава представа коя таблица отразява официалните одитирани финансови резултати и коя е остарял междинен архив.</p>
+<p>В резултат на тази семантична неяснота агентите масово конструират некоректни таблични съединения (joins) и използват погрешни агрегационни формули за основни бизнес метрики като чист приход или отлив на абонати. Точността от едва 58% прави подобни инструменти напълно неизползваеми за висшия мениджмънт, където всяка грешка води до грешни стратегически решения.</p>
+<h2>Управляваният семантичен слой: Единен източник на истина чрез Unity Catalog</h2>
+<p>Архитектурата Genie One преодолява тази бариера, като обвързва агента с управляван семантичен слой и <a href="/pages/semantic-search.html">семантично търсене</a> през корпоративния каталог <code>[1]</code>. Агентът разполага с точни дефиниции на бизнес термините, граф на зависимостите между колоните и автоматични филтри за сигурност на ниво ред.</p>
+<p>Когато финансов анализатор зададе сложен многопластов въпрос, Genie One първо сверява параметрите срещу каталога за управление. При наличие на потенциално двусмислие (например разлика между счетоводни стандарти), системата активно изисква пояснение от потребителя, вместо да допуска рисковани предположения. Това повишава точността до 94.3%, постигайки надеждност, сравнима с тази на старши бизнес анализатор.</p>
+<h2>Контекстът като истински корпоративен ров в ерата на масовите AI модели</h2>
+<p>Изводите от доклада на <a href="/pages/databricks.html">Databricks</a> пренареждат приоритетите в модерната <a href="/pages/enterprise-architecture.html">корпоративна архитектура</a>. Те показват, че надпреварата за все по-големи базови невронни модели има бързо намаляваща възвръщаемост в реалния бизнес сектор. Суровите тегла на моделите бързо се превръщат в масова стока, достъпна за всеки на ниска цена.</p>
+<p>Истинският стратегически ров и конкурентно предимство за всяка организация се крият в качеството, подредеността и управлението на нейните собствени данни. Без проверени семантични зависимости и каталози за <a href="/pages/data-governance.html">управление на данните</a>, най-напредналият изкуствен интелект в света остава сляп за реалността на бизнеса. Компаниите, които инвестират в изграждането на чисти семантични слоеве, ще отключат истинската стойност на автономните агенти, докато тези, разчитащи единствено на грубата сила на моделите, ще останат блокирани под бариерата на доверието.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.databricks.com/blog/genie-one-accuracy-why-curated-agents-need-governed-context">Genie One Accuracy: Why Curated Agents Need Governed Context - Databricks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li><li><a href="/pages/data-governance.html">Управление на корпоративни данни (Data Governance)</a><p>Управлението на данни гарантира, че данните в една организация са точни, проследими и защитени от нерегламентиран достъп през целия им жизнен цикъл.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/semantic-search.html">Семантично търсене</a><p>Семантичното търсене (Semantic Search) е технология за извличане на информация, която се фокусира върху значението и контекста на запитването, вместо ...</p></li><li><a href="/pages/enterprise-architecture.html">Корпоративна архитектура (Enterprise Architecture)</a><p>Корпоративната архитектура е стратегическа дисциплина, която дефинира структурата, процесите, информационните потоци и технологичната инфраструктура н...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

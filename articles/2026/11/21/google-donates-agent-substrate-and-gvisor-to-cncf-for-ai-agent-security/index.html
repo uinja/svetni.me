@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / Google Cloud &amp;amp; CNCF
+Краят на несъвместимостта между Kubernetes и автономния софтуер
+Технологичният гигант Google обяви официалното дарение на ключови компоненти от своя вътрешен..."><title>Google дари Agent Substrate и gVisor на CNCF: Нов отворен стандарт за сигурност и изолация на автономни ИИ агенти - Светни.ме</title><meta property="og:title" content="Google дари Agent Substrate и gVisor на CNCF: Нов отворен стандарт за сигурност и изолация на автономни ИИ агенти - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / Google Cloud &amp;amp; CNCF
+Краят на несъвместимостта между Kubernetes и автономния софтуер
+Технологичният гигант Google обяви официалното дарение на ключови компоненти от своя вътрешен..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/google-donates-agent-substrate-and-gvisor-to-cncf-for-ai-agent-security/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/google-donates-agent-substrate-and-gvisor-to-cncf-for-ai-agent-security/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google дари Agent Substrate и gVisor на CNCF: Нов отворен стандарт за сигурност и изолация на автономни ИИ агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/google-donates-agent-substrate-and-gvisor-to-cncf-for-ai-agent-security/hero.png" alt="Облачна среда за сигурност и изолация на автономни агенти"><br><small>Снимка: InfoQ / Google Cloud &amp; CNCF</small></p>
+<h2>Краят на несъвместимостта между Kubernetes и автономния софтуер</h2>
+<p>Технологичният гигант <a href="/pages/google.html">Google</a> обяви официалното дарение на ключови компоненти от своя вътрешен софтуерен стек към фондацията <a href="/pages/cncf.html">Cloud Native Computing Foundation (CNCF)</a> [1]. Пакетът включва революционната среда за изпълнение <a href="/pages/agent-substrate.html">Agent Substrate</a>, утвърдения пясъчник за изолация <a href="/pages/gvisor.html">gVisor</a> и проекта за оркестрация на обучение с подкрепление OpenRL. Това решение установява неутрален отворен стандарт за сигурност при масово внедряване на <a href="/pages/ai-agents.html">автономни ИИ агенти</a> в корпоративни облачни среди.</p>
+<p>Според архитектурния доклад на Google, класическите натоварвания в Kubernetes и съвременните агентни системи притежават коренно различни профили на изпълнение. Традиционните микроуслуги стартират, работят непрекъснато и обслужват поток от мрежови заявки. За разлика от тях, автономният агент изпълнява инструмент или генериран шел скрипт за няколко секунди, след което преминава в продължително състояние на изчакване на потребителски вход или резултати от външни API.</p>
+<p>Поддържането на отделен Kubernetes Pod за всяка агентна сесия разхищава колосални изчислителни ресурси. В същото време свиването до нула (scale-to-zero) води до неприемливи латентности от няколко секунди при всяко реконструиране на средата.</p>
+<h2>Архитектура на Agent Substrate: Разделяне на състояние и изчисления</h2>
+<p>За да преодолее този фундаментален структурен блокаж, Google проектира Agent Substrate на принципа на стриктно разделяне на данните:</p>
+<ul>
+<li><strong>Актьори (Actors):</strong> Представляват индивидуалните агентни сесии и поддържат цялостното им състояние — съдържание на виртуалната файлова система, работна памет и контекст на изпълнение.</li>
+<li><strong>Работници (Workers):</strong> Унифициран пул от преизползваеми изчислителни инстанции, които не съхраняват състояние.</li>
+<li><strong>Възстановяване под 500 милисекунди:</strong> Когато агентът трябва да изпълни команда, Substrate мигновено го насочва към свободен работник и зарежда състоянието му за по-малко от 500 милисекунди, елиминирайки нуждата от пълно зареждане на нов Pod.</li>
+</ul>
+<p><img src="/articles/2026/11/21/google-donates-agent-substrate-and-gvisor-to-cncf-for-ai-agent-security/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Защита на хост ядрото: gVisor и хардуерни микровиртуални машини</h2>
+<p>Вторият критичен стълб на дарението адресира безпрецедентните рискове за <a href="/pages/container-security.html">сигурност на контейнерите</a>. Автономните агенти редовно генерират шел команди, компилират софтуер и инсталират външни библиотеки от публични хранилища. Третирането им като надежден код създава непосредствена опасност от ескалация на привилегии и атаки срещу споделеното Linux ядро на сървъра.</p>
+<p>Защитният слой на gVisor изолира тези процеси чрез потребителско ядро (user-space kernel), което прехваща всички системни извиквания (syscalls). Агентът никога не комуникира директно с ядрото на физическата машина. За най-рисковите корпоративни сценарии с множество наематели Agent Substrate интегрира директна поддръжка за Cloud Hypervisor микровиртуални машини, осигурявайки хардуерно базирана бариера с почти нулево забавяне.</p>
+<h2>Системни архитектурни и макроикономически последици: Неутралност срещу облачен монопол</h2>
+<p>Даряването на този технологичен стек на CNCF има фундаментално значение за бъдещето на софтуерното инженерство:</p>
+<ol>
+<li><strong>Предотвратяване на платформено заключване (Vendor Lock-in):</strong> Досега водещите облачни доставчици се опитваха да привлекат корпоративните клиенти чрез затворени, патентовани среди за агентно изпълнение. Превръщането на Agent Substrate в отворен CNCF стандарт позволява на всяко предприятие да изгражда независима мултиоблачна инфраструктура върху локални клъстери или алтернативни доставчици.</li>
+<li><strong>Трансформация на DevOps към AgentOps:</strong> Смесването на състояние и изчисления беше основната пречка пред масовото навлизане на ИИ в реални производствени процеси. С новия стандарт екипите за надеждност на платформите (SRE) получават ясни метрики, политики за контрол на достъпа и механизми за незабавен откат при компрометирани сесии.</li>
+<li><strong>Икономическа оптимизация на ИИ инфраструктурата:</strong> Чрез елиминиране на празния ход на контейнерите компаниите могат да постигнат над 70% намаление на инфраструктурните разходи за хостване на автономни работни потоци, ускорявайки възвръщаемостта на инвестициите в корпоративен изкуствен интелект.</li>
+</ol>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/google-substrate-gvisor-cncf/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">Google Donates Agent Substrate and gVisor to the CNCF to Secure AI Agents at Scale - InfoQ</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/cncf.html">Cloud Native Computing Foundation (CNCF)</a><p>Cloud Native Computing Foundation (CNCF) е проект на Linux Foundation, който обединява водещи технологични компании с цел подпомагане и стандартизиран...</p></li><li><a href="/pages/agent-substrate.html">Agent Substrate</a><p>Agent Substrate е специализирана отворена облачна среда за изпълнение на автономни ИИ агенти, предоставена от Google на фондацията CNCF.</p></li><li><a href="/pages/gvisor.html">gVisor</a><p>gVisor е сигурна среда за изолиране на контейнери (sandbox runtime), първоначално създадена от Google и дарена на Cloud Native Computing Foundation (C...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/container-security.html">Сигурност на контейнери (Container Security)</a><p>Сигурността на контейнери гарантира целостта и изолацията на софтуерните приложения от базовата операционна система и останалите процеси на хоста.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

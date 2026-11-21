@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Hostinger Engineering Blog / Архитектурен анализ на компресирането на Mixture-of-Experts модели в продукционна среда
+В подробен инженерен доклад от 20 ноември 2026 година изследователския..."><title>Инженерният екип на Hostinger разкри защо компресирането на MoE модели чупи продукционни приложения въпреки високите бенчмаркове - Светни.ме</title><meta property="og:title" content="Инженерният екип на Hostinger разкри защо компресирането на MoE модели чупи продукционни приложения въпреки високите бенчмаркове - Светни.ме"><meta property="og:description" content="Източник: Hostinger Engineering Blog / Архитектурен анализ на компресирането на Mixture-of-Experts модели в продукционна среда
+В подробен инженерен доклад от 20 ноември 2026 година изследователския..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/hostinger-moe-model-compression-expert-pruning-production/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/hostinger-moe-model-compression-expert-pruning-production/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Инженерният екип на Hostinger разкри защо компресирането на MoE модели чупи продукционни приложения въпреки високите бенчмаркове</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/hostinger-moe-model-compression-expert-pruning-production/hero.png" alt="Изследване на Hostinger върху подрязването и сливането на експертни подмрежи при Mixture-of-Experts модели"><br><small>Източник: Hostinger Engineering Blog / Архитектурен анализ на компресирането на Mixture-of-Experts модели в продукционна среда</small></p>
+<p>В подробен инженерен доклад от 20 ноември 2026 година изследователският екип за изкуствен интелект на <a href="/pages/hostinger.html">Hostinger</a> публикува резултатите от мащабно продукционно изследване върху методите за <a href="/pages/model-compression.html">компресия на ИИ модели</a> с архитектура <a href="/pages/mixture-of-experts.html">Mixture-of-Experts</a> (MoE) при пет реални бизнес задачи [1]. Тъй като при MoE моделите всяка специализирана подмрежа („експерт“) трябва да пребивава постоянно във видеопаметта на графичните ускорители дори когато не се активира за конкретен токен, най-директният подход за намаляване на инфраструктурните разходи е отстраняването на най-рядко използваните експерти. Експериментите на Hostinger обаче показват, че макар двата водещи метода — директно подрязване (pruning) и математическо сливане (merging) — да демонстрират почти идентични резултати върху стандартните академични бенчмаркове, в реална продукционна среда сливането на експерти предизвиква катастрофални сривове в потребителските приложения [1].</p>
+<h2>Анатомия на трите продукционни срива: Счупени мобилни шаблони, безкрайни цикли и езиково смесване</h2>
+<p>Екипът на Hostinger е тествал два архитектурно различни отворени модела — стандартния трансформър <a href="/pages/qwen3-30b.html">Qwen3-30B</a> на Alibaba и хибридния Transformer-Mamba модел <a href="/pages/nemotron.html">NVIDIA Nemotron</a> (варианта Nemotron-3.5-Lightning) — върху пет продуктови потока: три кратки класификационни задачи (разпознаване на стилови насоки в уебсайтове, извличане на имена на брандове и категоризация на продукти) и две тежки генеративни задачи (описания на домейни и пълни HTML имейл шаблони) [1]. При премахване на една четвърт (25%) от експертите в Qwen3-30B методът на подрязване запазва 93.6% от оценката за качество на писане, докато методът на сливане пада до едва 62.5% поради три систематични дефекта [1]:</p>
+<ul>
+<li><p><strong>Разрушаване на мобилния HTML дизайн при имейл маркетинга:</strong> Инструментът за имейл маркетинг на Hostinger изисква пълен, адаптивен HTML документ с линк за отписване, опакован във валиден JSON обект. При сливане на 25% от експертите в Qwen3-30B цели 40% от генерираните имейл шаблони излизат извън границите на тесен телефонен екран (overflow), спрямо едва 10% при оригиналния модел и около 10% при подрязания модел.</p>
+</li>
+<li><p><strong>Безкрайни генеративни цикли и удвоен разход на GPU токени:</strong> Част от компресираните модели засядат в безкрайно повторение на един и същ текст до достигане на твърдия лимит за дължина. В извадка от 2000 заявки за имейли базовият Qwen3-30B изпада в цикъл само 6 пъти, докато при сливане на половината експерти броят на безкрайните цикли скача на 215 (наблюдавано и при 1 от всеки 7 имейла при Nemotron-3.5-Lightning), което удвоява общия брой генерирани токени и унищожава икономическата цел на компресията.</p>
+</li>
+<li><p><strong>Хибридно превключване на езици в средата на изречението:</strong> При генериране на описания на домейни на 35 потребителски езика инструкциите на английски изискват отговорът да започва с превод на фразата „This domain is...“ (напр. „Domain ini adalah...“ на индонезийски). При сливане на 25% от експертите около 40% от неанглийските отговори на Qwen3-30B запазват английското начало и продължават на целевия език („This domain adalah...“ или „This dominio es...“), спрямо едва 3% при базовия модел, докато Nemotron-3.5-Lightning директно игнорира заявения език и отговаря изцяло на английски.</p>
+</li>
+</ul>
+<h2>Математическият сблъсък REAP срещу REAM и слепите петна на академичните бенчмаркове</h2>
+<p>За да обяснят защо подрязването печели 16 от общо 20 директни сравнения в изследването, инженерите анализират механиката на двата алгоритъма след еднопасово калибриране без дообучение върху няколко хиляди реални разговора [1]. Водещият алгоритъм за подрязване REAP директно изтрива експертите с най-нисък принос за обработката на токените, но оставя оцелелите високоактивни експерти в техния абсолютно оригинален, непроменен вид. За разлика от него алгоритъмът за сливане REAM се опитва да съхрани знанието на слабите експерти, като ги групира около сходни силни експерти и усреднява техните тегла [1]. Именно това математическо усредняване размива прецизните параметри на водещите експерти там, където се изисква безкомпромисна точност — спазване на CSS/HTML правила за мобилен екран, превод на фиксирани начални фрази и контрол за спиране при дълги отговори от около 2700 токена.</p>
+<p>Според изследователя от Hostinger Повилас Кведарас стандартните бенчмаркове пропускат тези провали по три причини: те оценяват предимно кратки отговори на английски език, толерират частични съвпадения и измерват само агрегирани средни стойности [1]. В теста за описания на домейни при 25% компресия успеваемостта на английски език остава 98% и при двата метода, но на останалите 34 езика пада до 77% при подрязване и 55% при сливане. Още по-показателно е, че дори при подрязване на 25% от Qwen3-30B общият процент одобрени продуктови категории се променя само с около 1 пункт, но при директно сравнение на отговорите се оказва, че над 20% от продуктите са били преместени в различна категория спрямо оригиналния модел [1]. Единствената надеждна защита срещу синтактични грешки се оказва функцията за структурирани изходи (structured outputs) на инференс енджина <a href="/pages/vllm.html">vLLM</a>, която принудително налага JSON схема и задържа невалидния JSON близо до нула, докато при неструктурираните имейл шаблони невалидният JSON скача от 1% на 12% при 50% сливане [1].</p>
+<p><img src="/articles/2026/11/21/hostinger-moe-model-compression-expert-pruning-production/infographic.png" alt="Инфографика: Сравнителен анализ на Hostinger за подрязване (REAP) срещу сливане (REAM) на MoE модели"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системни архитектурни и макроикономически последици: Новите инженерни правила за рентабилен MoE инференс</h2>
+<p>Публикуваният от Hostinger пост-мортем формулира четири фундаментални оперативни правила за всяка технологична компания, която внедрява компресирани Mixture-of-Experts модели в продукция: избор на чисто подрязване (REAP) пред сливане (REAM) при еднакво спестяване на GPU памет; твърд таван от максимум 25% премахнати експерти за всякакви генеративни текстови задачи; задължително активиране на схеми за структуриран изход във vLLM; и многомерно тестване върху реални многоезични и дългоконтекстни продуктови потоци вместо доверие в академични класации.</p>
+<p>От архитектурна гледна точка откритието, че компресираният чрез сливане модел генерира два пъти повече токени заради зацикляне, разкрива критичен парадокс в икономиката на инференса. Когато инженерите се фокусират единствено върху статичния размер на модела във VRAM паметта, те рискуват да компрометират динамичното му поведение при декодиране, превръщайки спестената памет в огромни загуби на изчислително време (GPU compute) и нарушени споразумения за латентност.</p>
+<p>В по-широк индустриален контекст изследването на Hostinger доказва, че ерата на универсалните англоезични лидербордове като единствен критерий за избор на модел е приключила. За глобалните SaaS платформи, обслужващи потребители на десетки езици със строги програмни договори за JSON и HTML валидност, истинската стойност на един компресиран модел се определя не от средния му резултат върху абстрактни тестове, а от неговата поведенческа стабилност и предвидимост в граничните случаи на реалния софтуерен продукт.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.hostinger.com/blog/compressed-ai-models-for-real-products/">What broke when we compressed AI models for real products - Hostinger Engineering Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/hostinger.html">Hostinger</a><p>Hostinger е глобален доставчик на хостинг услуги и регистратор на домейни, основан през 2004 г.</p></li><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/qwen3-30b.html">Qwen3-30B</a><p>Qwen3-30B е модел с отворени тегла от фамилията Qwen на Alibaba, изграден върху стандартна Transformer Mixture-of-Experts (MoE) архитектура с 30 милиа...</p></li><li><a href="/pages/nemotron.html">Nemotron</a><p>Nemotron е фамилия от усъвършенствани модели с отворен код, разработени от NVIDIA за научни изследвания, генериране на синтетични данни и агентни рабо...</p></li><li><a href="/pages/vllm.html">vLLM</a><p>vLLM е популярна библиотека с отворен код за високопроизводително и икономично обслужване (serving) на големи езикови модели (LLMs).</p></li><li><a href="/pages/model-compression.html">Компресиране на невронни мрежи (Model Compression)</a><p>Компресирането на модели позволява изпълнение на масивни архитектури на потребителски устройства и намалява оперативните разходи в центровете за данни...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

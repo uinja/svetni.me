@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Thinking Machines Lab – Илюстрация на цикличната трансформър архитектура
+Изследователската компания Thinking Machines Lab представи Inkling 2 Mini — нов мултимодален модел с..."><title>Thinking Machines пусна отворения цикличен трансформър Inkling 2 Mini, който разсъждава във вътрешни цикли и работи на лаптоп - Светни.ме</title><meta property="og:title" content="Thinking Machines пусна отворения цикличен трансформър Inkling 2 Mini, който разсъждава във вътрешни цикли и работи на лаптоп - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Thinking Machines Lab – Илюстрация на цикличната трансформър архитектура
+Изследователската компания Thinking Machines Lab представи Inkling 2 Mini — нов мултимодален модел с..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Thinking Machines пусна отворения цикличен трансформър Inkling 2 Mini, който разсъждава във вътрешни цикли и работи на лаптоп</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/hero.png" alt="Архитектурна илюстрация на цикличния трансформър Inkling 2 Mini на Thinking Machines Lab"><br><small>Източник: The Decoder / Thinking Machines Lab – Илюстрация на цикличната трансформър архитектура</small></p>
+<p>Изследователската компания <a href="/pages/thinking-machines-lab.html">Thinking Machines Lab</a> представи <a href="/pages/inkling-2-mini.html">Inkling 2 Mini</a> — нов мултимодален модел с отворени тегла под лиценз Apache 2.0, базиран на архитектурата на т.нар. <a href="/pages/looped-transformer.html">цикличен трансформър</a> (looped transformer), съобщават The Decoder и официалният инженерен блог на лабораторията [1, 2]. Вместо да генерира хиляди думи видими разсъждения, моделът прекарва всеки токен по три пъти последователно през средните 12 от своите 24 слоя, което му позволява да мисли по-дълбоко във вътрешното латентно пространство, да решава сложни задачи с по-малко думи и да работи изцяло локално върху стандартен лаптоп [1, 2].</p>
+<p><img src="/articles/2026/11/21/inkling-2-mini-looped-transformer-local-reasoning/infographic.png" alt="Инфографика: Архитектура, бенчмаркове и енергийна ефективност на цикличния трансформър Inkling 2 Mini"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>24 слоя с трикратен вътрешен цикъл и механизъм Attention Residuals</h2>
+<p>В архитектурно отношение Inkling 2 Mini е модел от типа <a href="/pages/mixture-of-experts.html">смес от експерти</a> (Mixture-of-Experts / MoE) с общо 26,4 милиарда параметъра, получени чрез орязване (pruning) на две трети от експертите спрямо основната скалираща линия на лабораторията, като поради цикличните повторения за всеки токен се активират ефективно 5,4 милиарда параметъра [1, 2]. Моделът обработва както текст, така и изображения, и разполага с контекстен прозорец от 1 милион токена.</p>
+<p>Неговите 24 слоя са разделени на четири функционални блока от по 6 слоя [2]. Първият блок (прелюдията, която превежда входните ембединги) и последният четвърти блок (който подготвя изходните токени) се изпълняват само по веднъж. Двата средни блока (общо 12 слоя), където се концентрира абстрактното логическо разсъждение, се изпълняват три пъти последователно в цикъл за всеки токен. За да се предава богата информация между отделните обиколки на цикъла, моделът внедрява механизма Attention Residuals: вместо просто да събира изходите на слоевете в една обща сума, всеки слой чете изходите на предходните блокове и динамично научава собствена оптимална комбинация от тях [2].</p>
+<h2>Лидер при компактните агенти: 6 пъти по-ниска цена и рекорд по интелигентност за джаул</h2>
+<p>Вътрешното циклично мислене носи драматичен скок в способността на модела да решава последователни задачи без дълги текстови вериги от мисли (no-CoT): времевият хоризонт на задачите, които моделът решава без външен CoT, скача от 16 секунди при един пас до 37 секунди при три цикъла, а при изследователската версия с променлив брой цикли точността продължава да расте дори при 10 повторения (два пъти повече от тези, с които е трениран) [2]. Според независимия индекс за интелигентност на Artificial Analysis, Inkling 2 Mini постига 20 точки — изравнявайки се с Qwen3.8 27B, но при приблизително 6 пъти по-ниска цена и 4 пъти по-висока скорост на генерация [1, 3].</p>
+<p>В бенчмарковете за агентно софтуерно инженерство Inkling 2 Mini оглавява класирането сред всички отворени модели под 100 милиарда параметъра, постигайки 48,2 процента на DeepSWE v1.1 и 46,5 процента на Vals Index v2.2, като води убедително и в тестовете за работа с инструменти и търсене BrowseComp, DeepSearchQA и MCP Atlas [1, 2]. Изследователите от лабораториите Hazy Research и Scaling Intelligence в Станфорд, които оценяват показателя „интелигентност за джаул“ (intelligence per joule) върху компактния суперкомпютър <a href="/pages/nvidia-dgx-spark.html">Nvidia DGX Spark</a>, регистрират резултат от 0,703 за Inkling 2 Mini — значително над Qwen3.6-35B-A3B (0,430) и Gemma-4-26B-A4B (0,159) [2].</p>
+<h2>Нативно NVFP4 обучение и локална работа върху MacBook в самолетен режим</h2>
+<p>За да се побере моделът в паметта на потребителски устройства, преобладаващата част от теглата на Inkling 2 Mini са обучени и внедрени нативно в 4-битов формат NVFP4, докато последните четири слоя използват прецизност MXFP8 [2]. Това свива общия отпечатък в оперативната памет до около 20 GB, позволявайки локално изпълнение върху компютри Mac с поне 32 GB обединена памет или върху настолни системи <a href="/pages/nvidia-dgx-spark.html">Nvidia DGX Spark</a> [1, 2].</p>
+<p>По време на демонстрационните тестове инженерите на Thinking Machines стартират модела офлайн върху MacBook Pro (M5 Pro, 48 GB RAM) по време на полет в самолетен режим, където Inkling 2 Mini самостоятелно проектира и компилира работещ 3D авиосимулатор само за няколко минути [2]. В друг експеримент, наречен Thinkyville, един-единствен офлайн лаптоп MacBook управлява едновременно 20 постоянни автономни агенти (жители на виртуално градче), които планират ежедневието си, общуват помежду си и отговарят на бележки в реално време. Теглата на модела и версията с променлив брой цикли вече са достъпни за изтегляне в Hugging Face и за директно тестване в Tinker Playground [1, 4].</p>
+<h2>Архитектурната революция на латентното мислене: Защо цикличните трансформъри променят локалния ИИ</h2>
+<p>Появата на <a href="/pages/inkling-2-mini.html">Inkling 2 Mini</a> от <a href="/pages/thinking-machines-lab.html">Thinking Machines Lab</a> атакува едно от най-големите противоречия в съвременните модели за разсъждения. Досегашният индустриален стандарт за повишаване на интелигентността по време на инференс (test-time compute) разчиташе на генерирането на десетки хиляди видими или скрити текстови токени в дълги вериги от мисли. Този подход обаче принуждава модела да декодира всяка междинна мисъл до дискретна дума от речника, да разширява постоянно KV-кеша си и да хаби огромна пропусквателна способност на паметта.</p>
+<p>Архитектурата на <a href="/pages/looped-transformer.html">цикличния трансформър</a> в комбинация със <a href="/pages/mixture-of-experts.html">смес от експерти</a> доказва, че дълбокото сериално разсъждение може да се извършва вътре в непрекъснатите многомерни вектори на средните слоеве, преди изобщо да бъде излъчен следващият токен. Макар самите създатели обективно да отбелязват, че циклите не увеличават обема от наизустени енциклопедични факти в теглата (които моделът компенсира чрез отлично използване на външни търсачки и MCP инструменти), почти двукратното превъзходство по „интелигентност за джаул“ в тестовете на Станфорд показва пътя към следващото поколение периферен ИИ. Когато модел с отпечатък от 20 GB може да координира 20 автономни агента или да пише сложен софтуер напълно офлайн на лаптоп при шесткратно по-ниска себестойност, центърът на тежестта при агентните системи започва трайно да се измества от скъпите облачни API-та към локалния потребителски хардуер.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/">New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop - The Decoder</a></li>
+<li><a href="https://thinkingmachines.ai/news/inkling-2-mini/">Inkling 2 Mini: Open-Weights Looped Transformer for Efficient Agentic Reasoning - Thinking Machines Lab</a></li>
+<li><a href="https://artificialanalysis.ai/articles/inkling-2-mini">Inkling 2 Mini Benchmark &amp; Cost Efficiency Analysis - Artificial Analysis</a></li>
+<li><a href="https://huggingface.co/thinkingmachines/Inkling-2-Mini">thinkingmachines/Inkling-2-Mini Open Weights Repository - Hugging Face</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/thinking-machines-lab.html">Thinking Machines Lab</a><p>Thinking Machines Lab е изследователска компания за изкуствен интелект, фокусирана върху създаването на високоефективни отворени модели за разсъждения...</p></li><li><a href="/pages/inkling-2-mini.html">Inkling 2 Mini</a><p>Inkling 2 Mini е отворен мултимодален модел от типа Mixture-of-Experts (26,4 милиарда общи параметъра и 5,4 милиарда активни), разработен от Thinking ...</p></li><li><a href="/pages/looped-transformer.html">Цикличен трансформър (Looped Transformer)</a><p>Цикличният трансформър (Looped Transformer) е невронна архитектура, при която определени вътрешни слоеве на трансформъра се изпълняват многократно в ц...</p></li><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/nvidia-dgx-spark.html">Nvidia DGX Spark</a><p>Nvidia DGX Spark е компактен настолен суперкомпютър за изкуствен интелект на Nvidia, проектиран за локално прототипиране, фино настройване и изпълнени...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

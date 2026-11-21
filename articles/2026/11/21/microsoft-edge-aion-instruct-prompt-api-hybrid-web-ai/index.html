@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Microsoft Edge Developer Blog / Демонстрация на локалния модел Aion Instruct и Prompt API в Microsoft Edge
+В официално съобщение в блога за разработчици на Windows и Edge софтуерният инже..."><title>Microsoft Edge въвежда локалния модел Aion Instruct, Prompt API и експериментален Decisions API за хибриден уеб ИИ - Светни.ме</title><meta property="og:title" content="Microsoft Edge въвежда локалния модел Aion Instruct, Prompt API и експериментален Decisions API за хибриден уеб ИИ - Светни.ме"><meta property="og:description" content="Източник: Microsoft Edge Developer Blog / Демонстрация на локалния модел Aion Instruct и Prompt API в Microsoft Edge
+В официално съобщение в блога за разработчици на Windows и Edge софтуерният инже..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/microsoft-edge-aion-instruct-prompt-api-hybrid-web-ai/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/microsoft-edge-aion-instruct-prompt-api-hybrid-web-ai/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Microsoft Edge въвежда локалния модел Aion Instruct, Prompt API и експериментален Decisions API за хибриден уеб ИИ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/microsoft-edge-aion-instruct-prompt-api-hybrid-web-ai/hero.png" alt="Хибриден изкуствен интелект в уеб браузъра Microsoft Edge чрез локалния модел Aion Instruct и Prompt API"><br><small>Източник: Microsoft Edge Developer Blog / Демонстрация на локалния модел Aion Instruct и Prompt API в Microsoft Edge</small></p>
+<p>В официално съобщение в блога за разработчици на Windows и Edge софтуерният инженер Сохум Чатърджи обяви три ключови технологични обновления, които превръщат браузъра <a href="/pages/microsoft-edge.html">Microsoft Edge</a> в пълноценна платформа за хибриден изкуствен интелект в уеб среда [1]. Компанията пуска в обща наличност новия компактен модел с отворени тегла <a href="/pages/aion-instruct.html">Aion Instruct</a>, стартира публичен Origin Trial за браузърния интерфейс <a href="/pages/prompt-api.html">Prompt API</a> за реални продукционни уебсайтове и представя ранна версия за разработчици на експерименталния Decisions API за бързо структурирано оценяване на текст без генеративен овърхед [1].</p>
+<h2>Aion Instruct с 2.3 милиарда параметри заменя Phi-4-mini като вграден браузърен модел</h2>
+<p>След успешното приключване на предварителните тестове с версията Aion-1.0-Instruct и интегрирането на обратната връзка от ранните внедрители, финалният модел Aion Instruct вече е достъпен с отворени тегла в платформата <a href="/pages/hugging-face.html">Hugging Face</a> и поема ролята на стандартен вграден модел в Microsoft Edge, заменяйки досегашния <a href="/pages/phi-4-mini.html">Phi-4-mini</a> [1]. По-късно през годината моделът ще бъде интегриран на системно ниво и в операционната система Windows, разширявайки локалните ИИ възможности върху стандартни компютри и Copilot+ PC устройства.</p>
+<p>С архитектура от едва 2.3 милиарда параметри Aion Instruct представлява ново поколение <a href="/pages/small-language-models.html">малки езикови модели</a> (SLM), което е значително по-компактно, по-бързо и съвместимо с много по-широк спектър от потребителски хардуер спрямо фамилията Phi [1]. Въпреки намаления размер моделът запазва съпоставимо качество при ключови уеб задачи като синтез и генериране на текст, обобщаване, стриктно следване на инструкции и извеждане на структурирани данни. За да се гарантира оптимално управление на системните ресурси, Edge изтегля Aion Instruct само при първо реално извикване от уебсайт или браузърна функция и единствено върху устройства с достатъчен хардуерен капацитет, като потребителите разполагат с пълен контрол да деактивират локалния ИИ от настройките, което незабавно изтрива модела от диска и блокира бъдещи изтегляния [1].</p>
+<h2>Origin Trial за Prompt API и еднопасово вероятностно оценяване чрез Decisions API</h2>
+<p>До момента интерфейсът Prompt API беше ограничен само до тестовите канали Edge Canary и Dev, но с новия Origin Trial уеб разработчиците вече могат да активират локален браузърен инференс директно върху своите живи продукционни сайтове [1]. Тази фаза позволява изпробване на функции за локална текстова асистенция и обобщаване (заедно със Summarizer API) в реални потребителски условия, като събраните данни за производителността и оперативната съвместимост между различните модели ще послужат за стандартизацията на интерфейса съвместно с останалите производители на браузъри и уеб общността [1].</p>
+<p>Паралелно с това Microsoft представя в каналите Edge Canary и Dev експерименталния интерфейс Decisions API, задвижван локално от Aion Instruct и базиран на отворената спецификация за браузърни решения [1] [2]. Чрез извикване на <code>DecisionModel.create()</code> и <code>model.decide()</code> в няколко реда клиентски JavaScript код уеб приложенията могат да задават едновременно въпроси за множествен избор (<code>choice</code>), числови оценки по скала от 1 до 5 (<code>score</code>) и булеви проверки Да/Не (<code>boolean</code>) върху даден текст (например потребителско ревю в електронен магазин), получавайки обратно точни вероятности и коефициент на увереност (<code>confidence</code>), изчислени в един-единствен проход на модела без никакво генериране на текст [1].</p>
+<p><img src="/articles/2026/11/21/microsoft-edge-aion-instruct-prompt-api-hybrid-web-ai/infographic.png" alt="Инфографика: Архитектура на хибридния уеб ИИ в Microsoft Edge с Aion Instruct и браузърни API"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системни архитектурни и макроикономически последици: Уеб браузърът като универсален хибриден ИИ рънтайм</h2>
+<p>Интегрирането на 2.3-милиардния модел Aion Instruct заедно със стандартизираните интерфейси Prompt API и Decisions API в Microsoft Edge трансформира ролята на уеб браузъра от пасивен рендериращ клиент в управлявана среда за изпълнение на невронни мрежи. В продължение на десетилетия уеб разработчиците бяха принудени или да изпращат всяка текстова операция към скъпи облачни сървъри, или да пакетират собствени тежки WebAssembly/WebGPU модели за всеки отделен сайт. Предоставянето на един споделен, управляван от браузъра локален модел елиминира дублираното изтегляне на гигабайти тегла и осигурява мигновен достъп до локален инференс през стандартен JavaScript.</p>
+<p>От архитектурна гледна точка концепцията за хибриден изкуствен интелект решава фундаменталната дилема между латентност, поверителност и изчислителна мощ. Чрез локалното изпълнение на Decisions API и Prompt API уеб приложенията могат да извършват триаж на потребителското намерение, филтриране, сортиране и предварително обобщаване директно върху клиентското устройство с нулева мрежова латентност и без данните да напускат браузъра. Само когато задачата надхвърли капацитета на 2.3B модела или устройството не поддържа локален ИИ, приложението пренасочва заявката към конфигуриран облачен доставчик.</p>
+<p>В макроикономически план тази хибридна архитектура драстично променя структурата на разходите за уеб базираните SaaS компании. Прехвърлянето на милиарди рутинни операции за класификация, скоринг и текстова обработка от облачните API сървъри към локалните GPU и NPU ускорители на крайните потребители премахва променливия разход за токени при базовите интерактивни функции, демократизирайки достъпа до интелигентни уеб интерфейси дори за малки независими разработчици.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/">Hybrid intelligence on the Web: Introducing Aion Instruct and Prompt API in Microsoft Edge - Microsoft Edge Dev Blog</a></li>
+<li><a href="https://github.com/explainers-by-googlers/decisions-api">Decisions API Explainer - Web Community &amp; Browser Standardization Repository</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft-edge.html">Microsoft Edge</a><p>Microsoft Edge е уеб браузърът на Microsoft, който интегрира вградени локални модели с изкуствен интелект и стандартни уеб API интерфейси за изграждан...</p></li><li><a href="/pages/aion-instruct.html">Aion Instruct</a><p>Aion Instruct е компактен езиков модел с отворени тегла (2.</p></li><li><a href="/pages/prompt-api.html">Prompt API</a><p>Prompt API е стандартизиран браузърен JavaScript интерфейс, който позволява на уеб приложенията да извикват локално вградени малки езикови модели (кат...</p></li><li><a href="/pages/phi-4-mini.html">Phi-4-mini</a><p>Phi-4-mini е малък езиков модел от фамилията Phi на Microsoft, използван като първоначален вграден локален модел в браузъра Microsoft Edge преди замян...</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/small-language-models.html">Малки езикови модели (Small Language Models - SLM)</a><p>Малките езикови модели (Small Language Models - SLM) са компактни невронни архитектури (обикновено между 1 и 10 милиарда параметри), оптимизирани за л...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

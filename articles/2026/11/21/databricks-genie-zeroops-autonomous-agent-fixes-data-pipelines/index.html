@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Databricks
+Лидерът в платформите за обработка на големи данни Databricks обяви публичната бета версия на Genie ZeroOps – специализиран автономен оперативен ко-пилот за конвейери за данни,..."><title>Databricks представи Genie ZeroOps: автономен агент за самовъзстановяване на ETL конвейери за данни, обучен върху 80 000 реални срива - Светни.ме</title><meta property="og:title" content="Databricks представи Genie ZeroOps: автономен агент за самовъзстановяване на ETL конвейери за данни, обучен върху 80 000 реални срива - Светни.ме"><meta property="og:description" content="Източник: Databricks
+Лидерът в платформите за обработка на големи данни Databricks обяви публичната бета версия на Genie ZeroOps – специализиран автономен оперативен ко-пилот за конвейери за данни,..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/databricks-genie-zeroops-autonomous-agent-fixes-data-pipelines/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/databricks-genie-zeroops-autonomous-agent-fixes-data-pipelines/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Databricks представи Genie ZeroOps: автономен агент за самовъзстановяване на ETL конвейери за данни, обучен върху 80 000 реални срива</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/databricks-genie-zeroops-autonomous-agent-fixes-data-pipelines/hero.png" alt="Автономни агентни системи за мониторинг и възстановяване на конвейери за данни"><br><small>Източник: Databricks</small></p>
+<p>Лидерът в платформите за обработка на големи данни <a href="/pages/databricks.html">Databricks</a> обяви публичната бета версия на Genie ZeroOps – специализиран автономен оперативен ко-пилот за конвейери за данни, обучен върху масив от над 80 000 реални клиентски инцидента и трасировки на грешки <code>[1]</code>. Системата използва напреднали <a href="/pages/ai-agents.html">AI агенти</a> за автоматично диагностициране на повреди в мащабни клъстери за данни, генериране на софтуерни корекции за <a href="/pages/apache-spark.html">Apache Spark</a> и SQL скриптове и автономно самовъзстановяване на обработката без необходимост от нощни дежурства на инженери.</p>
+<p><img src="/articles/2026/11/21/databricks-genie-zeroops-autonomous-agent-fixes-data-pipelines/infographic.png" alt="Инфографика: Четири ключови стълба на архитектурата Genie ZeroOps в Databricks"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Анатомия на самовъзстановяването: От откриване на аномалии до изолирано пачване</h2>
+<p>В конвенционалните корпоративни среди скъсването на ETL конвейер (поради промяна в схемата на данните, препълване на паметта или неочаквани мрежови смущения) парализира аналитичните системи и изисква часове ръчно разследване <code>[1]</code>. Genie ZeroOps непрекъснато следи графа на изпълнение на задачите, анализира системната телеметрия и класифицира първопричината за повредата чрез невронни модели, обучени върху десетки хиляди производствени инциденти.</p>
+<p>След установяване на проблема агентът автоматично подготвя коригиращ код: пренаписване на SQL заявки, промяна на Spark партиционирането или саниране на дефектни редове. Преди да приложи корекцията в реалната среда, ZeroOps я тества в изолиран пясъчник с транзакционна верификация, гарантирайки, че промяната няма да доведе до странични ефекти или деградация на данните.</p>
+<h2>Управление на риска и контролирана автономия в съвременната архитектура</h2>
+<p>Защитата на производствената цялост е заложена в ядрото на Genie ZeroOps чрез стриктна интеграция с <a href="/pages/data-architecture.html">архитектурата на данните</a> на предприятието <code>[1]</code>. Нискорисковите технически инциденти – като динамично заделяне на допълнителна памет за изпълнителите на Spark или автоматично повторение на прекъснати мрежови заявки – се отстраняват напълно автономно за секунди.</p>
+<p>При промени, които засягат бизнес логиката на изчисленията, агентът преминава в режим на контролирано съдействие: той генерира изчерпателен доклад с анализ на първопричината, описва предложените модификации и изпраща готов Pull Request към хранилището на инженерния екип, изисквайки изрично потвърждение от дежурния специалист.</p>
+<h2>Трансформацията от DataOps към ZeroOps и край на нощните дежурства</h2>
+<p>Въвеждането на Genie ZeroOps от <a href="/pages/databricks.html">Databricks</a> бележи качествено нова фаза в еволюцията на корпоративната инфраструктура. Досега инженерите по данни прекарваха над 40% от работното си време в реактивна поддръжка, следене на аларми и отстраняване на чупливи интеграционни грешки. Преминаването към автономен самовъзстановяващ се режим премахва оперативния шум и освобождава експертния потенциал за създаване на нови аналитични продукти.</p>
+<p>В макроикономически план надеждността на информационните потоци става абсолютен бизнес императив. Забавянето на дневните отчети за продажби или логистични доставки струва милиони на световните корпорации. Чрез гарантиране на непрекъсваемост на данните с 90% по-малко човешки инциденти, концепцията ZeroOps поставя стандарта за това как ще оперира модерното предприятие в ерата на автономните софтуерни системи.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.databricks.com/blog/genie-zeroops-now-public-beta-autonomous-agent-fixes-data-pipelines-lessons-80000-customer">Genie ZeroOps, now in public beta: An autonomous agent that fixes data pipelines, with lessons from 80,000 customer issues - Databricks</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/databricks.html">Databricks</a><p>Databricks е компания за данни и изкуствен интелект, основана от създателите на Apache Spark.</p></li><li><a href="/pages/apache-spark.html">Apache Spark</a><p>Apache Spark е софтуерна рамка с отворен код за разпределена линейна обработка на големи масиви от данни (Big Data).</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/data-architecture.html">Архитектура на данните (Data Architecture)</a><p>Архитектурата на данните дефинира стандартите, конвенциите и топологията за събиране, съхранение, трансформация и достъп до структурирани и неструктур...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

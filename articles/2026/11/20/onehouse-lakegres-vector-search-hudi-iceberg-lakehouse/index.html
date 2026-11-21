@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Onehouse / Apache Hudi &amp;amp; Iceberg Lakehouse
+Край на изолираните векторни бази и ETL фрагментацията
+Съвременната корпоративна архитектура за извличане на контекст за големи езикови моде..."><title>Lakegres внедрява векторно търсене директно в отворените езерни таблици Hudi и Iceberg без ETL дублиране - Светни.ме</title><meta property="og:title" content="Lakegres внедрява векторно търсене директно в отворените езерни таблици Hudi и Iceberg без ETL дублиране - Светни.ме"><meta property="og:description" content="Източник: Onehouse / Apache Hudi &amp;amp; Iceberg Lakehouse
+Край на изолираните векторни бази и ETL фрагментацията
+Съвременната корпоративна архитектура за извличане на контекст за големи езикови моде..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/20/onehouse-lakegres-vector-search-hudi-iceberg-lakehouse/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/20/onehouse-lakegres-vector-search-hudi-iceberg-lakehouse/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Lakegres внедрява векторно търсене директно в отворените езерни таблици Hudi и Iceberg без ETL дублиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/20/onehouse-lakegres-vector-search-hudi-iceberg-lakehouse/hero.png" alt="Архитектура на езерни данни и векторно търсене с Lakegres"><br><small>Източник: Onehouse / Apache Hudi &amp; Iceberg Lakehouse</small></p>
+<h2>Край на изолираните векторни бази и ETL фрагментацията</h2>
+<p>Съвременната корпоративна архитектура за извличане на контекст за големи езикови модели (<a href="/pages/rag.html">RAG</a>) доскоро страдаше от дълбоко структурен порок: необходимостта от изграждане на сложни, скъпи и чупливи конвейери за извличане, трансформация и зареждане (ETL) [1]. Корпоративните данни живеят в мащабни езера от данни (data lakes), организирани в отворени таблични формати като <a href="/pages/apache-hudi.html">Apache Hudi</a> и <a href="/pages/apache-iceberg.html">Apache Iceberg</a>. За да се осигури семантично търсене обаче, инженерите бяха принудени да екстрахират тези масиви, да генерират вектори (embeddings) и да ги синхронизират в отделни, специализирани <a href="/pages/vector-databases.html">векторни бази данни</a> като Pinecone, Milvus или Qdrant.</p>
+<p>Тази фрагментация създава сериозни оперативни рискове:</p>
+<ul>
+<li><strong>Двойни разходи за съхранение:</strong> Едни и същи терабайти от информация се съхраняват паралелно в облачния обектен склад (S3/GCS) и в паметта на специализираните векторни клъстери.</li>
+<li><strong>Времево разминаване (Data Drift):</strong> Актуализациите, корекциите и изтриванията в основното езеро от данни се отразяват във векторната база със закъснение от часове или дни, водейки до халюцинации и генериране на остарели отговори от изкуствения интелект.</li>
+<li><strong>Срив в сигурността и управлението (Governance):</strong> Правата за достъп на ниво редове и колони, дефинирани в езерото от данни, трябва да бъдат ръчно пресъздавани и поддържани във външната векторна система, което често води до изтичане на чувствителна информация.</li>
+</ul>
+<p>Компанията <a href="/pages/onehouse.html">Onehouse</a>, основана от създателите на Apache Hudi, представи отговор на тази криза чрез <a href="/pages/lakegres.html">Lakegres</a> — новаторски изчислителен слой с отворен код, който предоставя векторно търсене на сходство директно върху съществуващите отворени езерни таблици, без каквото и да било дублиране на данни.</p>
+<h2>Архитектура на Lakegres: PostgreSQL протокол и векторизирано изпълнение върху Parquet</h2>
+<p>В основата на Lakegres стои елегантно инженерно решение: пълна съвместимост с мрежовия протокол на <a href="/pages/postgresql.html">PostgreSQL</a> и разширението pgvector, съчетана с директно четене на Parquet файлове в обектни складове.</p>
+<p>Вместо да принуждава разработчиците да изучават нови клиентски библиотеки и собственически API интерфейси, Lakegres се държи като стандартен PostgreSQL сървър. Всеки съществуващ фреймуърк за изкуствен интелект — от LangChain и LlamaIndex до корпоративни вътрешни микроуслуги — може да се свърже към Lakegres чрез стандартен JDBC/ODBC или PostgreSQL драйвер. Заявките за векторно сходство (<code>ORDER BY embedding &lt;-&gt; query_vector LIMIT 10</code>) се приемат директно без никаква промяна в клиентския код.</p>
+<p>Под капака обаче Lakegres не записва данни в традиционен монолитен релационен диск. Заявката се превежда директно във векторизиран план за изпълнение върху Apache Hudi или Apache Iceberg метаданните:</p>
+<ol>
+<li><strong>Пренасочване и филтриране на метаданни:</strong> Първоначално заявката използва статистиките на Hudi/Iceberg (като min/max индекси и зонови карти), за да елиминира ненужните Parquet файлове, преди да докосне векторния индекс.</li>
+<li><strong>Индексиране на вектори на място (In-Situ Indexing):</strong> Lakegres генерира индекси за приблизително най-близки съседи (HNSW и IVFFlat), съхранявани като леки метаданни заедно с отворените таблици. Индексите реферират редовете директно във файловия формат на езерото.</li>
+<li><strong>Хибридно търсене в един проход:</strong> Системата позволява едновременно филтриране по релационни атрибути (например <code>tenant_id = &#39;enterprise_a&#39; AND created_at &gt; NOW() - INTERVAL &#39;30 days&#39;</code>) и семантично векторно търсене в рамките на един-единствен разпределен план за изпълнение, елиминирайки нуждата от двуетапни външни обединения (joins).</li>
+</ol>
+<p>Според предоставените технически бенчмаркове Lakegres постига суб-секундна латентност при търсене в таблици с десетки милиони вектори, съкращавайки разходите за инфраструктура с над 70% в сравнение с поддържането на паралелен векторен клъстер.</p>
+<h2>Архитектурен суверенитет и макроикономически последици: Свободните формати побеждават затворените екосистеми</h2>
+<p>Появата на Lakegres е емблематичен момент в еволюцията на инфраструктурата за корпоративен изкуствен интелект. Тя отбелязва началото на края за първата вълна от стартъпи за векторни бази данни, които разчитаха на изкуствено отделяне на векторните данни от корпоративното езеро.</p>
+<ul>
+<li><strong>Триумфът на отворените формати за данни:</strong> Корпоративните клиенти категорично отказват да заключат критичните си данни в затворени облачни хранилища с проприетарни формати. Apache Iceberg и Apache Hudi вече се утвърдиха като de facto стандартът за дългосрочно съхранение. Фактът, че векторното търсене вече може да се изпълнява директно върху тях, превръща обектния склад в единствен и окончателен източник на истина (Single Source of Truth).</li>
+<li><strong>Консолидация на изчислителните разходи:</strong> За CIO и техническите директори елиминирането на ETL конвейерите означава рязко свиване на „данъка за пренос на данни“ (data egress and pipeline tax). Поддържането на поточни задания, които да поддържат външни бази актуални, генерираше огромни скрити сметки в AWS и GCP. Lakegres позволява същите изчисления да се правят по заявка (on-demand) или с леки споделени ресурси.</li>
+<li><strong>Стандартизация около PostgreSQL:</strong> Изборът на Onehouse да използва Postgres протокола затвърждава PostgreSQL като универсалната операционна система за данни на модерната ера. От релационни трансакции, през аналитични заявки, до векторен RAG — общият език на SQL и Postgres екосистемата намалява драстично кривата на обучение за инженерните екипи.</li>
+</ul>
+<p>Lakegres доказва, че бъдещето на генеративния изкуствен интелект не изисква пренаписване на правилата за съхранение на корпоративни данни, а интелигентно надграждане на вече съществуващите отворени езерни основи.</p>
+<p><img src="/articles/2026/11/20/onehouse-lakegres-vector-search-hudi-iceberg-lakehouse/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.onehouse.ai/blog/lakegres-vector-search-on-open-table-formats">Lakegres: Vector search on existing Open/Hudi/Iceberg tables - Onehouse</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/onehouse.html">Onehouse</a><p>Onehouse е софтуерна компания за облачна инфраструктура за данни, основана от създателите на Apache Hudi.</p></li><li><a href="/pages/lakegres.html">Lakegres</a><p>Lakegres е високоефективен отворен слой за заявки и векторно търсене, разработен от Onehouse, който позволява директно изпълнение на PostgreSQL-съвмес...</p></li><li><a href="/pages/apache-hudi.html">Apache Hudi</a><p>Apache Hudi (Hadoop Upserts Deletes and Incrementals) е отворена платформа за управление на трансакционни езера от данни (Lakehouse).</p></li><li><a href="/pages/apache-iceberg.html">Apache Iceberg</a><p>Apache Iceberg е високопроизводителен формат на таблици с отворен код, предназначен за масивни аналитични масиви от данни.</p></li><li><a href="/pages/vector-databases.html">Векторни бази данни (Vector Databases)</a><p>Векторните бази данни (Vector Databases) са специализирани системи за съхранение и индексен анализ на високоразмерни векторни ембединги (embeddings), ...</p></li><li><a href="/pages/postgresql.html">PostgreSQL</a><p>PostgreSQL (често наричана просто Postgres) е мощна система за управление на релационни бази данни (RDBMS) с отворен код.</p></li><li><a href="/pages/rag.html">Retrieval-Augmented Generation (RAG)</a><p>RAG е архитектурна рамка, която комбинира способностите на големите езикови модели (LLM) с външни системи за извличане на информация.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

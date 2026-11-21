@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Илюстрация на защитата срещу дестилация на модели и извличане на вътрешни разсъждения
+Според технически репортаж на The Decoder [1] и официалния доклад за сигурност на OpenA..."><title>OpenAI затегна защитите на GPT-6.2 Astra и Sol срещу дестилация на модели, сваляйки успешните атаки от 54% на 0.2% - Светни.ме</title><meta property="og:title" content="OpenAI затегна защитите на GPT-6.2 Astra и Sol срещу дестилация на модели, сваляйки успешните атаки от 54% на 0.2% - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Илюстрация на защитата срещу дестилация на модели и извличане на вътрешни разсъждения
+Според технически репортаж на The Decoder [1] и официалния доклад за сигурност на OpenA..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/openai-hardens-gpt-6-2-astra-sol-against-reasoning-extraction/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/openai-hardens-gpt-6-2-astra-sol-against-reasoning-extraction/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI затегна защитите на GPT-6.2 Astra и Sol срещу дестилация на модели, сваляйки успешните атаки от 54% на 0.2%</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/openai-hardens-gpt-6-2-astra-sol-against-reasoning-extraction/hero.png" alt="Защита на езиковите модели GPT-6.2 Astra и Sol срещу извличане на вътрешни вериги на разсъждение и дестилация"><br><small>Източник: The Decoder / Илюстрация на защитата срещу дестилация на модели и извличане на вътрешни разсъждения</small></p>
+<p>Според технически репортаж на The Decoder [1] и официалния доклад за сигурност на <a href="/pages/openai.html">OpenAI</a> [2], компанията е внедрила радикално подсилена архитектура за защита срещу неразрешена <a href="/pages/model-distillation.html">дестилация на модели</a> и извличане на вътрешни вериги на разсъждение в най-новите си системи <a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a> и <a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a>. Във вътрешни автоматизирани стрес-тестове успеваемостта на атаките, които се опитват да извлекат защитените логически стъпки от предходни заявки в сесията, се срива от 54.0% при предходното поколение GPT-6 Astra до едва 0.2% при GPT-6.2 Astra [1]. Паралелно с това успешните пробиви срещу активни заявки в реално време намаляват от 22.9% на 0.9%, като лабораторията вече пренася избрани защитни механизми обратно и към базовия модел GPT-6 Astra [1].</p>
+<h2>Двуслойна защитна архитектура: Изолация на ниво заявка и блокиране на кръстосано четене</h2>
+<p>Техническата защита на разсъждаващите модели оперира едновременно на микрониво (индивидуални API извиквания) и на макрониво (координирани кампании за извличане на синтетични данни) [1]. На ниво отделна заявка инженерният стек комбинира целенасочено следтренировъчно обучение за устойчивост срещу враждебни инструкции със специализирани входни и изходни класификатори, които инспектират както потребителските съобщения, така и параметрите при извикване на външни инструменти (tool calls) [2].</p>
+<p>Критичен елемент от новата инфраструктура е въвеждането на твърди програмни бариери в API слоя, които категорично забраняват на по-стари или по-слабо защитени модели да четат криптираните блокове със защитени разсъждения, генерирани в рамките на същата разговорна нишка [1]. По този начин се затваря един от най-експлоатираните вектори при адаптивното black-box <a href="/pages/red-teaming.html">red-teaming</a> тестване, при който атакуващите превключваха модела в средата на сесията, за да накарат по-уязвим вариант да декодира и обобщи скрития мисловен процес на флагманския модел [2].</p>
+<h2>Адаптивен Red-Teaming и масови санкции срещу координирани мрежи за дестилация</h2>
+<p>За да измери реалната устойчивост на GPT-6.2 Astra срещу автоматизиран индустриален шпионаж, екипът по сигурността на OpenAI е провел агресивни симулации, агрегирани върху шест независими атакуващи модела в режим на адаптивно black-box тестване [1]. В тази конфигурация атакуващите агенти динамично пренаписват своите промптове след всеки отказ, опитвайки се да заобиколят семантичните филтри и да реконструират междинните токени на разсъждение (Chain-of-Thought) [2]. Спадът на показателя Attack Success Rate (ASR) до под един процент доказва, че моделът успява да отдели вътрешното си планиране от финалния публичен отговор дори при многостъпкови провокации.</p>
+<p>Срещу мащабните автоматизирани кампании за кражба на интелектуална собственост OpenAI прилага поведенческа телеметрия, която идентифицира разпределени ферми от акаунти, генериращи синтетични тренировъчни корпуси за обучение на конкурентни модели „ученици“ [2]. В резултат на тези проверки компанията деактивира между няколко хиляди и десетки хиляди злоупотребяващи акаунти всяка седмица [1]. Аналогични мерки предприема и основният конкурент <a href="/pages/anthropic.html">Anthropic</a>, който също блокира десетки хиляди акаунти в борбата срещу систематичните атаки за дестилация, отчитайки между 90% и 99% успеваемост при пресичането на опитите за извличане на вътрешни разсъждения и призовавайки за координиран отговор от индустрията и регулаторите [1].</p>
+<p><img src="/articles/2026/11/21/openai-hardens-gpt-6-2-astra-sol-against-reasoning-extraction/infographic.png" alt="Инфографика: Многослойна защита срещу дестилация на модели в GPT-6.2 Astra и Sol"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системни архитектурни и макроикономически последици: Защитата на веригите на разсъждение като нов индустриален ров</h2>
+<p>Превръщането на вътрешните вериги на разсъждение в строго охранявана търговска тайна бележи фундаментална структурна промяна в икономиката на изкуствения интелект през 2026 година. Докато при класическите авторегресивни модели основният капитал беше концентриран в суровия предтренировъчен корпус, при съвременните разсъждаващи архитектури като GPT-6.2 Astra и Sol конкурентното предимство се крие в скъпоструващите процеси на обучение с подсилване (Reinforcement Learning) и траекториите за верификация на решенията. Ако външен атакуващ може свободно да извлече милиони такива мисловни траектории чрез евтини API заявки, той е в състояние да обучи конкурентен модел чрез директна дестилация за нищожна част от милиардните капиталови разходи на първоначалния създател.</p>
+<p>От архитектурна гледна точка въвеждането на строга криптографска и логическа изолация между вътрешното състояние на разсъждение и видимия изход променя начина, по който корпоративните разработчици проектират агентни системи. Налагането на API блокове срещу четене на мисловната история от по-стари модели означава, че мултиагентните оркестратори вече не могат да третират междинните разсъждения като обикновен споделен текст между разнородни модели, а трябва да разчитат на стандартизирани, капсулирани обекти на състоянието.</p>
+<p>В макроикономически план синхронизираните действия на OpenAI и Anthropic за ежеседмично заличаване на десетки хиляди акаунти очертават нова геополитическа и корпоративна разделителна линия. Тъй като водещите американски лаборатории затварят прозореца за лесна black-box дестилация, лабораториите от втория ешелон и проектите с отворени тегла ще бъдат принудени да инвестират в собствени изчислителни клъстери за генериране на синтетични данни и верификация от първи принципи, вместо да паразитират върху API интерфейсите на фронтиерните доставчици.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/">OpenAI makes it much harder for attackers to extract how its latest AI models think - The Decoder</a></li>
+<li><a href="https://openai.com/index/combatting-adversarial-distillation/">Combatting Adversarial Distillation - OpenAI Official Index</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a><p>GPT-6.</p></li><li><a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a><p>GPT-6.</p></li><li><a href="/pages/model-distillation.html">Дистилация на модели</a><p>Дистилацията на модели е основен инструмент за създаване на високопроизводителни специализирани модели с ниска латентност.</p></li><li><a href="/pages/red-teaming.html">Ред тийминг</a><p>Ред тиймингът (Red-teaming) е систематичен процес на симулиране на противникови атаки срещу системи с изкуствен интелект (ИИ) с цел идентифициране на ...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

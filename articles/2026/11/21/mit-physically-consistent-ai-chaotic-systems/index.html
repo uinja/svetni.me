@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: MIT News / Визуализация на хаотични траектории и енергийно ограничени динамични пространства
+Моделирането на сложни и хаотични природни или индустриални процеси — от атмосферната циркулац..."><title>MIT LIDS въвежда твърди енергийни ограничения за физически консистентни ИИ модели на хаотични системи - Светни.ме</title><meta property="og:title" content="MIT LIDS въвежда твърди енергийни ограничения за физически консистентни ИИ модели на хаотични системи - Светни.ме"><meta property="og:description" content="Източник: MIT News / Визуализация на хаотични траектории и енергийно ограничени динамични пространства
+Моделирането на сложни и хаотични природни или индустриални процеси — от атмосферната циркулац..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/mit-physically-consistent-ai-chaotic-systems/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/mit-physically-consistent-ai-chaotic-systems/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>MIT LIDS въвежда твърди енергийни ограничения за физически консистентни ИИ модели на хаотични системи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/mit-physically-consistent-ai-chaotic-systems/hero.png" alt="Визуализация на хаотична динамична система и ограничени траектории в изследването на MIT LIDS"><br><small>Източник: MIT News / Визуализация на хаотични траектории и енергийно ограничени динамични пространства</small></p>
+<p>Моделирането на сложни и хаотични природни или индустриални процеси — от атмосферната циркулация и климатичните модели до турбулентните въздушни потоци в авиацията и океанските течения — отбеляза сериозен напредък през последните години, но алгоритмите за <a href="/pages/machine-learning.html">машинно обучение</a> остават уязвими към натрупване на грешки, които при дългосрочни симулации водят до физически невъзможни прогнози [1]. Според официална публикация на <a href="/pages/mit.html">Масачузетския технологичен институт (MIT)</a>, изследователи от лабораторията <a href="/pages/mit-lids.html">Laboratory for Information and Decision Systems (LIDS)</a> са разработили нов математически метод за вграждане на физически ограничения директно в архитектурата на моделите, който гарантира, че техните прогнози никога не надхвърлят реалистичните граници на физическия свят [1].</p>
+<p>Изследването е публикувано в рецензираното научно списание <a href="/pages/pnas.html">Proceedings of the National Academy of Sciences (PNAS)</a> от докторанта в MIT Сунбочен Танг и професорите Навид Азизан и Темистоклис Сапсис, като екипът предоставя свободно и програмния код с отворен достъп [2]. Както отбелязва проф. Темистоклис Сапсис, преподавател по машинно инженерство и асоцииран член на LIDS, липсата на формални математически гаранции за ограничена реакция винаги е била основна пречка пред използването на управлявани от данни модели за сложни нелинейни системи с вътрешна нестабилност [1].</p>
+<p><img src="/articles/2026/11/21/mit-physically-consistent-ai-chaotic-systems/infographic.png" alt="Инфографика за архитектурата на физически консистентните невронни мрежи на MIT LIDS"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Проблемът с неконтролируемото отклонение при хаотичните симулации</h2>
+<p>Надеждното моделиране на сложни динамични системи е от критично значение за редица инженерни и научни направления, сред които приложната <a href="/pages/computational-fluid-dynamics.html">изчислителна динамика на флуидите</a>, аеронавтиката, хидрологията и метеорологията. Във флуидната динамика турбулентните потоци могат да нарушат безопасността на въздушния транспорт, да намалят ефективността на вятърните турбини и да влошат горивната икономичност на превозните средства, докато в метеорологията хаотичният характер на атмосферата затруднява дългосрочните прогнози [1].</p>
+<p>Проф. Навид Азизан, доцент в катедрата по машинно инженерство и Института за данни, системи и общество (IDSS), както и главен изследовател в LIDS, посочва, че минимални разлики в началните условия на една хаотична система водят до драстично различни резултати във времето. Въпреки тази чувствителност обаче в реалния физически свят хаосът не означава, че всичко е възможно — реалните физически системи остават ограничени в определени енергийни и пространствени рамки [1].</p>
+<p>Съществуващите модели за машинно обучение често възпроизвеждат точно данните за кратък времеви интервал, но се провалят при продължителна автономна симулация. Малките числени грешки на всяка стъпка се натрупват лавинообразно, докато симулацията започне да генерира стойности, които растат без лимит (runaway behavior) и описват състояния, каквито никога не биха могли да възникнат в реална физическа среда [1].</p>
+<h2>Защо „меките“ наказания и изкуствените тавани се провалят</h2>
+<p>Досегашните опити за предотвратяване на нереалистични прогнози при хаотични системи се основават предимно на т.нар. „меки ограничения“ (soft constraints) — налагане на наказателни функции или стимули в целевата функция по време на обучението на модела. Според Сунбочен Танг, докторант в катедрата по аеронавтика и астронавтика и LIDS, тези функции обикновено изискват привилегирована предварителна информация за системата и действат единствено по време на тренировъчния процес [1].</p>
+<p>Основният дефект на меките ограничения е, че след приключване на обучението те не осигуряват никаква математическа гаранция по време на реална експлоатация (test time). Когато моделът се сблъска с нови, невиждани входни данни, той все още може да напусне стабилната област и да генерира неограничено растящи стойности [1].</p>
+<p>Екипът на MIT обяснява и защо елементарното налагане на фиксирани числени тавани (clipping) не решава проблема със стабилността. Ако в един метеорологичен модел се зададе произволен горен праг — например максимална температура от 100 градуса — прогнозите формално ще останат ограничени, но подобна груба намеса изкривява динамиката и пречи на модела да научи сложните нетривиални характеристики директно от емпиричните данни [1].</p>
+<h2>Енергийно базирани функции и модулен проекционен слой</h2>
+<p>Ключовата иновация на изследователите от MIT LIDS е преходът към твърдо ограничени <a href="/pages/neural-networks.html">невронни мрежи</a> (hard-constrained neural networks) чрез формулиране на енергийно базирани ограничения [1]. В реалните хаотични физически системи именно дисипацията (разсейването) на енергия поддържа траекториите на системата в ограничено фазово пространство въпреки сложната им нелинейна динамика [2].</p>
+<p>Архитектурата на новия подход функционира чрез три взаимосвързани механизма [1]:</p>
+<ul>
+<li><p><strong>Обучение на енергийно-подобна функция и граница:</strong> Вместо да използва външно зададени прагове, невронната мрежа се обучава директно от данните да разпознава специфична „енергийно-подобна функция“ (energy-like function), както и естествената геометрична граница във фазовото пространство, в рамките на която трябва да остане хаотичното поведение на системата.</p>
+</li>
+<li><p><strong>Интегриране на проекционен слой (Projection Layer):</strong> Към архитектурата се добавя специализиран проекционен слой, който коригира начина, по който моделът прогнозира еволюцията на системата във времето, и налага дисипацията на енергия като твърдо математическо условие.</p>
+</li>
+<li><p><strong>Гарантирано привличане към стабилната област:</strong> Когато симулираната траектория се намира вътре в научената граница, моделът запазва пълната си гъвкавост да възпроизвежда хаотични процеси. Щом прогнозата излезе извън тази граница, проекционният слой принуждава енергийно-подобната величина строго да намалява, притегляйки симулираната система обратно към ограничената физически валидна област.</p>
+</li>
+</ul>
+<p>По този начин авторите установяват първите формални теоретични гаранции, че прогнозите на модела за машинно обучение остават строго ограничени за произволно дълги прогностични хоризонти, дори при напълно нови сценарии извън тренировъчната извадка [1]. Проекционният слой е напълно модулен и агностичен спрямо базовата архитектура, което позволява лесното му прикачване към различни видове невронни мрежи [2].</p>
+<h2>Експериментална валидация и системни импликации за научния ИИ</h2>
+<p>Изследователският екип е тествал своя метод върху широк спектър от физически системи — от класически базови уравнения на хаоса до високоразмерни многомерни динамични системи [2]. Експериментите показват, че докато конвенционалните невронни модели бързо дерайлират във физически невъзможни траектории, твърдо ограничените мрежи на MIT LIDS следват плътно реалното поведение на системата. Надграждащо изследване на членове на същия екип, представено през тази година на конференцията Learning for Dynamics and Control (L4DC), спечели наградата за най-добра научна статия (Best Paper Award) на форума [3].</p>
+<p>В дългосрочен архитектурен и макроикономически план разработката на MIT LIDS адресира един от най-сериозните структурни дефицити на съвременния изкуствен интелект при прилагането му в индустриалното инженерство и физическите науки. Докато големите езикови и визуални модели разполагат с практически неограничени обеми от текст и изображения в интернет, при множество физически, аеродинамични и хидроложки системи експерименталните данни са оскъдни и скъпи за събиране. Както подчертава проф. Навид Азизан, в тези бедни на данни среди физическите закони на самия проблем служат като допълнителен, структурно вграден източник на информация, който компенсира липсата на масивни корпуси от наблюдения [1].</p>
+<p>Системният преход от емпирично тестване („моделът обикновено работи“) към математически доказани архитектурни инварианти като гарантираната ограниченост (boundedness) променя изискванията към сертифицирането на ИИ за критични приложения. Възможността модулен проекционен слой да гарантира физическа консистентност за произволно дълги времеви прозорци отваря пътя към внедряването на дълбоки невронни мрежи в численото прогнозиране на времето, управлението на аерокосмически конструкции, оптимизацията на вятърни паркове и контрола на сложни химични и индустриални реактори, където всяка неконтролируема числена нестабилност носи неприемлив оперативен риск [1].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://news.mit.edu/new-approach-enables-physically-consistent-ai-models-chaotic-systems-1120">New approach enables physically consistent AI models of chaotic systems - MIT News</a></p>
+<p>[2]: <a href="https://www.pnas.org/doi/10.1073/pnas.2533077123">Physically consistent data-driven modeling of chaotic systems - Proceedings of the National Academy of Sciences (PNAS)</a></p>
+<p>[3]: <a href="https://proceedings.mlr.press/v331/goertzen26a.html">Learning for Dynamics and Control (L4DC) 2026 Proceedings - PMLR</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mit.html">Масачузетски технологичен институт (MIT)</a><p>Масачузетският технологичен институт (Massachusetts Institute of Technology - MIT) е един от най-престижните частни изследователски университети в све...</p></li><li><a href="/pages/mit-lids.html">MIT LIDS (Laboratory for Information and Decision Systems)</a><p>Laboratory for Information and Decision Systems (LIDS) е най-старата интердисциплинарна изследователска лаборатория в Масачузетския технологичен инсти...</p></li><li><a href="/pages/pnas.html">Proceedings of the National Academy of Sciences (PNAS)</a><p>Proceedings of the National Academy of Sciences of the United States of America (PNAS) е официалното рецензирано мултидисциплинарно научно списание на...</p></li><li><a href="/pages/machine-learning.html">Машинно обучение (Machine Learning)</a><p>Машинното обучение (ML) е подполе на изкуствения интелект, фокусирано върху изграждането на системи, които се учат от данни, за да подобрят работата с...</p></li><li><a href="/pages/neural-networks.html">Невронни мрежи (Neural Networks)</a><p>Изкуствените невронни мрежи са изчислителни модели, вдъхновени от структурата на биологичния мозък, изградени от слоеве свързани възли (неврони) с обу...</p></li><li><a href="/pages/computational-fluid-dynamics.html">Изчислителна хидродинамика (CFD)</a><p>Изчислителната хидродинамика (Computational Fluid Dynamics, CFD) е клон на механиката на флуидите, който използва числени методи и алгоритми за симули...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

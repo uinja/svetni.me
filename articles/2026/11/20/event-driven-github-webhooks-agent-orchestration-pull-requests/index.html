@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Amit Merchant / GitHub Architecture
+Капанът на цикличното запитване (Polling) при автономните програмисти
+С навлизането на автономните ИИ агенти в работния процес на съвременните софтуерн..."><title>GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване - Светни.ме</title><meta property="og:title" content="GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване - Светни.ме"><meta property="og:description" content="Източник: Amit Merchant / GitHub Architecture
+Капанът на цикличното запитване (Polling) при автономните програмисти
+С навлизането на автономните ИИ агенти в работния процес на съвременните софтуерн..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/20/event-driven-github-webhooks-agent-orchestration-pull-requests/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/20/event-driven-github-webhooks-agent-orchestration-pull-requests/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GitHub Event Streams събуждат ИИ агентите при промени в Pull Request без изтощително циклично запитване</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->20 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/20/event-driven-github-webhooks-agent-orchestration-pull-requests/hero.png" alt="Илюстрация на събитийно-ориентирана комуникация и оркестрация на ИИ агенти в GitHub"><br><small>Източник: Amit Merchant / GitHub Architecture</small></p>
+<h2>Капанът на цикличното запитване (Polling) при автономните програмисти</h2>
+<p>С навлизането на автономните <a href="/pages/ai-agents.html">ИИ агенти</a> в работния процес на съвременните софтуерни екипи, начинът, по който софтуерът взаимодейства с платформи като <a href="/pages/github.html">GitHub</a>, претърпява радикална еволюция [1]. Доскоро агентите изпълняваха сравнително кратки, еднократни задачи в рамките на терминала. В новата вълна на автономна разработка обаче агентът генерира завършен код, отваря Pull Request (PR) и очаква следващи стъпки: резултати от автоматизираните тестове в CI/CD конвейера, коментари от старши инженери или изисквания за промяна на интерфейса.</p>
+<p>Именно в този етап на изчакване досегашните архитектури попадаха в сериозен технологичен капан. Най-разпространеният първоначален подход за проследяване на състоянието беше непрекъснатото циклично запитване (polling): агентът изпраща HTTP заявка към GitHub REST API на всеки няколко секунди или минути, за да провери дали някой е оставил рецензия или дали компилацията е завършила успешно.</p>
+<p>Този механизъм създава остри системни проблеми:</p>
+<ul>
+<li><strong>Експресно изчерпване на API квотите (Rate Limiting):</strong> Стандартният лимит на GitHub от 5000 заявки на час за автентикиран потребител се стопява светкавично, когато десетки паралелни агенти проверяват статуса на множество клонове едновременно.</li>
+<li><strong>Пилеене на изчислителни ресурси и памет:</strong> Процесът на агента остава постоянно зареден в оперативната памет, изразходвайки ресурси на сървъра или лаптопа на програмиста за хиляди напълно безполезни празни проверки.</li>
+<li><strong>Нестабилна латентност на реакцията:</strong> Ако агентът пита на всеки десет минути с цел пестене на квоти, той губи способността си да реагира незабавно, когато разработчикът добави спешен коментар към кода.</li>
+</ul>
+<p>Софтуерният инженер Амит Мърчант описва фундаменталния архитектурен преход от това неефективно запитване към реактивни потоци от събития (GitHub Event Streams), които събуждат агентите само при реална необходимост.</p>
+<h2>GitHub Event Streams и силата на Server-Sent Events (SSE)</h2>
+<p>Естественият отговор на проблема с цикличното запитване в разпределените системи традиционно са <a href="/pages/webhooks.html">уебкуките</a> (webhooks). Уебкуките обаче изискват външният потребител да поддържа публично видим HTTP сървър с валиден домейн и TLS сертификат, на който GitHub да изпраща POST заявки. Това изискване е сериозна пречка за локално разработвани агенти на работните станции на програмистите, които се намират зад NAT рутери, корпоративни VPN мрежи и защитни стени (налагайки използване на чупливи тунели като ngrok).</p>
+<p>Решението на този проблем идва чрез GitHub Event Streams, базирани на технологията <a href="/pages/server-sent-events.html">Server-Sent Events</a> (SSE):</p>
+<ol>
+<li><strong>Изходяща дълготрайна връзка:</strong> Агентът инициира стандартна изходяща HTTP заявка към събитийния стрийм на GitHub за конкретния Pull Request. Тъй като връзката е изходяща, тя преминава безпрепятствено през всякакви локални защитни стени и NAT маршрутизатори без нужда от отваряне на публични портове.</li>
+<li><strong>Консервация на състоянието (State Checkpointing):</strong> След установяване на абонамента агентът записва текущия си работен контекст и памет върху диска или локално хранилище (checkpoint) и напълно приспива своя процес, свеждайки консумацията на процесорно време и RAM до абсолютна нула.</li>
+<li><strong>Реактивно събуждане:</strong> В момента, в който постъпи ново събитие — одобрение на PR, отказ на интеграционен тест или коментар от колега — GitHub изпраща компактен JSON пакет през отворения SSE поток. Агентът мигновено се събужда, възстановява състоянието си от запазената контролна точка и предприема съответното коригиращо действие.</li>
+</ol>
+<h2>Системни архитектурни и макроикономически последици: Преход към напълно реактивни агентни екосистеми</h2>
+<p>Преминаването към <a href="/pages/event-driven-architecture.html">събитийно-ориентирана архитектура</a> (Event-Driven Architecture) при оркестрацията на изкуствен интелект бележи качествения преход от експериментални скриптове към зряла индустриална инфраструктура.</p>
+<ul>
+<li><strong>Срив на разходите за празен ход (Zero Idle Cost):</strong> Възможността един софтуерен агент да спи безплатно часове или дни, докато чака човешка намеса, премахва финансовата и изчислителна бариера пред мащабирането. Организациите вече могат да поддържат стотици специализирани микро-агенти — за проверка на сигурността, за документация, за обновяване на зависимости — без нито един от тях да консумира ресурси, докато не възникне събитие, за което е предназначен.</li>
+<li><strong>Стандартизация на асинхронното сътрудничество човек-машина:</strong> Взаимодействието между софтуерните инженери и ИИ агентите престава да бъде синхронен диалог в чат прозорец. Агентът се превръща в асинхронен колега, който изпраща своите предложения, спи, докато инженерът ги прегледа сутринта, и моментално отговаря на обратната връзка в рамките на милисекунди след публикуването на коментара.</li>
+<li><strong>Разтоварване на глобалната API инфраструктура:</strong> Масовото изоставяне на polling модела в полза на събитийни потоци спестява милиарди излишни HTTP заявки ежедневно за големи хостинг платформи като GitHub и GitLab, намалявайки енергийното потребление на техните балансиращи сървъри.</li>
+</ul>
+<p>Събитийното събуждане доказва, че най-интелигентният начин да управляваш изкуствен интелект не е да го караш да работи непрекъснато, а да създадеш архитектура, която му позволява да почива, докато светът има реална нужда от неговия принос.</p>
+<p><img src="/articles/2026/11/20/event-driven-github-webhooks-agent-orchestration-pull-requests/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.amitmerchant.com/github-event-streams-for-agents/">Let the Pull Request Wake Your Agent Up - Amit Merchant</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/event-driven-architecture.html">Събитийно-ориентирана архитектура (Event-Driven Architecture)</a><p>Събитийно-ориентираната архитектура (Event-Driven Architecture - EDA) е шаблон за софтуерен дизайн, при който състоянието на системата се управлява чр...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/webhooks.html">Уебкуки (Webhooks)</a><p>Уебкуките (Webhooks) са метод за комуникация между уеб приложения чрез дефинирани от потребителя HTTP обратни извиквания (callbacks).</p></li><li><a href="/pages/server-sent-events.html">Server-Sent Events (SSE)</a><p>Server-Sent Events (SSE) е уеб технология, която позволява на сървъра да изпраща актуализации в реално време към клиентите по стандартна HTTP връзка.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

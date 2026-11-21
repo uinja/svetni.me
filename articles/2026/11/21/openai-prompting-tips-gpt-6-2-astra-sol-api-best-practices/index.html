@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / OpenAI – Насоки за системни промптове и API интеграция на GPT-6.2 Astra и Sol
+Според публикация на The Decoder [1] и обновената техническа документация за разработчици на Op..."><title>OpenAI публикува нови шаблони за промпт инженерство и API правила за GPT-6.2 Astra и Sol срещу кратки отговори и загуба на контекст - Светни.ме</title><meta property="og:title" content="OpenAI публикува нови шаблони за промпт инженерство и API правила за GPT-6.2 Astra и Sol срещу кратки отговори и загуба на контекст - Светни.ме"><meta property="og:description" content="Източник: The Decoder / OpenAI – Насоки за системни промптове и API интеграция на GPT-6.2 Astra и Sol
+Според публикация на The Decoder [1] и обновената техническа документация за разработчици на Op..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/openai-prompting-tips-gpt-6-2-astra-sol-api-best-practices/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/openai-prompting-tips-gpt-6-2-astra-sol-api-best-practices/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI публикува нови шаблони за промпт инженерство и API правила за GPT-6.2 Astra и Sol срещу кратки отговори и загуба на контекст</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/openai-prompting-tips-gpt-6-2-astra-sol-api-best-practices/hero.png" alt="Инженерни насоки и системни шаблони за промпт оптимизация на моделите GPT-6.2 Astra и Sol на OpenAI"><br><small>Източник: The Decoder / OpenAI – Насоки за системни промптове и API интеграция на GPT-6.2 Astra и Sol</small></p>
+<p>Според публикация на The Decoder [1] и обновената техническа документация за разработчици на <a href="/pages/openai.html">OpenAI</a> [2], компанията е представила нови системни шаблони за <a href="/pages/prompt-engineering.html">промпт инженерство</a> и важни промени в поведението на Responses API за моделите <a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a> и <a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a>, пуснати на пазара на 17 ноември 2026 година. Докато Astra е проектиран за най-взискателните изследователски и инженерни задачи, а Sol обслужва сложни работни потоци при по-ниска себестойност, и двата модела демонстрират нови базови характеристики — по-лаконичен стил по подразбиране, склонност да изчакват потвърждение при неясни детайли и строга чувствителност към редакции в историята на разговорите [1].</p>
+<h2>Корекция на прекомерната краткост и проактивно изпълнение чрез обратими допускания</h2>
+<p>По подразбиране GPT-6.2 Astra генерира значително по-кратки и директни отговори в сравнение с по-ранните поколения, поради което инженерите на OpenAI съветват разработчиците незабавно да премахнат остарелите инструкции от типа „бъди кратък“ (be concise) от своите системни промптове [1]. При дълги многостъпкови задачи моделът понякога пренася вътрешни съкращения, работен жаргон или телеграфен стил от своите скрити разсъждения и комуникацията с подагенти директно във финалния отговор [2]. За да се елиминира този дефект, новият официален шаблон инструктира модела да третира финалния отговор като напълно самостоятелен документ за читателя, написан в активен залог и без копиране на междинните коментари, тъй като те остават скрити в потребителския интерфейс [1].</p>
+<p>Вторият ключов шаблонен модул адресира склонността на GPT-6.2 да предлага следваща стъпка и да спира изпълнението в очакване на рутинно потребителско одобрение [1]. Новата директива задължава агента да не прекратява своя ход, докато задачата е непълна, а сам да предприема всички оторизирани действия в рамките на зададения обхват [2]. Когато част от детайлите са неясни, моделът трябва да направи обратими допускания (reversible assumptions), да ги отбележи явно за потребителя и да продължи работата си, като спира за изясняване единствено при фундаментална промяна в обхвата, реален технически блокаж или преди необратими и деструктивни операции [1].</p>
+<h2>Дисциплина при генериране на код, управление на състоянието в Responses API и прагът от 272 000 токена</h2>
+<p>В областта на софтуерното инженерство GPT-6.2 изоставя агресивното писане на автоматични тестове, което характеризираше септемврийската версия на GPT-6 Astra [1]. Новият кодов шаблон налага четири строги правила: преизползване на съществуващите класове, методи и интерфейси в хранилището без нарушаване на обратната съвместимост; създаване на нови тестове само при изрично поискване или за улавяне на конкретна регресия; забрана за „code-golfing“ (свръхсбити едноредови изрази и съкратени имена на променливи, които маскират сложни разклонения); и избягване на ненужни помощни функции и абстракции [2]. При разработка на потребителски интерфейси шаблонът дава приоритет на реалистични изображения пред векторни SVG графики и забранява декоративните баджове и дублиращия помощен текст [1].</p>
+<p>На инфраструктурно ниво Responses API въвежда критична промяна: редактирането на историята на чата, превключването към определени други модели или смяната на идентификатора на крайния потребител и организацията автоматично изтрива по-ранните блокове с разсъждения [1]. Това принуждава модела да преизчислява логическия контекст отначало, повишавайки разхода на токени и влошавайки качеството, като класическите параметри <code>temperature</code> и <code>top_p</code> вече са напълно премахнати в полза на нивата за усилие на разсъждение (<code>medium</code> за нови интеграции и <code>low</code> вместо старите <code>none</code>/<code>minimal</code>) [1]. Според специалиста от OpenAI <a href="/pages/ted-sanders.html">Тед Сандърс</a>, ценообразуването на GPT-6.2 Astra започва от $8 за милион входни и $40 за милион изходни токена до лимита от 272 000 токена (при $0.80 за кеширано четене), но след този праг скача на $16 и $60 (спрямо $20 и $75 при Astra 6.0), поради което средата <a href="/pages/codex.html">OpenAI Codex</a> автоматично компресира контекста точно на границата от 272 000 токена [1].</p>
+<p><img src="/articles/2026/11/21/openai-prompting-tips-gpt-6-2-astra-sol-api-best-practices/infographic.png" alt="Инфографика: Шаблони за промпт инженерство и API правила за GPT-6.2 Astra и Sol"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системни архитектурни и макроикономически последици: Краят на стохастичното настройване и преходът към управлявано агентно състояние</h2>
+<p>Премахването на класическите параметри за семплиране като <code>temperature</code> и <code>top_p</code> в GPT-6.2 Astra и Sol бележи края на цяла епоха в приложния изкуствен интелект, в която разработчиците контролираха креативността и детерминизма на моделите чрез директна манипулация на вероятностните разпределения на изходните токени. При съвременните разсъждаващи системи качеството на отговора вече не е функция на стохастичната температура, а на дълбочината на вътрешното търсене и бюджетирането на изчислителното усилие (<code>reasoning effort</code>). Това превръща системния промпт от стилистична подсказка в строг оперативен договор за управление на автономния цикъл на агента.</p>
+<p>Едновременно с това автоматичното изчистване на състоянието на разсъждение при всяка външна редакция на разговорната история в Responses API налага фундаментално препроектиране на клиентските оркестратори. В продължение на години софтуерните екипи използваха техники за ръчно подрязване, пренаписване или инжектиране на синтетични реплики в чат историята, за да управляват контекстния прозорец. При GPT-6.2 подобна намеса разрушава криптографски обвързаната верига на разсъждение, което прехвърля управлението на контекстната памет от клиентското приложение към нативни сървърни механизми за компресия като този в Codex.</p>
+<p>В макроикономически аспект двустепенната тарифа около прага от 272 000 токена въвежда прецизно ценово диференциране според квадратичната изчислителна цена на вниманието при свръхдълги сесии. Макар базовите цени над прага при Astra 6.2 ($16/$60) да са по-ниски от тези на Astra 6.0 ($20/$75), двукратният скок спрямо стандартната тарифа ($8/$40) принуждава корпоративните архитекти да ограничават безконтролното разрастване на системните инструкции, файловете с правила и излишните тестове, превръщайки лаконичния код и автоматичната контекстна хигиена в пряк фактор за рентабилността на софтуерните компании.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/">OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions - The Decoder</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.2-astra">Using the Latest Models: GPT-6.2 Astra Developer Guide - OpenAI Documentation</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a><p>GPT-6.</p></li><li><a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a><p>GPT-6.</p></li><li><a href="/pages/prompt-engineering.html">Промпт инженеринг (Prompt Engineering)</a><p>Промпт инженерингът е изкуството и науката за структуриране на входните данни (подкани), така че да се извлече максимално качествен и точен резултат о...</p></li><li><a href="/pages/codex.html">Codex</a><p>Codex е модел на изкуствен интелект, разработен от OpenAI, специализиран в генерирането и анализа на програмен код.</p></li><li><a href="/pages/ted-sanders.html">Тед Сандърс (Ted Sanders)</a><p>Тед Сандърс (Ted Sanders) е технически специалист и представител на OpenAI, фокусиран върху архитектурните насоки за избор на модели, ценова оптимизац...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: BleepingComputer / Shutterstock
+Каскаден удар по глобалните финансови титани
+Мащабна кибератака срещу външен доставчик на аналитични облачни услуги компрометира чувствителна информация на м..."><title>Пробив в доставчика Qubole изложи данни на клиенти на JPMorgan Chase, Visa и Mastercard - Светни.ме</title><meta property="og:title" content="Пробив в доставчика Qubole изложи данни на клиенти на JPMorgan Chase, Visa и Mastercard - Светни.ме"><meta property="og:description" content="Снимка: BleepingComputer / Shutterstock
+Каскаден удар по глобалните финансови титани
+Мащабна кибератака срещу външен доставчик на аналитични облачни услуги компрометира чувствителна информация на м..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/third-party-vendor-breach-exposes-chase-visa-mastercard-customer-records/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/third-party-vendor-breach-exposes-chase-visa-mastercard-customer-records/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Пробив в доставчика Qubole изложи данни на клиенти на JPMorgan Chase, Visa и Mastercard</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/third-party-vendor-breach-exposes-chase-visa-mastercard-customer-records/hero.png" alt="Киберсигурност и компрометиране на финансови данни по веригата на доставки"><br><small>Снимка: BleepingComputer / Shutterstock</small></p>
+<h2>Каскаден удар по глобалните финансови титани</h2>
+<p>Мащабна кибератака срещу външен доставчик на аналитични облачни услуги компрометира чувствителна информация на милиони клиенти на водещи финансови институции, включително <a href="/pages/jpmorgan-chase.html">JPMorgan Chase</a>, <a href="/pages/visa.html">Visa</a> и <a href="/pages/mastercard.html">Mastercard</a> [1]. Инцидентът отново освети дълбоките структурни уязвимости в софтуерната верига за доставки в сектора на <a href="/pages/financial-services.html">финансовите услуги</a>.</p>
+<p>Най-голямата американска банка JPMorgan Chase, управляваща активи за над 4.1 трилиона долара, потвърди чрез официално съобщение, че нападателите са осъществили неоторизиран достъп до маркетингови бази данни, съхранявани от външен доставчик. Изтеклите записи включват имена на клиенти, номера на сметки и контактни детайли на потребители на дребно.</p>
+<p>Паралелно с това представители на Visa и Mastercard потвърдиха за засегнати клиентски данни чрез свои външни партньори в Азиатско-тихоокеанския регион, подчертавайки, че основните им мрежи за картови плащания не са претърпели директен пробив или прекъсване на трансакциите.</p>
+<h2>Анатомия на атаката: Ролята на Qubole и доверените AWS IAM роли</h2>
+<p>Отговорност за мащабната операция пое киберпрестъпната групировка n0n, която публикува откраднатите масиви на своя сайт за изнудване в тъмната мрежа. В основата на компрометирането стои доставчикът на облачни анализи на големи данни Qubole (собственост на технологичния холдинг Idera), чиято платформа се използва от глобални корпорации за автоматизирана обработка и машинно обучение върху масиви от данни.</p>
+<p>Между 14 и 26 октомври 2026 г. нападателите са използвали компрометирани административни ключове на Qubole, за да поемат контрол върху доверени IAM роли (Identity and Access Management) в облачната инфраструктура на Amazon Web Services (AWS) на клиентите на компанията:</p>
+<ul>
+<li><strong>Директен теч от доставчика:</strong> Хакерите са извлекли 53.9 гигабайта данни, съдържащи 30 743 вътрешни файла на Qubole, включващи корпоративни договори, ценови листи и записи за достъп.</li>
+<li><strong>Достъп до облачни хранилища:</strong> Използвайки прекомерните права, предоставени на аналитичните пайплайни, групата твърди, че е получила достъп до близо един петабайт телеметрия и клиентски архиви от корпоративните хранилища.</li>
+<li><strong>Ексфилтрация без задействане на аларми:</strong> Тъй като заявките са идвали от легитимни, предварително одобрени сервизни акаунти на доставчика, традиционните периметърни защити не са сигнализирали за аномална активност.</li>
+</ul>
+<p><img src="/articles/2026/11/21/third-party-vendor-breach-exposes-chase-visa-mastercard-customer-records/infographic.png" alt="Инфографика: Ключови стълбове и анализ"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системният капан на аналитичния аутсорсинг</h2>
+<p>Този инцидент е емблематичен пример за нарастващата опасност от <a href="/pages/supply-chain-attack.html">атаки по веригата за доставки</a>. Големите банки инвестират стотици милиони долари в собствената си <a href="/pages/cybersecurity.html">киберсигурност</a>, но редовно предоставят дълбоки нива на достъп на външни доставчици за бизнес анализи, сегментиране на клиенти и оптимизация на маркетингови кампании.</p>
+<p>Когато външният доставчик стане жертва на пробив, цялата вътрешна защита на финансовата институция бива заобиколена. Според доклади на компаниите за сигурност Sentra и Wiz, атаката е била идентифицирана едва след като данните вече са били изтеглени и подготвени за публично изнудване.</p>
+<h2>Системни архитектурни и макроикономически последици: Наложителната реформа към нулево доверие в облака</h2>
+<p>Последиците от този <a href="/pages/data-breach.html">изтичане на данни</a> ще променят начина, по който финансовият сектор управлява достъпа на партньори:</p>
+<ol>
+<li><strong>Задължително въвеждане на краткотрайни (ефемерни) роли:</strong> Моделът на постоянни междуоблачни IAM доверителни връзки е фундаментално дискредитиран. Регулаторните органи ще изискват преминаване към динамично генерирани токени с валидност от броени минути, които се унищожават веднага след приключване на аналитичната заявка.</li>
+<li><strong>Изолация на аналитичните среди чрез криптографски анклави:</strong> Корпорациите вече няма да предоставят сурови клиентски бази данни на външни SaaS платформи. Вместо това обработката ще трябва да се извършва в защитени хардуерни анклави с прилагане на диференциална поверителност (differential privacy), при която доставчикът вижда само агрегирани статистически показатели.</li>
+<li><strong>Затягане на одита за трети страни:</strong> Инцидентът ще форсира мащабна консолидация на вендорите. Малки и средни аналитични платформи, които не могат да докажат съответствие с най-строгите военни стандарти за защита на ключове и мониторинг на компрометирани сесии, ще бъдат изключени от финансовата екосистема.</li>
+</ol>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/">Vendor data breach exposes Chase, Visa, Mastercard customer info - BleepingComputer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/jpmorgan-chase.html">JPMorgan Chase</a><p>JPMorgan Chase е най-голямата банкова и финансова холдингова институция в Съединените щати по размер на активите и водещ пазарен фактор в глобалните ф...</p></li><li><a href="/pages/visa.html">Visa</a><p>Visa е водеща глобална технологична корпорация за цифрови и картови плащания, свързваща потребители, бизнеси, финансови институции и държавни органи в...</p></li><li><a href="/pages/mastercard.html">Mastercard</a><p>Mastercard е мултинационална финансова корпорация и оператор на една от най-мащабните глобални мрежи за обработка на картови трансакции и дигитални ра...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/data-breach.html">Изтичане на данни (Data Breach)</a><p>Изтичането на данни (Data Breach) е инцидент в сигурността, при който неоторизирани страни получават достъп, извличат или разпространяват защитена, ко...</p></li><li><a href="/pages/supply-chain-attack.html">Атака срещу веригата за доставки</a><p>Атака срещу веригата за доставки (supply chain attack) е кибер анексия, която се насочва към слабости в софтуерните компоненти или услуги на трети стр...</p></li><li><a href="/pages/financial-services.html">Финансови услуги</a><p>Финансови услуги (Financial Services)
+Финансовите услуги обхващат индустриалния сектор за управление на парични потоци, включително търговско банково ...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

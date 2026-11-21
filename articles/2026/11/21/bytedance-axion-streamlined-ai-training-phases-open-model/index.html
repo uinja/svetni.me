@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Оптимизиран трифазен тренировъчен пайплайн на ByteDance Axion 1.0
+Изследователски екип от компанията майка на TikTok — ByteDance — в сътрудничество с учени от няколко америк..."><title>ByteDance доказва, че повечето фази при обучението на ИИ агенти са излишни, и пуска конкурентния отворен модел Axion 1.0 - Светни.ме</title><meta property="og:title" content="ByteDance доказва, че повечето фази при обучението на ИИ агенти са излишни, и пуска конкурентния отворен модел Axion 1.0 - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Оптимизиран трифазен тренировъчен пайплайн на ByteDance Axion 1.0
+Изследователски екип от компанията майка на TikTok — ByteDance — в сътрудничество с учени от няколко америк..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>ByteDance доказва, че повечето фази при обучението на ИИ агенти са излишни, и пуска конкурентния отворен модел Axion 1.0</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/hero.png" alt="Архитектурна диаграма на опростения трифазен тренировъчен пайплайн на модела ByteDance Axion 1.0"><br><small>Източник: The Decoder / Оптимизиран трифазен тренировъчен пайплайн на ByteDance Axion 1.0</small></p>
+<p>Изследователски екип от компанията майка на TikTok — <a href="/pages/bytedance.html">ByteDance</a> — в сътрудничество с учени от няколко американски университета представи <a href="/pages/axion-1-0.html">Axion 1.0</a>, нов модел за автономни <a href="/pages/ai-agents.html">ИИ агенти</a>, който се изравнява в бенчмарковете с водещите комерсиални системи на <a href="/pages/openai.html">OpenAI</a> и Anthropic след едва три прецизно организирани фази на обучение, съобщава The Decoder [1]. В придружаващия научен труд авторите аргументират, че повечето насложени етапи в съвременните тренировъчни конвейери са излишни, а пълният пакет от <a href="/pages/open-weights.html">модели с отворени тегла</a>, тренировъчни набори от данни и програмен код на Axion 1.0 е публикуван свободно за научната общност [1].</p>
+<p><img src="/articles/2026/11/21/bytedance-axion-streamlined-ai-training-phases-open-model/infographic.png" alt="Инфографика: Трифазната тренировъчна архитектура на ByteDance Axion 1.0 срещу сложните индустриални конвейери"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Кризата на вложените конвейери: Когато никой не знае коя фаза реално помага</h2>
+<p>От съвременните агентни модели се очаква да извършват самостоятелно проучване в уеб пространството, да пишат и изпълняват програмен код, да извикват външни инструменти и да решават дълги многостъпкови задачи [1]. За да постигнат тези умения, индустриалните лаборатории през последните две години изградиха все по-сложни, многослойно вложени тренировъчни конвейери — натрупвайки десетки последователни фази на междинно дообучение, специализирано инструкционно настройване, отхвърлящо семплиране и множество каскадни цикли на обучение с подкрепление (RL).</p>
+<p>Според изследователите от ByteDance и американските университети тази архитектурна претрупаност е довела до два фундаментални проблема в машинното обучение [1]. Първо, при толкова много взаимно преплетени етапи става практически невъзможно да се изолира и измери коя конкретна тренировъчна фаза действително носи подобрение в агентните способности и коя само компенсира артефакти от предходната. Второ, разходите за изчислителни ресурси и инженерна оркестрация растат лавинообразно, правейки независимото научно възпроизвеждане на резултатите непосилно за академичните институции.</p>
+<h2>Рецептата на Axion 1.0: Три фази и радикален фокус върху курацията на данни</h2>
+<p>За да опровергае мита за задължителната многофазова сложност, съвместният екип изчиства тренировъчния процес до само три ясно дефинирани и строго контролирани стъпки, върху които изгражда модела <a href="/pages/axion-1-0.html">Axion 1.0</a> [1]. Вместо да добавят нови алгоритмични надстройки и корекционни цикли, учените насочват целия си инженерен ресурс към безкомпромисното качество, филтриране и структуриране на тренировъчните траектории.</p>
+<p>Резултатът от тази трифазна дисциплина е модел, който демонстрира висока стабилност при автономно търсене в интернет, синтез на първични източници и изпълнение на код. В стандартните индустриални изпитания за агентни системи Axion 1.0 постига резултати, напълно конкурентни на водещите затворени комерсиални модели от <a href="/pages/openai.html">OpenAI</a> и Anthropic, доказвайки, че чистотата на информационния сигнал в данните има много по-голяма тежест от броя на тренировъчните фази [1].</p>
+<h2>Пълна отвореност за възпроизводима наука: Тегла, данни и код</h2>
+<p>За разлика от много корпоративни анонси, които публикуват единствено крайните параметри на модела без информация за процеса на неговото създаване, проектът Axion 1.0 залага на пълна научна прозрачност [1]. Екипът предоставя за свободно изтегляне не само финалните тегла на модела, но и курираните тренировъчни данни, както и целия софтуерен стек за провеждане на трите фази на обучение.</p>
+<p>Тази откритост позволява на независими изследователи и по-малки лаборатории директно да инспектират как точно са конструирани агентните траектории, да възпроизведат обучението от нулата и да адаптират трифазната методология към специализирани индустриални домейни без нужда от гигантски сървърни ферми.</p>
+<h2>Системни и стратегически импликации: Завръщането към центрирания върху данните изкуствен интелект</h2>
+<p>Публикацията на <a href="/pages/bytedance.html">ByteDance</a> и американските академични партньори около <a href="/pages/axion-1-0.html">Axion 1.0</a> изпраща силно отрезвяващо послание към глобалната индустрия за изкуствен интелект. През последните години сложните многофазови конвейери за следтренировъчна обработка (post-training) се използваха от големите технологични корпорации като своеобразен защитен ров — внушавайки, че само организации със стотици инженери по RL оркестрация могат да обучат надеждни <a href="/pages/ai-agents.html">ИИ агенти</a>.</p>
+<p>Доказателството, че само три прецизни тренировъчни фази, подкрепени от висококачествена курация на данни, са достатъчни за изравняване с комерсиалните флагмани на <a href="/pages/openai.html">OpenAI</a> и Anthropic, радикално снижава бариерата за навлизане на пазара. Когато целият пакет — <a href="/pages/open-weights.html">модели с отворени тегла</a>, курирани данни и тренировъчен код — е свободно достъпен, конкурентното предимство се измества от тайните многостъпкови рецепти към способността на организациите да събират и верифицират автентични, висококачествени данни от реални работни процеси. В дългосрочен план тази стандартизация и опростяване на обучението ще ускори иновациите в цялата отворена екосистема и ще направи разработката на специализирани автономни агенти по-бърза, по-предсказуема и многократно по-евтина.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/">Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model - The Decoder</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/bytedance.html">ByteDance</a><p>ByteDance е една от най-големите технологични компании в света, оперираща платформата TikTok и китайския аналог Douyin, известна със своите алгоритми ...</p></li><li><a href="/pages/axion-1-0.html">Axion 1.0</a><p>Axion 1.</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/open-weights.html">Отворени тегла (Open Weights)</a><p>Терминът „отворени тегла“ (open weights) се отнася до модели на изкуствен интелект, чиито вътрешни параметри (тегла) са публично достъпни.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

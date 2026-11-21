@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Архитектурна илюстрация за контекстните прозорци при езиковите модели
+Съвременните големи езикови модели вече могат да поглъщат цели романи и огромни софтуерни хранилища в е..."><title>Изследователи на Nvidia твърдят, че огромните контекстни прозорци са задънена улица, и предлагат модели с кратки бележки - Светни.ме</title><meta property="og:title" content="Изследователи на Nvidia твърдят, че огромните контекстни прозорци са задънена улица, и предлагат модели с кратки бележки - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Архитектурна илюстрация за контекстните прозорци при езиковите модели
+Съвременните големи езикови модели вече могат да поглъщат цели романи и огромни софтуерни хранилища в е..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/nvidia-researchers-huge-ai-context-windows-dead-end/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/nvidia-researchers-huge-ai-context-windows-dead-end/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Изследователи на Nvidia твърдят, че огромните контекстни прозорци са задънена улица, и предлагат модели с кратки бележки</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/nvidia-researchers-huge-ai-context-windows-dead-end/hero.png" alt="Архитектурна схема на обработката на контекст и компресията на паметта при големите езикови модели"><br><small>Източник: The Decoder / Архитектурна илюстрация за контекстните прозорци при езиковите модели</small></p>
+<p>Съвременните <a href="/pages/large-language-models.html">големи езикови модели</a> вече могат да поглъщат цели романи и огромни софтуерни хранилища в една-единствена заявка, но изследователски екип на <a href="/pages/nvidia.html">Nvidia</a> доказва, че това разширяване често е излишно, бавно, скъпо и податливо на грешки, съобщава The Decoder [1]. В серия от експериментални тестове учените демонстрират, че комбинацията от периодични обобщения и целенасочено търсене по ключови думи постига същата точност като пълния <a href="/pages/context-window.html">контекстен прозорец</a>, но при малка част от изчислителната цена, и предлагат нов клас архитектури, работещи с „кратки бележки“ (short notes) вместо с гигантски суров контекст [1].</p>
+<p><img src="/articles/2026/11/21/nvidia-researchers-huge-ai-context-windows-dead-end/infographic.png" alt="Инфографика: Защо огромните контекстни прозорци отстъпват на периодичните резюмета и моделите с кратки бележки"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>От 8 192 до 1 милион токена: Илюзията за безкрайната работна памет</h2>
+<p>Контекстният прозорец представлява оперативната работна памет на езиковия модел — всичко, което невронната мрежа държи активно пред себе си в момента на генериране на отговор [1]. През последните три години този показател претърпя над стократно разширяване: докато <a href="/pages/gpt-4.html">GPT-4</a> стартира през март 2023 г. с базов прозорец от 8 192 токена, днешните фронтиерни системи като GPT 5.6 Sol обработват около 1 милион токена наведнъж — обем, близо 120 пъти по-голям и достатъчен да побере целия текст на епопеята „Война и мир“ на Лев Толстой [1].</p>
+<p>Изследователите на Nvidia обаче подчертават, че механичното изсипване на стотици хиляди токени в промпта носи тежки скрити наказания. Поради квадратичната сложност на механизма за самовнимание O(n²) и експоненциалното раздуване на паметта за <a href="/pages/kv-cache.html">KV-кеша</a>, всяка нова дума в гигантския прозорец изисква все повече изчислителни операции и видеопамет. Още по-сериозен е когнитивният дефект: когато моделът е наводнен с огромно количество нерелевантен или остарял контекст, вниманието му се разсейва, което води до повече логически грешки и пропускане на критични детайли в средата на документа.</p>
+<h2>Периодични резюмета и целенасочено търсене срещу пълния контекст</h2>
+<p>За да проверят дали моделите действително се нуждаят от достъп до всеки суров токен от историята на дадена задача, екипът на Nvidia сравнява директно работата с пълен контекстен прозорец срещу двустепенна стратегия за управление на информацията [1]. При алтернативния подход системата периодично компресира натрупаната история в кратки, структурирани резюмета и използва бързо търсене по ключови думи (targeted keyword search), за да извлича само конкретните пасажи, необходими за текущата стъпка.</p>
+<p>Резултатите от тестовете са категорични: в преобладаващата част от практическите сценарии периодичните обобщения, комбинирани с точкови справки, се представят също толкова добре, колкото и пълният контекст от стотици хиляди токени [1]. При това хибридният метод намалява драстично латентността за генериране на първия токен (Time-To-First-Token) и свива разходите за облачен инференс в пъти.</p>
+<h2>Към нов клас модели, проектирани около кратки бележки</h2>
+<p>Въз основа на тези емпирични резултати изследователите на Nvidia предлагат фундаментална промяна в дизайна на бъдещите езикови архитектури [1]. Вместо индустрията да продължава надпреварата за 2-милионни и 10-милионни контекстни прозорци, екипът очертава концепцията за нов клас компактни модели, обучени нативно да работят с кратки бележки (short-note models).</p>
+<p>Тези модели функционират подобно на опитен човешки изследовател, който не се опитва да наизусти цялата библиотека едновременно, а поддържа подреден работен бележник с текущите хипотези, ключовите факти и указатели към външни източници. Чрез активно освобождаване на работната памет от вече обработените междинни стъпки моделът запазва максимална острота на вниманието върху активния проблем.</p>
+<h2>Архитектурни и икономически последици: Краят на грубата сила в управлението на агентната памет</h2>
+<p>Заключението на изследователите от <a href="/pages/nvidia.html">Nvidia</a> е особено показателно, тъй като идва от компанията, чийто бизнес модел печели най-пряко от продажбата на висококапацитетни графични ускорители с огромна HBM памет за обслужване на гигантски <a href="/pages/kv-cache.html">KV-кеш</a> структури. Когато дори водещите хардуерни архитекти признават, че раздуването на <a href="/pages/context-window.html">контекстния прозорец</a> от нивата на <a href="/pages/gpt-4.html">GPT-4</a> до милиони токени е икономически и алгоритмично неефективна задънена улица, това сигнализира за предстояща смяна на парадигмата в цялата софтуерна индустрия.</p>
+<p>За разработчиците на дългоживеещи автономни агенти и корпоративни системи с <a href="/pages/large-language-models.html">големи езикови модели</a> това откритие променя правилата на системното инженерство. Вместо да плащат колосални суми за повторно изпращане на стотици хиляди токени лог-файлове и документация при всяка стъпка на агента, модерните платформи ще преминат към йерархична архитектура на паметта — аналогична на L1/L2 кеша, оперативната RAM памет и дисковото хранилище в класическите процесори. Съчетаването на модели за кратки бележки с прецизно индексирано търсене не само ще свали себестойността на инференса с порядъци, но и ще позволи на сложни агентни системи да работят дни и седмици без деградация на логическата точност.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/">Nvidia researchers argue huge AI context windows are a dead end - The Decoder</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/context-window.html">Контекстен прозорец (Context Window)</a><p>Контекстният прозорец е максималният брой токени (думи, субдуми), които един трансформърен езиков модел може да обработи едновременно в рамките на едн...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/kv-cache.html">KV Cache</a><p>KV Cache (Key-Value Cache) е техника за оптимизация при големите езикови модели (LLM), която съхранява изчислените състояния на предходни токени по вр...</p></li><li><a href="/pages/gpt-4.html">GPT-4</a><p>GPT-4 (Generative Pre-trained Transformer 4) е мултимодален голям езиков модел на OpenAI, представен през март 2023 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

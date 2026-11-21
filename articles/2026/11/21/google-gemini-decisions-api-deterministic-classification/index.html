@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Amit Merchant / Визуална схема на детерминистичния интерфейс Google Gemini Decisions API и модела gemini-decision-1
+Според задълбочен технически анализ на софтуерния инженер Амит Мърчант ..."><title>Gemini Decisions API на Google заменя генерирането на текст с бърза детерминистична класификация на цена от $0.10 за милион токена - Светни.ме</title><meta property="og:title" content="Gemini Decisions API на Google заменя генерирането на текст с бърза детерминистична класификация на цена от $0.10 за милион токена - Светни.ме"><meta property="og:description" content="Източник: Amit Merchant / Визуална схема на детерминистичния интерфейс Google Gemini Decisions API и модела gemini-decision-1
+Според задълбочен технически анализ на софтуерния инженер Амит Мърчант ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/google-gemini-decisions-api-deterministic-classification/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/google-gemini-decisions-api-deterministic-classification/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Gemini Decisions API на Google заменя генерирането на текст с бърза детерминистична класификация на цена от $0.10 за милион токена</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/google-gemini-decisions-api-deterministic-classification/hero.png" alt="Детерминистично вземане на решения и структурирана класификация без генериране на текст чрез Google Gemini Decisions API"><br><small>Източник: Amit Merchant / Визуална схема на детерминистичния интерфейс Google Gemini Decisions API и модела gemini-decision-1</small></p>
+<p>Според задълбочен технически анализ на софтуерния инженер Амит Мърчант [1] и официалната документация за разработчици на <a href="/pages/google.html">Google</a> [2], новият програмен интерфейс <a href="/pages/gemini-decisions-api.html">Gemini Decisions API</a>, задвижван от специализирания модел <a href="/pages/gemini-decision-1.html">gemini-decision-1</a>, предлага фундаментална алтернатива на класическото използване на <a href="/pages/large-language-models.html">големи езикови модели</a> в приложния софтуер. Вместо разработчиците да принуждават генеративен модел да изписва текст токен по токен под формата на JSON обект и след това да парсват и валидират този текст в кода си, новият интерфейс позволява директно оценяване на предварително дефинирани въпроси с гарантирано структурирани вероятностни отговори в една-единствена заявка [1].</p>
+<h2>Архитектура на gemini-decision-1: Три типа структурирани решения и 1000 независими въпроса в едно извикване</h2>
+<p>Интерфейсът Gemini Decisions API е проектиран специално за програмни сценарии, в които възможните изходи са предварително известни на приложението и от модела се изисква единствено да изчисли кой от тях е приложим [1]. Вместо авторегресивно генериране на обяснителни параграфи, моделът <code>gemini-decision-1</code> оценява мултимодален вход — включващ текст, изображения, аудио, видео и PDF документи — и връща калибрирани вероятности и оценка на увереността (<code>confidence</code>) за три строго дефинирани типа въпроси [1] [2]:</p>
+<ul>
+<li><p><strong>Бинарни проверки Да/Не (<code>noul</code>):</strong> Определя дали дадено твърдение или условие е вярно за подадения вход (например дали потребителско съобщение докладва софтуерен бъг), връщайки числова вероятност и коефициент на увереност (напр. <code>noul: 0.99</code>, <code>confidence: 0.99</code>).</p>
+</li>
+<li><p><strong>Категориен избор (<code>choice</code>):</strong> Избира точно една опция от предварително зададен речник с критерии (например <code>bug</code>, <code>feature_request</code>, <code>general_feedback</code> или <code>other</code>), като предоставя пълното вероятностно разпределение между всички опции в обекта <code>probabilities</code>.</p>
+</li>
+<li><p><strong>Градирано оценяване (<code>score</code>):</strong> Оценява входните данни спрямо подреден масив от критерии за тежест или качество (например от леко неудобство до напълно неизползваема основна функция), връщайки прецизна скаларна оценка (напр. <code>score: 1.82</code> при <code>confidence: 0.91</code>).</p>
+</li>
+</ul>
+<p>Чрез официалния JavaScript SDK пакет <code>@google/genai</code> (с API ключ от <a href="/pages/google-ai-studio.html">Google AI Studio</a> и версия <code>v1beta</code>) разработчиците извикват метода <code>ai.decisions.create()</code>, който поддържа до 1000 независими въпроса върху един и същ входен обект в рамките на една HTTP заявка [1]. Важна архитектурна особеност е, че въпросите се изчисляват напълно независимо един от друг — оценката за сериозност на проблема не знае какво е отговорил въпросът за категорията, а типът <code>choice</code> винаги избира една от подадените опции, поради което включването на резервна категория <code>other</code> и проверката на прага на увереност (напр. <code>confidence &gt;= 0.85</code> преди автоматично маршрутизиране) са задължителни добри практики [1].</p>
+<h2>Икономика на еднократното кодиране на входа: $0.10 за милион входни токена и $0 за изход</h2>
+<p>Освен детерминистичната интеграция в условната логика на приложенията, Gemini Decisions API променя радикално икономиката на високообемната обработка на данни [1]. Google таксува използването на интерфейса на цена от едва $0.10 за милион входни токена при абсолютно нулева такса ($0) за изходни токени, като същевременно предоставя и безплатно ниво за прототипиране [1] [2].</p>
+<p>Истинският мультипликатор на ефективността обаче произтича от начина, по който архитектурата обработва множество въпроси в една заявка: споделеният входен контекст се кодира и таксува само веднъж, независимо дали към него са зададени три или сто въпроса, като всеки допълнителен въпрос добавя единствено токените на собствените си инструкции и критерии [1]. При обработка на 100 000 потребителски съобщения със средна дължина от 500 токена всяко, общата цена за споделения вход възлиза на приблизително $5 — порядъци по-евтино и по-бързо от традиционния генеративен подход, при който приложението трябва да плаща за генерирането и парсването на милиони изходни JSON токени [1].</p>
+<p><img src="/articles/2026/11/21/google-gemini-decisions-api-deterministic-classification/infographic.png" alt="Инфографика: Архитектура и токен икономика на детерминистичния интерфейс Google Gemini Decisions API"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>Системни архитектурни и макроикономически последици: Разделянето на когнитивното вземане на решения от авторегресивната генерация</h2>
+<p>Появата на Gemini Decisions API (паралелно с локалните браузърни имплементации на Decisions API) бележи ключов момент на архитектурно узряване в софтуерното инженерство с изкуствен интелект. През последните няколко години индустрията използваше авторегресивната генерация на текст като универсален чук за всеки софтуерен проблем — принуждавайки модели с милиарди параметри да генерират синтактични скоби, кавички и ключови имена на полета само за да предадат едно булево решение или индекс на категория към стандартен <code>if/else</code> блок. Този подход не само изразходваше огромни количества GPU време за декодиране на предвидим синтаксис, но и въвеждаше системна крехкост заради невалиден JSON и халюцинирани ключове.</p>
+<p>От системна гледна точка отделянето на класификационния и оценъчния слой в специализиран модел като <code>gemini-decision-1</code> позволява изграждането на ултрабързи, детерминистични контролни равнини (control planes) пред тежките генеративни и агентни системи. Вместо един монолитен агент да разсъждава и генерира текст при всяко събитие, приложението може да оцени до 1000 ортогонални политики за сигурност, маршрутизация, тоналност и приоритет върху мултимодален документ в един проход и да задейства скъпи генеративни модели само когато увереността и категорията го изискват.</p>
+<p>В макроикономически план моделът на ценообразуване от $0.10 за милион входни токена без таксуване на изхода превръща невронната класификация на неструктурирани данни (текст, PDF, аудио и видео) в евтина комунална услуга, съпоставима по цена с традиционните регулярни изрази и заявки към бази данни. За корпоративните платформи за обслужване на клиенти, модерация на съдържание и автоматизиран документооборот това означава драстично свиване на оперативните разходи за облачен ИИ при едновременно повишаване на надеждността чрез математически калибрирани прагове на увереност.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.amitmerchant.com/gemini-decisions-api/">When AI Doesn’t Need to Generate Anything - Amit Merchant Technical Blog</a></li>
+<li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/">Introducing the Gemini Decisions API for Developers - Google Official Blog</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/gemini-decisions-api.html">Gemini Decisions API</a><p>Gemini Decisions API е специализиран програмен интерфейс на Google, задвижван от модела gemini-decision-1, който заменя свободното генериране на текст...</p></li><li><a href="/pages/gemini-decision-1.html">gemini-decision-1</a><p>gemini-decision-1 е специализиран мултимодален модел на Google, проектиран изключително за структурирано вземане на решения, категоризация и вероятнос...</p></li><li><a href="/pages/google-ai-studio.html">Google AI Studio</a><p>Google AI Studio е уеб-базирана среда за разработка и прототипиране на приложения с моделите от серията Gemini, предлагаща най-бързия път от идея до в...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

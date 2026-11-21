@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer
+Според репортаж на BleepingComputer, базиран на доклад на звеното за разузнаване на заплахите на Amazon (Amazon Threat Intelligence), киберпрестъпници са използвали автон..."><title>Хакери използваха автономната ИИ платформа Cairn за откриване на zero-day уязвимост в MONAI Label и превземане на сървър за 11 минути - Светни.ме</title><meta property="og:title" content="Хакери използваха автономната ИИ платформа Cairn за откриване на zero-day уязвимост в MONAI Label и превземане на сървър за 11 минути - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer
+Според репортаж на BleepingComputer, базиран на доклад на звеното за разузнаване на заплахите на Amazon (Amazon Threat Intelligence), киберпрестъпници са използвали автон..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/21/hackers-autonomous-ai-tool-cairn-zero-day-monai-label/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/21/hackers-autonomous-ai-tool-cairn-zero-day-monai-label/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Хакери използваха автономната ИИ платформа Cairn за откриване на zero-day уязвимост в MONAI Label и превземане на сървър за 11 минути</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->21 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/21/hackers-autonomous-ai-tool-cairn-zero-day-monai-label/hero.png" alt="Визуализация на автономен ИИ агент за кибератаки и анализ на уязвимости"><br><small>Източник: BleepingComputer</small></p>
+<p>Според репортаж на BleepingComputer, базиран на доклад на звеното за разузнаване на заплахите на <a href="/pages/amazon.html">Amazon</a> (Amazon Threat Intelligence), киберпрестъпници са използвали автономната платформа с отворен код <a href="/pages/cairn.html">Cairn</a>, за да открият самостоятелно непозната до момента (<a href="/pages/zero-day.html">zero-day</a>) уязвимост в медицинското приложение <a href="/pages/monai-label.html">MONAI Label</a> и да установят пълен root контрол над университетски сървър [1]. Нападателите, които според изследователите са свързани с Китай, са задали на координираните <a href="/pages/ai-agents.html">ИИ агенти</a> единствено кратката инструкция на опростен китайски език да „получат shell достъп“, оставяйки системата сама да проведе разузнаването и експлоатацията.</p>
+<p>Екипът на Amazon е разкрил операцията, след като е установил, че самите хакери са оставили своя сървър с инсталирана инстанция на Cairn публично достъпен в интернет без удостоверяване, което е позволило пълен одит на логовете от 48-часовата кампания между 8 и 10 септември 2026 г. срещу образователни институции в Източна Азия извън континентален Китай [1].</p>
+<p><img src="/articles/2026/11/21/hackers-autonomous-ai-tool-cairn-zero-day-monai-label/infographic.png" alt="Инфографика: Автономното откриване и експлоатиране на zero-day уязвимост чрез ИИ платформата Cairn"><br><small>Инфографика: Ключови стълбове и анализ</small></p>
+<h2>От 16-часова обсада на Redis до 11-минутен пробив в MONAI Label</h2>
+<p>Логовете от компрометирания команден сървър показват, че преди да открият успешния вектор на атака, автономните агенти на Cairn са демонстрирали изключителна упоритост и адаптивност в продължение на близо цяло денонощие без никаква човешка намеса [1]:</p>
+<ul>
+<li><p>В рамките на 16 часа агентите са изпълнили 148 последователни действия за пробив в университетски сървър с база данни <a href="/pages/redis.html">Redis</a>, включително опити за злоупотреба с механизма за репликация за зареждане на неоторизиран код, бягство от скриптовия сандбокс, презаписване на конфигурационни файлове и повреждане на паметта.</p>
+</li>
+<li><p>След неуспеха при Redis системата автоматично се е пренасочила към опити за Log4Shell инжекция, SSRF атака срещу векторната база Qdrant и масирани атаки с пароли срещу PostgreSQL и SSH, докато паралелна 6-часова сесия е изпробвала над 30 000 комбинации от пароли срещу университетски GPU сървър на базата на 80 реални потребителски имена, извлечени от академични публикации.</p>
+</li>
+<li><p>Когато са се насочили към сървъра с отворения медицински ИИ софтуер MONAI Label, агентите са картографирали неговите API ендпойнти и само за 11 минути са открили и експлоатирали zero-day уязвимост от тип прекосяване на директории (path traversal) в параметъра за име на файл при качване.</p>
+</li>
+</ul>
+<p>В следващата сесия ИИ агентите са използвали дефекта за произволен запис на файлове, като са инжектирали обратен shell на Python (reverse shell) директно в системния файл <code>sitecustomize.py</code>, който се зарежда автоматично при всяко стартиране на Python интерпретатора, и са задействали API извикване, за да получат пълен root достъп до машината [1]. Веднага след това човешкият оператор е предоставил на агентите прокси тунел към втора университетска мрежа със същия уязвим софтуер; след уведомление от Amazon разработчиците на MONAI Label са пуснали защитна кръпка на 18 ноември.</p>
+<h2>Разширяваща се злоупотреба с Cairn в шпионажа и корпоративните атаки</h2>
+<p>Макар Cairn да е създаден като легитимен инструмент с отворен код за тестване на проникване и укрепване на защитата, докладът на Amazon допълва нарастващ брой доказателства за превръщането му в оръжие за индустриален шпионаж и финансови престъпления [1]. През септември изследователската компания <a href="/pages/gambit-security.html">Gambit Security</a> документира кампания, при която оператор е използвал Cairn и други отворени ИИ рамки за провеждането на поне 105 атаки и компрометирането на 27 компании (включително хотелска верига от Fortune 500 и голяма американска авиокомпания) с цел кражба на данни от кредитни карти.</p>
+<p>Неотдавна и екипът по сигурността на Google съобщи, че платформата Cairn е била разгърната в целева кибератака срещу аерокосмическа организация в САЩ. От Amazon предупреждават, че способността на автономните ИИ агенти да откриват и експлоатират нови уязвимости за минути надхвърля физическата скорост на реакция на дежурните анализатори и налага спешно внедряване на автоматизирани защитни системи [1].</p>
+<h2>Архитектурен прелом: Краят на асиметрията при откриването на zero-day уязвимости</h2>
+<p>Документираният от Amazon инцидент с MONAI Label разрушава едно от дългогодишните базови допускания в индустрията за киберсигурност — че самостоятелното откриване на нови zero-day уязвимости и разработването на надеждни вериги за експлоатация (exploit chains) до ниво root изисква висококвалифицирани човешки изследователи и седмици ръчен анализ на изходния код. Фактът, че свободно достъпна агентна рамка с отворен код като Cairn е преминала от първоначално картографиране на непознат REST API интерфейс до откриване на path traversal дефект и инжектиране на персистентен пейлоуд в <code>sitecustomize.py</code> само за 11 минути, показва, че цената за генериране на zero-day експлойти в приложния софтуер се доближава до нула.</p>
+<p>Още по-показателна за архитектурата на бъдещите киберконфликти е демонстрираната от агентите оперативна издръжливост по време на неуспешните 16-часови атаки срещу Redis. Докато традиционните автоматизирани скенери проверяват фиксиран списък от известни CVE сигнатури и спират, агентният цикъл на Cairn формулира хипотези, анализира върнатите съобщения за грешки, опитва 148 последователни тактики — от манипулация на репликацията до бягство от Lua сандбокса — и при неуспех сам събира публични академични документи (OSINT), за да компилира речник с реални потребителски имена за атака срещу GPU клъстера. Този хибриден модел на работа, при който ИИ агентът извършва цялата изтощителна тактическа работа денонощно, а човешкият оператор се намесва само за да маршрутизира готовия zero-day експлойт през прокси към следващата жертва, умножава експоненциално офанзивния капацитет на малките хакерски звена.</p>
+<p>За академичните институции, болниците и корпоративните центрове за сигурност (SOC) този случай носи тревожно послание относно уязвимостта на самата ИИ инфраструктура. Софтуерните инструменти с отворен код за машинно обучение и обработка на данни — като медицинската платформа MONAI Label, векторните бази Qdrant или оркестраторите за обучение върху GPU сървъри — често се разработват от научни екипи с фокус върху функционалността, а не върху устойчивостта на входните API параметри. Когато автономни офанзивни агенти бъдат насочени срещу тези слабо защитени ИИ сървъри, единствената жизнеспособна отбранителна стратегия е преминаването към автономни защитни агенти, които непрекъснато провеждат вътрешен fuzzing одит на собствения код и изолират аномалните API сесии със същата машинна скорост.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/">Hackers use autonomous AI tool Cairn to find zero-day, take over server - BleepingComputer</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/cairn.html">Cairn</a><p>Cairn е рамка с отворен код за автоматизирано тестване на проникване (penetration testing), която координира автономни агенти с изкуствен интелект за ...</p></li><li><a href="/pages/monai-label.html">MONAI Label</a><p>MONAI Label е сървърно приложение с отворен код от екосистемата Project MONAI, което използва изкуствен интелект за асистирано анотиране и етикетиране...</p></li><li><a href="/pages/amazon.html">Amazon</a><p>Amazon е глобален лидер в електронната търговия и облачните изчисления чрез своето подразделение Amazon Web Services (AWS).</p></li><li><a href="/pages/gambit-security.html">Gambit Security</a><p>Gambit Security е изследователска компания в областта на киберсигурността и разузнаването на заплахите (threat intelligence).</p></li><li><a href="/pages/redis.html">Redis</a><p>Redis е платформа за данни в реално време, известна със своята база данни в паметта (in-memory database).</p></li><li><a href="/pages/zero-day.html">Нулев ден (Zero-day)</a><p>„Нулев ден“ (zero-day) е уязвимост в софтуера, която е неизвестна на неговия разработчик или за която все още не е налично решение (patch).</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
