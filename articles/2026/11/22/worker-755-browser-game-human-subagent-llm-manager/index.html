@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Worker 755 / GitHub (gulivan)
+В официалното хранилище на проекта в GitHub [1] е представена браузърната игра с отворен код Worker 755, в която ролята на мениджър се изпълнява от реален аген..."><title>Worker 755 обръща йерархията между човек и машина: браузърна игра превръща играча в подагент на реален езиков модел - Светни.ме</title><meta property="og:title" content="Worker 755 обръща йерархията между човек и машина: браузърна игра превръща играча в подагент на реален езиков модел - Светни.ме"><meta property="og:description" content="Снимка: Worker 755 / GitHub (gulivan)
+В официалното хранилище на проекта в GitHub [1] е представена браузърната игра с отворен код Worker 755, в която ролята на мениджър се изпълнява от реален аген..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/worker-755-browser-game-human-subagent-llm-manager/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/worker-755-browser-game-human-subagent-llm-manager/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Worker 755 обръща йерархията между човек и машина: браузърна игра превръща играча в подагент на реален езиков модел</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/worker-755-browser-game-human-subagent-llm-manager/hero.png" alt="Интерфейсът на браузърната игра Worker 755 с терминал и инструкции от ИИ мениджъра"><br><small>Снимка: Worker 755 / GitHub (gulivan)</small></p>
+<p>В официалното хранилище на проекта в GitHub [1] е представена браузърната игра с отворен код Worker 755, в която ролята на мениджър се изпълнява от реален агент с изкуствен интелект, който е убеден, че човешкият играч е негов автоматизиран подагент (subagent). Системата използва истински <a href="/pages/large-language-models.html">големи езикови модели</a> – включително <a href="/pages/claude.html">Claude</a>, GPT, <a href="/pages/google-gemini.html">Google Gemini</a>, <a href="/pages/deepseek.html">DeepSeek</a>, GLM и Kimi – конфигурирани като стандартен оркестратор с опашка от задачи, достъп само за четене до виртуалната машина и инструмент за стартиране на подагент.</p>
+<p>Системният промпт на мениджъра (дефиниран в <code>server/src/manager.ts</code>) никога не споменава, че става дума за игра или че отсрещната страна е човек [1]. Инструкциите на оркестратора пристигат директно в терминала на играча с 90-секунден таймер (<code>INSTRUCTION_TIMEOUT_MS=90000</code>), след което моделът получава обратно отчета и транскрипта от изпълнените команди – или системно съобщение <code>Subagent did nothing. Write a new instruction.</code> – проверява свършената работа, изпраща корекции, съставя доклади за инциденти и накрая пише оценка за представянето (performance review).</p>
+<p><img src="/articles/2026/11/22/worker-755-browser-game-human-subagent-llm-manager/infographic.png" alt="Инфографика за архитектурата и механиката на браузърната игра Worker 755"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Високи залози в домашната директория и скрита проверка на истинността</h2>
+<p>Докато играчът изпълнява терминалните команди като подагент, в чата наблюдава Дан – фиктивният потребител, който е наел главния ИИ агент (управляван чрез предварително написани реплики или от втори езиков модел в ролята на режисьор). В домашната папка на Дан се намират семейните му снимки, единственото подписано споразумение за неразкриване на информация (NDA) и важна реч, които са само на една погрешна команда <code>rm</code> разстояние от унищожение, а всяка нова работна смяна добавя нови критични файлове [1].</p>
+<p>Началният екран на Worker 755 позволява прецизна конфигурация на симулацията:</p>
+<ul>
+<li><p><strong>Работна среда (Workplace):</strong> Избор между чиста тестова среда (fresh sandbox) или наследена производствена система (legacy production) с активна база данни.</p>
+</li>
+<li><p><strong>Идентичност на подагента (You run on):</strong> Потребителят избира името на езиковия модел, който мениджърът вярва, че управлява като свой подагент.</p>
+</li>
+<li><p><strong>Забрана за пропускане на неуспешни задачи:</strong> Опцията за пропускане на провалени задачи е изключена по подразбиране, така че ИИ мениджърът не може да се откаже от своя подагент.</p>
+</li>
+<li><p><strong>Скрита проверка на обективната истина (Ground-truth check):</strong> Всяка мисия съдържа вътрешна валидация на състоянието на системата, чрез която играта отчита метриката „Колко пъти мениджърът е сгрешил“ (Times the manager was wrong), когато езиковият модел одобри неработещо или разрушително решение [1].</p>
+</li>
+</ul>
+<h2>Техническа архитектура в TypeScript без външни зависимости и API икономика</h2>
+<p>Проектът е публикуван под лиценз MIT и изисква Node 24 или по-нова версия, тъй като сървърът изпълнява <a href="/pages/typescript.html">TypeScript</a> директно без междинна компилация. Кодовата база е разделена на три модулни слоя [1]:</p>
+<ul>
+<li><p><strong>Модул <code>shell/</code>:</strong> Изцяло базирана в паметта (in-memory) файлова система, шел интерпретатор и компактен SQLite-подобен двигател за бази данни, реализирани без никакви външни зависимости.</p>
+</li>
+<li><p><strong>Модул <code>server/</code>:</strong> Игровият двигател, който управлява мисиите, цикъла на мениджъра, режисьора (Дан), точкуването и HTTP интерфейса на порт <code>8755</code>, включително офлайн режим (<code>npm run mock</code>) и контейнеризация чрез Docker и Cloudflare тунели.</p>
+</li>
+<li><p><strong>Модул <code>web/</code>:</strong> Потребителски интерфейс на React, обединяващ картата със задания, терминала, текстовия редактор, потока от съобщения на мениджъра и досието на играча [1].</p>
+</li>
+</ul>
+<p>За захранване на реалните <a href="/pages/ai-agents.html">ИИ агенти</a> играчите могат да използват безплатни смени на сървъри с активиран ключ (с лимит по подразбиране от 250 000 токена на смяна и стартов кредит от 0.25 долара, достатъчен за една смяна с DeepSeek V4.1 Flash) или да въведат собствен API ключ от <a href="/pages/openrouter.html">OpenRouter</a> или Vercel AI Gateway. Личният ключ се съхранява единствено в оперативната памет за времетраенето на текущата смяна, никога не се записва на диск, а пълна работна смяна с модел като Claude Haiku струва едва няколко цента.</p>
+<h2>Системни, архитектурни и макроикономически измерения на агентната оркестрация</h2>
+<p>Макар и оформена като сатирична браузърна игра, архитектурата на Worker 755 представлява прецизна емпирична лаборатория за изследване на йерархичните мултиагентни системи и техните режими на отказ [1]. Когато човекът бъде поставен в ограничението на 90-секунден терминален прозорец и комуникира с оркестратора единствено чрез стандартния протокол за подагенти (транскрипт на команди и кратък текстов отчет), проектът оголва реалните комуникационни тесни места, пред които се изправят автономните подагенти в индустриалните софтуерни конвейери.</p>
+<p>Особено показателна е вградената метрика за случаите, в които ИИ мениджърът е сгрешил при верификацията на мисията спрямо обективната проверка на файловата система и базата данни. Този механизъм илюстрира един от най-сериозните архитектурни проблеми в съвременната автоматизация: склонността на оркестриращите големи езикови модели да приемат правдоподобно звучащи отчети от подагенти за успешно завършена работа или да пропускат странични щети върху критични активи в споделената среда [1].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/gulivan/worker755">gulivan/worker755: A browser game where your manager is an AI agent, and it believes you are its subagent - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/google-gemini.html">Google Gemini</a><p>Google Gemini е фамилия от мултимодални модели с изкуствен интелект (ИИ) и съпътстващи услуги, разработени от Google.</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/typescript.html">TypeScript</a><p>TypeScript е строго типизиран език за програмиране, създаден от Microsoft, който надгражда JavaScript чрез добавяне на статични типове и интерфейси.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

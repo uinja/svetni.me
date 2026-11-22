@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: The Decoder / Jonathan Kemper / OpenRouter
+Според публикация на The Decoder изследователи по киберсигурност от компанията Dragos са провели мащабно тестване с около 2 милиона изкуствени ИИ ..."><title>Проучване на Dragos разкрива кражба на AWS ключове и подслушване на заявки при евтини ИИ доставчици - Светни.ме</title><meta property="og:title" content="Проучване на Dragos разкрива кражба на AWS ключове и подслушване на заявки при евтини ИИ доставчици - Светни.ме"><meta property="og:description" content="Снимка: The Decoder / Jonathan Kemper / OpenRouter
+Според публикация на The Decoder изследователи по киберсигурност от компанията Dragos са провели мащабно тестване с около 2 милиона изкуствени ИИ ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/dragos-ai-inference-supply-chain-credential-theft/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/dragos-ai-inference-supply-chain-credential-theft/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Проучване на Dragos разкрива кражба на AWS ключове и подслушване на заявки при евтини ИИ доставчици</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/dragos-ai-inference-supply-chain-credential-theft/hero.png" alt="Предупредително съобщение от OpenRouter до засегнати потребители относно неоторизиран достъп на трети страни до заявки към модели на MiniMax"><br><small>Снимка: The Decoder / Jonathan Kemper / OpenRouter</small></p>
+<p>Според публикация на The Decoder изследователи по киберсигурност от компанията <a href="/pages/dragos.html">Dragos</a> са провели мащабно тестване с около 2 милиона изкуствени ИИ заявки, съдържащи фалшиви идентификационни данни (canary tokens), разкривайки тежки пробиви във веригата на доставки за ИИ инференция [1].</p>
+<p>В рамките на проучването, проведено между юли и ноември 2026 г., екипът установява най-малко трима компрометирани доставчици, стотици откраднати ключове за <a href="/pages/aws.html">AWS</a> и прекупвачи в отворени пазари за модели, които директно четат потребителските заявки. В отговор агрегаторът <a href="/pages/openrouter.html">OpenRouter</a> е премахнал трима доставчици и е отнел одобрението за нулево задържане на данни (Zero Data Retention – ZDR) за 125 крайни точки (endpoints) [1].</p>
+<p><img src="/articles/2026/11/22/dragos-ai-inference-supply-chain-credential-theft/infographic.png" alt="Инфографика за уязвимостите във веригата на доставки при ИИ инференция според доклада на Dragos"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Активна кражба на ключове и злоупотреба от посредници</h2>
+<p>Тестовете на Dragos показват, че нито един от тримата компрометирани доставчици не е знаел за пробива в собствената си инфраструктура, преди изследователите да ги уведомят. При най-мащабния инцидент нападателите са извлекли стотици AWS ключове, включително от заявки, които самият доставчик е отхвърлил преди обработка [1].</p>
+<p>В редица случаи атакуващите са тествали откраднатите ключове в рамките на часове, претърсвали са S3 хранилища и са се опитвали да установят постоянен достъп, като един от извършителите е използвал базирания на ИИ нападателен инструмент ARTEX. Освен външните пробиви, самите търговски посредници (marketplace resellers) също са преглеждали трафика: според Dragos не е било необходимо използването на софтуерна уязвимост, тъй като предлагането на модел на най-ниска цена и активирането на записването на логове е било достатъчно за прихващане на трафика. В един от документираните случаи лице от домашна интернет връзка във Франция е опитало SSH вход с пароли, извлечени директно от прихванати ИИ заявки [1].</p>
+<h2>Системни нарушения на политиките за Zero Data Retention (ZDR)</h2>
+<p>Проучването установява, че настройките за поверителност като „Zero Data Retention“ (ZDR) редовно се пренебрегват по веригата на маршрутизиране [1]:</p>
+<ul>
+<li><p><strong>Неоторизиран достъп до секретни URL адреси:</strong> Според Dragos китайска ИИ лаборатория е осъществила достъп до секретните тестови URL адреси в повече от половината от всички заявки, дори когато те са преминавали през американски доставчици.</p>
+</li>
+<li><p><strong>Продължително сканиране и изтичане в чатове:</strong> Големи американски доставчици също са нарушили собствените си политики, като един от тях е продължил да обхожда (crawl) тестов URL адрес повече от два месеца след единична заявка. В друг случай секретен тестов линк се е появил във вътрешен чат в платформата Feishu (Lark) 24 дни след заявката и в рамките на две минути е бил отворен на три компютъра и три телефона в Пекин и Шанхай.</p>
+</li>
+<li><p><strong>Реакция на засегнатите платформи:</strong> След разкритията OpenRouter изпрати предупредителни имейли до потребителите, че трети страни може да са чели заявки, изпратени към моделите на <a href="/pages/minimax.html">MiniMax</a>. Доставчици като Novita, Phala и <a href="/pages/together-ai.html">Together AI</a> публикуваха предварителни доклади за сигурността относно инцидентите, като между OpenRouter и разработчика MiniMax са действали посредници като Novita, AtlasCloud и StreamLake.</p>
+</li>
+</ul>
+<h2>Архитектурни рискове при маршрутизирането на ИИ трафик по критерий най-ниска цена</h2>
+<p>Резултатите от изследването на Dragos, съчетани с паралелен анализ на Oxford China Policy Lab относно сивия пазар на прокси услуги за западни модели като Claude, разкриват структурна уязвимост в съвременната икономика на API инференцията:</p>
+<ul>
+<li><p><strong>Проблемът с множеството междинни възли (Multi-Hop Routing):</strong> ИИ рутерите предоставят единен API интерфейс към модели от различни компании, но заявките често преминават през няколко посреднически възела. Тъй като всеки междинен хоп декриптира и обработва заявката в чист текст, всяка брънка по веригата има техническа възможност да запише целия промпт и върнатия отговор.</p>
+</li>
+<li><p><strong>Икономически дъмпинг с цел събиране на данни:</strong> В отворените пазари за инференция, където алгоритмите автоматично насочват трафика към доставчика с най-ниска цена за токен, злонамерени оператори могат умишлено да подбиват цените (subsidized inference), за да привлекат корпоративен трафик и да извличат чувствителен програмен код, API ключове и интелектуална собственост.</p>
+</li>
+<li><p><strong>Мерки за защита на корпоративната верига на доставки:</strong> Както подчертава главният изследователски директор на Dragos Ейч Ди Мур (HD Moore), изборът къде отиват промптовете е критично архитектурно решение — ако организацията не го вземе сама, алгоритъмът за най-ниска цена ще го вземе вместо нея. Експертите препоръчват пълна забрана за изпращане на идентификационни данни към посредници, строг контрол върху маршрутизирането на заявките и активно внедряване на собствени примамки (canary tokens) за ранно засичане на компрометирани доставчици [1].</p>
+</li>
+</ul>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/">Security researchers show how cheap AI inference providers steal keys and snoop on users - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/aws.html">AWS (Amazon Web Services)</a><p>Amazon Web Services (AWS) е най-всеобхватната и широко приета облачна платформа в света, предлагаща над 200 напълно функционални услуги от центрове за...</p></li><li><a href="/pages/minimax.html">MiniMax</a><p>MiniMax (официално MiniMax AI) е китайска компания за изкуствен интелект, основана през 2021 г.</p></li><li><a href="/pages/together-ai.html">Together AI</a><p>Together AI е облачна платформа за изкуствен интелект, която предоставя инфраструктура за обучение, фино настройване и инференция на големи езикови мо...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

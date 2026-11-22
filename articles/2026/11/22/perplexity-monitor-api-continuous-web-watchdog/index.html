@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Perplexity / The Decoder
+Според репортаж на The Decoder [1], Perplexity AI разширява своя бизнес, насочен към разработчици, с пускането на Monitor API – нов инструмент, който претърсва уеб ..."><title>Perplexity пуска Monitor API за непрекъснато наблюдение на уеб промени и автоматизирано известяване на ИИ агенти - Светни.ме</title><meta property="og:title" content="Perplexity пуска Monitor API за непрекъснато наблюдение на уеб промени и автоматизирано известяване на ИИ агенти - Светни.ме"><meta property="og:description" content="Снимка: Perplexity / The Decoder
+Според репортаж на The Decoder [1], Perplexity AI разширява своя бизнес, насочен към разработчици, с пускането на Monitor API – нов инструмент, който претърсва уеб ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/perplexity-monitor-api-continuous-web-watchdog/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/perplexity-monitor-api-continuous-web-watchdog/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Perplexity пуска Monitor API за непрекъснато наблюдение на уеб промени и автоматизирано известяване на ИИ агенти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/perplexity-monitor-api-continuous-web-watchdog/hero.png" alt="Програмен интерфейс Perplexity Monitor API за непрекъснат уеб мониторинг"><br><small>Снимка: Perplexity / The Decoder</small></p>
+<p>Според репортаж на The Decoder [1], <a href="/pages/perplexity-ai.html">Perplexity AI</a> разширява своя бизнес, насочен към разработчици, с пускането на Monitor API – нов инструмент, който претърсва уеб пространството по зададен график и събужда <a href="/pages/ai-agents.html">ИИ агенти</a> чрез уебхук (webhook) само когато настъпят релевантни промени. Досега инженерните екипи бяха принудени сами да задействат повтарящи се заявки за търсене и да поддържат собствен програмен код за премахване на дубликати и засичане на разлики, което според компанията става почти невъзможно за поддръжка при мащабиране върху стотици теми и уеб страници.</p>
+<p>За Perplexity новият интерфейс е ключова част от по-широка корпоративна стратегия за разграничаване от все по-взаимозаменяемия пазар на потребителски чатботове чрез специализирани инструменти за разработчици [1]. Услугата е достъпна веднага през конзолата и стандартните <a href="/pages/api.html">програмни интерфейси</a> на компанията, като използва същия ключ за достъп като съществуващите Search, Context и Agent API.</p>
+<p><img src="/articles/2026/11/22/perplexity-monitor-api-continuous-web-watchdog/infographic.png" alt="Инфографика за архитектурата, филтриращия модел и бенчмарковете на Perplexity Monitor API"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Два режима на работа и интелигентен модел за вземане на решения</h2>
+<p>Една-единствена заявка към <code>api.perplexity.ai/v1/monitors</code> създава монитор чрез задаване на заявка за търсене, цел на естествен език, график и адрес на уебхук [1]. Архитектурата на Monitor API функционира в два основни режима:</p>
+<ul>
+<li><p><strong>Уеб монитори (Web monitors):</strong> Изпълняват периодични заявки през търсачката на Perplexity за уеб и новини, за да улавят събития като нови рундове на финансиране при компании за ИИ инфраструктура.</p>
+</li>
+<li><p><strong>Монитори на страници (Page monitors):</strong> Проследяват до 10 конкретни URL адреса – например страници с цени, списъци с промени (changelogs) или регулаторни политики – като при първото изпълнение запазват базова версия и при всяко следващо връщат текстова разлика (text diff) на настъпилите промени [1].</p>
+</li>
+</ul>
+<p>За да предотврати заливането на агентите с информационен шум, Perplexity оценява резултатите със собствен модел за вземане на решения (decision model) спрямо дефинираната от разработчика цел на естествен език. Резултатите от уеб търсенето трябва да преминат през четири проверки – релевантност, достоверност на източника, новост и актуалност във времевия прозорец – докато промените в конкретни страници се оценяват според това дали имат значение за поставената цел.</p>
+<p>Услугата изпраща известие с оценка на увереността (confidence score) единствено когато всички прагове са изпълнени, отсявайки предварителни анонси, слухове и обобщения [1]. Мониторите могат да работят на интервали от всеки 15 минути до веднъж седмично или по персонализиран cron график, като всяко изпълнение продължава оттам, където е спряло предходното, а подписаните уебхукове се преизпращат автоматично при временни мрежови грешки.</p>
+<h2>Вътрешни бенчмаркове, ценообразуване и натиск за рентабилност при оценка над $30 млрд.</h2>
+<p>Във вътрешни тестове Perplexity е сравнила своя Monitor API срещу услугите за мониторинг на Firecrawl, Exa и Parallel върху 60 теми, извлечени от реални заявки към Search API (включително корпоративни новини, технологични премиери и регулации) [1]. В рамките на първите осем часа от теста, оценени от отделен модел за релевантност и актуалност, са отчетени следните резултати:</p>
+<ul>
+<li><p><strong>Perplexity Monitor API:</strong> 63 свежи и релевантни страници (повече от три пъти над следващия конкурент).</p>
+</li>
+<li><p><strong>Firecrawl:</strong> 20 страници.</p>
+</li>
+<li><p><strong>Exa:</strong> 15 страници.</p>
+</li>
+<li><p><strong>Parallel Core и Parallel Lite:</strong> по 10 страници за всяка от двете версии [1].</p>
+</li>
+</ul>
+<p>Тези три конкурентни доставчика оглавиха публикувания през август бенчмарк на Artificial Analysis за традиционни Search API за ИИ агенти, в който Perplexity не бе включена. Ценообразуването на новата услуга е фиксирано на 1 долар за 1000 успешни изпълнения при уеб мониторите и 1 долар за 1000 извлечени URL адреса при мониторите на страници, с приложения в проследяването на рундове за финансиране, кадрови промени, тримесечни отчети, конкурентни цени и регулаторно съответствие [1].</p>
+<h2>Системни, архитектурни и макроикономически измерения на агентната инфраструктура</h2>
+<p>Трансформацията на уеб търсенето от еднократна синхронна заявка (pull) в непрекъснат асинхронен поток от събития (push) променя фундаментално архитектурата на автономните ИИ агенти [1]. Вместо разработчиците да поддържат скъпи цикли на периодично запитване (polling), дедупликация и парсване на състоянието, интелигентното филтриране се изнася на ниво API инфраструктура, така че агентът се активира и консумира изчислителни токени само при верифицирана промяна в реалния свят.</p>
+<p>От макроикономическа и бизнес гледна точка този ход отразява бързата комодитизация на стандартното уеб търсене, което вече е базова функция във водещите чатботове като <a href="/pages/chatgpt.html">ChatGPT</a>, <a href="/pages/claude.html">Claude</a> и <a href="/pages/google-gemini.html">Google Gemini</a>. След информациите от август, че <a href="/pages/nvidia.html">Nvidia</a> води преговори за инвестиция в Perplexity при оценка от над 30 милиарда долара, компанията е под силен натиск да изгради устойчиви и високомаржови бизнес модели чрез корпоративни агенти като Computer и Teammates и специализирани B2B инструменти за разработчици като Search as Code и Monitor API [1].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/">Perplexity&#39;s new Monitor API turns web search from a one-off query into a nonstop watchdog - The Decoder</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/perplexity-ai.html">Perplexity AI</a><p>Perplexity AI е технологична компания, която разработва търсачка с изкуствен интелект, агентни системи и специализирани програмни интерфейси (API) за ...</p></li><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/api.html">API</a><p>API (Application Programming Interface или приложно-програмен интерфейс) е набор от дефинирани правила, протоколи и инструменти, които позволяват на р...</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/google-gemini.html">Google Gemini</a><p>Google Gemini е фамилия от мултимодални модели с изкуствен интелект (ИИ) и съпътстващи услуги, разработени от Google.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

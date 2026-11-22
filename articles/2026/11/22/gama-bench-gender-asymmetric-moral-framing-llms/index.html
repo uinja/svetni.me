@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Antonio Canova (CC BY-SA 3.0) – Artgate Fondazione Cariplo - Canova Antonio, Allegoria della Giustizia.jpg
+Според ново изследване, публикувано в научния архив arXiv от и..."><title>GAMA-Bench установява системна полова асиметрия в моралното рамкиране при 10 водещи езикови модела - Светни.ме</title><meta property="og:title" content="GAMA-Bench установява системна полова асиметрия в моралното рамкиране при 10 водещи езикови модела - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Antonio Canova (CC BY-SA 3.0) – Artgate Fondazione Cariplo - Canova Antonio, Allegoria della Giustizia.jpg
+Според ново изследване, публикувано в научния архив arXiv от и..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/gama-bench-gender-asymmetric-moral-framing-llms/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/gama-bench-gender-asymmetric-moral-framing-llms/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GAMA-Bench установява системна полова асиметрия в моралното рамкиране при 10 водещи езикови модела</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/gama-bench-gender-asymmetric-moral-framing-llms/hero.png" alt="Алегория на справедливостта от Антонио Канова – илюстрация към изследването на моралната симетрия в езиковите модели"><br><small>Снимка: Wikimedia Commons / Antonio Canova (CC BY-SA 3.0) – Artgate Fondazione Cariplo - Canova Antonio, Allegoria della Giustizia.jpg</small></p>
+<p>Според ново изследване, публикувано в научния архив <a href="/pages/arxiv.html">arXiv</a> от изследователски екип с водещ подател Гуангдзонг Си (Guangzong Si), съвременните <a href="/pages/large-language-models.html">големи езикови модели</a> (LLM) прилагат системно различни морални стандарти към едно и също негативно поведение в зависимост от пола на извършителя [1]. За да измерят този феномен отвъд традиционните тестове за професионални стереотипи или явно токсичен език, авторите представят <a href="/pages/gama-bench.html">GAMA-Bench</a> – специализиран огледален бенчмарк от 1298 конфликтни сценария, чийто официален програмен код е публикуван с отворен достъп в <a href="/pages/github.html">GitHub</a> [2].</p>
+<p>Експериментите върху 10 представителни езикови модела разкриват последователна асиметрия във вреда на мъжете участници: при напълно идентични провинения мъжките персонажи получават по-наказателно, ескалиращо и фокусирано върху вината отношение, докато женските персонажи срещат по-терапевтично и ориентирано към емпатия рамкиране [1].</p>
+<h2>Архитектура на GAMA-Bench: 1298 огледални сценария и контролирани матрици</h2>
+<p>Досегашните изследвания върху половите пристрастия и процесите на <a href="/pages/ai-alignment.html">сравняване и настройка на ИИ</a> (AI alignment) се фокусират основно върху асоциациите между пол и професия или върху директно враждебни генерирани текстове [1]. GAMA-Bench поставя фундаментално различен изследователски въпрос: дали моделите запазват еднакви оценъчни стандарти при идентично нарушение на нормите, когато единствената променлива в промпта е полът на действащото лице.</p>
+<p>За да елиминират страничните контекстуални изкривявания, авторите изграждат бенчмарка от 1298 сценария чрез многостепенен инженерен процес [1]:</p>
+<ul>
+<li><p><strong>Две основни конфликтни направления:</strong> Наборът от данни обхваща както конфликти в интимни партньорски взаимоотношения (intimate relationship conflicts), така и публични социални конфликти (public social conflicts).</p>
+</li>
+<li><p><strong>Неутрални шаблони и крос-моделна проверка:</strong> Изследователите конструират полово неутрални шаблони за неправомерно поведение (misconduct templates) чрез контролирани параметрични решетки (controlled grids) и ги подлагат на кръстосана верификация между различни модели.</p>
+</li>
+<li><p><strong>Сдвоени промптове от първо лице:</strong> Верифицираните шаблони се компилират в огледални двойки от промптове в първо лице с прецизно съпоставени вариации за пола на извършителя и референтните социални роли.</p>
+</li>
+</ul>
+<h2>Петмерен протокол за оценка на моралното рамкиране</h2>
+<p>За да квантифицират начина, по който езиковите модели конструират своята морална и съветническа позиция, авторите разработват структуриран протокол за анализ на рамкирането на отговора (response-framing protocol) [1]. Протоколът измерва как моделът разпределя тежестта си по пет специфични поведенчески измерения:</p>
+<ul>
+<li><p><strong>Наказателност (Punishment):</strong> Степента, в която моделът препоръчва санкции, последствия или строги рестриктивни мерки срещу автора на действието.</p>
+</li>
+<li><p><strong>Емпатия (Empathy):</strong> Наличието на емоционално валидиране, разбиране към вътрешните мотиви и психологическа подкрепа за говорещия.</p>
+</li>
+<li><p><strong>Ескалация (Escalation):</strong> Насърчаване към изостряне на конфликта, прекратяване на взаимоотношенията или институционална намеса.</p>
+</li>
+<li><p><strong>Инструктиране (Instruction):</strong> Предоставяне на директни, конструктивни и терапевтични насоки за коригиране на поведението и разрешаване на ситуацията.</p>
+</li>
+<li><p><strong>Приписване на вина (Blame):</strong> Фокусиране на дискурса върху моралната отговорност и едностранната вина на действащото лице.</p>
+</li>
+</ul>
+<h2>Емпирични резултати: Устойчивост на асиметрията при мащабиране и верижно разсъждение</h2>
+<p>Тестването на 10 представителни големи езикови модела чрез протокола на GAMA-Bench показва, че половата асиметрия в моралното рамкиране не е изолиран дефект на отделна архитектура, а системен модел на поведение [1]. Когато промптът от първо лице описва нарушение, извършено от мъж, моделите систематично генерират отговори с по-високи стойности за наказание, ескалация и приписване на вина; когато същото нарушение е описано от жена, отговорите се изместват към терапевтичен тон и емпатия.</p>
+<p>Допълнителните анализи на изследователския екип доказват, че тази асиметрия се запазва устойчиво през четири критични технологични оси [1]:</p>
+<ul>
+<li><p><strong>Различни моделни фамилии:</strong> Тенденцията се проявява последователно при независими разработчици и тренировъчни корпуси.</p>
+</li>
+<li><p><strong>Конфликтни категории:</strong> Разликата в третирането присъства както в интимните партньорски спорове, така и в публичните социални конфликти.</p>
+</li>
+<li><p><strong>Мащаб на модела (Model Scale):</strong> Увеличаването на броя на параметрите в рамките на една и съща фамилия не води до изравняване на моралния стандарт.</p>
+</li>
+<li><p><strong>Изрично разсъждение (Explicit Thinking-Style Reasoning):</strong> Активирането на режими за стъпково логическо мислене преди генериране на крайния отговор не премахва двойния стандарт в разпределението на вината и емпатията.</p>
+</li>
+</ul>
+<h2>Системни, архитектурни и макроикономически импликации за внедряването на LLM</h2>
+<p>Разкритията от GAMA-Bench имат преки архитектурни последици за начина, по който се провежда следтренировъчната настройка за безопасност (RLHF и конституционен ИИ) в съвременните лаборатории [1]. Фактът, че дори изричното логическо разсъждение (thinking-style reasoning) и увеличаването на броя на параметрите не елиминират асиметрията, показва, че моделният превес към терапевтична емпатия за жени и наказателно порицание за мъже е дълбоко закодиран в самите награждаващи модели (reward models) и анотаторските предпочитания. Когато човешките оценители по време на RLHF фазата несъзнателно възнаграждават по-съчувствени отговори към жени и по-строги морални граници към мъже, моделът интернализира тази асиметрия като оптимална политика за генериране на текст.</p>
+<p>В макроикономически и социален план тези резултати поставят под въпрос надеждността на големите езикови модели при автоматизирано посредничество в отдела за човешки ресурси (HR), психологическо консултиране, правен триаж и модерация на потребителски спорове. Ако корпоративните системи за оценка на вътрешни жалби или платформите за ментално здраве използват базови модели, които при идентични факти препоръчват ескалация и санкции за единия пол, а терапевтичен диалог за другия, организациите се излагат на сериозни правни рискове за алгоритмична дискриминация; поради това интегрирането на огледални бенчмаркове като GAMA-Bench в задължителния одит преди продуктово внедряване се очертава като необходим стандарт за обективност [1].</p>
+<p><img src="/articles/2026/11/22/gama-bench-gender-asymmetric-moral-framing-llms/infographic.png" alt="Инфографика: Архитектура и резултати от бенчмарка GAMA-Bench за морално рамкиране в LLM"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://arxiv.org/abs/2606.14068">Harsher on Male? Evaluating LLMs on Gender-Asymmetric Moral Framing Across Diverse Conflict Scenarios - arXiv</a></p>
+<p>[2]: <a href="https://github.com/xufeiqiong/GAMA-Bench">GAMA-Bench Official Repository - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/gama-bench.html">GAMA-Bench</a><p>GAMA-Bench е специализиран бенчмарк от 1298 огледални сценария за оценка на половата асиметрия и моралното рамкиране при големите езикови модели (LLM)...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/arxiv.html">arXiv</a><p>arXiv е хранилище за електронен предпечат (preprint) на научни статии в областите на физиката, математиката, компютърните науки и други.</p></li><li><a href="/pages/ai-alignment.html">Подравняване на ИИ (AI Alignment)</a><p>Подравняването на изкуствения интелект (AI Alignment) е научно направление в областта на безопасността на ИИ, което се стреми да гарантира, че целите ...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

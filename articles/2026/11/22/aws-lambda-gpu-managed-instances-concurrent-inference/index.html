@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: InfoQ / AWS
+Според репортаж на InfoQ облачният доставчик Amazon Web Services официално добави поддръжка на графични ускорители към AWS Lambda, позволявайки на събитийните функции (Event Fun..."><title>AWS Lambda въвежда GPU инференция с до 48 паралелни заявки върху един модел чрез Managed Instances - Светни.ме</title><meta property="og:title" content="AWS Lambda въвежда GPU инференция с до 48 паралелни заявки върху един модел чрез Managed Instances - Светни.ме"><meta property="og:description" content="Снимка: InfoQ / AWS
+Според репортаж на InfoQ облачният доставчик Amazon Web Services официално добави поддръжка на графични ускорители към AWS Lambda, позволявайки на събитийните функции (Event Fun..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/aws-lambda-gpu-managed-instances-concurrent-inference/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/aws-lambda-gpu-managed-instances-concurrent-inference/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>AWS Lambda въвежда GPU инференция с до 48 паралелни заявки върху един модел чрез Managed Instances</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/aws-lambda-gpu-managed-instances-concurrent-inference/hero.png" alt="Сървърна и облачна инфраструктура за GPU ускорена инференция в AWS Lambda"><br><small>Снимка: InfoQ / AWS</small></p>
+<p>Според репортаж на InfoQ облачният доставчик <a href="/pages/amazon-web-services.html">Amazon Web Services</a> официално добави поддръжка на графични ускорители към <a href="/pages/aws-lambda.html">AWS Lambda</a>, позволявайки на събитийните функции (Event Functions) да се изпълняват върху EC2 инстанции от G-серията чрез механизма Lambda Managed Instances [1]. Архитектурата позволява до 48 паралелни извиквания в една среда за изпълнение да споделят едно-единствено копие на езиков модел, заредено в паметта на графичния процесор, като се управляват автоматично чрез пет готови базови контейнерни образа, включително <a href="/pages/vllm.html">vLLM</a>, SGLang, <a href="/pages/pytorch.html">PyTorch</a>, CuPy и <a href="/pages/cuda.html">CUDA</a> [2].</p>
+<p>Функционалността вече е общодостъпна (GA) във всички търговски региони, където се поддържат едновременно Managed Instances и инстанциите G4dn, G5, G6, G6f, Gr6, Gr6f и G6e, при ценообразуване, базирано на стандартната EC2 On-Demand тарифа плюс 9,75 процента такса за управление и 0,20 долара на милион заявки [1].</p>
+<h2>Архитектура на споделената GPU памет и конфигурация чрез AcceleratorConfig</h2>
+<p>Докато при първоначалния дебют на Lambda Managed Instances през декември миналата година графичните ускорители не се поддържаха, новото разширение премахва необходимостта от ръчно управление на GPU драйвери, версии на CUDA, AMI образи или Kubernetes плъгини за устройства [1]. Старшият архитект на решения в AWS Даниел Абиб подчертава, че разработчиците само изграждат OCI контейнерен образ и насочват функцията към него, а Lambda поема провизионирането, мащабирането и интеграцията със събитийните източници [2].</p>
+<p>Конфигурацията се разделя между доставчика на капацитет (Capacity Provider), който дефинира разрешените типове инстанции, виртуалната частна мрежа (VPC) и тавана от виртуални процесори (до 15 000 vCPU), и самата функция, която декларира необходимата видеопамет чрез новия блок <code>AcceleratorConfig</code> [1]:</p>
+<ul>
+<li><p><strong>Параметри на средата и видеопаметта:</strong> Функциите поддържат контейнерни образи до 32 GB, временно дисково пространство (ephemeral storage) до 32 GB, системна RAM памет от 2 до 32 GB, графична памет (AcceleratorMemorySize) от 3 до 48 GB и максимално време за изпълнение (timeout) до 90 минути при асинхронни и събитийни извиквания.</p>
+</li>
+<li><p><strong>Споделяне на модела и предварително загряване:</strong> До 48 едновременни заявки в една среда използват общо копие на теглата на модела във видеопаметта, а публикуването на нова версия предварително провизионира инстанциите, изтегля теглата и загрява инференционния двигател преди първото събитие, като технологията Seekable OCI за лениво зареждане съкращава времето за стартиране на средата с до 70 процента.</p>
+</li>
+<li><p><strong>Смяна на модела без програмен код:</strong> Базовите образи с vLLM и SGLang не изискват писане на собствен обработващ код (handler); променливата <code>MODEL_ID</code> сочи директно към хранилище в Hugging Face, ModelScope, префикс в Amazon S3 или локален път, което превръща подмяната на модела в обикновена конфигурационна промяна.</p>
+</li>
+</ul>
+<h2>Първи независими тестове: 66-кратно ускорение и 3600 токена в секунда</h2>
+<p>Още в първия ден след обявяването независими инженери публикуваха детайлни практически тестове на новата функционалност [1]. Инженерът Акаике от японската консултантска компания Classmethod тества всички 81 типа ускорени инстанции в региона <code>us-east-1</code> и установява, че системата приема точно 37 типа (всички от фамилията G), докато инстанциите от фамилията P, новите G7, собствените чипове Inferentia и Trainium, базираните на Graviton <code>g5g</code>, както и ZIP пакетите биват отхвърляни.</p>
+<p>В неговия бенчмарк с PyTorch върху графичен процесор <a href="/pages/nvidia.html">NVIDIA</a> L4 изчисленията се изпълняват около 66 пъти по-бързо в сравнение с централния процесор на същата инстанция, но Акаике отбелязва, че Terraform и Cloud Control все още не разпознават блока <code>AcceleratorConfig</code>, а началната квота за GPU vCPU в нов акаунт е нула и изисква изрично повишаване (например минимум 12 vCPU за три инстанции <code>g6.xlarge</code> с по 4 vCPU) [1].</p>
+<p>Във втори независим тест разработчик от програмата AWS Community Builder с псевдоним xbill разполага модела Gemma 4 E2B върху единична инстанция <code>g6.2xlarge</code> с NVIDIA L4 чрез базовия образ с vLLM, използвайки 4-битови QAT квантизирани тегла на Google и модул за спекулативно декодиране (drafter), вградени в 9-гигабайтов образ [1]:</p>
+<ul>
+<li><p><strong>Пропускателна способност при пълна конкурентност:</strong> Една среда за изпълнение обслужва успешно всички 48 едновременни заявки и приключва 417 последователни повиквания без нито една грешка, постигайки около 130 токена в секунда при единична заявка и между 3400 и 3600 токена в секунда при 48 паралелни заявки.</p>
+</li>
+<li><p><strong>Оперативно триене в конвейера:</strong> Основните забавяния идват от процеса на публикуване (484 секунди от публикуване до активна версия), отхвърлянето на мултиплатформени Docker манифести от страна на Lambda и факта, че интерфейсът връща само напълно завършени отговори без поточно предаване (streaming), което прави невъзможно измерването на времето до първия токен (TTFT).</p>
+</li>
+</ul>
+<h2>Икономически модел и архитектурни ограничения при пиков трафик</h2>
+<p>Ценовият модел следва структурата на Managed Instances, но прилага по-ниска такса за управление при графичните инстанции (9,75 процента върху EC2 цената) спрямо 15-те процента, начислявани върху стандартните CPU инстанции [1]. Корпоративните клиенти могат да прилагат Savings Plans и Reserved Instances към базовия EC2 капацитет, а Lambda не начислява такса за продължителност на извикванията (duration charge), като таксуването тече непрекъснато, докато минималният брой активни среди е над нула.</p>
+<p>Въпреки тези предимства, анализът на AWS експерта Ян Куи подчертава, че за разлика от класическите Lambda функции, които се мащабират за милисекунди от огромен споделен пул, при Managed Instances стартирането на нови EC2 инстанции отнема десетки секунди [1]. Поради това архитектурата не е подходяща за резки и непредвидими скокове в трафика, а ограниченият обхват само до Event Functions (без поддръжка на новите HTTP Web Functions и поточно предаване на токени) позиционира услугата основно за асинхронна обработка на опашки и събитийни потоци.</p>
+<h2>Системни, архитектурни и макроикономически импликации за сървърлес ИИ</h2>
+<p>Интегрирането на споделена GPU памет с 48-кратна конкурентност в AWS Lambda решава един от най-големите парадокси на сървърлес архитектурите в ерата на генеративния ИИ: несъвместимостта между изолирания модел „една заявка – една среда“ и огромния обем видеопамет, необходим за теглата на големите езикови модели [1]. Чрез вграждането на двигатели с непрекъснато групиране на заявките (continuous batching) като vLLM и SGLang директно в базовите контейнерни образи, AWS позволява на една GPU карта NVIDIA L4 да постигне над 3400 токена в секунда сумарна производителност, без инженерните екипи да поддържат Kubernetes клъстери или външни инференционни платформи.</p>
+<p>На стратегическо ниво ходът на AWS е насочен директно срещу специализираните сървърлес GPU доставчици (като Modal, Replicate, RunPod и Baseten), които привличат разработчици с лесно деплойване на контейнери върху графични чипове. Както посочва Даниел Абиб, външните сървърлес GPU услуги остават извън корпоративната AWS среда без нативна интеграция с IAM идентичности, VPC мрежи и събитийни източници като SQS, EventBridge и S3 [2]; чрез такса от едва 9,75 процента върху EC2 тарифата и съвместимост със съществуващите Savings Plans, AWS превръща GPU инференцията за фонови и събитийно управлявани задачи в естествено продължение на стандартния корпоративен облачен стек.</p>
+<p><img src="/articles/2026/11/22/aws-lambda-gpu-managed-instances-concurrent-inference/infographic.png" alt="Инфографика: Архитектура, производителност и ценови модел на AWS Lambda GPU Managed Instances"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">AWS Lambda Now Runs GPU Inference with 48 Concurrent Invocations Sharing One Model per GPU - InfoQ</a></p>
+<p>[2]: <a href="https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/">AWS Lambda now supports GPU instances for Event Functions on Lambda Managed Instances - AWS News Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/amazon-web-services.html">Amazon Web Services (AWS)</a><p>Amazon Web Services (AWS) е водещото по пазарен дял облачно подразделение на Amazon, предоставящо над 200 напълно функционални услуги от центрове за д...</p></li><li><a href="/pages/aws-lambda.html">AWS Lambda</a><p>AWS Lambda е водещата безсървърна (serverless) изчислителна платформа на Amazon Web Services, която изпълнява програмен код в отговор на събития с авт...</p></li><li><a href="/pages/vllm.html">vLLM</a><p>vLLM е популярна библиотека с отворен код за високопроизводително и икономично обслужване (serving) на големи езикови модели (LLMs).</p></li><li><a href="/pages/pytorch.html">PyTorch</a><p>PyTorch е водеща софтуерна библиотека с отворен код за машинно обучение и дълбоки невронни мрежи, първоначално създадена от Meta AI и понастоящем упра...</p></li><li><a href="/pages/cuda.html">CUDA</a><p>CUDA (Compute Unified Device Architecture) е паралелна изчислителна платформа и приложно-програмен интерфейс (API), разработени от NVIDIA.</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

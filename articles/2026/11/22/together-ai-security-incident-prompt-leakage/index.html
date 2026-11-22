@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Together AI
+В официално изявление на корпоративния си блог главният изпълнителен директор и съосновател на Together AI Випул Вед Пракаш уведоми клиентите на компанията за инцидент със сигур..."><title>Together AI разкри изтичане на потребителски промптове след комит на ключ за Hugging Face от ИИ агент за програмиране - Светни.ме</title><meta property="og:title" content="Together AI разкри изтичане на потребителски промптове след комит на ключ за Hugging Face от ИИ агент за програмиране - Светни.ме"><meta property="og:description" content="Снимка: Together AI
+В официално изявление на корпоративния си блог главният изпълнителен директор и съосновател на Together AI Випул Вед Пракаш уведоми клиентите на компанията за инцидент със сигур..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/together-ai-security-incident-prompt-leakage/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/together-ai-security-incident-prompt-leakage/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Together AI разкри изтичане на потребителски промптове след комит на ключ за Hugging Face от ИИ агент за програмиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/together-ai-security-incident-prompt-leakage/hero.png" alt="Официално известие на Together AI за инцидента със сигурността и изтичането на промптове"><br><small>Снимка: Together AI</small></p>
+<p>В официално изявление на корпоративния си блог главният изпълнителен директор и съосновател на <a href="/pages/together-ai.html">Together AI</a> Випул Вед Пракаш уведоми клиентите на компанията за инцидент със сигурността, засягащ подмножество от промптове, изпратени към сървърлес услугата за инференция през юни и юли 2026 г. [1]. Неоторизирана трета страна е успяла да изтегли съхранени извадки от потребителски заявки, след като ключ за достъп до частно хранилище с тестови данни е бил случайно публикуван в публично хранилище за изходен код.</p>
+<p>Компанията се извинява за допуснатия пробив и съвместно с външна фирма за дигитална криминалистика и правоохранителните органи извършва детайлен преглед на засегнатите записи, за да установи каква информация е била изложена на риск и кои клиенти подлежат на директно уведомяване [1].</p>
+<h2>Хронология на пробива: Грешка на ИИ агент в проекта xorl и засегнати модели</h2>
+<p>Техническата причина за инцидента произтича от комбинация между рутинно събиране на данни за софтуерно тестване и автоматизирано генериране на код от изкуствен интелект [1]. Като част от вътрешните си тестови процедури инженерите на Together AI са събирали извадки от промптове (от акаунти, разрешили подобна употреба) и са ги съхранявали в частно хранилище в платформата <a href="/pages/hugging-face.html">Hugging Face</a>.</p>
+<p>По време на разработката на публичното хранилище на компанията <code>xorl</code> в <a href="/pages/github.html">GitHub</a>, автономен ИИ агент за програмиране (AI coding agent) е направил комит, съдържащ идентификационния ключ за достъп до частното хранилище в Hugging Face [1]:</p>
+<ul>
+<li><p><strong>Засегнати модели и конкретни дати:</strong> Съхранените извадки от промптове произхождат от заявки към три конкретни модела – MiniMax M3, GLM-5.2 и Kimi K2.6 – събрани основно на 24 юни, 4 юли, 8 юли и 14 юли 2026 г.</p>
+</li>
+<li><p><strong>Прозорец на излагане и експлоатация:</strong> Въпреки че автоматизираните системи за сканиране на Together AI са засекли изтеклия ключ и комитът е бил отменен (reverted), в краткия прозорец на публичен достъп неоторизирана страна е придобила токена и е изтеглила архивираните промптове.</p>
+</li>
+<li><p><strong>Връзка с експеримента на Dragos:</strong> След изтеглянето на данните атакуващият е претърсил текстовете на промптовете за ключове към външни услуги и е тествал тяхната валидност, като пет от тестваните идентификационни данни се оказват примамващи (canary) ключове, принадлежащи на мащабния експеримент за сигурност на компанията <a href="/pages/dragos.html">Dragos</a>.</p>
+</li>
+</ul>
+<h2>Обхват на криминалистичното разследване и въведени защитни контроли</h2>
+<p>Според официалния доклад на Випул Вед Пракаш проведеното разследване не е установило доказателства за допълнително изтичане на промптове извън конкретния архив от юни и юли 2026 г. [1]. В отговор на инцидента Together AI въвежда четири незабавни структурни промени в своите процеси за разработка и управление на клиентски данни:</p>
+<ul>
+<li><p><strong>Ограничени и краткоживеещи токени:</strong> Преминаване към ключове с тесен обхват на правата (scoped credentials), краткосрочни токени и безключов достъп (keyless access) навсякъде, където инфраструктурата го позволява.</p>
+</li>
+<li><p><strong>Задължителна инспекция на кода:</strong> Въвеждане на строги автоматизирани проверки за наличие на тайни и ключове във всяка заявка за сливане на код (pull request) преди публикуване.</p>
+</li>
+<li><p><strong>Zero Data Retention (ZDR) по подразбиране:</strong> Настройката за нулево задържане на данни вече е активирана по подразбиране за всички нови клиентски акаунти в платформата, като на съществуващите клиенти, работещи с чувствителни данни, се препоръчва незабавно да активират ZDR в профилите си.</p>
+</li>
+<li><p><strong>Регулация на ИИ агентите за програмиране:</strong> Обновяване на вътрешните инженерни правила и ограниченията за сигурност, управляващи използването на автономни ИИ агенти в процеса на разработка на софтуер.</p>
+</li>
+</ul>
+<h2>Системни, архитектурни и макроикономически импликации за автономното софтуерно инженерство</h2>
+<p>Инцидентът в Together AI представлява един от първите публично документирани пробиви в облачната индустрия, при който веригата на компрометиране започва от автономен ИИ агент за програмиране и завършва с изтичане на реални потребителски данни за ИИ инференция [1]. Случаят илюстрира пряката опасност от предоставянето на достъп до локални конфигурационни файлове и променливи на средата на кодиращи агенти, които работят върху публични хранилища с отворен код като <code>xorl</code>: дори когато автоматизираните скенери засекат и отменят комита, ботовете на атакуващите наблюдават публичния поток на GitHub в реално време и извличат изложените токени за секунди.</p>
+<p>На второ ниво разкритието, че пет от тестваните от хакера ключове са били canary токени от изследването на Dragos, потвърждава ефективността на активните примамки като механизъм за ранно откриване на пробиви във веригата за доставки на ИИ [1]. Принудителното преминаване на Together AI към Zero Data Retention (ZDR) по подразбиране за всички нови акаунти показва, че практиката да се съхраняват сурови потребителски промптове във външни хранилища като Hugging Face за тестови цели вече носи неприемлив репутационен и правен риск, принуждавайки доставчиците на сървърлес инференция да третират всеки промпт като токсичен актив, който не бива да се записва на диск.</p>
+<p><img src="/articles/2026/11/22/together-ai-security-incident-prompt-leakage/infographic.png" alt="Инфографика: Анатомия на инцидента в Together AI и въведените мерки за сигурност"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<p><strong>Източници:</strong></p>
+<p>[1]: <a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026">Security event: Prompt leakage for requests in June and July of 2026 - Together AI Blog</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/together-ai.html">Together AI</a><p>Together AI е облачна платформа за изкуствен интелект, която предоставя инфраструктура за обучение, фино настройване и инференция на големи езикови мо...</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

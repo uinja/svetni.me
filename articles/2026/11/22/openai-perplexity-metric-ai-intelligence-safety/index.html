@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / mikemacmarketing / photo on flickr (CC BY 2.0) – Artificial Neural Network with Chip.jpg
+В официална публикация в корпоративния си блог [1] OpenAI представя концептуална..."><title>OpenAI предлага перплексията като универсална метрика за интелигентност и прагове за безопасност при ИИ - Светни.ме</title><meta property="og:title" content="OpenAI предлага перплексията като универсална метрика за интелигентност и прагове за безопасност при ИИ - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / mikemacmarketing / photo on flickr (CC BY 2.0) – Artificial Neural Network with Chip.jpg
+В официална публикация в корпоративния си блог [1] OpenAI представя концептуална..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/openai-perplexity-metric-ai-intelligence-safety/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/openai-perplexity-metric-ai-intelligence-safety/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI предлага перплексията като универсална метрика за интелигентност и прагове за безопасност при ИИ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/openai-perplexity-metric-ai-intelligence-safety/hero.png" alt="Невронна мрежа и изчислителен чип като илюстрация на компресията и перплексията при ИИ моделите"><br><small>Снимка: Wikimedia Commons / mikemacmarketing / photo on flickr (CC BY 2.0) – Artificial Neural Network with Chip.jpg</small></p>
+<p>В официална публикация в корпоративния си блог [1] <a href="/pages/openai.html">OpenAI</a> представя концептуална рамка за използване на перплексията (perplexity – или еквивалентно загубата на кръстосана ентропия, cross-entropy loss) като обща научна метрика за сравняване на базовия прогрес между разработчиците на <a href="/pages/large-language-models.html">големи езикови модели</a> и за дефиниране на споделени стандарти за <a href="/pages/ai-safety.html">безопасност на изкуствения интелект</a>. Като първа стъпка към по-голяма индустриална прозрачност компанията публикува вътрешните си измервания за напредъка в етапа на <a href="/pages/pretraining.html">предварително обучение</a>, въпреки че тези данни разкриват пред конкурентите позицията на лабораторията.</p>
+<p>Според публикацията съвременният изкуствен интелект не се изгражда чрез проектиране на изолирани софтуерни правила от нулата, а чрез овладяване на интелигентността, възникваща от фундаментално по-прост процес: обучението на компресор (или предсказател съгласно теоремата на Шанън за кодиране на източника) върху огромен неструктуриран корпус от данни. Всички последващи техники като промптинг, фино настройване (finetuning) и обучение с подкрепление (reinforcement learning) служат за извличане на латентните способности, формирани в този базов субстрат на интелигентността [1].</p>
+<p><img src="/articles/2026/11/22/openai-perplexity-metric-ai-intelligence-safety/infographic.png" alt="Инфографика за перплексията като универсална метрика за ИИ прогрес и безопасност"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>От компресия на данни до възникващи способности: праговете на логаритмичната перплексия</h2>
+<p>Перплексията измерва колко точно един модел предсказва следващия токен средностатистически върху независим тестови набор от данни (held-out dataset), като по-ниската стойност означава по-добри предсказания и по-ефективна компресия. OpenAI проследява как преминаването на конкретни числени прагове на логаритмичната перплексия (log-perplexity) върху основния вътрешен оценъчен набор на компанията е довело до появата на качествено нови способности, които не са били очевидни предварително [1]:</p>
+<ul>
+<li><p><strong>Ранни генерации (GPT-2 и GPT-3):</strong> Поставяйки нови рекорди по перплексия върху по-стари набори от данни, GPT-2 става първият модел, способен последователно да формулира свързани параграфи текст, а GPT-3 демонстрира способност за учене в контекст (in-context learning) само от няколко примера.</p>
+</li>
+<li><p><strong>Логаритмична перплексия ≈ 0.99 (GPT-3.5):</strong> На това ниво моделът постига гладка диалогова способност и формира технологичната основа за оригиналния <a href="/pages/chatgpt.html">ChatGPT</a>.</p>
+</li>
+<li><p><strong>Логаритмична перплексия ≈ 0.91 (GPT-4):</strong> При този праг <a href="/pages/gpt-4.html">GPT-4</a> започва продуктивно да използва верижно логическо разсъждение (chain-of-thought reasoning), което мотивира целенасоченото извличане на тази способност и създаването на съвременните разсъждаващи модели.</p>
+</li>
+<li><p><strong>Логаритмична перплексия под 0.80 и ≈ 0.76:</strong> При спадане на загубата под 0.8 се наблюдават трансформативни способности в киберсигурността и математиката, а след надграждане до модел с логаритмична перплексия около 0.76 изследователите на OpenAI стават свидетели на поредица от решения на отворени математически проблеми, генерирани едно след друго в един-единствен чат канал в Slack [1].</p>
+</li>
+</ul>
+<p>Докато традиционните тестове и бенчмаркове бързо се насищат и губят информативност между поколенията модели, проследяването на перплексията при предварителното обучение остава константен индикатор за фундаменталния капацитет на системите.</p>
+<h2>Рискът от лавинообразен скок през 2027 г. и предложението за общи лимити</h2>
+<p>Публикацията обръща специално внимание на участието на самия изкуствен интелект в алгоритмичните изследвания върху предварителното обучение. Въпреки че дълбокото обучение разчита силно на експерименти, историята на областта показва, че прости, но фундаментални алгоритмични прозрения често са оставали незабелязани с години [1].</p>
+<p>Според анализа на OpenAI внезапната трансформация, наблюдавана при решаването на отворени математически проблеми при логаритмична перплексия ≈ 0.76, е напълно възможна и в изследванията на дълбокото обучение. Това означава, че още през 2027 г. индустрията може да стане свидетел на лавина от фундаментални подобрения в предварителното обучение, като напредъкът в техниките за подравняване (alignment) и мониторинг едва ли ще бъде достатъчно бърз, за да компенсира пълното потенциално ускорение.</p>
+<p>При навлизане в прозореца на логаритмична перплексия от около 0.68 до 0.70 OpenAI очаква появата на нови трансформативни способности, за които днес може дори да не съществуват тестове, паралелно с по-нататъшна деградация на текущите методи за одит и повишена осведоменост на моделите, че са подложени на оценка [1]. Поради това авторът предлага установяването на общи индустриални лимити, базирани на перплексия и други метрики, които водещите лаборатории да се ангажират да не преминават, докато методите за разбиране и мониторинг на поведението на ИИ не достигнат конкретни технологични етапи – например разработването на надежден наследник на мониторинга върху веригата на мислене (CoT monitors).</p>
+<h2>Системни, архитектурни и макроикономически измерения на стандартизацията чрез перплексия</h2>
+<p>Приемането на перплексията като универсален индустриален регулатор е изправено пред четири структурни технически предизвикателства, които OpenAI изрично дефинира [1]:</p>
+<ul>
+<li><p><strong>Трудност при сравнение между лабораториите:</strong> Различните разработчици използват различни оценъчни набори от данни и тренировъчни миксове, което изисква създаване на преносими протоколи за съпоставка на базови модели.</p>
+</li>
+<li><p><strong>Откъснатост от конкретни приложни задачи:</strong> Перплексията не измерва пряко конкретно умение, а сигнализира за вероятността от възникване на нови латентни способности.</p>
+</li>
+<li><p><strong>Неотчитане на напредъка извън предварителното обучение:</strong> Техники като верижното разсъждение (chain-of-thought) драстично увеличават практическите способности на модела, без да намаляват неговата базова перплексия.</p>
+</li>
+<li><p><strong>Неизвестен теоретичен минимум (unknown floor):</strong> Загуба от 0 е невъзможна поради присъщата ентропия на данните; с приближаването към този неизвестен праг видимият спад на перплексията ще се забавя, но все по-малки числени подобрения ще водят до все по-големи скокове в общата интелигентност [1].</p>
+</li>
+</ul>
+<p>От архитектурна и регулаторна гледна точка предложението на OpenAI бележи опит за изместване на глобалното управление на ИИ от реактивно тестване на крайни продукти към превантивен контрол върху самия информационен субстрат на моделите. Ако водещите лаборатории синхронизират прагове на компресия като условие за спиране и одит преди преминаване под прозореца 0.68–0.70, капиталовите цикли и изчислителните бюджети в сектора ще бъдат пряко обвързани с доказуеми пробиви в интерпретируемостта и мониторинга на автономните системи [1].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://openai.com/index/perplexity-and-intelligence/">Perplexity and Intelligence - OpenAI</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/gpt-4.html">GPT-4</a><p>GPT-4 (Generative Pre-trained Transformer 4) е мултимодален голям езиков модел на OpenAI, представен през март 2023 г.</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li><li><a href="/pages/pretraining.html">Предварително обучение (Pretraining)</a><p>Предварителното обучение е фундаменталният етап при създаването на големи езикови модели, при който невронната мрежа се обучава да компресира и предск...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: BleepingComputer / Signal
+Според репортаж на BleepingComputer [1], платформата за криптирана комуникация Signal обяви нови защитни механизми, които блокират екранните снимки в iOS 27 и пред..."><title>Signal блокира системните ИИ асистенти Siri и Gemini от заснемане на чатове в iOS 27 и Android - Светни.ме</title><meta property="og:title" content="Signal блокира системните ИИ асистенти Siri и Gemini от заснемане на чатове в iOS 27 и Android - Светни.ме"><meta property="og:description" content="Снимка: BleepingComputer / Signal
+Според репортаж на BleepingComputer [1], платформата за криптирана комуникация Signal обяви нови защитни механизми, които блокират екранните снимки в iOS 27 и пред..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/signal-blocks-siri-gemini-ai-screen-capture/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/signal-blocks-siri-gemini-ai-screen-capture/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Signal блокира системните ИИ асистенти Siri и Gemini от заснемане на чатове в iOS 27 и Android</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/signal-blocks-siri-gemini-ai-screen-capture/hero.png" alt="Криптираното приложение Signal въвежда защити срещу системни ИИ асистенти"><br><small>Снимка: BleepingComputer / Signal</small></p>
+<p>Според репортаж на BleepingComputer [1], платформата за криптирана комуникация <a href="/pages/signal.html">Signal</a> обяви нови защитни механизми, които блокират екранните снимки в <a href="/pages/ios.html">iOS</a> 27 и предотвратяват заснемането на лични разговори от системни асистенти с изкуствен интелект на поддържани устройства с <a href="/pages/android.html">Android</a>. Мерките са проектирани специално да спрат вградените в операционните системи асистенти <a href="/pages/siri.html">Siri</a> и <a href="/pages/google-gemini.html">Google Gemini</a> от достъп до поверителни чатове, докато изпълняват фонови или агентни задачи за потребителите.</p>
+<p>Стъпката надгражда функцията, която Signal въведе през май 2025 г. за блокиране на противоречивата система Recall на <a href="/pages/microsoft.html">Microsoft</a> за автоматично заснемане на екрана в Windows 11 [1]. Президентът на Signal <a href="/pages/meredith-whittaker.html">Мередит Уитакър</a> посочва в официална публикация, че системни функции като Onscreen Awareness на Siri и Gemini Intelligence на <a href="/pages/google.html">Google</a> могат да улавят съдържанието на чатовете директно от екрана на приложението, изнасяйки чувствителни данни извън контрола на Signal и излагайки на риск всички участници в разговора.</p>
+<p><img src="/articles/2026/11/22/signal-blocks-siri-gemini-ai-screen-capture/infographic.png" alt="Инфографика за защитите на Signal срещу системните ИИ агенти в iOS 27, Android и macOS"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Обратно инженерство и механизми за блокиране в iOS 27 и Android</h2>
+<p>Според компанията инженерите на Signal са прекарали месеци в изследване на начините, по които системите с изкуствен интелект извличат данни от приложенията, като са проектирали целенасочени защити за блокиране на всички пътища за екстракция, потвърдени чрез обратно инженерство (reverse engineering) [1]. Новите защити се активират автоматично навсякъде, където операционната среда позволява това, без да се посочват конкретни номера на версиите на приложението.</p>
+<p>Поведението на защитните механизми се различава според мобилната платформа [1]:</p>
+<ul>
+<li><p><strong>Настройката Block Siri AI в iOS 27:</strong> Потребителите на <a href="/pages/apple.html">Apple</a> трябва да обновят приложението до последната версия и да проверят в менюто Settings &gt; App Security дали опцията „Block Siri AI“ е активирана; като страничен ефект на iOS тази защита възпрепятства и самите потребители да правят ръчни екранни снимки на разговорите си дори за легитимни цели.</p>
+</li>
+<li><p><strong>Динамична защита в Android:</strong> При устройствата с Android приложението автоматично включва режима Screen Security в момента, в който засече опит на ИИ асистент да прочете или заснеме екрана на Signal.</p>
+</li>
+</ul>
+<h2>Уязвимостта при macOS 27 и призивът за прозрачни API за отказ</h2>
+<p>Въпреки въведените мобилни бариери Мередит Уитакър предупреждава, че дълбоко вградените в операционните системи ИИ агенти представляват „екзистенциална заплаха за Signal“, тъй като могат да получат достъп до комуникационни данни по множество алтернативни канали, оставяйки разработчиците на приложения с ограничени възможности за защита [1].</p>
+<p>Най-показателният пример е настолната операционна система macOS, където Signal към момента не разполага с технически механизъм за принудително блокиране на екранните снимки. За потребителите на macOS 27 организацията препоръчва ръчно добавяне на Signal в списъка с изключени приложения (Excluded Apps) в System Settings &gt; Siri, за да се предотврати проактивното извличане на съобщения от Siri AI [1].</p>
+<p>Поради тази структурна асиметрия Signal отправя публичен призив към Apple, Google и Microsoft да разкрият пълната техническа документация за всички механизми, чрез които техните ИИ системи достъпват данни, и да предоставят на разработчиците ясен и надежден начин за отказ (opt-out) от ИИ достъп до екрани, файлове, известия и програмни интерфейси [1].</p>
+<h2>Системни, архитектурни и макроикономически измерения за криптирането от край до край</h2>
+<p>Конфликтът между Signal и доставчиците на операционни системи разкрива фундаментална архитектурна криза в съвременната информационна сигурност: обезсмислянето на криптирането от край до край (E2EE) на ниво крайна точка (endpoint) [1]. Математическата сигурност на протокола на Signal гарантира, че съобщенията са непробиваеми по време на пренос, но в момента, в който текстът бъде декриптиран и рендериран в буфера на дисплея за човешко око, системните агенти като Siri Onscreen Awareness, Gemini Intelligence и Windows Recall получават привилегирован достъп до чистия текст.</p>
+<p>Когато операционната система се трансформира от неутрален слой за управление на хардуерни ресурси в активен агентен наблюдател, приложенията за поверителност са принудени да водят постоянна отбранителна война чрез обратно инженерство и блокиране на системни буфери – понякога с цената на базови потребителски функции като легитимните скрийншоти в iOS 27 или без никаква програмна защита, както при macOS 27 [1]. Без стандартизирани и одитируеми системни API за пълен отказ от агентно сканиране, доверието в сигурната цифрова комуникация се премества изцяло от криптографските протоколи към политиките на трите доминиращи платформени корпорации.</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/">Signal to block Siri, Gemini AI from capturing chats on iOS, Android - BleepingComputer</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/signal.html">Signal</a><p>Signal е платформа за криптирана комуникация от край до край (E2EE) с отворен код, управлявана от нестопанската фондация Signal Foundation.</p></li><li><a href="/pages/siri.html">Siri AI (Siri с Apple Intelligence)</a><p>Siri AI е генеративното прераждане на гласовия асистент на Apple, задвижвано от мултимодални модели на Apple Intelligence и дълбок личен семантичен ин...</p></li><li><a href="/pages/google-gemini.html">Google Gemini</a><p>Google Gemini е фамилия от мултимодални модели с изкуствен интелект (ИИ) и съпътстващи услуги, разработени от Google.</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/meredith-whittaker.html">Мередит Уитакър (Meredith Whittaker)</a><p>Мередит Уитакър е изтъкнат изследовател в областта на технологичната етика, президент на Signal Foundation и съосновател на AI Now Institute към Нюйор...</p></li><li><a href="/pages/ios.html">iOS</a><p>iOS е мобилната операционна система на Apple, захранваща смартфоните iPhone.</p></li><li><a href="/pages/android.html">Android</a><p>Android е мобилна операционна система с отворен код, разработена от Google.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
