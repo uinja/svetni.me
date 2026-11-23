@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / The GNOME Project (GPL) – Linux command-line. Bash. GNOME Terminal. screenshot.png
+В спецификацията на проекта 0rwx, представена на официалния сайт на инициативата и обс..."><title>0rwx: семпъл модел за обозначаване на употребата на ИИ, вдъхновен от правата за достъп в Unix - Светни.ме</title><meta property="og:title" content="0rwx: семпъл модел за обозначаване на употребата на ИИ, вдъхновен от правата за достъп в Unix - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / The GNOME Project (GPL) – Linux command-line. Bash. GNOME Terminal. screenshot.png
+В спецификацията на проекта 0rwx, представена на официалния сайт на инициативата и обс..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/0rwx-unix-permissions-ai-usage-model/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/0rwx-unix-permissions-ai-usage-model/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>0rwx: семпъл модел за обозначаване на употребата на ИИ, вдъхновен от правата за достъп в Unix</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/0rwx-unix-permissions-ai-usage-model/hero.png" alt="Снимка на команден ред в Linux с Bash и GNOME Terminal, илюстрираща правата за достъп в Unix"><br><small>Снимка: Wikimedia Commons / The GNOME Project (GPL) – Linux command-line. Bash. GNOME Terminal. screenshot.png</small></p>
+<p>В спецификацията на проекта <a href="/pages/0rwx.html">0rwx</a>, представена на официалния сайт на инициативата и обсъждана в <a href="/pages/hacker-news.html">Hacker News</a> [1], се предлага кратък и прецизен език за описване на степента, в която авторите използват <a href="/pages/llm.html">големи езикови модели (LLM)</a> и <a href="/pages/generative-ai.html">генеративен ИИ</a>. Моделът заимства директно семантиката на класическата система за <a href="/pages/access-control.html">контрол на достъпа</a> и права върху файлове в <a href="/pages/unix.html">Unix</a>, за да пренесе яснотата на системното администриране в дискусиите за софтуер, дизайн и творческа работа.</p>
+<p>Според автора на рамката системата за маркиране е необходима на експертите в различни области, за да общуват помежду си за участието на алгоритмите без излишно осъждане и неяснота. Вместо да класифицира работата според конкретния софтуер, моделът поставя границата на участие там, където се променя реалният когнитивен контрол на човека над крайния продукт.</p>
+<p><img src="/articles/2026/11/23/0rwx-unix-permissions-ai-usage-model/infographic.png" alt="Инфографика за четирите нива на рамката 0rwx: ZER0, READ, WRITE и EXECUTE"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Защо границата е способността за проверка, а не използваният инструмент</h2>
+<p>Основната предпоставка на 0rwx е, че разликата между четирите нива не се определя от това какъв инструмент използва даден специалист, а от неговата способност да проверява и одитира генерирания резултат. Една и съща платформа може да попадне в различни категории в зависимост от това доколко авторът разбира, редактира и носи отговорност за вътрешната структура на произведението.</p>
+<p>Този подход измества фокуса от бинарния спор „с ИИ или без ИИ“ към въпроса за <a href="/pages/human-in-the-loop.html">човешкия надзор (human-in-the-loop)</a> и прозрачността на авторския процес. По този начин програмисти, художници и музиканти получават общ стандарт, чрез който да заявяват ролята си при създаването на даден артефакт [1].</p>
+<h2>Четирите нива на 0rwx: от „Аз мисля“ до „Аз курирам“</h2>
+<p>Рамката дефинира четири последователни степени на права за достъп на изкуствения интелект спрямо работата на човека, обозначени със съответните символи <code>AI:0</code>, <code>AI:R</code>, <code>AI:W</code> и <code>AI:X</code>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Ниво</th>
+<th align="left">Обозначение</th>
+<th align="left">Права на ИИ спрямо работата</th>
+<th align="left">Примери от практиката</th>
+<th align="left">Позиция на човека</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>ZER0</strong></td>
+<td align="left"><code>AI:0</code> (HAND MADE)</td>
+<td align="left">Няма права за четене или писане</td>
+<td align="left">Четене на документация, рисуване с бои, свирене на инструмент</td>
+<td align="left">„Аз мисля“ („I think“)</td>
+</tr>
+<tr>
+<td align="left"><strong>READ</strong></td>
+<td align="left"><code>AI:R</code> (AI INSPIRED)</td>
+<td align="left">Само права за четене (справочен режим)</td>
+<td align="left">Референтни изображения, вдъхновение за музикални акорди</td>
+<td align="left">„Аз създавам“ („I make“)</td>
+</tr>
+<tr>
+<td align="left"><strong>WRITE</strong></td>
+<td align="left"><code>AI:W</code> (AI COLLABORATION)</td>
+<td align="left">Права за четене и писане (съавторство)</td>
+<td align="left">Генерирани колажи, генериране на музикални лупове</td>
+<td align="left">„Аз поправям“ („I fix“)</td>
+</tr>
+<tr>
+<td align="left"><strong>EXECUTE</strong></td>
+<td align="left"><code>AI:X</code> (AI MADE)</td>
+<td align="left">Авторът вече не може да чете собствения си продукт</td>
+<td align="left">Вайб кодинг, пълно генериране на изображения и песни</td>
+<td align="left">„Аз курирам“ („I curate“)</td>
+</tr>
+</tbody></table>
+<p>Всяко ниво бележи ясен праг на автономия и проверка:</p>
+<ul>
+<li><p><strong>ZER0 (<code>AI:0</code> — ръчна изработка):</strong> Изкуственият интелект не може нито да чете, нито да пише в проекта. Работата се извършва изцяло от човека — например ръчно четене на техническа документация, рисуване с бои или изпълнение на жива музика под мотото „Аз мисля“.</p>
+</li>
+<li><p><strong>READ (<code>AI:R</code> — вдъхновено от ИИ):</strong> Системата има единствено достъп за четене или концептуална справка, без да променя крайния артефакт. В тази категория попадат референтните изображения или идеите за акорди, при които крайната изработка е ръчна („Аз създавам“).</p>
+</li>
+<li><p><strong>WRITE (<code>AI:W</code> — сътрудничество с ИИ):</strong> Моделът разполага с права за четене и писане, като генерира елементи — например колажи или музикални лупове — но експертът запазва способността да ги инспектира и коригира („Аз поправям“).</p>
+</li>
+<li><p><strong>EXECUTE (<code>AI:X</code> — създадено от ИИ):</strong> Човекът вече не може да чете или проследява структурата на собствения си резултат, преминавайки към <a href="/pages/vibe-coding.html">вайб кодинг (vibe coding)</a>, автоматизирано <a href="/pages/image-generation.html">генериране на изображения</a> или цялостно <a href="/pages/ai-music.html">генериране на музика с ИИ</a>, където ролята се свежда до подбор („Аз курирам“).</p>
+</li>
+</ul>
+<p>За да улесни широкото приемане на нотацията, създателят на рамката публикува всички векторни значки (<code>AI:0</code>, <code>AI:R</code>, <code>AI:W</code>, <code>AI:X</code>) като обществено достояние в хранилището <code>NamtaoProductions/0rwx.com</code> в GitHub [1].</p>
+<h2>Системни, архитектурни и макроикономически последици за софтуерното инженерство и креативната икономика</h2>
+<p>Макар да изглежда минималистична, таксономията 0rwx засяга един от най-острите архитектурни проблеми в съвременното <a href="/pages/software-engineering.html">софтуерно инженерство</a> и дигиталното производство — загубата на познаваема структура при прехода от сътрудничество към пълно генериране. Дефиницията на ниво <code>EXECUTE</code> („вие вече не можете да четете собствената си работа“) формулира точно границата, отвъд която традиционното <a href="/pages/code-review.html">ревю на код</a> и ръчното отстраняване на грешки престават да функционират по класическия си модел.</p>
+<p>На организационно и индустриално ниво въвеждането на подобни стандарти за прозрачност има три съществени последствия:</p>
+<ul>
+<li><p><strong>Оперативно разграничаване на техническия дълг:</strong> В софтуерните екипи разграничението между <code>AI:W</code> („Аз поправям“) и <code>AI:X</code> („Аз курирам“) очертава ясно къде инженерният екип все още притежава ментален модел на архитектурата и къде системата се управлява само чрез външно тестване на поведението ѝ. Това е решаващо за оценка на риска при поддръжка и сигурност в дългосрочен план.</p>
+</li>
+<li><p><strong>Универсален език отвъд отделни инструменти:</strong> Тъй като ИИ функциите се вграждат във всеки текстов редактор, среда за разработка и графичен пакет, декларациите от типа „написано без ChatGPT“ стават технологично безсмислени. Ориентираната към контрола и проверката скала 0rwx остава приложима независимо от скоростта, с която се сменят конкретните модели и доставчици.</p>
+</li>
+<li><p><strong>Евтина инфраструктура за доверие и отчетност:</strong> Освобождаването на символите в обществено достояние премахва лицензионните бариери пред използването им в отворения код, дизайнерските портфолиа, академичните публикации и корпоративните стандарти за одит. В среда, в която обемът на синтетично съдържание расте експоненциално, ясните маркери за степен на одитна способност позволяват на пазара да оценява коректно цената, надеждността и отговорността зад дигиталните продукти [1].</p>
+</li>
+</ul>
+<h2>Източници</h2>
+<p>[1]: <a href="https://0rwx.com/">0RWX Framework — A simple model of AI usage, inspired by unix permissions - 0rwx.com</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/0rwx.html">0rwx</a><p>0rwx е таксономичен модел за обозначаване на степента на участие на изкуствения интелект при създаването на софтуер, текст и творчески произведения, в...</p></li><li><a href="/pages/unix.html">Unix</a><p>Unix е семейство многозадачни и многопотребителски компютърни операционни системи, разработени първоначално в Bell Labs през 70-те години на XX век, ч...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li><li><a href="/pages/vibe-coding.html">Вайб кодинг (Vibe Coding)</a><p>Вайб кодинг (Vibe Coding) е термин, въведен за първи път в общността на разработчиците, който описва стил на разработка на софтуер, силно разчитащ на ...</p></li><li><a href="/pages/hacker-news.html">Hacker News</a><p>Hacker News е социален уебсайт за новини, фокусиран върху компютърните науки, софтуерното инженерство и предприемачеството.</p></li><li><a href="/pages/access-control.html">Контрол на достъпа</a><p>Контролът на достъпа е фундаментален принцип на киберсигурността, който гарантира, че само оторизирани лица и субекти имат достъп до конкретна информа...</p></li><li><a href="/pages/code-review.html">Ревю на код (Code Review)</a><p>Ревюто на код е фундаментална инженерна практика за систематична партньорска проверка на промени в изходния код преди тяхното интегриране в основния к...</p></li><li><a href="/pages/generative-ai.html">Генеративен ИИ (Generative AI)</a><p>Генеративният изкуствен интелект (GenAI) е вид изкуствен интелект, който е способен да създава ново съдържание — текст, изображения, аудио, видео или ...</p></li><li><a href="/pages/image-generation.html">Генериране на изображения (Image Generation)</a><p>Генерирането на изображения с изкуствен интелект (Image Generation) обхваща дифузионни и мултимодални генеративни модели, които синтезират фотореалист...</p></li><li><a href="/pages/ai-music.html">Генеративна AI музика (AI Music)</a><p>Генеративната AI музика обхваща технологии и невронни архитектури за автоматизирано композиране, аранжиране, синтез на глас и генериране на завършени ...</p></li><li><a href="/pages/software-engineering.html">Софтуерно инженерство</a><p>Софтуерното инженерство е дисциплина, фокусирана върху систематичното проектиране, разработване, тестване и поддръжка на софтуерни системи.</p></li><li><a href="/pages/human-in-the-loop.html">Човек в цикъла на управление (Human-in-the-Loop / HITL)</a><p>Human-in-the-Loop (HITL) е архитектурен модел за проектиране на автоматизирани и AI системи, при който човешки експерт запазва критичен надзор и право...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: GPU Partner / Unsloth Desktop
+Според подробно техническо ръководство на GPU Partner [1], излизането на новото поколение модели с отворени тегла като Qwen 3.8 и Inkling 2 позволява изграждан..."><title>Практическа архитектура за локален ИИ у дома: Qwen 3.8, Inkling 2 и Unsloth Desktop върху потребителски GPU хардуер - Светни.ме</title><meta property="og:title" content="Практическа архитектура за локален ИИ у дома: Qwen 3.8, Inkling 2 и Unsloth Desktop върху потребителски GPU хардуер - Светни.ме"><meta property="og:description" content="Снимка: GPU Partner / Unsloth Desktop
+Според подробно техническо ръководство на GPU Partner [1], излизането на новото поколение модели с отворени тегла като Qwen 3.8 и Inkling 2 позволява изграждан..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/local-ai-guide-inkling-qwen-unsloth-rtx-5090/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/local-ai-guide-inkling-qwen-unsloth-rtx-5090/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Практическа архитектура за локален ИИ у дома: Qwen 3.8, Inkling 2 и Unsloth Desktop върху потребителски GPU хардуер</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/local-ai-guide-inkling-qwen-unsloth-rtx-5090/hero.png" alt="Интерфейсът за избор на препоръчани локални модели в Unsloth Desktop с Qwen 3.8-27B"><br><small>Снимка: GPU Partner / Unsloth Desktop</small></p>
+<p>Според подробно техническо ръководство на GPU Partner [1], излизането на новото поколение модели с отворени тегла като <a href="/pages/qwen.html">Qwen</a> 3.8 и <a href="/pages/inkling-2.html">Inkling 2</a> позволява изграждането на напълно автономна домашна система за изкуствен интелект за около 10 до 15 минути чрез приложението <a href="/pages/unsloth.html">Unsloth</a> Desktop. Решението елиминира месечните абонаменти, лимитите върху броя токени, принудителната цензура и рисковете за поверителността при облачните платформи, като същевременно осигурява споделен достъп за всички устройства в домашната локална мрежа (LAN).</p>
+<p>Анализът подчертава, че при повечето рутинни задачи за програмиране, събиране на данни и дълбоки проучвания с голям разход на токени облачните доставчици все повече действат като инфраструктурни посредници, които често променят качеството на моделите си или ограничават позволените работни потоци. Чрез комбиниране на потребителски графичен процесор като <a href="/pages/nvidia.html">NVIDIA</a> GeForce <a href="/pages/rtx-5090.html">RTX 5090</a> (с 32 GB GDDR7 памет) и динамична <a href="/pages/quantization.html">квантизация</a>, локалният хардуер вече може да обслужва 27-милиардни и 35-милиардни модели с пълноценен контекстен прозорец от 128K токена без необходимост от терминални команди или ръчно конфигуриране на Python среди [1].</p>
+<h2>Хардуерни класове, VRAM капацитет и ролята на квантизацията</h2>
+<p>Основният определящ фактор за това кой модел може да работи локално е обемът на наличната <a href="/pages/vram.html">видеопамет (VRAM)</a> на графичната карта [1]. В пълна 16-битова прецизност моделът Qwen 3.8-27B заема около 56 GB само за теглата си (и достига 61.0 GB при 128K контекст), което надхвърля капацитета на стандартните потребителски видеокарти.</p>
+<p>Чрез квантизация теглата се компресират до по-ниска битова прецизност, намалявайки необходимата памет за сметка на минимален компромис в детайлността. Според калкулатора на GPU Partner за Qwen 3.8-27B при фиксиран контекстен прозорец от 128K токена консумацията на памет се променя по следния начин [1]:</p>
+<ul>
+<li><p><strong>16-битова и 8-битова прецизност:</strong> Изискват съответно 61.0 GB и 36.7 GB VRAM, което ги прави несъвместими с единична 32-гигабайтова потребителска карта при пълен 128K контекст.</p>
+</li>
+<li><p><strong>6-битова и 5-битова прецизност:</strong> Свиват общия отпечатък до 30.4 GB (при 6-bit) и 27.6 GB (при 5-bit), попадайки под границата от 32 GB VRAM.</p>
+</li>
+<li><p><strong>4-битова прецизност (препоръчителен баланс):</strong> Изисква общо 24.9 GB за модела и 128K контекста (като самият файл във формат Unsloth <code>UD-Q4_K_XL</code> е около 18 GB), оставяйки достатъчно резерв върху 32 GB карта за стабилна работа.</p>
+</li>
+<li><p><strong>3-битова и 2-битова прецизност:</strong> Намаляват нужната памет съответно до 21.9 GB и 18.9 GB, но при 2-битово компресиране се наблюдава осезаема загуба на точност при сложни задачи.</p>
+</li>
+</ul>
+<p>За потребители с различен клас видеокарти GPU Partner дефинира четири практически хардуерни нива [1]:</p>
+<ul>
+<li><p><strong>Малък клас (8–12 GB VRAM – RTX 5060 8GB, RTX 3060 12GB, RTX 5070 12GB):</strong> Подходящ за моделите Qwen 3.5-9B и Gemma 4 12B във варианти <code>UD-Q4_K_S</code> или <code>Q4_K_M</code> при контекстен прозорец от 8K до 16K токена.</p>
+</li>
+<li><p><strong>Среден клас (16 GB VRAM – RTX 5060 Ti 16GB, RTX 5070 Ti, RTX 5080, RTX PRO 2000):</strong> Позволява работа с плътния Qwen 3-14B, както и с модели с архитектура <a href="/pages/mixture-of-experts.html">смес от експерти (MoE)</a> като <code>gpt-oss-20b</code>, Gemma 4 26B, Qwen 3-Coder-30B, Qwen 3.6-35B и Inkling 2 Mini при квантизация <code>Q4_K_M</code> или <code>Q5_K_M</code> и контекст 16K–32K. Понеже MoE моделите активират само няколко милиарда параметъра за всеки токен и могат да държат неактивните експерти в системната RAM памет, една карта RTX 5060 Ti 16GB постига около 47 токена в секунда с 35-милиардния Qwen 3.6-35B.</p>
+</li>
+<li><p><strong>Голям клас (24 GB VRAM – RTX 3090, RTX 4090, RX 7900 XTX, RTX PRO 4000):</strong> Изпълнява Gemma 4 31B, Qwen 3.8-27B и Inkling 2 Mini във формат <code>UD-Q4_K_M</code> или <code>Q4_K_S</code> при контекст 16K–32K.</p>
+</li>
+<li><p><strong>Екстра голям клас (32 GB+ VRAM – RTX 5090 32GB, RTX PRO 4500 32GB, RTX PRO 5000 48GB, RTX PRO 6000 96GB):</strong> Осигурява пълноценно изпълнение на Qwen 3.8-27B и Inkling 2 Mini във високите формати <code>UD-Q4_K_XL</code> или <code>Q6_K</code> с контекстен прозорец от 64K до над 128K токена.</p>
+</li>
+</ul>
+<h2>Сравнителен анализ на Inkling 2 Mini и 594-милиардния Inkling 2 Small</h2>
+<p>Специален акцент в ръководството е поставен върху фамилията Inkling 2, пусната от <a href="/pages/thinking-machines-lab.html">Thinking Machines Lab</a> на 17 ноември 2026 г. под отворен лиценз Apache 2.0 [1]. Компактният вариант Inkling 2 Mini разполага с 26.4 милиарда общи параметъра (при MoE архитектура с 5.4 милиарда активни параметъра), вградена визуална поддръжка (vision) и контекстен прозорец до 1 милион токена.</p>
+<p>Препоръчаният от Unsloth пакет <code>UD-Q4_K_XL</code> за Inkling 2 Mini е с размер 17.6 GB — само с 0.1 GB по-малък от съответния файл на Qwen 3.8-27B — което означава, че върху 32-гигабайтова RTX 5090 остават около 14 GB свободна видеопамет за контекст [1]. Според спецификациите на Unsloth изискванията за памет само за теглата на Inkling 2 Mini са:</p>
+<ul>
+<li><p><strong>2-битова версия:</strong> Заема 10–11 GB и се побира изцяло върху 12 GB видеокарта.</p>
+</li>
+<li><p><strong>3-битова версия:</strong> Заема 13–15 GB и работи изцяло върху 16 GB видеокарта.</p>
+</li>
+<li><p><strong>4-битова версия (препоръчителна):</strong> Заема 17–18 GB и се побира изцяло върху 24 GB карта, но благодарение на 5.4-те милиарда активни MoE параметъра може да се изпълнява и на 16 GB карта с прехвърляне на остатъка към системната RAM памет.</p>
+</li>
+<li><p><strong>8-битова версия (без загуба на качество / lossless):</strong> Изисква 24 GB и се побира върху 32 GB видеокарта.</p>
+</li>
+</ul>
+<p>За разлика от него, по-големият модел Inkling 2 Small притежава 594 милиарда параметъра, а най-малкият публикуван от Unsloth квантизиран файл е с размер 171.7 GB. Това го изважда извън обсега на единичните потребителски видеокарти и го позиционира в сегмента на системите с обединена памет — като работни станции Mac Studio с процесор M3 Ultra и 256 GB памет (изискващи MLX формат за <a href="/pages/apple-silicon.html">Apple Silicon</a>), NVIDIA DGX Station с чип GB300 Grace Blackwell Ultra, MSI PRO MAX EDGE AI+ 11M (128 GB) или NVIDIA DGX Spark (128 GB) [1].</p>
+<h2>Тристъпково разгръщане в Unsloth Desktop и споделяне в домашната мрежа</h2>
+<p>Практическата инсталация върху Windows, macOS или Linux чрез безплатното приложение с отворен код Unsloth Desktop (което поддържа както GGUF, така и MLX модели) се свежда до три оперативни стъпки [1]:</p>
+<ul>
+<li><p><strong>Инсталиране на Unsloth Desktop и избор на модел:</strong> След стартиране на графичния инсталатор потребителят избира желания модел от падащото меню в секцията Recommended (например <code>Qwen3.8-27B-GGUF</code> или <code>Inkling 2 Mini</code>).</p>
+</li>
+<li><p><strong>Изтегляне на динамична квантизация и настройка на контекста:</strong> От подменюто се избира конкретният пакет (като 18-гигабайтовия <code>UD-Q4_K_XL</code>, който запазва поведение, близко до пълния модел), след което чрез иконата със зъбно колело контекстният прозорец се задава ръчно на 128K (неквантизиран) или се оставя в режим Auto.</p>
+</li>
+<li><p><strong>Активиране на LAN достъп за домакинството:</strong> В настройките на Unsloth Desktop (<code>Settings</code> -&gt; <code>Remote &amp; LAN</code>) се задава парола за отдалечен достъп (Remote password), което отключва бутона <code>Start</code> в картата <code>LAN access</code>. Приложението генерира локален мрежов адрес, който всеки член на домакинството може да отвори в стандартен уеб браузър и да влезе с потребителско име <code>unsloth</code> и зададената парола, докато хост компютърът е включен.</p>
+</li>
+</ul>
+<h2>Дългосрочни системни и макроикономически импликации за локалния ИИ</h2>
+<p>Навлизането на 26-милиардни и 27-милиардни модели от класа на Inkling 2 Mini и Qwen 3.8 в рамките на 17.6–18 GB памет чрез динамичната квантизация <code>UD-Q4_K_XL</code> променя структурно пазарния баланс между облачните ИИ доставчици и крайните потребители [1]. Когато един домашен сървър с RTX 5090 или компютър с обединена памет може да обслужва цяло домакинство или малък инженерен екип при нулева пределна цена на токен и пълен 128K контекст, облачните абонаменти губят монопола си върху ежедневните когнитивни и развойни задачи.</p>
+<p>От архитектурна гледна точка комбинацията от MoE модели (при които само 3 до 5.4 милиарда параметъра са активни за всеки генериран токен) и интелигентното разпределение между VRAM и системна RAM памет демократизира достъпа до локален изкуствен интелект дори върху масовите 16-гигабайтови видеокарти от среден клас [1]. В съчетание с графични платформи като Unsloth Desktop, които абстрахират сложната конфигурация на сървъри и локални мрежи до няколко клика, персоналният ИИ се трансформира в стандартна домашна инфраструктура — подобно на локалните файлови сървъри (NAS) и домашните рутери, гарантирайки пълен суверенитет върху данните и предвидимост на моделното поведение във времето.</p>
+<p><img src="/articles/2026/11/23/local-ai-guide-inkling-qwen-unsloth-rtx-5090/infographic.png" alt="Инфографика: Хардуерни нива, квантизация и локално разгръщане с Unsloth Desktop, Qwen 3.8 и Inkling 2"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth">A beginner&#39;s guide to Local AI with Inkling, Qwen, and Unsloth - GPU Partner</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/unsloth.html">Unsloth</a><p>Софтуерна платформа и екосистема с отворен код за високоскоростно фино настройване, динамична квантизация (GGUF/MLX) и локално изпълнение на големи ез...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/inkling-2.html">Inkling 2</a><p>Фамилия отворени мултимодални езикови модели с архитектура Mixture-of-Experts (MoE), разработена от Thinking Machines Lab под лиценз Apache 2.</p></li><li><a href="/pages/thinking-machines-lab.html">Thinking Machines Lab</a><p>Thinking Machines Lab е изследователска компания за изкуствен интелект, фокусирана върху създаването на високоефективни отворени модели за разсъждения...</p></li><li><a href="/pages/rtx-5090.html">NVIDIA RTX 5090</a><p>NVIDIA RTX 5090 е флагманският потребителски графичен процесор от серията Blackwell, пуснат на пазара през 2025 г.</p></li><li><a href="/pages/nvidia.html">NVIDIA</a><p>NVIDIA е световен лидер в производството на графични процесори (GPU) и изчислителни платформи за изкуствен интелект.</p></li><li><a href="/pages/quantization.html">Квантуване (Quantization)</a><p>Квантуването (Quantization) е ключов метод за компресиране на модели в областта на дълбокото обучение, който преобразува теглата и активиранията на не...</p></li><li><a href="/pages/mixture-of-experts.html">Смес от експерти (Mixture of Experts - MoE)</a><p>Mixture of Experts (MoE) е архитектурна техника в машинното обучение, при която само подмножество от параметрите на модела („експерти“) се активира за...</p></li><li><a href="/pages/apple-silicon.html">Apple Silicon</a><p>Apple Silicon е семейството системни чипове (SoC) на Apple от серията M и A, изградени върху ARM архитектура с унифицирана памет (Unified Memory Archi...</p></li><li><a href="/pages/vram.html">Видеопамет (VRAM)</a><p>Високоскоростна специализирана памет върху графичните процесори (GPU), чийто капацитет и пропускателна способност определят максималния размер на тегл...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: OpenRouter / Editorial Source
+В официално съобщение за сигурността платформата за маршрутизиране на заявки към модели с изкуствен интелект OpenRouter обяви, че е прекратила договора си с тр..."><title>OpenRouter отстрани трима доставчици на инференция и извади 125 крайни точки от режима Zero Data Retention след одит с канарчета - Светни.ме</title><meta property="og:title" content="OpenRouter отстрани трима доставчици на инференция и извади 125 крайни точки от режима Zero Data Retention след одит с канарчета - Светни.ме"><meta property="og:description" content="Снимка: OpenRouter / Editorial Source
+В официално съобщение за сигурността платформата за маршрутизиране на заявки към модели с изкуствен интелект OpenRouter обяви, че е прекратила договора си с тр..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/openrouter-data-processing-incidents-inference-providers/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/openrouter-data-processing-incidents-inference-providers/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenRouter отстрани трима доставчици на инференция и извади 125 крайни точки от режима Zero Data Retention след одит с канарчета</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/openrouter-data-processing-incidents-inference-providers/hero.png" alt="Официален банер на платформата OpenRouter за маршрутизиране на заявки към модели с изкуствен интелект"><br><small>Снимка: OpenRouter / Editorial Source</small></p>
+<p>В официално съобщение за сигурността платформата за маршрутизиране на заявки към модели с изкуствен интелект <a href="/pages/openrouter.html">OpenRouter</a> обяви, че е прекратила договора си с трима доставчици на инференция и е премахнала 125 крайни точки (endpoints) от списъка за нулево задържане на данни (Zero Data Retention – ZDR) [1]. Мерките са предприети след публикуването на доклад от компанията за индустриална <a href="/pages/cybersecurity.html">киберсигурност</a> <a href="/pages/dragos.html">Dragos</a>, чиито изследователи са използвали т.нар. „канарчета“ (canary tokens) за проверка на веригата за доставки при AI инференцията [1].</p>
+<p>Според разследването при определени доставчици на изчислителна инференция са установени компрометирани данни или доказателства, че декларираните от тях политики за поверителност и несъхраняване на потребителски заявки не се спазват на практика [1]. От OpenRouter подчертават, че констатациите не показват пробив или неоторизиран достъп до самата инфраструктура на агрегатора, но разкриват сериозни нарушения при конкретни външни оператори в екосистемата, поради което всички потенциално засегнати клиенти са били уведомени директно [1].</p>
+<p><img src="/articles/2026/11/22/openrouter-data-processing-incidents-inference-providers/infographic.png" alt="Инфографика за мерките на OpenRouter след инцидентите с обработката на данни при доставчиците на инференция"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Мерки за контрол и ревизия на Zero Data Retention</h2>
+<p>Като оперативен слой между корпоративните клиенти и динамичната екосистема от модели и хардуерни доставчици, OpenRouter въвежда строги санкции за налагане на политиките за обработка на данни [1]. Непосредствените действия, предприети от платформата след вътрешното разследване, обхващат три основни направления [1]:</p>
+<ul>
+<li><p>Пълно отстраняване (off-boarding) на трима доставчици на инференция от мрежата на OpenRouter въз основа на потвърдените резултати от техническата проверка.</p>
+</li>
+<li><p>Премахване на общо 125 крайни точки от режима за допустимост по стандарта Zero Data Retention (ZDR), което включва както директно сигнализираните от изследователите доставчици, така и допълнителни крайни точки, извадени като превантивна мярка за <a href="/pages/ai-safety.html">безопасност на ИИ</a>.</p>
+</li>
+<li><p>Директно уведомяване на всички потенциално засегнати потребители и организации, независимо дали съответният доставчик е публикувал официален публичен доклад за инцидента.</p>
+</li>
+</ul>
+<p>Паралелно с това инженерният екип на OpenRouter адаптира методологията за тестване с канарчета на Dragos, за да интегрира автоматизирани и непрекъснати одити на трафика в реално време [1]. Извършва се и дълбока техническа верификация на мрежовите маршрути с цел да се идентифицират случаи, в които потребителските заявки (prompts) и отговорите на моделите се препращат непрозрачно към трети страни, преди която и да е премахната крайна точка да бъде възстановена в ZDR режима [1].</p>
+<h2>Публични доклади от засегнатите доставчици в екосистемата</h2>
+<p>В рамките на координираното разкриване на уязвимостите OpenRouter публикува и актуален регистър с официалните изявления за сигурност, получени до момента от доставчиците на инференция в мрежата [1]. Сред организациите, които вече са излезли с публични позиции или предварителни доклади за инциденти, фигурират четири технологични платформи [1]:</p>
+<ul>
+<li><p><a href="/pages/atlas-cloud.html">Atlas Cloud</a>, която публикува официално изявление относно ангажиментите си за сигурност и поверителност на данните.</p>
+</li>
+<li><p><a href="/pages/novita-ai.html">Novita AI</a>, която издаде специално известие за поверителност, засягащо обработката на заявки към моделите на <a href="/pages/minimax.html">MiniMax</a> през нейната инфраструктура.</p>
+</li>
+<li><p><a href="/pages/phala-network.html">Phala Network</a>, която публикува предварителен доклад за инцидент със сигурността от ноември 2026 г.</p>
+</li>
+<li><p><a href="/pages/together-ai.html">Together AI</a>, която разкри събитие по сигурността, свързано с изтичане на потребителски промптове (prompt leakage) при заявки, обработени през юни и юли 2026 г.</p>
+</li>
+</ul>
+<p>От OpenRouter уточняват, че все още не всички засегнати доставчици са публикували публични отчети, но агрегаторът активно изисква от всички оператори да изготвят прозрачни технически анализи на инцидентите [1].</p>
+<h2>Системни, архитектурни и макроикономически последици за AI инфраструктурата</h2>
+<p>Инцидентите с обработката на данни при доставчиците на инференция разкриват фундаментален структурен риск в съвременната икономика на изкуствения интелект: разрива между договорните гаранции за поверителност и реалната архитектурна верификация. Когато предприятията използват агрегатори и маршрутизиращи слоеве като OpenRouter за оптимизиране на разходите и латентността между десетки хостинг провайдъри, спазването на стандарта Zero Data Retention (ZDR) досега се базираше предимно на правни декларации, а не на криптографски или мрежов контрол [1].</p>
+<p>Въвеждането на активни тестове с канарчета (canary tokens) и мониторинг на мрежовите пътища за препращане на заявки към трети страни бележи прехода от пасивно доверие към непрекъснато емпирично валидиране на веригата за доставки [1]. В дългосрочен план това ще принуди облачните доставчици на инференция да инвестират в доказуема изолация на паметта и строг одит на логовете, тъй като всяко изтичане на промптове или скрито пренасочване на трафик вече води до незабавно изключване от основните пазарни агрегатори [1].</p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/">Data Processing Incidents on Inference Providers - OpenRouter</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/together-ai.html">Together AI</a><p>Together AI е облачна платформа за изкуствен интелект, която предоставя инфраструктура за обучение, фино настройване и инференция на големи езикови мо...</p></li><li><a href="/pages/novita-ai.html">Novita AI</a><p>Novita AI е облачна платформа за инференция на модели с изкуствен интелект, предоставяща API достъп до отворени големи езикови и генеративни модели за...</p></li><li><a href="/pages/phala-network.html">Phala Network</a><p>Phala Network е децентрализирана облачна инфраструктура за поверителни изчисления (Confidential Computing), използваща защитени хардуерни анклави (TEE...</p></li><li><a href="/pages/atlas-cloud.html">Atlas Cloud</a><p>Atlas Cloud е доставчик на облачна инфраструктура и GPU изчислителни ресурси за хостинг и инференция на модели с изкуствен интелект.</p></li><li><a href="/pages/minimax.html">MiniMax</a><p>MiniMax (официално MiniMax AI) е китайска компания за изкуствен интелект, основана през 2021 г.</p></li><li><a href="/pages/ai-safety.html">Безопасност на ИИ (AI Safety)</a><p>Безопасността на изкуствения интелект е мултидисциплинарна област, фокусирана върху предотвратяването на вредни или непредвидени последици от развитие...</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Ricapar / ClawDOS
+Според официалната документация на проекта с отворен код ClawDOS, разработчик с псевдоним Ricapar е публикувал пълноценен ИИ чат интерфейс и автономен агент за програмиран..."><title>ClawDOS: Автономен ИИ агент за програмиране под DOS, работещ върху оригинален IBM PC XT с процесор Intel 8088 на 4,77 MHz - Светни.ме</title><meta property="og:title" content="ClawDOS: Автономен ИИ агент за програмиране под DOS, работещ върху оригинален IBM PC XT с процесор Intel 8088 на 4,77 MHz - Светни.ме"><meta property="og:description" content="Снимка: Ricapar / ClawDOS
+Според официалната документация на проекта с отворен код ClawDOS, разработчик с псевдоним Ricapar е публикувал пълноценен ИИ чат интерфейс и автономен агент за програмиран..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/22/clawdos-ai-coding-agent-ibm-pc-xt-dos/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/22/clawdos-ai-coding-agent-ibm-pc-xt-dos/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>ClawDOS: Автономен ИИ агент за програмиране под DOS, работещ върху оригинален IBM PC XT с процесор Intel 8088 на 4,77 MHz</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->22 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/22/clawdos-ai-coding-agent-ibm-pc-xt-dos/hero.png" alt="Началният екран на агента за програмиране ClawDOS в графичен режим CGA върху IBM PC XT 5160"><br><small>Снимка: Ricapar / ClawDOS</small></p>
+<p>Според официалната документация на проекта с отворен код <a href="/pages/clawdos.html">ClawDOS</a>, разработчик с псевдоним Ricapar е публикувал пълноценен ИИ чат интерфейс и автономен агент за програмиране за операционната система <a href="/pages/ms-dos.html">MS-DOS</a> и <a href="/pages/freedos.html">FreeDOS</a>, проектиран да работи директно върху оригинален персонален компютър <a href="/pages/ibm.html">IBM</a> PC XT 5160 с процесор Intel 8088 на тактова честота 4,77 MHz, 640 KB оперативна памет и CGA графична карта [1].</p>
+<p>Забележителното при ClawDOS е, че 100% от програмния му код — общо около 13 000 реда на C и C++, компилирани чрез Open Watcom за 16-битовата инструкционна архитектура 8086 — е написан от самия модел <a href="/pages/claude.html">Claude</a> на <a href="/pages/anthropic.html">Anthropic</a>. Цялата агентна среда се събира в изпълним файл <code>HARNESS.EXE</code> с размер едва 176 KB (придружен от 29 KB стартов модул <code>CLAWDOS.EXE</code>), като 8088 процесорът извършва самостоятелно всичко — от конструирането на JSON заявките и парсването на поточните SSE отговори от Claude Messages API до изпълнението на системни инструменти и кодирането на PNG скрийншоти от видеопаметта [1].</p>
+<p><img src="/articles/2026/11/22/clawdos-ai-coding-agent-ibm-pc-xt-dos/infographic.png" alt="Инфографика за системната архитектура и управлението на паметта в агента ClawDOS за IBM PC XT"><br><small>Инфографика: Светни.ме</small></p>
+<h2>Системна архитектура, управление на 640 KB RAM и TLS тунелиране</h2>
+<p>За да функционира върху хардуер от началото на 80-те години на XX век, ClawDOS използва FreeDOS 1.4, мрежовия стек mTCP и разширителната платка PicoMEM, която емулира твърд диск от microSD карта, осигурява WiFi свързаност като мрежов адаптер NE2000, предоставя EMS памет и поддържа часовник за реално време [1].</p>
+<p>Тъй като криптографските изчисления на съвременния протокол TLS биха претоварили 4,77-мегахерцовия процесор 8088, проектът използва хибридна мрежова схема и прецизно управление на паметта [1]:</p>
+<ul>
+<li><p><strong>Офлоудинг на криптирането чрез TLS тунел:</strong> Самият IBM PC XT комуникира по чист HTTP чрез mTCP с лек посреднически скрипт (<code>tunnel.py</code>, <code>socat</code> или <code>stunnel</code>) на съседен модерен компютър в локалната мрежа. Този тунел само прехвърля байтовете по HTTPS към <code>api.anthropic.com:443</code> и може да съхранява API ключа при себе си, така че секретният токен никога да не се записва върху диска на DOS машината.</p>
+</li>
+<li><p><strong>Динамично освобождаване на паметта за компилация:</strong> Когато стартира външни програми, ClawDOS им осигурява 200 KB свободна памет паралелно със себе си. При тежки компилации обаче агентът записва текущото си състояние на диска и напълно напуска оперативната памет, оставяйки около 450 KB свободна RAM за компилатора Turbo C 2.0, след което се презарежда автоматично в същия разговор и прочита изхода от изпълнението. При демонстрационен тест с написване, компилиране, линкване и стартиране на програмата <code>PRIMES.C</code> целият цикъл отнема 64 секунди, от които 26 секунди са за самата компилация и изпълнение на XT машината.</p>
+</li>
+<li><p><strong>Оптимизация на трафика чрез API кеширане:</strong> Системният промпт и дефинициите на инструментите се кешират на сървърите на Anthropic, така че след първата заявка компютърът изпраща само новите данни — обикновено около 500 байта за резултат от инструмент. Вграденият журнал <code>CLAWDOS.LOG</code> записва телеметрия за всеки рунд (време до първи токен, качени байтове, прочетени от кеша токени и време извън паметта), като в логовете се вижда работа включително с модела <code>claude-opus-5-5</code>.</p>
+</li>
+</ul>
+<h2>Набор от 18 инструмента, хардуерен CGA интерфейс и визуална обратна връзка</h2>
+<p>Чат екранът на ClawDOS е проектиран специално за графичния адаптер CGA в 80-колонен режим с кодова таблица CP437. Записите във видеопаметта са синхронизирани с обратния ход на лъча (vertical retrace), за да се елиминира характерният за CGA ефект на „сняг“ по екрана, а превъртането на историята се извършва хардуерно чрез началния адрес на контролера CRTC [1].</p>
+<p>Агентът разполага с 18 вградени инструмента и локален развоен пакет на диска, включващ два асемблера (TINYASM и WASM), компилатора Bruce&#39;s C, интерпретатора GW-BASIC, дебъгера lDebug и Turbo C 2.0 [1]:</p>
+<ul>
+<li><p><strong>Файлови операции и нискобюджетно програмиране:</strong> Инструментите <code>sysinfo</code>, <code>dir</code>, <code>read</code>, <code>search</code>, <code>write</code>, <code>edit</code>, <code>delete</code>, <code>mkdir</code> и <code>rename</code> позволяват четене на файлове като текст или шестнадесетичен дъмп и редактиране на конкретни фрагменти на място, докато <code>peek</code>, <code>poke</code> и <code>port</code> дават директен достъп за четене и запис в адреси от паметта и входно-изходните портове на процесора.</p>
+</li>
+<li><p><strong>Компютърно зрение върху 8088 чрез PNG кодиране:</strong> Инструментът <code>run</code> може да изпълни до 12 DOS команди наведнъж и по заявка да направи скрийншот след определен брой секунди. Чрез прехващане на таймерното прекъсване (timer-interrupt hook) ClawDOS копира видеопаметта на CGA картата (320×200 пиксела в 4 цвята), процесорът 8088 самостоятелно я кодира в 16 KB PNG изображение и я изпраща обратно към Claude за визуален анализ.</p>
+</li>
+<li><p><strong>Демонстрацията WarGames и постоянна памет (<code>C:\MEMORY</code>):</strong> Като доказателство за възможностите си, агентът самостоятелно написва върху XT компютъра 15 KB изходен код в пет файла на Turbo C (компилирани до <code>WG.EXE</code> под 10 KB), пресъздаващ филма <em>WarGames</em> от 1983 г. — с векторна карта на света, балистични траектории над полюса, игра на морски шах и музика за PC високоговорителя или звукова карта AdLib. Чрез инструментите <code>memory_list</code>, <code>memory_read</code> и <code>memory_write</code> агентът съхранява бележки в директорията <code>C:\MEMORY</code> и в следващи сесии автоматично си спомня кои палитрови трикове е използвал.</p>
+</li>
+</ul>
+<h2>Архитектурни уроци за ефективността на съвременните агентни среди</h2>
+<p>Макар и създаден като експеримент на границата между ретро изчисленията и модерния изкуствен интелект, ClawDOS демонстрира важни инженерни принципи за дизайна на автономни софтуерни агенти [1]:</p>
+<ul>
+<li><p><strong>Минималистичен отпечатък на агентния цикъл (Agent Harness):</strong> Фактът, че пълен агентен оркестратор с поточно четене на JSON/SSE, 18 инструмента, PNG енкодер, управление на паметта, локална база от умения (skills) и защитен режим (Safe Mode за потвърждение преди промяна на файлове и портове) се побира в 176 KB компилиран бинарен файл, показва колко малка част от ресурсите на един ИИ агент реално принадлежи на локалната управляваща логика.</p>
+</li>
+<li><p><strong>Затворен мултимодален цикъл на верификация:</strong> Възможността моделът да стартира графична програма под DOS, да улови състоянието на видеопаметта чрез прекъсване на таймера и визуално да инспектира рендираните векторни линии и експлозии доказва, че мултимодалната обратна връзка може да бъде интегрирана дори в среди без графична операционна система.</p>
+</li>
+<li><p><strong>Самоподдържаща се верига за крос-компилация и тестване:</strong> Разработката на ClawDOS от самия Claude е обезпечена със строга автоматизирана тестова инфраструктура — 31 теста за начално зареждане в емулатора DOSBox-X срещу симулиран API сървър (<code>mockapi.py</code>), модулни тестове <code>DOSUNIT.EXE</code>, изпълнявани директно под DOS, и пълна валидация върху тактово точния емулатор 86Box и реален хардуер IBM 5160 [1].</p>
+</li>
+</ul>
+<h2>Източници</h2>
+<p>[1]: <a href="http://ricapar.net/ClawDOS/">ClawDOS – An AI coding agent for DOS on a real IBM PC 5160 - Ricapar</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/clawdos.html">ClawDOS</a><p>ClawDOS е агент за програмиране с изкуствен интелект с отворен код за операционната система DOS, проектиран да работи директно върху ретро хардуер IBM...</p></li><li><a href="/pages/ibm.html">IBM</a><p>IBM (International Business Machines Corporation) е глобален технологичен лидер, предоставящ облачни услуги, когнитивни изчисления (като Watson) и кор...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/ms-dos.html">MS-DOS</a><p>MS-DOS (Microsoft Disk Operating System) е легендарна операционна система с команден ред, разработена от Microsoft през 80-те години.</p></li><li><a href="/pages/freedos.html">FreeDOS</a><p>FreeDOS е безплатна операционна система с отворен код, напълно съвместима с класическата MS-DOS за IBM PC компютри и емулатори.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

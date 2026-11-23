@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / 极客湾Geekerwan (CC BY 3.0) – Apple M3 &amp;amp; M3 Max Review- What it Meant to Be.-cut-merged-1716452753233-00.00.07.303.png
+Според официалната документация на проекта в GitH..."><title>LocalCode: Автономно агентно програмиране с локални модели върху Apple Silicon с една команда - Светни.ме</title><meta property="og:title" content="LocalCode: Автономно агентно програмиране с локални модели върху Apple Silicon с една команда - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / 极客湾Geekerwan (CC BY 3.0) – Apple M3 &amp;amp; M3 Max Review- What it Meant to Be.-cut-merged-1716452753233-00.00.07.303.png
+Според официалната документация на проекта в GitH..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/localcode-open-source-agentic-coding-mac/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/localcode-open-source-agentic-coding-mac/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>LocalCode: Автономно агентно програмиране с локални модели върху Apple Silicon с една команда</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/localcode-open-source-agentic-coding-mac/hero.png" alt="Процесорна архитектура Apple M3 и M3 Max за локално изпълнение на изкуствен интелект"><br><small>Снимка: Wikimedia Commons / 极客湾Geekerwan (CC BY 3.0) – Apple M3 &amp; M3 Max Review- What it Meant to Be.-cut-merged-1716452753233-00.00.07.303.png</small></p>
+<p>Според официалната документация на проекта в GitHub, новият инструмент с отворен код <a href="/pages/localcode.html">LocalCode</a> позволява пълноценно автономно агентно програмиране (agentic coding) директно върху компютри Mac с процесори <a href="/pages/apple-silicon.html">Apple Silicon</a> само с една терминална команда [1]. Платформата е публикувана под лиценз Apache 2.0 и се инсталира чрез пакетния мениджър <code>uv</code> (<code>uv pip install localcode</code>), като елиминира зависимостта от облачни програмни интерфейси и външни абонаменти.</p>
+<p>За разлика от стандартните локални сървъри за езикови модели, LocalCode интегрира специализиран агентен цикъл със системни оптимизации на ниво графични ядра и кеш памет върху <a href="/pages/macos.html">macOS</a> (версия 13 или по-нова) при минимално изискване от 16 GB обединена памет (unified memory) и Python 3.10+ [1].</p>
+<h2>Архитектура на автономния агентен цикъл и локален API сървър</h2>
+<p>След стартиране с командата <code>localcode</code> в рамките на конкретна проектна директория, агентът поема автономно управление върху целия развоен цикъл [1]. Системата чете и редактира изходни файлове, търси програмни конструкции по име, съдържание или синтактична структура и запазва контекста на задачата между отделните съобщения.</p>
+<p>Агентът самостоятелно изпълнява тестове (като <code>pytest</code>), компилации, Git операции и терминални команди вътре в границите на проекта, но задължително изисква изрично потвърждение от разработчика преди достъп до ресурси извън работната директория [1]. Освен това LocalCode може да генерира базови скелети на приложения (scaffolding), да ги стартира и автоматично да проверява дали отговарят на заявки.</p>
+<p>За интеграция с външни локални приложения и среди за разработка инструментът предоставя OpenAI-съвместим програмен интерфейс, който се активира чрез командата <code>/server</code> или <code>localcode api</code> [1]. Всички изчисления при извода (inference) се извършват изцяло локално, а мрежовият трафик е строго ограничен до три функции: изтегляне на модели, изрично извикване на инструментите <code>web_search</code> и <code>web_fetch</code>, както и свързване към добавени от потребителя сървъри по протокола <a href="/pages/mcp.html">MCP</a> (Model Context Protocol).</p>
+<h2>Екосистема от 12 модела и 169 квантизирани конфигурации</h2>
+<p>LocalCode поддържа каталог от 12 специализирани модела и общо 169 варианта на квантизация (GGUF пакети, голяма част от които са оптимизирани от <a href="/pages/unsloth.html">Unsloth</a> и се изтеглят директно от <a href="/pages/hugging-face.html">Hugging Face</a>) за програмиране, визуален вход и типизирани решения [1]. Вграденият селектор (<code>/models</code>) автоматично анализира наличната обединена памет на конкретния Mac и отбелязва със звезда най-способния модел, който може да работи оптимално върху хардуера.</p>
+<p>Поддържаните модели обхващат целия спектър от компактни локални архитектури до мащабни системи тип „смес от експерти“ (MoE) [1]:</p>
+<ul>
+<li><p><strong><a href="/pages/gemma-4.html">Gemma 4</a> 12B и 26B-A4B:</strong> Компактният 12-милиарден вариант заема между 4.7 GB и 24.3 GB дисково пространство, докато MoE версията 26B-A4B (с 4 милиарда активни параметъра) варира от 10.4 GB до 51.0 GB, допълнена от експерименталния модел Gemma 4 Diffusion 26B-A4B (16.8 GB – 50.5 GB).</p>
+</li>
+<li><p><strong><a href="/pages/qwen.html">Qwen</a> 3.8 27B и Qwen 3.6 35B-A3B:</strong> Плътният 27-милиарден модел Qwen 3.8 изисква от 6.2 GB до 54.7 GB според избраната прецизност, а MoE архитектурата Qwen 3.6 35B-A3B заема между 10.5 GB и 69.8 GB.</p>
+</li>
+<li><p><strong><a href="/pages/inkling-2.html">Inkling 2</a> Mini 26B-A5B:</strong> Модел с 26 милиарда общи и 5 милиарда активни параметъра, чиито пакети варират между 7.8 GB и 22.9 GB.</p>
+</li>
+<li><p><strong>Специализирани модели за код и решения:</strong> Каталогът включва още North-Mini-Code 30B-A3B (9.4 GB – 61.0 GB), Flint 40B-A2.5B (11.4 GB – 79.6 GB), Muse Glimmer 30B (12.4 GB – 57.4 GB), OpenJev 27B за структурирани решения (19.4 GB – 53.8 GB) и Kolibri 1 78B-A3B (28.6 GB – 83.1 GB).</p>
+</li>
+<li><p><strong><a href="/pages/deepseek.html">DeepSeek</a> V4 Flash 284B-A13B:</strong> Флагманският мултимодален MoE модел за работни станции Mac с голям капацитет на паметта, чийто размер е между 82.4 GB и 161.9 GB.</p>
+</li>
+</ul>
+<p>Изтеглянията се изпълняват паралелно, поддържат автоматично възобновяване при прекъсване и могат да продължат във фонов режим, докато разработчикът вече работи с друг зареден модел [1].</p>
+<h2>Оптимизации на скоростта, паметта и контрола на качеството</h2>
+<p>Основното инженерно предимство на LocalCode се състои в дълбоките оптимизации над стандартния сървър за модели, насочени към преодоляване на латентността при локално агентно програмиране [1]:</p>
+<ul>
+<li><p><strong><a href="/pages/speculative-decoding.html">Спекулативно декодиране</a> (Drafting) и Copy Drafting:</strong> Моделите Gemma 4, Qwen 3.6, Qwen 3.8 и Muse Glimmer използват оригиналните спекулативни драфтъри на своите разработчици, което ускорява генерирането на отговори около 2 пъти. Когато агентът пренаписва файл, който вече е прочел в контекста си, механизмът Copy Drafting директно копира непроменените блокове вместо да ги генерира токен по токен, постигайки от 3.5 до 4 пъти по-висока скорост при рефакториране.</p>
+</li>
+<li><p><strong>Хардуерно ускорение за Apple Silicon и Inkling 2:</strong> GPU ядрата на сървъра се доставят предварително компилирани (precompiled), което елиминира 30-секундното компилиране на шейдъри при първо стартиране. Броят на нишките е прецизно съобразен с производителните ядра (performance cores) на Mac, а Flash Attention е активиран по подразбиране. Специално при Inkling 2 експертните слоеве (MoE experts), които при стандартните имплементации остават скрито върху централния процесор, са прехвърлени изцяло върху графичния процесор — това осигурява около 5 пъти по-висока скорост, а лентовото внимание (banded attention) и слетите активационни операции намаляват GPU паметта наполовина и ускоряват четенето на промптове с 20% до 30%.</p>
+</li>
+<li><p><strong>Управление на KV кеша и предварително загряване (Warm-up):</strong> По подразбиране LocalCode използва 8-битов KV кеш, който свива консумацията на памет наполовина спрямо пълната прецизност и позволява по-дълъг контекст. За Inkling 2 е внедрен директен 16-битов кеш, който ускорява обработката на дълги промптове от 1.4 до 1.8 пъти и спестява 3.3 GB памет при контекстен прозорец от 128K токена. Системният промпт се кешира между ходовете, а първата заявка на потребителя се обработва още докато моделът се зарежда в паметта.</p>
+</li>
+<li><p><strong>Детерминиран контрол и детекция на зацикляне (Stuck Detection):</strong> Скритото разсъждение (hidden thinking) е изключено по подразбиране за незабавен отговор, но системата автоматично възстановява модели, блокирали във фаза на мислене. Вграденият панел за планиране (Plan panel) поддържа актуален списък със задачи, а модулът за детекция на зацикляне разпознава кога моделът не бележи напредък или повтаря неуспешни проверки, като го насочва да смени подхода си и при необходимост го спира с отчет за постигнатото до момента. Всяка нова версия на LocalCode преминава автоматизирано тестване на живо върху всички 12 модела (зареждане, отговор, извикване на инструменти и обработка на изображения) преди публикуване.</p>
+</li>
+</ul>
+<h2>Дългосрочни системни и архитектурни импликации за локалната разработка</h2>
+<p>Появата на интегрирани стекове като LocalCode бележи важен архитектурен преход в екосистемата за софтуерно инженерство с изкуствен интелект [1]. Доскоро агентното програмиране се възприемаше като изключителна привилегия на мащабните облачни модели поради високата цена на контекстното преизчисляване и нуждата от бърза генерация при многостъпкови редакции на код.</p>
+<p>Комбинацията от обединената памет на Apple Silicon и специализирани алгоритмични техники — като Copy Drafting (3.5×–4× ускорение при пренаписване на файлове), повторно използване на промпт кеша и прехвърляне на MoE експертите върху локалните GPU ядра — променя фундаментално икономиката на локалния извод [1]. Когато един 26-милиарден или 35-милиарден MoE модел може да оперира със 128K контекст в рамките на стандартна потребителска конфигурация, основната бариера пред локалните агенти вече не е скоростта на генериране на единичен токен, а надеждността на оркестрацията.</p>
+<p>Вграждането на механизми за автоматично възстановяване при зацикляне (stuck detection), динамично компактиране на дълги сесии според реалния капацитет на сървъра и стриктна мрежова изолация превръща локалните модели в жизнеспособна алтернатива за корпоративни среди със строги изисквания за поверителност на изходния код [1]. Така локалният хардуер преминава от пасивен инструмент за автодовършване към напълно автономен инженерен агент, който планира, редактира и валидира софтуерни системи без нито един байт изходен код да напуска устройството на разработчика.</p>
+<p><img src="/articles/2026/11/23/localcode-open-source-agentic-coding-mac/infographic.png" alt="Инфографика: Архитектура и оптимизации на LocalCode за агентно програмиране върху Mac"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<p>[1]: <a href="https://github.com/mjwsolo/localcode">GitHub - mjwsolo/localcode: Agentic coding. Local models. On your Mac. - GitHub</a></p>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/localcode.html">LocalCode</a><p>Инструмент с отворен код за автономно агентно програмиране (agentic coding) върху компютри Mac с процесори Apple Silicon, който изпълнява локални език...</p></li><li><a href="/pages/apple-silicon.html">Apple Silicon</a><p>Apple Silicon е семейството системни чипове (SoC) на Apple от серията M и A, изградени върху ARM архитектура с унифицирана памет (Unified Memory Archi...</p></li><li><a href="/pages/macos.html">macOS</a><p>macOS е операционната система, разработена от Apple за нейните персонални компютри от серията Mac.</p></li><li><a href="/pages/gemma-4.html">Gemma 4</a><p>Gemma 4 е семейство от олекотени големи езикови модели с отворени тегла (open-weight models), разработени от Google DeepMind и представени през 2026 г...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/inkling-2.html">Inkling 2</a><p>Фамилия отворени мултимодални езикови модели с архитектура Mixture-of-Experts (MoE), разработена от Thinking Machines Lab под лиценз Apache 2.</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/unsloth.html">Unsloth</a><p>Софтуерна платформа и екосистема с отворен код за високоскоростно фино настройване, динамична квантизация (GGUF/MLX) и локално изпълнение на големи ез...</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/speculative-decoding.html">Спекулативно декодиране</a><p>Спекулативното декодиране (Speculative Decoding) е техника за оптимизация на производителността при големи езикови модели (LLM), която цели да ускори ...</p></li><li><a href="/pages/mcp.html">MCP (Model Context Protocol)</a><p>MCP (съкращение от Model Context Protocol) е отворен стандарт за свързване на ИИ модели с външни данни и инструменти.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
