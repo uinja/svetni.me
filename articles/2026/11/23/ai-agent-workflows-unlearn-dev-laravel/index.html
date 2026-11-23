@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Laravel News / Unlearn.dev
+Инженерните екипи, които постигат най-висока производителност с автономни ИИ агенти в продукционна среда, не разчитат на един-единствен универсален инструмент, а ..."><title>Архитектурни навици за ИИ агенти: Как Unlearn.dev и Laravel стандартизират автономната разработка с AGENTS.md и Ralph цикли - Светни.ме</title><meta property="og:title" content="Архитектурни навици за ИИ агенти: Как Unlearn.dev и Laravel стандартизират автономната разработка с AGENTS.md и Ralph цикли - Светни.ме"><meta property="og:description" content="Снимка: Laravel News / Unlearn.dev
+Инженерните екипи, които постигат най-висока производителност с автономни ИИ агенти в продукционна среда, не разчитат на един-единствен универсален инструмент, а ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/ai-agent-workflows-unlearn-dev-laravel/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/ai-agent-workflows-unlearn-dev-laravel/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Архитектурни навици за ИИ агенти: Как Unlearn.dev и Laravel стандартизират автономната разработка с AGENTS.md и Ralph цикли</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/ai-agent-workflows-unlearn-dev-laravel/hero.png" alt="Архитектурни работни потоци с ИИ агенти в Unlearn.dev и Laravel"><br><small>Снимка: Laravel News / Unlearn.dev</small></p>
+<p>Инженерните екипи, които постигат най-висока производителност с автономни <a href="/pages/ai-agents.html">ИИ агенти</a> в продукционна среда, не разчитат на един-единствен универсален инструмент, а на строго формализирани архитектурни навици за контрол на контекста и верификация на кода [1]. В анализ на еволюцията на агентните работни потоци в екосистемата на <a href="/pages/laravel.html">Laravel</a>, Ерик Л. Барнс от Laravel News очертава как платформата <a href="/pages/unlearn-dev.html">Unlearn.dev</a>, създадена от образователната група <a href="/pages/bitterbrains.html">BitterBrains</a>, систематизира прехода от импровизирано писане на подкани (prompting) към детерминирано управление на автономни софтуерни агенти [1, 2].</p>
+<p>Вместо да третират големите езикови модели като автодопълващи асистенти в редактора на код, водещите софтуерни архитекти прилагат дисциплината на технически ръководител (Tech Lead): пълно уточняване на спецификацията преди генериране на код, декомпозиция на функционалността на изолирани единици, задължителен одит на всеки <code>diff</code> преди сливане и непрекъснато обновяване на декларативната памет на хранилището чрез стандартизирани файлове като <code>AGENTS.md</code> [1].</p>
+<h2>Механизми на високопроизводителните агентни работни потоци</h2>
+<p>Анализът на инженерните практики в съвременните продуктови екипи разкрива четири конкретни оперативни модела, които елиминират халюцинациите и архитектурния дрейф при работа с автономни агенти [1]:</p>
+<ul>
+<li><strong>Верижно надграждане на малки заявки за сливане (Stacked PRs в Graphite):</strong> Вместо агентът да генерира монолитни промени в десетки файлове едновременно, задачата се разбива на атомарни, последователно подредени заявки за сливане (pull requests) чрез инструменти като Graphite. Всеки отделен слой е достатъчно малък, за да бъде завършен автономно от агента и инспектиран детерминирано от инженера [1].</li>
+<li><strong>Предварително „разпитване“ на спецификацията (Adversarial Plan Grilling):</strong> Преди да съществува какъвто и да е програмен код, разработчикът инструктира ИИ агента активно да търси пропуски, гранични случаи и архитектурни противоречия в техническия план. Генерирането на имплементация започва едва когато планът е напълно съгласуван и лишен от двусмислия [1].</li>
+<li><strong>Контекстно инжектиране на схеми и маршрути чрез Laravel Boost:</strong> В рамките на Laravel приложенията специализирани инструменти като Laravel Boost свързват агента директно със структурата на базата данни (schema) и таблиците за маршрутизиране (routes), предотвратявайки генерирането на несъществуващи релации или невалидни крайни точки [1].</li>
+<li><strong>Автономни тестови цикли (Ralph Loops):</strong> При т.нар. „Ralph цикли“ (Ralph loops) агентът работи в затворен контур на изпълнение и валидация — генерира код, стартира автоматизирания тестов пакет, анализира грешките от изхода на тестовете и коригира имплементацията итеративно, докато всички тестове преминат успешно без човешка намеса [1].</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Инженерен етап</th>
+<th align="left">Конвенционален ИИ подход</th>
+<th align="left">Стандартизиран агентен модел (Tech Lead дисциплина)</th>
+<th align="left">Инструментална реализация</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Планиране</strong></td>
+<td align="left">Директна текстова подкана за писане на функция</td>
+<td align="left">Двупосочна верификация на плана до елиминиране на всички архитектурни пропуски</td>
+<td align="left">Интерактивен спецификационен одит преди кодогенерация [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Декомпозиция</strong></td>
+<td align="left">Еднократно генериране на голям монолитен пач</td>
+<td align="left">Разделяне на малки, изолирани задачи, които агентът завършва самостоятелно</td>
+<td align="left">Верижни PR стекове в Graphite и схема-контекст чрез Laravel Boost [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Верификация</strong></td>
+<td align="left">Ръчно поправяне и пренаписване на счупен ИИ код</td>
+<td align="left">Автономни итеративни цикли до 100% преминаване на тестовете и строг <code>diff</code> преглед</td>
+<td align="left">Ralph loops и интеграция на агенти в CI/CD конвейери [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Еволюция на паметта</strong></td>
+<td align="left">Повтаряне на едни и същи инструкции във всяка нова сесия</td>
+<td align="left">Систематично подобряване на конфигурацията на агента след всяка завършена сесия</td>
+<td align="left">Отворени библиотеки с умения и <code>AGENTS.md</code> шаблони за 13 технологични стека [1, 2]</td>
+</tr>
+</tbody></table>
+<h2>Стандартизация на AGENTS.md и новите инженерни роли в Unlearn.dev</h2>
+<p>За да превърне тези емпирични практики в повторяема методология, BitterBrains — организацията зад образователните екосистеми Vue School, Certificates.dev и Frontend Nation, обучила над 2 000 000 софтуерни разработчици от 2017 г. насам — привлича основателя на Codecourse Алекс Гарет-Смит като ръководител на учебната архитектура в Unlearn.dev [1, 2]. Платформата структурира 20 специализирани курса и 218 технически урока, фокусирани върху целия жизнен цикъл на агентното инженерство: от дефиниране на функционални спецификации и изграждане на модулни агентни умения (agent skills) до сигурно оставяне на автономни агенти да работят без надзор и интегрирането им директно в CI/CD конвейери [1].</p>
+<p>Ключов технически принос на инициативата е поддържането на инструментариум с отворен код, включващ готови агентни умения и стартови шаблони за <code>AGENTS.md</code> конфигурации, адаптирани за Laravel и още 12 водещи софтуерни стека [1, 2]. Файлът <code>AGENTS.md</code> функционира като постоянен архитектурен договор в корена на хранилището: след всяка работна сесия инженерът обновява правилата, конвенциите за тестване и забранените анти-шаблони в него, така че всяка следваща агентна инстанция стартира с акумулирания институционален опит на екипа [1].</p>
+<p>Според съоснователя и главен технологичен директор на Alokai Филип Раковски, основната стойност на този подход се крие именно във фокуса върху архитектурното мислене при проектиране на работни потоци с ИИ, вместо върху тактически трикове за писане на промптове [1]. На тази база методологията дефинира три нови професионални профила в софтуерната индустрия:</p>
+<ol>
+<li><strong>Продуктов инженер (Product Engineer):</strong> Специалист, който управлява целия път на дадена функционалност от продуктовата идея до продукционното внедряване, делегирайки самото изписване на кода на автономни агенти, докато запазва пълния контрол върху архитектурата и кода за сливане [1].</li>
+<li><strong>ИИ инженер (AI Engineer):</strong> Архитект, фокусиран върху вграждането на агентни системи, контекстни конвейери и модели директно в потребителските софтуерни продукти [1].</li>
+<li><strong>Инженер по ИИ автоматизация (AI Automation Engineer):</strong> Специалист по оркестриране на автономни агенти в рамките на непрекъснатата интеграция (CI pipelines), автоматизирания одит на сигурността и поддръжката на инфраструктурата [1].</li>
+</ol>
+<h2>Системни, архитектурни и макроикономически измерения на агентното софтуерно инженерство</h2>
+<p>Формализирането на практики като Ralph циклите, верижното стекване на заявки в Graphite и декларативните <code>AGENTS.md</code> спецификации бележи фундаментален структурен преход в икономиката на софтуерното производство. През първата вълна на генеративния ИИ (2023–2025 г.) индустрията измерваше ефективността чрез скоростта на генериране на редове код в интегрираните среди за разработка (IDE). Този модел обаче бързо се сблъска със закона за намаляващата възвръщаемост: по-бързото генериране на неструктуриран код просто премести тясното място (bottleneck) към етапа на преглед на кода (code review), регресионното тестване и отстраняването на технически дълг.</p>
+<p>Архитектурната парадигма, описвана в екосистемата на Laravel и Unlearn.dev, решава този системен проблем чрез изместване на човешката намеса в двата края на конвейера — <strong>предварителната формална верификация на плана</strong> и <strong>финалния детерминиран одит на дифа</strong> [1]. Когато един агент работи в рамките на Ralph цикъл, снабден с точна схема на базата данни (чрез интроспективни слоеве като Laravel Boost) и строги правила в <code>AGENTS.md</code>, цената на итерацията по имплементацията клони към цената на изчислителните токени и процесорното време за изпълнение на тестовия пакет. Това трансформира файла <code>AGENTS.md</code> и тестовото покритие в най-ценния интелектуален капитал на софтуерното предприятие: те вече не са пасивна документация за хора, а изпълним контролен слой (executable governance layer), който управлява автономния труд на машините.</p>
+<p>От макроикономическа гледна точка възходът на ролята „Продуктов инженер“ (Product Engineer) променя радикално структурата на разходите и топологията на инженерните организации [1]. Функционалности, които исторически изискваха координация между отделни фронтенд, бекенд и QA специалисти в продължение на седмици, вече могат да бъдат проектирани, валидирани и доставени в продукция от един-единствен висококвалифициран инженер, оркестриращ паралелни агенти. Това води до свиване на търсенето на младши изпълнители, чиято роля се изчерпва с механичен превод на тикети в програмен синтаксис, но същевременно създава остър дефицит за инженери с умения на технически ръководители (Tech Leads) — способни да декомпозират сложни домейн проблеми, да проектират устойчиви тестови граници и да поддържат еволюиращи агентни архитектури в CI/CD среда.</p>
+<p><img src="/articles/2026/11/23/ai-agent-workflows-unlearn-dev-laravel/infographic.png" alt="Инфографика: Архитектурни работни потоци за ИИ агенти"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://laravel-news.com/unlearn-dev-black-friday">Laravel News — Learn the habits behind AI workflows that work (Eric L. Barnes)</a></li>
+<li><a href="https://unlearn.dev/">Unlearn.dev — AI Engineering Workflows &amp; Open-Source AGENTS.md Toolkit by BitterBrains</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/ai-agents.html">AI агенти</a><p>AI агентите са системи, базирани на изкуствен интелект, които могат автономно да изпълняват задачи, да използват инструменти и да вземат решения за по...</p></li><li><a href="/pages/laravel.html">Laravel</a><p>Laravel е водеща уеб рамка с отворен код за езика PHP, известна със своя елегантен синтаксис, богата екосистема от пакети и изключителна продуктивност...</p></li><li><a href="/pages/unlearn-dev.html">Unlearn.dev</a><p>Образователна и инженерна платформа на BitterBrains за архитектурна разработка на софтуер с автономни ИИ агенти, стандартизираща практики като AGENTS.</p></li><li><a href="/pages/bitterbrains.html">BitterBrains</a><p>Международна технологична образователна група за софтуерни инженери, управляваща платформите Vue School, Certificates.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

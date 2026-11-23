@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Microsoft .NET Blog (преглед на интерфейса на Llama за Windows 11 в системния трей с активен модел Gemma 4)
+Локалното изпълнение на езикови модели директно върху потребителския компютър е..."><title>Llama за Windows и .NET 11: Локално изпълнение на отворени AI модели чрез llama.cpp и Microsoft.Extensions.AI - Светни.ме</title><meta property="og:title" content="Llama за Windows и .NET 11: Локално изпълнение на отворени AI модели чрез llama.cpp и Microsoft.Extensions.AI - Светни.ме"><meta property="og:description" content="Източник: Microsoft .NET Blog (преглед на интерфейса на Llama за Windows 11 в системния трей с активен модел Gemma 4)
+Локалното изпълнение на езикови модели директно върху потребителския компютър е..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/dotnet-local-models-llama-windows/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/dotnet-local-models-llama-windows/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Llama за Windows и .NET 11: Локално изпълнение на отворени AI модели чрез llama.cpp и Microsoft.Extensions.AI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/dotnet-local-models-llama-windows/hero.png" alt="Системно меню на Llama за Windows с локално стартиран модел Gemma 4"><br><small>Източник: Microsoft .NET Blog (преглед на интерфейса на Llama за Windows 11 в системния трей с активен модел Gemma 4)</small></p>
+<p>Локалното изпълнение на езикови модели директно върху потребителския компютър елиминира разходите за заявки към облачни API услуги, гарантира пълна поверителност на входните данни и позволява работа в изцяло офлайн среда [1]. В официална техническа публикация в блога на <a href="/pages/microsoft.html">Microsoft</a> за платформата <a href="/pages/dotnet.html">.NET</a>, представена в рамките на конференцията .NET Conf 2026, Луис Кинтания демонстрира новото приложение с отворен код <strong>Llama за Windows</strong> (Llama on Windows) и директната му интеграция с файлово-базирани C# приложения в .NET 11 [1].</p>
+<p>Разработено съвместно от екипите на <a href="/pages/hugging-face.html">Hugging Face</a> и <a href="/pages/llama-cpp.html">llama.cpp</a>, приложението автоматизира целия жизнен цикъл по откриване на съвместими с хардуера отворени модели, тяхното изтегляне и управлението на локален сървър за извод (inference), към който всяко .NET приложение може да се свърже чрез стандартните абстракции на <code>Microsoft.Extensions.AI</code> [1].</p>
+<h2>Архитектура на Llama за Windows: WinUI 3, .NET 10 и локален llama.cpp сървър</h2>
+<p>Llama за Windows е нативно приложение за <a href="/pages/windows-11.html">Windows 11</a>, което работи в системния трей (system tray) и е изградено със стека <strong>.NET 10</strong> и графичната рамка <strong>WinUI 3</strong> [1]. Изходният код на проекта се поддържа в публичното хранилище <code>ggml-org/Llama-Windows</code> в GitHub, а инсталацията се извършва или през официалния сайт <code>llama.app</code>, или директно от Microsoft Store чрез пакетния мениджър <code>winget</code> (<code>winget install 9PPPSM6Q21Q6 --source msstore</code>) [1].</p>
+<p>Под графичния интерфейс приложението управлява фонов сървърен процес на <code>llama.cpp</code> и предлага три основни оперативни механизма за крайни потребители и разработчици:</p>
+<ul>
+<li><strong>Хардуерно ориентиран каталог и споделен кеш:</strong> Приложението анализира параметрите на компютъра и показва индикатори за хардуерна съвместимост (hardware-fit indicators) до всяка версия и квантизация на модела, както и оценки за необходимата памет при избор на дължина на контекстния прозорец [1]. В демонстрационния сценарий на Microsoft се използва моделът <strong><a href="/pages/gemma.html">Gemma</a> 4</strong> във вариант <strong>E4B</strong> с балансирана 4-битова квантизация <strong>Q4_0</strong> (<code>ggml-org/gemma-4-E4B-it-GGUF:Q4_0</code>), наред с налични опции като <code>Q8_0</code> и директен достъп до хиляди модели в Hugging Face Hub [1]. Всички изтеглени тегла се съхраняват в стандартната кеш директория на Hugging Face, което позволява на външни инструменти като интерфейсния команден ред <code>llama</code> да ги използват без дублиране на дисково пространство [1].</li>
+<li><strong>Глобален овърлей и браузърен чат:</strong> Потребителите могат да взаимодействат с локалния модел през уеб браузър или да извикат бърз чат прозорец (overlay) над всяко активно приложение чрез клавишната комбинация <code>Alt+Space</code> [1].</li>
+<li><strong>Динамично управление на паметта (On-Demand Loading &amp; Idle Unload):</strong> За да не блокира системната RAM и VRAM памет постоянно, Llama зарежда избрания модел автоматично при постъпване на първата заявка и го освобождава от паметта след 5 минути неактивност (прагът за тайм-аут подлежи на конфигурация в настройките) [1].</li>
+</ul>
+<h2>Интеграция с .NET 11 чрез Microsoft.Extensions.AI и файлово-базирани C# приложения</h2>
+<p>Когато работи във фонов режим, Llama за Windows стартира HTTP сървър на адрес <code>http://localhost:9931</code> (с базов API път <code>http://localhost:9931/v1</code>), който имплементира REST спецификацията на <a href="/pages/openai.html">OpenAI</a>, включително крайните точки <code>/v1/chat/completions</code>, <code>/v1/models</code>, както и интерфейси за векторни вграждания (embeddings) и структуриран изход (structured output) [1]. Тъй като трафикът не напуска локалната машина, автентикационен API ключ не се изисква [1]. Към стандартния JSON отговор на <code>GET /v1/models</code> сървърът на Llama добавя и разширени метаданни за състоянието на всеки модел (например полето <code>status.value</code>, указващо дали моделът е зареден в оперативната памет в момента) [1].</p>
+<p>В екосистемата на <strong>.NET 11 SDK</strong> (<code>winget install Microsoft.DotNet.SDK.11</code>) Microsoft демонстрира интеграцията чрез т.нар. файлово-базирани приложения (file-based apps), при които целият код се съдържа в единичен файл <code>llama-chat.cs</code> и се стартира директно с <code>dotnet run llama-chat.cs</code> без нужда от проектен <code>.csproj</code> файл [1]. Зависимостите се декларират на първите редове чрез новите директиви <code>#:package</code>:</p>
+<pre><code class="hljs language-csharp"><span class="hljs-meta">#!/usr/bin/env dotnet</span>
+<span class="hljs-meta">#:package Microsoft.Extensions.AI@11.0.0</span>
+<span class="hljs-meta">#:package Microsoft.Extensions.AI.OpenAI@11.0.0</span></code></pre><p>Архитектурната връзка между клиентското приложение и локалния сървър се осъществява чрез унифицирания интерфейс <code>IChatClient</code> от библиотеката <code>Microsoft.Extensions.AI</code>:</p>
+<ol>
+<li><strong>Инициализация на клиента и абстракция на доставчика:</strong> Приложението създава инстанция на <code>OpenAIClient</code> със символична акредитация <code>new ApiKeyCredential(&quot;no-key-required&quot;)</code> и насочва <code>OpenAIClientOptions.Endpoint</code> към <code>http://localhost:9931/v1</code> [1]. Чрез верижното извикване <code>.GetChatClient(model).AsIChatClient().AsBuilder().UseFunctionInvocation().Build()</code> клиентът се трансформира в стандартна <code>IChatClient</code> имплементация с активиран конвейер за автоматично извикване на функции (tool calling) [1].</li>
+<li><strong>Локално извикване на инструменти (Tool Calling):</strong> Чрез фабричния метод <code>AIFunctionFactory.Create</code> стандартни C# методи — като <code>GetMachineInfo()</code> (извличащ името на машината, версията на ОС Windows <code>10.0.26200</code>, броя логически процесори и версията <code>.NET 11.0.0</code>) и <code>ListModels()</code> (проверяващ кои модели са изтеглени и заредени в паметта) — се регистрират в <code>ChatOptions.Tools</code> [1]. Описанията в атрибута <code>[Description]</code> инструктират езиковия модел кога да заяви изпълнение на функцията, а <code>Microsoft.Extensions.AI</code> автоматично прихваща заявката, изпълнява C# метода локално и връща резултата обратно в контекста на модела [1].</li>
+<li><strong>Поточно предаване (Streaming) и управление на историята:</strong> Чат цикълът използва асинхронния поток <code>client.GetStreamingResponseAsync(history, options)</code>, който визуализира генерираните токени в реално време в конзолата и акумулира отговорите от тип <code>ChatResponseUpdate</code> в историята на разговора чрез <code>history.AddMessages(updates)</code> [1].</li>
+</ol>
+<h2>Системни, архитектурни и макроикономически измерения на локалния AI стек в .NET екосистемата</h2>
+<p>Появата на Llama за Windows — създадена с .NET 10 и WinUI 3 от Hugging Face и екипа на <code>llama.cpp</code> — и нейната нативна поддръжка в .NET 11 чрез <code>Microsoft.Extensions.AI</code> очертават три фундаментални трансформации в архитектурата на съвременния корпоративен и настолен софтуер.</p>
+<h3>1. Конвергенция около llama.cpp и OpenAI API като универсален локален системен слой</h3>
+<p>Доскоро интегрирането на локални отворени модели в настолни Windows приложения изискваше всеки разработчик сам да пакетира C++ бинарни компилации на <code>llama.cpp</code> или ONNX Runtime, да управлява драйверни зависимости за CUDA/DirectML/Vulkan и да поддържа отделни хранилища за многогигабайтови GGUF файлове. Извеждането на Llama за Windows като споделен системен агент в трея на Windows 11 налага модел, аналогичен на системните услуги в операционната система: един централизиран демон управлява жизнения цикъл на паметта (5-минутен idle unload) и споделя стандартния Hugging Face кеш между всички процеси на машината. Използването на OpenAI-съвместим HTTP протокол на локален порт <code>9931</code> окончателно утвърждава REST схемата <code>/v1/chat/completions</code> като де факто индустриален стандарт за комуникация между приложния слой и енджините за локален извод.</p>
+<h3>2. Архитектурна декуплификация и хибридна маршрутизация чрез IChatClient</h3>
+<p>Стратегическото решение на Microsoft да изгради AI интеграцията в .NET 11 около интерфейса <code>IChatClient</code> в <code>Microsoft.Extensions.AI</code> (версия <code>11.0.0</code>) премахва твърдата обвързаност (vendor lock-in) между бизнес логиката на приложението и конкретния доставчик на модели. Тъй като целият конвейер — включително поточното четене на токени и автоматизираният цикъл за извикване на C# функции (<code>UseFunctionInvocation</code>) — работи идентично независимо дали зад <code>IChatClient</code> стои локален модел като <code>gemma-4-E4B-it-GGUF:Q4_0</code> или облачен клъстер, софтуерните архитекти могат да внедряват механизми за динамична маршрутизация и резервиране (Routing and Failover). Рутинни задачи като класификация, локална инспекция на системни ресурси, обработка на чувствителни документи или офлайн асистенти се изпълняват локално с нулева пределна цена, докато единствено сложните многостъпкови заявки се пренасочват към облачни модели без промяна в приложния C# код.</p>
+<h3>3. Икономика на агентния десктоп и суверенитет на данните при Tool Calling</h3>
+<p>Комбинацията от файлово-базирани C# скриптове (<code>dotnet run llama-chat.cs</code> с директиви <code>#:package</code>) и локално изпълнение на инструменти (<code>AIFunctionFactory.Create</code>) драстично снижава прага за създаване на персонализирани локални агенти. Когато езиковият модел извиква системни функции с достъп до локалната среда, файловата система или вътрешнофирмени бази данни, целият цикъл на вземане на решение и обработка на резултата остава в рамките на физическата машина (<code>localhost</code>). Това решава един от най-острите регулаторни и корпоративни проблеми пред внедряването на агентни AI системи — риска от изтичане на телеметрия и поверителен контекст към външни облачни доставчици — като същевременно прехвърля изчислителния разход от оперативни абонаментни такси (OpEx per token) към вече наличния потребителски хардуер.</p>
+<p><img src="/articles/2026/11/23/dotnet-local-models-llama-windows/infographic.png" alt="Инфографика: Архитектура и интеграция на Llama за Windows с .NET 11"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://devblogs.microsoft.com/dotnet/local-models-dotnet-llama-windows/">Run local models in your .NET apps with Llama on Windows — .NET Blog (Microsoft / Luis Quintanilla)</a></li>
+<li><a href="https://github.com/luisquintanilla/llama-windows-dotnet">Llama on Windows .NET Sample Repository — GitHub (luisquintanilla/llama-windows-dotnet)</a></li>
+<li><a href="https://github.com/ggml-org/Llama-Windows">Llama-Windows Open Source Repository — GitHub (ggml-org/Llama-Windows)</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/dotnet.html">.NET</a><p>.</p></li><li><a href="/pages/hugging-face.html">Hugging Face</a><p>Hugging Face е водеща американска технологична компания, която разработва инструменти и платформи за изграждане на приложения с помощта на машинно обу...</p></li><li><a href="/pages/llama-cpp.html">llama.cpp</a><p>llama.</p></li><li><a href="/pages/windows-11.html">Windows 11</a><p>Windows 11 е основната настолна операционна система на Microsoft, предоставяща графичната подсистема WinUI 3, интеграция с Windows Package Manager (wi...</p></li><li><a href="/pages/gemma.html">Gemma</a><p>Gemma е фамилия от леки, отворени модели (open-weights) с изкуствен интелект, разработени от Google DeepMind.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

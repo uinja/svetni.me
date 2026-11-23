@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Vals AI / The Decoder — Графична репрезентация на метриката „капацитет“ (capacity), около която GPT-6.2 Astra изгражда формалното си доказателство в Lean
+Моделът за дълбоко математическо ..."><title>GPT-6.2 Astra доказа теоремата за празнината на Смоктунович в Lean чрез собствена алтернативна стратегия - Светни.ме</title><meta property="og:title" content="GPT-6.2 Astra доказа теоремата за празнината на Смоктунович в Lean чрез собствена алтернативна стратегия - Светни.ме"><meta property="og:description" content="Източник: Vals AI / The Decoder — Графична репрезентация на метриката „капацитет“ (capacity), около която GPT-6.2 Astra изгражда формалното си доказателство в Lean
+Моделът за дълбоко математическо ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/gpt-6-2-astra-smoktunowicz-gap-theorem-lean-proof/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/gpt-6-2-astra-smoktunowicz-gap-theorem-lean-proof/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GPT-6.2 Astra доказа теоремата за празнината на Смоктунович в Lean чрез собствена алтернативна стратегия</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/gpt-6-2-astra-smoktunowicz-gap-theorem-lean-proof/hero.png" alt="Визуализация на метриката за капацитет при доказателството на GPT-6.2 Astra"><br><small>Източник: Vals AI / The Decoder — Графична репрезентация на метриката „капацитет“ (capacity), около която GPT-6.2 Astra изгражда формалното си доказателство в Lean</small></p>
+<p>Моделът за дълбоко математическо разсъждение <a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a> на <a href="/pages/openai.html">OpenAI</a> реализира първото в света формализирано и машинно верифицируемо доказателство на теоремата за празнината на Агата Смоктунович (Smoktunowicz&#39;s gap theorem) от 2006 г., изпълнено изцяло без човешка намеса по време на сесията [1, 2]. Според независимата организация за оценка на изкуствен интелект <a href="/pages/vals-ai.html">Vals AI</a> системата е генерирала валидно доказателство от 1800 реда в асистента за формална верификация <a href="/pages/lean.html">Lean</a>, след като самостоятелно е изоставила класическия път от научната литература поради липсващи фундаментални структури в математическата библиотека <a href="/pages/mathlib.html">Mathlib</a> [1, 2].</p>
+<p>Пробивът е постигнат в рамките на специализирания бенчмарк Autoform-Hard — селектиран набор от най-трудните задачи за автоматична формализация, при които десет водещи модела в предходно изследване на <a href="/pages/meta.html">Meta</a> са регистрирали пълен неуспех в рамките на зададения изчислителен бюджет [1, 3]. С решаването на тази задача GPT-6.2 Astra оглавява класацията на Autoform-Hard с 49 от общо 56 решени проблема, изпреварвайки <a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a> и <a href="/pages/claude-fable.html">Claude Fable</a> 5.2, които остават с по 48 успешни формализации [1, 3].</p>
+<h2>Теоремата за празнината на Смоктунович и бариерата пред формализацията в Mathlib</h2>
+<p>Формулирана през 2006 г. от полската математичка Агата Смоктунович в областта на некомутативната алгебра и теорията на пръстените, теоремата за празнината описва фундаментално структурно свойство на растежа в алгебрични системи [1, 2]. Когато дадена математическа система многократно умножава своите базови градивни елементи, скоростта на нарастване на полученото пространство не може да заема произволни междинни стойности — растежът е или изключително бавен (полиномиален/ограничен), или екстремно бърз, като между двата режима съществува строго дефинирана „празнина“ без средно положение [1].</p>
+<p>Въпреки че теоремата е добре известна в теоретичната алгебра от две десетилетия, нейното превеждане на езика на строгата компютърна верификация в Lean се сблъсква с критичен инфраструктурен дефицит [1, 2]. Всички публикувани в академичната литература доказателства се опират на верига от междинни алгебрични леми и абстрактни конструкции, които все още не са имплементирани в общностната библиотека Mathlib [1]. За стандартните системи за автоматична формализация (autoformalization), които функционират чрез буквален превод на известни човешки доказателства в синтаксиса на Lean, липсата на тези базови зависимости представлява непреодолима стена: моделът или се опитва да извика несъществуващи теореми, или изчерпва контекстния и финансовия си бюджет в опити да изгради от нулата цели дялове от алгебрата.</p>
+<h2>Заобикаляне на липсващите леми чрез метриката „капацитет“ (Capacity)</h2>
+<p>Именно сблъсъкът с непълнотата на Mathlib принуждава GPT-6.2 Astra да премине от режим на механична транслация към режим на автономно математическо проектиране [1, 2]. Вместо да реконструира липсващите фундаментални зависимости от оригиналната статия от 2006 г., моделът формулира алтернативна стратегия, базирана върху концепцията за „капацитет“ (capacity) — метрика от съществуващи математически изследвания, която не се използва в стандартните доказателства на теоремата [1, 2].</p>
+<p>В контекста на формалното доказателство на Astra метриката „капацитет“ отчита минималния брой нови елементи, които се добавят към системата при всяка отделна изчислителна стъпка на умножение [1]. Топологично тази величина се държи аналогично на границата (или ребрата по периферията) на граф, измервайки колко бързо се разширява фронтът на генерираните комбинации спрямо вече наличното ядро [1, 2]. Тъй като елементарните аритметични и комбинаторни свойства на подобна гранична метрика могат да бъдат дефинирани директно чрез вече наличните базови примитиви в Mathlib, GPT-6.2 Astra успява да заобиколи изцяло липсващия алгебричен апарат и да сведе доказателството за празнината в растежа до строги неравенства върху капацитета [1, 2].</p>
+<h2>Анатомия на 94-минутната сесия в Autoform-Hard: от опит за отказване до 1800 реда код</h2>
+<p>Хронологията на изчислителната сесия, документирана от Vals AI, разкрива критични детайли за поведението на агентните системи за формално разсъждение при работа върху нерешени до момента задачи [1, 2]. Експериментът се провежда върху бенчмарка Autoform-Hard — курирана от Vals AI подмножествена извадка от AutoformBench на изследователското звено Meta FAIR [1, 3]. Пакетът включва 56 задачи (пет от които са с коригирани от Vals AI формални дефиниции), които десет водещи езикови модела в оригиналното проучване на Meta не са успели да решат в рамките на отпуснатия бюджет [1].</p>
+<p>По време на изпълнението сесията на GPT-6.2 Astra преминава през няколко отчетливи фази:</p>
+<ol>
+<li><strong>Първоначален блокаж и опит за преждевременно прекратяване (47-а минута):</strong> След 47 минути неуспешни опити да формализира теоремата по конвенционален път и изразходвани 8 щатски долара за инференция, GPT-6.2 Astra прави опит да прекрати задачата и да предаде нерешен резултат [1].</li>
+<li><strong>Принудително продължаване от тестовата среда:</strong> Архитектурата на бенчмарка на Vals AI отхвърля заявката за отказване, тъй като правилата на тестовата среда забраняват приемането на нерешени задачи преди изразходването на минимален праг от 20 долара изчислителен бюджет [1, 2].</li>
+<li><strong>Деветминутна фаза на латентно препланиране:</strong> След отказа на системата да приеме капитулацията настъпва 9-минутен интервал на пълно мълчание във входно-изходния поток, през който моделът не подава никакъв нов Lean код към компилатора, а използва вътрешните си вериги за разсъждение, за да преоцени подхода си и да потърси алтернативен математически маршрут [1].</li>
+<li><strong>Синтез и верификация (94-а минута):</strong> След преориентирането към метриката за капацитет Astra изгражда и верифицира пълното доказателство с дължина 1800 реда код в Lean точно на 94-ата минута при общ разход от 21,58 долара [1, 2].</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">Показател / Метрика</th>
+<th align="left">Стойност при пробива на GPT-6.2 Astra</th>
+<th align="left">Контекст и сравнение в Autoform-Hard</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Целева задача</strong></td>
+<td align="left">Теорема за празнината на Смоктунович (2006)</td>
+<td align="left">Първо известно формално доказателство в Lean [1, 2]</td>
+</tr>
+<tr>
+<td align="left"><strong>Обем на доказателството</strong></td>
+<td align="left">1800 реда верифициран Lean код</td>
+<td align="left">Изпълнено със 100% машинна проверка без човешка намеса [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Време до опит за отказване</strong></td>
+<td align="left">47 минути ($8,00 разход)</td>
+<td align="left">Отхвърлено от средата поради минимален праг от $20,00 [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Фаза на вътрешно препланиране</strong></td>
+<td align="left">9 минути без подаване на код</td>
+<td align="left">Преход от класическо доказателство към метриката „capacity“ [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Общо време и цена на сесията</strong></td>
+<td align="left">94 минути / $21,58</td>
+<td align="left">Пълна автономна конвергенция на доказателството [1, 2]</td>
+</tr>
+<tr>
+<td align="left"><strong>Резултат в Autoform-Hard</strong></td>
+<td align="left">49 / 56 решени задачи (1-во място)</td>
+<td align="left">Пред GPT-6.2 Sol (48/56) и Claude Fable 5.2 (48/56) [1, 3]</td>
+</tr>
+</tbody></table>
+<h2>Системни, архитектурни и макроикономически измерения на автономната формална верификация</h2>
+<p>Успешната формализация на теоремата на Смоктунович от GPT-6.2 Astra далеч надхвърля рамките на изолиран бенчмарк рекорд и очертава три фундаментални трансформации в архитектурата и икономиката на изкуствения интелект за научни изследвания.</p>
+<p>На първо място, пробивът адресира пряко епистемологичната криза в отношенията между математическата общност и лабораториите за изкуствен интелект [1]. През последните месеци академичните среди реагираха остро срещу вълната от генерирани на естествен език „доказателства“ на сложни проблеми (включително споровете около уравненията на Навие-Стокс), при които големите езикови модели произвеждат правдоподобно звучащ математически текст със скрити логически пропуски, чието опровергаване отнема седмици труд на висококвалифицирани рецензенти [1]. Когато обаче моделът работи в затворен цикъл с детерминистичен верификатор като Lean, проблемът с халюцинациите при валидацията се елиминира структурно: компилаторът на Lean не приема евристични приближения или реторични скокове. Дори моделът да избере нетрадиционен маршрут от 1800 реда, всяко твърдение е проверено до ниво аксиоми за милисекунди.</p>
+<p>На второ място, способността на GPT-6.2 Astra да заобиколи липсващите дефиниции в Mathlib чрез въвеждане на алтернативен инвариант („капацитет“) решава един от най-тежките структурни проблеми на автоматичната формализация — т.нар. „проблем със студения старт на библиотеките“. Досега се смяташе, че ИИ агентите могат да доказват нови теореми само ако цялата пирамида от предшестваща академична литература вече е ръчно въведена в Mathlib от хора. Демонстрацията на Astra доказва, че при наличие на достатъчно дълбок хоризонт на планиране моделът може да третира липсващите библиотеки като препятствие за маршрутизиране и да конструира самодостатъчен мост от по-ниско ниво на абстракция.</p>
+<p>На трето място, инцидентът на 47-ата минута, при който моделът се опитва да се предаде при изразходвани едва 8 долара, разкрива критичен архитектурен дефект в текущите политики за обучение с подсилване (RL) при моделите за разсъждение. Съвременните frontier модели са силно оптимизирани да пестят токени и да прекъсват неперспективни клонове на търсене (early stopping), което при стандартни софтуерни задачи повишава ефективността, но при фундаментални научни проблеми води до преждевременна капитулация точно преди фазовия преход към ново решение. Фактът, че простото системно ограничение в харнеса на Vals AI (забрана за изход преди $20) е принудило модела да инвестира 9 минути в чисто стратегическо преосмисляне и да реши задача, непосилна за десет други модела, показва, че политиките за разпределение на изчислителния бюджет по време на инференция (test-time compute scaling) са също толкова решаващи, колкото и базовите тегла на невронната мрежа. При крайна цена от едва 21,58 долара за 1800 реда формално верифициран математически код икономическата бариера пред индустриалната формална верификация на криптографски протоколи, ядра на операционни системи и критичен авиокосмически софтуер спада с няколко порядъка спрямо традиционния инженерен труд.</p>
+<p><img src="/articles/2026/11/23/gpt-6-2-astra-smoktunowicz-gap-theorem-lean-proof/infographic.png" alt="Инфографика за формалното доказателство на GPT-6.2 Astra в Lean"><br><small>Източник: Светни.ме — Четири стълба на пробива на GPT-6.2 Astra в Autoform-Hard и формализирането на теоремата на Смоктунович</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/gpt-6-2-astra-solved-a-math-theorem-no-other-ai-could-crack-then-invented-its-own-proof-strategy/">The Decoder – GPT-6.2 Astra solved a math theorem no other AI could crack, then invented its own proof strategy</a></li>
+<li><a href="https://www.vals.ai/blogs/smoktunowicz-gap-theorem">Vals AI – Smoktunowicz&#39;s Gap Theorem: Autonomous Lean Formalization by GPT-6.2 Astra</a></li>
+<li><a href="https://www.vals.ai/benchmarks/autoform_hard">Vals AI – Autoform-Hard Benchmark Leaderboard</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/gpt-6-2-astra.html">GPT-6.2 Astra</a><p>GPT-6.</p></li><li><a href="/pages/vals-ai.html">Vals AI</a><p>Vals AI е специализирана компания за оценка и валидация на модели с изкуствен интелект, фокусирана върху прецизни бенчмаркове за правния и финансовия ...</p></li><li><a href="/pages/lean.html">Lean</a><p>Lean е функционален език за програмиране и интерактивен доказател на теореми (proof assistant), разработен първоначално от Леонардо де Моура в Microso...</p></li><li><a href="/pages/mathlib.html">Mathlib</a><p>Общностно поддържаната математическа библиотека за формализирания асистент за доказателства Lean, съдържаща формални дефиниции и теореми от съвременна...</p></li><li><a href="/pages/meta.html">Meta AI</a><p>Meta AI е изследователското звено за изкуствен интелект на Meta (компанията майка на Facebook, Instagram и WhatsApp).</p></li><li><a href="/pages/gpt-6-2-sol.html">GPT-6.2 Sol</a><p>GPT-6.</p></li><li><a href="/pages/claude-fable.html">Claude Fable</a><p>Claude Fable е модел от следващо поколение, разработен от Anthropic, ориентиран към сложен концептуален разсъдъчен процес, генериране на синтетични сц...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

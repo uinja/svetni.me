@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Z.ai / Официална техническа документация на GLM-5.4
+Китайската изследователска лаборатория Z.ai (международното подразделение на Zhipu AI) официално представи GLM-5.4 – своя нов флагманск..."><title>GLM-5.4 и възходът на Loop Transformer: Как Z.ai постига 3-трилионен интелект при 750B параметъра за обобщено програмиране - Светни.ме</title><meta property="og:title" content="GLM-5.4 и възходът на Loop Transformer: Как Z.ai постига 3-трилионен интелект при 750B параметъра за обобщено програмиране - Светни.ме"><meta property="og:description" content="Източник: Z.ai / Официална техническа документация на GLM-5.4
+Китайската изследователска лаборатория Z.ai (международното подразделение на Zhipu AI) официално представи GLM-5.4 – своя нов флагманск..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/glm-5-4-loop-transformer-generalized-coding/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/glm-5-4-loop-transformer-generalized-coding/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>GLM-5.4 и възходът на Loop Transformer: Как Z.ai постига 3-трилионен интелект при 750B параметъра за обобщено програмиране</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/glm-5-4-loop-transformer-generalized-coding/hero.png" alt="GLM-5.4 Loop Transformer архитектура"><br><small>Източник: Z.ai / Официална техническа документация на GLM-5.4</small></p>
+<p>Китайската изследователска лаборатория <a href="/pages/z-ai.html">Z.ai</a> (международното подразделение на <a href="/pages/zhipu-ai.html">Zhipu AI</a>) официално представи <a href="/pages/glm-5-4.html">GLM-5.4</a> – своя нов флагмански модел с мащаб от 750 милиарда параметъра и първата продуктова реализация на компанията, изградена върху рекурентна <a href="/pages/looped-transformer.html">Loop Transformer</a> структура [1]. Чрез циклично двукратно изпълнение на споделен блок от 28 слоя моделът постига когнитивна дълбочина и логическа последователност, съпоставими с системи от калибъра на 2 до 3 трилиона параметъра, без да раздува физическия отпечатък на теглата в паметта [1]. Наред с архитектурния пробив, GLM-5.4 бележи прехода към концепцията за „обобщено програмиране“ (Generalized Coding), при която писането на код се превръща в универсален изпълнителен слой за 3D инженерно проектиране в CAD системи, създаване на видео, програмиране на шейдъри и разработка на цялостни видеоигри [1].</p>
+<p>В продължение на години индустрията разчиташе на линейното разширяване на <a href="/pages/transformer-architecture.html">Transformer архитектурата</a> – добавяне на повече параметри и по-големи корпуси от данни за запаметяване. Инженерният екип на Z.ai обаче формулира фундаментално разграничение: докато задачите, изискващи енциклопедична памет, печелят от по-голям брой параметри, задачите с интензивно разсъждение се нуждаят от по-голям ефективен изчислителен капацитет на ниво единичен токен [1]. Мащабното софтуерно инженерство, киберсигурността, физическият контрол на роботизирани системи и триизмерното моделиране представляват свръхдълги причинно-следствени вериги, при които простото натрупване на статични тегла не може да гарантира глобална логическа консистентност [1].</p>
+<h2>От базовия GLM-5 към рекурентна дълбочина при 750 милиарда параметъра</h2>
+<p>В стандартния трансформър всеки слой се изпълнява точно веднъж при всяко право преминаване (forward pass). При Loop Transformer група от слоеве със споделени тегла се изпълнява многократно в рамките на няколко итерации, като всяко следващо преминаване прецизира скритите състояния (hidden states) от предходния цикъл [1]. Макар идеята за споделяне на теглата по дълбочина да датира още от Universal Transformer (2018 г.), моделите с циклична структура, обучавани от нулата, исторически изостават от традиционните архитектуры при еднакъв бюджет за предварително обучение [1].</p>
+<p>За да преодолее това ограничение, Z.ai избира прагматичен инженерен подход: вместо обучение от нулата, компанията адаптира вече предварително обучения базов модел <a href="/pages/glm-5.html">GLM-5</a> (с мащаб 750 милиарда параметъра) в Loop Transformer чрез продължаващо обучение (continued training) [1]. Конкретната топология на GLM-5.4 взима 28 междинни слоя от базовия модел и ги завърта в две последователни итерации при всяко генериране [1].</p>
+<pre><code class="hljs language-mermaid"><span class="hljs-variable">flowchart</span> <span class="hljs-variable">LR</span>
+    <span class="hljs-variable">A</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Входни токени и начални слоеве&quot;</span><span class="hljs-punctuation">]</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-variable">B</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Блок от 28 слоя (Итерация 1: Глобален контекст)&quot;</span><span class="hljs-punctuation">]</span>
+    <span class="hljs-variable">B</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-built_in">C</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Per-Token гейтове (Консервативен запис)&quot;</span><span class="hljs-punctuation">]</span>
+    <span class="hljs-built_in">C</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-built_in">D</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Блок от 28 слоя (Итерация 2: Прецизиране)&quot;</span><span class="hljs-punctuation">]</span>
+    <span class="hljs-variable">B</span> <span class="hljs-operator">-.-&gt;|</span><span class="hljs-string">&quot;Споделяне на Sparse KV + Индекси&quot;</span><span class="hljs-operator">|</span> <span class="hljs-built_in">D</span>
+    <span class="hljs-built_in">D</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-built_in">E</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Per-Token гейтове (Пълен запис в Residual Stream)&quot;</span><span class="hljs-punctuation">]</span>
+    <span class="hljs-built_in">E</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-variable">F</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Изходни слоеве и генериране (до 200 токена/сек)&quot;</span><span class="hljs-punctuation">]</span></code></pre><p>Трансформирането на вече съществуващ 750-милиарден модел в многопроходна циклична система обаче поражда сериозни рискове от числена нестабилност и взривообразно нарастване на паметта. За да балансира изчислителната ефективност с разходите за внедряване при контекстен прозорец от 1 милион токена, екипът въвежда три ключови структурни модификации [1]:</p>
+<h3>1. Прогресивни обновления с управляеми гейтове (Gated Progressive Updates)</h3>
+<p>Когато междинните слоеве на предварително обучен модел бъдат принудени да работят в цикъл, директното презаписване на скритите състояния води до експоненциално нарастване на нормите на активациите (activation norms blow-up) между отделните итерации [1]. В резултат на това следващите слоеве получават векторни представяния извън очаквания мащаб и статистическо разпределение.</p>
+<p>GLM-5.4 решава този проблем чрез независими гейтове на ниво токен (per-token gates) за всяка итерация, които пропорционално записват кандидат-обновленията обратно в остатъчния поток (residual stream) [1]. След края на обучението тези гейтове демонстрират ясно разделение на труда:</p>
+<ul>
+<li><strong>Първата итерация</strong> изгражда глобалния контекст и записва консервативно с малки стойности на гейтовете, поддържайки числения мащаб стабилен [1].</li>
+<li><strong>Втората итерация</strong> използва вече стабилизираното състояние за фино прецизиране на изхода, като отваря гейтовете за пълен запис на обновленията [1].</li>
+<li><strong>Динамична адаптация спрямо трудността:</strong> Гейтовете автоматично регулират размера на стъпката според сложността на конкретния токен. При по-трудни за предсказване токени още първият цикъл записва по-агресивно, така че сложните зависимости да се възползват максимално от итеративното рафиниране във втория пас [1].</li>
+</ul>
+<h3>2. Хибриден KV кеш: Глобално споделяне и локален плъзгащ се прозорец</h3>
+<p>Наивната имплементация на Loop Transformer изисква поддържането на пълен Key-Value (KV) кеш за всяка отделна итерация на цикъла, което би умножило консумацията на видеопамет пропорционално на броя завъртания [1]. Вместо това Z.ai създава хибриден механизъм, комбиниращ споделяне на KV кеша между циклите с независим локален плъзгащ се прозорец (sliding window) [1].</p>
+<p>Във втората итерация моделът директно преизползва разредените (sparse) KV състояния, селектирани по време на първия пас, но същевременно запазва собствени новогенерирани KV вектори в рамките на локален плъзгащ се прозорец [1]. Двата KV потока могат да се припокриват на едни и същи позиции, позволявайки на вниманието (attention) да обхваща едновременно глобалните контекстни представяния от първия пас и обновените локални репрезентации от втория пас [1]. По този начин допълнителният цикъл струва само един плъзгащ се прозорец в паметта вместо дублиране на целия контекст – критично предимство при поддръжката на контекст до 1 милион токена и максимален изход от 128 хиляди токена [1, 2].</p>
+<h3>3. Преизползване на индексите за разредено внимание (Sparse Attention Index Reuse)</h3>
+<p>Тъй като базовият модел се опира на разредено внимание (sparse attention), изчисляването на индексите при всяко завъртане би добавило излишно забавяне. В GLM-5.4 вторият цикъл директно преизползва индексите на вниманието, генерирани от индексатора в първия цикъл, което води до нулев допълнителен разход за индексиране при почти идентична точност спрямо пълното преизчисляване [1].</p>
+<h2>Изо-параметрични тестове: Изместване на разсъждението от видими токени към скрита дълбочина</h2>
+<p>За да докаже т.нар. „коректност на мащабирането“ (Scaling Correctness), Z.ai валидира архитектурата прогресивно върху базови модели с 1 милиард, 4 милиарда, 30 милиарда и 750 милиарда параметъра [1]. Особено показателен е контролираният изо-параметричен експеримент върху 30-милиардния модел (притежаващ идентична архитектура с флагмана от 750B параметъра), оценен след 200K дългоконтекстно SFT обучение с активиран режим на мислене [1]. При еднакъв брой параметри и едва около 10% повече общи изчислителни ресурси за обучение, цикличната версия показва две фундаментални предимства:</p>
+<ol>
+<li><strong>Дългите вериги на разсъждение печелят най-много:</strong> Най-значителният скок в точността се наблюдава при висшата математика, научните разсъждения и задачите с дълъг контекст, които стоят в основата на обобщеното програмиране [1].</li>
+<li><strong>По-малко изразходвани токени за явно „мислене“ (Chain-of-Thought):</strong> Във водещи тестове като GPQA-Diamond и MMLU-Pro средната дължина на генерирания изход спада с между 10% и 14%, основно поради по-кратки вериги на мислене [1]. На практика част от процеса на разсъждение се прехвърля от скъпите за генериране външни токени към имплицитната вътрешна дълбочина на рекурентния цикъл [1].</li>
+</ol>
+<p>На системно ниво, чрез сливане на основните изчислителни ядра (kernel fusion) за минимизиране на междинните операции по четене и запис в паметта, инфраструктурата на Z.ai постига скорост на инференция до <strong>200 токена в секунда</strong> в часовете извън пиково натоварване и поддържа стабилни <strong>70–80 токена в секунда</strong> при върхов трафик [1]. Същевременно авторите отбелязват и основното текущо ограничение на модела: склонността му понякога да влиза в прекалено дълги цикли на „маратонско мислене“ (marathon thinking loops) и самокорекция, които забавят отговора при тежки заявки, макар и последователно да повишават крайната точност [1, 2].</p>
+<h2>Обобщено програмиране (Generalized Coding) и интеграция в екосистемата</h2>
+<p>Според Z.ai фокусът върху програмния код от началото на 2025 г. вече е отключил агентното инженерство, задачите с дълъг хоризонт и автоматизираната киберсигурност, но GLM-5.4 поставя началото на по-широка парадигма – <strong>Generalized Coding</strong> [1]. Благодарение на мултимодалната поддръжка на текст, файлове, изображения и видео, моделът използва кода като универсален инструмент за синтез извън класическата софтуерна разработка [1, 2]:</p>
+<ul>
+<li><strong>Инженерно CAD моделиране:</strong> Автономно конструиране на 6-осна роботизирана ръка чрез прецизен инженерен CAD код във FreeCAD [1].</li>
+<li><strong>Математическа 3D геометрия и шейдъри:</strong> Генериране от нулата на интерактивна 3D макро-симулация за наблюдение на птици чрез чиста математическа геометрия и персонализирани GLSL шейдъри [1].</li>
+<li><strong>Програмно видео и музикална продукция:</strong> Създаване на самоозвучено музикално видео, изцяло режисирано и сглобено чрез програмен код [1].</li>
+<li><strong>Цялостна разработка на игри:</strong> Директно изграждане на завършени видеоигри, обхващащи физика, движение на персонажи, карти, бойни системи и визуални активи [1].</li>
+</ul>
+<p>Моделът вече е достъпен в абонаментния план GLM Coding Plan с 1,5 пъти увеличен лимит на квотите спрямо предходното поколение GLM-5.3 и нативна интеграция в среди за агентно програмиране като <a href="/pages/claude-code.html">Claude Code</a>, <a href="/pages/cursor.html">Cursor</a>, Cline и ZCode [1, 2]. Компанията потвърди, че програмните интерфейси (API) ще бъдат пуснати след стандартните оценки за сигурност, а теглата на модела ще бъдат публикувани с отворен код след приключване на процедурите по защитно укрепване (safety hardening) [1, 2].</p>
+<h2>Стратегически и архитектурни импликации: Краят на грубото параметрично мащабиране</h2>
+<p>Появата на GLM-5.4 маркира критичен повратен момент в глобалната надпревара при големите езикови модели. През последните две години водещите лаборатории се сблъскаха с физическата стена на пропускателната способност на паметта (memory bandwidth wall): увеличаването на модела от 700 милиарда до 2–3 трилиона параметъра изисква пропорционално повече HBM памет и междучипова комуникация при всеки генериран токен, правейки масовото обслужване на агентни работни потоци икономически нерентабилно.</p>
+<p>Чрез успешната адаптация на 750-милиарден базов модел в Loop Transformer, Z.ai доказва на практика, че <strong>изчислителната дълбочина (computational depth) може да замени параметричния обем</strong> при сложни логически задачи. Още по-важно е откритието, че рекурентните цикли в латентното пространство съкращават дължината на явните Chain-of-Thought токени с 10–14% [1]. Тъй като при авторегресивните модели всеки изходен токен изисква пълно преминаване през цялата мрежа и разширява KV кеша, пренасянето на разсъждението „вътре“ в 28-слойния цикъл с хибриден KV кеш директно намалява латентността и цената на агентните сесии.</p>
+<p>В дългосрочен план следващият хоризонт, очертан от екипа на Z.ai, е <strong>адаптивното изчисление (adaptive compute)</strong> – динамично определяне на броя итерации за всеки отделен токен според неговата алгоритмична трудност, съчетано с едновременно мащабиране както на броя цикли, така и на базовия размер на модела [1]. Ако предстоящото отваряне на теглата на GLM-5.4 потвърди тези резултати в независими индустриални бенчмаркове, хибридното рекурентно преобучаване на съществуващи базови модели ще се превърне в новия златен стандарт за лабораториите, търсещи интелект от мултитрилионен клас върху съществуващия хардуерен отпечатък.</p>
+<p><img src="/articles/2026/11/23/glm-5-4-loop-transformer-generalized-coding/infographic.png" alt="Инфографика за архитектурата на GLM-5.4"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://z.ai/blog/glm-5.4">Z.ai Technical Blog – GLM-5.4: Toward Generalized Coding with Our First Loop Transformer</a></li>
+<li><a href="https://www.datacamp.com/blog/glm-5-4">DataCamp / Technical Analysis – GLM-5.4: Architecture, Generalized Coding, Benchmarks, and More</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/glm-5-4.html">GLM-5.4</a><p>GLM-5.</p></li><li><a href="/pages/z-ai.html">Z.ai</a><p>Z.</p></li><li><a href="/pages/zhipu-ai.html">Zhipu AI</a><p>Zhipu AI (известна още като Zhipu.</p></li><li><a href="/pages/glm-5.html">GLM-5</a><p>GLM-5 е поколение големи езикови модели, разработени от китайската компания за изкуствен интелект Zhipu AI (известна още като Z.</p></li><li><a href="/pages/looped-transformer.html">Цикличен трансформър (Looped Transformer)</a><p>Цикличният трансформър (Looped Transformer) е невронна архитектура, при която определени вътрешни слоеве на трансформъра се изпълняват многократно в ц...</p></li><li><a href="/pages/transformer-architecture.html">Трансформър архитектура (Transformer Architecture)</a><p>Трансформър архитектурата е фундаментална невронна архитектура, въведена през 2017 г.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/cursor.html">Cursor</a><p>Cursor е ИИ базирана среда за разработка (IDE), изградена върху VS Code.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

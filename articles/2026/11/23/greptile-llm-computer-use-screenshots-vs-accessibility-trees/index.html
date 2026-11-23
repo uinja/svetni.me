@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Joseba.makazaga (CC BY-SA 4.0) – GIMP-GUI.png
+Автономните софтуерни агенти като Claude Code на Anthropic и Codex на OpenAI вече притежават способността директно да управ..."><title>Пиксели срещу дървета за достъпност: Как големите езикови модели виждат и управляват компютърния екран - Светни.ме</title><meta property="og:title" content="Пиксели срещу дървета за достъпност: Как големите езикови модели виждат и управляват компютърния екран - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Joseba.makazaga (CC BY-SA 4.0) – GIMP-GUI.png
+Автономните софтуерни агенти като Claude Code на Anthropic и Codex на OpenAI вече притежават способността директно да управ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/greptile-llm-computer-use-screenshots-vs-accessibility-trees/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/greptile-llm-computer-use-screenshots-vs-accessibility-trees/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Пиксели срещу дървета за достъпност: Как големите езикови модели виждат и управляват компютърния екран</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/greptile-llm-computer-use-screenshots-vs-accessibility-trees/hero.png" alt="Графичен потребителски интерфейс на GIMP в Linux среда, илюстриращ предизвикателствата пред визуалната навигация и дърветата за достъпност"><br><small>Снимка: Wikimedia Commons / Joseba.makazaga (CC BY-SA 4.0) – GIMP-GUI.png</small></p>
+<p>Автономните софтуерни агенти като <a href="/pages/claude-code.html">Claude Code</a> на <a href="/pages/anthropic.html">Anthropic</a> и Codex на <a href="/pages/openai.html">OpenAI</a> вече притежават способността директно да управляват потребителски компютри, но фундаменталният архитектурен въпрос остава отворен: дали моделът трябва да разчита на сурови екранни снимки (screenshots), или на структурирано текстово описание на интерфейса, известно като дърво за достъпност (accessibility tree)? Ново мащабно емпирично изследване на инженерния екип на <a href="/pages/greptile.html">Greptile</a>, ръководено от Рубан СК (Ruban SK), тества седем поколения модели на OpenAI — от <a href="/pages/gpt-4o.html">GPT-4o</a> до най-новия GPT-6.1 Sol — върху 172 реални задачи от стандарта <a href="/pages/osworld.html">OSWorld</a>, разкривайки рязка граница между по-старите архитектури и съвременните водещи мултимодални системи <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</p>
+<p>Резултатите от експеримента демонстрират неочаквана конвергенция: докато при по-слабите и по-ранни модели добавянето на дърво за достъпност и кликване чрез идентификатор на елемент (Element ID) утроява успеваемостта им (например при GPT-5.2 резултатът скача от 15,8% на 52,8%), при водещите модели от ново поколение като GPT-6.1 Sol суровото визуално възприятие само чрез екранни снимки достига 83,8% успеваемост — резултат, който надхвърля човешкия базов показател от 72% в първата версия на OSWorld и на практика елиминира необходимостта от текстови метаданни за локализиране на обекти <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>, <a href="https://arxiv.org/abs/2404.07972">[2]</a>.</p>
+<h2>От помощни технологии за незрящи до инфраструктура за ИИ агенти</h2>
+<p>Текстовата репрезентация на графичния екран е създадена десетилетия преди появата на големите езикови модели. През 1984 г. двама математици от IBM — Джим Тачър и неговият бивш научен ръководител Джеси Райт, който е бил незрящ — стартират страничен изследователски проект за гласово прочитане на съдържанието от екрана на персоналните компютри <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>. Когато графичните потребителски интерфейси (GUI) заменят текстовите терминали с растерни пиксели, операционните системи са принудени да въведат стандартизирани програмни интерфейси, чрез които приложенията описват собствените си контроли. Microsoft внедрява Active Accessibility през 1997 г., Sun Microsystems стартира AT-SPI за <a href="/pages/linux.html">Linux</a> през 2001 г., а Apple интегрира своя Accessibility API през 2002 г. <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</p>
+<p>При ранните мултимодални агенти тази текстова йерархия се оказва критична патерица. Когато бенчмаркът OSWorld е публикуван през 2024 г., моделите, разчитащи единствено на екранни снимки, успяват да завършат едва около една от двадесет задачи (~5%), докато най-добрият модел по онова време постига около 12% при човешки еталон от 72% <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>, <a href="https://arxiv.org/abs/2404.07972">[2]</a>. Авторите на OSWorld идентифицират две основни пречки пред моделите: оперативното познаване на самия софтуер и преобразуването на абстрактното намерение (например „натисни бутона Save“) в точни пикселни координати върху екрана <a href="https://arxiv.org/abs/2404.07972">[2]</a>.</p>
+<h2>Геометричният парадокс на визуалната токенизация</h2>
+<p>Причината, поради която класическите визуално-езикови модели се провалят при директно взаимодействие с екранни снимки, се корени в начина, по който техните визуални енкодери обработват изображенията. Докато човекът движи курсора с непрекъсната визуална обратна връзка, моделът трябва да анализира статично изображение и да генерира координатите като текстов низ (например <code>x=523, y=217</code>). Отклонение от само няколко пиксела води до невалиден клик или активиране на грешна функция <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</p>
+<p>Този проблем се задълбочва от три архитектурни фактора:</p>
+<ul>
+<li><strong>Променлива геометрия на прозорците:</strong> Една и съща икона се намира на напълно различни абсолютни координати при промяна на резолюцията на монитора или мащабирането на прозореца <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Квантуване чрез визуални пачове (Patch Tokenization):</strong> Моделът не вижда изображението пиксел по пиксел. Преди обработка екранната снимка се свива до лимита на входния буфер и се нарязва на квадратни блокове (patches) с ширина от десетки пиксели. Въпреки тази загуба на пространствена разделителна способност, крайното действие изисква попадение в един конкретен пиксел <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Микроцели при висока резолюция:</strong> В специализирания бенчмарк ScreenSpot-Pro от 2025 г., фокусиран върху малки интерфейсните контроли върху монитори с висока разделителна способност, най-добрият модел към момента на публикуване улучва правилната цел едва в 18,9% от случаите <a href="https://arxiv.org/abs/2504.07981">[3]</a>. Дори официалната техническа документация на Anthropic предупреждава разработчиците, че Claude може да допуска грешки или да халюцинира при генерирането на специфични пикселни координати <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool">[4]</a>.</li>
+</ul>
+<h2>Експериментална методология на Greptile: Три режима на възприятие и действие</h2>
+<p>За да определят оптималната архитектура на своя агент за автоматизирано тестване на потребителски интерфейси TREX, инженерите на Greptile конструират три последователни експериментални постановки върху идентичен набор от 172 задачи в OSWorld <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>. Всяка задача се изпълнява върху Linux среда чрез еднократен опит (1 attempt), лимит от максимум 50 стъпки, ниско ниво на изчислително разсъждение (low reasoning effort) и автоматично оценяване чрез оригиналните проверяващи скриптове на OSWorld <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>:</p>
+<ol>
+<li><strong>Само екранни снимки (Screenshots alone):</strong> Базовият цикъл, при който моделът вижда единствено растерното изображение и историята на действията си, след което извежда пикселни координати <code>click(x, y)</code> или клавишни комбинации.</li>
+<li><strong>Екранни снимки + дърво за достъпност с координатно кликване (Tree + Coordinate Clicks):</strong> Към изображението се подава текстовото дърво от Linux AT-SPI (генерирано от графичните комплекти GTK или Qt), което описва имената, позициите и размерите на всички видими уиджети в пиксели. Моделът използва тези числа, за да изчисли центъра на обекта, но все още извежда координати <code>click(x, y)</code> <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Екранни снимки + дърво за достъпност с кликване по идентификатор (Tree + Element ID Clicks):</strong> Всеки елемент в дървото получава уникален целочислен идентификатор (например <code>[4] button &quot;7&quot;</code> или <code>[2] menu button &quot;Mode&quot;</code> в GNOME Calculator). Моделът просто посочва желания ID, а управляващият харнес (harness) сам позиционира и изпълнява клика без риск от координатно отклонение <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">Модел на OpenAI</th>
+<th align="left">Дата на пускане</th>
+<th align="left">Режим 1: Само екранни снимки</th>
+<th align="left">Режим 2: Екранна снимка + AT-SPI дърво (координати)</th>
+<th align="left">Режим 3: Екранна снимка + AT-SPI дърво (клик по ID)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>GPT-4o</strong></td>
+<td align="left">Май 2024 г.</td>
+<td align="left">10,5%</td>
+<td align="left">Подобрение с дърво*</td>
+<td align="left">Подобрение с ID*</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-4.1</strong></td>
+<td align="left">Април 2025 г.</td>
+<td align="left">5,4%</td>
+<td align="left">20,6%</td>
+<td align="left">29,3%</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-5.2</strong></td>
+<td align="left">Декември 2025 г.</td>
+<td align="left">15,8%</td>
+<td align="left">36,2%</td>
+<td align="left">52,8%</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-5.4 nano</strong></td>
+<td align="left">Март 2026 г.</td>
+<td align="left">7,5%</td>
+<td align="left">Подобрение с дърво*</td>
+<td align="left">Подобрение с ID*</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-5.5</strong></td>
+<td align="left">Април 2026 г.</td>
+<td align="left">67,7%</td>
+<td align="left">Без статистическа разлика</td>
+<td align="left">Без статистическа разлика</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-6 Luna</strong></td>
+<td align="left">Септември 2026 г.</td>
+<td align="left">59,2%</td>
+<td align="left">Без статистическа разлика</td>
+<td align="left">Без статистическа разлика</td>
+</tr>
+<tr>
+<td align="left"><strong>GPT-6.1 Sol</strong></td>
+<td align="left">Септември 2026 г.</td>
+<td align="left"><strong>83,8%</strong></td>
+<td align="left"><strong>82,7%</strong></td>
+<td align="left"><strong>82,1%</strong></td>
+</tr>
+</tbody></table>
+<p><small>*Бележка: Greptile отчита, че четирите по-слаби модела (GPT-4o, GPT-4.1, GPT-5.2 и GPT-5.4 nano) печелят между 9 и 37 процентни пункта при преминаване към дърво за достъпност и ID кликване, като в три от четирите случая повече от удвояват базовия си резултат <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</small></p>
+<p>Данните очертават драматичен скок във визуалната прецизност след април 2026 г. Докато GPT-4.1 постига едва 5,4% със сурови снимки и се нуждае от AT-SPI дърво и ID селектори, за да достигне 29,3%, а GPT-5.2 утроява резултата си от 15,8% до 52,8%, трите водещи модела (GPT-5.5, GPT-6 Luna и GPT-6.1 Sol) не показват никакво статистически значимо подобрение от добавянето на дървото за достъпност <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>. Нещо повече — при GPT-6.1 Sol чистият визуален режим постига 83,8% (и 71,4% при максимално изчислително усилие върху значително по-трудния офлайн набор OSWorld 2.0), докато добавянето на дървото леко понижава резултата до 82,7% при координати и 82,1% при ID кликване <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</p>
+<h2>Слепите петна на дървото за достъпност: Защо екранните снимки остават незаменими</h2>
+<p>Въпреки че дървото за достъпност предлага детерминирана структура за стандартни десктоп контроли, изследването на Greptile документира четири критични сценария, при които текстовата йерархия се проваля напълно в реална експлоатация <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>:</p>
+<ul>
+<li><strong>Скрити зависимости от системната среда:</strong> По време на тестовете в Linux графичният редактор GIMP първоначално липсва изцяло от AT-SPI дървото, докато инженерите не възстановяват специфична променлива на обкръжението (environment variable), задавана при потребителски вход <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Приложения с растерни платна (Canvas Apps):</strong> В инструменти за дизайн като Figma дървото за достъпност експортира бутоните от страничната лента с инструменти, но самото работно платно (canvas) и векторните фигури върху него са напълно невидими за текстовия парсър и съществуват единствено като пиксели <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Игри и нестандартни графични двигатели:</strong> Приложения, рендериращи директно през OpenGL, Vulkan или WebGL (като класическата игра Doom), изобщо не публикуват дърво за достъпност — за текстовия агент екранът е напълно празен <code>(empty)</code> <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+<li><strong>Визуални дефекти в оформлението (Layout Bugs):</strong> При софтуерното тестване често се срещат бъгове, при които текстът излиза извън границите на бутона (overflowing text). Дървото за достъпност докладва единствено, че бутонът съществува и съдържа съответния низ, без да отразява визуалното преливане, което може да бъде засечено само чрез оптичен анализ на екранната снимка <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>.</li>
+</ul>
+<p>Поради тези ограничения системата TREX на Greptile, която стартира промените от всеки pull request в реална десктоп среда за функционална верификация, внедрява хибридна архитектура: агентът работи с най-мощните мултимодални модели и анализира екранната снимка на всяка стъпка, но използва дървото за достъпност за надеждно кликване по ID там, където елементите са описани, и автоматично превключва към пикселни координати върху платна, игри или неописани компоненти <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>, <a href="https://www.greptile.com/blog/trex-code-execution">[5]</a>.</p>
+<p><img src="/articles/2026/11/23/greptile-llm-computer-use-screenshots-vs-accessibility-trees/infographic.png" alt="Четиристълбова инфографика: Как големите езикови модели виждат компютърния екран – сравнение между пикселни екранни снимки и дървета за достъпност в OSWorld"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Системни, архитектурни и макроикономически измерения на автономната визуална навигация</h2>
+<p>Емпиричният пробив между GPT-5.2 (15,8% само със снимки) и GPT-6.1 Sol (83,8% само със снимки) бележи фундаментална архитектурна трансформация в начина, по който изкуственият интелект взаимодейства със софтуерната инфраструктура. Този преход носи дълбоки системни и икономически последствия за цялата индустрия:</p>
+<h3>1. Краят на зависимостта от DOM/API обвивки и универсализация на RPA</h3>
+<p>В продължение на години автоматизацията на бизнес процеси (RPA) и ранните уеб агенти разчитаха на крехки селектори в DOM дървото или специализирани системни мостове като AT-SPI и UIAutomation. Всеки ъпдейт на потребителския интерфейс или преминаване към Canvas/WebGL рендериране чупеше автоматизираните пайплайни. Когато един модел достига близо 84% успеваемост в OSWorld само от сурови пиксели при ниско изчислително усилие, графичният потребителски интерфейс се превръща в универсален API. Това позволява на корпоративните агенти да управляват наследени (legacy) индустриални системи, Citrix терминали и виртуални машини без никаква модификация на целевия софтуер.</p>
+<h3>2. Икономическа стратификация между леки и водещи модели</h3>
+<p>Откритието на Greptile, че дървото за достъпност добавя до 37 процентни пункта при по-слабите модели, но не променя резултата при водещите архитектури, създава ясна инженерна дихотомия при оптимизацията на разходите. Разработчиците, които внедряват малки и евтини модели (от класа на GPT-5.4 nano или локални отворени модели) за високочестотни рутинни задачи, са задължени да поддържат сложни харнеси за извличане на AT-SPI/DOM дървета и инжектиране на ID маркери. Обратно, екипите, използващи водещи модели от класа на GPT-6.1 Sol, могат да опростят драстично агентния стек, спестявайки входни токени от огромните текстови дървета за достъпност и разчитайки на директна визуална регресия.</p>
+<h3>3. Автоматизираното QA тестване като ново тясно място в софтуерното инженерство</h3>
+<p>Както отбелязва екипът на Greptile, масовото навлизане на кодиращи агенти води до експоненциален ръст в обема на генерирания код и модификациите по потребителския интерфейс — обем, който никой човешки екип не може да тества ръчно преди сливане (merge) на кода <a href="https://www.greptile.com/blog/trex-computer-use">[1]</a>. Статичният преглед на кода (code review) улавя логически грешки в програмния diff, но е сляп за динамични дефекти по време на изпълнение (runtime UI bugs), като блокирани бутони или преливащи текстови етикети. Хибридните визуални агенти като TREX затварят този цикъл, превръщайки симулираното потребителско взаимодействие върху реален десктоп в задължителен автоматизиран етап от CI/CD конвейерите.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.greptile.com/blog/trex-computer-use">Ruban SK, &quot;How should an LLM see a computer?&quot;, Greptile Blog (19 ноември 2026 г.)</a></li>
+<li><a href="https://arxiv.org/abs/2404.07972">Tianbao Xie et al., &quot;OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments&quot;, arXiv:2404.07972 (2024 г.)</a></li>
+<li><a href="https://arxiv.org/abs/2504.07981">Kaixin Li et al., &quot;ScreenSpot-Pro: GUI Grounding for Professional High-Resolution Computer Use&quot;, arXiv:2504.07981 (2025 г.)</a></li>
+<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool">Anthropic Documentation, &quot;Computer use tool – Agents and Tools&quot;, Claude Platform Docs</a></li>
+<li><a href="https://www.greptile.com/blog/trex-code-execution">Greptile Engineering Blog, &quot;TREX: Code Execution and Desktop QA Automation&quot;</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/greptile.html">Greptile</a><p>Технологична компания, разработваща интелигентни агенти за разбиране на кодови бази, автоматизиран преглед на код и автономно функционално тестване на...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/gpt-4o.html">GPT-4o</a><p>GPT-4o („o“ като „omni“) е мултимодален модел с изкуствен интелект, разработен от OpenAI и представен през май 2024 г.</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/osworld.html">OSWorld</a><p>Стандартизиран мултимодален бенчмарк за оценка на автономни ИИ агенти при изпълнение на реални потребителски задачи в пълноценни операционни системи к...</p></li><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

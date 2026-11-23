@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Z.ai / The Decoder
+Китайската лаборатория за изкуствен интелект Z.ai (позната доскоро като Zhipu AI) официално представи новия си флагмански езиков модел GLM-5.4 със 750 милиарда параметъ..."><title>Z.ai следва OpenAI в ерата на цикличните трансформъри с новия си флагмански модел GLM-5.4 със 750 милиарда параметъра - Светни.ме</title><meta property="og:title" content="Z.ai следва OpenAI в ерата на цикличните трансформъри с новия си флагмански модел GLM-5.4 със 750 милиарда параметъра - Светни.ме"><meta property="og:description" content="Източник: Z.ai / The Decoder
+Китайската лаборатория за изкуствен интелект Z.ai (позната доскоро като Zhipu AI) официално представи новия си флагмански езиков модел GLM-5.4 със 750 милиарда параметъ..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/z-ai-glm-5-4-loop-transformer-750b/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/z-ai-glm-5-4-loop-transformer-750b/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Z.ai следва OpenAI в ерата на цикличните трансформъри с новия си флагмански модел GLM-5.4 със 750 милиарда параметъра</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/z-ai-glm-5-4-loop-transformer-750b/hero.png" alt="Логото на Z.ai (Zhipu AI) върху корпоративна стена"><br><small>Източник: Z.ai / The Decoder</small></p>
+<p>Китайската лаборатория за изкуствен интелект <a href="/pages/z-ai.html">Z.ai</a> (позната доскоро като Zhipu AI) официално представи новия си флагмански езиков модел <strong>GLM-5.4</strong> със 750 милиарда параметъра, изграден върху архитектура на цикличен трансформър (<em>loop transformer</em>) [1, 2]. Следвайки архитектурната посока, въведена от <a href="/pages/openai.html">OpenAI</a> още при фамилията GPT-6 Astra, новата разработка от серията <a href="/pages/glm.html">GLM</a> изоставя класическия еднократен линеен преход през невронните слоеве и изпълнява централен блок от 28 споделени слоя два пъти в рамките на един и същ изчислителен цикъл [1].</p>
+<p>Според техническата документация на Z.ai повторното преминаване през споделените тегла позволява на модела да прецизира междинните си репрезентации и да увеличи ефективната изчислителна дълбочина на мрежата без добавяне на нови параметри [1, 2]. По този начин система със 750 милиарда параметъра постига изчислителен капацитет и аналитична производителност, съпоставими с традиционни модели в диапазона от 2 до 3 трилиона параметъра — пряка конкуренция на мащабни системи като <a href="/pages/kimi.html">Kimi</a> K3.1 Pro (2,8 трилиона параметъра) и разработения от <a href="/pages/alibaba.html">Alibaba</a> модел <a href="/pages/qwen.html">Qwen</a> 3.8-Max (2,4 трилиона параметъра) [1]. Наред с архитектурния преход, Z.ai позиционира GLM-5.4 като отправна точка за концепцията „Обобщено програмиране&quot; (<em>Generalized Coding</em>), при която програмният код служи като универсален двигател за синтез на видеоклипове, музикални партитури, 3D игри и инженерни CAD чертежи [1, 2].</p>
+<h2>Архитектура с двойно преминаване, затихване с гейтове и споделен KV кеш</h2>
+<p>Вместо да обучава цикличен трансформър от нулата — подход, който според емпиричните изследвания на компанията отстъпва на стандартните модели с несподелени тегла при идентичен изчислителен бюджет — инженерният екип на Z.ai преобучава базовия модел GLM-5, пуснат през февруари 2026 г. под лиценз MIT [1, 2]. Структурно GLM-5.4 е разделен на три функционални зони: входна секция (<em>Prelude</em>) от 26 стандартни слоя, централно циклично ядро (<em>Loop Block</em>) от 28 слоя (слоеве от 27 до 54), което се изпълнява двукратно, и финална секция (<em>Coda</em>) от 24 слоя преди изходния модул (<em>LM Head</em>) [1].</p>
+<pre><code class="hljs language-mermaid"><span class="hljs-selector-tag">flowchart</span> <span class="hljs-selector-tag">LR</span>
+    <span class="hljs-selector-tag">A</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Входни токени&quot;</span>]</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">B</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Prelude&lt;br/&gt;(Слоеве 1–26)&quot;</span>]</span>
+    <span class="hljs-selector-tag">B</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">C</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Циклично ядро: Пасаж 1&lt;br/&gt;(Слоеве 27–54)&quot;</span>]</span>
+    <span class="hljs-selector-tag">C</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">D</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Damp Gates &amp;&lt;br/&gt;Споделен KV кеш&quot;</span>]</span>
+    <span class="hljs-selector-tag">D</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">E</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Циклично ядро: Пасаж 2&lt;br/&gt;(Слоеве 27–54)&quot;</span>]</span>
+    <span class="hljs-selector-tag">E</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">F</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;Coda&lt;br/&gt;(24 слоя)&quot;</span>]</span>
+    <span class="hljs-selector-tag">F</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">G</span><span class="hljs-selector-attr">[<span class="hljs-string">&quot;LM Head&lt;br/&gt;(Изход)&quot;</span>]</span>
+
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#1e293b</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#475569</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">B</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#0f172a</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#3b82f6</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">C</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#1e1b4b</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#6366f1</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">D</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#31102f</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#ec4899</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">E</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#1e1b4b</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#8b5cf6</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">F</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#0f172a</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#3b82f6</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span>
+    <span class="hljs-selector-tag">style</span> <span class="hljs-selector-tag">G</span> <span class="hljs-selector-tag">fill</span>:<span class="hljs-selector-id">#064e3b</span>,<span class="hljs-selector-tag">stroke</span>:<span class="hljs-selector-id">#10b981</span>,<span class="hljs-selector-tag">color</span>:<span class="hljs-selector-id">#f8fafc</span></code></pre><p>Преобразуването на предварително обучен трансформър в циклична мрежа създава сериозен математически проблем: ако моделът директно презаписва междинните състояния при всяко завъртане на цикъла, амплитудите на активациите нарастват рязко между итерациите и излизат извън числения обхват, върху който са калибрирани следващите слоеве [1]. За да стабилизира динамиката на сигнала, GLM-5.4 внедрява специализирани регулиращи гейтове (<em>Damp Gates</em>) за всеки отделен токен и за всеки пасаж [1, 2]:</p>
+<ul>
+<li><strong>Контролирано натрупване при първия пасаж:</strong> При първото преминаване през слоеве 27–54 гейтовете ограничават дела на новия изход, който се връща обратно в потока от данни, като моделът изгражда контекста предпазливо и се намесва по-силно единствено при семантично трудни токени [1].</li>
+<li><strong>Пълно записване при втория пасаж:</strong> При повторното преминаване през същите 28 слоя гейтовете позволяват пълно записване на прецизираните промени преди подаването на вектора към финалните 24 слоя от секцията <em>Coda</em> [1].</li>
+<li><strong>Споделен KV кеш с локален прозорец:</strong> Тъй като второто преминаване при стандартна имплементация би удвоило консумацията на оперативна видеопамет (VRAM), двата пасажа споделят един и същ глобален <em>Key-Value (KV)</em> кеш за вече обработените токени [1]. Вторият пасаж записва собствени допълнителни стойности само в малък локален прозорец, което поддържа минимален мемори овърхед спрямо предшественика GLM-5.3 дори при максимален контекстен прозорец от <strong>1 милион токена</strong> [1, 2].</li>
+<li><strong>Повторно използване на разредено внимание (Sparse Attention):</strong> За оптимизация на изчислителното време моделът прилага <em>sparse attention</em>, за да селектира най-релевантните предходни токени още при първия пасаж, след което вторият пасаж директно преизползва вече направената селекция вместо да сканира целия контекст отново [1]. Благодарение на тази оптимизация GLM-5.4 достига скорост на генериране до <strong>200 токена в секунда</strong> извън пиковите часове и между <strong>70 и 80 токена в секунда</strong> при високо натоварване [1].</li>
+</ul>
+<h2>Емпирични резултати при 30B тестовия модел и изместване на разсъжденията в латентното пространство</h2>
+<p>Преди да мащабира цикличната архитектура до флагманския размер от 750 милиарда параметъра, изследователският екип на Z.ai валидира хипотезата върху серия от модели с 1, 4, 30 и 750 милиарда параметъра [1]. Тъй като компанията все още не е публикувала пълни бенчмарк таблици за 750-милиардния вариант и липсват независими тестове от организации като Artificial Analysis, официалните количествени сравнения се базират на контролиран експеримент с <strong>30-милиарден тестов модел (30B)</strong> със същата архитектура [1, 2]. В този тест базовият и цикличният модел разполагат с напълно идентичен брой параметри, като цикличната версия е получила около 10% повече изчислителни ресурси по време на обучението [1].</p>
+<table>
+<thead>
+<tr>
+<th align="left">Бенчмарк</th>
+<th align="left">Област на оценяване</th>
+<th align="center">Базов 30B модел</th>
+<th align="center">Цикличен 30B модел (Loop)</th>
+<th align="center">Абсолютен ръст</th>
+<th align="center">Промяна в дължината на отговора</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>AIME25</strong></td>
+<td align="left">Състезателна математика</td>
+<td align="center">19,2 т.</td>
+<td align="center"><strong>30,4 т.</strong></td>
+<td align="center">+11,2 т.</td>
+<td align="center">-2,0% по-кратки</td>
+</tr>
+<tr>
+<td align="left"><strong>GPQA-Diamond</strong></td>
+<td align="left">Експертни научни въпроси</td>
+<td align="center">47,6 т.</td>
+<td align="center"><strong>56,3 т.</strong></td>
+<td align="center">+8,7 т.</td>
+<td align="center">-11,7% по-кратки</td>
+</tr>
+<tr>
+<td align="left"><strong>AA-LCR</strong></td>
+<td align="left">Разсъждения в дълъг контекст</td>
+<td align="center">40,3 т.</td>
+<td align="center"><strong>47,7 т.</strong></td>
+<td align="center">+7,4 т.</td>
+<td align="center">По-компактни</td>
+</tr>
+<tr>
+<td align="left"><strong>MMLU-Pro</strong></td>
+<td align="left">Енциклопедични знания</td>
+<td align="center">Базово ниво</td>
+<td align="center"><strong>+3,3 т. над базата</strong></td>
+<td align="center">+3,3 т.</td>
+<td align="center">-14,9% по-кратки</td>
+</tr>
+<tr>
+<td align="left"><strong>IFBench</strong></td>
+<td align="left">Следване на инструкции</td>
+<td align="center">Базово ниво</td>
+<td align="center"><strong>+3,3 т. над базата</strong></td>
+<td align="center">+3,3 т.</td>
+<td align="center">По-компактни</td>
+</tr>
+</tbody></table>
+<p>Резултатите разкриват фундаментален феномен: освен че цикличният модел изпреварва базовия във всички пет дисциплини — с най-драматичен скок при математическия тест <strong>AIME25</strong> (от 19,2 на 30,4 точки) и научния <strong>GPQA-Diamond</strong> (от 47,6 на 56,3 точки) — неговите изходни отговори стават значително по-кратки [1]. Дължината на генерирания текст намалява с <strong>14,9% при MMLU-Pro</strong> и с <strong>11,7% при GPQA-Diamond</strong> [1]. Обяснението на Z.ai е, че част от логическото разсъждение се изтегля от видимите изходни токени (<em>Chain-of-Thought</em>) обратно във вътрешната изчислителна дълбочина на двойния цикъл [1, 2].</p>
+<p>Въпреки това самата компания отбелязва, че най-слабото място на GLM-5.4 остават прекомерно дългите фази на верификация при сложни задачи, в които моделът понякога попада в цикъл на многократна самопроверка, макар това двойно проверяване да повишава крайната точност [1].</p>
+<h2>„Обобщено програмиране&quot; (Generalized Coding), отворени тегла и киберсигурност</h2>
+<p>С GLM-5.4 Z.ai въвежда доктрината за <strong>„Обобщено програмиране&quot; (<em>Generalized Coding</em>)</strong> — парадигма, според която генерирането на програмен код престава да бъде самоцел за софтуерната индустрия и се превръща в универсален междинен слой за създаване на мултимедия и физически обекти [1, 2]. В официалните демонстрации моделът използва програмен синтез, за да създаде:</p>
+<ol>
+<li><strong>Музикален видеоклип</strong> с оригинална партитура, композирана и синхронизирана чрез код от самия модел [1];</li>
+<li><strong>Шестосна роботизирана ръка</strong>, конструирана параметрично директно в средата с отворен код <strong>FreeCAD</strong> [1];</li>
+<li><strong>Завършена видеоигра</strong> с пълна игрова логика и интерактивен потребителски интерфейс [1];</li>
+<li><strong>Интерактивна 3D сцена</strong>, изградена изцяло чрез математическа геометрия и персонализирани графични шейдъри (<em>custom shaders</em>) [1].</li>
+</ol>
+<p>Към момента GLM-5.4 е достъпен през абонаментния план <strong>GLM Coding Plan</strong>, интегрираната среда за разработка <strong>ZCode</strong> и платформата <strong>Z.ai Chat</strong>, като пускането на публичен API интерфейс и ценообразуването за милион токени предстоят скоро [1]. Компанията потвърди намерението си да публикува теглата на модела с отворен достъп (<em>open weights</em>), но само след приключване на допълнителни одити за безопасност — предпазна мярка, продиктувана от опита с предходния модел GLM-5.3 [1]. При GLM-5.3 Z.ai забави освобождаването на теглата заради високата му ефективност при откриване на софтуерни уязвимости, а впоследствие изследователи от <a href="/pages/anthropic.html">Anthropic</a> установиха, че GLM-5.3 може автономно да конструира работещи експлойти почти на нивото на техния вътрешен модел Claude Mythos Preview [1]. Наред с това Z.ai анонсира, че в близко бъдеще ще представи и още по-мащабен модел над 750-милиардния клас [1].</p>
+<h2>Системен и макроикономически анализ: Преходът от параметрично разширяване към рекурентна изчислителна дълбочина</h2>
+<p>Въвеждането на циклична трансформърна архитектура във флагмански модел от ранга на GLM-5.4 бележи ключов структурен завой в еволюцията на големите езикови модели през 2026 г. Идеята за споделяне на слоеве датира още от архитектурата <em>Universal Transformer</em> (2018 г.), но едва през последните месеци тя се превърна в индустриален консенсус сред водещите лаборатории [1]. След като OpenAI внедри рекурентни слоеве в GPT-6 Astra, а стартъпът <a href="/pages/thinking-machines.html">Thinking Machines</a> демонстрира компактния цикличен модел <strong>Inkling 2 Mini</strong>, способен да работи локално на лаптопи Mac с 32 GB RAM и да решава задачи с по-малко думи, ходът на Z.ai доказва, че цикличната архитектура работи ефективно и в хипермащабния сегмент от 750 милиарда параметъра [1].</p>
+<p>Зад този архитектурен избор стои фундаменталният компромис между <strong>капацитет на паметта</strong> и <strong>изчислителна дълбочина на мислене</strong>, формулиран от изследователи в Бон през март 2026 г.: докато фактологичните ежедневни знания изискват огромен брой уникални параметри (памет), математическото и алгоритмичното разсъждение се нуждаят преди всичко от по-голяма последователна дълбочина на изчислението [1]. Това поражда четири дългосрочни системни ефекта върху AI индустрията:</p>
+<ul>
+<li><strong>Разчупване на стената на паметта (Memory Wall) при инференция:</strong> Модели от класа на Kimi K3.1 Pro (2,8T) и Qwen3.8-Max (2,4T) изискват огромни клъстери от взаимосвързани ускорители само за да държат теглата си във високоскоростната HBM памет [1]. Чрез двукратно преминаване през 28 споделени слоя и споделен KV кеш GLM-5.4 заменя скъпия обем памет с допълнителни аритметични операции (FLOPs) върху вече заредени в кеша на процесора тегла. В условията на геополитически ограничения върху износа на чипове с висока пропускателна способност на паметта за Китай, тази архитектурна оптимизация дава на китайските лаборатории критичен лост за постигане на 2–3T производителност върху хардуерна инфраструктура за 750B модел.</li>
+<li><strong>От токенизирано към латентно верижно разсъждение (Latent Reasoning):</strong> През 2024–2025 г. основният метод за повишаване на интелигентността при инференция беше генерирането на десетки хиляди междинни текстови токени (<em>test-time compute</em>). Свиването на дължината на отговорите с до 14,9% при цикличния модел на Z.ai показва, че част от тези разсъждения могат да се извършват много по-ефективно в непрекъснатото векторно пространство между слоевете, вместо да се декодират обратно до дискретни думи при всяка стъпка [1]. Това намалява латентността за крайния потребител и понижава разходите за контекстен кеш.</li>
+<li><strong>Кодът като универсален компилатор на физическата и дигиталната реалност:</strong> Концепцията за <em>Generalized Coding</em> показва защо Z.ai инвестира именно в циклична дълбочина. Когато един модел проектира 6-осна роботизирана ръка във FreeCAD или пише геометрични шейдъри, той не се нуждае от енциклопедично запаметяване на милиарди тривиални факти, а от прецизна пространствено-математическа верификация — точно областта, в която цикличната архитектура бележи ръст от над 58% (от 19,2 на 30,4 точки в AIME25) [1].</li>
+<li><strong>Асиметричен риск в киберсигурността при модели с отворени тегла:</strong> Съчетаването на по-дълбоко алгоритмично мислене с планираното освобождаване на теглата изостря дилемата около сигурността на отворения код. След като Anthropic вече потвърди, че предходният GLM-5.3 почти се изравнява с Claude Mythos Preview при автономното изграждане на софтуерни експлойти, един модел с многократно по-висока математическа и кодова прецизност като GLM-5.4 неминуемо ще премине през безпрецедентно строг режим на червено тестване (<em>red-teaming</em>) преди каквото и да е публично разпространение на неговите тегла [1].</li>
+</ul>
+<p><img src="/articles/2026/11/23/z-ai-glm-5-4-loop-transformer-750b/infographic.png" alt="Инфографика: Архитектура и ключови показатели на цикличния трансформър Z.ai GLM-5.4"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><strong>The Decoder</strong> — <a href="https://the-decoder.com/z-ai-follows-openai-into-loop-transformer-territory-with-its-new-750b-flagship-model/">Z.ai follows OpenAI into loop transformer territory with its new 750B flagship model</a> <em>(Jonathan Kemper, 23 ноември 2026 г.)</em></li>
+<li><strong>Z.ai Technical Blog</strong> — <a href="https://z.ai/blog/glm-5.4">GLM-5.4: Loop Transformer Architecture and Generalized Coding</a> <em>(Официален технически анонс на Z.ai, ноември 2026 г.)</em></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/z-ai.html">Z.ai</a><p>Z.</p></li><li><a href="/pages/glm.html">GLM (Zhipu AI)</a><p>GLM (General Language Model) е семейство от авангардни базови езикови и мултимодални модели, разработени от китайската изследователска лаборатория Zhi...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/thinking-machines.html">Thinking Machines</a><p>Thinking Machines разработва съвременни компактни езикови модели с фокус върху математическото разсъждение и алгоритмичната ефективност.</p></li><li><a href="/pages/kimi.html">Kimi</a><p>Семейство от големи езикови модели с отворени тегла и дълъг контекст, разработени от Moonshot AI за сложни задачи по програмиране и логическо разсъжде...</p></li><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Dragos / BleepingComputer
+Брокерът за модели с изкуствен интелект OpenRouter премахна трима доставчици на инференция от своята платформа, след като мащабно разследване разкри, че те са на..."><title>OpenRouter отстрани трима доставчици на AI инференция заради изтекли промптове и криптографски тайни - Светни.ме</title><meta property="og:title" content="OpenRouter отстрани трима доставчици на AI инференция заради изтекли промптове и криптографски тайни - Светни.ме"><meta property="og:description" content="Източник: Dragos / BleepingComputer
+Брокерът за модели с изкуствен интелект OpenRouter премахна трима доставчици на инференция от своята платформа, след като мащабно разследване разкри, че те са на..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/23/openrouter-drops-ai-providers-leaked-prompts-secrets/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/23/openrouter-drops-ai-providers-leaked-prompts-secrets/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenRouter отстрани трима доставчици на AI инференция заради изтекли промптове и криптографски тайни</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->23 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/23/openrouter-drops-ai-providers-leaked-prompts-secrets/hero.png" alt="Диаграма на Dragos за неправомерно повторно използване на изтекли AWS ключове през AI доставчици"><br><small>Източник: Dragos / BleepingComputer</small></p>
+<p>Брокерът за модели с изкуствен интелект <a href="/pages/openrouter.html">OpenRouter</a> премахна трима доставчици на инференция от своята платформа, след като мащабно разследване разкри, че те са нарушили декларираните политики за обработка на данни и са допуснали изтичане на потребителски промптове и чувствителни криптографски тайни [1], [3]. Като превантивна мярка компанията отне статута за нулево задържане на данни (Zero Data Retention – ZDR) за общо 125 крайни точки (endpoints) и изпрати известия до всички потенциално засегнати корпоративни клиенти и разработчици [1], [3].</p>
+<p>Инцидентът, разкрит след целенасочен одит на веригата за доставки от компанията за индустриална киберсигурност <a href="/pages/dragos.html">Dragos</a>, засяга инфраструктурните доставчици <a href="/pages/together-ai.html">Together AI</a>, Phala и Novita, докато четвърти оператор – Atlas Cloud – доброволно изтегли своите модели от платформата за провеждане на независими тестове за сигурност [1], [2], [3]. Разкритията поставят под сериозно съмнение досегашния модел на доверие при агрегаторите на големи езикови модели (LLM), където заявките на приложенията се маршрутизират динамично към множество външни изчислителни клъстери чрез единен API ключ [1].</p>
+<h2>Разследването на Dragos: два милиона тестови промпта и „канарчета“ във веригата на доставки</h2>
+<p>OpenRouter функционира като унифициран посредник (model broker), който позволява на софтуерните екипи да изпращат заявки към модели от различни лаборатории през единна програмна точка, а платформата пренасочва трафика към избрания доставчик на хардуерна инференция и връща генерирания отговор [1]. За да провери дали доставчиците зад този абстрактен слой спазват ангажиментите си за поверителност, изследователският екип на Dragos провежда мащабен експеримент, изпращайки два милиона тестови промпта през инфраструктурата на OpenRouter [1], [2].</p>
+<p>Всеки от тези два милиона промпта е съдържал уникален проследяващ линк или примамка под формата на фалшив идентификационен токен (canary token / decoy credential) [1], [2]. Резултатите от телеметрията на Dragos показват не просто пасивно логване на данните в нарушение на политиките, а активно изтичане на съдържанието към външни неавторизирани лица, които впоследствие са се опитали да използват прихванатите ключове в реална среда [1], [2].</p>
+<blockquote>
+<p>„Наблюдавахме активност, показваща, че данни от поне трима доставчици на изкуствен интелект са били компрометирани. Нашите предварително подготвени тестови промптове бяха използвани при опити за достъп до контролираните ни тестови системи и примамващи (canary) акаунти в <a href="/pages/aws.html">Amazon Web Services (AWS)</a>“, съобщават от Dragos в своя технически доклад [1], [2].</p>
+</blockquote>
+<p>След получаване на сигнала OpenRouter извършва вътрешен одит и потвърждава, че собствените му маршрутизиращи сървъри не са били обект на пробив [1], [3]. Това локализира точката на компрометиране изцяло на нивото на крайните доставчици на инференция и води до незабавното отстраняване на Together AI, Phala и Novita от маршрутизиращата мрежа [1], [3].</p>
+<h2>Анатомия на трите пробива: Together AI, Phala и Novita</h2>
+<p>След публикуването на констатациите на Dragos засегнатите доставчици проведоха собствени криминалистични разследвания и публикуваха отделни бюлетини за сигурност, които разкриват три фундаментално различни вектора на пробив [1]:</p>
+<ul>
+<li><strong>Together AI – компрометиране чрез AI агент за програмиране в GitHub:</strong> Компанията разкри, че използван вътрешно AI агент за писане на код случайно е експонирал идентификационен ключ за хранилище в публичната платформа <a href="/pages/github.html">GitHub</a> [1], [4]. Този пропуск е позволил на неавторизирана трета страна да изтегли съхранени извадки от потребителски промптове, записани през юни и юли 2026 г. Засегнатите логове са включвали трафик към моделите <strong><a href="/pages/minimax.html">MiniMax</a> M3</strong>, <strong>GLM-5.2</strong> и <strong>Kimi K2.6</strong> [1], [4]. Случаят демонстрира двоен провал: първо, нерегламентирано съхранение на промпт извадки, и второ, рекурсивна уязвимост, при която автономен AI инструмент изнася секретни ключове на самия AI доставчик.</li>
+<li><strong>Phala – директен пробив във виртуални машини за инференция:</strong> Според предварителния доклад на Phala външен нападател е компрометирал сървър, обработващ заявки към модела <strong><a href="/pages/deepseek.html">DeepSeek</a> V4 Flash 0731</strong>, маршрутизирани през OpenRouter [1], [5]. Пробивът е започнал между 21 и 22 октомври 2026 г. и потенциално е продължил до 8 ноември 2026 г., като атакуващият е успял да извлече приложни идентификационни данни директно от засегнатите виртуални машини [1], [5].</li>
+<li><strong>Novita – скрито пренасочване на трафик поради грешна конфигурация:</strong> При Novita изтичането на данни е резултат от дефект в маршрутизиращата конфигурация (routing misconfiguration) [1], [6]. В периода от 28 май до 11 ноември 2026 г. част от заявките към модели на MiniMax – включително тези, изпратени от клиенти на OpenRouter – са били препращани директно към официалния публичен API на MiniMax, вместо да бъдат обработени в изолираната среда на доставчика [1], [6]. По този начин промптовете са напуснали договорената граница на доверие за период от над пет месеца.</li>
+<li><strong>Atlas Cloud – превантивно оттегляне след инцидент при трета страна:</strong> Макар да не е сред тримата принудително отстранени оператори, Atlas Cloud обяви, че доброволно изтегля своите модели от OpenRouter до приключване на пълни тестове за сигурност след отделен инцидент при външен подизпълнител [1], [7].</li>
+</ul>
+<h2>Отнемане на статута за нулево задържане на данни (ZDR) за 125 крайни точки</h2>
+<p>За корпоративните клиенти най-критичният елемент от инцидента е ударът върху гаранциите за нулево задържане на данни (Zero Data Retention – ZDR). В корпоративните AI интеграции ZDR режимът гарантира, че доставчикът на инференция обработва входните токени единствено в оперативната памет (RAM/VRAM) по време на генерацията и не записва промптовете или отговорите на дискови масиви за одит, телеметрия или дообучение.</p>
+<p>След като одитът на Dragos доказва, че декларираните от доставчиците ZDR политики не съответстват на реалното им оперативно поведение, OpenRouter предприема радикална стъпка: превантивно отнема ZDR сертификацията на <strong>125 крайни точки</strong> в своята платформа [1], [3]. Компанията обяви, че адаптира методологията на Dragos с примамващи промптове (canary testing) за постоянен автоматизиран мониторинг [1], [3]. В бъдеще всеки доставчик на инференция ще бъде подлаган на непрекъснати активни проверки дали препраща или записва потребителски заявки, като възстановяването на ZDR статута ще изисква преминаване през строга техническа валидация [1], [3].</p>
+<p>Всички четири засегнати компании – Together AI, Phala, Novita и Atlas Cloud – заявиха, че затягат вътрешните си контроли за достъп, преработват механизмите си за изтриване на данни и официално съветват потенциално засегнатите потребители незабавно да ротират всички API ключове, пароли и криптографски тайни, които може да са били включени в контекста на изпратените промптове [1].</p>
+<h2>Архитектурни и системни измерения: краят на сляпото доверие към AI брокерите</h2>
+<p>Разкритията около OpenRouter и проучването на Dragos бележат повратна точка в архитектурата за киберсигурност на корпоративния изкуствен интелект. До момента пазарът на LLM агрегатори и инференция на модели с отворени тегла (като DeepSeek V4 Flash, MiniMax M3, GLM-5.2 и Kimi K2.6) се развиваше върху презумпцията за договорно съответствие: ако даден брокер маркира определена крайна точка като съвместима със ZDR, софтуерните архитекти приемаха за даденост, че трафикът е защитен от записване и странично изтичане.</p>
+<p>Експериментът с двата милиона „канарчета“ разрушава тази илюзия по три системни причини:</p>
+<ol>
+<li><strong>Проблемът с верижното пренасочване (Nested Sub-Routing):</strong> Както показва случаят с Novita и препращането на заявки към официалния API на MiniMax в продължение на близо половин година [1], [6], в екосистемата на AI инференцията често съществува скрит арбитраж на капацитет. Когато даден доставчик изпита недостиг на собствени GPU ресурси или конфигурира неправилно своите прокси сървъри, той може прозрачно да прехвърли заявката към четвърта страна. За крайния клиент това означава пълна загуба на видимост върху юрисдикцията и физическата инфраструктура, през която преминава корпоративният му код.</li>
+<li><strong>Рекурсивният риск от AI агенти за разработка:</strong> Пробивът в Together AI, предизвикан от AI агент за програмиране, който публикува вътрешен ключ в GitHub [1], [4], е емблематичен за новата ера на софтуерните уязвимости. Доставчиците на AI инфраструктура са сред най-агресивните внедрители на автономни агенти за кодиране и автоматизация на DevOps процеси. Когато тези агенти разполагат с достъп до продукционни хранилища и логове за отстраняване на грешки (debug prompt samples), всяка грешка на агента води до компрометиране на данните на хиляди клиенти надолу по веригата.</li>
+<li><strong>Необходимост от криптографска верификация и DLP филтриране при клиента:</strong> Инцидентът доказва, че текстовите флагове за ZDR в API заявките не представляват контрол за сигурност. За организациите, които използват мулти-моделни брокери като OpenRouter за автоматизация на програмирането, анализ на логове или обработка на документи, единствената устойчива защита изисква двуслоен архитектурен подход. В краткосрочен план това налага задължителни локални шлюзове за предотвратяване на изтичане на данни (Data Loss Prevention / Secret Scanning proxies), които автоматично идентифицират и маскират AWS ключове, токени и вътрешни URL адреси <em>преди</em> промптът да напусне периметъра на компанията. В дългосрочен план индустрията на AI брокерите ще бъде принудена да премине от договорни обещания към хардуерно изолирани среди за доверително изпълнение (Trusted Execution Environments – TEE) на ниво GPU с криптографска дистанционна атестация, доказваща математически, че паметта на инференционния възел е недостъпна дори за администраторите на хостинг доставчика.</li>
+</ol>
+<p><img src="/articles/2026/11/23/openrouter-drops-ai-providers-leaked-prompts-secrets/infographic.png" alt="Инфографика: Анализ на пробивите при доставчиците на OpenRouter и мерките за ZDR сигурност"><br><small>Източник: Светни.ме – Архитектурен анализ на инцидента с OpenRouter и одита на Dragos</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/">BleepingComputer – OpenRouter drops AI providers over leaked prompts and secrets</a></li>
+<li><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens">Dragos – AI Supply Chain Security and Canary Tokens</a></li>
+<li><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/">OpenRouter – Data Processing Incidents on Inference Providers</a></li>
+<li><a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026">Together AI – Security Event: Prompt Leakage for Requests in June and July of 2026</a></li>
+<li><a href="https://phala.com/posts/phala-november-preliminary-incident-report">Phala – November Preliminary Incident Report</a></li>
+<li><a href="https://novita.ai/blog/minimax-requests-privacy-notice/">Novita – MiniMax Requests Privacy Notice</a></li>
+<li><a href="https://www.atlascloud.ai/blog/ai-updates/security-and-privacy-commitment">Atlas Cloud – Security and Privacy Commitment</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openrouter.html">OpenRouter</a><p>OpenRouter е агрегатор на интерфейси за програмиране на приложения (API) за модели с изкуствен интелект.</p></li><li><a href="/pages/dragos.html">Dragos</a><p>Dragos е водеща компания в сферата на киберсигурността, специализирана в защитата на индустриални системи за управление (ICS) и критична инфраструктур...</p></li><li><a href="/pages/together-ai.html">Together AI</a><p>Together AI е облачна платформа за изкуствен интелект, която предоставя инфраструктура за обучение, фино настройване и инференция на големи езикови мо...</p></li><li><a href="/pages/deepseek.html">DeepSeek</a><p>DeepSeek е водеща китайска компания за изкуствен интелект, известна със своя фокус върху изключителната изчислителна ефективност и ангажимента си към ...</p></li><li><a href="/pages/minimax.html">MiniMax</a><p>MiniMax (официално MiniMax AI) е китайска компания за изкуствен интелект, основана през 2021 г.</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/aws.html">AWS (Amazon Web Services)</a><p>Amazon Web Services (AWS) е най-всеобхватната и широко приета облачна платформа в света, предлагаща над 200 напълно функционални услуги от центрове за...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
