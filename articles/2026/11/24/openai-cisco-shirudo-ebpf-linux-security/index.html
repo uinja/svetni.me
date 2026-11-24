@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / OpenAI &amp;amp; Cisco
+OpenAI и Cisco официално представиха Shirudo – нов инструмент за киберсигурност с отворен код, създаден да защитава необновени Linux системи от актив..."><title>OpenAI и Cisco представиха Shirudo: Инструмент с отворен код, който защитава необновени Linux системи чрез AI и eBPF - Светни.ме</title><meta property="og:title" content="OpenAI и Cisco представиха Shirudo: Инструмент с отворен код, който защитава необновени Linux системи чрез AI и eBPF - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / OpenAI &amp;amp; Cisco
+OpenAI и Cisco официално представиха Shirudo – нов инструмент за киберсигурност с отворен код, създаден да защитава необновени Linux системи от актив..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/24/openai-cisco-shirudo-ebpf-linux-security/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/24/openai-cisco-shirudo-ebpf-linux-security/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>OpenAI и Cisco представиха Shirudo: Инструмент с отворен код, който защитава необновени Linux системи чрез AI и eBPF</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/24/openai-cisco-shirudo-ebpf-linux-security/hero.png" alt="Shirudo - защита на Linux системи в реално време чрез AI и eBPF"><br><small>Източник: BleepingComputer / OpenAI &amp; Cisco</small></p>
+<p><a href="/pages/openai.html">OpenAI</a> и <a href="/pages/cisco.html">Cisco</a> официално представиха <a href="/pages/shirudo.html">Shirudo</a> – нов инструмент за киберсигурност с отворен код, създаден да защитава необновени <a href="/pages/linux.html">Linux</a> системи от активно експлоатиране на уязвимости в реално време [1][2]. Разработката позволява на системните администратори да внедряват временни защитни механизми в работна среда (runtime), които блокират опитите за пробив без необходимост от рестартиране на критични услуги, докато екипите подготвят, тестват и валидират официалните софтуерни кръпки [1].</p>
+<p>Проектът е реализиран с участието на инженерите от <a href="/pages/isovalent.html">Isovalent</a> – специализираната в облачни мрежи и сигурност компания, която Cisco придоби през 2024 г. [1][2]. Чрез комбиниране на системната технология <a href="/pages/ebpf.html">eBPF</a> (extended Berkeley Packet Filter) с автономни AI агенти, Shirudo адресира един от най-опасните прозорци на уязвимост в съвременната корпоративна инфраструктура: периода между публичното оповестяване на даден експлойт и безопасното инсталиране на актуализация в продукционни клъстери [1][2].</p>
+<h2>Архитектура на „щитовете“: От Tetragon към агентна контролна равнина</h2>
+<p>В основата си Shirudo представлява цялостно пренаписване на Tetragon – популярната платформа с отворен код за сигурност в реално време, която Isovalent представи през 2022 г. и която служи за фундамент на комерсиалната технология Live Protect на Cisco [1][2]. Докато Tetragon беше проектиран основно за класическо наблюдение и статично прилагане на политики, Shirudo е изграден от нулата около <strong>агентна контролна равнина (agentic control plane)</strong> с конфигурируема степен на автономност при генерирането и внедряването на защити [1][2].</p>
+<p>Инструментът използва eBPF подсистемата в ядрото на Linux, за да стартира изолирани програми в контролирана среда директно в ядрото, без да променя неговия изходен код и без да изисква зареждане на традиционни модули на ядрото или рестартиране на операционната система [1]. Вместо да разчита на постоянно работещ фонов демон (daemon) върху целевата машина, Shirudo може да бъде активиран директно през интерфейс на командния ред (CLI), като зарежда целеви защитни правила, наречени <strong>„щитове“ (shields)</strong> [1][2].</p>
+<p>Освен на ниво ядро чрез eBPF, архитектурата на Shirudo има способността да модифицира байткода на приложенията в потребителското пространство (userspace runtime bytecode) [1][2]. Това разширява обхвата на инструмента отвъд системните извиквания и мрежовите пакети, позволявайки хирургическо прекъсване на уязвими кодови пътища вътре в самите интерпретирани или компилирани в байткод среди (като JVM) [1][2].</p>
+<p>OpenAI дефинира четири основни функционални стълба на платформата [1]:</p>
+<ul>
+<li><strong>Защита на живо без прекъсване (Live protection):</strong> Блокира специфични уязвими пътища на изпълнение на кода без рестартиране на сървърите. Операторите могат първоначално да стартират щитовете в режим на телеметрия, за да оценят потенциалното им въздействие върху легитимния трафик и да следят броя на засечените опити за атака (<code>hit counts</code>), преди да активират принудително блокиране [1].</li>
+<li><strong>AI-асистирана отбрана (AI-assisted defense):</strong> Позволява на специализирани AI агенти автоматично да анализират новооткрити уязвимости, да синтезират съответните eBPF/байткод щитове и да тестват тяхната ефективност в изолирана среда, докато финалното решение за внедряване в продукция остава под човешки контрол [1].</li>
+<li><strong>Доверено разпространение и внедряване (Trusted deployment):</strong> Щитовете се пакетират и разпространяват като криптографски подписани артефакти с разширение <code>.bee</code> чрез стандартни OCI (Open Container Initiative) регистри [1][2]. При зареждане те преминават през вградения верификатор на eBPF в Linux ядрото и криптографска проверка срещу неоторизирани модификации [1].</li>
+<li><strong>Хардуерно обезпечена верификация (Hardware-backed verification):</strong> Системата използва хардуерни модули за доверие (Trusted Platform Modules – TPM), за да записва криптографски доказуеми одитни следи за всеки зареден или премахнат щит върху хоста [1].</li>
+</ul>
+<h2>Практическа валидация срещу Java4Shell и дебатът за AI в ядрото</h2>
+<p>За да демонстрират ефективността на подхода в реални условия, изследователите от OpenAI и Cisco са тествали автоматично генерирани щитове срещу активен опит за експлоатация на критичната уязвимост <strong>Java4Shell</strong> върху работеща инстанция на Elasticsearch [1]. Според публикуваните данни Shirudo успешно е прихванал и блокирал злонамерения полезен товар в паметта, без да прекъсва нормалната работа на търсещата машина и без да налага рестартиране на процеса [1].</p>
+<p>Въпреки успешната демонстрация, идеята за допускане на код, генериран от изкуствен интелект, до най-привилегирования слой на операционната система предизвика предпазливи реакции сред водещи експерти по киберсигурност [1]. Маркъс Хътчинс (известен в индустрията като MalwareTech), главен изследовател на заплахите в компанията за управлявано засичане и реакция (MDR) Expel, подчерта, че макар eBPF действително да притежава огромен потенциал за смекчаване на експлойти в реално време, предоставянето на възможност на AI агенти да пишат правила, влияещи върху ядрото, крие сериозни оперативни рискове [1]. Хътчинс също така отбеляза, че приложимостта на Shirudo остава строго ограничена до Linux екосистемата, тъй като Windows и macOS все още не разполагат с еквивалентни по зрялост компоненти в ядрото за подобна динамична инструментация [1].</p>
+<p>От своя страна OpenAI и Cisco планират да минимизират риска от халюцинации или нестабилни правила, като публикуват предварително тествани и криптографски подписани <code>.bee</code> щитове паралелно с официалните разкрития на нови уязвимости (CVE) [1][2]. Shirudo вече е достъпен като проект с отворен код под двоен лиценз (BSD + GPL) в GitHub [3], придружен от техническа документация и интерактивни лабораторни среди от Isovalent, а на 15 декември OpenAI ще проведе специализиран технически уебинар за дълбоката интеграция между eBPF и агентните модели [1][2].</p>
+<h2>Системни, архитектурни и макроикономически импликации за киберсигурността</h2>
+<p>Появата на Shirudo бележи фундаментален преход в архитектурата на защитата на корпоративната инфраструктура – преминаване от реактивно управление на кръпки (patch management) към <strong>програмируема, автономна имунна система на ниво ядро</strong>. В продължение на десетилетия индустрията за киберсигурност функционираше в структурна асиметрия: след публикуването на критична уязвимост (Zero-Day или N-Day), атакуващите се нуждаят само от минути или часове, за да автоматизират експлойта, докато корпоративните екипи се нуждаят от дни или седмици за регресионни тестове, планиране на прозорци за профилактика и рестартиране на критични системи с висока достъпност (High Availability). С навлизането на генеративния AI тази асиметрия се изостри критично, тъй като големите езикови модели драстично ускориха обратното инженерство на пачове и синтеза на експлойти.</p>
+<p>Архитектурният отговор, който OpenAI и Cisco предлагат със Shirudo, пренася концепцията за „виртуално пачване“ (virtual patching) от периферията на мрежата (WAF и IPS защитни стени) директно в системното ядро и байткода на приложенията. Мрежовите WAF решения често са слепи за контекста на изпълнение или биват заобиколени чрез обфускация на протоколите, докато един eBPF щит оперира точно в точката на системното извикване или функцията в паметта, където уязвимостта се проявява. Въвеждането на <code>.bee</code> пакети, разпространявани през OCI регистри и обвързани с TPM хардуерна атестация, създава изцяло нова верига за доставки на микро-защити (micro-mitigation supply chain), която третира временните защитни политики със същата криптографска строгост, каквато се прилага към контейнерните образи.</p>
+<p>На системно и макроикономическо ниво обаче този модел очертава три дългосрочни трансформации и рискови вектора:</p>
+<ol>
+<li><strong>Конвергенция между AI лаборатории и доставчици на мрежово/системно ядро:</strong> Партньорството между OpenAI и Cisco (чрез Isovalent) показва, че водещите AI лаборатории вече не разглеждат моделите си само като чатботове или генератори на приложен код, а като активна работна сила (agentic workforce) за системно инженерство. Икономическата стойност на облачната сигурност се измества към платформи, които могат да преведат неструктурирано описание на CVE уязвимост директно във формално верифициран eBPF байткод за секунди.</li>
+<li><strong>Парадоксът на верификацията в ядрото:</strong> Макар вграденият eBPF верификатор в Linux да гарантира, че дадена програма няма да предизвика срив на ядрото (kernel panic) или безкраен цикъл, той не може да гарантира семантичната правилност на бизнес логиката. Ако един AI агент генерира прекалено агресивен щит в сложна микросервизна среда, той може да предизвика тихо отказване на услуга (denial-of-service) за легитимни трансакции. Затова разделението между автономно генериране/тестване и задължително човешко одобрение (human-in-the-loop), подкрепено от наблюдаеми метрики (<code>hit counts</code>), ще бъде решаващият регулаторен и оперативен стандарт.</li>
+<li><strong>Разширяване на стратегическата пропаст между Linux и затворените ОС:</strong> Тъй като eBPF е първокласен гражданин единствено в Linux ядрото (докато проектът eBPF for Windows на Microsoft остава с по-ограничен обхват), инструменти като Shirudo допълнително затвърждават хегемонията на Linux като единствената платформа, способна да поддържа самозащитаваща се (self-defending) инфраструктура, в която приложенията и защитните AI агенти съжителстват директно на ниво операционна система.</li>
+</ol>
+<p><img src="/articles/2026/11/24/openai-cisco-shirudo-ebpf-linux-security/infographic.png" alt="Инфографика: Архитектура и основни стълбове на Shirudo"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/">BleepingComputer – New Shirudo tool uses AI to shield unpatched Linux systems from exploits (Bill Toulas)</a></li>
+<li><a href="https://isovalent.com/blog/post/cisco-openai-shirudo/">Isovalent Blog – Cisco and OpenAI Launch Shirudo: Agentic eBPF Runtime Security</a></li>
+<li><a href="https://github.com/shirudo-dev/shirudo">GitHub – shirudo-dev/shirudo Open-Source Repository (BSD + GPL)</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/cisco.html">Cisco</a><p>Cisco (Cisco Systems, Inc.</p></li><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li><li><a href="/pages/ebpf.html">eBPF (Extended Berkeley Packet Filter)</a><p>eBPF (Extended Berkeley Packet Filter) е технология в ядрото на Linux, която позволява изпълнението на безопасни програми в защитена среда (sandbox) д...</p></li><li><a href="/pages/isovalent.html">Isovalent</a><p>Компания за облачни мрежи и сигурност с отворен код, създател на Cilium и Tetragon, придобита от Cisco през 2024 г.</p></li><li><a href="/pages/shirudo.html">Shirudo</a><p>Инструмент с отворен код на OpenAI и Cisco за динамична защита на Linux системи в реално време чрез eBPF и AI агенти.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

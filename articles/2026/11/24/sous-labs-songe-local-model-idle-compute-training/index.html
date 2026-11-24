@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Sous Labs / GitHub
+Един от фундаменталните структурни недостатъци на съвременните локални големи езикови модели (LLM) е тяхната статичност след компилиране и квантизация: дори когато прог..."><title>Songe на Sous Labs: Непрекъснато обучение на локални езикови модели чрез свободен изчислителен ресурс - Светни.ме</title><meta property="og:title" content="Songe на Sous Labs: Непрекъснато обучение на локални езикови модели чрез свободен изчислителен ресурс - Светни.ме"><meta property="og:description" content="Източник: Sous Labs / GitHub
+Един от фундаменталните структурни недостатъци на съвременните локални големи езикови модели (LLM) е тяхната статичност след компилиране и квантизация: дори когато прог..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/24/sous-labs-songe-local-model-idle-compute-training/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/24/sous-labs-songe-local-model-idle-compute-training/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Songe на Sous Labs: Непрекъснато обучение на локални езикови модели чрез свободен изчислителен ресурс</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/24/sous-labs-songe-local-model-idle-compute-training/hero.png" alt="Songe – двигател за локално обучение на езикови модели"><br><small>Източник: Sous Labs / GitHub</small></p>
+<p>Един от фундаменталните структурни недостатъци на съвременните локални големи езикови модели (LLM) е тяхната статичност след компилиране и квантизация: дори когато програмистът коригира едни и същи грешки при извикване на инструменти или многократно уточнява специфични архитектурни конвенции, базовият модел започва всяка нова сесия без трайна памет в теглата си. Разработчиците от <a href="/pages/sous-labs.html">Sous Labs</a> адресират този проблем чрез публикуването на <a href="/pages/songe.html">Songe</a> — двигател с отворен код под лиценз Apache-2.0, който използва свободния изчислителен капацитет на работната станция (idle compute), за да обучава и адаптира локалния модел на базата на реалните взаимодействия с потребителя [1].</p>
+<p>Инструментът е проектиран да функционира напълно автономно и локално, без облачна телеметрия, външни акаунти или изнасяне на чувствителен програмен код извън машината. Докато потребителят работи със своя агент, Songe записва резултатите от изпълнението на инструменти, възникналите грешки и последващите корекции, а в периодите на неактивност трансформира тези наблюдения в синтетични тренировъчни сценарии и адаптери с нисък ранг [1].</p>
+<h2>Прокси архитектура и прозрачно прихващане на агентния трафик</h2>
+<p>Вместо да изисква модификация на клиентските приложения или пренаписване на сървърите за инференция, Songe се внедрява като прозрачен локален прокси слой на адрес <code>127.0.0.1:7613</code> [1]. При първоначална инициализация чрез командата <code>songe init</code> системата автоматично сканира локалната среда за активни сървъри на модели и регистрира управлявани крайни точки в конфигурацията на популярни терминални агенти като <code>opencode</code> и <code>pi</code>, както и във всеки друг клиент, съвместим с OpenAI API спецификацията [1].</p>
+<pre><code class="hljs language-mermaid">flowchart LR
+    A[<span class="hljs-string">&quot;Кодиращ агент (opencode / pi)&quot;</span>] --&gt;|<span class="hljs-string">&quot;OpenAI API заявки&quot;</span>| B[<span class="hljs-string">&quot;Songe прокси (127.0.0.1:7613)&quot;</span>]
+    B --&gt;|<span class="hljs-string">&quot;Инференция&quot;</span>| C[<span class="hljs-string">&quot;Локален сървър (LM Studio / vLLM / Ollama)&quot;</span>]
+    B --&gt;|<span class="hljs-string">&quot;Запис на корекции и грешки&quot;</span>| D[<span class="hljs-string">&quot;Локален буфер за уроци&quot;</span>]
+    D --&gt;|<span class="hljs-string">&quot;При неактивност (Idle Compute)&quot;</span>| E[<span class="hljs-string">&quot;Цикъл Dream: Практика и On-Policy дистилация&quot;</span>]
+    E --&gt;|<span class="hljs-string">&quot;Проверка от модел-съдия&quot;</span>| F[<span class="hljs-string">&quot;Нова версия на адаптера в songe/&quot;</span>]
+    F -.-&gt;|<span class="hljs-string">&quot;Гореща замяна само при подобрение&quot;</span>| C
+    style A fill:#<span class="hljs-number">1e293</span>b,stroke:#<span class="hljs-number">38</span>bdf8,color:#f8fafc
+    style B fill:#<span class="hljs-number">0</span>f172a,stroke:#<span class="hljs-number">22</span>c55e,color:#f8fafc
+    style C fill:#<span class="hljs-number">1e293</span>b,stroke:#<span class="hljs-number">94</span>a3b8,color:#f8fafc
+    style D fill:#<span class="hljs-number">312e81</span>,stroke:#<span class="hljs-number">818</span>cf8,color:#f8fafc
+    style E fill:#<span class="hljs-number">4</span>c1d95,stroke:#c084fc,color:#f8fafc
+    style F fill:#<span class="hljs-number">064e3</span>b,stroke:#<span class="hljs-number">34</span>d399,color:#f8fafc</code></pre><p>По време на активна работа проксито препраща заявките към базовия сървър — като поддържаните платформи включват LM Studio, <a href="/pages/vllm.html">vLLM</a>, <a href="/pages/ollama.html">Ollama</a>, <code>llama.cpp</code> и <code>mlx-lm</code> [1]. Ключовата разлика спрямо стандартното логване на промптове е фокусът върху причинно-следствената верига след всяко действие на модела:</p>
+<ul>
+<li><strong>Резултати от инструменти (Tool Results):</strong> Дали генерираната команда, компилация или API заявка е завършила успешно, или е върнала код за грешка и трасировка на стека (stack trace).</li>
+<li><strong>Повторни опити (Retries):</strong> Колко итерации са били необходими на агента, за да коригира синтактично невалиден аргумент или грешен път във файловата система.</li>
+<li><strong>Потребителски корекции:</strong> Директните инструкции и поправки в следващото съобщение на разработчика, които индикират разминаване между очакваното поведение и отговора на модела [1].</li>
+</ul>
+<p>Събраните данни се съхраняват изцяло в локалната файлова система (<code>~/Library/Application Support/songe</code> под macOS, <code>$XDG_DATA_HOME/songe</code> под Linux и <code>%LOCALAPPDATA%\songe</code> под Windows), като Songe никога не стартира и не изпълнява потребителските инструменти самостоятелно по време на анализа [1].</p>
+<h2>Двустепенна консолидация: Quick Dream срещу Deep Dream</h2>
+<p>Архитектурата на Songe заимства биологичната метафора за консолидация на паметта по време на сън, разделяйки процеса на адаптация на два режима с различна изчислителна тежест и времеви хоризонт [1]:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Параметър</th>
+<th align="left">Quick Dream (Бърз цикъл)</th>
+<th align="left">Deep Dream (Дълбок цикъл)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Продължителност</strong></td>
+<td align="left">Няколко минути</td>
+<td align="left">Един час или повече (в зависимост от хардуера)</td>
+</tr>
+<tr>
+<td align="left"><strong>Механизъм на действие</strong></td>
+<td align="left">Извлича заявените или демонстрирани предпочитания и ги интегрира в системните инструкции на модела</td>
+<td align="left">Генерира синтетични тренировъчни сцени от уроците и обучава компактен адаптер върху тях</td>
+</tr>
+<tr>
+<td align="left"><strong>Видимост и одит</strong></td>
+<td align="left">Показва всяко ново предпочитание със сравнение „преди/след&quot; там, където отговорът се променя</td>
+<td align="left">Документира точните метрики и причини защо новата версия е приета или отхвърлена</td>
+</tr>
+<tr>
+<td align="left"><strong>Обратимост (Undo)</strong></td>
+<td align="left">Отмяна на целия цикъл или премахване на отделно правило</td>
+<td align="left">Мигновено връщане към всяка предходна версия чрез <code>songe undo MODEL</code></td>
+</tr>
+</tbody></table>
+<p>При включен режим <strong>auto-dream</strong> фоновата услуга следи състоянието на работната станция и стартира обучението само когато са изпълнени три хардуерни условия: агентът е неактивен за определен период, налична е достатъчно свободна оперативна/видео памет и батерията на устройството не е под критичен товар [1]. В момента, в който потребителят се върне към клавиатурата и възобнови работата си, процесът спира незабавно, за да освободи GPU ресурсите за интерактивна инференция.</p>
+<h2>On-Policy дистилация и защита срещу катастрофално забравяне</h2>
+<p>Най-същественият инженерен принос в дизайна на Songe е отказът от директно фино настройване (supervised fine-tuning) върху суровите логове от разговорите на потребителя. Директното обучение върху единични диалози често води до пренастройване (overfitting), запомняне на конкретни имена на файлове или влошаване на общите способности на модела. Вместо това <code>Deep Dream</code> реализира четирифазен конвейер за <strong>on-policy дистилация</strong> [1]:</p>
+<ol>
+<li><strong>Извличане на уроци (Reading):</strong> Двигателят анализира записаните сесии и изолира конкретните моменти с висока информационна стойност — коригирани от потребителя грешки, нарушени изрични правила и неуспешни извиквания на инструменти.</li>
+<li><strong>Синтетична практика (Practice):</strong> За всеки извлечен урок самият локален модел генерира кратки тренировъчни сцени, използвайки дефинициите на инструментите от агента на потребителя. По този начин суровите реални разговори никога не влизат директно в тренировъчния набор, а се трансформират в обобщени задачи [1].</li>
+<li><strong>Учител-ученик обучение (Training via On-Policy Distillation):</strong> Във фазата на обучение базовият модел получава достъп до формулирания урок и действа като <strong>учител</strong> (teacher). Същият модел, оборудван с малък обучаем адаптер, получава само синтетичната сцена без подсказката на урока и действа като <strong>ученик</strong> (student). Чрез минимизиране на разминаването между разпределенията на учителя и ученика върху собствените траектории на модела (on-policy), адаптерът усвоява умението да предвижда грешката предварително. Паралелно с това системата преговаря (rehearses) по-рано научени умения, за да предотврати катастрофалното забравяне [1].</li>
+<li><strong>Автоматизирана верификация (Checking):</strong> Преди новата версия да бъде активирана, Songe провежда сравнителен тест върху реалните моменти от минали сесии, които са предизвикали реакция или корекция от потребителя. Текущата версия и кандидат-версията генерират отговори паралелно, а модел-съдия (judge) оценява резултатите. Новият адаптер заменя стария само ако демонстрира ясно измеримо подобрение, не нарушава вече работещи поведения и запазва структурната стабилност на генерацията [1].</li>
+</ol>
+<p>Оригиналните файлове с тегла на потребителския модел остават напълно недокоснати. Songe записва компилираните адаптирани версии в отделна поддиректория <code>songe/</code> (например в директорията с модели на LM Studio) и поддържа пълен версионен контрол с възможност за връщане назад с един клик от уеб таблото (<code>songe open</code>) или чрез CLI командата <code>songe undo</code> [1].</p>
+<h2>Хардуерна съвместимост и профилиране на капацитета</h2>
+<p>Преди да стартира първия си тренировъчен цикъл, Songe извършва автоматично профилиране на машината, за да измери какъв обем параметри и контекст може да бъде обучаван едновременно в рамките на наличната памет [1]. Инструментът се разпространява за Python 3.11+ чрез <code>uv</code>, <code>pipx</code> или Homebrew и поддържа две основни изчислителни среди за обучение:</p>
+<ul>
+<li><strong>Apple Silicon:</strong> Нативна интеграция с рамката <a href="/pages/mlx.html">MLX</a>, която използва унифицираната памет на чиповете от сериите M за ефективно обучение на квантизирани модели (като демонстрирания в документацията <code>granite-4.2-3b-MLX-4bit</code> под LM Studio в macOS) [1].</li>
+<li><strong>NVIDIA и AMD ускорители:</strong> Изпълнение чрез <a href="/pages/pytorch.html">PyTorch</a> под Linux и Windows, тествано от край до край със сървъра vLLM за високопроизводителна локална инференция [1].</li>
+</ul>
+<p>Машини без специализиран графичен ускорител (CPU-only конфигурации) също могат да стартират прокси услугата, да обслужват заявки и да записват взаимодействията, но фазата на локално обучение на теглата остава деактивирана [1].</p>
+<h2>Системни, архитектурни и макроикономически импликации за локалния ИИ</h2>
+<p>Появата на специализирани двигатели за непрекъснато обучение в покой като Songe бележи важен архитектурен преход в развитието на локалния изкуствен интелект — от статична инференция на замразени тегла към <strong>автономна персонализирана еволюция на крайните устройства (edge continual learning)</strong>.</p>
+<p>От <strong>архитектурна гледна точка</strong>, индустрията до момента разчиташе почти изцяло на контекстно инжектиране (RAG, системни промптове, <code>AGENTS.md</code> файлове) за персонализиране на кодиращите агенти. Макар и бърз, този подход страда от прогресивно раздуване на контекстния прозорец, повишена латентност при обработка на префикса (time-to-first-token) и деградация на вниманието при натрупване на десетки противоречиви правила. Чрез комбиниране на <code>Quick Dream</code> (мигновена актуализация на инструкциите за краткосрочна памет) и <code>Deep Dream</code> (on-policy дистилация на уроците директно в теглата на адаптера), Songe възпроизвежда двуфазния модел на човешкото учене: бързо кодиране в хипокампуса и бавна нощна консолидация в неокортекса. Това позволява на компактни модели с размер от 3 до 8 милиарда параметъра да интернализират специфичния стил на кодовата база и локалните инструменти на разработчика, без да изразходват токени от контекстния прозорец при всяка заявка.</p>
+<p>В <strong>макроикономически план</strong>, подобна парадигма променя фундаментално икономиката на изчислителните ресурси. Потребителските работни станции с Apple Silicon (M-серия с 32 GB до 128 GB унифицирана памет) и локалните работни станции с потребителски GPU ускорители прекарват между 60% и 75% от денонощието в състояние на покой, докато амортизацията на хардуера тече непрекъснато. Оползотворяването на тези „мъртви&quot; изчислителни цикли за нощна on-policy дистилация превръща капиталовия разход за локален хардуер в актив, чиято производителност нараства с времето. Колкото по-дълго един инженерен екип използва локален модел през Songe, толкова по-малко повторни опити (retries) и грешни извиквания на инструменти генерира агентът, което директно намалява енергийния разход и времето за изпълнение на задачите.</p>
+<p>В <strong>системен и регулаторен аспект</strong>, пълната изолация на тренировъчния цикъл върху машината на потребителя решава един от най-острите конфликти в корпоративната сигурност. Големите облачни доставчици не могат да предложат истинско непрекъснато обучение на теглата за индивидуални потребители без агрегиране на телеметрия в облака, което е неприемливо за организации със строги изисквания за защита на интелектуалната собственост и суверенитет на данните. Локалните двигатели с вградена автоматизирана регресионна проверка (judge gating) и мигновен rollback доказват, че персонализираното самообучение на ИИ агенти може да бъде реализирано безопасно, детерминистично и изцяло под контрола на крайния потребител.</p>
+<p><img src="/articles/2026/11/24/sous-labs-songe-local-model-idle-compute-training/infographic.png" alt="Инфографика: Архитектура и жизнен цикъл на обучението със Songe"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/sous-labs/songe">GitHub - sous-labs/songe: A training engine for your local model, using your idle compute</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/sous-labs.html">Sous Labs</a><p>Разработчик на софтуерни инструменти с отворен код за локално обучение и адаптация на езикови модели, създател на двигателя Songe.</p></li><li><a href="/pages/songe.html">Songe</a><p>Двигател с отворен код за непрекъснато локално обучение и дистилация на езикови модели чрез използване на свободен изчислителен ресурс (idle compute).</p></li><li><a href="/pages/mlx.html">MLX</a><p>Масивна програмна рамка за машинно обучение с отворен код от Apple, оптимизирана за унифицираната памет на Apple Silicon.</p></li><li><a href="/pages/pytorch.html">PyTorch</a><p>PyTorch е водеща софтуерна библиотека с отворен код за машинно обучение и дълбоки невронни мрежи, първоначално създадена от Meta AI и понастоящем упра...</p></li><li><a href="/pages/vllm.html">vLLM</a><p>vLLM е популярна библиотека с отворен код за високопроизводително и икономично обслужване (serving) на големи езикови модели (LLMs).</p></li><li><a href="/pages/ollama.html">Ollama</a><p>Ollama е софтуерна рамка (framework) с отворен код, която позволява на потребителите лесно да стартират и управляват големи езикови модели (LLM) локал...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Levent Alpöge (Riemann Formal Verification Analysis)
+Изследователят от Anthropic Левент Алпьоге официално потвърди математическата валидност на своето асистирано от изкустве..."><title>Левент Алпьоге от Anthropic защитава валидността на AI доказателството на хипотезата на Риман, но признава грешки при публикуването на Lean кода - Светни.ме</title><meta property="og:title" content="Левент Алпьоге от Anthropic защитава валидността на AI доказателството на хипотезата на Риман, но признава грешки при публикуването на Lean кода - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Levent Alpöge (Riemann Formal Verification Analysis)
+Изследователят от Anthropic Левент Алпьоге официално потвърди математическата валидност на своето асистирано от изкустве..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/24/anthropic-levent-alpoge-riemann-proof-lean-rollout/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/24/anthropic-levent-alpoge-riemann-proof-lean-rollout/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Левент Алпьоге от Anthropic защитава валидността на AI доказателството на хипотезата на Риман, но признава грешки при публикуването на Lean кода</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->24 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/24/anthropic-levent-alpoge-riemann-proof-lean-rollout/hero.png" alt="Визуализация на формалното доказателство на обобщената хипотеза на Риман от Левент Алпьоге"><br><small>Източник: The Decoder / Levent Alpöge (Riemann Formal Verification Analysis)</small></p>
+<p>Изследователят от <a href="/pages/anthropic.html">Anthropic</a> <a href="/pages/levent-alpoge.html">Левент Алпьоге</a> официално потвърди математическата валидност на своето асистирано от изкуствен интелект доказателство на обобщената <a href="/pages/riemann-hypothesis.html">хипотеза на Риман</a>, но направи рядко и откровено публично признание за сериозни грешки в начина, по който е представил и публикувал резултатите си [1, 2]. В публикация, озаглавена <em>„Глупави неща, които направих“</em> (<em>&quot;Stupid things I did&quot;</em>), Алпьоге отегля някои от първоначалните си реторични твърдения — включително че трудът се простира върху повече от 250 000 страници — като обяснява, че това е било замислено като шега, но признава, че публикуваният от него формален код на <a href="/pages/lean.html">Lean</a> е бил пуснат без предварително рефакториране и е <em>„пълен с боклук“</em> [1, 2].</p>
+<p>Изявлението идва в момент на изключително висока чувствителност в математическата и технологичната общност. Първоначалният анонс на Алпьоге беше направен непосредствено след първичното публично предлагане (IPO) на Anthropic, когато компанията демонстрира способностите на фамилията модели <a href="/pages/claude.html">Claude</a> за формално математическо разсъждение, а само часове по-късно екип от <a href="/pages/stanford-university.html">Станфордския университет</a> публикува конкурентна, изцяло създадена от хора чернова по същия фундаментален проблем [1, 3]. Макар общността около Lean и стандартната математическа библиотека <a href="/pages/mathlib.html">Mathlib</a> вече да потвърди, че формализацията на Алпьоге преминава машинната проверка за коректност [4], самият автор подчертава, че критиките към хаотичната структура на хранилището и прибързаната комуникация са напълно основателни [1, 2].</p>
+<h2>Анатомия на грешките при публикуването: Между шегата за 250 000 страници и суровия код</h2>
+<p>Когато Левент Алпьоге обяви своето AI-асистирано доказателство на обобщената хипотеза на Риман (Generalized Riemann Hypothesis — GRH), една от най-широко цитираните подробности в медиите беше твърдението, че пълното разгръщане на доказателството надхвърля 250 000 страници [1]. В своята ретроспекция Алпьоге уточнява, че тази цифра е била хиперболична шега, целяща да илюстрира обема на междинните машинни стъпки, генерирани при интерактивната работа с езикови модели и автоматизирани тактики в Lean [1, 2]. В контекста на корпоративния анонс след листването на Anthropic на борсата обаче иронията беше възприета буквално от външните наблюдатели, което породи скептицизъм дали става дума за реален научен пробив или за маркетингова хипербола [1].</p>
+<p>Вторият и по-съществен технически пропуск, който изследователят признава, засяга състоянието на публикувания изходен код за формална верификация. Алпьоге описва процеса на създаване на доказателството като серия от интензивни импровизации в сътрудничество с AI системата, при които той е пропуснал стандартната фаза на почистване и консолидиране на кода (<em>code cleanup</em>) преди публичното му освобождаване [1, 2]. В резултат на това хранилището съдържа:</p>
+<ul>
+<li><strong>Излишни междинни стъпки (Redundant intermediate steps):</strong> Дълги вериги от локални трансформации, които моделът е генерирал по време на търсенето на валиден път в дървото на доказателството, но които могат да бъдат сведени до няколко компактни израза [1].</li>
+<li><strong>Ненужни и дублиращи се леми (Unnecessary lemmas):</strong> Помощни твърдения, създадени ad-hoc за заобикаляне на локални пречки в типова система на Lean, които остават в кода като „мъртви“ или слабо интегрирани артефакти, затрудняващи четенето от хора [1, 2].</li>
+<li><strong>Липса на модулна абстракция:</strong> Вместо ясно разделение между концептуалния скелет на аналитичната теория на числата и нискостепенните алгебрични проверки, суровият скрипт смесва високостепенни математически идеи с механичен шум [1].</li>
+</ul>
+<pre><code class="hljs language-mermaid">flowchart TD
+    A[<span class="hljs-string">&quot;AI-асистирано търсене на доказателство (Claude + Lean)&quot;</span>] --&gt; B[<span class="hljs-string">&quot;Суров формален скрипт (&#x27;Пълен с излишни леми и шум&#x27;)&quot;</span>]
+    B --&gt; C[<span class="hljs-string">&quot;Машинна компилация в Lean Kernel&quot;</span>]
+    C --&gt; D[<span class="hljs-string">&quot;Успешна проверка на типовете (Type-Checking Pass)&quot;</span>]
+    D --&gt; E{<span class="hljs-string">&quot;Семантичен одит от експерти (Mathlib / Математици)&quot;</span>}
+    E --&gt;|<span class="hljs-string">&quot;Риск при нечист код&quot;</span>| F[<span class="hljs-string">&quot;Скрити допускания или неточна дефиниция на теоремата&quot;</span>]
+    E --&gt;|<span class="hljs-string">&quot;След рефакториране и одит&quot;</span>| G[<span class="hljs-string">&quot;Потвърдена коректност без аксиоматични вратички&quot;</span>]
+
+    <span class="hljs-built_in">style</span> A fill:#1e293b,stroke:#38bdf8,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#f8fafc
+    <span class="hljs-built_in">style</span> B fill:#3f2e1e,stroke:#f59e0b,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#fef3c7
+    <span class="hljs-built_in">style</span> C fill:#1e293b,stroke:#64748b,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#f8fafc
+    <span class="hljs-built_in">style</span> D fill:#<span class="hljs-number">064e3b</span>,stroke:#<span class="hljs-number">10b981</span>,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#ecfdf5
+    <span class="hljs-built_in">style</span> E fill:#31102f,stroke:#ec4899,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#fdf2f8
+    <span class="hljs-built_in">style</span> F fill:#450a0a,stroke:#ef4444,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#fef2f2
+    <span class="hljs-built_in">style</span> G fill:#<span class="hljs-number">064e3b</span>,stroke:#34d399,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#ecfdf5</code></pre><h2>Парадоксът на формалната верификация: Защо успешната компилация не е достатъчна</h2>
+<p>В своя анализ на случая Алпьоге обръща внимание на един фундаментален епистемологичен принцип във формалната математика, който често остава неразбран извън специализираните среди: <strong>успешната компилация на код в Lean сама по себе си не доказва автоматично, че желаната математическа теорема е решена без скрити уловки</strong> [1].</p>
+<p>Системите за интерактивно доказване на теореми като Lean 4 функционират чрез малко, строго верифицирано ядро (<em>kernel</em>), което проверява дали дадено доказателство следва правилата на зависимата теория на типовете. Ако скриптът се компилира без грешки и без незавършени маркери (<code>sorry</code>), ядрото гарантира, че изводът от зададените предпоставки към крайното твърдение е логически непробиваем. Въпреки това съществуват три критични уязвимости, които изискват човешка четимост и експертен одит:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Измерение на верификацията</th>
+<th align="left">Какво проверява ядрото на Lean</th>
+<th align="left">Защо човешката четимост остава критична</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Спецификация на теоремата</strong></td>
+<td align="left">Дали крайният тип съответства на декларираната дефиниция.</td>
+<td align="left">Ако дефиницията на дзета-функцията или L-функциите на Дирихле съдържа фина гранична грешка, доказателството може да е валидно за тривиален или различен обект [1].</td>
+</tr>
+<tr>
+<td align="left"><strong>Скрити допускания (Hidden Assumptions)</strong></td>
+<td align="left">Дали всички използвани хипотези са явно подадени в контекста.</td>
+<td align="left">В хиляди редове нечист AI-генериран код могат да останат локални аксиоми или твърде силни предварителни условия, които обезсмислят общността на резултата [1].</td>
+</tr>
+<tr>
+<td align="left"><strong>Интеграция с Mathlib</strong></td>
+<td align="left">Съвместимост на типовете в рамките на локалния проект.</td>
+<td align="left">Използването на нестандартни локални дефиниции вместо каноничните структури от Mathlib затруднява проверката дали доказаната теорема съвпада с класическата формулировка [4].</td>
+</tr>
+</tbody></table>
+<p>Именно поради тази причина публикуването на „непочистен“ код с хиляди излишни междинни леми създава сериозна бариера пред научната общност. Когато един доказателствен скрипт е претрупан с автоматизиран шум, независимите рецензенти трябва да инвестират огромни усилия не за да проверят логическите преходи (които ядрото на Lean вече е проверило), а за да се уверят, че входните дефиниции и крайната формулировка на теоремата нямат семантични разминавания или скрити аксиоматични допускания [1].</p>
+<p><img src="/articles/2026/11/24/anthropic-levent-alpoge-riemann-proof-lean-rollout/infographic.png" alt="Инфографика: Уроци от формалната верификация и публикуването на Lean кода на Левент Алпьоге"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове при AI-асистирана формална верификация</small></p>
+<h2>Системни, архитектурни и макроикономически импликации за AI-асистираната наука</h2>
+<p>Случаят с Левент Алпьоге и начина, по който беше представено доказателството на обобщената хипотеза на Риман, бележи ключов преходен момент в развитието на изкуствения интелект за научни изследвания. Отвъд конкретния математически триумф и комуникационните гафове, инцидентът разкрива дълбоки структурни промени в архитектурата на формалните системи, научната етика и корпоративната динамика на AI лабораториите.</p>
+<h3>1. Възникването на „технически дълг в доказателствата“ (Proof Technical Debt) и нуждата от AI рефакториране</h3>
+<p>Досега основното тясно място във формалната математика беше самото <em>откриване и конструиране</em> на доказателство, което може да премине през типовия проверител на Lean. Когато големите езикови модели като Claude започват да генерират милиони тактически опити и успешно да затварят сложни подцели чрез груба сила и евристична импровизация, те създават нов феномен: <strong>експлозия от синтактично верен, но семантично нечетим формален код</strong> [1]. В софтуерното инженерство това е известно като технически дълг, но в математиката то води до парадокса на „непрозрачната сигурност“ — машината знае, че теоремата е вярна, но никой човек не може лесно да проследи <em>защо</em>. Това налага изграждането на изцяло нов архитектурен слой в системите за автоматизирано доказване: специализирани агенти за <strong>автоматично рефакториране и минимизация на доказателства (Proof De-garbaging &amp; Compression)</strong>, чиято единствена задача е да елиминират мъртвите клонове, да обединяват дублиращите се леми и да превеждат машинните тактики обратно в елегантна, разбираема за човека математическа структура преди публикуване.</p>
+<h3>2. Изместване на тежестта от верификация на доказателства към верификация на спецификации</h3>
+<p>Признанието на Алпьоге, че успешната компилация не изключва риска от неправилно формулирана теорема или скрити допускания [1], очертава новия критичен периметър за сигурността на AI системите. Когато AI моделите станат способни да доказват произволно сложни твърдения във формални среди — независимо дали в чистата математика, криптографските протоколи или верификацията на компилатори и ядра на операционни системи — уязвимостта се премества изцяло в <strong>граничния интерфейс на спецификацията (Specification Boundary)</strong>. Ако един AI агент бъде инструктиран да докаже, че даден софтуерен модул е защитен от препълване на буфера, той може да генерира 100 000 реда валиден Lean код, който се компилира безупречно, но тихомълком дефинира модела на паметта по начин, който изключва реалните вектори на атака. Следователно индустрията трябва да разработи строги стандарти за „чисти интерфейси на теореми“ (<em>Clean Theorem Interfaces</em>), при които одитът се фокусира върху минимален, изолиран файл с дефиниции, строго обвързан с канонични библиотеки като Mathlib [4].</p>
+<h3>3. Макроикономически натиск след IPO и кризата на научната комуникация</h3>
+<p>Времето на първоначалния анонс на Алпьоге — непосредствено след публичното листване на Anthropic и в пряка надпревара с черновата от Станфордския университет [1, 3] — илюстрира нарастващото напрежение между академичния ритъм на рецензиране и пазарния натиск върху водещите AI корпорации. След излизането си на капиталовите пазари лаборатории като Anthropic са подложени на постоянен макроикономически стимул да демонстрират експоненциална възвръщаемост от инвестициите в изчислителна инфраструктура чрез исторически пробиви („моменти на Спутник“ в науката). Този натиск стимулира култура на <em>„публикувай веднага щом се компилира“</em>, при която фазата на редакционна хигиена и независима проверка на кода се съкращава в името на скоростта. Откровената самокритика на Алпьоге е важен коректив за цялата екосистема: тя доказва, че в ерата на машинно верифицираната наука репутационният капитал зависи не само от това дали кодът минава през компилатора, но и от прозрачността, четимостта и уважението към епистемичните стандарти на научната общност.</p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/anthropic-researcher-stands-by-his-ai-assisted-riemann-proof-but-owns-up-to-stupid-things-in-the-rollout/">The Decoder: Anthropic researcher stands by his AI-assisted Riemann proof but owns up to &quot;stupid things&quot; in the rollout</a></li>
+<li><a href="https://x.com/alpoge/status/2124987173439209561">Levent Alpöge on X (Twitter): &quot;Stupid things I did&quot; — Post-rollout reflection on the Lean formalization of the Generalized Riemann Hypothesis</a></li>
+<li><a href="https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/">The Decoder: Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft</a></li>
+<li><a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/">The Decoder: Lean and Mathlib community officially confirms Levent Alpöge&#39;s proof of the Riemann hypothesis is correct</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/levent-alpoge.html">Левент Алпоге (Levent Alpöge)</a><p>Левент Алпоге (Levent Alpöge) е американски математик и изследовател, работещ в лабораторията за изкуствен интелект Anthropic.</p></li><li><a href="/pages/riemann-hypothesis.html">Хипотеза на Риман (Riemann Hypothesis)</a><p>Хипотезата на Риман (Riemann Hypothesis), формулирана от германския математик Бернхард Риман през 1859 г.</p></li><li><a href="/pages/lean.html">Lean</a><p>Lean е функционален език за програмиране и интерактивен доказател на теореми (proof assistant), разработен първоначално от Леонардо де Моура в Microso...</p></li><li><a href="/pages/mathlib.html">Mathlib</a><p>Общностно поддържаната математическа библиотека за формализирания асистент за доказателства Lean, съдържаща формални дефиниции и теореми от съвременна...</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/stanford-university.html">Stanford University</a><p>Stanford University (Станфордски университет) е престижен частен изследователски университет, намиращ се в Станфорд, Калифорния.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
