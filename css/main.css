@@ -552,6 +552,12 @@ h4 {
   margin-bottom: 0;
 }
 
+/* Table Formatting */
+table,
+.content table {
+  margin-bottom: 1.8rem;
+}
+
 /* -----------------------------------------------
    Listings (Archive & Pages)
    ----------------------------------------------- */
