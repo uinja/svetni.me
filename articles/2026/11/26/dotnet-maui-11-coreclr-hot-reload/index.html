@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Microsoft
+С официалното пускане на .NET 11 от Microsoft кросплатформената графична рамка .NET MAUI (Multi-platform App UI) преминава през фундаментална архитектурна трансформация:..."><title>.NET MAUI 11 преминава към CoreCLR по подразбиране и въвежда инкрементален XAML Hot Reload - Светни.ме</title><meta property="og:title" content=".NET MAUI 11 преминава към CoreCLR по подразбиране и въвежда инкрементален XAML Hot Reload - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Microsoft
+С официалното пускане на .NET 11 от Microsoft кросплатформената графична рамка .NET MAUI (Multi-platform App UI) преминава през фундаментална архитектурна трансформация:..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/26/dotnet-maui-11-coreclr-hot-reload/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/26/dotnet-maui-11-coreclr-hot-reload/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>.NET MAUI 11 преминава към CoreCLR по подразбиране и въвежда инкрементален XAML Hot Reload</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/26/dotnet-maui-11-coreclr-hot-reload/hero.png" alt=""><br><small>Източник: InfoQ / Microsoft</small></p>
+<p>С официалното пускане на <a href="/pages/dotnet.html">.NET</a> 11 от <a href="/pages/microsoft.html">Microsoft</a> кросплатформената графична рамка <a href="/pages/dotnet-maui.html">.NET MAUI</a> (Multi-platform App UI) преминава през фундаментална архитектурна трансформация: средата за изпълнение се сменя по подразбиране от наследения Mono енджин към CoreCLR за всички поддържани платформи [1][2]. Новата версия, разработена в рамките на седем предварителни издания (Previews) и един Release Candidate, поставя фокус върху продуктовото качество, унификацията на компилационния конвейер и скоростта на разработка чрез инкрементален XAML Hot Reload, имплицитни именни пространства и ускорено зареждане на ресурси [1][3].</p>
+<p>.NET MAUI позволява изграждането на нативни приложения за <a href="/pages/android.html">Android</a>, <a href="/pages/ios.html">iOS</a>, Mac Catalyst и <a href="/pages/windows.html">Windows</a> от единна кодова база на C# и XAML [1]. Макар .NET 11 да е издание със стандартна поддръжка (Standard Term Support — STS) с двегодишен жизнен цикъл, Microsoft подчертава, че .NET MAUI се управлява по собствена политика за поддръжка, отделена от базовия STS/LTS график на средата за изпълнение, и се разпространява като самостоятелен workload с NuGet пакети, позволяващи фиксиране към конкретни версии на проектно ниво [1][3].</p>
+<h2>Миграция от Mono към CoreCLR и модели на компилация</h2>
+<p>Най-значимата структурна промяна в .NET MAUI 11 е преходът от Mono към CoreCLR като стандартна среда за изпълнение на всички платформи [1][4]. В продължение на повече от десетилетие — от ерата на Xamarin до първите поколения на .NET MAUI — мобилните приложения разчитаха на Mono заради неговия олекотен отпечатък и специализираните AOT/интерпретаторни режими за мобилни процесори. С въвеждането на CoreCLR по подразбиране Microsoft изравнява мобилните и десктоп клиентските приложения със сървърните, облачните и конзолните .NET натоварвания [1][4].</p>
+<p>Този преход променя начина, по който кодът се пакетира и изпълнява в продукционна среда:</p>
+<ul>
+<li><strong>Composite Partial ReadyToRun (R2R) по подразбиране:</strong> Продукционните (Release) компилации вече използват композитен частичен ReadyToRun формат, който предварително компилира критичните пътища от управлявания код, докато останалата част се обработва при изпълнение [1]. По данни от бележките към изданието това осигурява между 2,4% и 4,5% по-бързо стартиране на приложенията за сметка на минимално увеличение в размера на инсталационния пакет [1][3].</li>
+<li><strong>Интерпретатор на CoreCLR за екосистемата на Apple:</strong> На платформите на <a href="/pages/apple.html">Apple</a> (iOS, tvOS и Mac Catalyst), където операционната система строго забранява динамичната Just-In-Time (JIT) компилация от съображения за сигурност на паметта, всеки код, който не е предварително компилиран (AOT/R2R), се изпълнява директно в новия интерпретатор на CoreCLR [1][4].</li>
+<li><strong>Native AOT като опционален модел:</strong> Пълната Native AOT компилация остава изрична (opt-in) опция при публикуване, като поддръжката за Android все още е с експериментален статут [1]. От Microsoft препоръчват на инженерните екипи да провеждат задълбочени тестове на външните библиотеки в проектите си, преди да изберат конкретен модел на разгръщане между стандартен R2R и Native AOT [1].</li>
+</ul>
+<h2>Инкрементален XAML Hot Reload и оптимизации на компилатора</h2>
+<p>По отношение на декларативния потребителски интерфейс в XAML .NET MAUI 11 въвежда четири ключови инженерни подобрения, насочени към намаляване на времето за итерация и оптимизиране на паметта [1][3]:</p>
+<ol>
+<li><strong>Инкрементален XAML Hot Reload (в Preview):</strong> Вместо да унищожава и пресъздава цялото дърво на страницата при всяка промяна в маркировката, новият механизъм модифицира (patch-ва) живите инстанции на страниците и контролите директно в паметта [1]. Функцията е активирана по подразбиране в Debug конфигурации, интегрира се с инструмента <code>dotnet watch</code> и може да бъде изключена при необходимост чрез флага <code>EnableMauiIncrementalHotReload</code> в проектния файл [1].</li>
+<li><strong>Имплицитни XAML именни пространства:</strong> Декларациите за именни пространства по подразбиране вече са активни автоматично, което прави кореновите атрибути <code>xmlns</code> и <code>xmlns:x</code> незадължителни и изчиства синтактичния шум в XAML файловете [1].</li>
+<li><strong>Отложено (Lazy) зареждане на <code>ResourceDictionary</code>:</strong> При използване на XAML генератор на изходен код (source generation) големите речници с ресурси се инициализират лениво при реална заявка, което ускорява първоначалното им зареждане до около осем пъти [1][3].</li>
+<li><strong>Trim-safe компилация за <code>RelativeSource</code> обвързвания:</strong> Динамичните обвързвания (<code>RelativeSource</code> bindings), при които типът <code>AncestorType</code> може да бъде разрешен статично по време на компилация, вече се трансформират до код, безопасен за отрязване на неизползвани зависимости (trim-safe), елиминирайки нуждата от рефлексия по време на изпълнение [1].</li>
+</ol>
+<h2>Унификация на Handler архитектурата, контроли и платформени изисквания</h2>
+<p>Процесът по подмяна на наследените рендери (legacy renderers) от Xamarin.Forms с по-леката и модулна Handler архитектура продължава да обхваща нови системни компоненти [1]. В .NET MAUI 11 Windows приложенията използват по подразбиране новия <code>CollectionView2</code> handler, навигационната обвивка <code>Shell</code> под Android вече е изцяло базирана на handlers, а под iOS и Mac Catalyst на новата архитектура преминават <code>NavigationPage</code>, <code>TabbedPage</code> и <code>FlyoutPage</code> [1][3]. Старите рендери остават налични единствено като ръчен резервен вариант (fallback), но пакетът за обратна съвместимост <code>Microsoft.Maui.Controls.Compatibility</code> окончателно отпада от дистрибуцията [1].</p>
+<p>Промяната в навигационните handlers под iOS води и до важни промени в жизнения цикъл на страниците: събитието <code>Appearing</code> вече се задейства <em>преди</em> страницата да бъде вкарана (pushed) в навигационния стек, а не след като стане видима на екрана, докато вторичните елементи в лентата с инструменти (secondary toolbar items) автоматично се групират в падащо меню (overflow menu) [1]. За логика, която изисква завършена визуализация на прехода, разработчиците трябва да мигрират към събитието <code>NavigatedTo</code> [1].</p>
+<p>На ниво контроли и системни API интерфейсът се разширява с редица практически функции:</p>
+<ul>
+<li><strong>Карти и навигация:</strong> Контролът за карти получава поддръжка за клъстериране на маркери (clustering), персонализирани икони за пинове и нова имплементация за Windows, базирана на <a href="/pages/azure.html">Azure</a> Maps [1]. Освен това <code>Shell</code> вече поддържа параметризирани шаблони за маршрути като <code>trip/{tripId}</code> [1].</li>
+<li><strong>Визуални компоненти и жестове:</strong> <code>TabbedPage</code> добавя значки за известия (badges), <code>BoxView</code> приема четка за запълване (<code>Fill</code> brush), <code>LongPressGestureRecognizer</code> става конфигурируем, а началните екрани (splash screens) поддържат варианти за тъмна тема (dark-mode) [1].</li>
+<li><strong>Асинхронни анимации и WebAuthn автентикация:</strong> Всички методи за анимация вече приемат <code>CancellationToken</code>, а техните синхронни (не-<code>Async</code>) варианти са маркирани като остарели (obsolete) [1]. В пространството <code>Microsoft.Maui.Authentication</code> е добавен нов клас <code>Passkeys</code>, който обвива клиентското създаване и верификация на WebAuthn ключове за достъп (като валидацията на криптографските предизвикателства и атестацията остава отговорност на сървъра), а разрешението <code>Permissions.PostNotifications</code> вече функционира коректно под iOS [1].</li>
+</ul>
+<p>Платформените изисквания също са повишени. За Android минималното API ниво се вдига от 21 на 24 (Android 7.0), а поддръжката за 32-битовата x86 архитектура е премахната [1]. Оптимизациите в компилационната верига за Android намаляват времето за инкрементален билд след промяна в управлявания C# код от 68,3 секунди на 52,3 секунди — ускорение от над 23% [1][3]. За екосистемата на Apple минималните изисквания за целевите SDK са iOS, tvOS и Mac Catalyst 18.2, както и macOS 15.2 в комбинация с Xcode 26.4 [1]. Сред несъвместимите промени (breaking changes) са още запечатването (<code>sealed</code>) на типа <code>Color</code>, обявяването на <code>Java.Lang.Object.JavaFinalize()</code> за остарял и премахването на автоматичното оцветяване (tinting) за нешрифтови икони в <code>SwipeItem</code> [1].</p>
+<h2>Системни, архитектурни и пазарни измерения на консолидацията в .NET MAUI 11</h2>
+<p>Отвъд списъка с функционални подобрения, .NET MAUI 11 бележи завършека на една дългогодишна архитектурна фрагментация в екосистемата на Microsoft. Когато компанията стартира проекта за обединение на платформата с .NET 5 и .NET 6, официалната визия беше „един .NET&quot; — обща базова библиотека (BCL), единен SDK и унифициран компилационен инструментариум. В действителност обаче под капака съществуваха две паралелни виртуални машини: високопроизводителният CoreCLR за сървърни, облачни и Windows/macOS десктоп приложения, и Mono за мобилни устройства, WebAssembly и специфични вградени среди.</p>
+<p>Поддържането на два отделни енджина създаваше скрит инженерен данък както за самата Microsoft, така и за авторите на библиотеки. Разликите в управлението на паметта (Garbage Collection), реализацията на рефлексията, обработката на изключения и JIT/AOT генерацията на машинен код водеха до трудно възпроизводими грешки, които се проявяваха само на мобилни устройства, но не и в стандартните x64/ARM64 сървърни тестове. Чрез налагането на CoreCLR като среда по подразбиране във всички .NET MAUI платформи, Microsoft практически елиминира това раздвоение. Инвестициите в производителността на CoreCLR — включително векторните оптимизации, динамичния PGO (Profile-Guided Optimization) и подобренията в сборщика на отпадъци — вече се пренасят директно към мобилните и кросплатформените клиентски приложения.</p>
+<p>Вторият стратегически аспект е балансът между трите модела на изпълнение: ReadyToRun (R2R), интерпретация в CoreCLR и Native AOT. Докато индустрията се движи към агресивно предварително компилиране (AOT) с цел мигновено стартиране и по-нисък разход на RAM, пълният Native AOT в .NET все още налага строги ограничения върху динамичното зареждане на код и рефлексията — механизми, на които разчитат стотици популярни корпоративни NuGet пакети. Изборът на Microsoft да използва композитен частичен ReadyToRun по подразбиране в комбинация с интегриран CoreCLR интерпретатор за iOS представлява прагматичен инженерен компромис. Той осигурява измеримо ускорение при стартиране (до 4,5%) и пълно спазване на рестрикциите на Apple срещу JIT компилация, без да чупи съвместимостта със съществуващата екосистема от библиотеки, докато trim-safe трансформациите в XAML постепенно подготвят кодовата база за бъдещ преход към пълен Native AOT.</p>
+<p>На макрониво в сегмента на кросплатформената разработка .NET MAUI 11 заема ясно дефинирана пазарна ниша. В конкуренция с Flutter на Google, React Native на Meta и Kotlin Multiplatform на JetBrains, .NET MAUI рядко се опитва да печели чрез агресивно разширяване на визуалните ефекти или уеб-ориентирани парадигми. Вместо това съкращаването на инкременталните Android билдове с 16 секунди, 8-кратното ускорение на <code>ResourceDictionary</code>, инкременталният XAML Hot Reload и вградената поддръжка за WebAuthn (<code>Passkeys</code>) и Azure Maps са директно насочени към продуктивността на големите корпоративни екипи. За организациите, чийто бекенд и бизнес логика вече са изградени върху C# и .NET, преминаването към CoreCLR и окончателното премахване на наследените слоеве от Xamarin (<code>Microsoft.Maui.Controls.Compatibility</code>) превръщат .NET MAUI 11 в предвидима, зряла и архитектурно хомогенна платформа за дългосрочни корпоративни инвестиции.</p>
+<p><img src="/articles/2026/11/26/dotnet-maui-11-coreclr-hot-reload/infographic.png" alt=""><br><small>Източник: Светни.ме — Архитектурни стълбове и оптимизации в .NET MAUI 11</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/dotnet-maui-11-coreclr-hotreload/">InfoQ — .NET MAUI 11 Makes CoreCLR the Default Runtime and Adds Incremental XAML Hot Reload</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/">Microsoft .NET Blog — Announcing .NET 11</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/maui/whats-new/dotnet-11?view=net-maui-11.0">Microsoft Learn — What&#39;s new in .NET MAUI for .NET 11</a></li>
+<li><a href="https://devblogs.microsoft.com/dotnet/dotnet-maui-moves-to-coreclr-in-dotnet-11/">Microsoft .NET Blog — .NET MAUI moves to CoreCLR in .NET 11</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/dotnet.html">.NET</a><p>.</p></li><li><a href="/pages/dotnet-maui.html">.NET MAUI</a><p>.</p></li><li><a href="/pages/android.html">Android</a><p>Android е мобилна операционна система с отворен код, разработена от Google.</p></li><li><a href="/pages/ios.html">iOS</a><p>iOS е мобилната операционна система на Apple, захранваща смартфоните iPhone.</p></li><li><a href="/pages/apple.html">Apple</a><p>Apple Inc.</p></li><li><a href="/pages/windows.html">Windows</a><p>Windows е водещата операционна система за персонални компютри и сървъри, разработена от Microsoft.</p></li><li><a href="/pages/azure.html">Microsoft Azure</a><p>Microsoft Azure е платформа за облачни изчисления, управлявана от Microsoft.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

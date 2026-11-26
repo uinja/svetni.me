@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ
+Библиотеката за симулиране на програмни интерфейси Mock Service Worker (MSW) официално представи своята мащабна версия 3.0, която въвежда фундаментални промени в начина, по който се..."><title>Mock Service Worker 3.0 преминава изцяло към ESM, добавя прихващане на ниво TCP/TLS сокети и поддръжка за GraphQL абонаменти - Светни.ме</title><meta property="og:title" content="Mock Service Worker 3.0 преминава изцяло към ESM, добавя прихващане на ниво TCP/TLS сокети и поддръжка за GraphQL абонаменти - Светни.ме"><meta property="og:description" content="Източник: InfoQ
+Библиотеката за симулиране на програмни интерфейси Mock Service Worker (MSW) официално представи своята мащабна версия 3.0, която въвежда фундаментални промени в начина, по който се..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/26/mock-service-worker-v3-esm-socket-interception/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/26/mock-service-worker-v3-esm-socket-interception/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Mock Service Worker 3.0 преминава изцяло към ESM, добавя прихващане на ниво TCP/TLS сокети и поддръжка за GraphQL абонаменти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/26/mock-service-worker-v3-esm-socket-interception/hero.png" alt=""><br><small>Източник: InfoQ</small></p>
+<p>Библиотеката за симулиране на програмни интерфейси <a href="/pages/mock-service-worker.html">Mock Service Worker (MSW)</a> официално представи своята мащабна версия 3.0, която въвежда фундаментални промени в начина, по който се прихваща и виртуализира мрежовият трафик в съвременните <a href="/pages/javascript.html">JavaScript</a> среди. Според техническия репортаж на Даниел Къртис в <a href="/pages/infoq.html">InfoQ</a> [1], новото издание преминава изцяло към стандарта ECMAScript Modules (ESM-only), поставя като минимално изискване <a href="/pages/nodejs.html">Node.js</a> версия 22 или по-нова и редуцира размера на инсталационния пакет с близо 44% — от 416 KB до 234 KB. Наред с оптимизацията на пакета, MSW 3.0 пренася прихващането на заявки в Node.js директно на ниво TCP и TLS сокети, добавя вградена поддръжка за <a href="/pages/graphql.html">GraphQL</a> абонаменти (subscriptions), въвежда специфични за отделните протоколи входни точки и представя експерименталния програмен интерфейс <code>defineNetwork</code>.</p>
+<p>Макар архитектурата на MSW традиционно да се отличава с използването на стандартен Service Worker в браузъра и специализирани прихващачи (interceptors) в сървърна среда, третото поколение на платформата премахва историческите компромиси за обратна съвместимост с остарели модулни системи. Чрез фокусиране върху модерните възможности на Node.js 22+ и директната обработка на суровия транспортен слой, проектът цели да унифицира тестовата среда за сложни, многопротоколни приложения.</p>
+<h2>Изцяло ESM архитектура и свиване на пакета с 44%</h2>
+<p>Едно от най-значимите структурни решения в Mock Service Worker 3.0 е пълното премахване на двойната компилация (dual CJS/ESM publishing) в полза на чисто ESM разпространение [1]. През последните години поддържането на паралелни CommonJS и ESM артефакти в рамките на един и същ npm пакет водеше не само до дублиране на дистрибутивния код, но и до добре познатия в екосистемата проблем с „двойния пакет&quot; (dual package hazard), при който дадено приложение може неволно да зареди две отделни инстанции на библиотеката с изолирано вътрешно състояние.</p>
+<p>С изискването за Node.js 22 или по-нова версия — където нативната поддръжка за зареждане на синхронни ESM модули чрез <code>require(esm)</code> вече е стабилизирана — екипът зад MSW елиминира необходимостта от CommonJS обвивки и полифили. Прекият резултат от тази консолидация е драстично намаляване на обема на пакета:</p>
+<ul>
+<li><strong>Предишен размер на пакета (v2.x):</strong> 416 KB</li>
+<li><strong>Нов размер на пакета (v3.0):</strong> 234 KB (намаление със 182 KB или ~43,75%)</li>
+<li><strong>Минимална среда за изпълнение:</strong> Node.js 22+</li>
+<li><strong>Модулен формат:</strong> Изцяло ECMAScript Modules (ESM-only)</li>
+</ul>
+<p>По-малкият отпечатък се дължи и на новите <strong>специфични за протокола входни точки</strong> (protocol-specific entrypoints) [1]. Вместо да зареждат монолитен набор от парсери и генератори за всеки възможен мрежов формат, разработчиците вече импортират само необходимите за конкретния тест примитиви — което позволява на съвременните инструменти за пакетиране (bundlers) и тестови рънери да изключат неизползвания код чрез ефективно tree-shaking.</p>
+<h2>Прихващане на ниво TCP и TLS сокети в Node.js</h2>
+<p>В предишните поколения на библиотеката симулирането на мрежови заявки в Node.js разчиташе на модифициране (monkey-patching) на високоуровневи модули като <code>http.request</code>, <code>https.request</code> и глобалния метод <code>fetch</code> (базиран на Undici). Този подход неизбежно страдаше от фрагментация: всяка нова HTTP клиентска библиотека или нативен байндинг, който общува директно със сокетите на операционната система или заобикаля стандартните обвивки, можеше да се изплъзне от прихващача или да прояви несъответствия в поведението на потоците и хедърите.</p>
+<pre><code class="hljs language-mermaid">flowchart TD
+    subgraph App[<span class="hljs-string">&quot;Приложение / Тестова среда (Node.js 22+)&quot;</span>]
+        Client[<span class="hljs-string">&quot;HTTP / GraphQL / WebSocket Клиент\n(fetch, axios, Apollo, ws)&quot;</span>]
+    <span class="hljs-keyword">end</span>
+
+    subgraph MSW3[<span class="hljs-string">&quot;Mock Service Worker v3.0&quot;</span>]
+        <span class="hljs-keyword">Entry</span>[<span class="hljs-string">&quot;Протоколни входни точки &amp;\nекспериментален defineNetwork API&quot;</span>]
+        SocketLayer[<span class="hljs-string">&quot;Прихващане на ниво TCP и TLS сокети\n(net.Socket / tls.TLSSocket)&quot;</span>]
+        Preflight[<span class="hljs-string">&quot;Обработка на CORS и OPTIONS\npreflight заявки&quot;</span>]
+    <span class="hljs-keyword">end</span>
+
+    subgraph Handlers[<span class="hljs-string">&quot;Детерминирани симулатори&quot;</span>]
+        REST[<span class="hljs-string">&quot;REST / HTTP Handlers&quot;</span>]
+        GQL[<span class="hljs-string">&quot;GraphQL Queries, Mutations &amp;\nSubscriptions (Въведени във v3.0)&quot;</span>]
+    <span class="hljs-keyword">end</span>
+
+    Client <span class="hljs-comment">--&gt;|&quot;Изходящ мрежов поток&quot;| SocketLayer</span>
+    SocketLayer <span class="hljs-comment">--&gt; Preflight</span>
+    Preflight <span class="hljs-comment">--&gt; Entry</span>
+    <span class="hljs-keyword">Entry</span> <span class="hljs-comment">--&gt; REST</span>
+    <span class="hljs-keyword">Entry</span> <span class="hljs-comment">--&gt; GQL</span></code></pre><p>Във версия 3.0 MSW премества границата на прихващане в Node.js надолу по мрежовия стек — директно на <strong>ниво TCP и TLS</strong> [1]. Чрез прихващане на операциите върху самите сокети, библиотеката става напълно агностична спрямо използвания клиентски софтуер на приложно ниво. Независимо дали приложението използва вградения <code>fetch</code>, <code>node:http</code>, специализирован GraphQL клиент или двоичен протокол върху TLS, трафикът преминава през единна виртуализирана сокетна абстракция.</p>
+<h3>Страничен ефект при миграция: Прихващане на <code>OPTIONS</code> preflight заявки</h3>
+<p>По-високата прецизност на сокетното прихващане обаче разкрива и важни поведенчески разлики при обновяване на съществуващи тестови пакети. Както се отбелязва в репортажа на InfoQ [1], редица потребители докладват за неуспешни тестове (test failures) след миграция към версия 3.0, причинени от <strong>новоприхванати <code>OPTIONS</code> preflight заявки</strong>.</p>
+<p>Когато тестовите среди симулират браузърно поведение с междусайтови заявки (CORS) или използват HTTP клиенти, които автоматично изпращат предварителни <code>OPTIONS</code> проверки преди същинската заявка (<code>POST</code>, <code>PUT</code>, <code>DELETE</code> или заявки с персонализирани хедъри), по-нискоуровневият сокетен слой на MSW 3.0 вече улавя тези пакети като пълноправни мрежови събития. В тестови конфигурации, настроени със стриктна политика за необработени заявки (<code>onUnhandledRequest: &#39;error&#39;</code>), липсата на изричен или автоматизиран обработчик за <code>OPTIONS</code> методите води до прекъсване на теста — детайл, който екипите трябва да вземат предвид при планиране на миграцията.</p>
+<h2>GraphQL абонаменти и експерименталният <code>defineNetwork</code> API</h2>
+<p>Две ключови функционални разширения в MSW 3.0 адресират нуждите на приложенията, работещи с потоци от данни в реално време и сложни мрежови топологии [1]:</p>
+<ol>
+<li><strong>Поддръжка за GraphQL абонаменти (GraphQL Subscriptions):</strong> Досега разработчиците, използващи GraphQL, можеха лесно да симулират стандартни заявки (<code>query</code>) и мутации (<code>mutation</code>), но тестването на реактивни потоци от данни в реално време чрез <code>subscription</code> изискваше сложни ръчни настройки на WebSocket сървъри или странични библиотеки. Версия 3.0 интегрира поддръжката за GraphQL абонаменти като първокласна функционалност, позволявайки детерминирано излъчване на събития към клиента в рамките на стандартните тестови сценарии.</li>
+<li><strong>Експериментален <code>defineNetwork</code> API:</strong> Новият програмен интерфейс <code>defineNetwork</code> предлага по-високо ниво на абстракция за декларативно описване на мрежовата среда и нейното поведение. Насочен към по-мащабни архитектурни сценарии, този интерфейс поставя основите за цялостно моделиране на мрежови състояния, вместо фрагментирано регистриране на единични крайни точки.</li>
+</ol>
+<h2>Дългосрочни архитектурни и системни последици за софтуерната индустрия</h2>
+<p>Излизането на Mock Service Worker 3.0 е показателен маркер за три дълбоки структурни трансформации в съвременното софтуерно инженерство, автоматизираното тестване и развойната инфраструктура.</p>
+<p>Първо, <strong>краят на преходния период между CommonJS и ESM в базовия инструментариум на Node.js</strong> вече е факт. Когато фундаментални инфраструктурни библиотеки с милиони седмични изтегляния като MSW поставят твърда граница на Node.js 22+ и премахват CJS артефактите, това ускорява модернизацията на целия корпоративен стек. Макар да създава краткосрочно триене за организации с остарели CI/CD конвейери (например базирани на по-стари конфигурации на Jest без експериментална ESM поддръжка или наследени Node 18/20 контейнери), премахването на над 40% от обема на пакета води до директни икономии на трафик, дисково пространство и време за стартиране (cold-start) в облачните среди за непрекъсната интеграция.</p>
+<p>Второ, <strong>преместването на мрежовата виртуализация на ниво TCP/TLS сокети променя стандарта за достоверност на интеграционните тестове</strong>. С навлизането на агентни системи с изкуствен интелект, автоматизирани генератори на код и микросервизни архитектури, тестовете вече не могат да разчитат на повърхностни макети (mocks) на функции в паметта, които скриват реалното сериализиране на данни, TLS ръкостискането, потоците от байтове и CORS политиките. Самият факт, че прихващането на <code>OPTIONS</code> preflight заявки чупи съществуващи тестове, доказва колко много интеграционни проверки досега са функционирали в изкуствено опростена среда, пропускаща реалните протоколни изисквания на мрежата.</p>
+<p>Трето, <strong>обединяването на синхронни заявки и двупосочни потоци (GraphQL Subscriptions) под единна декларативна шапка (<code>defineNetwork</code>)</strong> отговаря на еволюцията на уеб приложенията към събитийно-ориентирани интерфейси в реално време. Вместо разделяне на тестовата стратегия между REST/GraphQL симулатори и тежки E2E среди за поточен трафик, инженерните екипи получават детерминиран контрол върху целия транспортен слой — от суровия TCP сокет до приложната GraphQL схема.</p>
+<p><img src="/articles/2026/11/26/mock-service-worker-v3-esm-socket-interception/infographic.png" alt=""><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/mock-service-worker-v3/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ — Mock Service Worker Releases v3.0 with ESM-Only Build, Socket-Based Interception and GraphQL Subs</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/mock-service-worker.html">Mock Service Worker (MSW)</a><p>Библиотека за симулиране и прихващане на API заявки в JavaScript и Node.</p></li><li><a href="/pages/nodejs.html">Node.js</a><p>Кросплатформена сървърна среда с отворен код за изпълнение на JavaScript код извън уеб браузър, базирана на двигателя V8.</p></li><li><a href="/pages/graphql.html">GraphQL</a><p>GraphQL е език за заявки към приложни програмни интерфейси (API) и софтуерна среда за изпълнението им, разработен първоначално от Meta през 2012 г.</p></li><li><a href="/pages/javascript.html">JavaScript</a><p>JavaScript е основният език за програмиране в уеб браузърите, позволяващ създаването на интерактивно съдържание.</p></li><li><a href="/pages/infoq.html">InfoQ</a><p>InfoQ е водеща независима онлайн общност и издателска платформа за професионалисти в областта на софтуерната разработка.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

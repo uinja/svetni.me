@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: BleepingComputer / 1Password
+Компанията за управление на пароли и корпоративна идентичност 1Password официално разкри пробив в сигурността на данните, след като корпоративният акаунт на н..."><title>1Password разкри пробив в клиентски данни след компрометиран GitHub акаунт и инжектиране на код в бекенд услугите - Светни.ме</title><meta property="og:title" content="1Password разкри пробив в клиентски данни след компрометиран GitHub акаунт и инжектиране на код в бекенд услугите - Светни.ме"><meta property="og:description" content="Източник: BleepingComputer / 1Password
+Компанията за управление на пароли и корпоративна идентичност 1Password официално разкри пробив в сигурността на данните, след като корпоративният акаунт на н..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/26/1password-github-breach-customer-data-stolen/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/26/1password-github-breach-customer-data-stolen/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>1Password разкри пробив в клиентски данни след компрометиран GitHub акаунт и инжектиране на код в бекенд услугите</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->26 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/26/1password-github-breach-customer-data-stolen/hero.png" alt="Илюстрация на логото на 1Password върху двоичен код"><br><small>Източник: BleepingComputer / 1Password</small></p>
+<p>Компанията за управление на пароли и корпоративна идентичност <a href="/pages/1password.html">1Password</a> официално разкри пробив в сигурността на данните, след като корпоративният акаунт на неин служител в платформата <a href="/pages/github.html">GitHub</a> е бил компрометиран и използван за внедряване на зловреден код директно в бекенд услугите на доставчика [1][2]. Според репортажа на Лорънс Ейбрамс за изданието <a href="/pages/bleepingcomputer.html">BleepingComputer</a>, базирано на официалното оповестяване на инцидента от 26 ноември 2026 г., нападателят е успял да изтегли записи за потребителски акаунти и вътрешен изходен код, преди атаката да бъде неутрализирана [1][2].</p>
+<p>Въпреки успешното проникване във вътрешната развойна и сървърна среда, от 1Password подчертават, че самите трезори с пароли на клиентите (password vaults) и криптографските ключове, които ги защитават, не са били компрометирани [1][2]. Инцидентът засяга ограничен брой потребители, които вече са уведомени индивидуално, но случаят поставя под нов фокус уязвимостта на веригите за доставка на софтуер (CI/CD) при доставчиците на критична инфраструктура за сигурност [1].</p>
+<h2>Анатомия на инцидента: От компрометиран GitHub профил до CI/CD конвейера</h2>
+<p>Разследването на пробива започва на 19 ноември 2026 г., когато екипите по сигурността на 1Password засичат индикатори за неоторизиран достъп до корпоративен GitHub акаунт на служител [1][2]. Чрез придобитите права за достъп атакуващият не просто е клонирал частни хранилища с изходен код (private source code repositories), но е навлязъл и в средата за непрекъсната интеграция и непрекъсната доставка (CI/CD) на компанията [1].</p>
+<p>Достъпът до CI/CD конвейера е позволил на злонамерения актьор потенциално да разкрие вътрешни инфраструктурни идентификационни данни и да инжектира модифициран зловреден код в продукционни бекенд услуги на 1Password [1][2]. Внедреният код е бил специално проектиран да извлича и ексфилтрира записи за клиентски акаунти от сървърните бази данни, обслужващи управлението на профилите [1].</p>
+<p>Веднага след локализирането на вектора на атаката компанията е деактивирала компрометирания GitHub профил, анулирала е откраднатите токени за достъп, възстановила е чисти версии на засегнатите бекенд услуги и е извършила пълна ротация и обезсилване на потенциално изложените инфраструктурни ключове [1][2]. За независима верификация на процеса по възстановяване са ангажирани външни експерти по киберсигурност, като до момента вътрешният одит не е открил доказателства за успешно превземане на клиентски акаунти [1].</p>
+<h2>Обхват на ексфилтрираните данни и криптографска изолация на трезорите</h2>
+<p>Публикуваният от 1Password технически доклад детайлизира точния набор от метаданни и системни параметри, които са били извлечени чрез инжектирания в бекенда код [1][2]:</p>
+<ul>
+<li><strong>Идентификационни метаданни:</strong> Имена и имейл адреси на клиенти, както и уникални идентификатори на акаунти и потребители (Account &amp; User IDs) [1].</li>
+<li><strong>Оперативни времеви маркери:</strong> Дати и часове на създаване на акаунтите, както и времеви печати на последното влизане в системата [1].</li>
+<li><strong>Криптографски и протоколни параметри:</strong> Публични криптографски ключове и параметри на протокола Secure Remote Password (SRP) [1].</li>
+<li><strong>Служебни токени:</strong> Токени за покани (invitation), провизиране на акаунти (provisioning) и възстановяване на достъп (account recovery), както и допълнителни вътрешни метаданни за профилите [1].</li>
+<li><strong>Интелектуална собственост:</strong> Вътрешен фирмен изходен код от частните хранилища на компанията [1].</li>
+</ul>
+<p>Причината този пробив в сървърния бекенд да не доведе до компрометиране на съхраняваните пароли се крие в т.нар. архитектура с нулево знание (Zero-Knowledge Architecture) и двусекретния криптографски модел на 1Password. Ключовете за декриптиране на трезорите се извличат локално на устройството на потребителя чрез комбинация от неговата главна парола (Master Password) и 128-битов таен ключ (Secret Key), които никога не се предават и не се съхраняват на сървърите на компанията [1]. Дори изтеклите параметри на протокола SRP (Secure Remote Password) служат единствено за криптографско доказване на знанието на паролата при автентикация без изпращане на самата парола по мрежата, а високата ентропия на Secret Key прави офлайн атаките за разбиване на SRP верификаторите изчислително неосъществими.</p>
+<h2>Защита на токените за възстановяване и противодействие на атаки с груба сила</h2>
+<p>Особено внимание в разследването е отделено на откраднатите токени за провизиране и възстановяване на акаунти, които стандартно се вграждат в URL връзките, изпращани по имейл до потребителите при приемане на корпоративна покана или при процедура за възстановяване на достъп [1][2].</p>
+<p>От 1Password поясняват, че тези токени сами по себе си не са достатъчни за неоторизиран достъп до потребителски профил [1]. Завършването на процеса по приемане на покана или възстановяване на акаунт изисква задължителна вторична верификация: или чрез корпоративна система за единно влизане (Single Sign-On – SSO), или чрез въвеждане на еднократен верификационен код, изпратен до регистрирания имейл адрес на съответния потребител [1][2].</p>
+<p>Въпреки че всички компрометирани токени са били незабавно анулирани, инженерният екип на 1Password е предприел превантивна архитектурна промяна срещу потенциални атаки с груба сила (brute-force) върху кодовете за потвърждение. Дължината и сложността на верификационните кодове са надградени от 6 цифрови знака ($10^6$ възможни комбинации) до 10 буквено-цифрови символа, което експоненциално увеличава пространството на търсене и прави автоматизираното налучкване практически невъзможно [1][2].</p>
+<h2>Системни и архитектурни последици: Сигурността на CI/CD веригите и асиметрията на метаданните при Zero-Knowledge платформите</h2>
+<p>Пробивът в инфраструктурата на 1Password очертава фундаментална трансформация в моделите на заплахи срещу съвременните криптографски платформи и облачни услуги за сигурност. Когато клиентското криптиране от край до край (End-to-End Encryption) е математически устойчиво, атакуващите групи пренасочват ресурсите си от директна криптоанализа към компрометиране на контролната равнина (control plane) и развойните конвейери.</p>
+<p>На първо място, инцидентът демонстрира как един-единствен компрометиран развоен акаунт в GitHub може да послужи като мост към продукционния бекенд чрез CI/CD автоматизацията. В модерните DevSecOps среди хранилищата за код и конвейерите за деплоймънт често разполагат с високопривилегировани сервизни токени за автоматично обновяване на микроуслуги. Ако злонамерен код премине през процеса на сглобяване и бъде внедрен в бекенд услугите, той оперира с пълните права на самата сървърна среда. Това налага строга сегментация между правата за писане в хранилища и правата за продукционен деплоймънт, задължително криптографско подписване на комитите с хардуерни ключове (FIDO2/WebAuthn), ефемерни среди за компилация и многостранно одобрение (multi-party authorization) преди всяко изменение в продукционния код.</p>
+<p>На второ място, случаят разкрива структурната асиметрия между защитата на криптираното съдържание и експозицията на метаданните. Макар архитектурата с нулево знание да гарантира, че съдържанието на трезорите остава недостъпно за самия доставчик и за нападатели, проникнали в бекенда, сървърната логика неизбежно оперира с незащитени в покой или декриптирани в паметта метаданни – имена, имейл адреси, времеви печати на активност и организационна структура [1]. За киберпрестъпните групи валидираният списък с реални потребители на мениджър на пароли представлява високоценен актив за насочени фишинг кампании (spear-phishing) [1].</p>
+<p>Тъй като 1Password не изисква от клиентите си да сменят своите главни пароли или Secret Keys след инцидента, основният оперативен риск се измества към социалното инженерство [1][2]. Нападателите могат да използват откраднатите имена, имейли и точни данни за последно влизане, за да конструират изключително убедителни фалшиви известия от името на 1Password – например искания за „спешна верификация след пробива в сигурността&quot; или примамки за въвеждане на Master Password, Secret Key и кодове за възстановяване върху контролирани от атакуващите фишинг домейни [1]. За корпоративните и индивидуалните потребители това означава, че защитата на криптографския трезор в крайна сметка зависи от строгата дисциплина никога да не се следват хипервръзки от неочаквани имейли за сигурност и автентикацията да се извършва единствено през официалните локални приложения или директно през верифицирания домейн на платформата [1].</p>
+<p><img src="/articles/2026/11/26/1password-github-breach-customer-data-stolen/infographic.png" alt="Инфографика за пробива в GitHub и CI/CD инфраструктурата на 1Password"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове на инцидента при 1Password</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/">BleepingComputer – 1Password customer data stolen after employee GitHub account breach</a></li>
+<li><a href="https://1password.com/blog/update-on-nov-2026-security-incident">1Password Blog – Update on November 2026 Security Incident</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/1password.html">1Password</a><p>1Password е водеща платформа за управление на пароли, корпоративна идентичност и криптографски ключове, разработваща делегирани протоколи за автентика...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/bleepingcomputer.html">BleepingComputer</a><p>BleepingComputer е водещ уебсайт за новини в областта на киберсигурността и технологиите.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
