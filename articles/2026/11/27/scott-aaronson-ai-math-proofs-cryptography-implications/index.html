@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / OpenAI
+Доказването на хипотезата на Риман само по себе си вероятно не би променило ежедневието на обикновения човек, но фактът, че система с изкуствен интелект вече може сам..."><title>Скот Ааронсън: Способността на ИИ да извежда математически доказателства е по-важна от самата хипотеза на Риман - Светни.ме</title><meta property="og:title" content="Скот Ааронсън: Способността на ИИ да извежда математически доказателства е по-важна от самата хипотеза на Риман - Светни.ме"><meta property="og:description" content="Източник: The Decoder / OpenAI
+Доказването на хипотезата на Риман само по себе си вероятно не би променило ежедневието на обикновения човек, но фактът, че система с изкуствен интелект вече може сам..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/scott-aaronson-ai-math-proofs-cryptography-implications/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/scott-aaronson-ai-math-proofs-cryptography-implications/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Скот Ааронсън: Способността на ИИ да извежда математически доказателства е по-важна от самата хипотеза на Риман</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/27/scott-aaronson-ai-math-proofs-cryptography-implications/hero.png" alt=""><br><small>Източник: The Decoder / OpenAI</small></p>
+<p>Доказването на хипотезата на Риман само по себе си вероятно не би променило ежедневието на обикновения човек, но фактът, че система с изкуствен интелект вече може самостоятелно да генерира фундаментални математически доказателства от такъв ранг, има колосални последици за глобалната икономика и сигурността на цивилизацията [1]. Това е основната теза в новия анализ на теоретичния информатик и бивш изследовател по безопасност на ИИ в <a href="/pages/openai.html">OpenAI</a> <a href="/pages/scott-aaronson.html">Скот Ааронсън</a>, който понастоящем е професор по компютърни науки в <a href="/pages/university-of-texas-at-austin.html">Тексаския университет в Остин</a> [1, 2].</p>
+<p>В публикация в своя научен блог <em>Shtetl-Optimized</em> Ааронсън анализира серия от нови математически резултати на OpenAI в областта на изчислителната сложност и предупреждава, че е „практически сигурен от множество надеждни източници“, че водещите ИИ лаборатории вече разполагат с непубликувани пробиви с характер на „бомби със закъснител“ в сферата на <a href="/pages/cryptography.html">криптографията</a> [1, 2]. Според него свеждането на математическите постижения на ИИ единствено до въпроса за непосредствената им практическа приложимост пропуска най-важния структурен сигнал: автоматизирането на абстрактното формално мислене на ниво, което досега беше изключителен монопол на най-елитните човешки математици [1].</p>
+<h2>Доказателствата на OpenAI и твърдите долни граници на алгоритмите</h2>
+<p>В центъра на техническия анализ на Скот Ааронсън стоят два конкретни пробива на изследователските системи на OpenAI, които засягат фундаментални алгоритмични операции в компютърните науки: умножението на матрици и преобразуванието на Фурие [1, 2].</p>
+<p>При умножението на матрици — операция, която е гръбнакът на съвременното машинно обучение, компютърната графика и научните симулации — ключовият теоретичен въпрос е колко бързо нараства изчислителната цена с увеличаването на размерността на матриците [1]. Докато десетилетия наред изследователите търсеха по-бързи алгоритми (т.нар. горни граници на сложността), новият резултат на OpenAI добавя съвпадаща <strong>долна граница</strong> (<em>lower bound</em>) към вече съществуващ бърз алгоритъм [1, 2]. По този начин системата доказва строго колко точно може да спадне изчислителната цена в рамките на изследвания математически модел и къде оптимизацията се сблъсква с непреодолима теоретична стена [1].</p>
+<p>Аналогичен двоен резултат е постигнат и при преобразуванието на Фурие — базовия математически инструмент за обработка на аудио, изображения и радиочестотни сигнали [1]. Системата на OpenAI едновременно е открила по-бърз метод за неговото изчисляване и е формулирала строго доказателство за долна граница, потвърждаващо, че операцията не може да бъде извършена съществено по-бързо от новооткрития праг [1, 2].</p>
+<pre><code class="hljs language-mermaid">flowchart LR
+    subgraph UpperBounds<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Горни граници (Конструктивни алгоритми)&quot;</span>]</span>
+        U1<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Нови евристични и точни алгоритми&quot;</span>]</span>
+        U2<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Понижаване на изчислителната цена O(n^ω)&quot;</span>]</span>
+        U1 --&gt; U2
+    end
+
+    subgraph AIConvergence<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Математически синтез чрез ИИ (OpenAI)&quot;</span>]</span>
+        C1<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Съвпадаща граница на оптималност (Матрично умножение и Фурие)&quot;</span>]</span>
+    end
+
+    subgraph LowerBounds<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Долни граници (Теория на сложността)&quot;</span>]</span>
+        L1<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Доказателства за невъзможност&quot;</span>]</span>
+        L2<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Твърд теоретичен лимит на ускорението&quot;</span>]</span>
+        L1 --&gt; L2
+    end
+
+    U2 --&gt; C1
+    L2 --&gt; C1
+
+    style UpperBounds <span class="hljs-attribute">fill</span>:<span class="hljs-number">#e3f2fd</span>,stroke:<span class="hljs-number">#1565c0</span>,stroke-width:<span class="hljs-number">2px</span>,color:<span class="hljs-number">#0d47a1</span>
+    style LowerBounds fill:<span class="hljs-number">#fce4ec</span>,stroke:<span class="hljs-number">#c2185b</span>,stroke-width:<span class="hljs-number">2px</span>,color:<span class="hljs-number">#880e4f</span>
+    style AIConvergence fill:<span class="hljs-number">#e8f5e9</span>,stroke:<span class="hljs-number">#2e7d32</span>,stroke-width:<span class="hljs-number">2px</span>,color:<span class="hljs-number">#1b5e20</span>
+    style U1 fill:<span class="hljs-number">#ffffff</span>,stroke:<span class="hljs-number">#1565c0</span>,color:<span class="hljs-number">#0d47a1</span>
+    style U2 fill:<span class="hljs-number">#ffffff</span>,stroke:<span class="hljs-number">#1565c0</span>,color:<span class="hljs-number">#0d47a1</span>
+    style L1 fill:<span class="hljs-number">#ffffff</span>,stroke:<span class="hljs-number">#c2185b</span>,color:<span class="hljs-number">#880e4f</span>
+    style L2 fill:<span class="hljs-number">#ffffff</span>,stroke:<span class="hljs-number">#c2185b</span>,color:<span class="hljs-number">#880e4f</span>
+    style C1 fill:<span class="hljs-number">#ffffff</span>,stroke:<span class="hljs-number">#2e7d32</span>,color:<span class="hljs-number">#1b5e20</span></code></pre><p>Ааронсън обръща специално внимание именно на доказателствата за долни граници [1]. В теоретичната информатика създаването на по-бърз алгоритъм поставя нов рекорд, но доказването на долна граница е несравнимо по-трудно, тъй като изисква да се докаже математически, че <em>никой възможен алгоритъм</em> в дадения клас не може да надмине определен праг на ефективност [1, 2].</p>
+<table>
+<thead>
+<tr>
+<th align="left">Изчислителна област</th>
+<th align="left">Постигнат резултат от системата на OpenAI</th>
+<th align="left">Теоретично и практическо значение</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Умножение на матрици</strong></td>
+<td align="left">Извеждане на съвпадаща долна граница към съществуващ бърз алгоритъм [1, 2]</td>
+<td align="left">Дефинира абсолютния минимум на изчислителната цена в изследвания модел [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Преобразувание на Фурие</strong></td>
+<td align="left">Откриване на по-бърз алгоритъм + доказателство за долна граница [1, 2]</td>
+<td align="left">Оптимизира фундаментална операция за цифрова обработка на сигнали и доказва нейния лимит [1]</td>
+</tr>
+<tr>
+<td align="left"><strong>Проблемът P срещу NP</strong></td>
+<td align="left">Систематично разширяване на методите за доказване на долни граници [1]</td>
+<td align="left">Увеличава вероятността за формално доказателство на неравенството $P \neq NP$ [1, 2]</td>
+</tr>
+<tr>
+<td align="left"><strong>Криптографски анализ</strong></td>
+<td align="left">Вътрешни тестове на ИИ модели върху криптографски примитиви [1, 3]</td>
+<td align="left">Потенциални непубликувани пробиви („бомби“) в сигурността на съвременните шифри [1]</td>
+</tr>
+</tbody></table>
+<h2>Новият континент на математическата истина и проблемът P срещу NP</h2>
+<p>Според Ааронсън наблюдаваните резултати не са изолирани единични попадения, а свидетелство за качествена фазова промяна в начина, по който се развива математиката [1].</p>
+<blockquote>
+<p>„Вече е очевидно, че няма да получаваме просто единични решения на този или онзи въпрос от теорията на сложността, а цял нов континент от математическа истина — такъв, който досега само сме зървали през мъглата.“<br>— Скот Ааронсън, професор в Тексаския университет в Остин [1, 2]</p>
+</blockquote>
+<p>Този пробив в автоматизираното доказване на долни граници радикално променя и оценката на Ааронсън за най-големия отворен въпрос в компютърните науки — проблема <strong>P срещу NP</strong> (<em>P versus NP</em>) [1]. Въпросът, един от седемте Проблема на хилядолетието на Математическия институт „Клей“, пита дали всяка задача, чието решение може да бъде проверено бързо (в полиномиално време) от компютър, може също така да бъде и решена бързо от нулата [1].</p>
+<p>Въпреки че огромното мнозинство от информатиците предполагат, че отговорът е отрицателен ($P \neq NP$), десетилетия наред човешките опити за формално доказателство се разбиваха в т.нар. релативизиращи, естествени и алгебризиращи бариери. Тъй като доказването на $P \neq NP$ по своята същност е върховното доказателство за долна граница, способността на ИИ системите да конструират сложни вериги от такива доказателства кара Ааронсън да заяви: „За първи път в живота си усещам до мозъка на костите си, че доказателството на $P \neq NP$ не е далеч“ [1, 2].</p>
+<h2>Системни, архитектурни и макроикономически последици: Криптографският хоризонт и автоматизацията на теоретичната наука</h2>
+<p>Преходът на системите с изкуствен интелект от статистическо разпознаване на образи към строго доказване на долни граници в теорията на сложността носи дълбоки структурни последици, които далеч надхвърлят академичната математика [1]:</p>
+<ol>
+<li><strong>Криптографският риск и асиметрията на информационната сигурност:</strong> Най-непосредственото предупреждение в анализа на Скот Ааронсън засяга глобалната цифрова сигурност [1]. Още през октомври 2026 г. той разкри, че водещите лаборатории за изкуствен интелект активно тестват дали техните модели за разсъждение могат да компрометират реални криптографски системи [1, 3]. Сегашното му твърдение, че е „практически сигурен от множество надеждни източници“ за наличието на един или повече непубликувани криптографски пробиви в лабораториите, поставя критичен въпрос пред индустрията [1]. Съвременната интернет търговия, банковата система и държавните комуникации разчитат на допускането, че определени математически задачи (като факторизацията на големи числа или дискретния логаритъм върху елиптични криви) са изчислително трудни. Ако ИИ моделите открият алгебрични преки пътища или структурни слабости в стандартните криптографски примитиви преди публичната научна общност, възниква безпрецедентен прозорец на стратегическа уязвимост.</li>
+<li><strong>Парадоксалното двойно действие върху криптографията:</strong> Същите инструменти на ИИ засягат криптографията в две противоположно насочени посоки. От една страна, търсенето на по-бързи алгоритми (горни граници) може да разруши съществуващи шифри [1, 3]. От друга страна, способността на ИИ да извежда строги долни граници и евентуално да докаже $P \neq NP$ би могла за първи път в историята да постави криптографията върху безусловна математическа основа — замествайки днешните недоказани евристични допускания за трудност със строго доказани граници на неразбиваемост [1, 2].</li>
+<li><strong>Край на евристичното проектиране на базови алгоритми:</strong> В индустриалния софтуерен стек умножението на матрици и бързото преобразувание на Фурие (FFT) се изпълняват милиарди пъти в секунда в центровете за данни, телекомуникационните мрежи и хардуерните ускорители за ИИ [1]. Когато една ИИ система едновременно открие по-бърз алгоритъм и докаже неговата съвпадаща долна граница, инженерната индустрия достига до <em>доказуемо оптимален код</em> [1, 2]. Това означава, че производителите на чипове и компилатори могат да проектират хардуерни блокове около математически окончателни алгоритми, знаейки със сигурност, че по-добра асимптотична схема не съществува.</li>
+<li><strong>Макроикономическа трансформация и екзистенциален мащаб:</strong> Ааронсън осмива скептицизма от типа „интересувам се от доказателството на Риман само ако ми помогне да направя по-остро копие“ като опасно късогледство [1]. Когато изкуственият интелект овладее способността да навигира в пространства от формални абстракции, които са недостъпни за човешкия когнитивен капацитет, същият механизъм за синтез се пренася директно върху дизайна на нови материали, квантовата физика, системната биология и стратегическото планиране [1]. Именно тази универсалност на абстрактното математическо разсъждение обяснява защо според Ааронсън последиците обхващат целия спектър — от преструктуриране на световната икономика до екзистенциални рискове за живота на Земята [1].</li>
+</ol>
+<p><img src="/articles/2026/11/27/scott-aaronson-ai-math-proofs-cryptography-implications/infographic.png" alt=""><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/">The Decoder – Former OpenAI researcher says the Riemann proof matters less than the fact that an AI system can produce it</a></li>
+<li><a href="https://scottaaronson.blog/?p=10379">Shtetl-Optimized (Scott Aaronson&#39;s Blog) – Analysis of OpenAI&#39;s Complexity and Lower-Bound Proofs</a></li>
+<li><a href="https://scottaaronson.blog/?p=10169">Shtetl-Optimized (Scott Aaronson&#39;s Blog) – AI Labs and Cryptographic Vulnerability Evaluations</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/scott-aaronson.html">Скот Ааронсън (Scott Aaronson)</a><p>Скот Ааронсън е един от водещите световни теоретици по квантова сложност, известен с изследванията си върху границите на квантовото надмощие и безопас...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/university-of-texas-at-austin.html">University of Texas at Austin</a><p>Водещ обществен изследователски университет в Остин, Тексас, САЩ, известен със своите програми по компютърни науки, квантова информатика и теория на и...</p></li><li><a href="/pages/cryptography.html">Криптография (Cryptography)</a><p>Криптографията е наука за сигурната комуникация и защитата на информация чрез математически протоколи, шифри и дигитални подписи.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

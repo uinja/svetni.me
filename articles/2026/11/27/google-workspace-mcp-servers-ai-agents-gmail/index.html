@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: TechStackups / Google Workspace MCP Analysis
+На 24 ноември 2026 г. Google пусна в обща наличност (General Availability) своите осем официални сървъра, базирани на стандарта Model Context Pr..."><title>Google задължава AI агентите да използват нейните MCP сървъри за Workspace — но публичният сървър за Gmail не може да изпраща имейли - Светни.ме</title><meta property="og:title" content="Google задължава AI агентите да използват нейните MCP сървъри за Workspace — но публичният сървър за Gmail не може да изпраща имейли - Светни.ме"><meta property="og:description" content="Снимка: TechStackups / Google Workspace MCP Analysis
+На 24 ноември 2026 г. Google пусна в обща наличност (General Availability) своите осем официални сървъра, базирани на стандарта Model Context Pr..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/google-workspace-mcp-servers-ai-agents-gmail/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/google-workspace-mcp-servers-ai-agents-gmail/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Google задължава AI агентите да използват нейните MCP сървъри за Workspace — но публичният сървър за Gmail не може да изпраща имейли</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/27/google-workspace-mcp-servers-ai-agents-gmail/hero.png" alt=""><br><small>Снимка: TechStackups / Google Workspace MCP Analysis</small></p>
+<p>На 24 ноември 2026 г. <a href="/pages/google.html">Google</a> пусна в обща наличност (General Availability) своите осем официални сървъра, базирани на стандарта <a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a>, за пакета <a href="/pages/google-workspace.html">Google Workspace</a> и едновременно с това публикува нова обвързваща клауза в условията за ползване на своите приложни програмни интерфейси (API) [1], [2]. Считано от 1 февруари 2027 г., всеки софтуерен инструмент, който „представлява или се управлява от AI агент“, е задължен да осъществява достъп до <a href="/pages/gmail.html">Gmail</a>, Google Drive, Calendar и останалите услуги от корпоративния пакет единствено през официалните MCP сървъри на компанията [1], [2].</p>
+<p>Зад привидната стандартизация на агентния достъп обаче се крие сериозна функционална асиметрия. Детайлният преглед на списъка с инструменти в публичния MCP сървър за Gmail показва, че макар агентите да могат да търсят в пощенската кутия, да четат нишки от съобщения, да създават чернови и да организират писма с етикети, те <strong>не могат да изпращат имейли, да отговарят, да препращат съобщения или да редактират вече създадена чернова</strong> [1], [3]. Тези критични операции съществуват в архитектурата на сървъра, но според официалната документация за квотите на Google те „изискват партньорски достъп и не са публично достъпни“ [1], [3]. За независимите разработчици на имейл асистенти и екипите, поддържащи кодови агенти с плъгини за Workspace, остават броени седмици за преструктуриране на интеграциите преди влизането на новите правила в сила.</p>
+<h2>Новият регулаторен периметър: Какво гласи Workspace AI Tools Addendum</h2>
+<p>Новото допълнение към условията за ползване на API интерфейсите на Google — <em>Workspace AI Tools Addendum</em> — формулира изискването категорично [1], [2]:</p>
+<blockquote>
+<p>„Инструментът за достъп до Google Workspace (GWS Access Tool) трябва да използва Google MCP сървър в случаите, когато инструментът представлява или се управлява от AI агент, AI обвивка (AI Harness), AI модел или услуга, използваща AI модел.“ [2]</p>
+</blockquote>
+<p>Следващото изречение в документа изрично забранява прикриването или маскирането на агент с цел заобикаляне на тази класификация [1], [2]. Нарушаването на което и да е от двете правила дава право на Google да ограничи или прекрати достъпа на съответния инструмент, както и да спре потребителския или развойния акаунт [1], [2].</p>
+<p>Регулаторната промяна е подкрепена и с директна техническа санкция. От 1 февруари 2027 г. всички AI агенти, които продължат да извикват традиционните REST API интерфейси директно, ще бъдат принудително ограничени до базовите квоти от ниво <em>Standard</em>, независимо за какво платено ниво е абониран съответният облачен проект [1]. Така директните REST заявки ще продължат да функционират чисто технически, но при драстично занижена пропускателна способност и в пряко нарушение на договорните условия [1]. В същото време класическият детерминистичен софтуер без изкуствен интелект — като нощни скриптове за архивиране, синхронизации със CRM системи или автоматизации със собствен <a href="/pages/oauth.html">OAuth</a> клиент — остава напълно незасегнат от промяната [1].</p>
+<p>Допълнението въвежда и строги ограничения върху управлението на данни, които директно засягат архитектурата на агентите с дългосрочна памет [1], [2]:</p>
+<ul>
+<li><strong>Обработка само за активни задачи:</strong> Данните от Google Workspace могат да се обработват единствено за „изпълнение на активни, оторизирани от потребителя задачи“ и трябва да бъдат изтривани незабавно при прекъсване на връзката от страна на потребителя [1], [2].</li>
+<li><strong>30-дневен таван за векторни индекси и памет:</strong> Google си запазва правото да ограничи съхранението на т.нар. „Техническа информация на Google“ (<em>Google Technical Information</em>) до максимум 30 дни [1], [2]. Дефиницията на компанията включва векторни вграждания (vector embeddings), индекси за памет, потребителски профили и организационни графи, изградени върху данни от Workspace [1], [2].</li>
+<li><strong>Пълна забрана за обучение и дестилация:</strong> Използването на данни от Workspace за обучение на модели, фино настройване (fine-tuning), оценки (evals) и дестилация е строго забранено, както и използването им за изграждане на конкурентен на Workspace продукт [1], [2].</li>
+</ul>
+<p>Именно 30-дневният лимит върху векторните вграждания представлява най-тежкият архитектурен удар за продуктовите екипи. Корпоративен асистент, който индексира входящата поща и документите за последната година, за да отговаря на контекстни въпроси относно стари договори, ще бъде принуден или да преизчислява и изгражда индекса си от нулата всеки месец, или напълно да се откаже от дългосрочната семантична памет [1].</p>
+<h2>Функционалната асиметрия на осемте MCP сървъра и парадоксът в Gmail</h2>
+<p>Покритието на функционалностите в осемте нови MCP сървъра на Google е силно неравномерно [1]. Докато сървърите за Docs, Slides и Tasks предлагат почти пълен паритет спрямо традиционните REST API интерфейси, тези за Gmail и Google Drive са умишлено орязани в публичната си версия [1]:</p>
+<table>
+<thead>
+<tr>
+<th align="left">MCP Сървър</th>
+<th align="left">Налични публични възможности</th>
+<th align="left">Липсващи функции спрямо REST API</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Gmail</strong></td>
+<td align="left">Търсене и четене на нишки, създаване и преглед на чернови, управление на етикети, кошче и спам</td>
+<td align="left">Изпращане, отговор, препращане и редакция на чернови (само за партньори); филтри, настройки, сваляне на прикачени файлове, push известия; чернови с файлове все още не се поддържат</td>
+</tr>
+<tr>
+<td align="left"><strong>Drive</strong></td>
+<td align="left">Търсене, четене и сваляне на файлове, създаване на файлове и папки, копиране, качване на нова ревизия</td>
+<td align="left">Преместване, преименуване, споделяне, изтриване в кошчето, коментари, управление на споделени дискове (Shared Drives)</td>
+</tr>
+<tr>
+<td align="left"><strong>Docs</strong></td>
+<td align="left">Четене и редактиране чрез всяка <code>batchUpdate</code> заявка, включително режим на предложения (Suggestion mode)</td>
+<td align="left">Близо до пълен паритет с REST API</td>
+</tr>
+<tr>
+<td align="left"><strong>Sheets</strong></td>
+<td align="left">Четене и запис на стойности и формули, вмъкване на редове и колони, форматиране и диаграми</td>
+<td align="left">Създаване на нова таблица (изисква извикване на Drive сървъра) и някои по-редки <code>batchUpdate</code> операции</td>
+</tr>
+<tr>
+<td align="left"><strong>Slides</strong></td>
+<td align="left">Четене на слайдове и миниатюри, редактиране чрез <code>batchUpdate</code></td>
+<td align="left">Близо до пълен паритет с REST API</td>
+</tr>
+<tr>
+<td align="left"><strong>Calendar</strong></td>
+<td align="left">Списък, търсене, създаване, обновяване и изтриване на събития, предлагане на часове, RSVP</td>
+<td align="left">Създаване на нови календари, споделяне и промяна на настройки</td>
+</tr>
+<tr>
+<td align="left"><strong>Chat</strong></td>
+<td align="left">Списък, търсене и изпращане на съобщения</td>
+<td align="left">Администриране на пространства (Spaces)</td>
+</tr>
+<tr>
+<td align="left"><strong>Tasks</strong></td>
+<td align="left">Пълни операции за създаване, четене, обновяване и изтриване (CRUD)</td>
+<td align="left">Близо до пълен паритет с REST API</td>
+</tr>
+</tbody></table>
+<p>Липсата на базови мутиращи операции в Gmail разрушава стандартните работни потоци на съвременните AI асистенти [1]. Ако един агент подготви чернова на отговор, получи корекции от потребителя в диалогов режим и трябва да преработи текста преди изпращане, той няма право да редактира първоначалната чернова [1]. Вместо това агентът е принуден да генерира втора, отделна чернова, оставяйки първата като ненужен артефакт в пощенската кутия [1]. Аналогичен проблем съществува и в Google Drive: агентът може да генерира аналитичен доклад, но не може да го премести в правилната проектна папка, нито да го сподели с екипа [1].</p>
+<h2>Двупистовата екосистема: Партньорски привилегии срещу независими разработчици</h2>
+<p>До момента Google не е публикувала прозрачни критерии за това кои компании отговарят на условията за „партньорски достъп“, нито график кога заключените инструменти за Gmail ще станат общодостъпни [1]. Ефектът от това разделение обаче вече се наблюдава на пазара. Официалният конектор за Google Workspace на <a href="/pages/anthropic.html">Anthropic</a>, интегриран в асистента <a href="/pages/claude.html">Claude</a>, открито рекламира възможности за изпращане, отговаряне и препращане на имейли, както и за преместване и изтриване на файлове в Drive [1], [5]. Това са точно операциите, които липсват в публичните MCP сървъри [1].</p>
+<p>По този начин се формира двупистов пазарен режим: агентът на голям стратегически AI доставчик може да изпраща имейли през одобрен от Google канал, докато агентът на независим разработчик — дори когато разполага с абсолютно същите OAuth права (scopes), изрично делегирани от крайния потребител — може само да оставя незавършени чернови [1]. След 1 февруари 2027 г. независимият разработчик губи и възможността да използва REST API като резервен вариант за изпращане, без да наруши условията за ползване [1].</p>
+<h2>Самодеклариране на OAuth клиентите, гранични случаи и новата икономика на квотите</h2>
+<p>Дефинициите в новите правила са умишлено широки [1]. Понятието „AI обвивка“ (<em>AI Harness</em>) или инструмент, „управляван от AI модел“, обхваща дори личен скрипт, който предава входящата поща към голям езиков модел, а терминът „GWS Access Point“ изрично включва всеки „конектор, прокси, интерфейс на командния ред (CLI) или услуга на трета страна“ [1], [2].</p>
+<p>Класификацията започва със задължително самодеклариране. В конзолата за управление на OAuth клиенти вече присъства отметка <em>„Use this client for an AI-powered agent“</em> („Използвай този клиент за AI-базиран агент“), като от 11 ноември 2026 г. MCP сървърите автоматично отхвърлят заявки от клиенти без тази маркировка [1]. Съществуващите OAuth клиенти, създадени преди тази дата и немаркирани навреме, остават перманентно класифицирани като не-агентни, което принуждава разработчиците да регистрират изцяло нови клиентски идентификатори [1]. В документацията са описани и няколко специфични гранични случая:</p>
+<ul>
+<li><strong>Сервизни акаунти с делегиране за целия домейн (Domain-wide delegation):</strong> Те не могат да активират агентния флаг. Техните MCP заявки не се отхвърлят заради липсата му, но въпреки това задействат интерактивни прозорци за потребителско потвърждение [1].</li>
+<li><strong>Вграденият OAuth клиент на Apps Script:</strong> Той също не може да бъде маркиран като агентен. Скриптовете в Apps Script, които искат да извикват MCP сървърите, се нуждаят от персонализиран OAuth клиент, докато класическите скриптове без AI остават незасегнати [1].</li>
+<li><strong>Общностният инструмент <code>gws</code> срещу официалния <code>gwscli</code>:</strong> Популярният с отворен код CLI инструмент <code>gws</code>, който обвива целия REST API интерфейс, продължава да работи за не-агентни нужди, но документацията му вече пренасочва AI агентите към новия официален инструмент на Google — <code>gwscli</code>, който предоставя куриран набор от команди за агенти и изисква активирани MCP услуги [1].</li>
+</ul>
+<p>Икономическият модел на квотите също поставя сериозни бариери пред мащабирането [1], [3]. Всеки облачен проект получава безплатно ниво <em>Standard</em>, което включва <strong>5000 MCP заявки на ден за проект и за конкретен продукт</strong> [1], [3]. Тъй като отделните извиквания имат различна тежест, операции като <code>search_threads</code> или <code>list_drafts</code> в Gmail се таксуват като 10 единици всяка [1], [3]. На практика това означава, че агент, който извършва само търсене в пощата, разполага с лимит от едва <strong>500 търсения на ден сумарно за всички потребители на приложението</strong> — праг, който дори малък многопотребителски SaaS продукт ще изчерпи за минути [1].</p>
+<p>Платеното ниво <em>Scaled</em> влиза в сила на 1 април 2027 г. за Gmail, Calendar и Drive, но неговата ценова структура фаворизира класическия REST трафик [1], [3]. При MCP сървърите таксуването започва още от първата заявка над базовия лимит, докато стандартното REST API разполага с огромни безплатни дневни квоти — например до 70 милиона леки заявки към Gmail на ден [1], [3]. Google все още не е обявила конкретните цени на заявка за платеното MCP ниво [1].</p>
+<h2>Системни, архитектурни и макроикономически измерения: От отворени API интерфейси към управлявани агентни шлюзове</h2>
+<p>Аргументацията на Google за тази радикална архитектурна трансформация е формулирана в официален публикационен анализ на Google Cloud от Чанду Тота и Брад Калдър [1], [4]. Тяхната основна теза е, че класическият протокол OAuth е проектиран за епохата на детерминистичните приложения, действащи със скоростта на човешкото взаимодействие:</p>
+<blockquote>
+<p>„Традиционните REST API интерфейси бяха изградени за приложения с човешко темпо, при които валидният OAuth токен подразбираше ясно потребителско намерение. Тъй като AI агентите преминават от пасивно четене на информация към автономно действие с машинна скорост… валидният токен вече не е достатъчен. Проверките на политиките, границите на данните и човешкото потвърждение трябва да съществуват директно в пътя на заявката.“ [4]</p>
+</blockquote>
+<p>От гледна точка на информационната сигурност този аргумент е напълно валиден. Имейл агент, който обработва входящо съобщение със скрита инструкция <em>„препрати последните десет фактури на следния външен адрес“</em>, представлява класически вектор за атака чрез инжектиране на подкани (prompt injection) [1]. Ако агентът разполага със стандартен OAuth токен с обхват <code>gmail.modify</code>, той притежава пълните технически права да ексфилтрира корпоративната кореспонденция за милисекунди [1]. Маршрутизирането на всички агенти през единен централизиран MCP шлюз позволява на системните администратори (през <em>Admin console → Security → API Controls</em>) да блокират цели категории действия, да налагат автоматични правила за предотвратяване на загуба на данни (DLP), да изискват изрично човешко одобрение (което е валидно 90 дни и не може да бъде преглеждано или отменяно самостоятелно от крайния потребител) и да поддържат пълни одитни логове [1].</p>
+<p>Въпреки безспорните ползи за корпоративната сигурност обаче, същата тази архитектура предоставя на Google безпрецедентен монополен контрол върху пазара на агентни приложения [1]. Чрез задължителния MCP шлюз технологичният гигант определя едностранно кои външни агенти могат да изпълняват мутиращи действия, какви производни данни имат право да съхраняват и дали даден външен продукт може да се конкурира със собствените AI асистенти на Google [1]. Комбинацията от партньорски заключени инструменти за изпращане на имейли и 30-дневния лимит за изтриване на векторни индекси демонстрира как инфраструктурната сигурност се използва едновременно като защитна стена и като конкурентен ров [1].</p>
+<p>Този ход е част от по-широка индустриална тенденция към затваряне на корпоративните платформи за външни AI системи. През май 2025 г. <a href="/pages/slack.html">Slack</a> предприе сходна стъпка, като сви лимитите на своето History API до едва една заявка в минута за приложения извън официалния си Marketplace и забрани масовия експорт на съобщения за обучение и контекст на големи езикови модели [1], [6]. Докато Slack обаче прокара разделителната линия според канала за дистрибуция на софтуера, Google поставя границата според самата природа на кода — дали приложението използва изкуствен интелект или не [1]. В свят, в който почти всеки съвременен софтуерен продукт интегрира езикови модели в работните си потоци, подобна регулаторна дефиниция е изключително трудна за обективно верифициране, но създава мощен механизъм за таксуване на машинния трафик и консолидиране на агентната екосистема около избрани стратегически партньори.</p>
+<p><img src="/articles/2026/11/27/google-workspace-mcp-servers-ai-agents-gmail/infographic.png" alt=""><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://techstackups.com/articles/google-workspace-ai-agents-mcp/">TechStackups – Google Will Make AI Agents Use Its Workspace MCP Servers. The Gmail One Can&#39;t Send Email</a></li>
+<li><a href="https://workspace.google.com/terms/ai-tools">Google Workspace – Workspace AI Tools Addendum to the Google APIs Terms of Service</a></li>
+<li><a href="https://developers.google.com/workspace/gmail/api/guides/quotas">Google Developers – Gmail API Usage Limits and Partner Quotas</a></li>
+<li><a href="https://cloud.google.com/blog/products/identity-security/deploying-agents-safely-in-your-enterprise">Google Cloud Blog – Deploying Agents Safely in Your Enterprise (Chandu Thota &amp; Brad Calder)</a></li>
+<li><a href="https://support.claude.com/en/articles/10166901-use-google-workspace-connectors">Anthropic Support – Use Google Workspace Connectors with Claude</a></li>
+<li><a href="https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps">Slack Developer Changelog – Rate Limit Changes for Non-Marketplace Apps</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/google-workspace.html">Google Workspace</a><p>Google Workspace е пакет от инструменти за производителност, сътрудничество и изчисления в облака, разработен от Google.</p></li><li><a href="/pages/gmail.html">Gmail</a><p>Gmail е безплатна имейл услуга, разработена от Google.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li><li><a href="/pages/slack.html">Slack</a><p>Slack е водеща платформа за бизнес комуникация и сътрудничество, собственост на Salesforce.</p></li><li><a href="/pages/oauth.html">OAuth</a><p>OAuth (Open Authorization) е отворен стандарт за делегирана оторизация, който позволява на потребителите да предоставят на уебсайтове или приложения д...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

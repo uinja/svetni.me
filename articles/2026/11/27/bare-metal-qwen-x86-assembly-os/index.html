@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: alesha-pro / llm.asm (GitHub)
+Съвременният софтуерен стек за локално изпълнение на големи езикови модели обикновено разчита на многослойни абстракции – от пълноценна операционна система к..."><title>Bare Metal Qwen: Как 24-килобайтова операционна система на чист x86-64 асемблер стартира Qwen3-0.6B без Linux и C - Светни.ме</title><meta property="og:title" content="Bare Metal Qwen: Как 24-килобайтова операционна система на чист x86-64 асемблер стартира Qwen3-0.6B без Linux и C - Светни.ме"><meta property="og:description" content="Източник: alesha-pro / llm.asm (GitHub)
+Съвременният софтуерен стек за локално изпълнение на големи езикови модели обикновено разчита на многослойни абстракции – от пълноценна операционна система к..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/bare-metal-qwen-x86-assembly-os/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/bare-metal-qwen-x86-assembly-os/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Bare Metal Qwen: Как 24-килобайтова операционна система на чист x86-64 асемблер стартира Qwen3-0.6B без Linux и C</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/27/bare-metal-qwen-x86-assembly-os/hero.png" alt="Bare-Metal Qwen3-0.6B OS VGA Console"><br><small>Източник: alesha-pro / llm.asm (GitHub)</small></p>
+<p>Съвременният софтуерен стек за локално изпълнение на големи езикови модели обикновено разчита на многослойни абстракции – от пълноценна операционна система като <a href="/pages/linux.html">Linux</a> и стандартни системни библиотеки (<code>libc</code>), през компилатори за C++ или Rust, до специализирани рамки за инференция. Проектът с отворен код <code>llm.asm</code> на разработчика с псевдоним <code>alesha-pro</code> демонстрира радикално различен подход във втората си фаза (<code>02-baremetal-os</code>): самостоятелна, директно зареждаща се (bootable) x86-64 операционна система с размер едва 24 252 байта, написана изцяло на чист NASM асемблер, която изпълнява модела <a href="/pages/qwen.html">Qwen</a> (<code>Qwen3-0.6B</code> на <a href="/pages/alibaba.html">Alibaba</a>) директно върху хардуера без операционна система с общо предназначение, без C, без Rust и без външни зависимости [1].</p>
+<p>Разработката надгражда първата фаза на проекта (12-килобайтов изпълним файл за инференция и 32-килобайтов треньор на Mini-GPT с Braille терминален интерфейс), като премахва последната зависимост от хост ядрото. Резултатът е статично компилирано Multiboot 1 ядро, което преминава от студен старт до интерактивен многоходов чат (<code>asm-llm&gt;</code>) за между 74 и 94 милисекунди, управлява всички процесорни ядра и изпреварва по скорост стандартните реализации под Linux, включително <a href="/pages/llama-cpp.html">llama.cpp</a> при CPU инференция с 8-битова квантизация (<code>Q8_0</code>) [1].</p>
+<h2>Архитектура на 24-килобайтовото ядро и управление на паметта без копиране</h2>
+<p>Ядрото на <code>llm.asm</code> се компилира до статичен ELF бинарен файл с размер точно 24 252 байта при активиран режим <code>FAST_Q8=1</code> (или 23 612 байта в класическия режим <code>FAST_Q8=0</code> с FP32 активации). Вътрешната структура на изпълнимия образ включва само 17 143 байта машинен код (<code>.text</code>), 2772 байта константни данни (<code>.rodata</code>) и 2,1 MiB неинициализиран сегмент (<code>.bss</code> с флаг <code>NOBITS</code>), без никакви динамични секции [1]. За да бъде съвместим със стандартни Multiboot 1 загрузчици като GRUB2 и директното зареждане през <a href="/pages/qemu.html">QEMU</a> (<code>-kernel</code>), 64-битовият код се пакетира в ELF32 контейнер чрез <code>objcopy</code>, след което началният модул <code>boot.asm</code> незабавно превключва процесора в 64-битов Long Mode [1].</p>
+<p>Ключовото предимство на системата се крие в начина, по който тя организира физическата памет в рамките на 4167 реда системен асемблерен код, които обслужват споделените математически и трансформър модули (<code>shared/math.asm</code>, <code>shared/matmul.asm</code>, <code>shared/tokenizer.asm</code> и <code>shared/transformer.asm</code>):</p>
+<ul>
+<li><strong>Директно адресиране чрез 2 MiB Huge Pages (<code>boot.asm</code>):</strong> След проверка на Multiboot 1 сигнатурата (<code>0x2BADB002</code>) и зануляване на <code>.bss</code> сегмента, ядрото изгражда 4-степенни таблици на страниците с директно (identity) картографиране на първите 4 GiB физическа памет чрез 2-мегабайтови страници (huge pages). Единствено адресният диапазон <code>0xFE000000..0xFFFFFFFF</code> се маркира като некешируем (<code>Strong Uncacheable</code>) за нуждите на MMIO регистрите на локалния APIC контролер. Веднага след това ядрото инсталира таблица за прекъсвания (IDT) с 32 записа, проверява чрез <code>CPUID</code> наличието на инструкциите <code>XSAVE</code>, <code>AVX</code>, <code>AVX2</code>, <code>FMA</code> и <code>F16C</code> и инициализира контролните регистри <code>CR0</code>, <code>CR4</code>, <code>XCR0=7</code> и <code>MXCSR</code> [1].</li>
+<li><strong>Zero-Copy свързване на теглата и физическа арена (<code>runtime.asm</code>):</strong> Теглата на модела <code>Qwen3-0.6B</code> се подават като Multiboot модул във формат <code>.asmbin</code> (версия 2 с размер 614 MiB и FP16 скалиращи фактори, или версия 1 с размер 649 MiB и FP32 скалиране). Ядрото валидира магическия хедър <code>&quot;ASML&quot;</code> и свързва тензорите директно на техния физически адрес в RAM паметта без никакво копиране или сериализация. От най-големия свободен регион в картата на паметта се заделя непрекъсната арена с размер 449 MiB за KV-кеша (Key-Value Cache) и работните буфери, която се занулява хардуерно чрез векторни <code>AVX2</code> инструкции [1].</li>
+</ul>
+<p>Благодарение на 2-мегабайтовите huge pages процесорът избягва скъпите обхождания на таблици с 4-килобайтови страници (page-table walks) и TLB пропуските при четене на 614-мегабайтовия модел в паметта – архитектурен детайл, който директно ускорява матричните операции при всеки генериран токен [1].</p>
+<h2>Многоядрен SMP паралелизъм и хардуерни драйвери на ниско ниво</h2>
+<p>За разлика от минималистичните едноядрени демонстрации, <code>02-baremetal-os</code> имплементира пълен симетричен мултипроцесинг (SMP) изцяло на асемблер в модула <code>smp.asm</code>. При стартиране основното ядро (BSP) анализира таблиците на ACPI (<code>RSDP -&gt; RSDT/XSDT -&gt; MADT</code> със сигнатура <code>&quot;APIC&quot;</code>), като разполага и с резервен механизъм за броудкаст през Local APIC. На физически адрес <code>0x8000</code> се инсталира позиционно независим трамплин за преход от 16-битов реален режим през 32-битов защитен режим до 64-битов Long Mode [1].</p>
+<p>Чрез последователността от междупроцесорни прекъсвания <code>INIT-SIPI-SIPI</code> ядрото събужда всички вторични процесорни ядра (Application Processors), активира идентично векторните разширения <code>AVX2</code>, <code>FMA</code> и регистъра <code>MXCSR</code> на всяко от тях и ги синхронизира чрез неблокираща (lock-free) спин-бариера с изолирани кеш линии. Тази бариера разпределя паралелно между ядрата двете най-тежки изчислителни операции в трансформър архитектурата на <code>Qwen3-0.6B</code>: квантизираното матрично умножение <code>matmul_q8_0</code> и изчислението на групираното внимание <code>gqa_attn_range</code> (Grouped-Query Attention) [1].</p>
+<p>Всички входно-изходни операции се управляват от собствени драйвери в <code>drivers.asm</code> без външен фърмуер по време на работа:</p>
+<ul>
+<li><strong>Сериен интерфейс и VGA конзола:</strong> Драйверът за COM1 (<code>0x3F8</code>, 115200 8N1) осигурява двупосочен поток на суров UTF-8 текст, докато видеодрайверът за стандартен текстови режим 80x25 (<code>0xB8000</code>) поддържа цветен стартов банер, хардуерно скролиране, групово обновяване на CRTC курсора и декодиране на UTF-8 с автоматична транслитерация на кирилица към ASCII за VGA буфера (при запазване на оригиналния UTF-8 поток през серийния порт) [1].</li>
+<li><strong>Клавиатура, таймери и захранване:</strong> Входът се чете едновременно от COM1 и от PS/2 контролера (<code>0x60</code>/<code>0x64</code> с декодиране на Scancode Set 1). За прецизно профилиране с наносекундна точност се използва 20-милисекундно калибриране на хардуерния таймер PIT (Channel 2) спрямо брояча на тактове <code>RDTSC</code>, а командите <code>/halt</code> и <code>/quit</code> изключват машината чисто чрез ACPI S5 портовете (<code>0x604</code>, <code>0xB004</code>, <code>0x4004</code>) [1].</li>
+</ul>
+<p>Интерактивната среда <code>asm-llm&gt;</code> поддържа многоходов разговор със запазване на KV-кеша между репликите: всеки нов ход изчислява (<code>prefill</code>) само новите токени от текущата позиция <code>g_chat_pos</code>, затваря отговора на асистента с <code>&lt;|im_end|&gt;\n</code> и следи запълването на контекстния прозорец до 2048 токена (<code>ctx=X/2048</code>), като позволява динамично превключване на режима на разсъждение (<code>&lt;think&gt;...&lt;/think&gt;</code>) чрез командите <code>/think</code> и <code>/nothink</code> [1].</p>
+<h2>Производителност, скалиране и работа в бездискови виртуални машини</h2>
+<p>Емпиричните тестове на автора доказват, че елиминирането на операционната система води до измерим скок в пропускателната способност и детерминизма. Автоматизираният пакет за верификация (<code>verify_os.py</code>), включващ пет тестови сценария (технически английски текст, резюме, руски текст в UTF-8, математическа текстова задача и режим <code>--think</code>), показва 100% идентичност на входните токени, генерираните токени и изходните байтове спрямо потребителската Linux версия от Фаза 1 при всяка конфигурация от 1 до 32 виртуални ядра [1].</p>
+<table>
+<thead>
+<tr>
+<th align="left">Брой vCPU (KVM)</th>
+<th align="left">Време за старт (ms)</th>
+<th align="left">Старт до 1-ви токен (ms)</th>
+<th align="left">Prefill скорост (tok/s)</th>
+<th align="left">Decode скорост (tok/s)</th>
+<th align="left">Байтова идентичност</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>1 vCPU</strong></td>
+<td align="left">73,47 ms</td>
+<td align="left">1161,48 ms</td>
+<td align="left">31,72 tok/s</td>
+<td align="left"><strong>23,46 tok/s</strong> (пик 23,67)</td>
+<td align="left">100% (64/64)</td>
+</tr>
+<tr>
+<td align="left"><strong>4 vCPU</strong></td>
+<td align="left">84,10 ms</td>
+<td align="left">425,11 ms</td>
+<td align="left">104,67 tok/s</td>
+<td align="left"><strong>78,17 tok/s</strong> (пик 78,89)</td>
+<td align="left">100% (64/64)</td>
+</tr>
+<tr>
+<td align="left"><strong>8 vCPU</strong></td>
+<td align="left">84,54 ms</td>
+<td align="left">316,71 ms</td>
+<td align="left">157,46 tok/s</td>
+<td align="left"><strong>118,97 tok/s</strong></td>
+<td align="left">100% (64/64)</td>
+</tr>
+<tr>
+<td align="left"><strong>16 vCPU</strong></td>
+<td align="left">84,88 ms</td>
+<td align="left">312,87 ms</td>
+<td align="left">160,46 tok/s</td>
+<td align="left"><strong>134,94 tok/s</strong> (пик 136,63)</td>
+<td align="left">100% (64/64)</td>
+</tr>
+<tr>
+<td align="left"><strong>24 vCPU</strong></td>
+<td align="left">94,27 ms</td>
+<td align="left">288,75 ms</td>
+<td align="left"><strong>190,67 tok/s</strong></td>
+<td align="left"><strong>133,07 tok/s</strong></td>
+<td align="left">100% (64/64)</td>
+</tr>
+<tr>
+<td align="left"><strong>32 vCPU</strong></td>
+<td align="left">89,84 ms</td>
+<td align="left">313,82 ms</td>
+<td align="left">167,05 tok/s</td>
+<td align="left"><strong>132,43 tok/s</strong> (пик 133,75)</td>
+<td align="left">100% (64/64)</td>
+</tr>
+</tbody></table>
+<p>Върху процесор <a href="/pages/amd.html">AMD</a> EPYC 7642 под QEMU KVM (с <code>.asmbin</code> v2 и FP16 скалиране) ядрото се зарежда за 84,88 милисекунди при 16 виртуални ядра, генерира първия токен едва 312,87 милисекунди след включването на машината и достига устойчива скорост на декодиране от 134,94 токена в секунда (с пик от 136,63 tok/s), докато скоростта на обработка на промпта (prefill) достига 190,67 tok/s при 24 ядра [1].</p>
+<p>Освен директно стартиране през QEMU, проектът позволява компилиране на хибриден BIOS+UEFI ISO образ (<code>build/asm-llm-os.iso</code> с общ размер около 661 MiB), който обединява 24-килобайтовото ядро, GRUB2 конфигурацията и модела. Тъй като цялата система работи изцяло в оперативната памет, тя може да бъде разгърната в Proxmox VE като виртуална машина с <strong>0 GB дисково пространство</strong> и само 2 GiB RAM. В реален тест върху 12-ядрен сървър с процесор <a href="/pages/intel.html">Intel</a> Xeon E5-2670 v3 (архитектура Haswell от 2014 г.) бездисковата машина постига 87,35 tok/s при prefill и 55,43 tok/s при декодиране [1].</p>
+<h2>Системни и архитектурни последици: Възходът на AI уникернелите и елиминирането на софтуерния стек</h2>
+<p>Макар <code>llm.asm</code> да изглежда на пръв поглед като екстремно упражнение по нискостепенно системно програмиране, проектът разкрива фундаментални неефективности в съвременната AI инфраструктура и очертава три дългосрочни архитектурни тенденции.</p>
+<p>Първо, разработката демонстрира потенциала на <strong>специализираните AI уникернели (unikernels)</strong>. В стандартните облачни среди един контейнер за инференция зарежда пълно Linux ядро, системен диспечер на процеси, виртуална файлова система, мрежов стек, Python интерпретатор и гигабайти от библиотеки, само за да изпълнява цикли от матрични умножения. Когато този стек се замени с 24-килобайтово ядро, времето за студен старт пада под 90 милисекунди – скорост, която прави възможно стартирането на изолирани виртуални машини за всяка отделна потребителска заявка (scale-to-zero microVMs) без необходимост от постоянно поддържане на скъпи „топли&quot; инстанции в RAM паметта.</p>
+<p>Второ, резултатите доказват, че <strong>архитектурата на виртуалната памет и синхронизацията на нишките в общите операционни системи налагат скрит данък върху локалната инференция</strong>. Стандартното зареждане на модели чрез системното извикване <code>mmap()</code> в Linux често страда от фрагментация на 4-килобайтовите страници, превключвания на контекста между потребителско и системно пространство (user/kernel space transitions) и латентност в диспечера на нишки (<code>futex</code> и <code>pthread</code>). Чрез директно identity картографиране с 2 MiB huge pages и lock-free спин-бариери върху физическите ядра, bare-metal подходът извлича максималната пропускателна способност на паметта дори от десетгодишни сървърни процесори Xeon без специализирани AI ускорители.</p>
+<p>Трето, от гледна точка на киберсигурността и периферните устройства (edge computing), <strong>елиминирането на операционната система свива повърхността за атака практически до нула</strong>. В среда без файлова система, без динамичен линкер, без <code>libc</code>, без системни извиквания и без фонови демони традиционните класове уязвимости за ескалация на привилегии или инжектиране на шел код стават неприложими. За индустриални контролери, отбранителни системи и изолирани анклави за поверителни изчисления (confidential computing) моделът на статично компилиран, байтово детерминиран образ, който се зарежда за милисекунди в чиста RAM памет и се унищожава с ACPI S5 сигнал след завършване на задачата, задава нов еталон за сигурна и предвидима локална AI архитектура.</p>
+<p><img src="/articles/2026/11/27/bare-metal-qwen-x86-assembly-os/infographic.png" alt="Инфографика: Архитектура на Bare-Metal Qwen3-0.6B OS"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os">alesha-pro / llm.asm – Phase 2: Bare-Metal Bootable Qwen3-0.6B OS in 24 KB of Pure Assembly (GitHub)</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/qwen.html">Qwen</a><p>Qwen (Tongyi Qianwen) е фамилия от големи езикови модели и мултимодални системи с изкуствен интелект, разработени от подразделението за облачни услуги...</p></li><li><a href="/pages/alibaba.html">Alibaba Group</a><p>Alibaba Group е един от най-големите технологични конгломерати в света, лидер в електронната търговия, облачните изчисления и изкуствения интелект в К...</p></li><li><a href="/pages/amd.html">AMD</a><p>Advanced Micro Devices (AMD) е американска мултинационална компания за полупроводници, която проектира компютърни процесори и графични технологии.</p></li><li><a href="/pages/intel.html">Intel</a><p>Intel Corporation е американска технологична компания и един от най-големите производители на полупроводници в света.</p></li><li><a href="/pages/linux.html">Linux</a><p>Linux е най-известното семейство операционни системи с отворен код, базирани на ядрото Linux.</p></li><li><a href="/pages/qemu.html">QEMU</a><p>Хипервайзор и хардуерен емулатор с отворен код, осигуряващ пълна системна виртуализация и високопроизводително изпълнение на виртуални машини в комбин...</p></li><li><a href="/pages/llama-cpp.html">llama.cpp</a><p>llama.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

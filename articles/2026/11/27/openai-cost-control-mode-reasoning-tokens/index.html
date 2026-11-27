@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Wikideas1 (CC0) – OpenAI Codex extention for VScode.png
+Скорошната поява на новите итерации от поколението GPT-6.2 на OpenAI – анализирани в бенчмарк средите под обознач..."><title>В режим на строг контрол на разходите ли е OpenAI? Данните сочат рязък спад на токените за разсъждение при GPT-6.2 - Светни.ме</title><meta property="og:title" content="В режим на строг контрол на разходите ли е OpenAI? Данните сочат рязък спад на токените за разсъждение при GPT-6.2 - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Wikideas1 (CC0) – OpenAI Codex extention for VScode.png
+Скорошната поява на новите итерации от поколението GPT-6.2 на OpenAI – анализирани в бенчмарк средите под обознач..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/openai-cost-control-mode-reasoning-tokens/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/openai-cost-control-mode-reasoning-tokens/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>В режим на строг контрол на разходите ли е OpenAI? Данните сочат рязък спад на токените за разсъждение при GPT-6.2</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/27/openai-cost-control-mode-reasoning-tokens/hero.png" alt=""><br><small>Снимка: Wikimedia Commons / Wikideas1 (CC0) – OpenAI Codex extention for VScode.png</small></p>
+<p>Скорошната поява на новите итерации от поколението GPT-6.2 на <a href="/pages/openai.html">OpenAI</a> – анализирани в бенчмарк средите под обозначенията <strong>Astra 6.2</strong> и <strong>Sol 6.2</strong> – предизвика вълна от критични реакции сред софтуерните инженери и изследователите на автономни системи. Докато потребителите отчитаха субективно влошаване в дълбочината на отговорите при сложни задачи, нов емпиричен анализ, публикуван от екипа зад състезателната платформа <a href="/pages/agent-duel.html">Agent Duel</a>, разкрива обективната техническа причина зад тази регресия: моделите са били агресивно настроени за икономия на изчислителни ресурси чрез драстично съкращаване на генерираните изходни токени и вътрешните токени за логическо разсъждение [1].</p>
+<p>Изследването се базира на реални работни и софтуерни двубои между <a href="/pages/llm.html">големи езикови модели (LLM)</a>, при които всяка задача се изпълнява паралелно от съревноваващи се агенти, а резултатите се оценяват на сляпо от разработчици [1, 2]. Данните показват статистически неоспорим преход: докато предходните версии <strong>Astra 6</strong> и <strong>Sol 6.1</strong> функционират в рамките на нормалното разпределение за индустрията, техните наследници от серията 6.2 се превръщат в екстремни статистически отклонения (outliers), страдащи от систематичен дефицит на изчислително мислене („underthinking“) [1].</p>
+<h2>Методология на измерването: Разходи спрямо Elo рейтинг в реални задачи</h2>
+<p>За разлика от статичните академични тестове, които често страдат от замърсяване на тренировъчните данни, системата с отворен код Agent Duel измерва представянето на моделите в реални инженерни сценарии [3]. В публикувания анализ на прехода от фамилията GPT-6 към GPT-6.2 изследователите съпоставят две фундаментални оси за 18 водещи модела, всеки от които има над 100 валидни гласа върху завършени задачи [1]:</p>
+<ul>
+<li><strong>Хоризонтална ос (Относителен разход на задача):</strong> Съотношението на финансовия и токен разход на конкретния GPT модел спрямо медианния разход на преките му опоненти в същия двубой.</li>
+<li><strong>Вертикална ос (Elo рейтинг):</strong> Позицията на модела в официалната класация на платформата, отразяваща реалния процент на победи при пряко сравнение на качеството на произведения софтуерен продукт [2].</li>
+</ul>
+<p>За да елиминират случайния шум при отделните задачи, авторите прилагат 95-процентни доверителни интервали (developer-bootstrap intervals) и по двете оси [1]. Резултатът показва ясно изразено изместване наляво (към по-ниски разходи на задача) при прехода към версия 6.2, което корелира пряко с разочарованието на потребителите при решаване на многостъпкови архитектурни проблеми.</p>
+<h2>Анатомия на спада: Редукция на разсъждаващите и изходните токени</h2>
+<p>Най-показателното разкритие в данните засяга вътрешния механизъм на работа на моделите при т.нар. изчисление по време на инференс (test-time compute). Когато се анализира медианният брой записани токени за разсъждение (reasoning tokens) спрямо съпоставените опоненти в същите задачи, се наблюдава рязка структурна граница [1]:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Показател / Статистическа метрика</th>
+<th align="left">Модел Sol (6.1 → 6.2)</th>
+<th align="left">Модел Astra (6 → 6.2)</th>
+<th align="left">Индустриална норма (18 модела)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Поведение при предходна версия</strong></td>
+<td align="left">В нормата около паритетната линия</td>
+<td align="left">В нормата около паритетната линия</td>
+<td align="left">Балансирано отношение спрямо опонентите</td>
+</tr>
+<tr>
+<td align="left"><strong>Поведение при версия 6.2</strong></td>
+<td align="left">Екстремно отклонение под паритета</td>
+<td align="left">Отчетливо отклонение под паритета</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left"><strong>p-стойност за спад на разсъждаващи токени</strong></td>
+<td align="left"><code>p = 0.00013</code> (висока значимост)</td>
+<td align="left"><code>p = 0.0064</code> (висока значимост)</td>
+<td align="left">Праг на значимост <code>p &lt; 0.05</code></td>
+</tr>
+<tr>
+<td align="left"><strong>p-стойност за спад на изходни токени</strong></td>
+<td align="left"><code>p = 0.0055</code> (висока значимост)</td>
+<td align="left"><code>p = 0.022</code> (значимост)</td>
+<td align="left">Праг на значимост <code>p &lt; 0.05</code></td>
+</tr>
+</tbody></table>
+<p>При графичното представяне на медианните токени за разсъждение спрямо опонентите, линията на паритета разделя моделите, които инвестират повече вътрешни стъпки в проверка на хипотези (над линията), от тези, които прекъсват веригата на мислене преждевременно (под линията). Докато <strong>Astra 6</strong> и <strong>Sol 6.1</strong> се позиционират плътно до стандартната регресионна крива на конкурентните модели, <strong>Astra 6.2</strong> и <strong>Sol 6.2</strong> пропадат дълбоко под нея [1].</p>
+<p>Същият феномен се възпроизвежда и при крайните изходни токени (output tokens), които моделът връща като финално решение или програмен код. Статистическата проверка потвърждава, че вероятността тази редукция да е плод на случайна вариация в задачите е нищожна: за <strong>Sol 6.2</strong> p-стойността при спада на разсъждаващите токени достига <code>0.00013</code>, а при изходните токени е <code>0.0055</code>. За <strong>Astra 6.2</strong> съответните стойности са <code>0.0064</code> за разсъждението и <code>0.022</code> за изхода [1]. Изводът на изследователите е категоричен: моделите от серията 6.2 са преминали през целенасочена оптимизация за намаляване на разходите (cost-tuning), която ги превръща в аномалии на „недомислянето“ (underthinking outliers) [1].</p>
+<h2>Системни, архитектурни и макроикономически последици от принудителната компресия на инференса</h2>
+<p>Разкритията около GPT-6.2 (Astra 6.2 и Sol 6.2) надхвърлят рамките на единична продуктова актуализация и осветяват фундаменталното противоречие в съвременната икономика на изкуствения интелект: сблъсъка между мащабирането по време на инференс (test-time compute scaling) и устойчивостта на оперативните маржове.</p>
+<h3>1. Архитектурният компромис между RL бюджетиране и дълбочина на веригата на мислене</h3>
+<p>През последните две години водещият вектор за повишаване на интелигентността на моделите при кодиране, математика и агентно планиране беше удължаването на вътрешната верига на разсъждение (Chain-of-Thought) чрез обучение с подкрепление (Reinforcement Learning). Този подход обаче има линеен или дори суперлинеен разходен профил по отношение на кеша за ключове и стойности (KV cache) и пропускателната способност на паметта (HBM bandwidth) в сървърните клъстери. Когато доставчик на модели приложи глобална наказателна функция (length penalty) върху дължината на разсъждението по време на пост-тренировъчната настройка, моделът се научава да прескача междинните верификационни стъпки. При тривиални заявки това създава илюзия за по-бърз и евтин модел, но при сложни софтуерни архитектури води до каскадни логически грешки, тъй като агентът не симулира граничните случаи преди да започне генерирането на кода.</p>
+<h3>2. Макроикономически натиск върху единичната икономика на абонаментните и API услугите</h3>
+<p>Агресивното съкращаване на генерираните токени е пряк симптом на нарастващия финансов натиск върху лабораториите за фундаментални модели. При фиксирани месечни абонаменти и силно конкурентни цени за милион токени в API сегмента, масовото навлизане на автономни кодиращи агенти (като циклични CLI инструменти и IDE интеграции) промени драматично профила на натоварване. Един автономен агент в цикъл на дебъгване изразходва десетки пъти повече изчислителен капацитет от стандартен чат потребител. Намаляването на медианния брой разсъждаващи и изходни токени на задача директно освобождава GPU капацитет, намалява латентността до първия токен и свива преките разходи за електроенергия и амортизация на хардуера, но прехвърля скритата цена върху крайния потребител под формата на по-ниска надеждност.</p>
+<h3>3. Ерозия на детерминизма и доверието в затворените API платформи</h3>
+<p>От гледна точка на корпоративната софтуерна архитектура, случаят с Astra 6.2 и Sol 6.2 демонстрира основния оперативен риск при зависимостта от затворени (proprietary) модели: непрозрачната промяна в поведението на инференса. Когато инженерните екипи изграждат производствени агентни конвейери (pipelines), те калибрират своите системни промптове и механизми за обработка на грешки спрямо очакваното ниво на аналитична дълбочина на модела. Необявеното или прикрито пренастройване на модела към по-кратки разсъждения чупи тези интеграции по труден за диагностициране начин – API интерфейсът продължава да връща HTTP статус <code>200 OK</code>, но семантичното качество на изхода деградира. В дългосрочен план подобни практики ускоряват миграцията на критичните корпоративни системи към модели с отворени тегла (open-weights) или към договори с гарантирани параметри на изчислителния бюджет (SLAs за минимален брой разсъждаващи токени), където контролът върху компромиса между цена и интелигентност принадлежи на разработчика, а не на едностранните финансови оптимизации на доставчика.</p>
+<p><img src="/articles/2026/11/27/openai-cost-control-mode-reasoning-tokens/infographic.png" alt=""><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://micjm.com/blog/openai-is-in-cost-control-mode/">OpenAI may be in cost control mode (micjm.com)</a></li>
+<li><a href="https://agentduel.com/leaderboard">Agent Duel Leaderboard – Real-World Agent Evaluation</a></li>
+<li><a href="https://github.com/bottomless/agent-duel">Bottomless / Agent Duel – Battle System for Real Work (GitHub)</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/agent-duel.html">Agent Duel</a><p>Agent Duel е платформа с отворен код и класация (leaderboard) за състезателна оценка на автономни ИИ агенти и големи езикови модели върху реални софту...</p></li><li><a href="/pages/llm.html">Голям езиков модел (LLM)</a><p>Големите езикови модели (LLM) са фундаменталната технология зад съвременната революция в областта на генеративния ИИ.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

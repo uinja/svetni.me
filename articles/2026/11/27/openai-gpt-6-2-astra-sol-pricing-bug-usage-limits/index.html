@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: OpenAI / The Decoder
+Потребителите на най-новите модели от фамилията GPT-6.2 на OpenAI са изправени пред осезаемо свиване на наличните си лимити за използване, след като компанията отстра..."><title>Потребителите на GPT-6.2 Astra изчерпват лимитите си с 40% по-бързо след корекция на ценова грешка от OpenAI - Светни.ме</title><meta property="og:title" content="Потребителите на GPT-6.2 Astra изчерпват лимитите си с 40% по-бързо след корекция на ценова грешка от OpenAI - Светни.ме"><meta property="og:description" content="Източник: OpenAI / The Decoder
+Потребителите на най-новите модели от фамилията GPT-6.2 на OpenAI са изправени пред осезаемо свиване на наличните си лимити за използване, след като компанията отстра..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/openai-gpt-6-2-astra-sol-pricing-bug-usage-limits/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/openai-gpt-6-2-astra-sol-pricing-bug-usage-limits/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Потребителите на GPT-6.2 Astra изчерпват лимитите си с 40% по-бързо след корекция на ценова грешка от OpenAI</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/27/openai-gpt-6-2-astra-sol-pricing-bug-usage-limits/hero.png" alt="Лого на OpenAI върху тъмен фон"><br><small>Източник: OpenAI / The Decoder</small></p>
+<p>Потребителите на най-новите модели от фамилията <a href="/pages/gpt-6-2.html">GPT-6.2</a> на <a href="/pages/openai.html">OpenAI</a> са изправени пред осезаемо свиване на наличните си лимити за използване, след като компанията отстрани софтуерна грешка в системата за таксуване и отчитане на квотите [1]. Според официално разяснение от инженера от екипа на OpenAI Codex Тибо Сотио (Thibault Sottiaux), бъг при първоначалното внедряване на архитектурата е предоставял неправилни, прекомерно високи отстъпки при изчисляването на потреблението за вариантите <strong>GPT-6.2 Astra</strong> и <strong>GPT-6.2 Sol</strong> [1, 2].</p>
+<p>След прилагането на софтуерната корекция абонатите достигат лимитите си за използване с <strong>40% по-бързо при GPT-6.2 Astra</strong> и с <strong>25% по-бързо при GPT-6.2 Sol</strong> спрямо предходната седмица [1, 2]. В отговор на внезапната промяна в реалния капацитет на абонаментните планове в <a href="/pages/chatgpt.html">ChatGPT</a>, OpenAI обяви пакет от компенсаторни мерки за платените си потребители, като паралелно с това стартира тестове за обединяване на режимите Chat и Work в единна облачна среда по модела, който <a href="/pages/anthropic.html">Anthropic</a> наскоро приложи за <a href="/pages/claude.html">Claude</a> [1, 4, 5].</p>
+<h2>Механизъм на ценовия бъг и реалното изразходване на квотите при Astra и Sol</h2>
+<p>Съвременните абонаментни планове за големи езикови модели рядко разчитат на фиксиран брой съобщения; вместо това те използват динамични квотни бюджети, при които всяко запитване се претегля според изчислителната цена на конкретния модел, дължината на контекста и броя на генерираните токени. При пускането на серията GPT-6.2 конфигурационна грешка в разплащателния слой на OpenAI е приложила грешни коефициенти за отстъпка върху вариантите Astra и Sol [1, 2]. В резултат на това системата е отчитала значително по-малък разход от потребителската квота при всяка заявка, създавайки изкуствено завишено усещане за капацитета на абонаментите през първите дни след премиерата.</p>
+<p>След нормализирането на тарифните тегла реалната скорост на изчерпване на лимитите се променя съществено:</p>
+<ul>
+<li><strong>GPT-6.2 Astra:</strong> Потребителите достигат тавана на своята квота с <strong>40% по-бързо</strong> в сравнение с периода преди корекцията [1, 2].</li>
+<li><strong>GPT-6.2 Sol:</strong> Изчерпването на лимита настъпва с <strong>25% по-бързо</strong> спрямо миналата седмица [1, 2].</li>
+<li><strong>Сравнение с предходното поколение:</strong> Въпреки рязкото свиване спрямо бъгавата конфигурация, Тибо Сотио подчертава, че благодарение на архитектурните оптимизации в версия 6.2 наличните квоти все пак издържат по-дълго, отколкото при предходните модели <strong>GPT-6 Astra</strong> и <strong>GPT-6.1 Sol</strong> [1, 2].</li>
+<li><strong>Изолация на проблема и липса на ретроактивно таксуване:</strong> Останалите модели в продуктовата гама на OpenAI не са били засегнати от дефекта в изчисленията, а компанията категорично потвърди, че няма да таксува потребителите със задна дата за разликата в консумирания изчислителен ресурс [1, 2].</li>
+</ul>
+<h2>Компенсационни механизми за абонатите и ролята на Fast Mode</h2>
+<p>Въпреки че технически корекцията само връща потреблението към първоначално планираните икономически параметри на GPT-6.2, от гледна точка на крайните потребители тя се възприема като внезапно орязване на ресурсите с до две пети. За да смекчи негативната реакция сред разработчиците и корпоративните клиенти, които вече са калибрирали работните си процеси спрямо по-високите лимити, OpenAI въведе две директни компенсации [1, 2, 3]:</p>
+<ol>
+<li><strong>Допълнително запазено нулиране на лимита (Saved Reset):</strong> Всички абонати в платените нива — <strong>Go, Plus, Pro и Business</strong> — получават по едно допълнително запазено нулиране на квотата, което могат да активират по свой избор при достигане на тавана за потребление [1, 2].</li>
+<li><strong>Безплатен достъп до Fast Mode за корпоративни екипи:</strong> Потребителите на плана <strong>Business</strong> получават безплатен достъп до режима за ускорена инференция <strong>Fast Mode</strong> до края на 2026 г. [1, 3]. Това позволява на корпоративните организации да поддържат висока пропускателна способност при критични за времето задачи без допълнително финансово натоварване.</li>
+</ol>
+<h2>Обединяване на режимите Chat и Work: преход към единна агентна среда</h2>
+<p>Успоредно с рекалибрирането на квотите при GPT-6.2, OpenAI започна експериментално сливане на интерфейсите <strong>Chat mode</strong> и <strong>Work mode</strong> сред избрана група потребители с абонамент <strong>Pro</strong> [1, 4]. Този ход идва след откритото признание на компанията, че първоначалното разделяне и стартирането на ChatGPT Work е породило сериозни затруднения както в потребителското изживяване (UX), така и в управлението на изчислителните разходи [4].</p>
+<p>Фундаменталната разлика между двата режима се корени в тяхната архитектура на изпълнение:</p>
+<ul>
+<li><strong>Chat mode</strong> е оптимизиран за директна, нисколатентна диалогова интеракция с предвидим разход на токени.</li>
+<li><strong>Work mode</strong> функционира като многостъпкова агентна система — той е по-бавен, но значително по-способен при решаването на комплексни инженерни, аналитични и документални задачи, което неминуемо генерира многократно по-високи разходи за токени и облачна инфраструктура за OpenAI [1, 4].</li>
+</ul>
+<p>Чрез обединяването на двата режима OpenAI следва архитектурния път, който Anthropic вече прокара при сливането на Claude Chat, <strong>Cowork</strong> и свързаните си инструменти в единен продукт [1, 5]. В новата унифицирана архитектура всички разговори се изпълняват в обща облачна среда (cloud runtime), където самият модел динамично преценява дали да върне незабавен текстов отговор, или автоматично да стартира пълноценен агентен работен поток със собствени инструменти и фонови изчисления [1, 5].</p>
+<h2>Системни, архитектурни и макроикономически импликации за икономиката на агентния изкуствен интелект</h2>
+<p>Инцидентът с ценовия бъг при GPT-6.2 Astra и Sol, разгледан в контекста на сливането между Chat и Work режимите, разкрива три дълбоки структурни трансформации в индустрията на граничните (frontier) модели през края на 2026 г.</p>
+<h3>1. Непрозрачност на динамичните квоти и крехкият баланс на маржовете при инференция</h3>
+<p>Преминаването от статични лимити (например „80 съобщения на всеки 3 часа“) към динамични кредитни пулове с вътрешни множители за отстъпка дава на лабораториите като OpenAI гъвкавост да балансират натоварването върху клъстерите си в реално време. Същевременно обаче тази абстракция прави реалния капацитет на абонамента непрозрачен за клиента. Фактът, че една конфигурационна грешка в множителите за отстъпка води до 40% разлика в наличния капацитет на флагманския модел GPT-6.2 Astra, показва колко тесни са оперативните маржове при обслужването на шестото поколение модели. Въпреки че GPT-6.2 е по-ефективен на ниво единица изчисление спрямо GPT-6 и GPT-6.1, всяка грешка във вътрешното ценообразуване веднага застрашава икономическата устойчивост на фиксираните месечни абонаменти.</p>
+<h3>2. Архитектурен преход от ръчен избор на режим към автономна маршрутизация на изчисленията</h3>
+<p>Доскоро доставчиците на ИИ прехвърляха когнитивната тежест върху потребителя, изисквайки от него предварително да избере дали задачата му се нуждае от бърз чат модел, разсъждаващ модел или тежък агентен режим (Work / Cowork). Едновременната конвергенция при Anthropic и OpenAI към единна облачна среда бележи края на фрагментираните интерфейси. От архитектурна гледна точка това означава, че пред основния модел застава интелигентен оркестратор (intent &amp; compute router), който анализира сложността на заявката и динамично алокира ресурси — от еднократен проход през невронната мрежа до стартиране на изолиран контейнер с множество подизпълнители.</p>
+<h3>3. Макроикономическият сблъсък между плоските SaaS абонаменти и агентното потребление</h3>
+<p>Най-сериозното дългосрочно предизвикателство, което прозира зад двете новини, е несъвместимостта между класическия SaaS модел с фиксирана месечна такса (Go, Plus, Pro, Business) и експоненциалния разход на токени при агентните системи. Когато Work mode бъде интегриран директно в основния чат интерфейс, всяко рутинно запитване на потребителя може неволно да задейства верига от десетки вътрешни стъпки, извиквания на инструменти и проверки на код в облачната среда. В такъв режим на работа лимитите на GPT-6.2 Astra и Sol ще се оказват под постоянен натиск, което неизбежно ще тласне индустрията към хибридно ценообразуване, базирано на реално консумирано изчислително време (compute credits) и платени допълнителни нулирания на квотите.</p>
+<p><img src="/articles/2026/11/27/openai-gpt-6-2-astra-sol-pricing-bug-usage-limits/infographic.png" alt="Инфографика за корекцията на квотите и ценообразуването при GPT-6.2"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/">The Decoder – GPT-6.2 Astra users now hit limits 40% faster after OpenAI patched a pricing error</a></li>
+<li><a href="https://x.com/thsottiaux/status/2125784147889393806">Thibault Sottiaux (X / Twitter) – Официално разяснение за бъга в таксуването при GPT-6.2 Astra и Sol</a></li>
+<li><a href="https://x.com/thsottiaux/status/2125299248782778588">Thibault Sottiaux (X / Twitter) – Безплатен достъп до Fast Mode за Business абонати до края на годината</a></li>
+<li><a href="https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/">The Decoder – OpenAI admits it didn&#39;t get everything quite right with ChatGPT Work launch and scrambles to fix UX and costs</a></li>
+<li><a href="https://the-decoder.com/anthropic-merges-claude-chat-cowork-and-more-into-a-single-product/">The Decoder – Anthropic merges Claude Chat, Cowork, and more into a single product</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/gpt-6-2.html">GPT-6.2</a><p>Модел от шесто поколение на OpenAI, включващ вариантите Astra и Sol за разширени агентни и кодови задачи.</p></li><li><a href="/pages/chatgpt.html">ChatGPT</a><p>ChatGPT е популярен интерфейс за чат с изкуствен интелект, разработен от компанията OpenAI.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude.html">Серията Claude</a><p>Claude е серията големи езикови модели на компанията Anthropic.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
