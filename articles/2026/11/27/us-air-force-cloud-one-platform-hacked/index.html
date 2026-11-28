@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: Wikimedia Commons / Staff Sgt. Jacob N. Bailey, U.S. Air Force (Public domain) – C-17 aircraft over the Blue Ridge Mountains
+Флагманската облачна платформа Cloud One, която служи като цен..."><title>Киберпробив в Cloud One: Хакери проникнаха в контролната равнина на облачната платформа на ВВС на САЩ - Светни.ме</title><meta property="og:title" content="Киберпробив в Cloud One: Хакери проникнаха в контролната равнина на облачната платформа на ВВС на САЩ - Светни.ме"><meta property="og:description" content="Източник: Wikimedia Commons / Staff Sgt. Jacob N. Bailey, U.S. Air Force (Public domain) – C-17 aircraft over the Blue Ridge Mountains
+Флагманската облачна платформа Cloud One, която служи като цен..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/27/us-air-force-cloud-one-platform-hacked/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/27/us-air-force-cloud-one-platform-hacked/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="">Изкуствен интелект</a><a href="/category/defence.html" class="active">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Киберпробив в Cloud One: Хакери проникнаха в контролната равнина на облачната платформа на ВВС на САЩ</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->27 ноември 2026 г.<!-- --> в <a href="/category/defence.html" class="category-pill">Отбрана</a></p><div><p><img src="/articles/2026/11/27/us-air-force-cloud-one-platform-hacked/hero.png" alt="Транспортен самолет C-17 Globemaster III на ВВС на САЩ"><br><small>Източник: Wikimedia Commons / Staff Sgt. Jacob N. Bailey, U.S. Air Force (Public domain) – C-17 aircraft over the Blue Ridge Mountains</small></p>
+<p>Флагманската облачна платформа <a href="/pages/cloud-one.html">Cloud One</a>, която служи като централно цифрово ядро на <a href="/pages/us-air-force.html">Военновъздушните сили на САЩ (USAF)</a>, е станала обект на сериозен киберпробив [1]. Според разкрития на източници, запознати с разследването, неоторизирани нападатели са експлоатирали софтуерна уязвимост, за да проникнат директно в контролната равнина (control plane) на системата — административния слой, който управлява достъпа, конфигурациите и оркестрацията на критични военни приложения [1][2].</p>
+<p>Инцидентът е бил установен по време на планирана системна актуализация в края на 2026 г. и незабавно е предизвикал намесата на <a href="/pages/us-cyber-command.html">Киберкомандването на САЩ (U.S. Cyber Command)</a> за оценка на щетите и ограничаване на периметъра на компрометиране [1][2]. Тъй като в Cloud One се обработват както административни, финансови и кадрови масиви, така и чувствителни тактически и логистични потоци на <a href="/pages/united-states.html">САЩ</a>, пробивът принуди военните администратори временно да спрат миграцията на нови приложения, да блокират софтуерни обновления и да отнемат административни привилегии в рамките на платформата [2][3].</p>
+<h2>Архитектура на пробива: Контролната равнина като „универсално дистанционно“</h2>
+<p>За разлика от стандартните пробиви на ниво отделно приложение или изолиран контейнер с данни (data plane), компрометирането на контролната равнина в мултиоблачна среда представлява един от най-опасните сценарии в <a href="/pages/cybersecurity.html">киберсигурността</a> [2]. Експерти по отбранителна инфраструктура, цитирани в докладите за инцидента, сравняват достъпа до контролната равнина на Cloud One с притежаването на „универсално дистанционно управление“ за цялата софтуерна екосистема на ВВС [2][3].</p>
+<pre><code class="hljs language-mermaid">flowchart <span class="hljs-selector-tag">TD</span>
+    subgraph Providers<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Комерсиален мултиоблачен фундамент (IaaS / PaaS)&quot;</span>]</span>
+        AWS<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Amazon Web Services&quot;</span>]</span>
+        AZ<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Microsoft Azure&quot;</span>]</span>
+        GCP<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Google Cloud&quot;</span>]</span>
+        OCI<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Oracle Cloud&quot;</span>]</span>
+    end
+
+    subgraph ControlPlane<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Компрометиран слой: Контролна равнина на Cloud One&quot;</span>]</span>
+        VULN<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Експлоатирана софтуерна уязвимост при ъпгрейд&quot;</span>]</span>
+        IAM<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Оркестрация, IAM политики и CI/CD маршрутизация&quot;</span>]</span>
+        VULN --&gt; IAM
+    end
+
+    subgraph Workloads<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Засегнати оперативни и логистични системи&quot;</span>]</span>
+        CBC2<span class="hljs-selector-attr">[<span class="hljs-string">&quot;CBC2: ПВО радарни потоци за Северна Америка&quot;</span>]</span>
+        TICMS<span class="hljs-selector-attr">[<span class="hljs-string">&quot;TICMS: Глобален отчет на боеприпаси в над 200 бази&quot;</span>]</span>
+        LOG<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Логистика, резервни части, личен състав и заплати&quot;</span>]</span>
+    end
+
+    Providers --&gt; ControlPlane
+    IAM --&gt; CBC2
+    IAM --&gt; TICMS
+    IAM --&gt; LOG
+
+    style Providers <span class="hljs-attribute">fill</span>:<span class="hljs-number">#0f172a</span>,stroke:<span class="hljs-number">#334155</span>,color:<span class="hljs-number">#f8fafc</span>
+    style ControlPlane fill:<span class="hljs-number">#450a0a</span>,stroke:<span class="hljs-number">#ef4444</span>,color:<span class="hljs-number">#fef2f2</span>
+    style Workloads fill:<span class="hljs-number">#1e293b</span>,stroke:<span class="hljs-number">#3b82f6</span>,color:<span class="hljs-number">#f8fafc</span>
+    style VULN fill:<span class="hljs-number">#991b1b</span>,stroke:<span class="hljs-number">#f87171</span>,color:<span class="hljs-number">#ffffff</span>
+    style IAM fill:<span class="hljs-number">#7f1d1d</span>,stroke:<span class="hljs-number">#f87171</span>,color:<span class="hljs-number">#ffffff</span>
+    style CBC2 fill:<span class="hljs-number">#1e3a8a</span>,stroke:<span class="hljs-number">#60a5fa</span>,color:<span class="hljs-number">#ffffff</span>
+    style TICMS fill:<span class="hljs-number">#1e3a8a</span>,stroke:<span class="hljs-number">#60a5fa</span>,color:<span class="hljs-number">#ffffff</span>
+    style LOG fill:<span class="hljs-number">#0f172a</span>,stroke:<span class="hljs-number">#64748b</span>,color:<span class="hljs-number">#e2e8f0</span></code></pre><p>Cloud One не е единичен физически център за данни, а федеративна мултиоблачна платформа, която абстрахира и обединява инфраструктура от водещите комерсиални доставчици — <a href="/pages/aws.html">Amazon Web Services (AWS)</a>, <a href="/pages/microsoft-azure.html">Microsoft Azure</a>, <a href="/pages/google-cloud.html">Google Cloud</a> и <a href="/pages/oracle.html">Oracle</a> [2][3]. Чрез общ управленски слой военните развойни екипи разполагат и мащабират приложения на различни нива на класификация на информацията (Impact Levels).</p>
+<p>Когато нападател овладее контролната равнина на подобна архитектура, той получава потенциална видимост върху метаданните на всички хоствани среди, маршрутизацията на мрежовия трафик, политиките за идентичност и управленията на контейнеризираните клъстери. Според техническите оценки пробивът теоретично е позволявал на атакуващите да проверяват оперативния статус на военни самолети, да наблюдават движението на резервни части по глобалната верига за доставки и да инспектират конфигурационни потоци между отделните приложения [2][3].</p>
+<h2>Засегнати бойни и логистични системи: CBC2 и TICMS</h2>
+<p>Най-голяма тревога в <a href="/pages/pentagon.html">Пентагона</a> буди фактът, че Cloud One осигурява изчислителната среда за редица критични за националната сигурност оперативни системи [1][2]. Сред най-чувствителните платформи, разчитащи на инфраструктурата на Cloud One, се открояват две ключови системи:</p>
+<ul>
+<li><strong>Cloud-Based Command and Control (CBC2):</strong> Съвременната система за командване и контрол на въздушната отбрана, която агрегира и обработва в реално време данни от радарни станции и сензорни мрежи в цяла Северна Америка [1][2]. CBC2 е проектирана да замени остарелите хардуерни командни възли с гъвкава облачна архитектура, подпомагаща тактическото вземане на решения от NORAD и Северното командване на САЩ.</li>
+<li><strong>Theater Integrated Combat Munitions System (TICMS):</strong> Глобалната система за управление и проследяване на боеприпаси, която отчита наличностите, състоянието и движението на ракети, управляеми бомби и муниции в над 200 бази и обекти на ВВС на САЩ по целия свят [1][2].</li>
+<li><strong>Логистични и административни ядра:</strong> Десетки бек-офис системи, обслужващи авиационната поддръжка, графика на полетите, ведомостите за заплати и досиетата на военния и цивилния персонал [1][3].</li>
+</ul>
+<p>Към момента на разкриването на инцидента официалните представители на ВВС отказват да коментират дали нападателите са успели да ексфилтрират класифицирани данни или да модифицират телеметрия в CBC2 и TICMS, позовавайки се на политиката да не се обсъжда оперативният статус и уязвимостите на конкретни военни мрежи [1].</p>
+<h2>Оперативен паралич и защитни контрамерки</h2>
+<p>Откриването на несанкционирания достъп по време на рутинна модернизация на платформата е задействало протоколи за спешна изолация [1][2]. За да предотвратят странично движение (lateral movement) на хакерите и евентуално внедряване на злонамерен код в производствените контейнери, инженерите на Cloud One са предприели драстични ограничителни мерки:</p>
+<ol>
+<li><strong>Замразяване на CI/CD конвейерите:</strong> Всички текущи софтуерни актуализации, пачове и внедрявания на нови версии на приложения в Cloud One са били временно блокирани [2][3].</li>
+<li><strong>Отнемане на административни права:</strong> Достъпът на системни администратори и външни подизпълнители до контролния слой е бил временно анулиран до повторно удостоверяване и одит на сесийните ключове [2].</li>
+<li><strong>Спиране на облачните миграции:</strong> Планираното прехвърляне на наследени (legacy) информационни системи на ВВС към облачната среда е било преустановено, което е предизвикало оперативни забавяния в множество звена [2][3].</li>
+</ol>
+<p>Екипите за киберзащита на ВВС и специалистите от U.S. Cyber Command извършват криминалистичен анализ на системните журнали (logs), за да установят точния вектор на първоначално проникване, продължителността на престоя (dwell time) на атакуващите в мрежата и тяхната принадлежност [1][2].</p>
+<h2>Дългосрочни системни, архитектурни и геополитически импликации</h2>
+<p>Пробивът в Cloud One е вододелен момент за дигиталната трансформация на американските въоръжени сили и разкрива фундаментално архитектурно противоречие в съвременните военни ИТ стратегии. През последното десетилетие Пентагонът агресивно консолидира хиляди разпокъсани локални сървъри и ведомствени мрежи в централизирани мултиоблачни платформи като Cloud One и програмата Joint Warfighting Cloud Capability (JWCC). Макар тази централизация да ускорява внедряването на изкуствен интелект, автоматизирана логистика и интегрирано бойно командване (CJADC2), тя едновременно с това създава системна точка на концентрация на риска (Single Point of Systemic Compromise).</p>
+<p>На архитектурно ниво инцидентът показва, че прилагането на принципите за <a href="/pages/zero-trust.html">Zero Trust</a> (нулево доверие) на ниво крайни потребители и приложни интерфейси е недостатъчно, ако самият оркестриращ мета-слой — контролната равнина — споделя общ домейн на доверие между логистични, кадрови и бойни системи. Когато системи за отчитане на резервни части и платформи за противовъздушна отбрана като CBC2 или арсеналният регистър TICMS се управляват през един и същ централизиран портал за оркестрация, всяка критична уязвимост в софтуера за управление на облака автоматично застрашава целия спектър от военни операции. В отговор на този пробив военните архитекти ще бъдат принудени да преосмислят модела на „единен облачен брокер“ и да въведат строга криптографска и физическа сегментация на контролните равнини (control-plane sharding), при която тактическите бойни системи са напълно изолирани от административните и логистичните среди.</p>
+<p>В макроикономически и индустриален план компрометирането на Cloud One ще доведе до затягане на регулаторните изисквания към комерсиалните облачни гиганти и отбранителните системни интегратори. Дори когато пробивът произтича от софтуерна уязвимост в слоя за оркестрация на клиента, а не в базовата хипервайзорна инфраструктура на AWS, Azure, Google Cloud или Oracle, последиците са замразени миграции, забавени договори за милиарди долари и повишени разходи за независим одит на кода във веригата за доставки. За геополитическите противници на САЩ инцидентът потвърждава, че в ерата на софтуерно дефинираната война най-ефективният асиметричен удар не е насочен към кинетично унищожаване на радари или самолети, а към парализиране на облачната контролна равнина, която синхронизира техните боеприпаси, резервни части и сензорни потоци.</p>
+<p><img src="/articles/2026/11/27/us-air-force-cloud-one-platform-hacked/infographic.png" alt="Инфографика за пробива в Cloud One на ВВС на САЩ"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове при компрометирането на Cloud One</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163">US Air Force&#39;s cloud computing platform hacked – Sky News</a></li>
+<li><a href="https://www.militarytimes.com/">Hackers breach U.S. Air Force&#39;s Cloud One platform control plane – Military Times / Defense Reports</a></li>
+<li><a href="https://www.theguardian.com/">US Air Force Cloud One cyber intrusion disrupts migrations and triggers Cyber Command review – The Guardian</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/us-air-force.html">Военновъздушни сили на САЩ</a><p>Военновъздушните сили на САЩ (USAF) са сред най-големите институционални инвеститори в автономни системи и боен изкуствен интелект в света.</p></li><li><a href="/pages/cloud-one.html">Cloud One</a><p>Корпоративна мултиоблачна платформа на Военновъздушните сили на САЩ, стартирана през 2017 г.</p></li><li><a href="/pages/us-cyber-command.html">US Cyber Command (Киберкомандване на САЩ)</a><p>Единно бойно командване на Министерството на отбраната на САЩ, отговорно за отбранителните и нападателните операции в киберпространството и защитата н...</p></li><li><a href="/pages/pentagon.html">Пентагонът (The Pentagon)</a><p>Пентагонът е щабквартирата на Министерството на отбраната на САЩ и символ на американското военно командване.</p></li><li><a href="/pages/cybersecurity.html">Киберсигурност</a><p>Киберсигурността (cybersecurity) е практиката на защита на компютърни системи, мрежи, програми, устройства и данни от цифрови атаки, неоторизиран дост...</p></li><li><a href="/pages/aws.html">AWS (Amazon Web Services)</a><p>Amazon Web Services (AWS) е най-всеобхватната и широко приета облачна платформа в света, предлагаща над 200 напълно функционални услуги от центрове за...</p></li><li><a href="/pages/microsoft-azure.html">Microsoft Azure</a><p>Microsoft Azure е глобалната облачна платформа на Microsoft, която предоставя хиперскейл инфраструктура за обучение и инференс на изкуствен интелект, ...</p></li><li><a href="/pages/google-cloud.html">Google Cloud</a><p>Google Cloud (известна още като Google Cloud Platform или GCP) е пакет от облачни услуги, предлагани от Google, които се изпълняват на същата инфрастр...</p></li><li><a href="/pages/oracle.html">Oracle</a><p>Oracle Corporation е един от най-големите доставчици на софтуер и хардуер за нуждите на бизнеса в света.</p></li><li><a href="/pages/zero-trust.html">Zero Trust (Нулево доверие)</a><p>Zero Trust („Нулево доверие“) е архитектура за киберсигурност, базирана на принципа „никога не се доверявай, винаги проверявай“.</p></li><li><a href="/pages/united-states.html">САЩ (Съединени американски щати)</a><p>Съединените американски щати (САЩ) са световен лидер в разработването на софтуер, облачни изчисления и изкуствен интелект.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

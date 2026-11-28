@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: The Decoder / Nano Banana (илюстрация към анализа на Humanity&amp;#39;s First Exam)
+Докато индустрията за изкуствен интелект се фокусира върху покоряването на все по-сложни олимпиади по матем..."><title>„Humanity&#x27;s First Exam“ на Google DeepMind разкрива критична пропаст в надеждността на водещите AI модели при базови ежедневни задачи - Светни.ме</title><meta property="og:title" content="„Humanity&#x27;s First Exam“ на Google DeepMind разкрива критична пропаст в надеждността на водещите AI модели при базови ежедневни задачи - Светни.ме"><meta property="og:description" content="Източник: The Decoder / Nano Banana (илюстрация към анализа на Humanity&amp;#39;s First Exam)
+Докато индустрията за изкуствен интелект се фокусира върху покоряването на все по-сложни олимпиади по матем..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/28/google-deepmind-humanitys-first-exam-ai-reliability/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/28/google-deepmind-humanitys-first-exam-ai-reliability/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>„Humanity&#x27;s First Exam“ на Google DeepMind разкрива критична пропаст в надеждността на водещите AI модели при базови ежедневни задачи</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/28/google-deepmind-humanitys-first-exam-ai-reliability/hero.png" alt="Визуализация на изследването Humanity&#39;s First Exam за надеждност на изкуствения интелект"><br><small>Източник: The Decoder / Nano Banana (илюстрация към анализа на Humanity&#39;s First Exam)</small></p>
+<p>Докато индустрията за изкуствен интелект се фокусира върху покоряването на все по-сложни олимпиади по математика, квантова физика и алгоритмично програмиране, ново мащабно изследване на <a href="/pages/google-deepmind.html">Google DeepMind</a> поставя под въпрос нещо далеч по-фундаментално: способността на съвременните системи да изпълняват елементарни ежедневни задачи без грешка при многократни повторения [1, 2]. Новият бенчмарк, наречен <strong>„Humanity&#39;s First Exam“ (HFE)</strong>, тества надеждността и консистентността на 18 водещи модела и установява, че макар върховите архитектури да решават почти всяка базова задача поне веднъж, нито един модел не успява да запази безгрешна работа при серия от последователни опити и леки вариации на входните данни [1, 2].</p>
+<p>Дори лидерите в класацията като <strong>GPT-6.2 Astra</strong> на <a href="/pages/openai.html">OpenAI</a> се препъват, когато от тях се изисква да дадат 16 последователни верни отговора в рамките на едно и също семейство от елементарни въпроси [1]. Още по-тревожен за инженерите е фактът, че <strong>73% от регистрираните грешки се дължат на базово визуално възприятие</strong>, а отпускането на повече изчислително време за разсъждение (test-time compute) не решава проблема [1, 2].</p>
+<h2>От „Последния“ към „Първия“ изпит на човечеството: Архитектура на теста</h2>
+<p>Името на новия тест е съзнателна антитеза на популярния бенчмарк <em>„Humanity&#39;s Last Exam“</em> (Последният изпит на човечеството), който оценява пиковия капацитет на <a href="/pages/large-language-models.html">големите езикови модели</a> чрез екстремно трудни академични задачи на ниво докторантура [1]. Изследователите от Google DeepMind, в сътрудничество с научните екипи на <a href="/pages/google.html">Google</a>, избират точно обратния подход: вместо да измерват „тавана“ на интелигентността (peak performance), те измерват нейния „под“ на надеждност (floor reliability) [2].</p>
+<p>Методологията на <strong>Humanity&#39;s First Exam</strong> е структурирана около задачи, които всеки човек решава интуитивно и със 100% повторяемост в ежедневието си:</p>
+<ul>
+<li><strong>Обхват на набора от данни:</strong> Тестът включва <strong>544 елементарни текстови и мултимодални (изображение + текст) задачи</strong>, разпределени в 20 фундаментални когнитивни и перцептивни категории [2].</li>
+<li><strong>Структура на „семействата от задачи“ (Task Families):</strong> Промптовете са организирани в <strong>136 семейства от по 4 варианта</strong> [2]. Всяко семейство съдържа една базова задача (seed prompt) и три тясно свързани вариации, които запазват логическата същност на въпроса, но променят словесната формулировка, пространственото подреждане на обектите или визуалния ракурс [1, 2].</li>
+<li><strong>Примерен сценарий:</strong> Моделът получава снимка на многоцветен неонов надпис и трябва да изпълни инструкцията: <em>„Избройте цвета на третата буква от всяка дума в неоновия надпис по ред, разделени с точка и запетая“</em> [2].</li>
+<li><strong>Изискване за 16 последователни успеха:</strong> За да се признае едно семейство от задачи за надеждно усвоено, моделът трябва да отговори правилно на всичките 4 варианта в 4 независими пускания – общо <strong>16 последователни безгрешни изпълнения</strong> без нито един пропуск [1, 2].</li>
+</ul>
+<pre><code class="hljs language-mermaid">flowchart LR
+    A[<span class="hljs-string">&quot;Семейство задачи (1 от 136)&lt;br/&gt;Базов промпт + 3 вариации&quot;</span>] --&gt; B[<span class="hljs-string">&quot;Изпълнение в 4 независими цикъла&lt;br/&gt;(4 варианта × 4 пускания = 16 опита)&quot;</span>]
+    B --&gt; C{<span class="hljs-string">&quot;Стандартна оценка Pass@1&lt;br/&gt;(Поне 1 верен отговор)&quot;</span>}
+    B --&gt; D{<span class="hljs-string">&quot;Строга оценка HFE (16/16)&lt;br/&gt;(100% консистентност)&quot;</span>}
+    C --&gt; E[<span class="hljs-string">&quot;96% – 98% успеваемост&lt;br/&gt;Илюзия за пълна готовност&quot;</span>]
+    D --&gt; F[<span class="hljs-string">&quot;Спад на надеждността&lt;br/&gt;73% от грешките са визуални&quot;</span>]
+
+    <span class="hljs-built_in">style</span> A fill:#1e293b,stroke:#38bdf8,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#f8fafc
+    <span class="hljs-built_in">style</span> B fill:#1e293b,stroke:#818cf8,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#f8fafc
+    <span class="hljs-built_in">style</span> C fill:#<span class="hljs-number">0f172a</span>,stroke:#94a3b8,stroke-<span class="hljs-built_in">width</span>:1px,<span class="hljs-built_in">color</span>:#e2e8f0
+    <span class="hljs-built_in">style</span> D fill:#<span class="hljs-number">0f172a</span>,stroke:#f59e0b,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#fef3c7
+    <span class="hljs-built_in">style</span> E fill:#<span class="hljs-number">064e3b</span>,stroke:#<span class="hljs-number">10b981</span>,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#ecfdf5
+    <span class="hljs-built_in">style</span> F fill:#7f1d1d,stroke:#ef4444,stroke-<span class="hljs-built_in">width</span>:2px,<span class="hljs-built_in">color</span>:#fef2f2</code></pre><h2>Пропастта в надеждността при многократни опити (Family Reliability Gap)</h2>
+<p>В изследването са подложени на тест 18 водещи фронтови и оптимизирани за скорост модели от лаборатории като Google, OpenAI и <a href="/pages/anthropic.html">Anthropic</a> [1, 2]. Резултатите разкриват явление, което авторите определят като <strong>„пропаст в семейната надеждност“ (Family Reliability Gap)</strong> [2]:</p>
+<ol>
+<li><strong>Почти перфектен единичен опит (Single-Shot):</strong> Когато се оценяват по традиционния критерий (дали моделът може да реши задачата при единично пускане), водещите системи постигат между <strong>96% и 98% точност</strong> и успяват да решат почти всяко от 136-те семейства поне веднъж [1, 2].</li>
+<li><strong>Срив при изискване за 16/16 консистентност:</strong> Когато критерият се затегне до 16 поредни верни отговора върху четирите вариации на семейството, нито един от 18-те модела не остава безгрешен [1]. Дори водещият в тестовете <strong>GPT-6.2 Astra</strong> на OpenAI бележи осезаем спад (до диапазона 90.7%–92.4% според конфигурацията), губейки точки на задачи, които при единичен тест изглеждат тривиални за него [1, 2].</li>
+<li><strong>Чувствителност към минимални пертурбации:</strong> Моделите често решават базовия въпрос в 4 от 4 опита, но се провалят систематично, когато във втория или третия вариант редът на елементите в изображението е леко променен или въпросът е преформулиран със синонимна конструкция [1, 2].</li>
+</ol>
+<p>За да стимулира откриването на подобни „слепи петна“, Google DeepMind публикува бенчмарка в платформата <a href="/pages/kaggle.html">Kaggle</a>, стартирайки публично състезание и хакатон (активен до 15 декември 2026 г.), в който изследователи от цял свят могат да добавят нови ежедневни задачи, затрудняващи фронтовите модели [2].</p>
+<h2>Визуалното възприятие като ахилесова пета и лимитът на изчислителното време</h2>
+<p>Едно от най-важните инженерни заключения в доклада на Google DeepMind е детайлната класификация на причините за провал. Анализът на грешките показва, че <strong>73% от всички неуспехи произтичат от дефекти във визуалното възприятие</strong>, а не от грешки в логическото извеждане или езиковото разбиране [1, 2].</p>
+<p>Мултимодалните модели рутинно допускат елементарни грешки при:</p>
+<ul>
+<li>преброяване на близко разположени или припокриващи се обекти в реални снимки;</li>
+<li>проследяване на пространствени зависимости (ляво/дясно, ред по ред, позиция на буква в дума);</li>
+<li>разграничаване на цветове и визуални атрибути при сложен фон или перспектива [1, 2].</li>
+</ul>
+<p>Още по-показателен е резултатът от експериментите с мащабиране на изчислителното време по време на инференция (<strong>test-time compute</strong>). През последните две години водещата парадигма в AI индустрията гласеше, че отпускането на повече токени за вътрешно разсъждение (chain-of-thought / thinking budgets) автоматично повишава точността. Google DeepMind обаче доказва, че при базовите перцептивни задачи <strong>добавянето на повече изчислително време не отстранява грешките</strong> [1]. Когато визуалният енкодер подаде невярна или размита репрезентация на изображението към езиковото ядро, по-дългото „обмисляне“ просто води до по-сложна рационализация на първоначалната перцептивна халюцинация [1, 2].</p>
+<h2>Системни, архитектурни и макроикономически импликации за автономните AI агенти</h2>
+<p>Резултатите от „Humanity&#39;s First Exam“ имат дълбоки последствия за цялата траектория на изкуствения интелект през 2026 г. и след това, тъй като осветяват фундаменталния конфликт между <strong>вероятностната природа на невронните мрежи</strong> и <strong>детерминистичните изисквания на реалната икономика</strong>.</p>
+<h3>1. Математическата стена на сложните агентни потоци (Compound Error Bottleneck)</h3>
+<p>В корпоративната среда AI системите вече не се използват само като чатботове за единични въпроси, а като автономни агенти, които изпълняват многостъпкови работни процеси (browser use, обработка на фактури, навигация в ERP интерфейси, автоматизирано тестване). Ако един модел има 95% точност на единична елементарна стъпка (каквато е средната успеваемост на водещите модели в HFE), вероятността той да завърши успешно процес от 20 последователни независими стъпки спада експоненциално до $0.95^{20} \approx 35.8%$. При 50 стъпки надеждността пада под $8%$. Без постигане на „пет деветки“ ($99.999%$) надеждност върху базовите атомарни операции, автономните агенти остават структурно непригодни за критични бизнес процеси без човешки надзор (human-in-the-loop).</p>
+<h3>2. Архитектурният дефицит на Vision-Language токенизацията</h3>
+<p>Фактът, че 73% от провалите са концентрирани във визуалното възприятие и не се влияят от допълнително време за разсъждение, сочи към структурен дефект в начина, по който съвременните мултимодални архитектури свързват визуалните енкодери (базирани на Vision Transformers – ViT) с авторегресивните езикови декодери. Компресирането на изображението във фиксиран брой визуални токени преди етапа на дълбоко внимание (cross-attention) губи фината пространствена геометрия. Ако моделът не може да се върне и динамично да „префокусира“ погледа си върху конкретен пиксел с висока резолюция (активно фовеално зрение), увеличаването на текстовите токени за разсъждение е безполезно. Това означава, че следващият голям архитектурен пробив при моделите след GPT-6.2 и Gemini трябва да дойде не от по-големи езикови вериги за разсъждение, а от итеративни перцептивни цикли, които проверяват визуалните факти директно върху суровия пиксел.</p>
+<h3>3. Преоценка на бенчмарк индустрията и корпоративните SLA стандарти</h3>
+<p>Години наред AI лабораториите оптимизираха моделите си за маркетинг чрез рекорди в <code>Pass@1</code> върху екзотични академични тестове. „Humanity&#39;s First Exam“ бележи преход към <strong>инженерство на надеждността (Reliability Engineering)</strong>. За корпоративните клиенти, интегриращи AI в логистика, финанси, здравеопазване и индустриална автоматизация, модел, който решава диференциални уравнения, но греши цвета на третата буква или стойността в таблица при 1 от 16 пускания, представлява неприемлив оперативен риск. Очаква се метрики от типа <code>Pass^k</code> (гарантирана консистентност при $k$ вариации и повторения) да се превърнат в задължителен стандарт в договорите за ниво на обслужване (SLA) при доставчиците на облачен изкуствен интелект.</p>
+<p><img src="/articles/2026/11/28/google-deepmind-humanitys-first-exam-ai-reliability/infographic.png" alt="Инфографика: Ключови стълбове и метрики на бенчмарка Humanity&#39;s First Exam"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове в изследването Humanity&#39;s First Exam</small></p>
+<h2>Източници</h2>
+<ol>
+<li><strong>The Decoder</strong> – <a href="https://the-decoder.com/google-deepminds-humanitys-first-exam-shows-top-ai-models-still-fail-simple-everyday-tasks-under-repeated-runs/">Google Deepmind&#39;s &quot;Humanity&#39;s First Exam&quot; shows top AI models still fail simple everyday tasks under repeated runs</a> (Автор: Matthias Bastian, 28 ноември 2026 г.)</li>
+<li><strong>Google DeepMind / Kaggle</strong> – <a href="https://www.kaggle.com/">Humanity&#39;s First Exam (HFE): Measuring Floor Reliability and Family Consistency Across Frontier AI Models</a> (Технически доклад и публичен бенчмарк на Google DeepMind, ноември 2026 г.)</li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/google-deepmind.html">Google DeepMind</a><p>Google DeepMind е подразделението за изкуствен интелект на Google (Alphabet), създадено след сливането на лондонската лаборатория DeepMind и Google Br...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/kaggle.html">Kaggle</a><p>Kaggle е водеща глобална платформа за наука за данните и машинно обучение, собственост на Google, която предоставя публични набори от данни, състезани...</p></li><li><a href="/pages/large-language-models.html">Големи езикови модели (Large Language Models)</a><p>Големите езикови модели (Large Language Models - LLM) представляват архитектури за изкуствен интелект, обучени върху огромни обеми текстови и мултимод...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

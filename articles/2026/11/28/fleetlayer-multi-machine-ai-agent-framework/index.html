@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Снимка: Wikimedia Commons / Trique303 (CC BY-SA 4.0) – Door of Rack Server Cabinet Fujitsu Primecenter.jpg
+Инженерната практика за разработка с автономни софтуерни агенти преминава от единични терм..."><title>Fleetlayer обединява автономните ИИ агенти в защитена мрежа върху множество машини и акаунти - Светни.ме</title><meta property="og:title" content="Fleetlayer обединява автономните ИИ агенти в защитена мрежа върху множество машини и акаунти - Светни.ме"><meta property="og:description" content="Снимка: Wikimedia Commons / Trique303 (CC BY-SA 4.0) – Door of Rack Server Cabinet Fujitsu Primecenter.jpg
+Инженерната практика за разработка с автономни софтуерни агенти преминава от единични терм..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/28/fleetlayer-multi-machine-ai-agent-framework/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/28/fleetlayer-multi-machine-ai-agent-framework/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Fleetlayer обединява автономните ИИ агенти в защитена мрежа върху множество машини и акаунти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/28/fleetlayer-multi-machine-ai-agent-framework/hero.png" alt="Сървърен шкаф Fujitsu Primecenter в център за данни"><br><small>Снимка: Wikimedia Commons / Trique303 (CC BY-SA 4.0) – Door of Rack Server Cabinet Fujitsu Primecenter.jpg</small></p>
+<p>Инженерната практика за разработка с автономни софтуерни агенти преминава от единични терминални сесии на локален лаптоп към постоянно активни флотилии, разпределени между работни станции, домашни сървъри и облачни виртуални машини. За да реши структурната фрагментация при този модел на работа, проектът <a href="/pages/fleetlayer.html">Fleetlayer</a> представи едноименна платформа с достъпен изходен код (под лиценз FSL-1.1-ALv2), публикувана в <a href="/pages/github.html">GitHub</a> и обявена чрез рубриката Show HN [1][2]. Системата действа като самостоятелно хоствана контролна равнина и мрежа от възли, която свързва паралелни сесии на Claude Code на <a href="/pages/anthropic.html">Anthropic</a>, Codex на <a href="/pages/openai.html">OpenAI</a>, Gemini CLI на <a href="/pages/google.html">Google</a> и командния интерфейс на <a href="/pages/cursor.html">Cursor</a> в единна управляема инфраструктура [1].</p>
+<p>Платформата възниква като вътрешен инфраструктурен слой в рамките на проекта Quietdeck – агентна система за автоматизирано разпределение и обработка на електронна поща [1]. След като разработчиците установяват, че примитивите за междумашинна комуникация, изолация на права и споделяне на локални ресурси решават универсален проблем за всеки инженер с повече от една машина или повече от един абонаментен акаунт, те отделят слоя в самостоятелна модулна рамка [1].</p>
+<h2>Проблемът с фрагментацията при множество машини и акаунти</h2>
+<p>Работата с един агент и един потребителски профил върху локален компютър рядко изисква допълнителна оркестрация. Според техническата документация на Fleetlayer обаче архитектурата се разпада веднага щом инженерът добави втора машина (например отдалечен Linux сървър за компилация или домашен хипервайзор) или втори абонаментен акаунт за балансиране на лимитите за токени [1].</p>
+<p>В стандартна среда възникват няколко критични оперативни пречки:</p>
+<ul>
+<li><strong>Изолация между сесиите:</strong> Агент, изпълняващ задачи върху отдалечен виртуален сървър (VPS), няма директен канал да изпрати съобщение или да предаде контекст на сесия, активна върху лаптопа на разработчика [1].</li>
+<li><strong>Заключване на браузърния контекст и локалните файлове:</strong> Агентите на отдалечени машини не могат да използват локалния браузър Chrome на работната станция, в който потребителят вече е вписан, нито имат достъп до локалните директории със свалени файлове (<code>Downloads</code>) и екранни снимки (<code>Screenshots</code>) [1].</li>
+<li><strong>Акаунтни конфликти и невидими квоти:</strong> При използване на няколко профила в Claude потребителите се сблъскват с грешки за отказан достъп до артефакти в <code>claude.ai</code>, постоянно вписване и отписване от браузърни разширения и внезапно прекъсване на сесии поради изчерпан лимит на конкретен акаунт без предварителна телеметрия [1].</li>
+<li><strong>Несъвместимост на артефакти между доставчици:</strong> Агенти, базирани на Codex или Gemini, не могат да публикуват интерактивни артефакти в екосистемата на Anthropic, което разделя резултатите от работата в изолирани силози [1].</li>
+</ul>
+<h2>Архитектура на възлите, контролната равнина и протоколния слой</h2>
+<p>Fleetlayer решава тези ограничения чрез разделяне на системата на четири основни компонента: демон за възли (<code>fleetlayer-node</code>), централна контролна равнина (<code>fleetlayer-control</code>), модулни плъгини и инструмент за команден ред (<code>fleetlayer</code>) [1].</p>
+<p>Всеки възел (<code>fleetlayer-node</code>) работи на ниво физическа машина, виртуална машина или отделен Unix потребител и поддържа една-единствена изходяща връзка към контролната равнина [1]. Този дизайн позволява на възлите да функционират зад NAT рутери и защитни стени без необходимост от отваряне на входящи мрежови портове [1]. Възелът се прикачва към мениджъри на терминални сесии като <code>herdr</code>, <code>Rex</code> или <code>tmux</code>, без да монополизира управлението им, така че стандартните терминали и приложения продължават да работят паралелно [1].</p>
+<pre><code class="hljs language-plaintext">+-----------------------------------------------------------------------+
+|<span class="hljs-string">                     fleetlayer-control (Control Plane)                </span>|
+|<span class="hljs-string">   Регистър на сесии </span>|<span class="hljs-string"> Маршрутизация </span>|<span class="hljs-string"> Webhooks </span>|<span class="hljs-string"> Политики за достъп   </span>|
+|<span class="hljs-string">                 (Не съхранява пароли и криптографски токени)          </span>|
++-----------------------------------+-----------------------------------+
+                                    |<span class="hljs-string">
+         Изходящи криптирани връзки </span>|<span class="hljs-string"> (Без отваряне на входящи NAT портове)
+        +---------------------------+---------------------------+
+        </span>|<span class="hljs-string">                                                       </span>|
+        v                                                       v
++-------------------------------+               +-------------------------------+
+|<span class="hljs-string">  Възел: laptop (macOS)        </span>|<span class="hljs-string">               </span>|<span class="hljs-string">  Възел: home-server (Linux)   </span>|
+|<span class="hljs-string">  fleetlayer-node              </span>|<span class="hljs-string">               </span>|<span class="hljs-string">  fleetlayer-node              </span>|
+|<span class="hljs-string">  +-- api@laptop (Claude Code) </span>|<span class="hljs-string"> &lt;-----------&gt; </span>|<span class="hljs-string">  +-- infra@home (Claude Code) </span>|
+|<span class="hljs-string">  +-- docs@laptop (Codex)      </span>|<span class="hljs-string">  fleetlayer   </span>|<span class="hljs-string">  +-- triage@mail (Unix user)  </span>|
+|<span class="hljs-string">  +-- Playwright MCP (Chrome)  </span>|<span class="hljs-string">   msg / mcp   </span>|<span class="hljs-string">  +-- CI Webhook Receiver      </span>|
++-------------------------------+               +-------------------------------+</code></pre><p>Комуникацията между ядрото и разширенията се осъществява чрез независими процеси (плъгини), написани на произволен програмен език, които обменят данни чрез стандарта Agent Client Protocol, допълнен със специфичните разширения на Fleetlayer [1]. Системата поддържа широк набор от агентни обвивки (harnesses), включително Claude Code, Codex, <code>pi</code>, OpenCode, Gemini CLI и CLI интерфейса на Cursor [1].</p>
+<p>Контролната равнина (<code>fleetlayer-control</code>) управлява топологията на машините, списъка със сесии, маршрутизирането на съобщения, уебхуковете и правилата за достъп, но по архитектурен замисъл <strong>не съхранява потребителски идентификационни данни или тайни</strong> [1]. Всички дългосрочни токени за достъп (включително едногодишни токени за акаунти в Claude) се криптират с публичния ключ на конкретната целева машина и се дешифрират единствено локално върху нея [1].</p>
+<h2>Междумашинна оркестрация, споделен MCP достъп и публикуване</h2>
+<p>Вместо да налага монолитен облачен интерфейс, Fleetlayer адресира всяка активна агентна сесия чрез унифициран идентификатор от типа <code>сесия@възел</code> (например <code>api@laptop</code>, <code>triage@mail</code> или <code>infra@home</code>) [1]. Чрез този адресен модел платформата предоставя няколко ключови оперативни механизма:</p>
+<ol>
+<li><strong>Директни съобщения и предаване на сесии:</strong> Чрез командата <code>fleetlayer msg send --to api@laptop</code> агент от домашния сървър може да уведоми агент на лаптопа, че тестовият деплоймънт е приключил [1]. Съобщението пристига в собствения комуникационен канал на получателя с криптографски проверен етикет за подателя. Инженерът може да се закачи към всеки отдалечен терминал чрез <code>fleetlayer attach api@laptop</code> или да прехвърли активна сесия от една машина на друга [1].</li>
+<li><strong>Споделяне на локален браузър и ресурси чрез MCP:</strong> Чрез интеграция с <a href="/pages/model-context-protocol.html">Model Context Protocol</a> (MCP) и Playwright MCP, агент на отдалечен Linux сървър може да извика <code>fleetlayer mcp browser@laptop</code> и да управлява браузъра Chrome върху Mac лаптопа на потребителя, използвайки вече активните му сесии и бисквитки [1]. По аналогичен начин се споделят локални папки и одобрени системни команди, а чрез инструмента Executor всяко извикване на MCP инструмент преминава през проверка спрямо дефинираните политики за сигурност [1].</li>
+<li><strong>Маршрутизиране на CI събития и наемане на ресурси (Leases):</strong> Уебхуковете от системи за непрекъсната интеграция (CI) се анализират автоматично, така че при неуспешен тест грешката се доставя директно на конкретната агентна сесия, която е написала и изпратила съответния Git клон [1]. Когато десетки агенти трябва да използват ограничен брой мощни машини за компилация, механизмът за наемане (<code>leases</code>) координира достъпа без ресурсни колизии [1].</li>
+<li><strong>Fleetlayer Pages and Apps:</strong> За да преодолее заключването на артефактите към конкретен доставчик, платформата позволява на агенти от Claude, Codex и Gemini да записват уеб страници и интерактивни приложения като обикновени файлови директории, които Fleetlayer хоства автоматично зад обща система за единно вписване (SSO) с Passkey [1].</li>
+</ol>
+<h2>Модел за сигурност с нулево доверие и изолация на ненадежден вход</h2>
+<p>Един от най-сериозните рискове при локалните автономни агенти е практиката те да се стартират с пълните права на основния потребителски акаунт – модел, при който една злонамерена инструкция в прочетен имейл (prompt injection) или грешно генерирана команда <code>rm -rf</code> може да компрометира цялата система [1]. Fleetlayer въвежда многослойна защита, проектирана според изискванията на корпоративните екипи по информационна сигурност, но автоматизирана за индивидуални разработчици [1]:</p>
+<ul>
+<li><strong>Изолация на ниво Unix потребител и маркиране на външни данни:</strong> Агенти, които обработват външен, потенциален опасен текст (като четене на имейли от непознати податели или извличане на уеб страници), се стартират в собствен изолиран Unix потребител със собствен <code>fleetlayer-node</code> [1]. Всички съобщения, изпратени от такъв агент към други сесии в мрежата, се маркират автоматично като „външни/ненадеждни данни“, а правилата за достъп не му позволяват да заема правата на доверени агенти [1].</li>
+<li><strong>Управление на тайни по роли и филтриране на изхода:</strong> Чрез интеграция с 1Password тайните и API ключовете се отпускат строго според ролята на конкретния агент [1]. Платформата автоматично премахва (scrubbing) тези секретни стойности от всеки изходен поток или съобщение, което напуска машината [1].</li>
+<li><strong>Контрол на изходящия трафик (Egress) и времеви административни прозорци:</strong> В Linux среди всяка роля разполага с изричен списък от разрешени мрежови хостове, като опитите за връзка с нови домейни изискват изрично одобрение от оператора [1]. Освен това административната роля с права за глобални промени по подразбиране е деактивирана; тя се активира само при стартиране на ограничен във времето прозорец (timed admin window) и се изчиства автоматично след изтичането му [1].</li>
+<li><strong>Защитен от подправяне одитен журнал:</strong> Всяко действие, междуагентно съобщение и заявка за одобрение се записва в криптографски верифицируем одитен лог (tamper-evident audit log) [1].</li>
+</ul>
+<h2>Системни, архитектурни и макроикономически измерения на разпределените агентни мрежи</h2>
+<p>Появата на инфраструктурни слоеве като Fleetlayer бележи фундаментален преход в архитектурата на софтуерното инженерство с изкуствен интелект – преминаването от фазата на „индивидуалния ко-пилот“ към фазата на <strong>хетерогенните разпределени агентни флотилии</strong>. Този преход има дълбоки технически и икономически последици за цялата индустрия.</p>
+<p>На <strong>архитектурно ниво</strong> Fleetlayer демонстрира как протоколи като MCP и Agent Client Protocol се превръщат в универсална шина за оперативна съвместимост, но се нуждаят от мрежова и защитна обвивка (mesh control plane), за да функционират извън рамките на единична операционна система. Разделянето на състоянието в плоски директории и замяната на монолитните платформи със заменяеми компоненти – като <code>herdr</code> за сесии, <code>Executor</code> за MCP сървъри, <code>Syncthing</code> или <code>Obsidian Sync</code> за файлова синхронизация, <code>Tailscale</code> и <code>Cloudflare Tunnel</code> за мрежова свързаност, <code>Traefik</code> за маршрутизация и <code>restic</code> за архивиране – възражда класическата Unix философия в ерата на големите езикови модели [1]. Вместо агентът да бъде затворен в облачен контейнер на доставчика, той се третира като стандартен системен процес под строгия контрол на операционната система.</p>
+<p>На <strong>системно ниво в сигурността</strong> рамката адресира най-критичната уязвимост на съвременните агентни системи – смесването на контекст с високо доверие (локални SSH ключове, кодови бази, продукционни бази данни) и контекст с нулево доверие (входяща поща, публични уеб страници, коментари в тикети). Чрез пренасяне на границите на изолация обратно към доказаните примитиви на ядрото на Linux и Unix (отделни потребителски идентификатори, контрол на изходящите мрежови сокети, времеви прозорци за ескалация на привилегии и автоматично изчистване на тайни от 1Password), Fleetlayer показва, че защитата срещу индиректни prompt injection атаки не може да разчита единствено на филтър в самия езиков модел, а изисква детерминистични граници в инфраструктурата.</p>
+<p>От <strong>макроикономическа гледна точка</strong> подобни самостоятелно хоствани контролни равнини подкопават стратегията за екосистемно заключване (vendor lock-in) на водещите лаборатории за изкуствен интелект. Когато компании като Anthropic и OpenAI се стремят да превърнат своите управлявани облачни среди, артефакти и корпоративни табла в незаменим работен слой, инструменти като Fleetlayer свеждат отделните модели и техните CLI обвивки до взаимозаменяеми изчислителни работници. Възможността един инженер или екип да комбинира в реално време Claude Code за сложна архитектурна рефакторизация, Codex за документация и Gemini CLI за обработка на големи контексти – като същевременно обединява и следи изразходването на квотите от множество абонаментни акаунти и публикува резултатите върху собствени сървъри – прехвърля контрола и икономическата ефективност обратно към крайния потребител. В дългосрочен план това ще принуди доставчиците на фундаментални модели да се конкурират директно по качество на разсъждението и цена на токен, вместо да разчитат на изкуствени бариери за пренос на сесии и контекст между машините.</p>
+<p><img src="/articles/2026/11/28/fleetlayer-multi-machine-ai-agent-framework/infographic.png" alt="Инфографика: Архитектура и контролна равнина на Fleetlayer"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://fleetlayer.ai/">Fleetlayer – Your AI agents, across every machine and account (Официална документация и архитектурна спецификация)</a></li>
+<li><a href="https://github.com/fleetlayer/fleetlayer">GitHub – fleetlayer/fleetlayer (Хранилище с изходния код под лиценз FSL-1.1-ALv2)</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/fleetlayer.html">Fleetlayer</a><p>Fleetlayer е платформа с достъпен изходен код (source-available) и контролна равнина за управление, комуникация и оркестрация на множество ИИ агенти (...</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/google.html">Google</a><p>Google е една от най-големите технологични компании в света, лидер в областите на онлайн търсенето, облачните изчисления и изкуствения интелект.</p></li><li><a href="/pages/cursor.html">Cursor</a><p>Cursor е ИИ базирана среда за разработка (IDE), изградена върху VS Code.</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

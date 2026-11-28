@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Microsoft Azure
+Microsoft обяви общата наличност (General Availability – GA) на Azure AI Gateway като самостоятелна облачна услуга в екосистемата на Microsoft Azure, предназначена..."><title>Azure AI Gateway достига обща наличност като самостоятелна услуга за управление на модели и MCP инструменти - Светни.ме</title><meta property="og:title" content="Azure AI Gateway достига обща наличност като самостоятелна услуга за управление на модели и MCP инструменти - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Microsoft Azure
+Microsoft обяви общата наличност (General Availability – GA) на Azure AI Gateway като самостоятелна облачна услуга в екосистемата на Microsoft Azure, предназначена..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/28/azure-ai-gateway-standalone-ga/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/28/azure-ai-gateway-standalone-ga/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Azure AI Gateway достига обща наличност като самостоятелна услуга за управление на модели и MCP инструменти</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/28/azure-ai-gateway-standalone-ga/hero.png" alt=""><br><small>Източник: InfoQ / Microsoft Azure</small></p>
+<p><a href="/pages/microsoft.html">Microsoft</a> обяви общата наличност (General Availability – GA) на <a href="/pages/azure-ai-gateway.html">Azure AI Gateway</a> като самостоятелна облачна услуга в екосистемата на <a href="/pages/microsoft-azure.html">Microsoft Azure</a>, предназначена за централизирано управление на достъпа на приложения и автономни агенти до езикови модели и инструменти по стандарта <a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a> [1][2]. Преходът към самостоятелен продукт идва само три месеца след като решението дебютира в публичен предварителен преглед през август 2026 г. като специализирано ниво (<code>AIGateway</code> SKU) в рамките на Azure API Management (APIM) [1].</p>
+<p>По време на първоначалния преглед през август услугата беше ограничена само до два облачни региона (East US 2 и Sweden Central), не предлагаше споразумение за ниво на обслужване (SLA) и нямаше обявена ценова рамка [1]. С достигането на обща наличност Microsoft отделя шлюза от класическия API Management в независим продукт със собствена пътна карта, фокусирана изцяло върху натоварвания с изкуствен интелект, като разширява покритието му до 17 региона в глобалната мрежа на Azure [1][3].</p>
+<h2>Архитектурно отделяне от API Management и ценови модел</h2>
+<p>Въпреки продуктовото обособяване, официалната техническа документация в Microsoft Learn показва, че Azure AI Gateway и Azure API Management продължават да споделят базовия доставчик на ресурси <code>Microsoft.ApiManagement</code>, но функционират като отделни ресурсни типове [1][3]. Съществуващите ИИ натоварвания върху стандартните SKU нива на API Management остават напълно поддържани, а Microsoft предоставя документиран инструментариум за миграция от предварителното ниво <code>AIGateway</code> SKU към новата самостоятелна услуга [1][3]. Архитектурната препоръка на компанията към корпоративните екипи е традиционните бизнес приложни интерфейси да останат в API Management, докато целият трафик към езикови модели и агентски инструменти да бъде насочен през Azure AI Gateway [1].</p>
+<p>Заедно с общата наличност Microsoft публикува и официалната ценова структура на услугата [1][2]:</p>
+<ul>
+<li><strong>Безплатна квота:</strong> Всеки разгърнат шлюз включва 10 000 безплатни заявки на месец [1].</li>
+<li><strong>Базова месечна такса (от 1 януари 2027 г.):</strong> Платеното таксуване влиза в сила на 1 януари 2027 г. при цена от 500 щатски долара на шлюз месечно, която покрива до 10 милиона заявки [1][2].</li>
+<li><strong>Мащабиране над лимита:</strong> Всеки допълнителен милион заявки над базовия пакет се таксува по 20 щатски долара, като специфичните регионални тарифи ще бъдат публикувани непосредствено преди старта на фактурирането [1].</li>
+</ul>
+<h2>Мултимоделно маршрутизиране, MCP федерация и сигурност на заявките</h2>
+<p>На ниво моделна абстракция Azure AI Gateway действа като унифициран прокси слой пред <a href="/pages/microsoft-foundry.html">Microsoft Foundry</a>, Azure OpenAI, <a href="/pages/openai.html">OpenAI</a>, <a href="/pages/anthropic.html">Anthropic</a>, <a href="/pages/amazon-bedrock.html">Amazon Bedrock</a>, <a href="/pages/google-vertex-ai.html">Google Vertex AI</a>, както и всяка друга крайна точка, съвместима със спецификацията на OpenAI [1][3]. Администраторите могат да дефинират персонализирани псевдоними (aliases) и да конфигурират маршрутизиране по приоритет, тегловни коефициенти или потребителски условия с автоматично превключване при срив (failover) между различните доставчици [1].</p>
+<p>Клиентските приложения продължават да използват стандартните софтуерни комплекти (SDK), като единствено пренасочват базовия URL адрес към шлюза (през OpenAI-съвместимия интерфейс <code>/default/models/openai/v1</code> и Responses API или през Anthropic Messages API) и подават ключ за изпълнение на шлюза (<code>AI_GATEWAY_API_KEY</code>) вместо директни идентификационни данни към конкретен моделен доставчик [1][4]. Преди да препрати заявката към целевия бекенд, шлюзът прилага лимити за токени, бюджетни ограничения и филтри за безопасност на съдържанието (content safety), след което заменя ключа на извикващия клиент със собствен токен за управлявана идентичност (Managed Identity) към Microsoft Foundry [1][4]. Интелигентният маршрутизатор на модели (Model Router), който динамично избира бекенд според съотношението цена/качество, засега остава във фаза на предварителен преглед [1].</p>
+<p>В посока на агентските интеграции Azure AI Gateway федерира външни MCP сървъри и автоматично трансформира OpenAPI спецификации, корпоративни конектори и съществуващи интерфейси от API Management в стандартизирани MCP инструменти [1][2]. Платформата Microsoft Agent 365 може автоматично да открива регистрираните в шлюза MCP сървъри и да прилага политики за достъп до инструменти, чието изпълнение се налага централизирано от самия шлюз [1].</p>
+<pre><code class="hljs language-mermaid">flowchart LR
+    subgraph Callers<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Извикващи клиенти&quot;</span>]</span>
+        Apps<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Корпоративни приложения&quot;</span>]</span>
+        Agents<span class="hljs-selector-attr">[<span class="hljs-string">&quot;ИИ агенти / Agent 365&quot;</span>]</span>
+        DevTools<span class="hljs-selector-attr">[<span class="hljs-string">&quot;SDK и инструменти за разработка&quot;</span>]</span>
+    end
+
+    subgraph Gateway<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Azure AI Gateway (Control Plane)&quot;</span>]</span>
+        Auth<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Подмяна на ключ с Managed Identity&quot;</span>]</span>
+        Budget<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Монетарни бюджети и токен квоти&quot;</span>]</span>
+        Safety<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Content Safety и политики за сигурност&quot;</span>]</span>
+        Router<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Маршрутизиране и Failover / MCP федерация&quot;</span>]</span>
+    end
+
+    subgraph Backends<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Моделни доставчици и инструменти&quot;</span>]</span>
+        Foundry<span class="hljs-selector-attr">[<span class="hljs-string">&quot;Microsoft Foundry и Azure OpenAI&quot;</span>]</span>
+        ExternalLLMs<span class="hljs-selector-attr">[<span class="hljs-string">&quot;OpenAI / Anthropic / Bedrock / Vertex AI&quot;</span>]</span>
+        MCP<span class="hljs-selector-attr">[<span class="hljs-string">&quot;MCP сървъри, OpenAPI и APIM конектори&quot;</span>]</span>
+    end
+
+    Callers --&gt; Auth
+    Auth --&gt; Budget
+    Budget --&gt; Safety
+    Safety --&gt; Router
+    Router --&gt; Foundry
+    Router --&gt; ExternalLLMs
+    Router --&gt; MCP
+
+    style Callers <span class="hljs-attribute">fill</span>:<span class="hljs-number">#1e293b</span>,stroke:<span class="hljs-number">#475569</span>,color:<span class="hljs-number">#f8fafc</span>
+    style Gateway fill:<span class="hljs-number">#0f172a</span>,stroke:<span class="hljs-number">#38bdf8</span>,color:<span class="hljs-number">#f8fafc</span>
+    style Backends fill:<span class="hljs-number">#1e293b</span>,stroke:<span class="hljs-number">#10b981</span>,color:<span class="hljs-number">#f8fafc</span></code></pre><h2>Контрол на разходите в реално време и топология „център-спици“</h2>
+<p>Една от най-съществените функционални разлики на Azure AI Gateway спрямо стандартния API Management е вграденият механизъм за финансово управление [1][5]. Шлюзът проследява изразходваните токени и изчислява прогнозния паричен разход по потребител, екип, приложение, агент и доставчик на модели [1]. Когато прогнозният разход достигне зададения праг, принудителните бюджетни политики блокират новите заявки още преди те да бъдат изпратени към модела [1][4]. Тази предварителна синхронна блокировка е критична при автономни агенти, които изпълняват рекурсивни цикли и могат да генерират огромни сметки за минути, ако контролът разчита само на последващи отчети за фактуриране [1].</p>
+<p>Microsoft позиционира услугата като централен възел в архитектура тип „център и спици“ (hub-and-spoke), при която отделните проекти в Microsoft Foundry действат като периферни възли (spokes) [1][2]. Чрез този модел множество екипи могат да споделят общи моделни инстанции — включително резервиран капацитет (Provisioned Throughput Units – PTU) — и да прехвърлят трафик към резервни Foundry ресурси или външни облачни доставчици при изчерпване на квотите [1]. Важни корпоративни функции за мрежова изолация и защита — включително Private Link за входящ трафик, VNet интеграция към частни бекенди, както и защитата от заплахи чрез Microsoft Defender и Microsoft Purview при извикване на инструменти — все още се намират в предварителен преглед [1].</p>
+<p>Първите независими технически оценки подчертават както предимствата, така и оперативните компромиси на новата услуга:</p>
+<ul>
+<li><strong>Липса на автоматична мрежова забрана към Foundry:</strong> Дан Риос, главен архитект в Howden Insurance и Microsoft MVP, който тества разгръщането на шлюза чрез Bicep шаблони, установява, че самото свързване на Azure AI Gateway с Microsoft Foundry не блокира директните извиквания към Foundry [5]. За да принудят целия трафик да преминава през шлюза, инфраструктурните екипи трябва изрично да конфигурират частни крайни точки (Private Endpoints) и ролеви контрол на достъпа (RBAC) [1][5].</li>
+<li><strong>Ограничения при GitOps и APIOps процесите:</strong> В дискусията около своя анализ Риос отбелязва, че за разлика от зрелия APIOps модел в API Management, новият AI Gateway все още предоставя ограничено покритие чрез код (IaC) и изисква значителна част от конфигурацията да се извършва ръчно през портала (ClickOps) [1][6].</li>
+<li><strong>Икономическа обосновка при множество Foundry акаунти:</strong> В отговор на критиките от инженерната общност дали е оправдано плащането на 500 долара месечно за втори шлюз над Microsoft Foundry (който вече разполага с Azure Policy, RBAC и токен квоти), Риос посочва, че един инстанс на Azure AI Gateway може да обслужва и агрегира множество независими Foundry акаунти в рамките на голяма организация [1][6].</li>
+<li><strong>Необходимост от приложни проверки:</strong> Архитектът Дартик Сому предупреждава в своя преглед на версията, че шлюзът не отменя нуждата от приложни проверки за безопасност, оторизация надолу по веригата (downstream authorization) и систематична оценка на моделите, като препоръчва внедряването да започва с ограничен пилотен проект [1][7]. За ускоряване на тази адаптация хранилището <code>Azure/aigateway</code> в GitHub вече предоставя 26 практически лаборатории, разширение за Azure CLI, плъгин за кодиращи агенти и инструмент за миграция [1][4].</li>
+</ul>
+<h2>Системни, архитектурни и макроикономически импликации за корпоративната ИИ инфраструктура</h2>
+<p>Обособяването на Azure AI Gateway като самостоятелен инфраструктурен продукт маркира фундаментална структурна промяна в начина, по който предприятията проектират и управляват своите системи с изкуствен интелект. През първите години от навлизането на големите езикови модели организациите третираха извикванията към LLM просто като стандартни REST API заявки, опитвайки се да ги управляват чрез класически API шлюзове като Azure API Management, Kong или Apigee. Този подход обаче бързо разкри дълбоки архитектурни несъответствия: традиционните API шлюзове са проектирани за детерминистични заявки с фиксиран размер на отговора и милисекундно време за реакция, където контролът на трафика се измерва в заявки за секунда (RPS). За разлика от тях, генеративните модели и агентските работни потоци са недетерминистични, поддържат дълготрайни поточни връзки, а реалната им икономическа и изчислителна тежест се определя от динамичния брой входни и изходни токени и специфичната тарифа на конкретния модел.</p>
+<p>На архитектурно ниво превръщането на AI Gateway в отделна контролна равнина (control plane) институционализира разделението между детерминистичния приложен софтуер и вероятностния агентски слой. Когато автономни агенти получат право да откриват и извикват корпоративни бази данни и външни услуги чрез стандарта Model Context Protocol (MCP), векторът на риска се измества от обикновено претоварване на мрежата към неконтролируемо финансово изтичане (runaway agent loops) и неоторизирано извличане на данни през вериги от инструменти. Чрез комбинирането на предварителен паричен бюджет на ниво извикващ субект, динамична подмяна на идентификационните данни чрез Managed Identity и федерация на MCP сървъри, Microsoft изгражда критичен буфер за сигурност. В същото време фактът, че ключови функции като Private Link, VNet изолация и Defender/Purview защита за инструменти все още са в предварителен преглед при самото GA издание, а част от управлението разчита на ClickOps вместо на пълен GitOps цикъл, показва колко агресивно облачните хиперскейлъри бързат да заемат позицията на централен диспечер в корпоративната архитектура.</p>
+<p>От макроикономическа и стратегическа гледна точка ходът на Microsoft отразява новата реалност на мултимоделния облачен пазар. Дори най-лоялните корпоративни клиенти на Azure вече не използват ексклузивно модели на един доставчик — те комбинират модели на OpenAI, Anthropic Claude, специализирани модели в Amazon Bedrock и Google Vertex AI според конкретната задача, цената и регулаторните изисквания. Когато един хиперскейлър не може да предотврати изтичането на част от инференс бюджета към конкурентни моделни платформи, най-печелившата дългосрочна стратегия е да притежава контролната точка за маршрутизиране, наблюдение и сигурност на този трафик. При базова цена от 500 долара месечно на шлюз Microsoft таргетира средния и високия корпоративен сегмент, където консолидирането на резервиран капацитет (PTU) между десетки екипи и предотвратяването на един-единствен неконтролиран агентски цикъл изплащат разхода за инфраструктурата многократно. В дългосрочен план самостоятелните ИИ шлюзове ще се превърнат в задължителен регулаторен и одитен слой за всяко предприятие, което внедрява агентски системи в продукция.</p>
+<p><img src="/articles/2026/11/28/azure-ai-gateway-standalone-ga/infographic.png" alt=""><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/azure-ai-gateway-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ: Azure AI Gateway Reaches General Availability as a Standalone Service (Steef-Jan Wiggers)</a></li>
+<li><a href="https://techcommunity.microsoft.com/blog/integrationsonazureblog/azure-ai-gateway-is-now-generally-available-ship-faster-stay-in-control/4572644">Microsoft Tech Community: Azure AI Gateway is Now Generally Available – Ship Faster, Stay in Control</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-gateway/overview">Microsoft Learn: Azure AI Gateway Overview and Architecture Documentation</a></li>
+<li><a href="https://github.com/Azure/aigateway">GitHub: Azure/aigateway Official Repository and Hands-on Labs</a></li>
+<li><a href="https://rios.engineer/a-closer-look-at-microsoft-foundry-ai-gateway/">Dan Rios (rios.engineer): A Closer Look at Microsoft Foundry AI Gateway</a></li>
+<li><a href="https://www.reddit.com/r/AZURE/comments/1y0b1nn/a_closer_look_at_microsoft_foundry_ai_gateway/">Reddit (r/AZURE): Technical Discussion on Microsoft Foundry AI Gateway Deployment and APIOps</a></li>
+<li><a href="https://darthicksomu.com/azure-ai-gateway-ga-enterprise-multi-model-access/">Darthick Somu: Azure AI Gateway GA – Enterprise Multi-Model Access Analysis</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/microsoft.html">Microsoft</a><p>Microsoft е една от водещите технологични компании в света, която през 2026 г.</p></li><li><a href="/pages/microsoft-azure.html">Microsoft Azure</a><p>Microsoft Azure е глобалната облачна платформа на Microsoft, която предоставя хиперскейл инфраструктура за обучение и инференс на изкуствен интелект, ...</p></li><li><a href="/pages/azure-ai-gateway.html">Azure AI Gateway</a><p>Azure AI Gateway е самостоятелна облачна услуга на Microsoft Azure за централизирано маршрутизиране, сигурност, контрол на бюджетите и управление на д...</p></li><li><a href="/pages/microsoft-foundry.html">Microsoft Foundry</a><p>Microsoft Foundry е корпоративната платформа на Microsoft за персонализиране, следтренировъчно обучение (post-training) и управлявано внедряване на от...</p></li><li><a href="/pages/model-context-protocol.html">Model Context Protocol (MCP)</a><p>Model Context Protocol (MCP) е отворен стандарт, който позволява на разработчиците да изграждат сигурни и тип-безопасни (type-safe) връзки между ИИ мо...</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/amazon-bedrock.html">Amazon Bedrock</a><p>Amazon Bedrock е напълно управлявана услуга от Amazon Web Services (AWS), която предоставя достъп до водещи базови модели (Foundation Models) чрез при...</p></li><li><a href="/pages/google-vertex-ai.html">Google Vertex AI</a><p>Google Vertex AI е управлявана корпоративна платформа за машинно обучение и генеративен изкуствен интелект в Google Cloud, предоставяща достъп до моде...</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>

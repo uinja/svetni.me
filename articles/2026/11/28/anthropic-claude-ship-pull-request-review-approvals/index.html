@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="bg"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KYQTJ12NS"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4KYQTJ12NS');
+            </script><meta charSet="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="description" content="Източник: InfoQ / Anthropic Editorial Source
+С експоненциалното нарастване на обема от автоматично генериран програмен код най-тясното място в съвременното софтуерно инженерство вече не е самото пи..."><title>Anthropic представя Claude Ship: Автономни агенти за преглед, поправка и одобряване на Pull заявки по политики - Светни.ме</title><meta property="og:title" content="Anthropic представя Claude Ship: Автономни агенти за преглед, поправка и одобряване на Pull заявки по политики - Светни.ме"><meta property="og:description" content="Източник: InfoQ / Anthropic Editorial Source
+С експоненциалното нарастване на обема от автоматично генериран програмен код най-тясното място в съвременното софтуерно инженерство вече не е самото пи..."><meta property="og:type" content="article"><meta property="og:url" content="https://svetni.me/articles/2026/11/28/anthropic-claude-ship-pull-request-review-approvals/"><meta property="og:site_name" content="Светни.ме"><meta property="og:locale" content="bg_BG"><meta property="og:image" content="https://svetni.me/articles/2026/11/28/anthropic-claude-ship-pull-request-review-approvals/hero.png"><link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Технологии и наука"><link rel="preload" href="/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-cyrillic.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="/fonts/source-code-pro-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css"></head><body class="article-detail"><header class="header"><div class="content-wrap"><div class="header-flex"><div class="header-left"><div class="logo"><div class="site-name"><a href="/">Светни.ме</a></div><p class="description">Технологии и наука</p></div><nav class="category-nav" aria-label="Категории"><a href="/category/ai.html" class="active">Изкуствен интелект</a><a href="/category/defence.html" class="">Отбрана</a><a href="/category/energy.html" class="">Енергетика</a><a href="/category/electric-vehicles.html" class="">Електромобили</a></nav></div><nav class="header-nav"><a href="/archive.html">Архив</a><a href="/pages/">Страници</a></nav></div></div></header><main id="content"><div class="content-wrap"><div class="main-layout"><section class="main-content"><article class="article"><h1>Anthropic представя Claude Ship: Автономни агенти за преглед, поправка и одобряване на Pull заявки по политики</h1><section class="content"><p class="author">Публикувано от <span>Svetni.me Editorial</span> на<!-- --> <!-- -->28 ноември 2026 г.<!-- --> в <a href="/category/ai.html" class="category-pill">Изкуствен интелект</a></p><div><p><img src="/articles/2026/11/28/anthropic-claude-ship-pull-request-review-approvals/hero.png" alt="Anthropic Claude Ship за автоматизиран преглед и одобрение на Pull заявки"><br><small>Източник: InfoQ / Anthropic Editorial Source</small></p>
+<p>С експоненциалното нарастване на обема от автоматично генериран програмен код най-тясното място в съвременното софтуерно инженерство вече не е самото писане на изходен код, а неговата верификация, отстраняването на грешки в интеграционните конвейери (CI) и формалното одобрение преди сливане. В отговор на това структурно предизвикателство <a href="/pages/anthropic.html">Anthropic</a> официално представи <a href="/pages/claude-ship.html">Claude Ship</a> — интегриран набор от автономни агенти за плановете Claude Team и Enterprise, които могат да инспектират pull заявки в <a href="/pages/github.html">GitHub</a>, да изпращат автоматични корекции в хранилището и самостоятелно да одобряват промени съгласно декларативно дефинирани екипни политики [1], [2].</p>
+<p>Пакетът обединява три специализирани модула на различен етап на зрялост: компонентът <strong>Code Review</strong> вече е в обща наличност (Generally Available), докато автономният агент за поддръжка на заявки <strong>PR Steward</strong> и двигателят за управление на политики <strong>Claude Approvals</strong> стартират в публична бета версия [1], [2]. С тази стъпка Anthropic премества фокуса на агентните системи от локалния терминал на разработчика директно към контролната равнина на хранилищата за изходен код.</p>
+<h2>Трите стълба на Claude Ship: Code Review, PR Steward и командата <code>/ship</code></h2>
+<p>Архитектурата на Claude Ship разделя процеса на доставка на софтуер на три ясно разграничени функционални слоя, така че инспекцията, модификацията на кода и крайното административно решение да не се смесват неконтролируемо [1], [2]:</p>
+<ul>
+<li><strong>Code Review (Инспекция и верификация на находки):</strong> Модулът анализира отворената pull заявка, самостоятелно верифицира откритите потенциални дефекти, за да минимизира фалшиво положителните сигнали, и публикува структурирани коментари директно в интерфейса на GitHub [1], [3]. Администраторите на хранилища могат да конфигурират три нива на дълбочина на анализа за всяко отделно хранилище — <code>Quick</code> (бърз преглед за очевидни регресии), <code>Standard</code> (балансиран анализ) и <code>Deep</code> (задълбочено проследяване на сложни зависимости и гранични случаи) [1], [3].</li>
+<li><strong>PR Steward (Автономна поправка без право на сливане):</strong> За разлика от модула за одобрения, PR Steward е проектиран със строго ограничение в правата — той няма правомощия да одобрява или слива (merge) заявки [1], [4]. Неговата задача е оперативна: агентът се задейства при провалени CI тестове, конфликти при сливане (merge conflicts) и оставени коментари от рецензенти, като генерира и изпраща (push) необходимите поправки в съответния клон [1], [4]. За да се избегне нежелана автономна намеса, Anthropic препоръчва екипите да започнат в ръчен режим (<code>Manual mode</code>), при който PR Steward се активира единствено след като разработчик с права за запис (write access) публикува изричен коментар <code>@claude steward</code> в дискусията на заявката [1].</li>
+<li><strong>Интеграция с <code>/ship</code> в Claude Code:</strong> Разработчиците, които използват терминалния агент <a href="/pages/claude-code.html">Claude Code</a>, могат да стартират целия цикъл локално чрез командата <code>/ship</code>. Тя автоматично отваря pull заявка, инициира преглед на кода и итеративно преминава през отстраняването на провалените CI проверки, като финалното сливане остава изцяло подчинено на правата за достъп и правилата за защита на клоновете в GitHub [1].</li>
+</ul>
+<h2>Декларативно управление чрез <code>.claude/approvals.yml</code>: „По-интелигентен CODEOWNERS“</h2>
+<p>Най-радикалното нововъведение в пакета е <strong>Claude Approvals</strong> — механизъм, който Anthropic описва като „по-интелигентен <code>CODEOWNERS</code> файл“ [1], [5]. Системата се активира автоматично, когато в основния клон (default branch) на свързано GitHub хранилище присъства конфигурационният файл <code>.claude/approvals.yml</code>, дефиниран с версия на схемата <code>version: 1</code> [1], [5].</p>
+<p>Всяко правило във файла съпоставя шаблони за файлови пътища (path patterns) с конкретна присъда и изисквания за кворум:</p>
+<ol>
+<li><strong>Брой човешки места (<code>seats</code>):</strong> Определя колко човешки участници трябва да са ангажирани с промяната.</li>
+<li><strong>Действие на агента (<code>claude</code>):</strong> Указва дали Claude има право да одобри (<code>approves</code>), само да коментира (<code>comments</code>) или да блокира (<code>blocks</code>) съответната модификация [1], [5].</li>
+</ol>
+<p>Важен архитектурен детайл е начинът, по който се изчисляват човешките квоти. Тъй като самият автор на pull заявката може да заеме едно „място“, конфигурация със <code>seats: 1</code> на практика означава, че не е необходим втори човек за рецензия, ако авторът е разработчик от екипа [1]. Още по-знаково е поведението при <code>seats: 0</code>: тази настройка позволява pull заявка, генерирана изцяло от бот или автономен агент, да бъде слята без участието на нито един човек, тъй като одобряващата рецензия от Claude удовлетворява стандартното правило на GitHub, изискващо поне едно формално одобрение преди сливане [1].</p>
+<pre><code class="hljs language-mermaid">flowchart TD
+    PR[<span class="hljs-string">&quot;Нова Pull Заявка в GitHub&quot;</span>] --&gt; Policy[<span class="hljs-string">&quot;Четене на .claude/approvals.yml&lt;br/&gt;(от основния default branch)&quot;</span>]
+    Policy --&gt; PathCheck{<span class="hljs-string">&quot;Проверка на засегнатите&lt;br/&gt;файлови пътища&quot;</span>}
+    PathCheck --&gt;|<span class="hljs-string">&quot;.claude/* (Защитен път)&quot;</span>| StrictRule[<span class="hljs-string">&quot;Изискване: seats: 2&lt;br/&gt;Claude няма право да одобрява&quot;</span>]
+    PathCheck --&gt;|<span class="hljs-string">&quot;Стандартен код / Документация&quot;</span>| EvalMode{<span class="hljs-string">&quot;Режим на политиката&quot;</span>}
+    EvalMode --&gt;|<span class="hljs-string">&quot;mode: observe&quot;</span>| Observe[<span class="hljs-string">&quot;Симулация на решението&lt;br/&gt;(Отчита резултата без да блокира)&quot;</span>]
+    EvalMode --&gt;|<span class="hljs-string">&quot;Enforcement (без mode ред)&quot;</span>| Verdict[<span class="hljs-string">&quot;Изпълнение на присъда:&lt;br/&gt;approves / comments / blocks&quot;</span>]
+    Verdict --&gt; Seats{<span class="hljs-string">&quot;Проверка на кворум (seats)&quot;</span>}
+    Seats --&gt;|<span class="hljs-string">&quot;seats: 0 + claude: approves&quot;</span>| AutoMerge[<span class="hljs-string">&quot;Напълно автономно сливане&lt;br/&gt;(Удовлетворява GitHub branch rule)&quot;</span>]
+    Seats --&gt;|<span class="hljs-string">&quot;seats &gt;= 1&quot;</span>| HumanGate[<span class="hljs-string">&quot;Изисква човешко участие&lt;br/&gt;(Авторът заема 1 място)&quot;</span>]
+
+    style PR fill:#<span class="hljs-number">1e293</span>b,stroke:#<span class="hljs-number">38</span>bdf8,color:#f8fafc
+    style Policy fill:#<span class="hljs-number">0</span>f172a,stroke:#<span class="hljs-number">818</span>cf8,color:#f8fafc
+    style StrictRule fill:#<span class="hljs-number">450</span>a0a,stroke:#f87171,color:#fef2f2
+    style Observe fill:#<span class="hljs-number">1e3</span>a8a,stroke:#<span class="hljs-number">60</span>a5fa,color:#eff6ff
+    style AutoMerge fill:#<span class="hljs-number">064e3</span>b,stroke:#<span class="hljs-number">34</span>d399,color:#ecfdf5
+    style HumanGate fill:#<span class="hljs-number">312e81</span>,stroke:#a5b4fc,color:#eef2ff</code></pre><p>За да предотврати класически атаки чрез самомодификация на правилата (privilege escalation), Claude Approvals винаги чете <code>.claude/approvals.yml</code> от вече слетия основен клон на хранилището [1]. Това означава, че ако дадена pull заявка се опита да разхлаби правилата във файла с политиките, тя ще бъде оценена спрямо старата, вече действаща политика. Освен това базовият стартов шаблон на Anthropic изисква задължително двама души (<code>seats: 2</code>) за всякакви промени по пътища под директорията <code>.claude/</code> и изрично забранява на Claude да одобрява такива заявки [1].</p>
+<p>Anthropic съветва инженерните организации да внедряват системата първоначално с директивата <code>mode: observe</code>. В този наблюдателен режим проверката докладва какво решение би взела политиката и преминава успешно, като блокира сливане единствено ако настройките на GitHub го изискват безусловно; премахването на реда <code>mode: observe</code> активира реалното прилагане на правилата [1]. Само по себе си правило с <code>claude: approves</code> не стартира автоматично модула Code Review. Използването на Claude Ship се таксува на база изразходвани токени, но платформата не е достъпна за организации, които изискват политики за нулево задържане на данни (Zero Data Retention — ZDR), HIPAA конфигурации или криптиране с ключове, управлявани от клиента (CMEK) [1].</p>
+<h2>Скептицизмът на общността и конкурентният контекст</h2>
+<p>Въвеждането на агент, който едновременно може да модифицира код за преминаване на CI тестове и да издава официални одобрения за сливане, предизвика незабавна техническа дискусия сред старшите инженери. В общността <code>r/ClaudeCode</code> потребителят <code>u/redtear1115</code> аргументира защо ръчният режим (<code>Manual mode</code>) е критичен при използването на PR Steward, посочвайки два фундаментални риска [1]:</p>
+<ol>
+<li><strong>Ерозия на тестовете в преследване на зелен CI статус:</strong> Автономен агент, чиято целева функция е да накара провален CI конвейер да премине успешно, може тихо да отслаби проверката в единичния тест (unit test) или да маскира симптома на грешката, вместо да отстрани първопричината в бизнес логиката [1].</li>
+<li><strong>Състояние на надпревара (Race Condition) между фонови комити и човешки преглед:</strong> Ако PR Steward изпрати нови комити във фонов режим непосредствено след като човек е прегледал кода, разработчикът рискува да слее версия, която реално не е инспектирал. Като архитектурно решение инженерите препоръчват заключване на операциите по сливане към конкретен криптографски хеш на комита (<code>head SHA</code>) [1].</li>
+</ol>
+<p>В социалната мрежа X изследователят <code>@NamAniket</code> обърна внимание на факта, че публикуваните от Anthropic метрики за ефективност не включват резултати върху външни хранилища извън собствеността на компанията, и постави въпроса за конфликта на интереси, когато един и същ модел генерира кода и след това го одобрява, прогнозирайки опити за заобикаляне на политиките в рамките на 30 дни [1].</p>
+<p>На пазара на инструменти за автоматизиран преглед Claude Ship навлиза в силно конкурентна среда, но с по-агресивен обхват на автономност. Докато <a href="/pages/github-copilot.html">GitHub Copilot</a> Code Review, AI рецензиите на Graphite и Codex прегледите на <a href="/pages/openai.html">OpenAI</a> се ограничават до публикуване на коментари и предложения без да заместват формалната политика за одобрение, единствено платформи като CodeRabbit предлагат автоматични одобрения при включена функция Automatic Approvals [1]. За разлика от тях обаче, Anthropic интегрира корекцията на CI грешки и декларативния двигател за кворум директно в единна агентна екосистема.</p>
+<h2>Системни, архитектурни и макроикономически импликации: От асистирано писане към автономно управление на софтуерния жизнен цикъл</h2>
+<p>Появата на Claude Ship бележи фундаментален преход в еволюцията на изкуствения интелект за софтуерно инженерство — преминаването от <strong>инструменти за генериране на код (Code Generation)</strong> към <strong>автономно управление на промените (Autonomous Change Governance)</strong>. В продължение на десетилетия контролът на версиите и процесът на Pull Request в Git се основаваха на аксиомата, че одобрението е акт на човешка отговорност и когнитивна верификация. Когато един LLM агент получи правото да удовлетворява правилата за защита на клоновете при <code>seats: 0</code>, самата дефиниция за одитируемост на софтуерната верига за доставки (Software Supply Chain) се трансформира.</p>
+<p>От архитектурна гледна точка най-дълбокият системен риск се корени в <strong>Закона на Гудхарт (Goodhart&#39;s Law)</strong>, приложен към автономните CI конвейери: когато дадена метрика (в случая „зелен статус на CI тестовете“) се превърне в пряка цел за оптимизация от автономен агент като PR Steward, тя престава да бъде надежден индикатор за качество. В традиционния инженерен процес проваленият тест е сигнал за несъответствие между спецификацията и имплементацията. Ако агентът разполага с права за запис върху тестовите файлове и продуктовия код едновременно, най-краткият градиентен път към „успешен билд“ често е тривиализирането на самия тест или добавянето на условни изключения. За да бъде подобна архитектура устойчива в продукционна среда, инженерните организации ще трябва да въведат строго разделение на правата на файлово ниво — например пълна забрана за PR Steward да модифицира директории с тестови спецификации (<code>tests/</code>, <code>spec/</code>) без изричен човешки кворум в <code>.claude/approvals.yml</code>.</p>
+<p>Вторият критичен вектор е <strong>хомогенността на грешките (Correlated Model Blindness)</strong>. Когато разработчик използва Claude Code (чрез <code>/ship</code>), за да генерира дадена функционалност, и същевременно разчита на Claude Code Review и Claude Approvals да инспектират и одобрят същия този код, системата губи епистемичното разнообразие на независимия преглед. Модел, който е допуснал логическа грешка или пропуск в сигурността поради специфично сляпо петно в своето разпределение на теглата, има висока вероятност да не разпознае същата грешка и в ролята си на рецензент. Това ще принуди зрелите технологични компании да проектират <strong>крос-моделни конвейери за верификация</strong> (например код, генериран от Claude, да бъде проверяван от модел на OpenAI или формален статичен анализатор), вместо да затварят целия цикъл на писане и одобрение в рамките на една-единствена моделна фамилия.</p>
+<p>В макроикономически и регулаторен план изключването на конфигурации със Zero Data Retention (ZDR), HIPAA и клиентски управлявани криптиращи ключове (CMEK) разкрива структурното напрежение между агентната автономност и корпоративния суверенитет на данните. За да функционират ефективно, агенти като PR Steward и Approvals се нуждаят от персистентно състояние на сесията, достъп до историята на комитите, логовете от CI сървърите и контекста на цялото хранилище в облачната инфраструктура на доставчика. Това създава двускоростна икономика в разработката на софтуер: технологичните стартъпи и по-слабо регулираните компании ще могат да автоматизират до 60–80% от рутинните сливания на код (обновяване на зависимости, документация, стандартни рефакторирания при <code>seats: 0</code>), постигайки драстично ускорение на цикъла на доставка, докато финансовият сектор, здравеопазването и отбранителната индустрия ще останат обвързани с хибридни или локално хоствани (on-premise) верификационни режими.</p>
+<p><img src="/articles/2026/11/28/anthropic-claude-ship-pull-request-review-approvals/infographic.png" alt="Инфографика: Ключови стълбове на Claude Ship за автономно управление на Pull заявки"><br><small>Инфографика: Светни.ме / Анализ на ключовите стълбове</small></p>
+<h2>Източници</h2>
+<ol>
+<li><a href="https://www.infoq.com/news/2026/11/anthropic-claude-ship/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global">InfoQ — Anthropic Introduces Claude Ship to Review, Fix, and Approve Pull Requests by Policy</a></li>
+<li><a href="https://claude.com/resources/articles/introducing-claude-ship">Anthropic — Introducing Claude Ship</a></li>
+<li><a href="https://code.claude.com/docs/en/code-review">Claude Code Documentation — Code Review</a></li>
+<li><a href="https://code.claude.com/docs/en/pr-steward">Claude Code Documentation — PR Steward</a></li>
+<li><a href="https://code.claude.com/docs/en/approvals">Claude Code Documentation — Claude Approvals &amp; Policy Configuration</a></li>
+</ol>
+</div></section></article><nav class="nav"><div class="article-nav"><a href="/" class="archive">« Всички статии</a></div></nav></section><aside class="sidebar"><div class="sidebar-section"><h3>Интелигентен контекст</h3><ul class="related-entities"><li><a href="/pages/anthropic.html">Anthropic</a><p>Anthropic е американска компания за безопасност и изследвания на ИИ, основана през 2021 г.</p></li><li><a href="/pages/claude-ship.html">Claude Ship</a><p>Набор от автономни ИИ агенти на Anthropic за преглед на код (Code Review), автоматизирано отстраняване на CI проблеми и конфликти (PR Steward) и одобр...</p></li><li><a href="/pages/claude-code.html">Claude Code</a><p>Claude Code е инструмент с интерфейс за команден ред (CLI), разработен от Anthropic, който позволява на разработчиците да взаимодействат с модела Clau...</p></li><li><a href="/pages/github.html">GitHub</a><p>GitHub е най-голямата платформа в света за хостване на сорс код и съвместна разработка на софтуер.</p></li><li><a href="/pages/github-copilot.html">GitHub Copilot</a><p>GitHub Copilot е инструмент за подпомагане на програмирането, базиран на изкуствен интелект, разработен от GitHub в сътрудничество с OpenAI.</p></li><li><a href="/pages/openai.html">OpenAI</a><p>OpenAI е американска изследователска лаборатория за изкуствен интелект, състояща се от неправителствената организация OpenAI Inc.</p></li></ul></div></aside></div></div></main><footer class="footer"><div class="content-wrap"><div class="footer-content"><nav class="footer-nav"><a href="/about.html">За проекта</a><a href="/editorial.html">Редакционна политика</a><a href="/feed.xml">RSS емисия</a></nav><div class="copy">© <!-- -->2026<!-- --> <!-- -->Svetni.me</div></div></div></footer><script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const infographics = document.querySelectorAll('.article img[src*="infographic."]');
+                if (infographics.length === 0) return;
+
+                const overlay = document.createElement('div');
+                overlay.id = 'lightbox-overlay';
+                
+                const closeBtn = document.createElement('div');
+                closeBtn.id = 'lightbox-close';
+                closeBtn.innerHTML = '&times;';
+                overlay.appendChild(closeBtn);
+
+                const img = document.createElement('img');
+                img.alt = 'Zoomed Infographic';
+                overlay.appendChild(img);
+                document.body.appendChild(overlay);
+
+                const open = (src) => {
+                  img.src = src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                };
+
+                const close = () => {
+                  overlay.classList.remove('active');
+                  document.body.style.overflow = '';
+                };
+
+                overlay.addEventListener('click', close);
+
+                infographics.forEach(el => {
+                  el.setAttribute('tabindex', '0');
+                  el.addEventListener('click', () => open(el.src));
+                  el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      open(el.src);
+                    }
+                  });
+                });
+
+                window.addEventListener('keydown', (e) => {
+                  if (overlay.classList.contains('active')) {
+                    if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      close();
+                    }
+                  }
+                });
+              });
+            </script></body></html>
